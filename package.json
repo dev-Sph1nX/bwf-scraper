@@ -1,0 +1,14 @@
+{
+  "name": "bwf-scraper",
+  "version": "1.0.0",
+  "description": "Scraper BWF World Tour + génération de données statiques pour l'app web.",
+  "type": "module",
+  "scripts": {
+    "update": "node run-update.mjs",
+    "build-data": "node build-data.mjs"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.61.1"
+  }
+}

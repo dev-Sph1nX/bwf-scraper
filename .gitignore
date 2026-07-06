@@ -1,0 +1,9 @@
+node_modules/
+web/node_modules/
+web/dist/
+web/public/data/
+*.log
+.DS_Store
+
+# On GARDE data/ (le store) versionné : il permet au scrape incrémental
+# de ne pas re-télécharger ce qui existe déjà d'un run GitHub Actions à l'autre.

@@ -1,0 +1,63 @@
+name: Scrape & Deploy
+
+on:
+  schedule:
+    - cron: "0 */6 * * *" # toutes les 6 h (modifiable)
+  workflow_dispatch: {} # bouton "Run workflow" manuel
+
+# Un seul run à la fois
+concurrency:
+  group: bwf-update
+  cancel-in-progress: false
+
+permissions:
+  contents: write # pour committer le dossier data/
+  pages: write # pour publier sur GitHub Pages
+  id-token: write
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Dépendances du scraper + navigateur Chromium
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+
+      # 1) Scrape incrémental (met à jour data/)
+      - run: node run-update.mjs 2026
+
+      # 2) Génère les JSON statiques dans web/public/data/
+      - run: node build-data.mjs 2026
+
+      # 3) Build de l'app React
+      - name: Build web
+        working-directory: web
+        run: |
+          npm install
+          npm run build
+
+      # 4) Re-commit le store data/ pour l'incrémental du prochain run
+      - name: Commit data
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add data
+          git commit -m "chore: maj données BWF [skip ci]" || echo "Rien à committer"
+          git push || echo "Rien à pousser"
+
+      # 5) Publie web/dist sur GitHub Pages
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+      - id: deploy
+        uses: actions/deploy-pages@v4
