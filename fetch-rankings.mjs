@@ -11,7 +11,7 @@ import { fileURLToPath } from "node:url";
 import { fetchWorldRankings } from "./lib/rankings.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
-const YEAR = Number(process.argv[2]) || 2026;
+const YEAR = Number(process.argv[2]) || new Date().getFullYear();
 
 console.log(`Classement mondial BWF (${YEAR})…`);
 const data = await fetchWorldRankings({ onProgress: (c, n) => console.log(`   ✓ ${c} — ${n} entités`) });

@@ -27,7 +27,7 @@ async function write(rel, obj) {
 }
 
 const years = await store.listYears();
-if (!years.length) years.push(Number(process.argv[2]) || 2026);
+if (!years.length) years.push(Number(process.argv[2]) || new Date().getFullYear());
 const latestYear = years[years.length - 1];
 console.log(`Génération multi-années : ${years.join(", ")}`);
 

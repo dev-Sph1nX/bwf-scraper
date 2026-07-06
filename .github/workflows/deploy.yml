@@ -34,14 +34,14 @@ jobs:
       - run: npm install
       - run: npx playwright install --with-deps chromium
 
-      # 1) Scrape incrémental (met à jour data/)
-      - run: node run-update.mjs 2026
+      # 1) Scrape incrémental de l'année courante (met à jour data/)
+      - run: node run-update.mjs
 
       # 1b) Classement mondial officiel BWF (pour la comparaison Elo)
-      - run: node fetch-rankings.mjs 2026
+      - run: node fetch-rankings.mjs
 
-      # 2) Génère les JSON statiques dans web/public/data/ (Elo sur toutes les saisons présentes)
-      - run: node build-data.mjs 2026
+      # 2) Génère les JSON statiques (Elo sur TOUTES les saisons présentes dans data/)
+      - run: node build-data.mjs
 
       # 3) Build de l'app React
       - name: Build web

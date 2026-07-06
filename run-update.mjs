@@ -7,7 +7,7 @@
 
 import { runUpdate } from "./lib/updater.mjs";
 
-const YEAR = Number(process.argv[2]) || 2026;
+const YEAR = Number(process.argv[2]) || new Date().getFullYear();
 
 await runUpdate(YEAR, (ev) => {
   if (ev.type === "tournament" && !ev.skipped) console.log(`📍 ${ev.name} [${ev.status}]`);
