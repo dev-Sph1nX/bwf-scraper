@@ -7,6 +7,8 @@ import Tournaments from "./pages/Tournaments.jsx";
 import Players from "./pages/Players.jsx";
 import Tournament from "./pages/Tournament.jsx";
 import Player from "./pages/Player.jsx";
+import Predictor from "./pages/Predictor.jsx";
+import Data from "./pages/Data.jsx";
 import "./styles.css";
 
 createRoot(document.getElementById("root")).render(
@@ -14,9 +16,11 @@ createRoot(document.getElementById("root")).render(
     <HashRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Predictor />} />
+          <Route path="/ranking" element={<Dashboard />} />
           <Route path="/tournaments" element={<Tournaments />} />
           <Route path="/players" element={<Players />} />
+          <Route path="/data" element={<Data />} />
           <Route path="/tournament/:id" element={<Tournament />} />
           <Route path="/player/:id" element={<Player />} />
         </Route>

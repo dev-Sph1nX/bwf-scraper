@@ -9,6 +9,7 @@ import { mkdir, writeFile, rm } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import * as views from "./lib/views.mjs";
+import { computeElo } from "./lib/elo.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data");
@@ -30,6 +31,12 @@ await write("status.json", status);
 const players = await views.getPlayersList(YEAR);
 await write("players.json", players);
 
+// Classement Elo (forme du moment) — par discipline
+const elo = await computeElo(YEAR);
+const { playerHistory, ...ranking } = elo;
+await write("elo/ranking.json", ranking);
+console.log(`   Elo : ${ranking.stats.processed} matchs traités, ${ranking.stats.skipped} ignorés`);
+
 // Une page par tournoi (ceux qui ont des données)
 let tCount = 0;
 for (const t of status.tournaments) {
@@ -43,7 +50,11 @@ for (const t of status.tournaments) {
 let pCount = 0;
 for (const p of players.players) {
   const detail = await views.getPlayer(YEAR, p.id);
-  if (detail) { await write(`player/${p.id}.json`, detail); pCount++; }
+  if (detail) {
+    detail.elo = playerHistory[p.id] || [];
+    await write(`player/${p.id}.json`, detail);
+    pCount++;
+  }
 }
 
 console.log(`✅ ${tCount} tournois, ${pCount} joueurs écrits dans web/public/data/`);
