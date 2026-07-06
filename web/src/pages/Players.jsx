@@ -19,6 +19,7 @@ export default function Players() {
     <div className="card">
       <h2>Joueurs</h2>
       <input className="search" placeholder="Rechercher un joueur…" value={q} onChange={(e) => setQ(e.target.value)} />
+      <div className="table-scroll">
       <table>
         <thead><tr><th>Joueur</th><th>Pays</th><th>Matchs</th></tr></thead>
         <tbody>
@@ -35,6 +36,7 @@ export default function Players() {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }

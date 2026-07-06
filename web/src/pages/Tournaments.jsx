@@ -12,6 +12,7 @@ export default function Tournaments() {
   return (
     <div className="card">
       <h2>Tournois</h2>
+      <div className="table-scroll">
       <table>
         <thead>
           <tr><th>Tournoi</th><th>Dates</th><th>Catégorie</th><th>État</th><th>Draws</th><th>Matchs</th></tr>
@@ -36,6 +37,7 @@ export default function Tournaments() {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }

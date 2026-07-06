@@ -29,6 +29,20 @@ Rappels rapides (détaillés dans le skill) :
 - Toujours gérer les 3 états : chargement / vide / données.
 - Accessibilité (contraste AA, `alt`, sémantique, focus) et responsive obligatoires.
 
+## Règle Responsive / mobile — IMPORTANTE
+
+Le site doit tourner **impeccablement sur mobile** (référence ~375px de large).
+**Toute nouvelle UI ou modification doit être pensée mobile dès le départ**, jamais
+rétro-adaptée après coup :
+
+- **Aucun débordement horizontal de la page.** Tout contenu large (tableaux, bracket,
+  graphes) scrolle **dans son conteneur** (`.table-scroll` / `overflow-x:auto`), pas la page.
+- **Grilles multi-colonnes** (`.vs-grid`, en-têtes, comparateurs) repassent en **1 colonne**
+  sous 700px.
+- **Cibles tactiles ≥ 40px** ; la sidebar devient une barre horizontale scrollable < 700px.
+- **Graphes/SVG** en `width:100%` + `viewBox` (jamais de largeur fixe en px).
+- Vérifier le rendu à ~375px (capture Playwright si possible) **avant de conclure**.
+
 ## Commandes
 
 ```bash
