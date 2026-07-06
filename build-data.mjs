@@ -15,7 +15,8 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import * as views from "./lib/views.mjs";
 import * as store from "./lib/store.mjs";
-import { computeElo } from "./lib/elo.mjs";
+import { computeElo, seedEloByRank } from "./lib/elo.mjs";
+import { loadInitialRanks } from "./lib/seeds.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data");
@@ -33,8 +34,17 @@ console.log(`Génération multi-années : ${years.join(", ")}`);
 
 await rm(OUT, { recursive: true, force: true });
 
-// ===== 1) Elo sur tout l'historique =====
-const elo = await computeElo(years);
+// ===== 1) Elo sur tout l'historique (seedé par le classement mondial initial) =====
+const initRanks = loadInitialRanks();
+const seeds = {};
+let seededCount = 0;
+for (const [disc, m] of Object.entries(initRanks)) {
+  const sm = new Map();
+  for (const [key, rank] of m) { sm.set(key, seedEloByRank(rank)); seededCount++; }
+  seeds[disc] = sm;
+}
+console.log(`   Seed initial : ${seededCount} entités depuis le classement mondial (data/seeds/)`);
+const elo = await computeElo(years, seeds);
 const { playerHistory, ...ranking } = elo;
 
 // ===== 2) Classement mondial officiel BWF + comparaison =====
@@ -64,8 +74,9 @@ for (const [disc, d] of Object.entries(ranking.disciplines)) {
     e.bwfRank = bwf?.rank ?? null;
     e.bwfPoints = bwf?.points ?? null;
     for (const p of e.players) {
+      const partner = e.players.filter((x) => String(x.id) !== String(p.id)).map((x) => x.name).join(" / ") || null;
       (playerCompare[p.id] ??= []).push({
-        disc, key: e.key, name: e.name,
+        disc, key: e.key, name: e.name, partner,
         eloRank: e.rank, eloRating: e.rating, matches: e.matches,
         bwfRank: e.bwfRank, bwfPoints: e.bwfPoints,
       });

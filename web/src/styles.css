@@ -187,10 +187,41 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 .proba-row.dog .proba-fill { background: var(--muted); }
 .proba-row.dog .proba-head .pct { color: var(--muted); }
 .hint { color: var(--muted); font-size: 13px; text-align: center; padding: 24px 8px; }
+.lead code { background: var(--surface-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px; font-size: 12px; color: var(--ink); white-space: nowrap; }
+
+/* Alerte contradiction Elo / H2H */
+.h2h-alert { margin-top: 16px; background: var(--bwf-red-soft); border: 1px solid var(--bwf-red); border-radius: 8px; padding: 10px 12px; font-size: 13px; line-height: 1.5; }
+
+/* Cartes joueur comparées */
+.h2h-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.pcard { background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 14px; min-width: 0; }
+.pcard-name { font-weight: bold; display: flex; align-items: center; gap: 6px; margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pcard-stats { display: flex; flex-direction: column; gap: 7px; }
+.pcard-stats > div { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.pcard-stats .k { color: var(--muted); font-size: 12px; }
+.pcard-stats .v { font-weight: bold; font-variant-numeric: tabular-nums; }
+.pcard-stats .v.accent { color: var(--accent); font-size: 16px; }
+.pills { display: flex; gap: 5px; margin-top: 12px; }
+.pill { width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: bold; flex-shrink: 0; }
+.pill.win { background: var(--green); color: #06231a; }
+.pill.loss { background: var(--surface); color: var(--muted); border: 1px solid var(--line); }
+
+/* Liste des confrontations directes */
+.h2h-list { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+.h2h-row { display: flex; align-items: center; gap: 12px; }
+.h2h-res { width: 22px; height: 22px; flex-shrink: 0; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: bold; }
+.h2h-res.win { background: var(--green); color: #06231a; }
+.h2h-res.loss { background: var(--surface); color: var(--muted); border: 1px solid var(--line); }
+.h2h-tmt { flex: 1; min-width: 0; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.h2h-tmt a { color: var(--accent); text-decoration: none; font-weight: bold; }
+.h2h-score { font-variant-numeric: tabular-nums; font-size: 13px; color: var(--ink); flex-shrink: 0; }
+@media (max-width: 700px) { .h2h-grid { grid-template-columns: 1fr; } }
 
 /* En-tête du classement + menu Filtres à droite */
-.lb-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.lb-head { display: flex; align-items: center; justify-content: space-between; gap: 12px 16px; margin-bottom: 12px; flex-wrap: wrap; }
 .lb-count { font-size: 13px; }
+.lb-sort { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.lb-sort-label { font-size: 12px; color: var(--muted); }
 .filters { position: relative; }
 .filter-btn { display: inline-flex; align-items: center; gap: 6px; background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; font: inherit; font-weight: bold; font-size: 13px; cursor: pointer; }
 .filter-btn:hover { border-color: var(--accent); }
@@ -205,9 +236,18 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 .chart-cur .muted { font-size: 12px; font-weight: normal; }
 .chart-plot { position: relative; }
 .chart-plot svg { width: 100%; height: auto; display: block; }
-.chart-tip { position: absolute; transform: translate(-50%, -130%); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 6px 9px; pointer-events: none; white-space: nowrap; box-shadow: 0 6px 18px rgba(0,0,0,.5); }
-.chart-tip b { color: var(--accent); font-variant-numeric: tabular-nums; }
-.chart-tip span { display: block; color: var(--muted); font-size: 11px; }
+.chart-tip { position: absolute; transform: translate(-50%, -115%); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; pointer-events: none; box-shadow: 0 6px 18px rgba(0,0,0,.5); min-width: 150px; max-width: 240px; text-align: left; z-index: 5; }
+.chart-tip .tip-r { display: flex; align-items: baseline; gap: 8px; }
+.chart-tip .tip-r b { color: var(--accent); font-size: 16px; font-variant-numeric: tabular-nums; }
+.chart-tip .tip-line { font-size: 12px; margin-top: 3px; }
+.chart-tip .tip-tmt { font-size: 12px; font-weight: bold; margin-top: 4px; white-space: normal; }
+.chart-tip .tip-go { font-size: 11px; color: var(--accent); margin-top: 5px; }
+
+/* Sélecteur de temporalité du graphe */
+.chart-ranges { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0 16px; }
+.range-btn { padding: 5px 11px; border: 1px solid var(--line); background: var(--surface-2); color: var(--muted); border-radius: 14px; font: inherit; font-size: 12px; font-weight: bold; cursor: pointer; }
+.range-btn:hover { border-color: var(--accent); color: var(--ink); }
+.range-btn.active { background: var(--bwf-red); color: #fff; border-color: var(--bwf-red); }
 
 /* ---- En-tête fiche joueur ---- */
 .phead { display: flex; align-items: center; gap: 16px; }
@@ -227,9 +267,41 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 
 /* ---- Groupes de matchs par tournoi ---- */
 .tgroup + .tgroup { margin-top: 22px; }
-.tgroup h3 { font-size: 13px; margin: 0 0 8px; }
+.tgroup h3 { font-size: 13px; margin: 0 0 10px; }
 .tgroup h3 a { color: var(--ink); text-decoration: none; }
 .tgroup h3 a:hover { color: var(--accent); }
+
+/* Matchs en cartes façon bracket + infos à côté */
+.match-list { display: flex; flex-direction: column; gap: 12px; }
+.match-item { display: flex; gap: 14px; align-items: center; }
+.match-meta { flex: 0 0 150px; display: flex; flex-direction: column; gap: 2px; font-size: 12px; }
+.match-meta .match-ev { font-weight: bold; color: var(--ink); }
+.match-meta .match-date { color: var(--muted); }
+.mcard.mcard-flow { position: static; width: 100%; max-width: 440px; height: auto; }
+.mcard-flow .mteam { min-height: 34px; padding-top: 4px; padding-bottom: 4px; }
+
+/* Accordéon "Derniers tournois" */
+.tsum { border: 1px solid var(--line); border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+.tsum.open { border-color: var(--accent); }
+.tsum-head { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; background: var(--surface-2); border: 0; padding: 12px 14px; cursor: pointer; font: inherit; color: var(--ink); }
+.tsum-head:hover .tsum-name, .tsum-head:hover .tsum-chev { color: var(--accent); }
+.tsum-chev { color: var(--muted); font-size: 12px; width: 12px; flex-shrink: 0; }
+.tsum-main { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.tsum-name { font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tsum-sub { color: var(--muted); font-size: 12px; }
+.tsum-elo { flex-shrink: 0; font-weight: bold; font-variant-numeric: tabular-nums; }
+.tsum-body { padding: 14px; }
+.tsum-link { display: inline-block; margin-top: 12px; color: var(--accent); font-weight: bold; text-decoration: none; font-size: 13px; border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; }
+.tsum-link:hover { border-color: var(--accent); background: var(--bwf-red-soft); }
+
+/* Surbrillance d'un match ciblé depuis le graphe Elo */
+@keyframes flashMark { 0% { box-shadow: 0 0 0 2px var(--bwf-red); } 100% { box-shadow: 0 0 0 2px transparent; } }
+.match-item.flash .mcard { animation: flashMark 2.2s ease-out; }
+@media (max-width: 700px) {
+  .match-item { flex-direction: column; align-items: stretch; gap: 6px; }
+  .match-meta { flex-direction: row; flex-wrap: wrap; gap: 10px; flex-basis: auto; align-items: baseline; }
+  .mcard.mcard-flow { max-width: 100%; }
+}
 
 /* ---- Comparaison Elo vs classement mondial ---- */
 .cmp + .cmp { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 14px; }

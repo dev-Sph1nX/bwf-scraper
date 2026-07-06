@@ -47,10 +47,9 @@ export default function Layout() {
       <aside className="sidebar">
         <div className="brand">🏸 <span>BWF Elo</span></div>
         <nav>
-          <NavLink to="/" end>Prédicteur</NavLink>
-          <NavLink to="/ranking">Classement</NavLink>
+          <NavLink to="/" end>Classement</NavLink>
+          <NavLink to="/predictor">Prédicteur</NavLink>
           <NavLink to="/tournaments">Tournois</NavLink>
-          <NavLink to="/players">Joueurs</NavLink>
           <NavLink to="/data">Données</NavLink>
         </nav>
         <div className="side-foot">Saison <b>{YEAR}</b></div>

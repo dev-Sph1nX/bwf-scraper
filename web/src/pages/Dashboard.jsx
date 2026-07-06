@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useOutletContext, Link } from "react-router-dom";
 import { getJSON } from "../data.js";
 
@@ -34,28 +34,31 @@ export default function Dashboard() {
   const { setTitle } = useOutletContext();
   const [data, setData] = useState(null); // null=chargement, false=erreur
   const [disc, setDisc] = useState("MS");
-  const [hideProv, setHideProv] = useState(true);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef(null);
+  const [sort, setSort] = useState("elo");
+  const [q, setQ] = useState("");
 
   useEffect(() => { setTitle("Classement Elo"); }, [setTitle]);
   useEffect(() => { getJSON("elo/ranking.json").then(setData).catch(() => setData(false)); }, []);
 
-  // Fermeture du menu Filtres au clic extérieur / touche Échap
-  useEffect(() => {
-    if (!menuOpen) return;
-    const onDown = (e) => { if (menuRef.current && !menuRef.current.contains(e.target)) setMenuOpen(false); };
-    const onKey = (e) => { if (e.key === "Escape") setMenuOpen(false); };
-    document.addEventListener("mousedown", onDown);
-    document.addEventListener("keydown", onKey);
-    return () => { document.removeEventListener("mousedown", onDown); document.removeEventListener("keydown", onKey); };
-  }, [menuOpen]);
-
-  const d = data && data.disciplines ? data.disciplines[disc] : null;
+  const searching = q.trim().length > 0;
+  const ql = q.trim().toLowerCase();
+  // Une discipline a des résultats si au moins une entité (non provisoire, sauf en recherche) matche.
+  const matchIn = (code) =>
+    (data?.disciplines?.[code]?.entities ?? []).some(
+      (e) => (searching || !e.provisional) && (!ql || e.name.toLowerCase().includes(ql))
+    );
+  const shownDiscs = data?.disciplines ? (searching ? ORDER.filter(matchIn) : ORDER) : ORDER;
+  const activeDisc = shownDiscs.includes(disc) ? disc : (shownDiscs[0] ?? disc);
+  const d = data?.disciplines?.[activeDisc] ?? null;
   const rows = useMemo(() => {
-    const all = d?.entities ?? [];
-    return (hideProv ? all.filter((e) => !e.provisional) : all);
-  }, [d, hideProv]);
+    let list = (d?.entities ?? []).filter((e) => searching || !e.provisional);
+    if (ql) list = list.filter((e) => e.name.toLowerCase().includes(ql));
+    list = [...list];
+    if (sort === "world") list.sort((a, b) => (a.bwfRank ?? Infinity) - (b.bwfRank ?? Infinity));
+    else if (sort === "form") list.sort((a, b) => b.form - a.form);
+    else list.sort((a, b) => b.rating - a.rating);
+    return list;
+  }, [d, ql, searching, sort]);
 
   return (
     <>
@@ -65,46 +68,44 @@ export default function Dashboard() {
         <div className="card muted">Chargement du classement…</div>
       ) : (
         <>
-          <div className="tabs" role="tablist" aria-label="Disciplines">
-            {ORDER.map((code) => (
-              <button
-                key={code}
-                role="tab"
-                aria-selected={code === disc}
-                className={`tab ${code === disc ? "active" : ""}`}
-                onClick={() => setDisc(code)}
-              >
-                {data.disciplines[code]?.label ?? code}
-              </button>
-            ))}
-          </div>
+          {shownDiscs.length > 0 && (
+            <div className="tabs" role="tablist" aria-label="Disciplines">
+              {shownDiscs.map((code) => (
+                <button
+                  key={code}
+                  role="tab"
+                  aria-selected={code === activeDisc}
+                  className={`tab ${code === activeDisc ? "active" : ""}`}
+                  onClick={() => setDisc(code)}
+                >
+                  {data.disciplines[code]?.label ?? code}
+                </button>
+              ))}
+            </div>
+          )}
 
           <div className="card">
+            <input
+              className="search"
+              placeholder={d?.type === "pair" ? "Rechercher une paire…" : "Rechercher un joueur…"}
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+            />
             <div className="lb-head">
               <span className="muted lb-count">
                 {rows.length} {d?.type === "pair" ? "paires" : "joueurs"}
               </span>
-              <div className="filters" ref={menuRef}>
-                <button
-                  type="button"
-                  className={`filter-btn ${hideProv ? "on" : ""}`}
-                  aria-haspopup="true"
-                  aria-expanded={menuOpen}
-                  onClick={() => setMenuOpen((o) => !o)}
-                >
-                  Filtres <span aria-hidden="true">▾</span>
-                </button>
-                {menuOpen && (
-                  <div className="menu" role="menu">
-                    <label className="prov-toggle">
-                      <input type="checkbox" checked={hideProv} onChange={(e) => setHideProv(e.target.checked)} />
-                      Masquer les provisoires (&lt; 5 matchs)
-                    </label>
-                  </div>
-                )}
+              <div className="lb-sort">
+                <span className="lb-sort-label">Trier :</span>
+                {[["elo", "Elo"], ["world", "Mondial"], ["form", "Forme"]].map(([k, lbl]) => (
+                  <button key={k} className={`range-btn ${sort === k ? "active" : ""}`} onClick={() => setSort(k)}>{lbl}</button>
+                ))}
               </div>
             </div>
 
+            <p className="muted" style={{ fontSize: 12, margin: "0 0 10px" }}>
+              <b>Forme</b> = variation de la cote Elo sur les 5 derniers matchs (▲ en hausse · ▼ en baisse).
+            </p>
             <div className="table-scroll">
               <table className="lb-table">
                 <thead>

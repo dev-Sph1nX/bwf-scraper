@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams, useOutletContext, Link } from "react-router-dom";
-import { getJSON } from "../data.js";
+import { getJSON, setsFor } from "../data.js";
 import EloChart from "../components/EloChart.jsx";
 
 const DISC_LABEL = {
@@ -14,6 +14,60 @@ function cmpNote(eloRank, bwfRank) {
   if (diff > 0) return `Notre Elo le place ${diff} rang${diff > 1 ? "s" : ""} plus haut que le classement officiel — bonne forme sous-estimée par le mondial.`;
   if (diff < 0) return `Notre Elo le place ${-diff} rang${-diff > 1 ? "s" : ""} plus bas — le classement officiel le sur-évalue (forme récente en retrait).`;
   return "Aligné avec le classement mondial officiel.";
+}
+
+const RANGES = [
+  { k: "1m", label: "1 mois", months: 1 },
+  { k: "3m", label: "3 mois", months: 3 },
+  { k: "6m", label: "6 mois", months: 6 },
+  { k: "1y", label: "1 an", months: 12 },
+  { k: "all", label: "Tout", months: null },
+];
+function rangeCutoff(k, lastT) {
+  const r = RANGES.find((x) => x.k === k);
+  if (!r || r.months == null || !lastT) return null;
+  const d = new Date(lastT.replace(" ", "T"));
+  d.setMonth(d.getMonth() - r.months);
+  return d;
+}
+
+function fmtMatchDate(s) {
+  if (!s) return "";
+  const d = new Date(s.replace(" ", "T"));
+  const p = (n) => String(n).padStart(2, "0");
+  return `${p(d.getDate())}/${p(d.getMonth() + 1)}/${d.getFullYear()}`;
+}
+
+// Stade atteint dans un tournoi, d'après le dernier match joué (le plus tardif).
+const ROUND_LABEL = {
+  F: "Finaliste", Final: "Finaliste", SF: "1/2 finale", QF: "1/4 de finale",
+  R16: "1/8 de finale", R32: "1/16 de finale", R64: "1/32 de finale", R128: "1/64 de finale", RR: "Poules",
+};
+function tournamentResult(matches) {
+  const last = [...matches].sort((a, b) => (b.matchTime || "").localeCompare(a.matchTime || ""))[0];
+  if (!last) return "—";
+  const isFinal = last.roundName === "F" || last.roundName === "Final";
+  if (last.won && isFinal) return "🏆 Vainqueur";
+  return ROUND_LABEL[last.roundName] || last.roundName || "—";
+}
+
+// Carte de match façon arbre de tournoi (réutilise les classes .mcard/.mteam du bracket)
+function MatchTeam({ match, side }) {
+  const team = side === 1 ? match.team1 : match.team2;
+  const isWin = match.winner === side;
+  const players = team?.players ?? [];
+  const flag = team?.countryFlagUrl || players[0]?.countryFlagUrl || "";
+  return (
+    <div className={`mteam ${isWin ? "win" : ""}`}>
+      {flag ? <img className="mav" src={flag} alt="" onError={(e) => { e.target.style.visibility = "hidden"; }} />
+            : <span className="mav" />}
+      <div className="mnames">{players.map((p) => p.nameDisplay).join(" / ") || " "}</div>
+      <div className="mscore">
+        {isWin ? <span className="mdot" /> : null}
+        {setsFor(match, side).map((s, i) => <span key={i} className={`mset ${s.won ? "won" : ""}`}>{s.value}</span>)}
+      </div>
+    </div>
+  );
 }
 
 const oppSide = (m) => (m.side === "team1" ? "team2" : "team1");
@@ -80,9 +134,21 @@ export default function Player() {
   const { setTitle, setRight } = useOutletContext();
   const [data, setData] = useState(null);
   const [opp, setOpp] = useState(null);
+  const [range, setRange] = useState("1m");
+  const [openTmts, setOpenTmts] = useState(() => new Set());
+  const [tmtQuery, setTmtQuery] = useState("");
+  const toggleTmt = (id) => setOpenTmts((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
+  const [highlight, setHighlight] = useState(null);
+  // Depuis le graphe : ouvre le tournoi du point cliqué et surligne le match.
+  const goToMatch = (pt) => {
+    if (!pt?.tmtId) return;
+    setTmtQuery("");
+    setOpenTmts((s) => new Set(s).add(pt.tmtId));
+    setHighlight(`${pt.tmtId}|${pt.t}|${pt.disc}`);
+  };
 
   useEffect(() => {
-    setRight(<Link className="tb-right" to="/players">← Tous les joueurs</Link>);
+    setRight(<Link className="tb-right" to="/">← Classement</Link>);
     return () => setRight(null);
   }, [setRight]);
 
@@ -90,6 +156,15 @@ export default function Player() {
     setOpp(null);
     getJSON(`player/${id}.json`).then((d) => { setData(d); setTitle(d.player.nameDisplay); }).catch(() => setData(false));
   }, [id, setTitle]);
+
+  // Scroll vers le match surligné (déclenché depuis le graphe) puis retire l'effet.
+  useEffect(() => {
+    if (!highlight) return;
+    const el = document.querySelector(`[data-mkey="${highlight}"]`);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+    const t = setTimeout(() => setHighlight(null), 2500);
+    return () => clearTimeout(t);
+  }, [highlight]);
 
   const matches = useMemo(
     () => (data && data !== false ? [...data.matches].sort((a, b) => (a.matchTime || "").localeCompare(b.matchTime || "")) : []),
@@ -123,11 +198,20 @@ export default function Player() {
   const rate = matches.length ? Math.round((wins / matches.length) * 100) : 0;
   const meta = findMeta(matches, data.player.id);
 
-  // Historique Elo groupé par discipline (ordre : plus de matchs d'abord)
+  // Historique Elo groupé par discipline, filtré par la temporalité choisie
+  const allElo = data.elo || [];
+  const lastElo = allElo[allElo.length - 1];
+  const cutoff = rangeCutoff(range, lastElo?.t);
   const eloByDisc = {};
-  for (const pt of data.elo || []) (eloByDisc[pt.disc] ??= []).push(pt);
+  for (const pt of allElo) {
+    if (cutoff && pt.t && new Date(pt.t.replace(" ", "T")) < cutoff) continue;
+    (eloByDisc[pt.disc] ??= []).push(pt);
+  }
   const discOrder = Object.keys(eloByDisc).sort((a, b) => eloByDisc[b].length - eloByDisc[a].length);
-  const lastElo = (data.elo || [])[data.elo?.length - 1];
+
+  // Δelo par match (associé via tournoi + horodatage + discipline)
+  const eloByMatch = new Map();
+  for (const pt of allElo) eloByMatch.set(`${pt.tmtId}|${pt.t}|${pt.disc}`, pt.d);
 
   // Matchs groupés par tournoi (tournois récents d'abord)
   const groups = {};
@@ -160,11 +244,21 @@ export default function Player() {
         </div>
       </div>
 
-      {discOrder.length > 0 && (
+      {allElo.length > 0 && (
         <div className="card">
           <h2>Évolution de la cote</h2>
-          {discOrder.map((code) => (
-            <EloChart key={code} points={eloByDisc[code]} label={DISC_LABEL[code] || code} />
+          <div className="chart-ranges" role="tablist" aria-label="Période">
+            {RANGES.map((r) => (
+              <button key={r.k} role="tab" aria-selected={r.k === range}
+                className={`range-btn ${r.k === range ? "active" : ""}`} onClick={() => setRange(r.k)}>
+                {r.label}
+              </button>
+            ))}
+          </div>
+          {discOrder.length === 0 ? (
+            <p className="muted">Aucun match sur cette période.</p>
+          ) : discOrder.map((code) => (
+            <EloChart key={code} points={eloByDisc[code]} label={DISC_LABEL[code] || code} onPointClick={goToMatch} />
           ))}
         </div>
       )}
@@ -176,9 +270,12 @@ export default function Player() {
             Le classement mondial officiel repose sur les 6 meilleures perfs (inertie). Notre Elo
             reflète la forme du moment. L'écart entre les deux est le signal intéressant pour parier.
           </p>
-          {data.comparison.map((c) => (
+          {[...data.comparison].sort((a, b) => b.matches - a.matches).map((c) => (
             <div className="cmp" key={c.key}>
-              <div className="cmp-disc">{DISC_LABEL[c.disc] || c.disc}</div>
+              <div className="cmp-disc">
+                {DISC_LABEL[c.disc] || c.disc}
+                {c.partner ? <span className="muted" style={{ fontWeight: "normal" }}> · avec {c.partner}</span> : null}
+              </div>
               <div className="cmp-cols">
                 <div className="cmp-col">
                   <div className="cmp-k">Notre Elo</div>
@@ -233,29 +330,63 @@ export default function Player() {
       </div>
 
       <div className="card">
-        <h2>Derniers matchs par tournoi</h2>
-        {grouped.map((g) => (
-          <div className="tgroup" key={g.tmtId}>
-            <h3><Link to={`/tournament/${g.tmtId}`}>{g.name}</Link>{g.year ? <span className="muted"> · {g.year}</span> : null}</h3>
-            <div className="table-scroll">
-              <table>
-                <thead><tr><th>Épreuve</th><th>Tour</th><th>Partenaire</th><th>Adversaires</th><th>Score</th><th>Résultat</th></tr></thead>
-                <tbody>
-                  {g.matches.map((m, i) => (
-                    <tr key={i}>
-                      <td>{m.eventName}</td>
-                      <td>{m.roundName}</td>
-                      <td>{partner(m, data.player.id)}</td>
-                      <td>{opponents(m)}</td>
-                      <td>{scoreFor(m)}</td>
-                      <td className={m.won ? "win" : "loss"}>{m.won ? "Victoire" : "Défaite"}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+        <h2>Derniers tournois</h2>
+        <input className="search" placeholder="Rechercher un tournoi…" value={tmtQuery} onChange={(e) => setTmtQuery(e.target.value)} />
+        {grouped.filter((g) => g.name.toLowerCase().includes(tmtQuery.toLowerCase())).map((g) => {
+          let totalDelta = 0, hasDelta = false;
+          for (const m of g.matches) {
+            const d = eloByMatch.get(`${m.tmtId}|${m.matchTime}|${m.eventName}`);
+            if (typeof d === "number") { totalDelta += d; hasDelta = true; }
+          }
+          const open = openTmts.has(g.tmtId);
+          const cls = totalDelta > 0 ? "up" : totalDelta < 0 ? "down" : "flat";
+          return (
+            <div className={`tsum ${open ? "open" : ""}`} key={g.tmtId}>
+              <button className="tsum-head" aria-expanded={open} onClick={() => toggleTmt(g.tmtId)}>
+                <span className="tsum-chev" aria-hidden="true">{open ? "▾" : "▸"}</span>
+                <span className="tsum-main">
+                  <span className="tsum-name">{g.name}{g.year ? <span className="muted"> · {g.year}</span> : null}</span>
+                  <span className="tsum-sub">
+                    {fmtMatchDate(g.matches[0]?.matchTime)} · {tournamentResult(g.matches)} · {g.matches.length} match{g.matches.length > 1 ? "s" : ""}
+                  </span>
+                </span>
+                {hasDelta && (
+                  <span className={`tsum-elo form ${cls}`}>
+                    {totalDelta > 0 ? `▲ +${totalDelta}` : totalDelta < 0 ? `▼ ${Math.abs(totalDelta)}` : "→ 0"}
+                  </span>
+                )}
+              </button>
+              {open && (
+                <div className="tsum-body">
+                  <div className="match-list">
+                    {g.matches.map((m, i) => {
+                      const mkey = `${m.tmtId}|${m.matchTime}|${m.eventName}`;
+                      const delta = eloByMatch.get(mkey);
+                      return (
+                        <div className={`match-item ${highlight === mkey ? "flash" : ""}`} data-mkey={mkey} key={i}>
+                          <div className="match-meta">
+                            <span className="match-ev">{m.eventName} · {m.roundName}</span>
+                            <span className="match-date">{fmtMatchDate(m.matchTime)}</span>
+                            {typeof delta === "number" ? (
+                              <span className={`form ${delta > 0 ? "up" : delta < 0 ? "down" : "flat"}`}>
+                                {delta > 0 ? `▲ +${delta}` : delta < 0 ? `▼ ${Math.abs(delta)}` : "→ 0"} Elo
+                              </span>
+                            ) : <span className="muted">—</span>}
+                          </div>
+                          <div className="mcard mcard-flow">
+                            <MatchTeam match={m} side={1} />
+                            <MatchTeam match={m} side={2} />
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <Link className="tsum-link" to={`/tournament/${g.tmtId}`}>Voir le bracket →</Link>
+                </div>
+              )}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </>
   );

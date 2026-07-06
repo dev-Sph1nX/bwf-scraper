@@ -8,7 +8,7 @@ const PW = W - PAD.l - PAD.r, PH = H - PAD.t - PAD.b;
 const parseT = (t) => (t ? new Date(t.replace(" ", "T")).getTime() : NaN);
 const fmtDate = (t) => (t ? new Date(t.replace(" ", "T")).toLocaleDateString("fr-FR", { day: "numeric", month: "short", year: "2-digit" }) : "");
 
-export default function EloChart({ points, label }) {
+export default function EloChart({ points, label, onPointClick }) {
   const svgRef = useRef(null);
   const [hi, setHi] = useState(null);
 
@@ -66,7 +66,9 @@ export default function EloChart({ points, label }) {
       </div>
       <div className="chart-plot">
         <svg ref={svgRef} viewBox={`0 0 ${W} ${H}`}
-             onMouseMove={onMove} onMouseLeave={() => setHi(null)}>
+             style={{ cursor: hi != null && pts[hi]?.tmtId ? "pointer" : "default" }}
+             onMouseMove={onMove} onMouseLeave={() => setHi(null)}
+             onClick={() => { if (hi != null && pts[hi]?.tmtId) onPointClick?.(pts[hi]); }}>
           {ticks.map((t) => (
             <g key={t}>
               <line x1={PAD.l} x2={W - PAD.r} y1={y(t)} y2={y(t)} stroke="var(--line)" strokeWidth="1" />
@@ -89,8 +91,21 @@ export default function EloChart({ points, label }) {
         </svg>
         {hi != null && (
           <div className="chart-tip" style={{ left: `${(x(hi) / W) * 100}%`, top: `${(y(pts[hi].r) / H) * 100}%` }}>
-            <b>{pts[hi].r}</b>
-            <span>{fmtDate(pts[hi].t)} · {pts[hi].won ? "V" : "D"}</span>
+            <div className="tip-r">
+              <b>{pts[hi].r}</b>
+              {typeof pts[hi].d === "number" && (
+                <span className={`form ${pts[hi].d > 0 ? "up" : pts[hi].d < 0 ? "down" : "flat"}`}>
+                  {pts[hi].d > 0 ? `+${pts[hi].d}` : pts[hi].d}
+                </span>
+              )}
+            </div>
+            <div className="tip-line">
+              <span className={pts[hi].won ? "win" : "loss"}>{pts[hi].won ? "Victoire" : "Défaite"}</span>
+              {pts[hi].round ? ` · ${pts[hi].round}` : ""} · {fmtDate(pts[hi].t)}
+            </div>
+            {pts[hi].opp && <div className="tip-line muted">vs {pts[hi].opp}</div>}
+            {pts[hi].tmt && <div className="tip-tmt">{pts[hi].tmt}</div>}
+            {pts[hi].tmtId && <div className="tip-go">Voir le match ↓</div>}
           </div>
         )}
       </div>
