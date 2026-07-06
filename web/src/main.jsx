@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import Tournaments from "./pages/Tournaments.jsx";
 import Tournament from "./pages/Tournament.jsx";
 import Player from "./pages/Player.jsx";
+import Pair from "./pages/Pair.jsx";
 import Predictor from "./pages/Predictor.jsx";
 import Data from "./pages/Data.jsx";
 import "./styles.css";
@@ -21,6 +22,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/data" element={<Data />} />
           <Route path="/tournament/:id" element={<Tournament />} />
           <Route path="/player/:id" element={<Player />} />
+          <Route path="/pair/:key" element={<Pair />} />
         </Route>
       </Routes>
     </HashRouter>

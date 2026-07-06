@@ -1,34 +1,15 @@
-import { setsFor } from "../data.js";
+import MatchTeam from "./MatchTeam.jsx";
 
 const CARD_W = 260, COL_GAP = 74, GAP0 = 26, BASE_LEFT = 34;
 const RN = { R128: "Round 128", R64: "Round 64", R32: "Round 32", R16: "Round 16",
              QF: "Quarter Final", SF: "Semi Final", F: "Final", Final: "Final", RR: "Round Robin" };
 const leftOf = (c) => BASE_LEFT + c * (CARD_W + COL_GAP);
 
-function Team({ match, side }) {
-  const team = match[side === 1 ? "team1" : "team2"];
-  const seed = match[side === 1 ? "team1seed" : "team2seed"];
-  const isWin = match.winner === side;
-  const players = team?.players ?? [];
-  const flag = team?.countryFlagUrl || players[0]?.countryFlagUrl || "";
-  return (
-    <div className={`mteam ${isWin ? "win" : ""}`}>
-      {flag
-        ? <img className="mav" src={flag} alt="" onError={(e) => (e.target.style.visibility = "hidden")} />
-        : <span className="mav" />}
-      <div className="mnames">
-        {players.map((p) => p.nameDisplay).join(" / ") || " "}
-        {seed ? <span className="mseed">({seed})</span> : null}
-      </div>
-      <div className="mscore">
-        {isWin ? <span className="mdot" /> : null}
-        {setsFor(match, side).map((s, i) => (
-          <span key={i} className={`mset ${s.won ? "won" : ""}`}>{s.value}</span>
-        ))}
-      </div>
-    </div>
-  );
-}
+// Équipe d'une cellule de bracket : réutilise le composant partagé (noms cliquables)
+// en lui transmettant la tête de série propre au bracket.
+const Team = ({ match, side }) => (
+  <MatchTeam match={match} side={side} seed={match[side === 1 ? "team1seed" : "team2seed"]} />
+);
 
 export default function Bracket({ disc }) {
   const grid = disc.results || {};

@@ -45,7 +45,10 @@ for (const [disc, m] of Object.entries(initRanks)) {
 }
 console.log(`   Seed initial : ${seededCount} entités depuis le classement mondial (data/seeds/)`);
 const elo = await computeElo(years, seeds);
-const { playerHistory, ...ranking } = elo;
+const { playerHistory, pairHistory, ...ranking } = elo;
+
+const DOUBLES = new Set(["MD", "WD", "XD"]);
+const pairKeyOf = (players) => `pair:${players.map((p) => String(p.id)).sort().join("-")}`;
 
 // ===== 2) Classement mondial officiel BWF + comparaison =====
 let worldMeta = null;
@@ -89,6 +92,7 @@ console.log(`   Elo : ${ranking.stats.processed} matchs — classement mondial :
 
 // ===== 3) Index joueur fusionné (UNE lecture par année) + stats =====
 const index = new Map(); // id -> {id, nameDisplay, countryCode, slug, matches:[], years:Set}
+const pairMatchIndex = new Map(); // cléPaire -> matchs joués ENSEMBLE (perspective de l'équipe)
 const byDiscipline = {};
 let firstMatch = null, lastMatch = null;
 const yearMatchCount = {};
@@ -101,17 +105,26 @@ for (const y of years) {
     if (t) { if (!firstMatch || t < firstMatch) firstMatch = t; if (!lastMatch || t > lastMatch) lastMatch = t; }
     if (match.eventName) byDiscipline[match.eventName] = (byDiscipline[match.eventName] || 0) + 1;
     for (const teamKey of ["team1", "team2"]) {
-      for (const pl of match[teamKey]?.players ?? []) {
+      const players = match[teamKey]?.players ?? [];
+      const won = (teamKey === "team1" && match.winner === 1) || (teamKey === "team2" && match.winner === 2);
+      const entry = {
+        tmtId, drawId, tournamentName: match.tournamentName, eventName: match.eventName,
+        roundName: match.roundName, matchTime: match.matchTime, side: teamKey, won,
+        team1: match.team1, team2: match.team2, score: match.score, winner: match.winner, year: y,
+      };
+      for (const pl of players) {
         let e = index.get(pl.id);
         if (!e) { e = { id: pl.id, nameDisplay: pl.nameDisplay, countryCode: pl.countryCode, slug: pl.slug, matches: [], years: new Set() }; index.set(pl.id, e); }
-        e.matches.push({
-          tmtId, drawId, tournamentName: match.tournamentName, eventName: match.eventName,
-          roundName: match.roundName, matchTime: match.matchTime, side: teamKey,
-          won: (teamKey === "team1" && match.winner === 1) || (teamKey === "team2" && match.winner === 2),
-          team1: match.team1, team2: match.team2, score: match.score, winner: match.winner, year: y,
-        });
+        e.matches.push(entry);
         e.years.add(y);
         e.nameDisplay = pl.nameDisplay; e.countryCode = pl.countryCode; e.slug = pl.slug;
+      }
+      // Match de paire = double avec 2 joueurs sur la même équipe.
+      if (DOUBLES.has(match.eventName) && players.length >= 2) {
+        const key = pairKeyOf(players);
+        let arr = pairMatchIndex.get(key);
+        if (!arr) { arr = []; pairMatchIndex.set(key, arr); }
+        arr.push(entry);
       }
     }
   }
@@ -134,6 +147,35 @@ for (const e of index.values()) {
 }
 playersList.sort((a, b) => b.matchCount - a.matchCount);
 await write("players.json", { years, players: playersList });
+
+// ===== 4b) Fiches paires (double) : résultats réalisés ENSEMBLE =====
+let pairCount = 0;
+for (const disc of DOUBLES) {
+  const d = ranking.disciplines[disc];
+  if (!d) continue;
+  for (const e of d.entities) {
+    const matchList = (pairMatchIndex.get(e.key) || [])
+      .slice()
+      .sort((a, b) => (a.matchTime || "").localeCompare(b.matchTime || ""));
+    const yrs = [...new Set(matchList.map((m) => m.year))].sort();
+    await write(`pair/${e.key.slice(5)}.json`, {
+      key: e.key,
+      disc,
+      discLabel: d.label,
+      players: e.players,
+      country: e.country,
+      years: yrs,
+      rank: e.rank, rating: e.rating, peak: e.peak,
+      matches: e.matches, wins: e.wins, losses: e.losses,
+      provisional: e.provisional, form: e.form,
+      bwfRank: e.bwfRank ?? null, bwfPoints: e.bwfPoints ?? null,
+      elo: pairHistory[e.key] || [],
+      matchList,
+    });
+    pairCount++;
+  }
+}
+console.log(`   Paires : ${pairCount} fiches`);
 
 // ===== 5) Tournois (toutes saisons) : status.json + fiches tournoi =====
 const allTournaments = [];
@@ -166,4 +208,38 @@ await write("summary.json", {
   worldRanking: worldMeta,
 });
 
-console.log(`✅ ${tCount} tournois, ${pCount} joueurs, saisons ${years.join(", ")}`);
+// ===== 7) updates.json : historique des mises à jour (regroupé par jour de récup) =====
+// Source = manifest.draws (fetchedAt + matchCount par draw). On somme les matchs
+// par tournoi et par journée. Limite : un tournoi live re-téléchargé plusieurs
+// jours n'apparaît qu'à sa dernière récup (le manifest écrase le fetchedAt).
+const tmtNameById = new Map(allTournaments.map((t) => [String(t.id), t.name]));
+const byDay = new Map(); // jour (YYYY-MM-DD) -> Map(tmtId -> {id, name, year, matches, status, lastFetched})
+for (const [key, meta] of Object.entries(manifest.draws || {})) {
+  if (!meta?.fetchedAt) continue;
+  const [y, tmtId] = key.split("/");
+  const day = meta.fetchedAt.slice(0, 10);
+  let dayMap = byDay.get(day);
+  if (!dayMap) { dayMap = new Map(); byDay.set(day, dayMap); }
+  let t = dayMap.get(tmtId);
+  if (!t) {
+    t = { id: Number(tmtId), name: tmtNameById.get(tmtId) || `Tournoi ${tmtId}`, year: Number(y), matches: 0, status: meta.tournamentStatus ?? null, lastFetched: meta.fetchedAt };
+    dayMap.set(tmtId, t);
+  }
+  t.matches += meta.matchCount || 0;
+  if (meta.fetchedAt > t.lastFetched) { t.lastFetched = meta.fetchedAt; t.status = meta.tournamentStatus ?? t.status; }
+}
+const updates = [...byDay.entries()]
+  .sort((a, b) => b[0].localeCompare(a[0]))
+  .slice(0, 60)
+  .map(([day, tmts]) => {
+    const tournaments = [...tmts.values()].sort((a, b) => b.matches - a.matches);
+    return {
+      day,
+      tournamentCount: tournaments.length,
+      matchTotal: tournaments.reduce((sum, t) => sum + t.matches, 0),
+      tournaments,
+    };
+  });
+await write("updates.json", { generatedAt: ranking.generatedAt, updates });
+
+console.log(`✅ ${tCount} tournois, ${pCount} joueurs, ${updates.length} jours de MAJ, saisons ${years.join(", ")}`);

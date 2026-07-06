@@ -4,7 +4,7 @@ on:
   push:
     branches: [main] # tout push sur main redéploie (les commits data [skip ci] ne bouclent pas)
   schedule:
-    - cron: "0 0 * * *" # tous les jours à minuit UTC
+    - cron: "0 22 * * *" # ~minuit heure de Paris (22:00 UTC = 00:00 en été CEST, 23:00 en hiver)
   workflow_dispatch: {} # bouton "Run workflow" manuel
 
 # Un seul run à la fois

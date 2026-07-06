@@ -61,7 +61,8 @@ export default function Dashboard() {
     if (ql) list = list.filter((e) => e.name.toLowerCase().includes(ql));
     list = [...list];
     if (sort === "world") list.sort((a, b) => (a.bwfRank ?? Infinity) - (b.bwfRank ?? Infinity));
-    else if (sort === "form") list.sort((a, b) => b.form - a.form);
+    else if (sort === "formBest") list.sort((a, b) => b.form - a.form);
+    else if (sort === "formWorst") list.sort((a, b) => a.form - b.form);
     else list.sort((a, b) => b.rating - a.rating);
     return list;
   }, [d, ql, searching, sort, minMatches, maxWorld]);
@@ -91,32 +92,38 @@ export default function Dashboard() {
           )}
 
           <div className="card">
-            <input
-              className="search"
-              placeholder={d?.type === "pair" ? "Rechercher une paire…" : "Rechercher un joueur…"}
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-            />
-            <div className="lb-head">
-              <span className="muted lb-count">
-                {rows.length} {d?.type === "pair" ? "paires" : "joueurs"}
-              </span>
-              <div className="lb-filters">
-                <label className="lb-f" title="0 = sans limite">Matchs min
-                  <input type="number" min="0" value={minMatches}
-                    onChange={(e) => setMinMatches(Math.max(0, parseInt(e.target.value, 10) || 0))} />
-                </label>
-                <label className="lb-f" title="Classement mondial BWF ; 0 = sans limite">Mondial max
-                  <input type="number" min="0" value={maxWorld}
-                    onChange={(e) => setMaxWorld(Math.max(0, parseInt(e.target.value, 10) || 0))} />
-                </label>
-              </div>
+            <div className="lb-search-row">
+              <input
+                className="search"
+                placeholder={d?.type === "pair" ? "Rechercher une paire…" : "Rechercher un joueur…"}
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+              />
               <div className="lb-sort">
                 <span className="lb-sort-label">Trier :</span>
-                {[["elo", "Elo"], ["world", "Mondial"], ["form", "Forme"]].map(([k, lbl]) => (
+                {[["elo", "Elo"], ["world", "Mondial"], ["formBest", "Meilleure forme"], ["formWorst", "Pire forme"]].map(([k, lbl]) => (
                   <button key={k} className={`range-btn ${sort === k ? "active" : ""}`} onClick={() => setSort(k)}>{lbl}</button>
                 ))}
               </div>
+            </div>
+            <div className="lb-head">
+              <div className="lb-filters">
+                <div className="lb-fg">
+                  <span className="lb-sort-label">Matchs min :</span>
+                  {[[0, "Aucun"], [5, "5"], [20, "20"], [50, "50"]].map(([v, lbl]) => (
+                    <button key={v} className={`range-btn ${minMatches === v ? "active" : ""}`} onClick={() => setMinMatches(v)}>{lbl}</button>
+                  ))}
+                </div>
+                <div className="lb-fg">
+                  <span className="lb-sort-label">Mondial :</span>
+                  {[[0, "Tous"], [60, "60 meilleurs"]].map(([v, lbl]) => (
+                    <button key={v} className={`range-btn ${maxWorld === v ? "active" : ""}`} onClick={() => setMaxWorld(v)}>{lbl}</button>
+                  ))}
+                </div>
+              </div>
+              <span className="muted lb-count">
+                {rows.length}/{d?.entities?.length ?? 0} {d?.type === "pair" ? "paires" : "joueurs"}
+              </span>
             </div>
 
             <p className="muted" style={{ fontSize: 12, margin: "0 0 10px" }}>
@@ -145,13 +152,16 @@ export default function Dashboard() {
                         <span className="lb-entity">
                           <Avatars players={e.players} />
                           <span className="lb-name">
-                            <span className="nm">
-                              {e.players.map((p, i) => (
-                                <span key={p.id}>
-                                  {i > 0 ? " / " : ""}
-                                  <Link to={`/player/${p.id}`}>{p.name}</Link>
-                                </span>
-                              ))}
+                            <span className={`nm ${e.players.length > 1 ? "stacked" : ""}`}>
+                              {e.type === "pair" ? (
+                                <Link to={`/pair/${e.key.slice(5)}`}>
+                                  {e.players.map((p) => <span key={p.id} className="pl">{p.name}</span>)}
+                                </Link>
+                              ) : (
+                                e.players.map((p) => (
+                                  <Link key={p.id} to={`/player/${p.id}`}>{p.name}</Link>
+                                ))
+                              )}
                               {e.provisional && <span className="tag-prov">prov.</span>}
                             </span>
                             <span className="sub">{e.country || "—"}</span>

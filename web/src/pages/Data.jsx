@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, Link } from "react-router-dom";
 import { getJSON } from "../data.js";
 
 const ORDER = ["MS", "WS", "MD", "WD", "XD"];
@@ -7,6 +7,8 @@ const DISC_LABEL = {
   MS: "Simple messieurs", WS: "Simple dames", MD: "Double messieurs",
   WD: "Double dames", XD: "Double mixte",
 };
+const STATUS_LBL = { post: "terminé", live: "en cours", future: "à venir" };
+const MAX_TMT_PER_DAY = 12;
 
 function fmtDay(s) {
   if (!s) return "—";
@@ -23,9 +25,11 @@ const nf = (n) => (n ?? 0).toLocaleString("fr-FR");
 export default function Data() {
   const { setTitle } = useOutletContext();
   const [s, setS] = useState(null);
+  const [upd, setUpd] = useState(null);
 
   useEffect(() => { setTitle("Données"); }, [setTitle]);
   useEffect(() => { getJSON("summary.json").then(setS).catch(() => setS(false)); }, []);
+  useEffect(() => { getJSON("updates.json").then(setUpd).catch(() => setUpd(false)); }, []);
 
   if (s === false) return <div className="card muted">Données indisponibles pour l'instant.</div>;
   if (!s) return <div className="card muted">Chargement…</div>;
@@ -83,6 +87,39 @@ export default function Data() {
           })}
         </div>
       </div>
+
+      {upd && upd.updates?.length > 0 && (
+        <div className="card">
+          <h2>Historique des mises à jour</h2>
+          <p className="lead">Tournois et matchs récupérés à chaque mise à jour, du plus récent au plus ancien.</p>
+          <div className="upd-timeline">
+            {upd.updates.map((d) => (
+              <div className="upd-day" key={d.day}>
+                <span className="upd-dot" aria-hidden="true" />
+                <div className="upd-dayhead">
+                  <span className="upd-date">{fmtDay(d.day)}</span>
+                  <span className="muted upd-sum">
+                    {d.tournamentCount} tournoi{d.tournamentCount > 1 ? "s" : ""} · {nf(d.matchTotal)} matchs
+                  </span>
+                </div>
+                <ul className="upd-list">
+                  {d.tournaments.slice(0, MAX_TMT_PER_DAY).map((t) => (
+                    <li className="upd-item" key={t.id}>
+                      <Link to={`/tournament/${t.id}`} className="upd-tmt">{t.name}</Link>
+                      <span className="muted upd-yr">{t.year}</span>
+                      <span className="upd-matches">{nf(t.matches)} matchs</span>
+                      {t.status && <span className={`badge ${t.status}`}>{STATUS_LBL[t.status] || t.status}</span>}
+                    </li>
+                  ))}
+                  {d.tournaments.length > MAX_TMT_PER_DAY && (
+                    <li className="upd-more muted">+ {d.tournaments.length - MAX_TMT_PER_DAY} autres tournois</li>
+                  )}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </>
   );
 }

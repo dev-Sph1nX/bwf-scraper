@@ -1,8 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { useOutletContext, Link } from "react-router-dom";
 import { getJSON } from "../data.js";
+import MatchTeam from "../components/MatchTeam.jsx";
 
 const ORDER = ["MS", "WS", "MD", "WD", "XD"];
+
+// Lien vers la fiche : joueur -> /player/:id, paire -> /pair/:id1-id2.
+const entityHref = (e) => (e.type === "pair" ? `/pair/${e.key.slice(5)}` : `/player/${e.players[0].id}`);
 
 // Probabilité de victoire d'A face à B selon l'écart Elo (formule standard).
 const winProb = (ra, rb) => 1 / (1 + Math.pow(10, (rb - ra) / 400));
@@ -107,7 +111,7 @@ function PlayerCard({ entity, matches }) {
   const f = entity.form;
   return (
     <div className="pcard">
-      <div className="pcard-name">{flag && <img className="lb-flag" src={flag} alt="" />}{entity.name}</div>
+      <div className="pcard-name">{flag && <img className="lb-flag" src={flag} alt="" />}<Link className="pcard-link" to={entityHref(entity)}>{entity.name}</Link></div>
       <div className="pcard-stats">
         <div><span className="k">Elo</span><span className="v accent">{entity.rating}</span></div>
         <div><span className="k">Mondial BWF</span><span className="v">{entity.bwfRank ? `#${entity.bwfRank}` : "—"}</span></div>
@@ -235,15 +239,19 @@ export default function Predictor() {
                     <span className="big"><span className="win">{aWins}</span> – <span className="loss">{bWins}</span></span>
                     <span className="muted">{a.name} vs {b.name}</span>
                   </div>
-                  <div className="h2h-list">
+                  <div className="match-list">
                     {h2h.map((m, i) => (
-                      <div className="h2h-row" key={i}>
-                        <span className={`h2h-res ${m.won ? "win" : "loss"}`}>{m.won ? "V" : "D"}</span>
-                        <span className="h2h-tmt">
-                          <Link to={`/tournament/${m.tmtId}`}>{m.tournamentName || m.tmtId}</Link>
-                          <span className="muted"> · {m.roundName} · {fmtD(m.matchTime)}</span>
-                        </span>
-                        <span className="h2h-score">{scoreStr(m)}</span>
+                      <div className="match-item" key={i}>
+                        <div className="match-meta">
+                          <span className="match-ev">
+                            <Link to={`/tournament/${m.tmtId}`}>{m.tournamentName || m.tmtId}</Link> · {m.roundName}
+                          </span>
+                          <span className="match-date">{fmtD(m.matchTime)}</span>
+                        </div>
+                        <div className="mcard mcard-flow">
+                          <MatchTeam match={m} side={1} />
+                          <MatchTeam match={m} side={2} />
+                        </div>
                       </div>
                     ))}
                   </div>
