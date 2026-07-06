@@ -49,7 +49,7 @@ export default function Data() {
           Saisons <b>{(s.years || []).join(", ")}</b> — du <b>{fmtDay(s.firstMatch)}</b> au <b>{fmtDay(s.lastMatch)}</b>.
         </p>
         <p className="lead">
-          Dernière mise à jour : <b>{fmtDateTime(s.lastUpdate)}</b> (auto toutes les 6 h).
+          Dernière mise à jour : <b>{fmtDateTime(s.lastUpdate)}</b> (auto une fois par jour).
           {s.worldRanking?.fetchedAt && <> Classement mondial BWF : <b>{fmtDateTime(s.worldRanking.fetchedAt)}</b>.</>}
         </p>
       </div>

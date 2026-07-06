@@ -36,6 +36,8 @@ export default function Dashboard() {
   const [disc, setDisc] = useState("MS");
   const [sort, setSort] = useState("elo");
   const [q, setQ] = useState("");
+  const [minMatches, setMinMatches] = useState(5);
+  const [maxWorld, setMaxWorld] = useState(60);
 
   useEffect(() => { setTitle("Classement Elo"); }, [setTitle]);
   useEffect(() => { getJSON("elo/ranking.json").then(setData).catch(() => setData(false)); }, []);
@@ -43,22 +45,26 @@ export default function Dashboard() {
   const searching = q.trim().length > 0;
   const ql = q.trim().toLowerCase();
   // Une discipline a des résultats si au moins une entité (non provisoire, sauf en recherche) matche.
+  // Prédicat de filtrage (ignoré en recherche pour toujours retrouver un joueur).
+  const maxW = maxWorld > 0 ? maxWorld : Infinity;
+  const passes = (e) =>
+    e.matches >= minMatches && (maxW === Infinity || (e.bwfRank != null && e.bwfRank <= maxW));
   const matchIn = (code) =>
     (data?.disciplines?.[code]?.entities ?? []).some(
-      (e) => (searching || !e.provisional) && (!ql || e.name.toLowerCase().includes(ql))
+      (e) => (searching || passes(e)) && (!ql || e.name.toLowerCase().includes(ql))
     );
   const shownDiscs = data?.disciplines ? (searching ? ORDER.filter(matchIn) : ORDER) : ORDER;
   const activeDisc = shownDiscs.includes(disc) ? disc : (shownDiscs[0] ?? disc);
   const d = data?.disciplines?.[activeDisc] ?? null;
   const rows = useMemo(() => {
-    let list = (d?.entities ?? []).filter((e) => searching || !e.provisional);
+    let list = (d?.entities ?? []).filter((e) => searching || passes(e));
     if (ql) list = list.filter((e) => e.name.toLowerCase().includes(ql));
     list = [...list];
     if (sort === "world") list.sort((a, b) => (a.bwfRank ?? Infinity) - (b.bwfRank ?? Infinity));
     else if (sort === "form") list.sort((a, b) => b.form - a.form);
     else list.sort((a, b) => b.rating - a.rating);
     return list;
-  }, [d, ql, searching, sort]);
+  }, [d, ql, searching, sort, minMatches, maxWorld]);
 
   return (
     <>
@@ -95,6 +101,16 @@ export default function Dashboard() {
               <span className="muted lb-count">
                 {rows.length} {d?.type === "pair" ? "paires" : "joueurs"}
               </span>
+              <div className="lb-filters">
+                <label className="lb-f" title="0 = sans limite">Matchs min
+                  <input type="number" min="0" value={minMatches}
+                    onChange={(e) => setMinMatches(Math.max(0, parseInt(e.target.value, 10) || 0))} />
+                </label>
+                <label className="lb-f" title="Classement mondial BWF ; 0 = sans limite">Mondial max
+                  <input type="number" min="0" value={maxWorld}
+                    onChange={(e) => setMaxWorld(Math.max(0, parseInt(e.target.value, 10) || 0))} />
+                </label>
+              </div>
               <div className="lb-sort">
                 <span className="lb-sort-label">Trier :</span>
                 {[["elo", "Elo"], ["world", "Mondial"], ["form", "Forme"]].map(([k, lbl]) => (
@@ -130,9 +146,12 @@ export default function Dashboard() {
                           <Avatars players={e.players} />
                           <span className="lb-name">
                             <span className="nm">
-                              {e.type === "player" && e.players[0]?.slug
-                                ? <Link to={`/player/${e.players[0].id}`}>{e.name}</Link>
-                                : e.name}
+                              {e.players.map((p, i) => (
+                                <span key={p.id}>
+                                  {i > 0 ? " / " : ""}
+                                  <Link to={`/player/${p.id}`}>{p.name}</Link>
+                                </span>
+                              ))}
                               {e.provisional && <span className="tag-prov">prov.</span>}
                             </span>
                             <span className="sub">{e.country || "—"}</span>

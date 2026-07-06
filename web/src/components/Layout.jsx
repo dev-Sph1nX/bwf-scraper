@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { YEAR, getJSON } from "../data.js";
 
-// Prochaine mise à jour = prochain créneau du cron "0 */6 * * *" (00/06/12/18 UTC).
+// Prochaine mise à jour = prochain minuit UTC (cron "0 0 * * *", 1×/jour).
 function nextCronSlot(from) {
   const d = new Date(from);
-  d.setUTCMinutes(0, 0, 0);
-  while (d <= from || d.getUTCHours() % 6 !== 0) d.setUTCHours(d.getUTCHours() + 1);
+  d.setUTCHours(0, 0, 0, 0);
+  while (d <= from) d.setUTCDate(d.getUTCDate() + 1);
   return d;
 }
 const p2 = (n) => String(n).padStart(2, "0");
