@@ -8,6 +8,14 @@ const DISC_LABEL = {
   WD: "Double dames", XD: "Double mixte",
 };
 
+const fmtPts = (n) => (n != null ? Math.round(n).toLocaleString("fr-FR") + " pts" : "");
+function cmpNote(eloRank, bwfRank) {
+  const diff = bwfRank - eloRank;
+  if (diff > 0) return `Notre Elo le place ${diff} rang${diff > 1 ? "s" : ""} plus haut que le classement officiel — bonne forme sous-estimée par le mondial.`;
+  if (diff < 0) return `Notre Elo le place ${-diff} rang${-diff > 1 ? "s" : ""} plus bas — le classement officiel le sur-évalue (forme récente en retrait).`;
+  return "Aligné avec le classement mondial officiel.";
+}
+
 const oppSide = (m) => (m.side === "team1" ? "team2" : "team1");
 function partner(m, id) {
   const team = m.side === "team1" ? m.team1 : m.team2;
@@ -124,7 +132,7 @@ export default function Player() {
   // Matchs groupés par tournoi (tournois récents d'abord)
   const groups = {};
   for (const m of matches) {
-    const g = groups[m.tmtId] ??= { tmtId: m.tmtId, name: m.tournamentName || m.tmtId, matches: [], last: "" };
+    const g = groups[m.tmtId] ??= { tmtId: m.tmtId, name: m.tournamentName || m.tmtId, year: m.year, matches: [], last: "" };
     g.matches.push(m);
     if ((m.matchTime || "") > g.last) g.last = m.matchTime || "";
   }
@@ -157,6 +165,35 @@ export default function Player() {
           <h2>Évolution de la cote</h2>
           {discOrder.map((code) => (
             <EloChart key={code} points={eloByDisc[code]} label={DISC_LABEL[code] || code} />
+          ))}
+        </div>
+      )}
+
+      {(data.comparison || []).length > 0 && (
+        <div className="card">
+          <h2>Elo vs classement mondial BWF</h2>
+          <p className="lead">
+            Le classement mondial officiel repose sur les 6 meilleures perfs (inertie). Notre Elo
+            reflète la forme du moment. L'écart entre les deux est le signal intéressant pour parier.
+          </p>
+          {data.comparison.map((c) => (
+            <div className="cmp" key={c.key}>
+              <div className="cmp-disc">{DISC_LABEL[c.disc] || c.disc}</div>
+              <div className="cmp-cols">
+                <div className="cmp-col">
+                  <div className="cmp-k">Notre Elo</div>
+                  <div className="cmp-rank">#{c.eloRank}</div>
+                  <div className="cmp-sub">{c.eloRating} pts · {c.matches} matchs</div>
+                </div>
+                <div className="cmp-vs">vs</div>
+                <div className="cmp-col">
+                  <div className="cmp-k">Mondial BWF</div>
+                  <div className="cmp-rank">{c.bwfRank ? `#${c.bwfRank}` : "—"}</div>
+                  <div className="cmp-sub">{c.bwfPoints ? fmtPts(c.bwfPoints) : "hors classement"}</div>
+                </div>
+              </div>
+              {c.bwfRank != null && <div className="cmp-note">{cmpNote(c.eloRank, c.bwfRank)}</div>}
+            </div>
           ))}
         </div>
       )}
@@ -199,7 +236,7 @@ export default function Player() {
         <h2>Derniers matchs par tournoi</h2>
         {grouped.map((g) => (
           <div className="tgroup" key={g.tmtId}>
-            <h3><Link to={`/tournament/${g.tmtId}`}>{g.name}</Link></h3>
+            <h3><Link to={`/tournament/${g.tmtId}`}>{g.name}</Link>{g.year ? <span className="muted"> · {g.year}</span> : null}</h3>
             <div className="table-scroll">
               <table>
                 <thead><tr><th>Épreuve</th><th>Tour</th><th>Partenaire</th><th>Adversaires</th><th>Score</th><th>Résultat</th></tr></thead>

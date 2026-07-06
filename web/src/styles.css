@@ -231,6 +231,17 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 .tgroup h3 a { color: var(--ink); text-decoration: none; }
 .tgroup h3 a:hover { color: var(--accent); }
 
+/* ---- Comparaison Elo vs classement mondial ---- */
+.cmp + .cmp { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 14px; }
+.cmp-disc { font-weight: bold; margin-bottom: 8px; }
+.cmp-cols { display: flex; align-items: stretch; gap: 12px; }
+.cmp-col { flex: 1; min-width: 0; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 12px; text-align: center; }
+.cmp-k { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .4px; }
+.cmp-rank { font-size: 26px; font-weight: bold; color: var(--accent); font-variant-numeric: tabular-nums; margin: 2px 0; }
+.cmp-sub { color: var(--muted); font-size: 12px; }
+.cmp-vs { align-self: center; color: var(--muted); font-weight: bold; }
+.cmp-note { margin-top: 10px; font-size: 13px; color: var(--ink); background: var(--bwf-red-soft); border-radius: 8px; padding: 8px 10px; }
+
 /* Barres (page Données) */
 .bars { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
 .bar-row { display: grid; grid-template-columns: minmax(90px, 150px) 1fr 48px; align-items: center; gap: 10px; }

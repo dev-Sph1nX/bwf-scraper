@@ -9,8 +9,9 @@ function nextCronSlot(from) {
   while (d <= from || d.getUTCHours() % 6 !== 0) d.setUTCHours(d.getUTCHours() + 1);
   return d;
 }
+const p2 = (n) => String(n).padStart(2, "0");
 const fmt = (d) =>
-  d.toLocaleString("fr-FR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+  `${p2(d.getDate())}/${p2(d.getMonth() + 1)}/${d.getFullYear()} ${p2(d.getHours())}h${p2(d.getMinutes())}`;
 
 export default function Layout() {
   const [title, setTitle] = useState("");
@@ -33,7 +34,7 @@ export default function Layout() {
         <span className="u-item muted">Année <b>{YEAR}</b></span>
       ) : (
         <>
-          <span className="u-item"><span className="u-k">Màj</span> {fmt(last)}</span>
+          <span className="u-item">Données mise à jour le <b>{fmt(last)}</b></span>
           <span className="u-sep">·</span>
           <span className="u-item"><span className="u-k">Prochaine</span> {fmt(next)}</span>
         </>

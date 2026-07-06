@@ -6,7 +6,7 @@ const W = 720, H = 260, PAD = { l: 46, r: 16, t: 18, b: 28 };
 const PW = W - PAD.l - PAD.r, PH = H - PAD.t - PAD.b;
 
 const parseT = (t) => (t ? new Date(t.replace(" ", "T")).getTime() : NaN);
-const fmtDate = (t) => (t ? new Date(t.replace(" ", "T")).toLocaleDateString("fr-FR", { day: "numeric", month: "short" }) : "");
+const fmtDate = (t) => (t ? new Date(t.replace(" ", "T")).toLocaleDateString("fr-FR", { day: "numeric", month: "short", year: "2-digit" }) : "");
 
 export default function EloChart({ points, label }) {
   const svgRef = useRef(null);

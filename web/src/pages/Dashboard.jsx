@@ -113,13 +113,14 @@ export default function Dashboard() {
                     <th>{d?.type === "pair" ? "Paire" : "Joueur"}</th>
                     <th style={{ textAlign: "right" }}>Elo</th>
                     <th style={{ textAlign: "center" }}>Forme</th>
+                    <th style={{ textAlign: "center" }}>Mondial</th>
                     <th style={{ textAlign: "center" }}>Matchs</th>
                     <th style={{ textAlign: "center" }}>V–D</th>
                   </tr>
                 </thead>
                 <tbody>
                   {rows.length === 0 ? (
-                    <tr><td colSpan="6" className="muted">Aucune donnée.</td></tr>
+                    <tr><td colSpan="7" className="muted">Aucune donnée.</td></tr>
                   ) : rows.map((e, i) => (
                     <tr key={e.key}>
                       <td className={`lb-rank ${i < 3 ? "top" : ""}`}>{i + 1}</td>
@@ -139,6 +140,7 @@ export default function Dashboard() {
                       </td>
                       <td className="lb-rating">{e.rating}</td>
                       <td style={{ textAlign: "center" }}><Form value={e.form} /></td>
+                      <td className="lb-num">{e.bwfRank ? `#${e.bwfRank}` : "—"}</td>
                       <td className="lb-num">{e.matches}</td>
                       <td className="lb-num">{e.wins}–{e.losses}</td>
                     </tr>

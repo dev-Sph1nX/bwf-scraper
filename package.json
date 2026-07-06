@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "update": "node run-update.mjs",
+    "fetch-rankings": "node fetch-rankings.mjs",
     "build-data": "node build-data.mjs",
-    "refresh": "node run-update.mjs && node build-data.mjs"
+    "refresh": "node run-update.mjs && node fetch-rankings.mjs && node build-data.mjs"
   },
   "license": "ISC",
   "dependencies": {
