@@ -25,18 +25,32 @@ run-update.mjs  (scrape)  →  data/  →  build-data.mjs  →  web/public/data/
 6 h + lancement manuel) : scrape → génération des données → build → déploiement Pages,
 et re-commit `data/` pour garder l'incrémental d'un run à l'autre.
 
-## En local
+## En local (import manuel des données)
+
+Installation (une fois) :
 
 ```bash
 npm install                 # dépendances du scraper
 npx playwright install chromium
-node run-update.mjs 2026    # scrape l'année (long au 1er lancement)
-node build-data.mjs 2026    # génère les JSON pour l'app
-
-cd web
-npm install
-npm run dev                 # http://localhost:5173
+cd web && npm install && cd ..
 ```
+
+Mettre à jour les données à la main :
+
+```bash
+git pull                    # récupère d'abord ce que GitHub Actions a déjà committé
+npm run refresh             # = scrape (run-update) puis génération des JSON (build-data)
+cd web && npm run dev       # visualiser : http://localhost:5173
+```
+
+Pour publier ta mise à jour locale en ligne :
+
+```bash
+git add data && git commit -m "maj données (local)" && git push
+```
+
+> ⚠️ `data/` est partagé avec GitHub Actions (qui le committe aussi). Fais toujours
+> un `git pull` avant un scrape local pour éviter les conflits.
 
 ## Structure
 

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "update": "node run-update.mjs",
-    "build-data": "node build-data.mjs"
+    "build-data": "node build-data.mjs",
+    "refresh": "node run-update.mjs && node build-data.mjs"
   },
   "license": "ISC",
   "dependencies": {
