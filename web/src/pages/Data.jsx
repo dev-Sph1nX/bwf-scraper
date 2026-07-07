@@ -93,30 +93,38 @@ export default function Data() {
           <h2>Historique des mises à jour</h2>
           <p className="lead">Tournois et matchs récupérés à chaque mise à jour, du plus récent au plus ancien.</p>
           <div className="upd-timeline">
-            {upd.updates.map((d) => (
-              <div className="upd-day" key={d.day}>
-                <span className="upd-dot" aria-hidden="true" />
-                <div className="upd-dayhead">
-                  <span className="upd-date">{fmtDay(d.day)}</span>
-                  <span className="muted upd-sum">
-                    {d.tournamentCount} tournoi{d.tournamentCount > 1 ? "s" : ""} · {nf(d.matchTotal)} matchs
-                  </span>
-                </div>
-                <ul className="upd-list">
-                  {d.tournaments.slice(0, MAX_TMT_PER_DAY).map((t) => (
-                    <li className="upd-item" key={t.id}>
-                      <Link to={`/tournament/${t.id}`} className="upd-tmt">{t.name}</Link>
-                      <span className="muted upd-yr">{t.year}</span>
-                      <span className="upd-matches">{nf(t.matches)} matchs</span>
-                      {t.status && <span className={`badge ${t.status}`}>{STATUS_LBL[t.status] || t.status}</span>}
-                    </li>
-                  ))}
-                  {d.tournaments.length > MAX_TMT_PER_DAY && (
-                    <li className="upd-more muted">+ {d.tournaments.length - MAX_TMT_PER_DAY} autres tournois</li>
+            {upd.updates.map((d) => {
+              const empty = d.empty || d.tournamentCount === 0;
+              const hasList = !empty && (d.tournaments?.length ?? 0) > 0;
+              return (
+                <div className={`upd-day${empty ? " upd-day--empty" : ""}`} key={d.day}>
+                  <span className="upd-dot" aria-hidden="true" />
+                  <div className="upd-dayhead">
+                    <span className="upd-date">{fmtDay(d.day)}</span>
+                    <span className="muted upd-sum">
+                      {empty
+                        ? "Vérifié · aucun nouveau match"
+                        : `${d.tournamentCount} tournoi${d.tournamentCount > 1 ? "s" : ""} · ${nf(d.matchTotal)} matchs${d.partial ? " · détail indisponible" : ""}`}
+                    </span>
+                  </div>
+                  {hasList && (
+                    <ul className="upd-list">
+                      {d.tournaments.slice(0, MAX_TMT_PER_DAY).map((t) => (
+                        <li className="upd-item" key={t.id}>
+                          <Link to={`/tournament/${t.id}`} className="upd-tmt">{t.name}</Link>
+                          <span className="muted upd-yr">{t.year}</span>
+                          <span className="upd-matches">{nf(t.matches)} matchs</span>
+                          {t.status && <span className={`badge ${t.status}`}>{STATUS_LBL[t.status] || t.status}</span>}
+                        </li>
+                      ))}
+                      {d.tournaments.length > MAX_TMT_PER_DAY && (
+                        <li className="upd-more muted">+ {d.tournaments.length - MAX_TMT_PER_DAY} autres tournois</li>
+                      )}
+                    </ul>
                   )}
-                </ul>
-              </div>
-            ))}
+                </div>
+              );
+            })}
           </div>
         </div>
       )}

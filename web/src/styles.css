@@ -3,6 +3,7 @@
   --bwf-red: #e4002b;        /* rouge de marque (aplats : boutons, onglet actif) */
   --bwf-red-dark: #b3001f;
   --accent: #ff4d63;         /* rouge clair, lisible en texte sur fond sombre (Elo, liens) */
+  --accent-2: #4aa3ff;       /* 2e série de graphe (comparaison H2H) — bleu lisible sur sombre */
   --bwf-red-soft: rgba(228,0,43,.14); /* survol/surbrillance teinté rouge */
 
   /* Surfaces sombres */
@@ -79,6 +80,9 @@ td a:hover { text-decoration: underline; }
 .upd-day { position: relative; padding: 0 0 20px 22px; border-left: 2px solid var(--line); }
 .upd-day:last-child { border-left-color: transparent; padding-bottom: 0; }
 .upd-dot { position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--surface); }
+/* Jour "à vide" : le scraper a tourné mais rien de neuf → repère discret (creux) */
+.upd-day--empty .upd-dot { background: var(--surface); border: 2px solid var(--line); }
+.upd-day--empty .upd-date { color: var(--muted); font-weight: normal; }
 .upd-dayhead { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
 .upd-date { font-weight: bold; }
 .upd-sum { font-size: 12px; }
@@ -272,6 +276,20 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 .chart-tip .tip-tmt { font-size: 12px; font-weight: bold; margin-top: 4px; white-space: normal; }
 .chart-tip .tip-go { font-size: 11px; color: var(--accent); margin-top: 5px; }
 
+/* Légende du graphe de comparaison (H2H) */
+.chart-legend { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 10px; }
+.chart-leg { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; }
+.chart-leg-swatch { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; display: inline-block; }
+.chart-leg-name { color: var(--muted); }
+.chart-leg b { font-variant-numeric: tabular-nums; }
+.chart-tip .tip-line { display: flex; align-items: center; gap: 6px; }
+.chart-tip .tip-cmp-name { color: var(--muted); font-size: 12px; }
+.chart-tip .tip-cmp-name + b { margin-left: auto; font-variant-numeric: tabular-nums; }
+.chart-tip .tip-cmp-date { font-size: 11px; color: var(--muted); font-weight: bold; margin-bottom: 4px; }
+/* Tooltip du graphe de comparaison : sous le haut du plot (pas au-dessus, pour ne
+   pas recouvrir la légende) et borné pour rester dans le conteneur. */
+.chart-tip--cmp { transform: translate(-50%, 8px); }
+
 /* Sélecteur de temporalité du graphe */
 .chart-ranges { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0 16px; }
 .range-btn { padding: 5px 11px; border: 1px solid var(--line); background: var(--surface-2); color: var(--muted); border-radius: 14px; font: inherit; font-size: 12px; font-weight: bold; cursor: pointer; }
@@ -298,6 +316,20 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 /* ---- Tête-à-tête ---- */
 .h2h-sum { display: flex; align-items: baseline; gap: 10px; margin: 14px 0 4px; }
 .h2h-sum .big { font-size: 22px; font-weight: bold; font-variant-numeric: tabular-nums; }
+.h2h-compare { margin: 14px 0 6px; padding: 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2); }
+.h2h-compare-head { font-weight: bold; font-size: 13px; margin-bottom: 10px; }
+
+/* Tête-à-tête (fiche joueur) : résumé + bouton vers le prédicteur */
+.h2h-cta { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-top: 16px; }
+.h2h-cta-sum { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.h2h-cta-sum .big { font-size: 22px; font-weight: bold; font-variant-numeric: tabular-nums; }
+
+/* Derniers résultats (prédicteur) : deux blocs de forme côte à côte -> empilés < 800px */
+.form-blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-block { min-width: 0; }
+.form-block-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.form-block-head .pcard-link { font-weight: bold; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 800px) { .form-blocks { grid-template-columns: 1fr; } }
 
 /* ---- Groupes de matchs par tournoi ---- */
 .tgroup + .tgroup { margin-top: 22px; }
@@ -358,8 +390,116 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 .bar-fill { display: block; height: 100%; background: var(--bwf-red); border-radius: 6px; transition: width .35s ease; }
 .bar-val { text-align: right; font-weight: bold; font-variant-numeric: tabular-nums; }
 
+/* ---- Mise en avant (Calendrier) : en cours / prochain ---- */
+.feat { border-color: var(--bwf-red); background: linear-gradient(180deg, var(--bwf-red-soft), transparent); }
+.feat-label { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: .5px; color: var(--accent); margin-bottom: 12px; }
+.feat-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--bwf-red); animation: featPulse 1.6s ease-out infinite; }
+@keyframes featPulse { 0% { box-shadow: 0 0 0 0 rgba(228,0,43,.55); } 100% { box-shadow: 0 0 0 8px rgba(228,0,43,0); } }
+.feat-items { display: flex; flex-direction: column; gap: 14px; }
+.feat-item { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.feat-flag { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; background: var(--surface-2); flex-shrink: 0; }
+.feat-info { min-width: 0; }
+.feat-name { display: block; font-size: 18px; font-weight: bold; color: var(--ink); text-decoration: none; }
+.feat-name:hover { color: var(--accent); }
+.feat-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; color: var(--muted); font-size: 13px; margin-top: 3px; }
+.feat-sep { color: var(--line); }
+.feat-status { margin-top: 6px; font-size: 13px; font-weight: bold; color: var(--accent); }
+
+/* ---- Matchs à venir ---- */
+.um-thead { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.um-tflag { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; background: var(--surface-2); flex-shrink: 0; }
+.um-tinfo { min-width: 0; }
+.um-tname { font-size: 15px; font-weight: bold; color: var(--ink); text-decoration: none; }
+.um-tname:hover { color: var(--accent); }
+.um-tmeta { color: var(--muted); font-size: 12px; margin-top: 2px; }
+.um-count { margin-left: 4px; }
+.um-list { display: flex; flex-direction: column; gap: 8px; }
+.um-match {
+  display: flex; flex-direction: column; gap: 8px; padding: 11px 13px;
+  border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2);
+  text-decoration: none; color: var(--ink);
+}
+.um-match:hover { border-color: var(--accent); background: var(--bwf-red-soft); }
+/* Ligne principale (affiche) : tour | joueur1 | jauge | joueur2 | bouton */
+.um-row { display: flex; flex-direction: row; align-items: center; gap: 14px; }
+.um-round { flex: 0 0 40px; display: flex; flex-direction: column; gap: 2px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+.um-round-r { color: var(--muted); }
+.um-round-d { color: var(--accent); font-size: 10px; }
+/* Un côté = nom (ligne 1) + stats (ligne 2), empilés */
+.um-side { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.um-side-r { align-items: flex-end; text-align: right; }
+.um-team { display: flex; align-items: center; gap: 7px; min-width: 0; max-width: 100%; }
+.um-flags { display: inline-flex; flex-shrink: 0; }
+.um-flag { width: 18px; height: 18px; border-radius: 50%; object-fit: cover; background: var(--surface); }
+.um-flag + .um-flag { margin-left: -6px; }
+.um-names { font-weight: bold; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.um-seed { color: var(--muted); font-size: 11px; flex-shrink: 0; }
+.um-stats { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 12px; }
+.um-side-r .um-stats { justify-content: flex-end; }
+.um-elo { font-weight: bold; color: var(--accent); font-variant-numeric: tabular-nums; }
+.um-rank { color: var(--muted); }
+/* Jauge de proba : au centre, entre les deux joueurs, centrée verticalement */
+.um-prob { flex: 0 0 auto; display: flex; align-items: center; gap: 8px; font-variant-numeric: tabular-nums; }
+.um-prob b { font-size: 13px; color: var(--muted); font-weight: bold; }
+.um-prob b.fav { color: var(--accent); }
+.um-bar { width: 64px; height: 8px; background: var(--surface); border-radius: 4px; overflow: hidden; flex-shrink: 0; }
+.um-fill { display: block; height: 100%; background: var(--bwf-red); }
+/* Bouton Analyser : à droite, centré verticalement */
+.um-cta { flex: 0 0 auto; color: var(--accent); font-weight: bold; font-size: 12px; white-space: nowrap; }
+/* Mode détaillé (vues triées) : en-tête score + tournoi, et raisons */
+.um-dhead { display: flex; align-items: center; gap: 10px; }
+.um-score { flex-shrink: 0; min-width: 34px; text-align: center; font-weight: bold; font-variant-numeric: tabular-nums; font-size: 13px; color: #fff; background: var(--bwf-red); border-radius: 8px; padding: 2px 8px; }
+.um-score.low { background: var(--surface); color: var(--muted); border: 1px solid var(--line); }
+.um-dtmt { font-size: 12px; color: var(--muted); font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.um-why { list-style: none; margin: 0; padding: 8px 0 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; }
+.um-why li { font-size: 12.5px; color: var(--ink); padding-left: 18px; position: relative; }
+.um-why li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+.um-explain-title { font-weight: bold; font-size: 14px; }
+@media (max-width: 700px) {
+  .um-row { flex-wrap: wrap; gap: 8px 12px; }
+  .um-round { order: 1; }
+  .um-cta { order: 2; margin-left: auto; }
+  .um-side { order: 3; flex-basis: 100%; align-items: center; text-align: center; }
+  .um-side .um-team { justify-content: center; }
+  .um-prob { order: 4; flex-basis: 100%; justify-content: center; margin: 2px 0; }
+  .um-side-r { order: 5; }
+  .um-side-r .um-stats { justify-content: center; }
+  .um-bar { width: 90px; }
+}
+
+/* ---- Palmarès (fiche tournoi) ---- */
+.palmares td { vertical-align: top; }
+.palmares .pal-disc { font-weight: bold; white-space: nowrap; }
+.palmares .pal-win a { font-weight: bold; }
+.palmares a { color: var(--accent); text-decoration: none; }
+.palmares a:hover { text-decoration: underline; }
+.pal-semis { display: flex; flex-direction: column; gap: 4px; }
+
+/* Classement de poule (round-robin) */
+.grp-standings td { vertical-align: middle; }
+.grp-standings th:not(:first-child), .grp-standings td:not(:first-child) { text-align: center; width: 48px; }
+.grp-standings a { color: var(--accent); text-decoration: none; font-weight: bold; }
+.grp-standings a:hover { text-decoration: underline; }
+
+/* ---- Notes de version (changelog) ---- */
+.cl-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.cl-date { font-weight: bold; font-size: 15px; }
+.cl-title { color: var(--muted); font-size: 13px; }
+.cl-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.cl-item { display: flex; align-items: flex-start; gap: 10px; }
+.cl-tag { flex-shrink: 0; font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: .4px; border-radius: 8px; padding: 2px 8px; margin-top: 1px; min-width: 92px; text-align: center; }
+.cl-tag.feat { background: var(--green); color: #06231a; }
+.cl-tag.improve { background: var(--bwf-red-soft); color: var(--accent); border: 1px solid var(--bwf-red); }
+.cl-tag.fix { background: var(--surface-2); color: var(--muted); border: 1px solid var(--line); }
+.cl-text { font-size: 13.5px; line-height: 1.5; }
+@media (max-width: 700px) {
+  .cl-item { flex-direction: column; gap: 3px; }
+  .cl-tag { min-width: 0; }
+}
+
 /* Divers */
 .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tmt-dates { white-space: nowrap; }
 .prov-toggle { font-size: 13px; cursor: pointer; user-select: none; color: var(--ink); }
 .prov-toggle input { vertical-align: middle; margin-right: 6px; accent-color: var(--bwf-red); }
 

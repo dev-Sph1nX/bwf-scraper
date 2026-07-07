@@ -56,13 +56,6 @@ function partner(m, id) {
   const team = m.side === "team1" ? m.team1 : m.team2;
   return (team.players || []).filter((p) => String(p.id) !== String(id)).map((p) => p.nameDisplay).join(" / ") || "—";
 }
-function opponents(m) {
-  return (m[oppSide(m)]?.players || []).map((p) => p.nameDisplay).join(" / ");
-}
-function scoreFor(m) {
-  const mine = m.side === "team1";
-  return (m.score || []).map((s) => (mine ? `${s.home}-${s.away}` : `${s.away}-${s.home}`)).join(", ");
-}
 function findMeta(matches, id) {
   for (const m of matches) {
     for (const side of ["team1", "team2"]) {
@@ -129,7 +122,7 @@ export default function Player() {
   };
 
   useEffect(() => {
-    setRight(<Link className="tb-right" to="/">← Classement</Link>);
+    setRight(<Link className="tb-right" to="/classement">← Classement</Link>);
     return () => setRight(null);
   }, [setRight]);
 
@@ -171,6 +164,15 @@ export default function Player() {
     const w = list.filter((m) => m.won).length;
     return { list, w, l: list.length - w };
   }, [opp, matches]);
+
+  // Discipline la plus confrontée face à l'adversaire (pour ouvrir le prédicteur
+  // sur la bonne discipline avec les deux entités déjà sélectionnées).
+  const h2hDisc = useMemo(() => {
+    if (!h2h || h2h.list.length === 0) return null;
+    const cnt = {};
+    for (const m of h2h.list) if (m.eventName) cnt[m.eventName] = (cnt[m.eventName] || 0) + 1;
+    return Object.keys(cnt).sort((a, b) => cnt[b] - cnt[a])[0] || null;
+  }, [h2h]);
 
   if (data === false) return <div className="card muted">Joueur introuvable.</div>;
   if (!data) return <div className="card muted">Chargement…</div>;
@@ -283,34 +285,21 @@ export default function Player() {
 
       <div className="card">
         <h2>Tête-à-tête</h2>
-        <p className="lead">Choisis un adversaire déjà affronté pour voir vos confrontations.</p>
+        <p className="lead">Choisis un adversaire déjà affronté, puis ouvre le comparatif complet dans le prédicteur (probabilités, forme, confrontations directes).</p>
         <OpponentPicker list={opponentsList} value={opp} onChange={setOpp} />
         {h2h && (
           h2h.list.length === 0 ? (
             <p className="muted" style={{ marginTop: 12 }}>Aucune confrontation trouvée.</p>
           ) : (
-            <>
-              <div className="h2h-sum">
+            <div className="h2h-cta">
+              <div className="h2h-cta-sum">
                 <span className="big"><span className="win">{h2h.w}</span> – <span className="loss">{h2h.l}</span></span>
-                <span className="muted">face à {opp.name}</span>
+                <span className="muted">face à {opp.name} · {h2h.list.length} confrontation{h2h.list.length > 1 ? "s" : ""}</span>
               </div>
-              <div className="table-scroll">
-                <table>
-                  <thead><tr><th>Tournoi</th><th>Épreuve</th><th>Tour</th><th>Score</th><th>Résultat</th></tr></thead>
-                  <tbody>
-                    {h2h.list.map((m, i) => (
-                      <tr key={i}>
-                        <td><Link to={`/tournament/${m.tmtId}`}>{m.tournamentName || m.tmtId}</Link></td>
-                        <td>{m.eventName}</td>
-                        <td>{m.roundName}</td>
-                        <td>{scoreFor(m)}</td>
-                        <td className={m.won ? "win" : "loss"}>{m.won ? "Victoire" : "Défaite"}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </>
+              <Link className="primary" to={`/predictor?disc=${h2hDisc || ""}&a=${data.player.id}&b=${opp.id}`}>
+                Comparer dans le prédicteur →
+              </Link>
+            </div>
           )
         )}
       </div>

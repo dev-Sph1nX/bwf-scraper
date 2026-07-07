@@ -52,10 +52,6 @@ function opponents(m) {
 function oppPairKey(m) {
   return (m[oppSide(m)]?.players || []).map((p) => String(p.id)).sort().join("-");
 }
-function scoreFor(m) {
-  const mine = m.side === "team1";
-  return (m.score || []).map((s) => (mine ? `${s.home}-${s.away}` : `${s.away}-${s.home}`)).join(", ");
-}
 
 // Sélecteur de paire adverse déjà affrontée (combobox)
 function OpponentPicker({ list, value, onChange }) {
@@ -120,7 +116,7 @@ export default function Pair() {
   };
 
   useEffect(() => {
-    setRight(<Link className="tb-right" to="/">← Classement</Link>);
+    setRight(<Link className="tb-right" to="/classement">← Classement</Link>);
     return () => setRight(null);
   }, [setRight]);
 
@@ -130,6 +126,7 @@ export default function Pair() {
       .then((d) => { setData(d); setTitle(d.players.map((p) => p.name).join(" / ")); })
       .catch(() => setData(false));
   }, [key, setTitle]);
+
 
   useEffect(() => {
     if (!highlight) return;
@@ -264,33 +261,21 @@ export default function Pair() {
 
       <div className="card">
         <h2>Tête-à-tête</h2>
-        <p className="lead">Choisis une paire déjà affrontée pour voir vos confrontations.</p>
+        <p className="lead">Choisis une paire déjà affrontée, puis ouvre le comparatif complet dans le prédicteur (probabilités, forme, confrontations directes).</p>
         <OpponentPicker list={opponentsList} value={opp} onChange={setOpp} />
         {h2h && (
           h2h.list.length === 0 ? (
             <p className="muted" style={{ marginTop: 12 }}>Aucune confrontation trouvée.</p>
           ) : (
-            <>
-              <div className="h2h-sum">
+            <div className="h2h-cta">
+              <div className="h2h-cta-sum">
                 <span className="big"><span className="win">{h2h.w}</span> – <span className="loss">{h2h.l}</span></span>
-                <span className="muted">face à {opp.name}</span>
+                <span className="muted">face à {opp.name} · {h2h.list.length} confrontation{h2h.list.length > 1 ? "s" : ""}</span>
               </div>
-              <div className="table-scroll">
-                <table>
-                  <thead><tr><th>Tournoi</th><th>Tour</th><th>Score</th><th>Résultat</th></tr></thead>
-                  <tbody>
-                    {h2h.list.map((m, i) => (
-                      <tr key={i}>
-                        <td><Link to={`/tournament/${m.tmtId}`}>{m.tournamentName || m.tmtId}</Link></td>
-                        <td>{m.roundName}</td>
-                        <td>{scoreFor(m)}</td>
-                        <td className={m.won ? "win" : "loss"}>{m.won ? "Victoire" : "Défaite"}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </>
+              <Link className="primary" to={`/predictor?disc=${data.disc}&a=${encodeURIComponent(data.key)}&b=${encodeURIComponent("pair:" + opp.id)}`}>
+                Comparer dans le prédicteur →
+              </Link>
+            </div>
           )
         )}
       </div>

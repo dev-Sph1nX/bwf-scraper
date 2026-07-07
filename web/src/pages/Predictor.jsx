@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
-import { useOutletContext, Link } from "react-router-dom";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useOutletContext, useSearchParams, Link } from "react-router-dom";
 import { getJSON } from "../data.js";
 import MatchTeam from "../components/MatchTeam.jsx";
+import EloCompareChart from "../components/EloCompareChart.jsx";
 
 const ORDER = ["MS", "WS", "MD", "WD", "XD"];
 
@@ -104,6 +105,40 @@ function Pills({ matches }) {
   );
 }
 
+// Forme du moment d'une entité : pills (5 derniers) + le détail de ces matchs,
+// rendus avec le « profil de match » (mêmes cartes que le bracket / les H2H).
+function FormBlock({ entity, matches }) {
+  const last = matches.slice(0, 5);
+  return (
+    <div className="form-block">
+      <div className="form-block-head">
+        <Link className="pcard-link" to={entityHref(entity)}>{entity.name}</Link>
+        <Pills matches={matches} />
+      </div>
+      {last.length === 0 ? (
+        <p className="muted">Aucun match récent sur la période.</p>
+      ) : (
+        <div className="match-list">
+          {last.map((m, i) => (
+            <div className="match-item" key={i}>
+              <div className="match-meta">
+                <span className="match-ev">
+                  <Link to={`/tournament/${m.tmtId}`}>{m.tournamentName || m.tmtId}</Link> · {m.roundName}
+                </span>
+                <span className="match-date">{fmtD(m.matchTime)}</span>
+              </div>
+              <div className="mcard mcard-flow">
+                <MatchTeam match={m} side={1} />
+                <MatchTeam match={m} side={2} />
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function PlayerCard({ entity, matches }) {
   const total = entity.wins + entity.losses;
   const rate = total ? Math.round((entity.wins / total) * 100) : 0;
@@ -131,9 +166,39 @@ export default function Predictor() {
   const [b, setB] = useState(null);
   const [aData, setAData] = useState(null);
   const [bData, setBData] = useState(null);
+  const [aPairElo, setAPairElo] = useState(null); // cote de la paire A (double), pour la superposition
+  const [bPairElo, setBPairElo] = useState(null);
+
+  const [searchParams] = useSearchParams();
+  const preInit = useRef(false);
 
   useEffect(() => { setTitle("Prédicteur"); }, [setTitle]);
   useEffect(() => { getJSON("elo/ranking.json").then(setData).catch(() => setData(false)); }, []);
+
+  // Préselection depuis l'URL (?disc=MS&a=<id>&b=<id>) — ex. bouton « comparer »
+  // d'une fiche joueur. Appliqué une seule fois, une fois le classement chargé.
+  useEffect(() => {
+    if (!data || data === false || preInit.current) return;
+    const pDisc = searchParams.get("disc");
+    const aId = searchParams.get("a");
+    const bId = searchParams.get("b");
+    if (!aId && !bId && !ORDER.includes(pDisc)) { preInit.current = true; return; }
+    preInit.current = true;
+    const useDisc = ORDER.includes(pDisc) ? pDisc : disc;
+    if (useDisc !== disc) setDisc(useDisc);
+    const ents = data.disciplines?.[useDisc]?.entities ?? [];
+    // Le paramètre peut être une clé d'entité exacte (p:… / pair:…) ou un id joueur.
+    const find = (val) => {
+      if (!val) return null;
+      const byKey = ents.find((e) => e.key === val);
+      if (byKey) return byKey;
+      return ents.find((e) => e.players.length === 1 && String(e.players[0].id) === String(val)) ||
+        ents.find((e) => e.players.some((p) => String(p.id) === String(val)));
+    };
+    const ea = find(aId), eb = find(bId);
+    if (ea) setA(ea);
+    if (eb && (!ea || eb.key !== ea.key)) setB(eb);
+  }, [data, searchParams]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const aId = a?.players?.[0]?.id;
   const bId = b?.players?.[0]?.id;
@@ -148,14 +213,33 @@ export default function Predictor() {
     return () => { ok = false; };
   }, [bId]);
 
+  const isPair = data?.disciplines?.[disc]?.type === "pair";
+
+  // En double, la cote pertinente est celle de la PAIRE exacte (fiche paire),
+  // pas la cote individuelle du 1er joueur → on charge pair/<clé>.json.
+  useEffect(() => {
+    if (!a || !isPair) { setAPairElo(null); return; }
+    let ok = true; getJSON(`pair/${a.key.slice(5)}.json`).then((d) => ok && setAPairElo(d.elo || [])).catch(() => ok && setAPairElo([]));
+    return () => { ok = false; };
+  }, [a?.key, isPair]);
+  useEffect(() => {
+    if (!b || !isPair) { setBPairElo(null); return; }
+    let ok = true; getJSON(`pair/${b.key.slice(5)}.json`).then((d) => ok && setBPairElo(d.elo || [])).catch(() => ok && setBPairElo([]));
+    return () => { ok = false; };
+  }, [b?.key, isPair]);
+
   const changeDisc = (code) => { setDisc(code); setA(null); setB(null); };
 
   const entities = data?.disciplines?.[disc]?.entities ?? [];
-  const isPair = data?.disciplines?.[disc]?.type === "pair";
   const pA = a && b ? winProb(a.rating, b.rating) : null;
 
   const aMatches = a ? entityMatchesOf(aData, a, disc) : [];
   const bMatches = b ? entityMatchesOf(bData, b, disc) : [];
+
+  // Séries Elo à superposer (même discipline pour les deux entités).
+  const aSeries = a ? (isPair ? (aPairElo || []) : (aData?.elo || []).filter((p) => p.disc === disc)) : [];
+  const bSeries = b ? (isPair ? (bPairElo || []) : (bData?.elo || []).filter((p) => p.disc === disc)) : [];
+  const compareLoading = isPair ? (aPairElo == null || bPairElo == null) : (!aData || !bData);
   const h2h = a && b ? aMatches.filter((m) => b.players.every((p) => idsOf(oppTeam(m)).includes(String(p.id)))) : [];
   const aWins = h2h.filter((m) => m.won).length;
   const bWins = h2h.length - aWins;
@@ -223,6 +307,37 @@ export default function Predictor() {
                 <PlayerCard entity={a} matches={aMatches} />
                 <PlayerCard entity={b} matches={bMatches} />
               </div>
+            </div>
+          )}
+
+          {a && b && (
+            <div className="card">
+              <h2>Derniers résultats</h2>
+              <p className="lead">La forme du moment : les 5 derniers matchs de chaque {isPair ? "paire" : "joueur"} (le plus récent en haut).</p>
+              {!aData || !bData ? (
+                <p className="muted">Chargement…</p>
+              ) : (
+                <div className="form-blocks">
+                  <FormBlock entity={a} matches={aMatches} />
+                  <FormBlock entity={b} matches={bMatches} />
+                </div>
+              )}
+            </div>
+          )}
+
+          {a && b && (
+            <div className="card">
+              <h2>Évolution comparée de la cote</h2>
+              {compareLoading ? (
+                <p className="muted">Chargement…</p>
+              ) : (() => {
+                const series = [];
+                if (aSeries.length) series.push({ points: aSeries, label: a.name, color: "var(--accent)" });
+                if (bSeries.length) series.push({ points: bSeries, label: b.name, color: "var(--accent-2)" });
+                return series.length === 0
+                  ? <p className="muted">Pas d'historique de cote comparable dans cette discipline.</p>
+                  : <EloCompareChart series={series} />;
+              })()}
             </div>
           )}
 
