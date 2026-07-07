@@ -93,6 +93,7 @@ console.log(`   Elo : ${ranking.stats.processed} matchs — classement mondial :
 // ===== 3) Index joueur fusionné (UNE lecture par année) + stats =====
 const index = new Map(); // id -> {id, nameDisplay, countryCode, slug, matches:[], years:Set}
 const pairMatchIndex = new Map(); // cléPaire -> matchs joués ENSEMBLE (perspective de l'équipe)
+const pairUpcomingIndex = new Map(); // cléPaire -> matchs à venir (non joués)
 const byDiscipline = {};
 let firstMatch = null, lastMatch = null;
 const yearMatchCount = {};
@@ -104,6 +105,10 @@ for (const y of years) {
     const t = match.matchTime;
     if (t) { if (!firstMatch || t < firstMatch) firstMatch = t; if (!lastMatch || t > lastMatch) lastMatch = t; }
     if (match.eventName) byDiscipline[match.eventName] = (byDiscipline[match.eventName] || 0) + 1;
+    // Match joué (résultat acté) vs à venir (winner 0). Les matchs à venir ne
+    // doivent PAS entrer dans l'historique (stats, H2H, derniers tournois) : on
+    // les range à part, par joueur/paire, pour un encart dédié.
+    const played = match.winner === 1 || match.winner === 2;
     for (const teamKey of ["team1", "team2"]) {
       const players = match[teamKey]?.players ?? [];
       const won = (teamKey === "team1" && match.winner === 1) || (teamKey === "team2" && match.winner === 2);
@@ -114,17 +119,23 @@ for (const y of years) {
       };
       for (const pl of players) {
         let e = index.get(pl.id);
-        if (!e) { e = { id: pl.id, nameDisplay: pl.nameDisplay, countryCode: pl.countryCode, slug: pl.slug, matches: [], years: new Set() }; index.set(pl.id, e); }
-        e.matches.push(entry);
-        e.years.add(y);
+        if (!e) { e = { id: pl.id, nameDisplay: pl.nameDisplay, countryCode: pl.countryCode, slug: pl.slug, matches: [], upcoming: [], years: new Set() }; index.set(pl.id, e); }
+        (played ? e.matches : e.upcoming).push(entry);
         e.nameDisplay = pl.nameDisplay; e.countryCode = pl.countryCode; e.slug = pl.slug;
+        if (played) e.years.add(y);
       }
       // Match de paire = double avec 2 joueurs sur la même équipe.
       if (DOUBLES.has(match.eventName) && players.length >= 2) {
         const key = pairKeyOf(players);
-        let arr = pairMatchIndex.get(key);
-        if (!arr) { arr = []; pairMatchIndex.set(key, arr); }
-        arr.push(entry);
+        if (played) {
+          let arr = pairMatchIndex.get(key);
+          if (!arr) { arr = []; pairMatchIndex.set(key, arr); }
+          arr.push(entry);
+        } else {
+          let arr = pairUpcomingIndex.get(key);
+          if (!arr) { arr = []; pairUpcomingIndex.set(key, arr); }
+          arr.push(entry);
+        }
       }
     }
   }
@@ -140,6 +151,7 @@ for (const e of index.values()) {
     years: yrs,
     player: { id: e.id, nameDisplay: e.nameDisplay, countryCode: e.countryCode, slug: e.slug },
     matches: e.matches,
+    upcoming: (e.upcoming || []).slice().sort((a, b) => (a.matchTime || "").localeCompare(b.matchTime || "")),
     elo: playerHistory[e.id] || [],
     comparison: playerCompare[e.id] || [],
   });
@@ -171,6 +183,7 @@ for (const disc of DOUBLES) {
       bwfRank: e.bwfRank ?? null, bwfPoints: e.bwfPoints ?? null,
       elo: pairHistory[e.key] || [],
       matchList,
+      upcoming: (pairUpcomingIndex.get(e.key) || []).slice().sort((a, b) => (a.matchTime || "").localeCompare(b.matchTime || "")),
     });
     pairCount++;
   }
@@ -224,11 +237,6 @@ const recency = (lastPlayed) => {
 };
 // Fiabilité de l'Elo d'une entité (0..1) : provisoire, échantillon, fraîcheur.
 const reliability = (e) => (e.provisional ? 0.5 : 1) * Math.min(1, Math.max(0.3, (e.matches || 0) / 25)) * recency(e.lastPlayed);
-// Consensus = ratio des points mondiaux (Bradley-Terry grossier).
-const pRankOf = (ea, eb) => {
-  const pa = ea?.bwfPoints, pb = eb?.bwfPoints;
-  return pa > 0 && pb > 0 ? pa / (pa + pb) : null;
-};
 // Bilan des confrontations directes entre 2 entités dans une discipline.
 function h2hRecord(aKey, ea, eb, disc) {
   const idsA = ea.players.map((p) => String(p.id));
@@ -243,47 +251,49 @@ function h2hRecord(aKey, ea, eb, disc) {
   }
   return { w, l, n: w + l };
 }
-// Score 0..100 + tags + raisons lisibles. probTeam1 = proba Elo de team1 (0..100).
+// Score 0..100 + tags + raisons. probTeam1 = proba Elo de team1 (0..100).
+// Deux signaux exploitables :
+//   value  (contre-pronostic) : écart de classement mondial >= 10 ET notre Elo
+//           donne >= 45% à l'outsider (avec une fiabilité suffisante).
+//   bogey  (bête noire) : l'outsider mène les confrontations directes (>=2),
+//           et notre Elo lui donne >= 40%.
+const GAP_MIN = 10, PUNDER_VALUE = 0.45, PUNDER_BOGEY = 0.40, CONF_MIN = 0.45;
+const clamp01 = (x) => Math.max(0, Math.min(1, x));
 function interestOf(ea, eb, probTeam1, aKey, bKey, disc, name1, name2) {
-  if (!ea || !eb || probTeam1 == null) return { score: 0, tags: [], reasons: [] };
+  if (!ea || !eb || probTeam1 == null || !ea.bwfRank || !eb.bwfRank) return { score: 0, tags: [], reasons: [] };
   const pForm1 = probTeam1 / 100;
-  const reasons = [], tags = [];
-  let score = 0;
-
-  if (Math.abs(pForm1 - 0.5) <= 0.07) tags.push("close");
-  if (ea.bwfRank && eb.bwfRank && ea.bwfRank <= 16 && eb.bwfRank <= 16) tags.push("clash");
-
-  const pRank1 = pRankOf(ea, eb);
   const conf = Math.min(reliability(ea), reliability(eb));
-  if (pRank1 != null) {
-    const underIsT1 = (ea.bwfRank ?? 9999) > (eb.bwfRank ?? 9999);
-    const under = underIsT1 ? ea : eb, fav = underIsT1 ? eb : ea;
-    const underName = underIsT1 ? name1 : name2, favName = underIsT1 ? name2 : name1;
-    const pFormUnder = underIsT1 ? pForm1 : 1 - pForm1;
-    const divergence = Math.abs(pForm1 - pRank1); // écart proba forme ↔ consensus
-    score += Math.min(1, divergence / 0.35) * conf * 60;
-    if (pFormUnder >= 0.42 && conf >= 0.45) {
-      tags.push("upset");
-      reasons.push(`Notre Elo donne ${Math.round(pFormUnder * 100)}% à ${underName}${under.bwfRank ? ` (#${under.bwfRank} mondial)` : ""}`);
-    }
-    if ((fav.form ?? 0) < -15 && (under.form ?? 0) > 15) {
-      score += 12;
-      reasons.push(`${favName} en perte de vitesse, ${underName} en forme`);
-    }
-    if (under.rank && under.bwfRank && under.rank <= under.bwfRank - 8) {
-      score += 10;
-      reasons.push(`${underName} #${under.rank} à l'Elo mais #${under.bwfRank} mondial`);
-    }
-    const h = h2hRecord(aKey, ea, eb, disc);
-    if (h.n >= 2) {
-      const uW = underIsT1 ? h.w : h.l, fW = underIsT1 ? h.l : h.w;
-      if (uW > fW) {
-        score += 18 * Math.min(1, h.n / 3);
-        reasons.push(`${underName} mène ${uW}-${fW} en confrontations directes`);
-      }
-    }
+  const underIsT1 = ea.bwfRank > eb.bwfRank;
+  const under = underIsT1 ? ea : eb, fav = underIsT1 ? eb : ea;
+  const underName = underIsT1 ? name1 : name2, favName = underIsT1 ? name2 : name1;
+  const pUnder = underIsT1 ? pForm1 : 1 - pForm1;
+  const gap = Math.abs(ea.bwfRank - eb.bwfRank);
+
+  const reasons = [], tags = [];
+  // Cœur : proba Elo de l'outsider × ampleur de l'écart de classement × fiabilité.
+  let score = clamp01((pUnder - 0.35) / 0.20) * clamp01(gap / 25) * conf * 70;
+
+  if (conf >= CONF_MIN && gap >= GAP_MIN && pUnder >= PUNDER_VALUE) {
+    tags.push("value");
+    reasons.push(`Notre Elo donne ${Math.round(pUnder * 100)}% à ${underName} (#${under.bwfRank} mondial), pourtant donné outsider par le classement (#${fav.bwfRank}).`);
   }
-  if (tags.includes("close")) score += 8;
+
+  const h = h2hRecord(aKey, ea, eb, disc);
+  const uW = underIsT1 ? h.w : h.l, fW = underIsT1 ? h.l : h.w;
+  if (h.n >= 2 && uW > fW) {
+    score += 18 * Math.min(1, h.n / 3);
+    reasons.push(`${underName} (#${under.bwfRank}) mène ${uW}-${fW} en confrontations directes face à ${favName}.`);
+    if (conf >= CONF_MIN && pUnder >= PUNDER_BOGEY) tags.push("bogey");
+  }
+  // Bonus corroborants (affinent le tri, ne suffisent pas à flagger seuls).
+  if ((fav.form ?? 0) < -15 && (under.form ?? 0) > 15) {
+    score += 8;
+    reasons.push(`${favName} en perte de vitesse, ${underName} en forme.`);
+  }
+  if (under.rank && under.rank <= under.bwfRank - 8) {
+    score += 7;
+    reasons.push(`${underName} est #${under.rank} à notre Elo pour #${under.bwfRank} au mondial (sous-coté).`);
+  }
   return { score: Math.round(Math.min(100, score)), tags: [...new Set(tags)], reasons };
 }
 

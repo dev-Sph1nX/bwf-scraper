@@ -214,6 +214,28 @@ export default function Pair() {
         </div>
       </div>
 
+      {Array.isArray(data.upcoming) && data.upcoming.length > 0 && (
+        <div className="card">
+          <h2>Prochains matchs</h2>
+          <div className="up-mini-list">
+            {data.upcoming.map((m, i) => {
+              const opp = m.side === "team1" ? m.team2 : m.team1;
+              const idOf = (t) => { const ids = (t.players || []).map((p) => String(p.id)).sort(); return ids.length > 1 ? `pair:${ids.join("-")}` : ids[0]; };
+              const oppName = (opp.players || []).map((p) => p.nameDisplay).join(" / ") || "—";
+              return (
+                <Link className="up-mini" key={i} to={`/predictor?disc=${m.eventName}&a=${encodeURIComponent(data.key)}&b=${encodeURIComponent(idOf(opp))}`}>
+                  <span className="up-mini-main">
+                    <span className="up-mini-vs">vs {oppName}</span>
+                    <span className="up-mini-sub">{m.tournamentName} · {ROUND_LABEL[m.roundName] || m.roundName}</span>
+                  </span>
+                  <span className="um-cta" aria-hidden="true">Analyser →</span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       {allElo.length > 0 && (
         <div className="card">
           <h2>Évolution de la cote</h2>

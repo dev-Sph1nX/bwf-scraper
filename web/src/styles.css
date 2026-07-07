@@ -497,6 +497,24 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
   .cl-tag { min-width: 0; }
 }
 
+/* Participant éliminé du tournoi : grisé */
+.lb-elim { opacity: .45; }
+.lb-elim a { text-decoration: line-through; }
+.tag-elim { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: bold; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 8px; padding: 1px 6px; vertical-align: middle; }
+
+/* « À suivre » (fiche tournoi) : joueur en forme au-dessus de la carte match */
+.watch-item { display: flex; flex-direction: column; gap: 5px; }
+.watch-head { display: flex; align-items: center; gap: 7px; font-size: 13px; padding-left: 2px; flex-wrap: wrap; }
+.watch-head .watch-name { font-weight: bold; }
+
+/* Prochains matchs (fiches joueur / paire) */
+.up-mini-list { display: flex; flex-direction: column; gap: 8px; }
+.up-mini { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2); text-decoration: none; color: var(--ink); }
+.up-mini:hover { border-color: var(--accent); background: var(--bwf-red-soft); }
+.up-mini-main { min-width: 0; }
+.up-mini-vs { display: block; font-weight: bold; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.up-mini-sub { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
 /* Divers */
 .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .tmt-dates { white-space: nowrap; }

@@ -1,15 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { useOutletContext, Link } from "react-router-dom";
 import { getJSON } from "../data.js";
+import UpcomingMatch from "../components/UpcomingMatch.jsx";
 
 const ORDER = ["MS", "WS", "MD", "WD", "XD"];
 const DISC_LABEL = {
   MS: "Simple messieurs", WS: "Simple dames", MD: "Double messieurs",
   WD: "Double dames", XD: "Double mixte",
-};
-const ROUND_LABEL = {
-  RR: "Poules", R128: "1/64", R64: "1/32", R32: "1/16", R16: "1/8",
-  QF: "1/4", SF: "1/2", F: "Finale", Final: "Finale",
 };
 
 // Tris "intérêt" : chacun a un libellé, une explication et un filtre/tri.
@@ -17,105 +14,17 @@ const MODES = {
   all: { label: "Tous les matchs" },
   surveiller: {
     label: "⚡ À surveiller",
-    explain: "Trié par score d'intérêt. Le score mesure l'écart entre notre cote Elo (forme récente) et le classement mondial (le consensus), pondéré par la fiabilité de notre Elo — puis majoré si les confrontations directes contredisent le favori, si la dynamique de forme est opposée, ou si un joueur est sous-coté (bien mieux classé à l'Elo qu'au mondial). Plus le score est élevé, plus notre modèle diverge du consensus : c'est là qu'il y a potentiellement de la valeur.",
-    filter: (m) => m.tags.includes("upset") || m.score >= 25,
+    explain: "Contre-pronostic : notre cote Elo (forme récente) donne une vraie chance (≥ 45 %) à un joueur nettement moins bien classé au mondial (écart ≥ 10 places), avec un Elo fiable. Autrement dit, là où le classement — et souvent les cotes — sous-estiment potentiellement le joueur. Trié par score d'intérêt.",
+    filter: (m) => m.tags.includes("value"),
     sort: (a, b) => b.score - a.score,
   },
-  close: {
-    label: "Serrés",
-    explain: "Les matchs à l'issue la plus incertaine selon notre Elo : probabilité proche de 50/50. À pile ou face.",
-    filter: (m) => m.tags.includes("close"),
-    sort: (a, b) => Math.abs((a.prob ?? 50) - 50) - Math.abs((b.prob ?? 50) - 50),
-  },
-  clash: {
-    label: "Chocs",
-    explain: "Affiches entre deux joueurs/paires du top 16 mondial — souvent dès les premiers tours.",
-    filter: (m) => m.tags.includes("clash"),
-    sort: (a, b) => ((a.team1.bwfRank || 99) + (a.team2.bwfRank || 99)) - ((b.team1.bwfRank || 99) + (b.team2.bwfRank || 99)),
+  bogey: {
+    label: "Bête noire",
+    explain: "Un joueur moins bien classé qui domine les confrontations directes face à son adversaire mieux classé — un mauvais client pour lui, indépendamment de l'écart de niveau. (Au moins 2 confrontations, et notre Elo lui donne ≥ 40 %.)",
+    filter: (m) => m.tags.includes("bogey"),
+    sort: (a, b) => b.score - a.score,
   },
 };
-
-function TeamCell({ team, right }) {
-  const players = team?.players || [];
-  const flags = (
-    <span className="um-flags">
-      {players.map((p, i) => p.countryFlagUrl
-        ? <img key={i} className="um-flag" src={p.countryFlagUrl} alt="" onError={(e) => (e.target.style.visibility = "hidden")} />
-        : <span key={i} className="um-flag" />)}
-    </span>
-  );
-  const name = <span className="um-names">{players.map((p) => p.nameDisplay).join(" / ")}</span>;
-  const seed = team?.seed ? <span className="um-seed">({team.seed})</span> : null;
-  return <div className="um-team">{right ? <>{seed}{name}{flags}</> : <>{flags}{name}{seed}</>}</div>;
-}
-
-function FormTag({ v }) {
-  if (v == null) return null;
-  const cls = v > 0 ? "up" : v < 0 ? "down" : "flat";
-  return <span className={`form ${cls}`}>{v > 0 ? `▲ ${v}` : v < 0 ? `▼ ${-v}` : "→ 0"}</span>;
-}
-
-function SideStats({ team }) {
-  if (team.elo == null) return <span className="um-stats muted">Non classé</span>;
-  return (
-    <span className="um-stats">
-      <span className="um-elo">{team.elo}</span>
-      {team.bwfRank ? <span className="um-rank">· #{team.bwfRank} mondial</span> : null}
-      <FormTag v={team.form} />
-    </span>
-  );
-}
-
-// Raisons affichées : celles calculées au build, sinon un repli selon le mode.
-function whyFor(m, mode) {
-  if (m.reasons?.length) return m.reasons;
-  const pa = m.prob, pb = pa == null ? null : 100 - pa;
-  if (mode === "close" && pa != null) return [`Issue très incertaine : ${pa}% / ${pb}% selon l'Elo`];
-  if (mode === "clash") return [`Deux du top mondial : #${m.team1.bwfRank} vs #${m.team2.bwfRank}`];
-  return [];
-}
-
-function MatchRow({ m, detailed, mode }) {
-  const pa = m.prob, pb = pa == null ? null : 100 - pa;
-  const why = detailed ? whyFor(m, mode) : [];
-  return (
-    <Link className="um-match" to={`/predictor?disc=${m.eventName}&a=${encodeURIComponent(m.a)}&b=${encodeURIComponent(m.b)}`}>
-      {detailed && (
-        <div className="um-dhead">
-          <span className={`um-score ${m.score < 25 ? "low" : ""}`} title="Score d'intérêt (0–100)">{m.score}</span>
-          <span className="um-dtmt">{m.tournamentName}</span>
-        </div>
-      )}
-      <div className="um-row">
-        <span className="um-round">
-          <span className="um-round-r">{ROUND_LABEL[m.roundName] || m.roundName}</span>
-          <span className="um-round-d">{m.eventName}</span>
-        </span>
-        <div className="um-side">
-          <TeamCell team={m.team1} />
-          <SideStats team={m.team1} />
-        </div>
-        {pa != null ? (
-          <span className="um-prob">
-            <b className={pa >= 50 ? "fav" : ""}>{pa}%</b>
-            <span className="um-bar"><span className="um-fill" style={{ width: `${pa}%` }} /></span>
-            <b className={pb > 50 ? "fav" : ""}>{pb}%</b>
-          </span>
-        ) : (
-          <span className="um-prob muted">—</span>
-        )}
-        <div className="um-side um-side-r">
-          <TeamCell team={m.team2} right />
-          <SideStats team={m.team2} />
-        </div>
-        <span className="um-cta" aria-hidden="true">Analyser →</span>
-      </div>
-      {detailed && why.length > 0 && (
-        <ul className="um-why">{why.map((r, i) => <li key={i}>{r}</li>)}</ul>
-      )}
-    </Link>
-  );
-}
 
 const parseDate = (s) => (s ? new Date(s.replace(" ", "T")).getTime() : null);
 
@@ -154,11 +63,11 @@ export default function Upcoming() {
   }, [byDisc]);
 
   // Compteurs par mode (selon la discipline sélectionnée) pour les chips de tri.
-  const modeCounts = useMemo(() => {
-    const c = { all: byDisc.length };
-    for (const k of ["surveiller", "close", "clash"]) c[k] = byDisc.filter(MODES[k].filter).length;
-    return c;
-  }, [byDisc]);
+  const modeCounts = useMemo(() => ({
+    all: byDisc.length,
+    surveiller: byDisc.filter(MODES.surveiller.filter).length,
+    bogey: byDisc.filter(MODES.bogey.filter).length,
+  }), [byDisc]);
 
   // Vue triée (mode ≠ all) : liste à plat filtrée + triée.
   const ranked = useMemo(() => {
@@ -215,7 +124,7 @@ export default function Upcoming() {
                   </div>
                 </div>
                 <div className="um-list">
-                  {g.items.map((m, i) => <MatchRow key={i} m={m} />)}
+                  {g.items.map((m, i) => <UpcomingMatch key={i} m={m} />)}
                 </div>
               </div>
             ))
@@ -229,7 +138,7 @@ export default function Upcoming() {
                 <div className="card muted">Aucun match ne correspond dans cette sélection.</div>
               ) : (
                 <div className="um-list">
-                  {ranked.map((m, i) => <MatchRow key={i} m={m} detailed mode={mode} />)}
+                  {ranked.map((m, i) => <UpcomingMatch key={i} m={m} detailed />)}
                 </div>
               )}
             </>
