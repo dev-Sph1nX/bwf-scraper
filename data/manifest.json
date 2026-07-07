@@ -5,16 +5,16 @@
       "tournamentCount": 31
     },
     "2024": {
-      "fetchedAt": "2026-07-06T12:21:44.169Z",
-      "tournamentCount": 32
+      "fetchedAt": "2026-07-07T11:19:32.085Z",
+      "tournamentCount": 33
     },
     "2025": {
-      "fetchedAt": "2026-07-06T12:19:39.117Z",
-      "tournamentCount": 31
+      "fetchedAt": "2026-07-07T11:35:00.664Z",
+      "tournamentCount": 32
     },
     "2026": {
-      "fetchedAt": "2026-07-06T15:07:45.447Z",
-      "tournamentCount": 30
+      "fetchedAt": "2026-07-07T11:14:48.178Z",
+      "tournamentCount": 31
     }
   },
   "draws": {
@@ -3332,6 +3332,56 @@
       "fetchedAt": "2026-07-06T12:23:36.271Z",
       "matchCount": 31,
       "tournamentStatus": "post"
+    },
+    "2026/5213/1": {
+      "fetchedAt": "2026-07-07T11:14:48.716Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5213/2": {
+      "fetchedAt": "2026-07-07T11:14:48.956Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5213/3": {
+      "fetchedAt": "2026-07-07T11:14:49.204Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5213/4": {
+      "fetchedAt": "2026-07-07T11:14:49.439Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5213/5": {
+      "fetchedAt": "2026-07-07T11:14:49.679Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2025/5261/1": {
+      "fetchedAt": "2026-07-07T11:35:01.495Z",
+      "matchCount": 63,
+      "tournamentStatus": "post"
+    },
+    "2025/5261/2": {
+      "fetchedAt": "2026-07-07T11:35:02.054Z",
+      "matchCount": 63,
+      "tournamentStatus": "post"
+    },
+    "2025/5261/3": {
+      "fetchedAt": "2026-07-07T11:35:02.446Z",
+      "matchCount": 63,
+      "tournamentStatus": "post"
+    },
+    "2025/5261/4": {
+      "fetchedAt": "2026-07-07T11:35:02.837Z",
+      "matchCount": 63,
+      "tournamentStatus": "post"
+    },
+    "2025/5261/5": {
+      "fetchedAt": "2026-07-07T11:35:03.233Z",
+      "matchCount": 63,
+      "tournamentStatus": "post"
     }
   },
   "lastRun": {
@@ -4533,1201 +4583,78 @@
       ]
     },
     "2025": {
-      "finishedAt": "2026-07-06T12:21:15.895Z",
+      "finishedAt": "2026-07-07T11:35:03.237Z",
       "stats": {
-        "tournaments": 31,
-        "drawsFetched": 249,
-        "drawsSkipped": 0,
-        "matches": 5118
+        "tournaments": 32,
+        "drawsFetched": 5,
+        "drawsSkipped": 249,
+        "matches": 315
       },
       "items": [
         {
-          "id": 5222,
-          "name": "PETRONAS Malaysia Open 2025",
+          "id": 5261,
+          "name": "TotalEnergies BWF World Championships 2025",
           "draws": [
             {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
+              "label": "XD",
+              "matchCount": 63
             },
             {
               "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5268,
-          "name": "YONEX-SUNRISE India Open 2025",
-          "draws": [
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
+              "matchCount": 63
             },
             {
               "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5234,
-          "name": "DAIHATSU Indonesia Masters 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
+              "matchCount": 63
             },
             {
               "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5221,
-          "name": "PRINCESS SIRIVANNAVARI Thailand Masters 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
+              "matchCount": 63
             },
             {
               "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5242,
-          "name": "YONEX German Open 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5251,
-          "name": "Orleans Masters Badminton 2025 presented by VICTOR",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5238,
-          "name": "YONEX All England Open Badminton Championships 2025",
-          "draws": [
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5195,
-          "name": "YONEX Swiss Open 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5233,
-          "name": "YONEX Taipei Open 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5225,
-          "name": "TOYOTA Thailand Open 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5224,
-          "name": "PERODUA Malaysia Masters 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5282,
-          "name": "KFF Singapore Badminton Open 2025",
-          "draws": [
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5236,
-          "name": "KAPAL API Indonesia Open 2025",
-          "draws": [
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5285,
-          "name": "YONEX US Open 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5254,
-          "name": "YONEX Canada Open 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5198,
-          "name": "DAIHATSU Japan Open 2025",
-          "draws": [
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5281,
-          "name": "VICTOR China Open 2025",
-          "draws": [
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5202,
-          "name": "SANDS CHINA LTD Macau Open 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5203,
-          "name": "LI-NING Hong Kong Open 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5280,
-          "name": "LI-NING China Masters 2025",
-          "draws": [
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5288,
-          "name": "SUWON VICTOR Korea Open 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5287,
-          "name": "CLASH OF CLANS Arctic Open 2025 powered by YONEX",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5207,
-          "name": "VICTOR Denmark Open 2025",
-          "draws": [
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5257,
-          "name": "YONEX French Open 2025",
-          "draws": [
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5256,
-          "name": "HYLO Open 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5286,
-          "name": "IKSAN VICTOR Korea Masters 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5208,
-          "name": "Kumamoto Masters Japan 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5199,
-          "name": "SATHIO GROUP Australian Open 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5267,
-          "name": "SYED MODI India International 2025",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
-            },
-            {
-              "label": "XD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5259,
-          "name": "HSBC BWF World Tour Finals 2025",
-          "draws": [
-            {
-              "label": "MS - Group A",
-              "matchCount": 6
-            },
-            {
-              "label": "MS - Group B",
-              "matchCount": 6
-            },
-            {
-              "label": "MS",
-              "matchCount": 3
-            },
-            {
-              "label": "WS - Group A",
-              "matchCount": 6
-            },
-            {
-              "label": "WS - Group B",
-              "matchCount": 6
-            },
-            {
-              "label": "WS",
-              "matchCount": 3
-            },
-            {
-              "label": "MD - Group A",
-              "matchCount": 6
-            },
-            {
-              "label": "MD - Group B",
-              "matchCount": 6
-            },
-            {
-              "label": "MD",
-              "matchCount": 3
-            },
-            {
-              "label": "WD - Group A",
-              "matchCount": 6
-            },
-            {
-              "label": "WD - Group B",
-              "matchCount": 6
-            },
-            {
-              "label": "WD",
-              "matchCount": 3
-            },
-            {
-              "label": "XD - Group A",
-              "matchCount": 6
-            },
-            {
-              "label": "XD - Group B",
-              "matchCount": 6
-            },
-            {
-              "label": "XD",
-              "matchCount": 3
+              "matchCount": 63
             }
           ]
         }
       ]
     },
     "2026": {
-      "finishedAt": "2026-07-06T15:07:45.464Z",
+      "finishedAt": "2026-07-07T11:14:49.932Z",
       "stats": {
-        "tournaments": 30,
-        "drawsFetched": 0,
+        "tournaments": 31,
+        "drawsFetched": 5,
         "drawsSkipped": 134,
-        "matches": 0
+        "matches": 155
       },
-      "items": []
+      "items": [
+        {
+          "id": 5213,
+          "name": "DAIHATSU Japan Open 2026",
+          "draws": [
+            {
+              "label": "MS",
+              "matchCount": 31
+            },
+            {
+              "label": "WS",
+              "matchCount": 31
+            },
+            {
+              "label": "MD",
+              "matchCount": 31
+            },
+            {
+              "label": "WD",
+              "matchCount": 31
+            },
+            {
+              "label": "XD",
+              "matchCount": 31
+            }
+          ]
+        }
+      ]
     }
   }
 }
