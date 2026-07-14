@@ -13,7 +13,7 @@
       "tournamentCount": 32
     },
     "2026": {
-      "fetchedAt": "2026-07-13T23:02:18.054Z",
+      "fetchedAt": "2026-07-14T23:03:12.794Z",
       "tournamentCount": 31
     }
   },
@@ -3334,29 +3334,29 @@
       "tournamentStatus": "post"
     },
     "2026/5213/1": {
-      "fetchedAt": "2026-07-13T23:02:18.650Z",
+      "fetchedAt": "2026-07-14T23:03:13.300Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5213/2": {
-      "fetchedAt": "2026-07-13T23:02:19.020Z",
+      "fetchedAt": "2026-07-14T23:03:13.568Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5213/3": {
-      "fetchedAt": "2026-07-13T23:02:19.398Z",
+      "fetchedAt": "2026-07-14T23:03:14.012Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5213/4": {
-      "fetchedAt": "2026-07-13T23:02:19.702Z",
+      "fetchedAt": "2026-07-14T23:03:14.609Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5213/5": {
-      "fetchedAt": "2026-07-13T23:02:20.005Z",
+      "fetchedAt": "2026-07-14T23:03:15.114Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2025/5261/1": {
       "fetchedAt": "2026-07-07T11:35:01.495Z",
@@ -3382,6 +3382,31 @@
       "fetchedAt": "2026-07-07T11:35:03.233Z",
       "matchCount": 63,
       "tournamentStatus": "post"
+    },
+    "2026/5622/1": {
+      "fetchedAt": "2026-07-14T23:03:15.746Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5622/2": {
+      "fetchedAt": "2026-07-14T23:03:16.056Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5622/3": {
+      "fetchedAt": "2026-07-14T23:03:16.367Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5622/4": {
+      "fetchedAt": "2026-07-14T23:03:16.605Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5622/5": {
+      "fetchedAt": "2026-07-14T23:03:16.926Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
     }
   },
   "lastRun": {
@@ -4620,17 +4645,43 @@
       ]
     },
     "2026": {
-      "finishedAt": "2026-07-13T23:02:20.284Z",
+      "finishedAt": "2026-07-14T23:03:17.188Z",
       "stats": {
         "tournaments": 31,
-        "drawsFetched": 5,
+        "drawsFetched": 10,
         "drawsSkipped": 134,
-        "matches": 155
+        "matches": 310
       },
       "items": [
         {
           "id": 5213,
           "name": "DAIHATSU Japan Open 2026",
+          "draws": [
+            {
+              "label": "MS",
+              "matchCount": 31
+            },
+            {
+              "label": "WS",
+              "matchCount": 31
+            },
+            {
+              "label": "MD",
+              "matchCount": 31
+            },
+            {
+              "label": "WD",
+              "matchCount": 31
+            },
+            {
+              "label": "XD",
+              "matchCount": 31
+            }
+          ]
+        },
+        {
+          "id": 5622,
+          "name": "VICTOR China Open 2026",
           "draws": [
             {
               "label": "MS",
