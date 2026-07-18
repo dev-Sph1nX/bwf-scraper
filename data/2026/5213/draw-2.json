@@ -2751,9 +2751,9 @@
       "match": {
         "code": "65",
         "tournamentCode": 5213,
-        "scoreStatus": 0,
-        "scoreStatusValue": "Normal",
-        "winner": 0,
+        "scoreStatus": 2,
+        "scoreStatusValue": "Retired",
+        "winner": 1,
         "team1": {
           "countryCode": "IND",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -2810,9 +2810,9 @@
         },
         "team1seed": null,
         "team2seed": "4",
-        "matchTime": "2026-07-18 10:50:00",
-        "matchTimeUtc": "2026-07-18 01:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-18 10:55:00",
+        "matchTimeUtc": "2026-07-18 01:55:00",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2823,12 +2823,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 44,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 19,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 15,
+            "away": 10,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2838,7 +2851,7 @@
         "tournamentCode": 5213,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2895,9 +2908,9 @@
         },
         "team1seed": "3",
         "team2seed": "6",
-        "matchTime": "2026-07-18 12:30:00",
-        "matchTimeUtc": "2026-07-18 03:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-18 13:10:00",
+        "matchTimeUtc": "2026-07-18 04:10:00",
+        "matchStatus": "F",
         "oopRound": "4",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2908,12 +2921,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 65,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 9,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 16,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2925,41 +2957,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "IND",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "73173",
+              "nameDisplay": "PUSARLA V. Sindhu",
+              "nameType": 1,
+              "firstName": "V. Sindhu",
+              "lastName": "PUSARLA",
+              "initials": "PV",
+              "nameShort": "PUSARLA V S ",
+              "nameShort2": "PUSARLA",
+              "slug": "v-sindhu-pusarla",
+              "countryCode": "IND",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+              "avatar": {
+                "title": "V. Sindhu PUSARLA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627948657/assets/players/thumbnail/73173.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "96312",
+              "nameDisplay": "Akane YAMAGUCHI",
+              "nameType": 0,
+              "firstName": "Akane",
+              "lastName": "YAMAGUCHI",
+              "initials": "AY",
+              "nameShort": "A YAMAGUCHI",
+              "nameShort2": "YAMAGUCHI",
+              "slug": "akane-yamaguchi",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Akane YAMAGUCHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689647088/assets/players/thumbnail/96312.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team2seed": "3",
+        "matchTime": "2026-07-19 11:50:00",
+        "matchTimeUtc": "2026-07-19 02:50:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "2",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "Final",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Main Location",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -5916,9 +5986,9 @@
       "tournamentCode": "A05984E7-69C8-46AD-ACB8-906CA66D6913",
       "tournamentName": "DAIHATSU Japan Open 2026",
       "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
+      "scoreStatus": 2,
+      "scoreStatusValue": "Retired",
+      "winner": 1,
       "team1": {
         "countryCode": "IND",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -5975,10 +6045,10 @@
       },
       "team1seed": null,
       "team2seed": "4",
-      "matchTime": "2026-07-18 10:50:00",
-      "matchTimeUtc": "2026-07-18 01:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-18 10:55:00",
+      "matchTimeUtc": "2026-07-18 01:55:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -5990,14 +6060,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Main Location",
-      "duration": null,
-      "time": "00:00",
+      "duration": 44,
+      "time": "00:44",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 19,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 15,
+          "away": 10,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6008,7 +6093,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -6065,15 +6150,127 @@
       },
       "team1seed": "3",
       "team2seed": "6",
-      "matchTime": "2026-07-18 12:30:00",
-      "matchTimeUtc": "2026-07-18 03:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-18 13:10:00",
+      "matchTimeUtc": "2026-07-18 04:10:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "4",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "WS",
       "roundName": "SF",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Main Location",
+      "duration": 65,
+      "time": "01:05",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 9,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1529086,
+      "code": "64",
+      "tournamentCode": "A05984E7-69C8-46AD-ACB8-906CA66D6913",
+      "tournamentName": "DAIHATSU Japan Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "73173",
+            "nameDisplay": "PUSARLA V. Sindhu",
+            "nameType": 1,
+            "firstName": "V. Sindhu",
+            "lastName": "PUSARLA",
+            "initials": "PV",
+            "nameShort": "PUSARLA V S ",
+            "nameShort2": "PUSARLA",
+            "slug": "v-sindhu-pusarla",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "V. Sindhu PUSARLA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627948657/assets/players/thumbnail/73173.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "96312",
+            "nameDisplay": "Akane YAMAGUCHI",
+            "nameType": 0,
+            "firstName": "Akane",
+            "lastName": "YAMAGUCHI",
+            "initials": "AY",
+            "nameShort": "A YAMAGUCHI",
+            "nameShort2": "YAMAGUCHI",
+            "slug": "akane-yamaguchi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Akane YAMAGUCHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689647088/assets/players/thumbnail/96312.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "3",
+      "matchTime": "2026-07-19 11:50:00",
+      "matchTimeUtc": "2026-07-19 02:50:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "2",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "Final",
       "drawName": "WS",
       "drawCode": "2",
       "courtName": "Court 1",
@@ -6087,58 +6284,6 @@
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1529086,
-      "code": "64",
-      "tournamentCode": "A05984E7-69C8-46AD-ACB8-906CA66D6913",
-      "tournamentName": "DAIHATSU Japan Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "Final",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
       "score": [],
       "matches": []
     }
