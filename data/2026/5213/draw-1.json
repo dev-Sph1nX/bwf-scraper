@@ -3024,7 +3024,7 @@
         "tournamentCode": 5213,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "FRA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
@@ -3081,9 +3081,9 @@
         },
         "team1seed": "5",
         "team2seed": null,
-        "matchTime": "2026-07-19 12:40:00",
-        "matchTimeUtc": "2026-07-19 03:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-19 13:45:00",
+        "matchTimeUtc": "2026-07-19 04:45:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3094,12 +3094,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 49,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 19,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     }
@@ -6354,7 +6367,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "FRA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
@@ -6411,10 +6424,10 @@
       },
       "team1seed": "5",
       "team2seed": null,
-      "matchTime": "2026-07-19 12:40:00",
-      "matchTimeUtc": "2026-07-19 03:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-19 13:45:00",
+      "matchTimeUtc": "2026-07-19 04:45:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6426,14 +6439,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Main Location",
-      "duration": null,
-      "time": "00:00",
+      "duration": 49,
+      "time": "00:49",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 19,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     }
   ],
