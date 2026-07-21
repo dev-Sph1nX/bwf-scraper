@@ -13,7 +13,7 @@
       "tournamentCount": 32
     },
     "2026": {
-      "fetchedAt": "2026-07-20T23:06:38.266Z",
+      "fetchedAt": "2026-07-21T23:03:54.848Z",
       "tournamentCount": 31
     }
   },
@@ -3384,27 +3384,77 @@
       "tournamentStatus": "post"
     },
     "2026/5622/1": {
-      "fetchedAt": "2026-07-20T23:06:38.956Z",
+      "fetchedAt": "2026-07-21T23:03:55.479Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5622/2": {
-      "fetchedAt": "2026-07-20T23:06:39.271Z",
+      "fetchedAt": "2026-07-21T23:03:55.807Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5622/3": {
-      "fetchedAt": "2026-07-20T23:06:39.592Z",
+      "fetchedAt": "2026-07-21T23:03:56.136Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5622/4": {
-      "fetchedAt": "2026-07-20T23:06:39.982Z",
+      "fetchedAt": "2026-07-21T23:03:56.556Z",
+      "matchCount": 31,
+      "tournamentStatus": "live"
+    },
+    "2026/5622/5": {
+      "fetchedAt": "2026-07-21T23:03:56.949Z",
+      "matchCount": 31,
+      "tournamentStatus": "live"
+    },
+    "2026/5514/1": {
+      "fetchedAt": "2026-07-21T23:03:57.632Z",
+      "matchCount": 12,
+      "tournamentStatus": "future"
+    },
+    "2026/5514/2": {
+      "fetchedAt": "2026-07-21T23:03:58.016Z",
       "matchCount": 31,
       "tournamentStatus": "future"
     },
-    "2026/5622/5": {
-      "fetchedAt": "2026-07-20T23:06:40.371Z",
+    "2026/5514/3": {
+      "fetchedAt": "2026-07-21T23:03:58.363Z",
+      "matchCount": 12,
+      "tournamentStatus": "future"
+    },
+    "2026/5514/4": {
+      "fetchedAt": "2026-07-21T23:03:58.753Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5514/5": {
+      "fetchedAt": "2026-07-21T23:03:59.107Z",
+      "matchCount": 12,
+      "tournamentStatus": "future"
+    },
+    "2026/5514/6": {
+      "fetchedAt": "2026-07-21T23:03:59.487Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5514/7": {
+      "fetchedAt": "2026-07-21T23:03:59.882Z",
+      "matchCount": 12,
+      "tournamentStatus": "future"
+    },
+    "2026/5514/8": {
+      "fetchedAt": "2026-07-21T23:04:00.263Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5514/9": {
+      "fetchedAt": "2026-07-21T23:04:00.622Z",
+      "matchCount": 12,
+      "tournamentStatus": "future"
+    },
+    "2026/5514/10": {
+      "fetchedAt": "2026-07-21T23:04:01.010Z",
       "matchCount": 31,
       "tournamentStatus": "future"
     }
@@ -4645,12 +4695,12 @@
       ]
     },
     "2026": {
-      "finishedAt": "2026-07-20T23:06:40.698Z",
+      "finishedAt": "2026-07-21T23:04:01.383Z",
       "stats": {
         "tournaments": 31,
-        "drawsFetched": 5,
+        "drawsFetched": 15,
         "drawsSkipped": 139,
-        "matches": 155
+        "matches": 370
       },
       "items": [
         {
@@ -4672,6 +4722,52 @@
             {
               "label": "WD",
               "matchCount": 31
+            },
+            {
+              "label": "XD",
+              "matchCount": 31
+            }
+          ]
+        },
+        {
+          "id": 5514,
+          "name": "YONEX Taipei Open 2026",
+          "draws": [
+            {
+              "label": "MS - Qualification",
+              "matchCount": 12
+            },
+            {
+              "label": "MS",
+              "matchCount": 31
+            },
+            {
+              "label": "WS - Qualification",
+              "matchCount": 12
+            },
+            {
+              "label": "WS",
+              "matchCount": 31
+            },
+            {
+              "label": "MD - Qualification",
+              "matchCount": 12
+            },
+            {
+              "label": "MD",
+              "matchCount": 31
+            },
+            {
+              "label": "WD - Qualification",
+              "matchCount": 12
+            },
+            {
+              "label": "WD",
+              "matchCount": 31
+            },
+            {
+              "label": "XD - Qualification",
+              "matchCount": 12
             },
             {
               "label": "XD",
