@@ -42,19 +42,19 @@
           "players": [
             {
               "id": "82606",
-              "nameDisplay": "Jia Heng Jason TEH",
+              "nameDisplay": "Jia Heng TEH",
               "nameType": 0,
-              "firstName": "Jia Heng Jason",
+              "firstName": "Jia Heng",
               "lastName": "TEH",
               "initials": "JT",
               "nameShort": "J TEH",
               "nameShort2": "TEH",
-              "slug": "jia-heng-jason-teh",
+              "slug": "jia-heng-teh",
               "countryCode": "SGP",
               "countryName": null,
               "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/SGP.png",
               "avatar": {
-                "title": "Jia Heng Jason TEH",
+                "title": "Jia Heng TEH",
                 "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1671091341/assets/players/thumbnail/82606.jpg"
               }
             }
@@ -1626,9 +1626,9 @@
       "match": {
         "code": "8",
         "tournamentCode": 5622,
-        "scoreStatus": 0,
-        "scoreStatusValue": "Normal",
-        "winner": 0,
+        "scoreStatus": 2,
+        "scoreStatusValue": "Retired",
+        "winner": 1,
         "team1": {
           "countryCode": "CHN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -1685,9 +1685,9 @@
         },
         "team1seed": "1",
         "team2seed": null,
-        "matchTime": "2026-07-23 10:40:00",
-        "matchTimeUtc": "2026-07-23 02:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-23 11:35:00",
+        "matchTimeUtc": "2026-07-23 03:35:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1698,12 +1698,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Olympic Sports Center Gymnasium",
-        "duration": null,
+        "duration": 43,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 17,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 2,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 12,
+            "away": 6,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -1713,7 +1732,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -1770,9 +1789,9 @@
         },
         "team1seed": "6",
         "team2seed": null,
-        "matchTime": "2026-07-23 12:00:00",
-        "matchTimeUtc": "2026-07-23 04:00:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-23 11:45:00",
+        "matchTimeUtc": "2026-07-23 03:45:00",
+        "matchStatus": "F",
         "oopRound": "4",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1783,12 +1802,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Olympic Sports Center Gymnasium",
-        "duration": null,
+        "duration": 51,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 15,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -1798,7 +1830,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "CHN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -1855,9 +1887,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-07-23 11:30:00",
-        "matchTimeUtc": "2026-07-23 03:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-23 12:30:00",
+        "matchTimeUtc": "2026-07-23 04:30:00",
+        "matchStatus": "F",
         "oopRound": "4",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1868,12 +1900,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Olympic Sports Center Gymnasium",
-        "duration": null,
+        "duration": 70,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 20,
+            "away": 22,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -1883,7 +1934,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "FRA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
@@ -1940,9 +1991,9 @@
         },
         "team1seed": "5",
         "team2seed": null,
-        "matchTime": "2026-07-23 10:40:00",
-        "matchTimeUtc": "2026-07-23 02:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-23 10:55:00",
+        "matchTimeUtc": "2026-07-23 02:55:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1953,12 +2004,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Olympic Sports Center Gymnasium",
-        "duration": null,
+        "duration": 44,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 18,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 13,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -1968,7 +2032,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "IND",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -2025,12 +2089,12 @@
         },
         "team1seed": null,
         "team2seed": "8",
-        "matchTime": "2026-07-23 17:20:00",
-        "matchTimeUtc": "2026-07-23 09:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-23 18:45:00",
+        "matchTimeUtc": "2026-07-23 10:45:00",
+        "matchStatus": "F",
         "oopRound": "11",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MS",
         "roundName": "R16",
         "drawName": "MS",
@@ -2038,12 +2102,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Olympic Sports Center Gymnasium",
-        "duration": null,
+        "duration": 46,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 11,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2053,7 +2130,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "SGP",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/SGP.png",
@@ -2110,9 +2187,9 @@
         },
         "team1seed": null,
         "team2seed": "4",
-        "matchTime": "2026-07-23 15:40:00",
-        "matchTimeUtc": "2026-07-23 07:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-23 17:00:00",
+        "matchTimeUtc": "2026-07-23 09:00:00",
+        "matchStatus": "F",
         "oopRound": "9",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2123,12 +2200,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Olympic Sports Center Gymnasium",
-        "duration": null,
+        "duration": 52,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 12,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 6,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 13,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2138,7 +2234,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "IND",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -2195,9 +2291,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-07-23 15:30:00",
-        "matchTimeUtc": "2026-07-23 07:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-23 17:05:00",
+        "matchTimeUtc": "2026-07-23 09:05:00",
+        "matchStatus": "F",
         "oopRound": "10",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2208,12 +2304,31 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Olympic Sports Center Gymnasium",
-        "duration": null,
+        "duration": 65,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 15,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 13,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 20,
+            "away": 22,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2223,7 +2338,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "FRA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
@@ -2282,12 +2397,195 @@
         "team2seed": null,
         "matchTime": "2026-07-23 14:50:00",
         "matchTimeUtc": "2026-07-23 06:50:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "8",
         "oopText": "Followed by",
         "oopTypeId": 0,
         "eventName": "MS",
         "roundName": "R16",
+        "drawName": "MS",
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Olympic Sports Center Gymnasium",
+        "duration": 51,
+        "matchOrder": null,
+        "matchTypeId": 1,
+        "matchTypeValue": "Men's Singles",
+        "reliability": 1,
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 10,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 19,
+            "serve": 1
+          }
+        ],
+        "matches": []
+      }
+    },
+    "2-0": {
+      "match": {
+        "code": "4",
+        "tournamentCode": 5622,
+        "scoreStatus": 0,
+        "scoreStatusValue": "Normal",
+        "winner": 0,
+        "team1": {
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+          "teamId": null,
+          "teamName": null,
+          "players": [
+            {
+              "id": "57945",
+              "nameDisplay": "SHI Yu Qi",
+              "nameType": 1,
+              "firstName": "Yu Qi",
+              "lastName": "SHI",
+              "initials": "SY",
+              "nameShort": "SHI Y Q ",
+              "nameShort2": "SHI",
+              "slug": "yu-qi-shi",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Yu Qi SHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697434141/assets/players/thumbnail/57945.jpg"
+              }
+            }
+          ],
+          "linkName": null
+        },
+        "team2": {
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+          "teamId": null,
+          "teamName": null,
+          "players": [
+            {
+              "id": "34810",
+              "nameDisplay": "CHOU Tien Chen",
+              "nameType": 1,
+              "firstName": "Tien Chen",
+              "lastName": "CHOU",
+              "initials": "CT",
+              "nameShort": "CHOU T C ",
+              "nameShort2": "CHOU",
+              "slug": "tien-chen-chou",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Tien Chen CHOU",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658715713/assets/players/thumbnail/34810.jpg"
+              }
+            }
+          ],
+          "linkName": null
+        },
+        "team1seed": "1",
+        "team2seed": "6",
+        "matchTime": "2026-07-24 10:50:00",
+        "matchTimeUtc": "2026-07-24 02:50:00",
+        "matchStatus": "N",
+        "oopRound": "2",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
+        "eventName": "MS",
+        "roundName": "QF",
+        "drawName": "MS",
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Olympic Sports Center Gymnasium",
+        "duration": null,
+        "matchOrder": null,
+        "matchTypeId": 1,
+        "matchTypeValue": "Men's Singles",
+        "reliability": 1,
+        "score": [],
+        "matches": []
+      }
+    },
+    "2-1": {
+      "match": {
+        "code": "5",
+        "tournamentCode": 5622,
+        "scoreStatus": 0,
+        "scoreStatusValue": "Normal",
+        "winner": 0,
+        "team1": {
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+          "teamId": null,
+          "teamName": null,
+          "players": [
+            {
+              "id": "77042",
+              "nameDisplay": "WENG Hong Yang",
+              "nameType": 1,
+              "firstName": "Hong Yang",
+              "lastName": "WENG",
+              "initials": "WH",
+              "nameShort": "WENG H Y ",
+              "nameShort2": "WENG",
+              "slug": "hong-yang-weng",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Hong Yang WENG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604899185/assets/players/thumbnail/77042.jpg"
+              }
+            }
+          ],
+          "linkName": null
+        },
+        "team2": {
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+          "teamId": null,
+          "teamName": null,
+          "players": [
+            {
+              "id": "86114",
+              "nameDisplay": "LIN Chun-Yi",
+              "nameType": 1,
+              "firstName": "Chun-Yi",
+              "lastName": "LIN",
+              "initials": "LC",
+              "nameShort": "LIN C Y ",
+              "nameShort2": "LIN",
+              "slug": "chun-yi-lin",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Chun-Yi LIN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658715639/assets/players/thumbnail/86114.jpg"
+              }
+            }
+          ],
+          "linkName": null
+        },
+        "team1seed": null,
+        "team2seed": null,
+        "matchTime": "2026-07-24 10:50:00",
+        "matchTimeUtc": "2026-07-24 02:50:00",
+        "matchStatus": "N",
+        "oopRound": "2",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
+        "eventName": "MS",
+        "roundName": "QF",
         "drawName": "MS",
         "courtName": "Court 2",
         "courtCode": "2",
@@ -2302,100 +2600,6 @@
         "matches": []
       }
     },
-    "2-0": {
-      "match": {
-        "code": "4",
-        "tournamentCode": 5622,
-        "scoreStatus": 0,
-        "scoreStatusValue": "Normal",
-        "winner": 0,
-        "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
-          "teamId": null,
-          "teamName": null,
-          "players": [],
-          "linkName": null
-        },
-        "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
-          "teamId": null,
-          "teamName": null,
-          "players": [],
-          "linkName": null
-        },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
-        "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
-        "eventName": "MS",
-        "roundName": "QF",
-        "drawName": "MS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
-        "duration": null,
-        "matchOrder": null,
-        "matchTypeId": 1,
-        "matchTypeValue": "Men's Singles",
-        "reliability": null,
-        "score": [],
-        "matches": []
-      }
-    },
-    "2-1": {
-      "match": {
-        "code": "5",
-        "tournamentCode": 5622,
-        "scoreStatus": 0,
-        "scoreStatusValue": "Normal",
-        "winner": 0,
-        "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
-          "teamId": null,
-          "teamName": null,
-          "players": [],
-          "linkName": null
-        },
-        "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
-          "teamId": null,
-          "teamName": null,
-          "players": [],
-          "linkName": null
-        },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
-        "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
-        "eventName": "MS",
-        "roundName": "QF",
-        "drawName": "MS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
-        "duration": null,
-        "matchOrder": null,
-        "matchTypeId": 1,
-        "matchTypeValue": "Men's Singles",
-        "reliability": null,
-        "score": [],
-        "matches": []
-      }
-    },
     "2-2": {
       "match": {
         "code": "6",
@@ -2404,41 +2608,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CAN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "94151",
+              "nameDisplay": "Victor LAI",
+              "nameType": 0,
+              "firstName": "Victor",
+              "lastName": "LAI",
+              "initials": "VL",
+              "nameShort": "V LAI",
+              "nameShort2": "LAI",
+              "slug": "victor-lai",
+              "countryCode": "CAN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
+              "avatar": {
+                "title": "Victor LAI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1773746408/assets/players/thumbnail/94151.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "INA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "73442",
+              "nameDisplay": "Jonatan CHRISTIE",
+              "nameType": 0,
+              "firstName": "Jonatan",
+              "lastName": "CHRISTIE",
+              "initials": "JC",
+              "nameShort": "J CHRISTIE",
+              "nameShort2": "CHRISTIE",
+              "slug": "jonatan-christie",
+              "countryCode": "INA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+              "avatar": {
+                "title": "Jonatan CHRISTIE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697434451/assets/players/thumbnail/73442.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team1seed": "8",
+        "team2seed": "4",
+        "matchTime": "2026-07-24 11:40:00",
+        "matchTimeUtc": "2026-07-24 03:40:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "3",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MS",
         "roundName": "QF",
         "drawName": "MS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Olympic Sports Center Gymnasium",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -2451,41 +2693,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "IRL",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IRL.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "85095",
+              "nameDisplay": "Nhat NGUYEN",
+              "nameType": 0,
+              "firstName": "Nhat",
+              "lastName": "NGUYEN",
+              "initials": "NN",
+              "nameShort": "N NGUYEN",
+              "nameShort2": "NGUYEN",
+              "slug": "nhat-nguyen",
+              "countryCode": "IRL",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IRL.png",
+              "avatar": {
+                "title": "Nhat NGUYEN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1719990852/assets/players/thumbnail/85095.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "FRA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "61628",
+              "nameDisplay": "Toma Junior POPOV",
+              "nameType": 0,
+              "firstName": "Toma Junior",
+              "lastName": "POPOV",
+              "initials": "TP",
+              "nameShort": "T POPOV",
+              "nameShort2": "POPOV",
+              "slug": "toma-junior-popov",
+              "countryCode": "FRA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
+              "avatar": {
+                "title": "Toma Junior POPOV",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1719991294/assets/players/thumbnail/61628.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-07-24 12:30:00",
+        "matchTimeUtc": "2026-07-24 04:30:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "4",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MS",
         "roundName": "QF",
         "drawName": "MS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Olympic Sports Center Gymnasium",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -2677,19 +2957,19 @@
         "players": [
           {
             "id": "82606",
-            "nameDisplay": "Jia Heng Jason TEH",
+            "nameDisplay": "Jia Heng TEH",
             "nameType": 0,
-            "firstName": "Jia Heng Jason",
+            "firstName": "Jia Heng",
             "lastName": "TEH",
             "initials": "JT",
             "nameShort": "J TEH",
             "nameShort2": "TEH",
-            "slug": "jia-heng-jason-teh",
+            "slug": "jia-heng-teh",
             "countryCode": "SGP",
             "countryName": null,
             "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/SGP.png",
             "avatar": {
-              "title": "Jia Heng Jason TEH",
+              "title": "Jia Heng TEH",
               "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1671091341/assets/players/thumbnail/82606.jpg"
             }
           }
@@ -4384,7 +4664,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "IND",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -4441,13 +4721,13 @@
       },
       "team1seed": null,
       "team2seed": "8",
-      "matchTime": "2026-07-23 17:20:00",
-      "matchTimeUtc": "2026-07-23 09:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-23 18:45:00",
+      "matchTimeUtc": "2026-07-23 10:45:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "11",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "MS",
       "roundName": "R16",
       "drawName": "MS",
@@ -4456,14 +4736,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Olympic Sports Center Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 46,
+      "time": "00:46",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 19,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 11,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -4474,7 +4769,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "FRA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
@@ -4533,8 +4828,8 @@
       "team2seed": null,
       "matchTime": "2026-07-23 14:50:00",
       "matchTimeUtc": "2026-07-23 06:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "8",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -4546,14 +4841,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Olympic Sports Center Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 51,
+      "time": "00:51",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 10,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 19,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -4564,7 +4874,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "IND",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -4621,10 +4931,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-07-23 15:30:00",
-      "matchTimeUtc": "2026-07-23 07:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-23 17:05:00",
+      "matchTimeUtc": "2026-07-23 09:05:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "10",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -4636,14 +4946,36 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Olympic Sports Center Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 65,
+      "time": "01:05",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 20,
+          "away": 22,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -4654,7 +4986,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "SGP",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/SGP.png",
@@ -4711,10 +5043,10 @@
       },
       "team1seed": null,
       "team2seed": "4",
-      "matchTime": "2026-07-23 15:40:00",
-      "matchTimeUtc": "2026-07-23 07:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-23 17:00:00",
+      "matchTimeUtc": "2026-07-23 09:00:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "9",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -4726,14 +5058,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Olympic Sports Center Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 52,
+      "time": "00:52",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 12,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 6,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -4744,7 +5098,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "FRA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
@@ -4801,10 +5155,10 @@
       },
       "team1seed": "5",
       "team2seed": null,
-      "matchTime": "2026-07-23 10:40:00",
-      "matchTimeUtc": "2026-07-23 02:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-23 10:55:00",
+      "matchTimeUtc": "2026-07-23 02:55:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -4816,14 +5170,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Olympic Sports Center Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 44,
+      "time": "00:44",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -4834,7 +5203,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "CHN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -4891,10 +5260,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-07-23 11:30:00",
-      "matchTimeUtc": "2026-07-23 03:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-23 12:30:00",
+      "matchTimeUtc": "2026-07-23 04:30:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "4",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -4906,14 +5275,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Olympic Sports Center Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 70,
+      "time": "01:10",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 20,
+          "away": 22,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -4924,7 +5315,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -4981,10 +5372,10 @@
       },
       "team1seed": "6",
       "team2seed": null,
-      "matchTime": "2026-07-23 12:00:00",
-      "matchTimeUtc": "2026-07-23 04:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-23 11:45:00",
+      "matchTimeUtc": "2026-07-23 03:45:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "4",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -4996,14 +5387,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Olympic Sports Center Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 51,
+      "time": "00:51",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -5012,9 +5418,9 @@
       "tournamentCode": "718B4055-FCD5-4652-B599-D9E6DFD256AB",
       "tournamentName": "VICTOR China Open 2026",
       "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
+      "scoreStatus": 2,
+      "scoreStatusValue": "Retired",
+      "winner": 1,
       "team1": {
         "countryCode": "CHN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -5071,15 +5477,127 @@
       },
       "team1seed": "1",
       "team2seed": null,
-      "matchTime": "2026-07-23 10:40:00",
-      "matchTimeUtc": "2026-07-23 02:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-23 11:35:00",
+      "matchTimeUtc": "2026-07-23 03:35:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "MS",
       "roundName": "R16",
+      "drawName": "MS",
+      "drawCode": "1",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Olympic Sports Center Gymnasium",
+      "duration": 43,
+      "time": "00:43",
+      "matchOrder": null,
+      "matchTypeId": 1,
+      "matchTypeValue": "Men's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 17,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 2,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 12,
+          "away": 6,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1530307,
+      "code": "4",
+      "tournamentCode": "718B4055-FCD5-4652-B599-D9E6DFD256AB",
+      "tournamentName": "VICTOR China Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "57945",
+            "nameDisplay": "SHI Yu Qi",
+            "nameType": 1,
+            "firstName": "Yu Qi",
+            "lastName": "SHI",
+            "initials": "SY",
+            "nameShort": "SHI Y Q ",
+            "nameShort2": "SHI",
+            "slug": "yu-qi-shi",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Yu Qi SHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697434141/assets/players/thumbnail/57945.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "34810",
+            "nameDisplay": "CHOU Tien Chen",
+            "nameType": 1,
+            "firstName": "Tien Chen",
+            "lastName": "CHOU",
+            "initials": "CT",
+            "nameShort": "CHOU T C ",
+            "nameShort2": "CHOU",
+            "slug": "tien-chen-chou",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Tien Chen CHOU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658715713/assets/players/thumbnail/34810.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "1",
+      "team2seed": "6",
+      "matchTime": "2026-07-24 10:50:00",
+      "matchTimeUtc": "2026-07-24 02:50:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "2",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "MS",
+      "roundName": "QF",
       "drawName": "MS",
       "drawCode": "1",
       "courtName": "Court 1",
@@ -5097,58 +5615,6 @@
       "matches": []
     },
     {
-      "id": 1530307,
-      "code": "4",
-      "tournamentCode": "718B4055-FCD5-4652-B599-D9E6DFD256AB",
-      "tournamentName": "VICTOR China Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "MS",
-      "roundName": "QF",
-      "drawName": "MS",
-      "drawCode": "1",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 1,
-      "matchTypeValue": "Men's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
       "id": 1530302,
       "code": "5",
       "tournamentCode": "718B4055-FCD5-4652-B599-D9E6DFD256AB",
@@ -5158,45 +5624,83 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "77042",
+            "nameDisplay": "WENG Hong Yang",
+            "nameType": 1,
+            "firstName": "Hong Yang",
+            "lastName": "WENG",
+            "initials": "WH",
+            "nameShort": "WENG H Y ",
+            "nameShort2": "WENG",
+            "slug": "hong-yang-weng",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Hong Yang WENG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604899185/assets/players/thumbnail/77042.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "86114",
+            "nameDisplay": "LIN Chun-Yi",
+            "nameType": 1,
+            "firstName": "Chun-Yi",
+            "lastName": "LIN",
+            "initials": "LC",
+            "nameShort": "LIN C Y ",
+            "nameShort2": "LIN",
+            "slug": "chun-yi-lin",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Chun-Yi LIN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658715639/assets/players/thumbnail/86114.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "matchTime": "2026-07-24 10:50:00",
+      "matchTimeUtc": "2026-07-24 02:50:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "2",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "MS",
       "roundName": "QF",
       "drawName": "MS",
       "drawCode": "1",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Olympic Sports Center Gymnasium",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 1,
       "score": [],
       "matches": []
     },
@@ -5210,45 +5714,83 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "CAN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "94151",
+            "nameDisplay": "Victor LAI",
+            "nameType": 0,
+            "firstName": "Victor",
+            "lastName": "LAI",
+            "initials": "VL",
+            "nameShort": "V LAI",
+            "nameShort2": "LAI",
+            "slug": "victor-lai",
+            "countryCode": "CAN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
+            "avatar": {
+              "title": "Victor LAI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1773746408/assets/players/thumbnail/94151.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "INA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "73442",
+            "nameDisplay": "Jonatan CHRISTIE",
+            "nameType": 0,
+            "firstName": "Jonatan",
+            "lastName": "CHRISTIE",
+            "initials": "JC",
+            "nameShort": "J CHRISTIE",
+            "nameShort2": "CHRISTIE",
+            "slug": "jonatan-christie",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Jonatan CHRISTIE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697434451/assets/players/thumbnail/73442.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "team1seed": "8",
+      "team2seed": "4",
+      "matchTime": "2026-07-24 11:40:00",
+      "matchTimeUtc": "2026-07-24 03:40:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "3",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "MS",
       "roundName": "QF",
       "drawName": "MS",
       "drawCode": "1",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Olympic Sports Center Gymnasium",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 1,
       "score": [],
       "matches": []
     },
@@ -5262,45 +5804,83 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "IRL",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IRL.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "85095",
+            "nameDisplay": "Nhat NGUYEN",
+            "nameType": 0,
+            "firstName": "Nhat",
+            "lastName": "NGUYEN",
+            "initials": "NN",
+            "nameShort": "N NGUYEN",
+            "nameShort2": "NGUYEN",
+            "slug": "nhat-nguyen",
+            "countryCode": "IRL",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IRL.png",
+            "avatar": {
+              "title": "Nhat NGUYEN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1719990852/assets/players/thumbnail/85095.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "FRA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "61628",
+            "nameDisplay": "Toma Junior POPOV",
+            "nameType": 0,
+            "firstName": "Toma Junior",
+            "lastName": "POPOV",
+            "initials": "TP",
+            "nameShort": "T POPOV",
+            "nameShort2": "POPOV",
+            "slug": "toma-junior-popov",
+            "countryCode": "FRA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
+            "avatar": {
+              "title": "Toma Junior POPOV",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1719991294/assets/players/thumbnail/61628.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "matchTime": "2026-07-24 12:30:00",
+      "matchTimeUtc": "2026-07-24 04:30:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "4",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "MS",
       "roundName": "QF",
       "drawName": "MS",
       "drawCode": "1",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Olympic Sports Center Gymnasium",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 1,
       "score": [],
       "matches": []
     },
