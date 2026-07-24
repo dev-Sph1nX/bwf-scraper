@@ -3282,7 +3282,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "CHN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -3375,9 +3375,9 @@
         },
         "team1seed": "1",
         "team2seed": null,
-        "matchTime": "2026-07-24 13:20:00",
-        "matchTimeUtc": "2026-07-24 05:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-24 14:10:00",
+        "matchTimeUtc": "2026-07-24 06:10:00",
+        "matchStatus": "F",
         "oopRound": "5",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3388,7 +3388,7 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Olympic Sports Center Gymnasium",
-        "duration": null,
+        "duration": 32,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
@@ -3403,7 +3403,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -3498,7 +3498,7 @@
         "team2seed": "7",
         "matchTime": "2026-07-24 17:00:00",
         "matchTimeUtc": "2026-07-24 09:00:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Starting at 5:00 PM",
         "oopTypeId": 1,
@@ -3509,12 +3509,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Olympic Sports Center Gymnasium",
-        "duration": null,
+        "duration": 49,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 0,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 8,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 26,
+            "away": 24,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -3524,7 +3537,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "MAS",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -3617,9 +3630,9 @@
         },
         "team1seed": "5",
         "team2seed": "4",
-        "matchTime": "2026-07-24 18:40:00",
-        "matchTimeUtc": "2026-07-24 10:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-24 19:20:00",
+        "matchTimeUtc": "2026-07-24 11:20:00",
+        "matchStatus": "F",
         "oopRound": "7",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3630,12 +3643,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Olympic Sports Center Gymnasium",
-        "duration": null,
+        "duration": 46,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -3645,7 +3671,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "CHN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -3738,14 +3764,148 @@
         },
         "team1seed": "8",
         "team2seed": null,
-        "matchTime": "2026-07-24 19:30:00",
-        "matchTimeUtc": "2026-07-24 11:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-24 20:05:00",
+        "matchTimeUtc": "2026-07-24 12:05:00",
+        "matchStatus": "F",
         "oopRound": "9",
         "oopText": "Followed by",
         "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "QF",
+        "drawName": "WD",
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Olympic Sports Center Gymnasium",
+        "duration": 45,
+        "matchOrder": null,
+        "matchTypeId": 4,
+        "matchTypeValue": "Women's Doubles",
+        "reliability": 1,
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          }
+        ],
+        "matches": []
+      }
+    },
+    "3-0": {
+      "match": {
+        "code": "191",
+        "tournamentCode": 5622,
+        "scoreStatus": 0,
+        "scoreStatusValue": "Normal",
+        "winner": 0,
+        "team1": {
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+          "teamId": null,
+          "teamName": null,
+          "players": [
+            {
+              "id": "81599",
+              "nameDisplay": "LIU Sheng Shu",
+              "nameType": 1,
+              "firstName": "Sheng Shu",
+              "lastName": "LIU",
+              "initials": "LS",
+              "nameShort": "LIU S S ",
+              "nameShort2": "LIU",
+              "slug": "sheng-shu-liu",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Sheng Shu LIU",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1667177004/assets/players/thumbnail/81599.jpg"
+              }
+            },
+            {
+              "id": "59880",
+              "nameDisplay": "TAN Ning",
+              "nameType": 1,
+              "firstName": "Ning",
+              "lastName": "TAN",
+              "initials": "TN",
+              "nameShort": "TAN N",
+              "nameShort2": "TAN",
+              "slug": "ning-tan",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Ning TAN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690355943/assets/players/thumbnail/59880.jpg"
+              }
+            }
+          ],
+          "linkName": null
+        },
+        "team2": {
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+          "teamId": null,
+          "teamName": null,
+          "players": [
+            {
+              "id": "56706",
+              "nameDisplay": "BAEK Ha Na",
+              "nameType": 1,
+              "firstName": "Ha Na",
+              "lastName": "BAEK",
+              "initials": "BH",
+              "nameShort": "BAEK H N ",
+              "nameShort2": "BAEK",
+              "slug": "ha-na-baek",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Ha Na BAEK",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897799/assets/players/thumbnail/56706.jpg"
+              }
+            },
+            {
+              "id": "91292",
+              "nameDisplay": "LEE So Hee",
+              "nameType": 1,
+              "firstName": "So Hee",
+              "lastName": "LEE",
+              "initials": "LS",
+              "nameShort": "LEE S H ",
+              "nameShort2": "LEE",
+              "slug": "so-hee-lee",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "So Hee LEE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895692/assets/players/thumbnail/91292.jpg"
+              }
+            }
+          ],
+          "linkName": null
+        },
+        "team1seed": "1",
+        "team2seed": "3",
+        "matchTime": "2026-07-25 12:30:00",
+        "matchTimeUtc": "2026-07-25 04:30:00",
+        "matchStatus": "N",
+        "oopRound": "4",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
+        "eventName": "WD",
+        "roundName": "SF",
         "drawName": "WD",
         "courtName": "Court 1",
         "courtCode": "1",
@@ -3760,53 +3920,6 @@
         "matches": []
       }
     },
-    "3-0": {
-      "match": {
-        "code": "191",
-        "tournamentCode": 5622,
-        "scoreStatus": 0,
-        "scoreStatusValue": "Normal",
-        "winner": 0,
-        "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
-          "teamId": null,
-          "teamName": null,
-          "players": [],
-          "linkName": null
-        },
-        "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
-          "teamId": null,
-          "teamName": null,
-          "players": [],
-          "linkName": null
-        },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
-        "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
-        "eventName": "WD",
-        "roundName": "SF",
-        "drawName": "WD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
-        "duration": null,
-        "matchOrder": null,
-        "matchTypeId": 4,
-        "matchTypeValue": "Women's Doubles",
-        "reliability": null,
-        "score": [],
-        "matches": []
-      }
-    },
     "3-1": {
       "match": {
         "code": "192",
@@ -3815,41 +3928,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "71023",
+              "nameDisplay": "Yuki FUKUSHIMA",
+              "nameType": 0,
+              "firstName": "Yuki",
+              "lastName": "FUKUSHIMA",
+              "initials": "YF",
+              "nameShort": "Y FUKUSHIMA",
+              "nameShort2": "FUKUSHIMA",
+              "slug": "yuki-fukushima",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Yuki FUKUSHIMA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1657872319/assets/players/thumbnail/71023.jpg"
+              }
+            },
+            {
+              "id": "81609",
+              "nameDisplay": "Mayu MATSUMOTO",
+              "nameType": 0,
+              "firstName": "Mayu",
+              "lastName": "MATSUMOTO",
+              "initials": "MM",
+              "nameShort": "M MATSUMOTO",
+              "nameShort2": "MATSUMOTO",
+              "slug": "mayu-matsumoto",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Mayu MATSUMOTO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658132498/assets/players/thumbnail/81609.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "85540",
+              "nameDisplay": "LI Yi Jing",
+              "nameType": 1,
+              "firstName": "Yi Jing",
+              "lastName": "LI",
+              "initials": "LY",
+              "nameShort": "LI Y J ",
+              "nameShort2": "LI",
+              "slug": "yi-jing-li",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Yi Jing LI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897785/assets/players/thumbnail/85540.jpg"
+              }
+            },
+            {
+              "id": "65300",
+              "nameDisplay": "LUO Xu Min",
+              "nameType": 1,
+              "firstName": "Xu Min",
+              "lastName": "LUO",
+              "initials": "LX",
+              "nameShort": "LUO X M ",
+              "nameShort2": "LUO",
+              "slug": "xu-min-luo",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Xu Min LUO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897783/assets/players/thumbnail/65300.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team1seed": "4",
+        "team2seed": "8",
+        "matchTime": "2026-07-25 17:00:00",
+        "matchTimeUtc": "2026-07-25 09:00:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "6",
+        "oopText": "Starting at 5:00 PM",
+        "oopTypeId": 1,
         "eventName": "WD",
         "roundName": "SF",
         "drawName": "WD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Olympic Sports Center Gymnasium",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
-        "reliability": null,
+        "reliability": 0,
         "score": [],
         "matches": []
       }
@@ -7365,7 +7552,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "CHN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -7458,10 +7645,10 @@
       },
       "team1seed": "1",
       "team2seed": null,
-      "matchTime": "2026-07-24 13:20:00",
-      "matchTimeUtc": "2026-07-24 05:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-24 14:10:00",
+      "matchTimeUtc": "2026-07-24 06:10:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "5",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7473,14 +7660,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Olympic Sports Center Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 32,
+      "time": "00:32",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 9,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 8,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7491,7 +7693,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -7586,8 +7788,8 @@
       "team2seed": "7",
       "matchTime": "2026-07-24 17:00:00",
       "matchTimeUtc": "2026-07-24 09:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Starting at 5:00 PM",
       "oopTypeId": 1,
@@ -7599,14 +7801,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Olympic Sports Center Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 49,
+      "time": "00:49",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 0,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 8,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 26,
+          "away": 24,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7617,7 +7834,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "MAS",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -7710,10 +7927,10 @@
       },
       "team1seed": "5",
       "team2seed": "4",
-      "matchTime": "2026-07-24 18:40:00",
-      "matchTimeUtc": "2026-07-24 10:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-24 19:20:00",
+      "matchTimeUtc": "2026-07-24 11:20:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "7",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7725,14 +7942,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Olympic Sports Center Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 46,
+      "time": "00:46",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7743,7 +7975,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "CHN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -7836,15 +8068,156 @@
       },
       "team1seed": "8",
       "team2seed": null,
-      "matchTime": "2026-07-24 19:30:00",
-      "matchTimeUtc": "2026-07-24 11:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-24 20:05:00",
+      "matchTimeUtc": "2026-07-24 12:05:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "9",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "WD",
       "roundName": "QF",
+      "drawName": "WD",
+      "drawCode": "4",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Olympic Sports Center Gymnasium",
+      "duration": 45,
+      "time": "00:45",
+      "matchOrder": null,
+      "matchTypeId": 4,
+      "matchTypeValue": "Women's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1530339,
+      "code": "191",
+      "tournamentCode": "718B4055-FCD5-4652-B599-D9E6DFD256AB",
+      "tournamentName": "VICTOR China Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "81599",
+            "nameDisplay": "LIU Sheng Shu",
+            "nameType": 1,
+            "firstName": "Sheng Shu",
+            "lastName": "LIU",
+            "initials": "LS",
+            "nameShort": "LIU S S ",
+            "nameShort2": "LIU",
+            "slug": "sheng-shu-liu",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Sheng Shu LIU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1667177004/assets/players/thumbnail/81599.jpg"
+            }
+          },
+          {
+            "id": "59880",
+            "nameDisplay": "TAN Ning",
+            "nameType": 1,
+            "firstName": "Ning",
+            "lastName": "TAN",
+            "initials": "TN",
+            "nameShort": "TAN N",
+            "nameShort2": "TAN",
+            "slug": "ning-tan",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Ning TAN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690355943/assets/players/thumbnail/59880.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "56706",
+            "nameDisplay": "BAEK Ha Na",
+            "nameType": 1,
+            "firstName": "Ha Na",
+            "lastName": "BAEK",
+            "initials": "BH",
+            "nameShort": "BAEK H N ",
+            "nameShort2": "BAEK",
+            "slug": "ha-na-baek",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Ha Na BAEK",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897799/assets/players/thumbnail/56706.jpg"
+            }
+          },
+          {
+            "id": "91292",
+            "nameDisplay": "LEE So Hee",
+            "nameType": 1,
+            "firstName": "So Hee",
+            "lastName": "LEE",
+            "initials": "LS",
+            "nameShort": "LEE S H ",
+            "nameShort2": "LEE",
+            "slug": "so-hee-lee",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "So Hee LEE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895692/assets/players/thumbnail/91292.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "1",
+      "team2seed": "3",
+      "matchTime": "2026-07-25 12:30:00",
+      "matchTimeUtc": "2026-07-25 04:30:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "4",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WD",
+      "roundName": "SF",
       "drawName": "WD",
       "drawCode": "4",
       "courtName": "Court 1",
@@ -7862,58 +8235,6 @@
       "matches": []
     },
     {
-      "id": 1530339,
-      "code": "191",
-      "tournamentCode": "718B4055-FCD5-4652-B599-D9E6DFD256AB",
-      "tournamentName": "VICTOR China Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WD",
-      "roundName": "SF",
-      "drawName": "WD",
-      "drawCode": "4",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 4,
-      "matchTypeValue": "Women's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
       "id": 1530287,
       "code": "192",
       "tournamentCode": "718B4055-FCD5-4652-B599-D9E6DFD256AB",
@@ -7923,45 +8244,119 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "71023",
+            "nameDisplay": "Yuki FUKUSHIMA",
+            "nameType": 0,
+            "firstName": "Yuki",
+            "lastName": "FUKUSHIMA",
+            "initials": "YF",
+            "nameShort": "Y FUKUSHIMA",
+            "nameShort2": "FUKUSHIMA",
+            "slug": "yuki-fukushima",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Yuki FUKUSHIMA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1657872319/assets/players/thumbnail/71023.jpg"
+            }
+          },
+          {
+            "id": "81609",
+            "nameDisplay": "Mayu MATSUMOTO",
+            "nameType": 0,
+            "firstName": "Mayu",
+            "lastName": "MATSUMOTO",
+            "initials": "MM",
+            "nameShort": "M MATSUMOTO",
+            "nameShort2": "MATSUMOTO",
+            "slug": "mayu-matsumoto",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Mayu MATSUMOTO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658132498/assets/players/thumbnail/81609.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "85540",
+            "nameDisplay": "LI Yi Jing",
+            "nameType": 1,
+            "firstName": "Yi Jing",
+            "lastName": "LI",
+            "initials": "LY",
+            "nameShort": "LI Y J ",
+            "nameShort2": "LI",
+            "slug": "yi-jing-li",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Yi Jing LI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897785/assets/players/thumbnail/85540.jpg"
+            }
+          },
+          {
+            "id": "65300",
+            "nameDisplay": "LUO Xu Min",
+            "nameType": 1,
+            "firstName": "Xu Min",
+            "lastName": "LUO",
+            "initials": "LX",
+            "nameShort": "LUO X M ",
+            "nameShort2": "LUO",
+            "slug": "xu-min-luo",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Xu Min LUO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897783/assets/players/thumbnail/65300.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "team1seed": "4",
+      "team2seed": "8",
+      "matchTime": "2026-07-25 17:00:00",
+      "matchTimeUtc": "2026-07-25 09:00:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "6",
+      "oopText": "Starting at 5:00 PM",
+      "oopTypeId": 1,
       "eventName": "WD",
       "roundName": "SF",
       "drawName": "WD",
       "drawCode": "4",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Olympic Sports Center Gymnasium",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 0,
       "score": [],
       "matches": []
     },
