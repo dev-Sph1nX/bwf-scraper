@@ -3824,7 +3824,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "CHN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -3917,9 +3917,9 @@
         },
         "team1seed": "1",
         "team2seed": "6",
-        "matchTime": "2026-07-25 11:40:00",
-        "matchTimeUtc": "2026-07-25 03:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-25 12:05:00",
+        "matchTimeUtc": "2026-07-25 04:05:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3930,12 +3930,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Olympic Sports Center Gymnasium",
-        "duration": null,
+        "duration": 45,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 19,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -3945,7 +3958,7 @@
         "tournamentCode": 5622,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "THA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -4040,7 +4053,7 @@
         "team2seed": "5",
         "matchTime": "2026-07-25 10:00:00",
         "matchTimeUtc": "2026-07-25 02:00:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "1",
         "oopText": "Starting at 10:00 AM",
         "oopTypeId": 1,
@@ -4051,12 +4064,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Olympic Sports Center Gymnasium",
-        "duration": null,
+        "duration": 47,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 0,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 23,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -4068,41 +4094,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "65267",
+              "nameDisplay": "FENG Yan Zhe",
+              "nameType": 1,
+              "firstName": "Yan Zhe",
+              "lastName": "FENG",
+              "initials": "FY",
+              "nameShort": "FENG Y Z ",
+              "nameShort2": "FENG",
+              "slug": "yan-zhe-feng",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Yan Zhe FENG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697420441/assets/players/thumbnail/65267.jpg"
+              }
+            },
+            {
+              "id": "89426",
+              "nameDisplay": "HUANG Dong Ping",
+              "nameType": 1,
+              "firstName": "Dong Ping",
+              "lastName": "HUANG",
+              "initials": "HD",
+              "nameShort": "HUANG D P ",
+              "nameShort2": "HUANG",
+              "slug": "dong-ping-huang",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Dong Ping HUANG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697424201/assets/players/thumbnail/89426.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "81844",
+              "nameDisplay": "GUO Xin Wa",
+              "nameType": 1,
+              "firstName": "Xin Wa",
+              "lastName": "GUO",
+              "initials": "GX",
+              "nameShort": "GUO X W ",
+              "nameShort2": "GUO",
+              "slug": "xin-wa-guo",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Xin Wa GUO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896470/assets/players/thumbnail/81844.jpg"
+              }
+            },
+            {
+              "id": "50469",
+              "nameDisplay": "CHEN Fang Hui",
+              "nameType": 1,
+              "firstName": "Fang Hui",
+              "lastName": "CHEN",
+              "initials": "CF",
+              "nameShort": "CHEN F H ",
+              "nameShort2": "CHEN",
+              "slug": "fang-hui-chen",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Fang Hui CHEN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690357071/assets/players/thumbnail/50469.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team1seed": "1",
+        "team2seed": "5",
+        "matchTime": "2026-07-26 13:00:00",
+        "matchTimeUtc": "2026-07-26 05:00:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "1",
+        "oopText": "Starting at 1:00 PM",
+        "oopTypeId": 1,
         "eventName": "XD",
         "roundName": "Final",
         "drawName": "XD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Olympic Sports Center Gymnasium",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
-        "reliability": null,
+        "reliability": 0,
         "score": [],
         "matches": []
       }
@@ -8142,7 +8242,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "CHN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -8235,10 +8335,10 @@
       },
       "team1seed": "1",
       "team2seed": "6",
-      "matchTime": "2026-07-25 11:40:00",
-      "matchTimeUtc": "2026-07-25 03:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-25 12:05:00",
+      "matchTimeUtc": "2026-07-25 04:05:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -8250,14 +8350,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Olympic Sports Center Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 45,
+      "time": "00:45",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 19,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -8268,7 +8383,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "THA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -8363,13 +8478,154 @@
       "team2seed": "5",
       "matchTime": "2026-07-25 10:00:00",
       "matchTimeUtc": "2026-07-25 02:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "1",
       "oopText": "Starting at 10:00 AM",
       "oopTypeId": 1,
       "eventName": "XD",
       "roundName": "SF",
+      "drawName": "XD",
+      "drawCode": "5",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Olympic Sports Center Gymnasium",
+      "duration": 47,
+      "time": "00:47",
+      "matchOrder": null,
+      "matchTypeId": 5,
+      "matchTypeValue": "Mixed Doubles",
+      "matchTypeNo": null,
+      "reliability": 0,
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 23,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 19,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1530235,
+      "code": "253",
+      "tournamentCode": "718B4055-FCD5-4652-B599-D9E6DFD256AB",
+      "tournamentName": "VICTOR China Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "65267",
+            "nameDisplay": "FENG Yan Zhe",
+            "nameType": 1,
+            "firstName": "Yan Zhe",
+            "lastName": "FENG",
+            "initials": "FY",
+            "nameShort": "FENG Y Z ",
+            "nameShort2": "FENG",
+            "slug": "yan-zhe-feng",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Yan Zhe FENG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697420441/assets/players/thumbnail/65267.jpg"
+            }
+          },
+          {
+            "id": "89426",
+            "nameDisplay": "HUANG Dong Ping",
+            "nameType": 1,
+            "firstName": "Dong Ping",
+            "lastName": "HUANG",
+            "initials": "HD",
+            "nameShort": "HUANG D P ",
+            "nameShort2": "HUANG",
+            "slug": "dong-ping-huang",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Dong Ping HUANG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697424201/assets/players/thumbnail/89426.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "81844",
+            "nameDisplay": "GUO Xin Wa",
+            "nameType": 1,
+            "firstName": "Xin Wa",
+            "lastName": "GUO",
+            "initials": "GX",
+            "nameShort": "GUO X W ",
+            "nameShort2": "GUO",
+            "slug": "xin-wa-guo",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Xin Wa GUO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896470/assets/players/thumbnail/81844.jpg"
+            }
+          },
+          {
+            "id": "50469",
+            "nameDisplay": "CHEN Fang Hui",
+            "nameType": 1,
+            "firstName": "Fang Hui",
+            "lastName": "CHEN",
+            "initials": "CF",
+            "nameShort": "CHEN F H ",
+            "nameShort2": "CHEN",
+            "slug": "fang-hui-chen",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Fang Hui CHEN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690357071/assets/players/thumbnail/50469.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "1",
+      "team2seed": "5",
+      "matchTime": "2026-07-26 13:00:00",
+      "matchTimeUtc": "2026-07-26 05:00:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "1",
+      "oopText": "Starting at 1:00 PM",
+      "oopTypeId": 1,
+      "eventName": "XD",
+      "roundName": "Final",
       "drawName": "XD",
       "drawCode": "5",
       "courtName": "Court 1",
@@ -8383,58 +8639,6 @@
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 0,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1530235,
-      "code": "253",
-      "tournamentCode": "718B4055-FCD5-4652-B599-D9E6DFD256AB",
-      "tournamentName": "VICTOR China Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "XD",
-      "roundName": "Final",
-      "drawName": "XD",
-      "drawCode": "5",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 5,
-      "matchTypeValue": "Mixed Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
       "score": [],
       "matches": []
     }
