@@ -6,7 +6,7 @@
         "tournamentCode": 5514,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -99,12 +99,12 @@
         },
         "team1seed": "1",
         "team2seed": null,
-        "matchTime": "2026-07-28 21:10:00",
-        "matchTimeUtc": "2026-07-28 13:10:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-28 22:15:00",
+        "matchTimeUtc": "2026-07-28 14:15:00",
+        "matchStatus": "F",
         "oopRound": "18",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "XD",
         "roundName": "R32",
         "drawName": "XD",
@@ -112,12 +112,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Taipei Arena",
-        "duration": null,
+        "duration": 30,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 15,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 16,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -174,33 +187,70 @@
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
-          "teamName": "Qualification - Q4",
-          "players": [],
-          "linkName": "Qualification - Q4"
+          "teamName": null,
+          "players": [
+            {
+              "id": "84196",
+              "nameDisplay": "LAI Po Yu",
+              "nameType": 1,
+              "firstName": "Po Yu",
+              "lastName": "LAI",
+              "initials": "LP",
+              "nameShort": "LAI P Y ",
+              "nameShort2": "LAI",
+              "slug": "po-yu-lai",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Po Yu LAI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696905440/assets/players/thumbnail/84196.jpg"
+              }
+            },
+            {
+              "id": "82732",
+              "nameDisplay": "JHENG Yu Chieh",
+              "nameType": 1,
+              "firstName": "Yu Chieh",
+              "lastName": "JHENG",
+              "initials": "JY",
+              "nameShort": "JHENG Y C ",
+              "nameShort2": "JHENG",
+              "slug": "jheng-yu-chieh",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Yu Chieh JHENG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784085811/assets/players/thumbnail/82732.jpg"
+              }
+            }
+          ],
+          "linkName": null
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-07-29 10:40:00",
+        "matchTimeUtc": "2026-07-29 02:40:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "3",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "XD",
         "roundName": "R32",
         "drawName": "XD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 4",
+        "courtCode": "4",
+        "courtIndex": 3,
+        "locationName": "Taipei Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -211,7 +261,7 @@
         "tournamentCode": 5514,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -306,7 +356,7 @@
         "team2seed": null,
         "matchTime": "2026-07-28 19:30:00",
         "matchTimeUtc": "2026-07-28 11:30:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "16",
         "oopText": "Not before 7:30 PM",
         "oopTypeId": 2,
@@ -317,12 +367,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Taipei Arena",
-        "duration": null,
+        "duration": 29,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 5,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 17,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -332,7 +395,7 @@
         "tournamentCode": 5514,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -427,7 +490,7 @@
         "team2seed": null,
         "matchTime": "2026-07-28 19:30:00",
         "matchTimeUtc": "2026-07-28 11:30:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "15",
         "oopText": "Not before 7:30 PM",
         "oopTypeId": 2,
@@ -438,12 +501,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Taipei Arena",
-        "duration": null,
+        "duration": 23,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 10,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -453,7 +529,7 @@
         "tournamentCode": 5514,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "USA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
@@ -548,8 +624,8 @@
         "team2seed": null,
         "matchTime": "2026-07-28 19:30:00",
         "matchTimeUtc": "2026-07-28 11:30:00",
-        "matchStatus": "N",
-        "oopRound": "16",
+        "matchStatus": "F",
+        "oopRound": "15",
         "oopText": "Not before 7:30 PM",
         "oopTypeId": 2,
         "eventName": "XD",
@@ -559,12 +635,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Taipei Arena",
-        "duration": null,
+        "duration": 32,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 15,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -574,7 +663,7 @@
         "tournamentCode": 5514,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "IND",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -667,9 +756,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-07-28 20:20:00",
-        "matchTimeUtc": "2026-07-28 12:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-28 21:15:00",
+        "matchTimeUtc": "2026-07-28 13:15:00",
+        "matchStatus": "F",
         "oopRound": "16",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -680,12 +769,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Taipei Arena",
-        "duration": null,
+        "duration": 27,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 13,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 17,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -695,7 +797,7 @@
         "tournamentCode": 5514,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -788,9 +890,9 @@
         },
         "team1seed": "6",
         "team2seed": null,
-        "matchTime": "2026-07-28 21:10:00",
-        "matchTimeUtc": "2026-07-28 13:10:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-28 21:55:00",
+        "matchTimeUtc": "2026-07-28 13:55:00",
+        "matchStatus": "F",
         "oopRound": "17",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -801,12 +903,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Taipei Arena",
-        "duration": null,
+        "duration": 32,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 15,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 16,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -863,33 +978,70 @@
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
-          "teamName": "Qualification - Q2",
-          "players": [],
-          "linkName": "Qualification - Q2"
+          "teamName": null,
+          "players": [
+            {
+              "id": "95797",
+              "nameDisplay": "Sheng-Ming LIN",
+              "nameType": 0,
+              "firstName": "Sheng-Ming",
+              "lastName": "LIN",
+              "initials": "SL",
+              "nameShort": "S LIN",
+              "nameShort2": "LIN",
+              "slug": "sheng-ming-lin",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Sheng-Ming LIN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+              }
+            },
+            {
+              "id": "80667",
+              "nameDisplay": "SUNG Yi-Hsuan",
+              "nameType": 1,
+              "firstName": "Yi-Hsuan",
+              "lastName": "SUNG",
+              "initials": "SY",
+              "nameShort": "SUNG Y H ",
+              "nameShort2": "SUNG",
+              "slug": "yi-hsuan-sung",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Yi-Hsuan SUNG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+              }
+            }
+          ],
+          "linkName": null
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-07-29 10:40:00",
+        "matchTimeUtc": "2026-07-29 02:40:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "3",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "XD",
         "roundName": "R32",
         "drawName": "XD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 3",
+        "courtCode": "3",
+        "courtIndex": 2,
+        "locationName": "Taipei Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -902,12 +1054,49 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "MAS",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
           "teamId": null,
-          "teamName": "Qualification - Q1",
-          "players": [],
-          "linkName": "Qualification - Q1"
+          "teamName": null,
+          "players": [
+            {
+              "id": "73460",
+              "nameDisplay": "LEE Yi Bo",
+              "nameType": 1,
+              "firstName": "Yi Bo",
+              "lastName": "LEE",
+              "initials": "LY",
+              "nameShort": "LEE Y B ",
+              "nameShort2": "LEE",
+              "slug": "yi-bo-lee",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Yi Bo LEE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+              }
+            },
+            {
+              "id": "70093",
+              "nameDisplay": "LIM Chiew Sien",
+              "nameType": 1,
+              "firstName": "Chiew Sien",
+              "lastName": "LIM",
+              "initials": "LC",
+              "nameShort": "LIM C S ",
+              "nameShort2": "LIM",
+              "slug": "chiew-sien-lim",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Chiew Sien LIM",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897563/assets/players/thumbnail/70093.jpg"
+              }
+            }
+          ],
+          "linkName": null
         },
         "team2": {
           "countryCode": "TPE",
@@ -956,24 +1145,24 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-07-29 10:40:00",
+        "matchTimeUtc": "2026-07-29 02:40:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "3",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "XD",
         "roundName": "R32",
         "drawName": "XD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Taipei Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -986,12 +1175,49 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "MAS",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
           "teamId": null,
-          "teamName": "Qualification - Q3",
-          "players": [],
-          "linkName": "Qualification - Q3"
+          "teamName": null,
+          "players": [
+            {
+              "id": "96553",
+              "nameDisplay": "LOW Han Chen",
+              "nameType": 1,
+              "firstName": "Han Chen",
+              "lastName": "LOW",
+              "initials": "LH",
+              "nameShort": "LOW H C ",
+              "nameShort2": "LOW",
+              "slug": "han-chen-low",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Han Chen LOW",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696907725/assets/players/thumbnail/96553.jpg"
+              }
+            },
+            {
+              "id": "79015",
+              "nameDisplay": "CHAN Wen Tse",
+              "nameType": 1,
+              "firstName": "Wen Tse",
+              "lastName": "CHAN",
+              "initials": "CW",
+              "nameShort": "CHAN W T ",
+              "nameShort2": "CHAN",
+              "slug": "chan-wen-tse",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Wen Tse CHAN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784089193/assets/players/thumbnail/79015.jpg"
+              }
+            }
+          ],
+          "linkName": null
         },
         "team2": {
           "countryCode": "TPE",
@@ -1040,24 +1266,24 @@
         },
         "team1seed": null,
         "team2seed": "5",
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-07-29 10:40:00",
+        "matchTimeUtc": "2026-07-29 02:40:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "3",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "XD",
         "roundName": "R32",
         "drawName": "XD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Taipei Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -1068,7 +1294,7 @@
         "tournamentCode": 5514,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "MAS",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -1163,8 +1389,8 @@
         "team2seed": null,
         "matchTime": "2026-07-28 19:30:00",
         "matchTimeUtc": "2026-07-28 11:30:00",
-        "matchStatus": "N",
-        "oopRound": "17",
+        "matchStatus": "F",
+        "oopRound": "18",
         "oopText": "Not before 7:30 PM",
         "oopTypeId": 2,
         "eventName": "XD",
@@ -1174,12 +1400,31 @@
         "courtCode": "4",
         "courtIndex": 3,
         "locationName": "Taipei Arena",
-        "duration": null,
+        "duration": 63,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 19,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 18,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 22,
+            "away": 20,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -1189,7 +1434,7 @@
         "tournamentCode": 5514,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "USA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
@@ -1282,10 +1527,10 @@
         },
         "team1seed": null,
         "team2seed": "4",
-        "matchTime": "2026-07-28 20:20:00",
-        "matchTimeUtc": "2026-07-28 12:20:00",
-        "matchStatus": "N",
-        "oopRound": "17",
+        "matchTime": "2026-07-28 21:10:00",
+        "matchTimeUtc": "2026-07-28 13:10:00",
+        "matchStatus": "F",
+        "oopRound": "16",
         "oopText": "Followed by",
         "oopTypeId": 0,
         "eventName": "XD",
@@ -1295,12 +1540,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Taipei Arena",
-        "duration": null,
+        "duration": 28,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 18,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 10,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -1310,7 +1568,7 @@
         "tournamentCode": 5514,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "INA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
@@ -1403,25 +1661,38 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-07-28 22:00:00",
-        "matchTimeUtc": "2026-07-28 14:00:00",
-        "matchStatus": "N",
-        "oopRound": "18",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "matchTime": "2026-07-28 22:25:00",
+        "matchTimeUtc": "2026-07-28 14:25:00",
+        "matchStatus": "F",
+        "oopRound": "20",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "XD",
         "roundName": "R32",
         "drawName": "XD",
-        "courtName": "Court 3",
-        "courtCode": "3",
-        "courtIndex": 2,
+        "courtName": "Court 4",
+        "courtCode": "4",
+        "courtIndex": 3,
         "locationName": "Taipei Arena",
-        "duration": null,
+        "duration": 36,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -1431,7 +1702,7 @@
         "tournamentCode": 5514,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "INA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
@@ -1524,9 +1795,9 @@
         },
         "team1seed": null,
         "team2seed": "7",
-        "matchTime": "2026-07-28 20:20:00",
-        "matchTimeUtc": "2026-07-28 12:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-07-28 21:30:00",
+        "matchTimeUtc": "2026-07-28 13:30:00",
+        "matchStatus": "F",
         "oopRound": "17",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1537,12 +1808,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Taipei Arena",
-        "duration": null,
+        "duration": 33,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 19,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -1552,7 +1836,7 @@
         "tournamentCode": 5514,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "ENG",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
@@ -1645,12 +1929,12 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-07-28 20:20:00",
-        "matchTimeUtc": "2026-07-28 12:20:00",
-        "matchStatus": "N",
-        "oopRound": "18",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "matchTime": "2026-07-28 21:30:00",
+        "matchTimeUtc": "2026-07-28 13:30:00",
+        "matchStatus": "F",
+        "oopRound": "19",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "XD",
         "roundName": "R32",
         "drawName": "XD",
@@ -1658,12 +1942,31 @@
         "courtCode": "4",
         "courtIndex": 3,
         "locationName": "Taipei Arena",
-        "duration": null,
+        "duration": 48,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 17,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 12,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 23,
+            "away": 21,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -1673,7 +1976,7 @@
         "tournamentCode": 5514,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "ENG",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
@@ -1766,12 +2069,12 @@
         },
         "team1seed": null,
         "team2seed": "2",
-        "matchTime": "2026-07-28 21:10:00",
-        "matchTimeUtc": "2026-07-28 13:10:00",
-        "matchStatus": "N",
-        "oopRound": "18",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "matchTime": "2026-07-28 21:45:00",
+        "matchTimeUtc": "2026-07-28 13:45:00",
+        "matchStatus": "F",
+        "oopRound": "17",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "XD",
         "roundName": "R32",
         "drawName": "XD",
@@ -1779,12 +2082,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Taipei Arena",
-        "duration": null,
+        "duration": 33,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -1796,11 +2112,48 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "81108",
+              "nameDisplay": "YE Hong Wei",
+              "nameType": 1,
+              "firstName": "Hong Wei",
+              "lastName": "YE",
+              "initials": "YH",
+              "nameShort": "YE H W ",
+              "nameShort2": "YE",
+              "slug": "hong-wei-ye",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Hong Wei YE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1670203491/assets/players/thumbnail/81108.jpg"
+              }
+            },
+            {
+              "id": "62713",
+              "nameDisplay": "Nicole Gonzales CHAN",
+              "nameType": 0,
+              "firstName": "Nicole Gonzales",
+              "lastName": "CHAN",
+              "initials": "NC",
+              "nameShort": "N CHAN",
+              "nameShort2": "CHAN",
+              "slug": "nicole-gonzales-chan",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Nicole Gonzales CHAN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784100449/assets/players/thumbnail/62713.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
@@ -1811,7 +2164,7 @@
           "players": [],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "1",
         "team2seed": null,
         "matchTime": null,
         "matchTimeUtc": null,
@@ -1843,22 +2196,96 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "58240",
+              "nameDisplay": "Yuta WATANABE",
+              "nameType": 0,
+              "firstName": "Yuta",
+              "lastName": "WATANABE",
+              "initials": "YW",
+              "nameShort": "Y WATANABE",
+              "nameShort2": "WATANABE",
+              "slug": "yuta-watanabe",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Yuta WATANABE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627952995/assets/players/thumbnail/58240.jpg"
+              }
+            },
+            {
+              "id": "60335",
+              "nameDisplay": "Maya TAGUCHI",
+              "nameType": 0,
+              "firstName": "Maya",
+              "lastName": "TAGUCHI",
+              "initials": "MT",
+              "nameShort": "M TAGUCHI",
+              "nameShort2": "TAGUCHI",
+              "slug": "maya-taguchi",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Maya TAGUCHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696906156/assets/players/thumbnail/60335.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "93572",
+              "nameDisplay": "TSAI Fu Cheng",
+              "nameType": 1,
+              "firstName": "Fu Cheng",
+              "lastName": "TSAI",
+              "initials": "TF",
+              "nameShort": "TSAI F C ",
+              "nameShort2": "TSAI",
+              "slug": "fu-cheng-tsai",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Fu Cheng TSAI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696905545/assets/players/thumbnail/93572.jpg"
+              }
+            },
+            {
+              "id": "65349",
+              "nameDisplay": "SUNG Yu-Hsuan",
+              "nameType": 1,
+              "firstName": "Yu-Hsuan",
+              "lastName": "SUNG",
+              "initials": "SY",
+              "nameShort": "SUNG Y H ",
+              "nameShort2": "SUNG",
+              "slug": "sung-yu-hsuan",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Yu-Hsuan SUNG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784087635/assets/players/thumbnail/65349.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "8",
         "team2seed": null,
         "matchTime": null,
         "matchTimeUtc": null,
@@ -1890,22 +2317,96 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "USA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "63739",
+              "nameDisplay": "Presley SMITH",
+              "nameType": 0,
+              "firstName": "Presley",
+              "lastName": "SMITH",
+              "initials": "PS",
+              "nameShort": "P SMITH",
+              "nameShort2": "SMITH",
+              "slug": "presley-smith",
+              "countryCode": "USA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+              "avatar": {
+                "title": "Presley SMITH",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696986069/assets/players/thumbnail/63739.jpg"
+              }
+            },
+            {
+              "id": "83074",
+              "nameDisplay": "Jennie GAI",
+              "nameType": 0,
+              "firstName": "Jennie",
+              "lastName": "GAI",
+              "initials": "JG",
+              "nameShort": "J GAI",
+              "nameShort2": "GAI",
+              "slug": "jennie-gai",
+              "countryCode": "USA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+              "avatar": {
+                "title": "Jennie GAI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1719991965/assets/players/thumbnail/83074.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "THA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "73936",
+              "nameDisplay": "Supak JOMKOH",
+              "nameType": 0,
+              "firstName": "Supak",
+              "lastName": "JOMKOH",
+              "initials": "SJ",
+              "nameShort": "S JOMKOH",
+              "nameShort2": "JOMKOH",
+              "slug": "supak-jomkoh",
+              "countryCode": "THA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+              "avatar": {
+                "title": "Supak JOMKOH",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1721631017/assets/players/thumbnail/73936.jpg"
+              }
+            },
+            {
+              "id": "99988",
+              "nameDisplay": "Ornnicha JONGSATHAPORNPARN",
+              "nameType": 0,
+              "firstName": "Ornnicha",
+              "lastName": "JONGSATHAPORNPARN",
+              "initials": "OJ",
+              "nameShort": "O JONGSATHAPORNPARN",
+              "nameShort2": "JONGSATHAPORNPARN",
+              "slug": "ornnicha-jongsathapornparn",
+              "countryCode": "THA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+              "avatar": {
+                "title": "Ornnicha JONGSATHAPORNPARN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784080916/assets/players/thumbnail/99988.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "3",
         "team2seed": null,
         "matchTime": null,
         "matchTimeUtc": null,
@@ -1937,11 +2438,48 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "88405",
+              "nameDisplay": "Akira KOGA",
+              "nameType": 0,
+              "firstName": "Akira",
+              "lastName": "KOGA",
+              "initials": "AK",
+              "nameShort": "A KOGA",
+              "nameShort2": "KOGA",
+              "slug": "akira-koga",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Akira KOGA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784099807/assets/players/thumbnail/88405.jpg"
+              }
+            },
+            {
+              "id": "55417",
+              "nameDisplay": "Natsu SAITO",
+              "nameType": 0,
+              "firstName": "Natsu",
+              "lastName": "SAITO",
+              "initials": "NS",
+              "nameShort": "N SAITO",
+              "nameShort2": "SAITO",
+              "slug": "natsu-saito",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Natsu SAITO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896443/assets/players/thumbnail/55417.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
@@ -1952,7 +2490,7 @@
           "players": [],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "6",
         "team2seed": null,
         "matchTime": null,
         "matchTimeUtc": null,
@@ -2031,23 +2569,97 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "MAS",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "91090",
+              "nameDisplay": "CHEN Tang Jie",
+              "nameType": 1,
+              "firstName": "Tang Jie",
+              "lastName": "CHEN",
+              "initials": "CT",
+              "nameShort": "CHEN T J ",
+              "nameShort2": "CHEN",
+              "slug": "tang-jie-chen",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Tang Jie CHEN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896192/assets/players/thumbnail/91090.jpg"
+              }
+            },
+            {
+              "id": "95214",
+              "nameDisplay": "Clarissa SAN",
+              "nameType": 0,
+              "firstName": "Clarissa",
+              "lastName": "SAN",
+              "initials": "CS",
+              "nameShort": "C SAN",
+              "nameShort2": "SAN",
+              "slug": "clarissa-san",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Clarissa SAN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "THA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "75904",
+              "nameDisplay": "Ruttanapak OUPTHONG",
+              "nameType": 0,
+              "firstName": "Ruttanapak",
+              "lastName": "OUPTHONG",
+              "initials": "RO",
+              "nameShort": "R OUPTHONG",
+              "nameShort2": "OUPTHONG",
+              "slug": "ruttanapak-oupthong",
+              "countryCode": "THA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+              "avatar": {
+                "title": "Ruttanapak OUPTHONG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895803/assets/players/thumbnail/75904.jpg"
+              }
+            },
+            {
+              "id": "72504",
+              "nameDisplay": "Jhenicha SUDJAIPRAPARAT",
+              "nameType": 0,
+              "firstName": "Jhenicha",
+              "lastName": "SUDJAIPRAPARAT",
+              "initials": "JS",
+              "nameShort": "J SUDJAIPRAPARAT",
+              "nameShort2": "SUDJAIPRAPARAT",
+              "slug": "jhenicha-sudjaipraparat",
+              "countryCode": "THA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+              "avatar": {
+                "title": "Jhenicha SUDJAIPRAPARAT",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1620708539/assets/players/thumbnail/72504.tif"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
+        "team2seed": "4",
         "matchTime": null,
         "matchTimeUtc": null,
         "matchStatus": "N",
@@ -2078,19 +2690,93 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "76165",
+              "nameDisplay": "Haruki KAWABE",
+              "nameType": 0,
+              "firstName": "Haruki",
+              "lastName": "KAWABE",
+              "initials": "HK",
+              "nameShort": "H KAWABE",
+              "nameShort2": "KAWABE",
+              "slug": "haruki-kawabe",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Haruki KAWABE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784008825/assets/players/thumbnail/76165.jpg"
+              }
+            },
+            {
+              "id": "85452",
+              "nameDisplay": "Kokona ISHIKAWA",
+              "nameType": 0,
+              "firstName": "Kokona",
+              "lastName": "ISHIKAWA",
+              "initials": "KI",
+              "nameShort": "K ISHIKAWA",
+              "nameShort2": "ISHIKAWA",
+              "slug": "kokona-ishikawa",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Kokona ISHIKAWA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1667177635/assets/players/thumbnail/85452.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "INA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "84631",
+              "nameDisplay": "Verrell Yustin MULIA",
+              "nameType": 0,
+              "firstName": "Verrell Yustin",
+              "lastName": "MULIA",
+              "initials": "VM",
+              "nameShort": "V MULIA",
+              "nameShort2": "MULIA",
+              "slug": "verrell-yustin-mulia",
+              "countryCode": "INA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+              "avatar": {
+                "title": "Verrell Yustin MULIA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+              }
+            },
+            {
+              "id": "72213",
+              "nameDisplay": "Bernadine Anindya WARDANA",
+              "nameType": 0,
+              "firstName": "Bernadine Anindya",
+              "lastName": "WARDANA",
+              "initials": "BW",
+              "nameShort": "B WARDANA",
+              "nameShort2": "WARDANA",
+              "slug": "bernadine-anindya-wardana",
+              "countryCode": "INA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+              "avatar": {
+                "title": "Bernadine Anindya WARDANA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1728626445/assets/players/thumbnail/72213.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
@@ -2125,23 +2811,97 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "ENG",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "63421",
+              "nameDisplay": "Samuel JONES",
+              "nameType": 0,
+              "firstName": "Samuel",
+              "lastName": "JONES",
+              "initials": "SJ",
+              "nameShort": "S JONES",
+              "nameShort2": "JONES",
+              "slug": "samuel-jones",
+              "countryCode": "ENG",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
+              "avatar": {
+                "title": "Samuel JONES",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784010035/assets/players/thumbnail/63421.jpg"
+              }
+            },
+            {
+              "id": "68221",
+              "nameDisplay": "Lizzie TOLMAN",
+              "nameType": 0,
+              "firstName": "Lizzie",
+              "lastName": "TOLMAN",
+              "initials": "LT",
+              "nameShort": "L TOLMAN",
+              "nameShort2": "TOLMAN",
+              "slug": "lizzie-tolman",
+              "countryCode": "ENG",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
+              "avatar": {
+                "title": "Lizzie TOLMAN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784082126/assets/players/thumbnail/68221.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "76275",
+              "nameDisplay": "YANG Po-Hsuan",
+              "nameType": 1,
+              "firstName": "Po-Hsuan",
+              "lastName": "YANG",
+              "initials": "YP",
+              "nameShort": "YANG P H ",
+              "nameShort2": "YANG",
+              "slug": "po-hsuan-yang",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Po-Hsuan YANG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1657773412/assets/players/thumbnail/76275.jpg"
+              }
+            },
+            {
+              "id": "87176",
+              "nameDisplay": "HU Ling Fang",
+              "nameType": 1,
+              "firstName": "Ling Fang",
+              "lastName": "HU",
+              "initials": "HL",
+              "nameShort": "HU L F ",
+              "nameShort2": "HU",
+              "slug": "ling-fang-hu",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Ling Fang HU",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1657773544/assets/players/thumbnail/87176.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
+        "team2seed": "2",
         "matchTime": null,
         "matchTimeUtc": null,
         "matchStatus": "N",
@@ -2503,7 +3263,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -2596,13 +3356,13 @@
       },
       "team1seed": "1",
       "team2seed": null,
-      "matchTime": "2026-07-28 21:10:00",
-      "matchTimeUtc": "2026-07-28 13:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-28 22:15:00",
+      "matchTimeUtc": "2026-07-28 14:15:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "18",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "XD",
       "roundName": "R32",
       "drawName": "XD",
@@ -2611,14 +3371,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Taipei Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 30,
+      "time": "00:30",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -2629,7 +3404,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "MAS",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -2724,9 +3499,9 @@
       "team2seed": null,
       "matchTime": "2026-07-28 19:30:00",
       "matchTimeUtc": "2026-07-28 11:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": "17",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "18",
       "oopText": "Not before 7:30 PM",
       "oopTypeId": 2,
       "eventName": "XD",
@@ -2737,14 +3512,36 @@
       "courtCode": "4",
       "courtIndex": 3,
       "locationName": "Taipei Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 63,
+      "time": "01:03",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 19,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 22,
+          "away": 20,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -2755,7 +3552,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "ENG",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
@@ -2848,13 +3645,13 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-07-28 20:20:00",
-      "matchTimeUtc": "2026-07-28 12:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": "18",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "matchTime": "2026-07-28 21:30:00",
+      "matchTimeUtc": "2026-07-28 13:30:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "19",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "XD",
       "roundName": "R32",
       "drawName": "XD",
@@ -2863,14 +3660,36 @@
       "courtCode": "4",
       "courtIndex": 3,
       "locationName": "Taipei Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 48,
+      "time": "00:48",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 17,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 12,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 23,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -2881,7 +3700,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "INA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
@@ -2974,10 +3793,10 @@
       },
       "team1seed": null,
       "team2seed": "7",
-      "matchTime": "2026-07-28 20:20:00",
-      "matchTimeUtc": "2026-07-28 12:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-28 21:30:00",
+      "matchTimeUtc": "2026-07-28 13:30:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "17",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -2989,14 +3808,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Taipei Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 33,
+      "time": "00:33",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 19,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3007,7 +3841,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "INA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
@@ -3100,29 +3934,44 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-07-28 22:00:00",
-      "matchTimeUtc": "2026-07-28 14:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": "18",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "matchTime": "2026-07-28 22:25:00",
+      "matchTimeUtc": "2026-07-28 14:25:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "20",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "XD",
       "roundName": "R32",
       "drawName": "XD",
       "drawCode": "10",
-      "courtName": "Court 3",
-      "courtCode": "3",
-      "courtIndex": 2,
+      "courtName": "Court 4",
+      "courtCode": "4",
+      "courtIndex": 3,
       "locationName": "Taipei Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 36,
+      "time": "00:36",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 19,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 19,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3133,7 +3982,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "USA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
@@ -3226,11 +4075,11 @@
       },
       "team1seed": null,
       "team2seed": "4",
-      "matchTime": "2026-07-28 20:20:00",
-      "matchTimeUtc": "2026-07-28 12:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": "17",
+      "matchTime": "2026-07-28 21:10:00",
+      "matchTimeUtc": "2026-07-28 13:10:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "16",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "XD",
@@ -3241,14 +4090,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Taipei Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 28,
+      "time": "00:28",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 10,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3259,7 +4123,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "ENG",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
@@ -3352,13 +4216,13 @@
       },
       "team1seed": null,
       "team2seed": "2",
-      "matchTime": "2026-07-28 21:10:00",
-      "matchTimeUtc": "2026-07-28 13:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": "18",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "matchTime": "2026-07-28 21:45:00",
+      "matchTimeUtc": "2026-07-28 13:45:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "17",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "XD",
       "roundName": "R32",
       "drawName": "XD",
@@ -3367,14 +4231,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Taipei Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 33,
+      "time": "00:33",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 19,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3385,7 +4264,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -3478,10 +4357,10 @@
       },
       "team1seed": "6",
       "team2seed": null,
-      "matchTime": "2026-07-28 21:10:00",
-      "matchTimeUtc": "2026-07-28 13:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-28 21:55:00",
+      "matchTimeUtc": "2026-07-28 13:55:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "17",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -3493,14 +4372,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Taipei Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 32,
+      "time": "00:32",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3511,7 +4405,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "IND",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -3604,10 +4498,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-07-28 20:20:00",
-      "matchTimeUtc": "2026-07-28 12:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-07-28 21:15:00",
+      "matchTimeUtc": "2026-07-28 13:15:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "16",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -3619,14 +4513,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Taipei Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 27,
+      "time": "00:27",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 17,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3637,7 +4546,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "USA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
@@ -3732,9 +4641,9 @@
       "team2seed": null,
       "matchTime": "2026-07-28 19:30:00",
       "matchTimeUtc": "2026-07-28 11:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": "16",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "15",
       "oopText": "Not before 7:30 PM",
       "oopTypeId": 2,
       "eventName": "XD",
@@ -3745,14 +4654,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Taipei Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 32,
+      "time": "00:32",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3763,7 +4687,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -3858,8 +4782,8 @@
       "team2seed": null,
       "matchTime": "2026-07-28 19:30:00",
       "matchTimeUtc": "2026-07-28 11:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "15",
       "oopText": "Not before 7:30 PM",
       "oopTypeId": 2,
@@ -3871,14 +4795,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Taipei Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 23,
+      "time": "00:23",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 10,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3889,7 +4828,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -3984,8 +4923,8 @@
       "team2seed": null,
       "matchTime": "2026-07-28 19:30:00",
       "matchTimeUtc": "2026-07-28 11:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "16",
       "oopText": "Not before 7:30 PM",
       "oopTypeId": 2,
@@ -3997,14 +4936,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Taipei Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 29,
+      "time": "00:29",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 5,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 17,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -4062,43 +5016,458 @@
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "95797",
+            "nameDisplay": "Sheng-Ming LIN",
+            "nameType": 0,
+            "firstName": "Sheng-Ming",
+            "lastName": "LIN",
+            "initials": "SL",
+            "nameShort": "S LIN",
+            "nameShort2": "LIN",
+            "slug": "sheng-ming-lin",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Sheng-Ming LIN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          },
+          {
+            "id": "80667",
+            "nameDisplay": "SUNG Yi-Hsuan",
+            "nameType": 1,
+            "firstName": "Yi-Hsuan",
+            "lastName": "SUNG",
+            "initials": "SY",
+            "nameShort": "SUNG Y H ",
+            "nameShort2": "SUNG",
+            "slug": "yi-hsuan-sung",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Yi-Hsuan SUNG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "matchTime": "2026-07-29 10:40:00",
+      "matchTimeUtc": "2026-07-29 02:40:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "3",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "XD",
       "roundName": "R32",
       "drawName": "XD",
       "drawCode": "10",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 3",
+      "courtCode": "3",
+      "courtIndex": 2,
+      "locationName": "Taipei Arena",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 1,
       "score": [],
       "matches": []
     },
     {
-      "id": 1531529,
-      "code": "406",
+      "id": 1531429,
+      "code": "417",
+      "tournamentCode": "97FF954D-0A47-498D-81D1-B9105D891B59",
+      "tournamentName": "YONEX Taipei Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "96553",
+            "nameDisplay": "LOW Han Chen",
+            "nameType": 1,
+            "firstName": "Han Chen",
+            "lastName": "LOW",
+            "initials": "LH",
+            "nameShort": "LOW H C ",
+            "nameShort2": "LOW",
+            "slug": "han-chen-low",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Han Chen LOW",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696907725/assets/players/thumbnail/96553.jpg"
+            }
+          },
+          {
+            "id": "79015",
+            "nameDisplay": "CHAN Wen Tse",
+            "nameType": 1,
+            "firstName": "Wen Tse",
+            "lastName": "CHAN",
+            "initials": "CW",
+            "nameShort": "CHAN W T ",
+            "nameShort2": "CHAN",
+            "slug": "chan-wen-tse",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Wen Tse CHAN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784089193/assets/players/thumbnail/79015.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "59609",
+            "nameDisplay": "LIU Kuang Heng",
+            "nameType": 1,
+            "firstName": "Kuang Heng",
+            "lastName": "LIU",
+            "initials": "LK",
+            "nameShort": "LIU K H ",
+            "nameShort2": "LIU",
+            "slug": "liu-kuang-heng",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "LIU Kuang Heng",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          },
+          {
+            "id": "96973",
+            "nameDisplay": "HSU Yin-Hui",
+            "nameType": 1,
+            "firstName": "Yin-Hui",
+            "lastName": "HSU",
+            "initials": "HY",
+            "nameShort": "HSU Y H ",
+            "nameShort2": "HSU",
+            "slug": "yin-hui-hsu",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Yin-Hui HSU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356124/assets/players/thumbnail/96973.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "5",
+      "matchTime": "2026-07-29 10:40:00",
+      "matchTimeUtc": "2026-07-29 02:40:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "3",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "XD",
+      "roundName": "R32",
+      "drawName": "XD",
+      "drawCode": "10",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Taipei Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 5,
+      "matchTypeValue": "Mixed Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1531615,
+      "code": "409",
+      "tournamentCode": "97FF954D-0A47-498D-81D1-B9105D891B59",
+      "tournamentName": "YONEX Taipei Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "AUS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/AUS.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "76674",
+            "nameDisplay": "Andika RAMADIANSYAH",
+            "nameType": 0,
+            "firstName": "Andika",
+            "lastName": "RAMADIANSYAH",
+            "initials": "AR",
+            "nameShort": "A RAMADIANSYAH",
+            "nameShort2": "RAMADIANSYAH",
+            "slug": "andika-ramadiansyah",
+            "countryCode": "AUS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/AUS.png",
+            "avatar": {
+              "title": "Andika RAMADIANSYAH",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896301/assets/players/thumbnail/76674.jpg"
+            }
+          },
+          {
+            "id": "90442",
+            "nameDisplay": "Nozomi SHIMIZU",
+            "nameType": 0,
+            "firstName": "Nozomi",
+            "lastName": "SHIMIZU",
+            "initials": "NS",
+            "nameShort": "N SHIMIZU",
+            "nameShort2": "SHIMIZU",
+            "slug": "nozomi-shimizu",
+            "countryCode": "AUS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/AUS.png",
+            "avatar": {
+              "title": "Nozomi SHIMIZU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897721/assets/players/thumbnail/90442.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "84196",
+            "nameDisplay": "LAI Po Yu",
+            "nameType": 1,
+            "firstName": "Po Yu",
+            "lastName": "LAI",
+            "initials": "LP",
+            "nameShort": "LAI P Y ",
+            "nameShort2": "LAI",
+            "slug": "po-yu-lai",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Po Yu LAI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696905440/assets/players/thumbnail/84196.jpg"
+            }
+          },
+          {
+            "id": "82732",
+            "nameDisplay": "JHENG Yu Chieh",
+            "nameType": 1,
+            "firstName": "Yu Chieh",
+            "lastName": "JHENG",
+            "initials": "JY",
+            "nameShort": "JHENG Y C ",
+            "nameShort2": "JHENG",
+            "slug": "jheng-yu-chieh",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Yu Chieh JHENG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784085811/assets/players/thumbnail/82732.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-07-29 10:40:00",
+      "matchTimeUtc": "2026-07-29 02:40:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "3",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "XD",
+      "roundName": "R32",
+      "drawName": "XD",
+      "drawCode": "10",
+      "courtName": "Court 4",
+      "courtCode": "4",
+      "courtIndex": 3,
+      "locationName": "Taipei Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 5,
+      "matchTypeValue": "Mixed Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1531431,
+      "code": "416",
+      "tournamentCode": "97FF954D-0A47-498D-81D1-B9105D891B59",
+      "tournamentName": "YONEX Taipei Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "73460",
+            "nameDisplay": "LEE Yi Bo",
+            "nameType": 1,
+            "firstName": "Yi Bo",
+            "lastName": "LEE",
+            "initials": "LY",
+            "nameShort": "LEE Y B ",
+            "nameShort2": "LEE",
+            "slug": "yi-bo-lee",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Yi Bo LEE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          },
+          {
+            "id": "70093",
+            "nameDisplay": "LIM Chiew Sien",
+            "nameType": 1,
+            "firstName": "Chiew Sien",
+            "lastName": "LIM",
+            "initials": "LC",
+            "nameShort": "LIM C S ",
+            "nameShort2": "LIM",
+            "slug": "chiew-sien-lim",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Chiew Sien LIM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897563/assets/players/thumbnail/70093.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "99841",
+            "nameDisplay": "WU Guan Xun",
+            "nameType": 1,
+            "firstName": "Guan Xun",
+            "lastName": "WU",
+            "initials": "WG",
+            "nameShort": "WU G X ",
+            "nameShort2": "WU",
+            "slug": "wu-guan-xun",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "WU Guan Xun",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          },
+          {
+            "id": "76717",
+            "nameDisplay": "LEE Chia Hsin",
+            "nameType": 1,
+            "firstName": "Chia Hsin",
+            "lastName": "LEE",
+            "initials": "LC",
+            "nameShort": "LEE C H ",
+            "nameShort2": "LEE",
+            "slug": "chia-hsin-lee",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Chia Hsin LEE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897522/assets/players/thumbnail/76717.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-07-29 10:40:00",
+      "matchTimeUtc": "2026-07-29 02:40:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "3",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "XD",
+      "roundName": "R32",
+      "drawName": "XD",
+      "drawCode": "10",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Taipei Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 5,
+      "matchTypeValue": "Mixed Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1531604,
+      "code": "396",
       "tournamentCode": "97FF954D-0A47-498D-81D1-B9105D891B59",
       "tournamentName": "YONEX Taipei Open 2026",
       "isTeamMatch": false,
@@ -4131,7 +5500,7 @@
       "oopText": null,
       "oopTypeId": null,
       "eventName": "XD",
-      "roundName": "R16",
+      "roundName": "QF",
       "drawName": "XD",
       "drawCode": "10",
       "courtName": "",
@@ -4409,8 +5778,8 @@
       "matches": []
     },
     {
-      "id": 1531604,
-      "code": "396",
+      "id": 1531563,
+      "code": "403",
       "tournamentCode": "97FF954D-0A47-498D-81D1-B9105D891B59",
       "tournamentName": "YONEX Taipei Open 2026",
       "isTeamMatch": false,
@@ -4418,11 +5787,48 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "88405",
+            "nameDisplay": "Akira KOGA",
+            "nameType": 0,
+            "firstName": "Akira",
+            "lastName": "KOGA",
+            "initials": "AK",
+            "nameShort": "A KOGA",
+            "nameShort2": "KOGA",
+            "slug": "akira-koga",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Akira KOGA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784099807/assets/players/thumbnail/88405.jpg"
+            }
+          },
+          {
+            "id": "55417",
+            "nameDisplay": "Natsu SAITO",
+            "nameType": 0,
+            "firstName": "Natsu",
+            "lastName": "SAITO",
+            "initials": "NS",
+            "nameShort": "N SAITO",
+            "nameShort2": "SAITO",
+            "slug": "natsu-saito",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Natsu SAITO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896443/assets/players/thumbnail/55417.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
@@ -4433,59 +5839,7 @@
         "players": [],
         "linkName": null
       },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "XD",
-      "roundName": "QF",
-      "drawName": "XD",
-      "drawCode": "10",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 5,
-      "matchTypeValue": "Mixed Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1531528,
-      "code": "407",
-      "tournamentCode": "97FF954D-0A47-498D-81D1-B9105D891B59",
-      "tournamentName": "YONEX Taipei Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
+      "team1seed": "6",
       "team2seed": null,
       "matchTime": null,
       "matchTimeUtc": null,
@@ -4513,8 +5867,8 @@
       "matches": []
     },
     {
-      "id": 1531563,
-      "code": "403",
+      "id": 1531528,
+      "code": "407",
       "tournamentCode": "97FF954D-0A47-498D-81D1-B9105D891B59",
       "tournamentName": "YONEX Taipei Open 2026",
       "isTeamMatch": false,
@@ -4522,19 +5876,219 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "ENG",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "63421",
+            "nameDisplay": "Samuel JONES",
+            "nameType": 0,
+            "firstName": "Samuel",
+            "lastName": "JONES",
+            "initials": "SJ",
+            "nameShort": "S JONES",
+            "nameShort2": "JONES",
+            "slug": "samuel-jones",
+            "countryCode": "ENG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
+            "avatar": {
+              "title": "Samuel JONES",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784010035/assets/players/thumbnail/63421.jpg"
+            }
+          },
+          {
+            "id": "68221",
+            "nameDisplay": "Lizzie TOLMAN",
+            "nameType": 0,
+            "firstName": "Lizzie",
+            "lastName": "TOLMAN",
+            "initials": "LT",
+            "nameShort": "L TOLMAN",
+            "nameShort2": "TOLMAN",
+            "slug": "lizzie-tolman",
+            "countryCode": "ENG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
+            "avatar": {
+              "title": "Lizzie TOLMAN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784082126/assets/players/thumbnail/68221.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "76275",
+            "nameDisplay": "YANG Po-Hsuan",
+            "nameType": 1,
+            "firstName": "Po-Hsuan",
+            "lastName": "YANG",
+            "initials": "YP",
+            "nameShort": "YANG P H ",
+            "nameShort2": "YANG",
+            "slug": "po-hsuan-yang",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Po-Hsuan YANG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1657773412/assets/players/thumbnail/76275.jpg"
+            }
+          },
+          {
+            "id": "87176",
+            "nameDisplay": "HU Ling Fang",
+            "nameType": 1,
+            "firstName": "Ling Fang",
+            "lastName": "HU",
+            "initials": "HL",
+            "nameShort": "HU L F ",
+            "nameShort2": "HU",
+            "slug": "ling-fang-hu",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Ling Fang HU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1657773544/assets/players/thumbnail/87176.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "2",
+      "matchTime": null,
+      "matchTimeUtc": null,
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": null,
+      "oopText": null,
+      "oopTypeId": null,
+      "eventName": "XD",
+      "roundName": "R16",
+      "drawName": "XD",
+      "drawCode": "10",
+      "courtName": "",
+      "courtCode": null,
+      "courtIndex": null,
+      "locationName": null,
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 5,
+      "matchTypeValue": "Mixed Doubles",
+      "matchTypeNo": null,
+      "reliability": null,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1531529,
+      "code": "406",
+      "tournamentCode": "97FF954D-0A47-498D-81D1-B9105D891B59",
+      "tournamentName": "YONEX Taipei Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "76165",
+            "nameDisplay": "Haruki KAWABE",
+            "nameType": 0,
+            "firstName": "Haruki",
+            "lastName": "KAWABE",
+            "initials": "HK",
+            "nameShort": "H KAWABE",
+            "nameShort2": "KAWABE",
+            "slug": "haruki-kawabe",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Haruki KAWABE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784008825/assets/players/thumbnail/76165.jpg"
+            }
+          },
+          {
+            "id": "85452",
+            "nameDisplay": "Kokona ISHIKAWA",
+            "nameType": 0,
+            "firstName": "Kokona",
+            "lastName": "ISHIKAWA",
+            "initials": "KI",
+            "nameShort": "K ISHIKAWA",
+            "nameShort2": "ISHIKAWA",
+            "slug": "kokona-ishikawa",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Kokona ISHIKAWA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1667177635/assets/players/thumbnail/85452.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "INA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "84631",
+            "nameDisplay": "Verrell Yustin MULIA",
+            "nameType": 0,
+            "firstName": "Verrell Yustin",
+            "lastName": "MULIA",
+            "initials": "VM",
+            "nameShort": "V MULIA",
+            "nameShort2": "MULIA",
+            "slug": "verrell-yustin-mulia",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Verrell Yustin MULIA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          },
+          {
+            "id": "72213",
+            "nameDisplay": "Bernadine Anindya WARDANA",
+            "nameType": 0,
+            "firstName": "Bernadine Anindya",
+            "lastName": "WARDANA",
+            "initials": "BW",
+            "nameShort": "B WARDANA",
+            "nameShort2": "WARDANA",
+            "slug": "bernadine-anindya-wardana",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Bernadine Anindya WARDANA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1728626445/assets/players/thumbnail/72213.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
@@ -4574,23 +6128,97 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "91090",
+            "nameDisplay": "CHEN Tang Jie",
+            "nameType": 1,
+            "firstName": "Tang Jie",
+            "lastName": "CHEN",
+            "initials": "CT",
+            "nameShort": "CHEN T J ",
+            "nameShort2": "CHEN",
+            "slug": "tang-jie-chen",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Tang Jie CHEN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896192/assets/players/thumbnail/91090.jpg"
+            }
+          },
+          {
+            "id": "95214",
+            "nameDisplay": "Clarissa SAN",
+            "nameType": 0,
+            "firstName": "Clarissa",
+            "lastName": "SAN",
+            "initials": "CS",
+            "nameShort": "C SAN",
+            "nameShort2": "SAN",
+            "slug": "clarissa-san",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Clarissa SAN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "THA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "75904",
+            "nameDisplay": "Ruttanapak OUPTHONG",
+            "nameType": 0,
+            "firstName": "Ruttanapak",
+            "lastName": "OUPTHONG",
+            "initials": "RO",
+            "nameShort": "R OUPTHONG",
+            "nameShort2": "OUPTHONG",
+            "slug": "ruttanapak-oupthong",
+            "countryCode": "THA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+            "avatar": {
+              "title": "Ruttanapak OUPTHONG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895803/assets/players/thumbnail/75904.jpg"
+            }
+          },
+          {
+            "id": "72504",
+            "nameDisplay": "Jhenicha SUDJAIPRAPARAT",
+            "nameType": 0,
+            "firstName": "Jhenicha",
+            "lastName": "SUDJAIPRAPARAT",
+            "initials": "JS",
+            "nameShort": "J SUDJAIPRAPARAT",
+            "nameShort2": "SUDJAIPRAPARAT",
+            "slug": "jhenicha-sudjaipraparat",
+            "countryCode": "THA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+            "avatar": {
+              "title": "Jhenicha SUDJAIPRAPARAT",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1620708539/assets/players/thumbnail/72504.tif"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
+      "team2seed": "4",
       "matchTime": null,
       "matchTimeUtc": null,
       "matchStatus": "N",
@@ -4669,95 +6297,6 @@
       "matches": []
     },
     {
-      "id": 1531431,
-      "code": "416",
-      "tournamentCode": "97FF954D-0A47-498D-81D1-B9105D891B59",
-      "tournamentName": "YONEX Taipei Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "TPE",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "99841",
-            "nameDisplay": "WU Guan Xun",
-            "nameType": 1,
-            "firstName": "Guan Xun",
-            "lastName": "WU",
-            "initials": "WG",
-            "nameShort": "WU G X ",
-            "nameShort2": "WU",
-            "slug": "wu-guan-xun",
-            "countryCode": "TPE",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-            "avatar": {
-              "title": "WU Guan Xun",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
-            }
-          },
-          {
-            "id": "76717",
-            "nameDisplay": "LEE Chia Hsin",
-            "nameType": 1,
-            "firstName": "Chia Hsin",
-            "lastName": "LEE",
-            "initials": "LC",
-            "nameShort": "LEE C H ",
-            "nameShort2": "LEE",
-            "slug": "chia-hsin-lee",
-            "countryCode": "TPE",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-            "avatar": {
-              "title": "Chia Hsin LEE",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897522/assets/players/thumbnail/76717.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "XD",
-      "roundName": "R32",
-      "drawName": "XD",
-      "drawCode": "10",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 5,
-      "matchTypeValue": "Mixed Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
       "id": 1531533,
       "code": "402",
       "tournamentCode": "97FF954D-0A47-498D-81D1-B9105D891B59",
@@ -4767,22 +6306,96 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "USA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "63739",
+            "nameDisplay": "Presley SMITH",
+            "nameType": 0,
+            "firstName": "Presley",
+            "lastName": "SMITH",
+            "initials": "PS",
+            "nameShort": "P SMITH",
+            "nameShort2": "SMITH",
+            "slug": "presley-smith",
+            "countryCode": "USA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+            "avatar": {
+              "title": "Presley SMITH",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696986069/assets/players/thumbnail/63739.jpg"
+            }
+          },
+          {
+            "id": "83074",
+            "nameDisplay": "Jennie GAI",
+            "nameType": 0,
+            "firstName": "Jennie",
+            "lastName": "GAI",
+            "initials": "JG",
+            "nameShort": "J GAI",
+            "nameShort2": "GAI",
+            "slug": "jennie-gai",
+            "countryCode": "USA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+            "avatar": {
+              "title": "Jennie GAI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1719991965/assets/players/thumbnail/83074.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "THA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "73936",
+            "nameDisplay": "Supak JOMKOH",
+            "nameType": 0,
+            "firstName": "Supak",
+            "lastName": "JOMKOH",
+            "initials": "SJ",
+            "nameShort": "S JOMKOH",
+            "nameShort2": "JOMKOH",
+            "slug": "supak-jomkoh",
+            "countryCode": "THA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+            "avatar": {
+              "title": "Supak JOMKOH",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1721631017/assets/players/thumbnail/73936.jpg"
+            }
+          },
+          {
+            "id": "99988",
+            "nameDisplay": "Ornnicha JONGSATHAPORNPARN",
+            "nameType": 0,
+            "firstName": "Ornnicha",
+            "lastName": "JONGSATHAPORNPARN",
+            "initials": "OJ",
+            "nameShort": "O JONGSATHAPORNPARN",
+            "nameShort2": "JONGSATHAPORNPARN",
+            "slug": "ornnicha-jongsathapornparn",
+            "countryCode": "THA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+            "avatar": {
+              "title": "Ornnicha JONGSATHAPORNPARN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784080916/assets/players/thumbnail/99988.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "3",
       "team2seed": null,
       "matchTime": null,
       "matchTimeUtc": null,
@@ -4819,22 +6432,96 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "58240",
+            "nameDisplay": "Yuta WATANABE",
+            "nameType": 0,
+            "firstName": "Yuta",
+            "lastName": "WATANABE",
+            "initials": "YW",
+            "nameShort": "Y WATANABE",
+            "nameShort2": "WATANABE",
+            "slug": "yuta-watanabe",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Yuta WATANABE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627952995/assets/players/thumbnail/58240.jpg"
+            }
+          },
+          {
+            "id": "60335",
+            "nameDisplay": "Maya TAGUCHI",
+            "nameType": 0,
+            "firstName": "Maya",
+            "lastName": "TAGUCHI",
+            "initials": "MT",
+            "nameShort": "M TAGUCHI",
+            "nameShort2": "TAGUCHI",
+            "slug": "maya-taguchi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Maya TAGUCHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696906156/assets/players/thumbnail/60335.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "93572",
+            "nameDisplay": "TSAI Fu Cheng",
+            "nameType": 1,
+            "firstName": "Fu Cheng",
+            "lastName": "TSAI",
+            "initials": "TF",
+            "nameShort": "TSAI F C ",
+            "nameShort2": "TSAI",
+            "slug": "fu-cheng-tsai",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Fu Cheng TSAI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696905545/assets/players/thumbnail/93572.jpg"
+            }
+          },
+          {
+            "id": "65349",
+            "nameDisplay": "SUNG Yu-Hsuan",
+            "nameType": 1,
+            "firstName": "Yu-Hsuan",
+            "lastName": "SUNG",
+            "initials": "SY",
+            "nameShort": "SUNG Y H ",
+            "nameShort2": "SUNG",
+            "slug": "sung-yu-hsuan",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Yu-Hsuan SUNG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784087635/assets/players/thumbnail/65349.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "8",
       "team2seed": null,
       "matchTime": null,
       "matchTimeUtc": null,
@@ -4871,11 +6558,48 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "81108",
+            "nameDisplay": "YE Hong Wei",
+            "nameType": 1,
+            "firstName": "Hong Wei",
+            "lastName": "YE",
+            "initials": "YH",
+            "nameShort": "YE H W ",
+            "nameShort2": "YE",
+            "slug": "hong-wei-ye",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Hong Wei YE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1670203491/assets/players/thumbnail/81108.jpg"
+            }
+          },
+          {
+            "id": "62713",
+            "nameDisplay": "Nicole Gonzales CHAN",
+            "nameType": 0,
+            "firstName": "Nicole Gonzales",
+            "lastName": "CHAN",
+            "initials": "NC",
+            "nameShort": "N CHAN",
+            "nameShort2": "CHAN",
+            "slug": "nicole-gonzales-chan",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Nicole Gonzales CHAN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784100449/assets/players/thumbnail/62713.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
@@ -4886,7 +6610,7 @@
         "players": [],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "1",
       "team2seed": null,
       "matchTime": null,
       "matchTimeUtc": null,
@@ -4897,184 +6621,6 @@
       "oopTypeId": null,
       "eventName": "XD",
       "roundName": "R16",
-      "drawName": "XD",
-      "drawCode": "10",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 5,
-      "matchTypeValue": "Mixed Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1531615,
-      "code": "409",
-      "tournamentCode": "97FF954D-0A47-498D-81D1-B9105D891B59",
-      "tournamentName": "YONEX Taipei Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "AUS",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/AUS.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "76674",
-            "nameDisplay": "Andika RAMADIANSYAH",
-            "nameType": 0,
-            "firstName": "Andika",
-            "lastName": "RAMADIANSYAH",
-            "initials": "AR",
-            "nameShort": "A RAMADIANSYAH",
-            "nameShort2": "RAMADIANSYAH",
-            "slug": "andika-ramadiansyah",
-            "countryCode": "AUS",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/AUS.png",
-            "avatar": {
-              "title": "Andika RAMADIANSYAH",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896301/assets/players/thumbnail/76674.jpg"
-            }
-          },
-          {
-            "id": "90442",
-            "nameDisplay": "Nozomi SHIMIZU",
-            "nameType": 0,
-            "firstName": "Nozomi",
-            "lastName": "SHIMIZU",
-            "initials": "NS",
-            "nameShort": "N SHIMIZU",
-            "nameShort2": "SHIMIZU",
-            "slug": "nozomi-shimizu",
-            "countryCode": "AUS",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/AUS.png",
-            "avatar": {
-              "title": "Nozomi SHIMIZU",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897721/assets/players/thumbnail/90442.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "XD",
-      "roundName": "R32",
-      "drawName": "XD",
-      "drawCode": "10",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 5,
-      "matchTypeValue": "Mixed Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1531429,
-      "code": "417",
-      "tournamentCode": "97FF954D-0A47-498D-81D1-B9105D891B59",
-      "tournamentName": "YONEX Taipei Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "TPE",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "59609",
-            "nameDisplay": "LIU Kuang Heng",
-            "nameType": 1,
-            "firstName": "Kuang Heng",
-            "lastName": "LIU",
-            "initials": "LK",
-            "nameShort": "LIU K H ",
-            "nameShort2": "LIU",
-            "slug": "liu-kuang-heng",
-            "countryCode": "TPE",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-            "avatar": {
-              "title": "LIU Kuang Heng",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
-            }
-          },
-          {
-            "id": "96973",
-            "nameDisplay": "HSU Yin-Hui",
-            "nameType": 1,
-            "firstName": "Yin-Hui",
-            "lastName": "HSU",
-            "initials": "HY",
-            "nameShort": "HSU Y H ",
-            "nameShort2": "HSU",
-            "slug": "yin-hui-hsu",
-            "countryCode": "TPE",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-            "avatar": {
-              "title": "Yin-Hui HSU",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356124/assets/players/thumbnail/96973.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": "5",
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "XD",
-      "roundName": "R32",
       "drawName": "XD",
       "drawCode": "10",
       "courtName": "",
