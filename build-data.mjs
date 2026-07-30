@@ -18,6 +18,7 @@ import * as store from "./lib/store.mjs";
 import { computeElo, seedEloByRank } from "./lib/elo.mjs";
 import { loadInitialRanks } from "./lib/seeds.mjs";
 import { matchOdds } from "./lib/odds-match.mjs";
+import { loadRuns, buildOddsSeries, historyStats } from "./lib/odds-history.mjs";
 import { loadPublications, buildWorldMap, buildPlayerRankHistory, publicationTotal } from "./lib/rank-history.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
@@ -227,6 +228,13 @@ const upcomingMatches = []; // matchs prévus (non joués) des tournois à venir
 // `teamLite` ne conserve pas : nécessaires à l'appariement avec les cotes. Liste
 // séparée pour ne rien changer à upcoming-matches.json.
 const oddsCandidates = [];
+// Matchs JOUÉS récents, candidats eux aussi à l'appariement des cotes. Deux
+// usages : classer correctement une cote dont le match a eu lieu (le drapeau
+// `settled` d'oddsportal, figé au relevé, ne suffit pas — il dit encore « à
+// venir » pour un match joué depuis), et fournir la matière de la comparaison au
+// marché, puisque la dernière cote d'un match joué approche sa cote de clôture.
+const playedCandidates = [];
+const RECENT_DAYS = 30;   // au-delà, l'historique des cotes n'existe pas encore
 let tCount = 0, tournamentsTotal = 0, tournamentsDownloaded = 0;
 const byYear = [];
 
@@ -352,6 +360,29 @@ for (const y of years) {
       await write(`tournament/${t.id}.json`, tv);
       tCount++; dl++;
 
+      // Matchs JOUÉS récents (tous tournois, y compris terminés).
+      {
+        const fin = t.end_date || t.start_date || null;
+        const recent = fin && (Date.now() - Date.parse(fin)) < RECENT_DAYS * 864e5;
+        if (recent) {
+          for (const disc of tv.disciplines) {
+            for (const cell of Object.values(disc.results || {})) {
+              const m = cell?.match;
+              if (!m || (m.winner !== 1 && m.winner !== 2)) continue;
+              const p1 = m.team1?.players || [], p2 = m.team2?.players || [];
+              if (!p1.length || !p2.length) continue;
+              playedCandidates.push({
+                tmtId: t.id, tournamentName: t.name, year: y,
+                eventName: m.eventName, roundName: m.roundName, matchTime: m.matchTime || null,
+                team1: { players: p1.map(playerForOdds) },
+                team2: { players: p2.map(playerForOdds) },
+                winner: m.winner,
+              });
+            }
+          }
+        }
+      }
+
       // Matchs à venir : affiches connues (2 équipes) mais non jouées, hors tournois terminés.
       if (t.live_status !== "post") {
         for (const disc of tv.disciplines) {
@@ -404,15 +435,61 @@ console.log(`   Matchs à venir : ${upcomingMatches.length}`);
 // manuel. Aucune sortie existante n'est modifiée, les cotes n'entrent pas encore
 // dans les prédictions.
 {
-  const oddsDir = join(ROOT, "data", "odds");
-  const files = existsSync(oddsDir)
-    ? (await readdir(oddsDir)).filter((f) => f.endsWith(".json")).sort()
-    : [];
-  const rows = [];
-  for (const f of files) {
-    const { matches } = JSON.parse(await readFile(join(oddsDir, f), "utf8"));
-    rows.push(...(matches || []));
+  // Source : les relevés append-only de data/odds/runs/ (un fichier par passage).
+  // On reconstitue la série temporelle de chaque match, puis on n'utilise que la
+  // DERNIÈRE cote connue pour le rapport d'appariement — mais la série complète
+  // est publiée à part, pour le graphe d'évolution et pour la cote de clôture.
+  const runsDir = join(ROOT, "data", "odds", "runs");
+  const runs = await loadRuns(runsDir);
+  const series = buildOddsSeries(runs);
+  const files = runs.map((r) => r.fetchedAt);
+
+  // Une ligne par match, portant sa cote la plus récente : c'est ce qu'attend
+  // matchOdds, qui raisonne sur un état courant et non sur une série.
+  //
+  // `settled` d'oddsportal est une propriété DE L'INSTANT DU RELEVÉ, pas une
+  // vérité intemporelle : un match scrapé la veille est marqué « à venir » et le
+  // reste dans nos fichiers, même après avoir été joué. S'en servir tel quel
+  // faisait classer des cotes de matchs passés parmi les « orphelines », comme
+  // s'il s'agissait d'un échec d'appariement.
+  //
+  // On le recoupe donc avec la date du match : une rencontre dont la date est
+  // révolue est passée, quoi qu'en dise le relevé. Limite assumée : pour les
+  // matchs du JOUR, on s'en remet encore au drapeau du relevé, faute de savoir
+  // l'heure exacte à laquelle il a été pris.
+  //
+  // On apparie d'abord les cotes aux matchs JOUÉS : si une cote correspond à une
+  // rencontre dont nous connaissons le vainqueur, elle est passée, quoi qu'en
+  // dise le relevé. C'est nos données qui font autorité, pas un drapeau périmé.
+  const dejaJoues = new Set();
+  {
+    const brut = series.map((s) => ({
+      eventId: s.eventId, date: s.date, time: s.time, discipline: s.discipline,
+      tournamentKey: s.tournamentKey, p1: s.p1, p2: s.p2, settled: false,
+      odd1: s.closing?.odd1 ?? null, odd2: s.closing?.odd2 ?? null,
+    }));
+    for (const m of matchOdds(playedCandidates, brut, { includeSettled: true }).matched) {
+      dejaJoues.add(m.odds.eventId);
+    }
   }
+  const aujourdhui = new Date().toISOString().slice(0, 10);
+  const estPasse = (s) => dejaJoues.has(s.eventId) || s.settled || (s.date && s.date < aujourdhui);
+
+  const rows = series.map((s) => ({
+    eventId: s.eventId, date: s.date, time: s.time, discipline: s.discipline,
+    tournamentKey: s.tournamentKey, league: s.league, href: s.href,
+    p1: s.p1, p2: s.p2, settled: estPasse(s),
+    odd1: s.closing?.odd1 ?? null, odd2: s.closing?.odd2 ?? null,
+  }));
+
+  await write("odds-history.json", {
+    generatedAt: new Date().toISOString(),
+    runs: runs.map((r) => r.fetchedAt),
+    stats: historyStats(series),
+    // On ne publie que les matchs ayant au moins une cote : les autres n'ont
+    // rien à montrer dans un graphe.
+    series: series.filter((s) => s.readings > 0),
+  });
 
   const res = matchOdds(oddsCandidates, rows);
   const names = (team) => (team?.players || []).map((p) => p.nameDisplay).join(" / ");
@@ -425,7 +502,7 @@ console.log(`   Matchs à venir : ${upcomingMatches.length}`);
 
   await write("odds-report.json", {
     generatedAt: new Date().toISOString(),
-    dates: files.map((f) => f.replace(".json", "")),
+    runs: files,
     stats: res.stats,
     matched: res.matched.map((m) => ({
       ...base(m.odds),

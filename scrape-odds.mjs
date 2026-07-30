@@ -8,8 +8,15 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { OddsClient, dateRange } from "./lib/odds.mjs";
+import { runFileName } from "./lib/odds-history.mjs";
 
-const OUT_DIR = path.join("data", "odds");
+// APPEND-ONLY : un fichier par passage, nommé par l'instant du relevé, jamais
+// réécrit. L'ancien stockage écrasait data/odds/<date>.json à chaque passage et
+// ne gardait que la dernière photo — toute l'évolution de la cote était perdue.
+// Or c'est l'évolution qui porte l'information : la cote de CLÔTURE est la
+// référence du marché (le seul étalon qui dise si notre modèle peut rapporter),
+// et le SENS DU MOUVEMENT dit ce que le marché a appris entre-temps.
+const OUT_DIR = path.join("data", "odds", "runs");
 const DEFAULT_DAYS = 5; // aujourd'hui + 4
 
 const arg = process.argv[2];
@@ -20,6 +27,8 @@ const dates = dateRange(start, days);
 await fs.mkdir(OUT_DIR, { recursive: true });
 
 const client = await new OddsClient().start();
+const fetchedAt = new Date().toISOString();
+const toutes = [];
 let total = 0, bwfTotal = 0;
 try {
   for (const [i, date] of dates.entries()) {
@@ -41,10 +50,7 @@ try {
     const noSlug = bwf.filter((r) => !r.p1.slug || !r.p2.slug).length;
     const leagues = [...new Set(bwf.map((r) => r.league))];
 
-    await fs.writeFile(
-      path.join(OUT_DIR, `${date}.json`),
-      JSON.stringify({ date, fetchedAt: new Date().toISOString(), matches: bwf }, null, 1)
-    );
+    toutes.push(...bwf);
     console.log(
       `📅 ${date} — ${bwf.length} matchs BWF (${withOdds} avec cote, ${settled} déjà joués, ${noSlug} sans slug) / ${rows.length} badminton`
     );
@@ -57,7 +63,18 @@ try {
   await client.close();
 }
 
-console.log(`\n✅ ${bwfTotal} matchs BWF écrits dans ${OUT_DIR}/ (sur ${total} matchs badminton vus)`);
+// Une seule écriture, en fin de passage : le fichier est immuable et son nom ne
+// peut pas entrer en collision avec un autre relevé.
+if (toutes.length) {
+  await fs.writeFile(
+    path.join(OUT_DIR, runFileName(fetchedAt)),
+    JSON.stringify({ fetchedAt, dates, matches: toutes }, null, 1),
+  );
+  console.log(`\n✅ ${bwfTotal} matchs BWF -> ${OUT_DIR}/${runFileName(fetchedAt)}`);
+} else {
+  console.log(`\n⚠ aucun match BWF : aucun fichier écrit (on ne crée pas de relevé vide).`);
+}
+console.log(`   (${total} matchs badminton vus au total)`);
 if (bwfTotal === 0) {
   console.error("❌ Aucune ligne récupérée : DOM changé ou blocage. Vérifier avant de committer.");
   process.exitCode = 1;
