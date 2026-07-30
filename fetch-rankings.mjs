@@ -42,35 +42,38 @@ try {
 
   const manquantes = fusion.filter((p) => FORCE || !existsSync(join(DIR, `${p.date}.json`)));
 
+  // Pas de sortie anticipée ici : un process.exit() dans un try ne déroule pas
+  // la pile et sauterait le finally ci-dessous (donc client.close()). On laisse
+  // l'exécution atteindre naturellement la fin du bloc try.
   if (manquantes.length === 0) {
     console.log("⏭  Aucune publication manquante. Rien à faire.");
-    await saveIndex(INDEX_PATH, { source: distant.source, fetchedAt: distant.fetchedAt, publications: fusion });
-    process.exit(0);
-  }
+  } else {
+    console.log(`${manquantes.length} publication(s) à télécharger : ${manquantes.map((p) => p.date).join(", ")}`);
 
-  console.log(`${manquantes.length} publication(s) à télécharger : ${manquantes.map((p) => p.date).join(", ")}`);
-
-  for (const pub of manquantes) {
-    const data = await fetchPublication(client, {
-      publicationId: pub.publicationId,
-      depth: DEFAULT_DEPTH,
-      onProgress: (c, n) => console.log(`   ✓ ${c} — ${n} lignes`),
-    });
-    await writeFile(join(DIR, `${pub.date}.json`), JSON.stringify({
-      publicationId: pub.publicationId,
-      date: pub.date,
-      week: pub.week,
-      year: pub.year,
-      rankId: data.rankId,
-      depth: data.depth,
-      fetchedAt: data.fetchedAt,
-      disciplines: data.disciplines,
-    }), "utf8");
-    console.log(`✅ écrit -> data/rankings/${pub.date}.json (S${pub.week}, id ${pub.publicationId})`);
+    for (const pub of manquantes) {
+      const data = await fetchPublication(client, {
+        publicationId: pub.publicationId,
+        depth: DEFAULT_DEPTH,
+        onProgress: (c, n) => console.log(`   ✓ ${c} — ${n} lignes`),
+      });
+      await writeFile(join(DIR, `${pub.date}.json`), JSON.stringify({
+        publicationId: pub.publicationId,
+        date: pub.date,
+        week: pub.week,
+        year: pub.year,
+        rankId: data.rankId,
+        depth: data.depth,
+        fetchedAt: data.fetchedAt,
+        disciplines: data.disciplines,
+      }), "utf8");
+      console.log(`✅ écrit -> data/rankings/${pub.date}.json (S${pub.week}, id ${pub.publicationId})`);
+    }
   }
 
   await saveIndex(INDEX_PATH, { source: distant.source, fetchedAt: distant.fetchedAt, publications: fusion });
-  console.log(`✅ index mis à jour : ${fusion.length} publications.`);
+  if (manquantes.length > 0) {
+    console.log(`✅ index mis à jour : ${fusion.length} publications.`);
+  }
 } finally {
   await client.close();
 }

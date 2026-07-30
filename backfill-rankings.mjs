@@ -50,41 +50,43 @@ try {
   await saveIndex(INDEX_PATH, index);
   console.log(`   ✅ index écrit -> ${INDEX_PATH} (${fusion.length} publications)`);
 
+  // Pas de sortie anticipée ici : un process.exit() dans un try ne déroule pas
+  // la pile et sauterait le finally ci-dessous (donc client.close()). On laisse
+  // l'exécution atteindre naturellement la fin du bloc try.
   if (INDEX_ONLY) {
     console.log("--index : arrêt après l'index.");
-    process.exit(0);
+  } else {
+    // ---- 2) Téléchargement des publications manquantes ---------------------
+    const total = fusion.length;
+    let faits = 0, sautes = 0;
+
+    for (const pub of fusion) {
+      const path = join(DIR, `${pub.date}.json`);
+      if (existsSync(path) && !FORCE) { sautes++; continue; }
+
+      const data = await fetchPublication(client, {
+        publicationId: pub.publicationId,
+        depth: DEFAULT_DEPTH,
+      });
+      const lignes = Object.values(data.disciplines).reduce((a, r) => a + r.length, 0);
+
+      await writeFile(path, JSON.stringify({
+        publicationId: pub.publicationId,
+        date: pub.date,
+        week: pub.week,
+        year: pub.year,
+        rankId: data.rankId,
+        depth: data.depth,
+        fetchedAt: data.fetchedAt,
+        disciplines: data.disciplines,
+      }), "utf8");
+
+      faits++;
+      console.log(`   ${faits + sautes}/${total} ✓ ${pub.date} (S${pub.week}) id ${pub.publicationId} — ${lignes} lignes`);
+    }
+
+    console.log(`\n✅ terminé : ${faits} téléchargées, ${sautes} déjà présentes, ${total} au total.`);
   }
-
-  // ---- 2) Téléchargement des publications manquantes ---------------------
-  const total = fusion.length;
-  let faits = 0, sautes = 0;
-
-  for (const pub of fusion) {
-    const path = join(DIR, `${pub.date}.json`);
-    if (existsSync(path) && !FORCE) { sautes++; continue; }
-
-    const data = await fetchPublication(client, {
-      publicationId: pub.publicationId,
-      depth: DEFAULT_DEPTH,
-    });
-    const lignes = Object.values(data.disciplines).reduce((a, r) => a + r.length, 0);
-
-    await writeFile(path, JSON.stringify({
-      publicationId: pub.publicationId,
-      date: pub.date,
-      week: pub.week,
-      year: pub.year,
-      rankId: data.rankId,
-      depth: data.depth,
-      fetchedAt: data.fetchedAt,
-      disciplines: data.disciplines,
-    }), "utf8");
-
-    faits++;
-    console.log(`   ${faits + sautes}/${total} ✓ ${pub.date} (S${pub.week}) id ${pub.publicationId} — ${lignes} lignes`);
-  }
-
-  console.log(`\n✅ terminé : ${faits} téléchargées, ${sautes} déjà présentes, ${total} au total.`);
 } finally {
   await client.close();
 }
