@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams, useOutletContext, Link } from "react-router-dom";
 import { getJSON } from "../data.js";
-import EloChart from "../components/EloChart.jsx";
+import EloChart, { parseT } from "../components/EloChart.jsx";
 import MatchTeam from "../components/MatchTeam.jsx";
 
 const DISC_LABEL = {
@@ -185,18 +185,24 @@ export default function Player() {
   const allElo = data.elo || [];
   const lastElo = allElo[allElo.length - 1];
   const cutoff = rangeCutoff(range, lastElo?.t);
+  const cutoffMs = cutoff ? cutoff.getTime() : null;
   const eloByDisc = {};
   for (const pt of allElo) {
-    if (cutoff && pt.t && new Date(pt.t.replace(" ", "T")) < cutoff) continue;
+    if (cutoffMs != null && pt.t && parseT(pt.t) < cutoffMs) continue;
     (eloByDisc[pt.disc] ??= []).push(pt);
   }
   const discOrder = Object.keys(eloByDisc).sort((a, b) => eloByDisc[b].length - eloByDisc[a].length);
 
-  // Classement mondial groupé par discipline, même filtre temporel que l'Elo
+  // Classement mondial groupé par discipline, même filtre temporel que l'Elo.
+  // `pt.t` est ici une date "jour seul" ("2026-07-28") : on réutilise `parseT`
+  // (exportée par EloChart) pour la normaliser en minuit LOCAL, comme le fait
+  // déjà le filtre Elo ci-dessus — sinon `new Date("2026-07-28")` serait lue
+  // en UTC alors que `cutoff` est calculé en heure locale, et les deux séries
+  // ne seraient plus filtrées sur la même fenêtre selon le fuseau du visiteur.
   const allRank = data.worldRank || [];
   const rankByDisc = {};
   for (const pt of allRank) {
-    if (cutoff && pt.t && new Date(pt.t) < cutoff) continue;
+    if (cutoffMs != null && pt.t && parseT(pt.t) < cutoffMs) continue;
     (rankByDisc[pt.disc] ??= []).push(pt);
   }
 

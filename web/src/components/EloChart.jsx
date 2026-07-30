@@ -17,7 +17,20 @@ const PW = W - PAD.l - PAD.r, PH = H - PAD.t - PAD.b;
 // continuité non mesurée.
 const RANK_GAP_MS = 10 * 864e5;
 
-const parseT = (t) => (t ? new Date(t.replace(" ", "T")).getTime() : NaN);
+// Normalise un horodatage vers l'heure LOCALE avant de le parser. Piège : un
+// horodatage complet ("2026-03-10 09:30:00", série Elo) devient, une fois
+// l'espace remplacé par un "T", une date-heure LOCALE pour le moteur JS ;
+// mais une date "jour seul" ("2026-07-28", série de classement, un relevé par
+// semaine) est interprétée comme minuit UTC si on la passe telle quelle à
+// `new Date()`. Sans cette normalisation, les deux séries seraient décalées
+// l'une par rapport à l'autre de l'offset local (jusqu'à quelques heures) sur
+// le domaine temporel partagé — exportée pour que Player.jsx applique le même
+// référentiel à son filtre de période plutôt que de dupliquer la règle.
+export const parseT = (t) => {
+  if (!t) return NaN;
+  const s = t.includes(" ") ? t.replace(" ", "T") : t.includes("T") ? t : `${t}T00:00:00`;
+  return new Date(s).getTime();
+};
 const fmtDate = (t) => (t ? new Date(t.replace(" ", "T")).toLocaleDateString("fr-FR", { day: "numeric", month: "short", year: "2-digit" }) : "");
 
 export default function EloChart({ points, rankPoints, label, onPointClick }) {
