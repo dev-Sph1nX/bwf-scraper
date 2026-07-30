@@ -13,13 +13,13 @@
 // data/rankings/ avant d'en sortir est perdu pour toujours. D'où la fusion de
 // l'index (jamais un remplacement) et l'obligation de committer le résultat.
 
-import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { BwfClient } from "./lib/client.mjs";
 import { fetchPublicationIndex, mergeIndex, loadIndex, saveIndex } from "./lib/publications.mjs";
 import { fetchPublication, DEFAULT_DEPTH } from "./lib/rankings.mjs";
+import { savePublication } from "./lib/rank-history.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const DIR = join(ROOT, "data", "rankings");
@@ -58,7 +58,7 @@ try {
   } else {
     // ---- 2) Téléchargement des publications manquantes ---------------------
     const total = fusion.length;
-    let faits = 0, sautes = 0;
+    let faits = 0, sautes = 0, vides = 0;
 
     for (const pub of fusion) {
       const path = join(DIR, `${pub.date}.json`);
@@ -68,24 +68,24 @@ try {
         publicationId: pub.publicationId,
         depth: DEFAULT_DEPTH,
       });
+
+      // Une publication vide (les 5 disciplines à 0 ligne) n'est pas écrite :
+      // l'API répond parfois total:0/data:[] en HTTP 200 pour un publicationId
+      // qu'elle ne sert pas, et l'idempotence des deux writers repose sur
+      // l'existence du fichier — l'écrire figerait le manque pour toujours.
+      const ecrite = await savePublication(DIR, pub, data);
+      if (!ecrite) {
+        vides++;
+        console.log(`   ${faits + sautes + vides}/${total} ⚠️  ${pub.date} (S${pub.week}) id ${pub.publicationId} — publication vide, ignorée (reprise au run suivant)`);
+        continue;
+      }
+
       const lignes = Object.values(data.disciplines).reduce((a, r) => a + r.length, 0);
-
-      await writeFile(path, JSON.stringify({
-        publicationId: pub.publicationId,
-        date: pub.date,
-        week: pub.week,
-        year: pub.year,
-        rankId: data.rankId,
-        depth: data.depth,
-        fetchedAt: data.fetchedAt,
-        disciplines: data.disciplines,
-      }), "utf8");
-
       faits++;
-      console.log(`   ${faits + sautes}/${total} ✓ ${pub.date} (S${pub.week}) id ${pub.publicationId} — ${lignes} lignes`);
+      console.log(`   ${faits + sautes + vides}/${total} ✓ ${pub.date} (S${pub.week}) id ${pub.publicationId} — ${lignes} lignes`);
     }
 
-    console.log(`\n✅ terminé : ${faits} téléchargées, ${sautes} déjà présentes, ${total} au total.`);
+    console.log(`\n✅ terminé : ${faits} téléchargées, ${sautes} déjà présentes, ${vides} vide(s) ignorée(s), ${total} au total.`);
   }
 } finally {
   await client.close();

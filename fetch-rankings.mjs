@@ -14,13 +14,13 @@
 // au run suivant, tant qu'elles sont encore dans la fenêtre de 60 semaines de
 // l'API.
 
-import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { BwfClient } from "./lib/client.mjs";
 import { fetchPublicationIndex, mergeIndex, loadIndex, saveIndex } from "./lib/publications.mjs";
 import { fetchPublication, DEFAULT_DEPTH } from "./lib/rankings.mjs";
+import { savePublication } from "./lib/rank-history.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const DIR = join(ROOT, "data", "rankings");
@@ -40,6 +40,16 @@ try {
     `${fusion.length} après fusion avec l'archive locale.`,
   );
 
+  // Écrit l'index AVANT la boucle de téléchargement (cf. I5), aligné sur
+  // backfill-rankings.mjs : si un téléchargement lève au milieu de la boucle,
+  // le gain d'index du jour — seule archive durable des dates d'une fenêtre de
+  // 60 semaines glissantes, donc irrécupérable une fois sortie — n'est pas
+  // perdu. `saveIndex` fait un `mkdir` recursive, ce que les écritures de
+  // publications ci-dessous ne font pas : ce déplacement garantit aussi que
+  // data/rankings/ existe déjà quand on en a besoin.
+  await saveIndex(INDEX_PATH, { source: distant.source, fetchedAt: distant.fetchedAt, publications: fusion });
+  console.log(`✅ index écrit -> ${INDEX_PATH} (${fusion.length} publications).`);
+
   const manquantes = fusion.filter((p) => FORCE || !existsSync(join(DIR, `${p.date}.json`)));
 
   // Pas de sortie anticipée ici : un process.exit() dans un try ne déroule pas
@@ -56,23 +66,13 @@ try {
         depth: DEFAULT_DEPTH,
         onProgress: (c, n) => console.log(`   ✓ ${c} — ${n} lignes`),
       });
-      await writeFile(join(DIR, `${pub.date}.json`), JSON.stringify({
-        publicationId: pub.publicationId,
-        date: pub.date,
-        week: pub.week,
-        year: pub.year,
-        rankId: data.rankId,
-        depth: data.depth,
-        fetchedAt: data.fetchedAt,
-        disciplines: data.disciplines,
-      }), "utf8");
-      console.log(`✅ écrit -> data/rankings/${pub.date}.json (S${pub.week}, id ${pub.publicationId})`);
+      const ecrite = await savePublication(DIR, pub, data);
+      if (ecrite) {
+        console.log(`✅ écrit -> data/rankings/${pub.date}.json (S${pub.week}, id ${pub.publicationId})`);
+      } else {
+        console.log(`⚠️  publication vide ignorée (S${pub.week}, id ${pub.publicationId}) : rien écrit, reprise au run suivant.`);
+      }
     }
-  }
-
-  await saveIndex(INDEX_PATH, { source: distant.source, fetchedAt: distant.fetchedAt, publications: fusion });
-  if (manquantes.length > 0) {
-    console.log(`✅ index mis à jour : ${fusion.length} publications.`);
   }
 } finally {
   await client.close();

@@ -18,7 +18,7 @@ import * as store from "./lib/store.mjs";
 import { computeElo, seedEloByRank } from "./lib/elo.mjs";
 import { loadInitialRanks } from "./lib/seeds.mjs";
 import { matchOdds } from "./lib/odds-match.mjs";
-import { loadPublications, buildWorldMap, buildPlayerRankHistory } from "./lib/rank-history.mjs";
+import { loadPublications, buildWorldMap, buildPlayerRankHistory, publicationTotal } from "./lib/rank-history.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data");
@@ -57,7 +57,24 @@ const pairKeyOf = (players) => `pair:${players.map((p) => String(p.id)).sort().j
 // La publication la plus récente joue le rôle de l'ancien instantané unique ;
 // les précédentes alimentent la série worldRank des fiches joueurs.
 const publications = await loadPublications(join(ROOT, "data", "rankings"));
-const latestPub = publications[publications.length - 1] || null;
+// La dernière publication du répertoire n'est pas forcément exploitable : une
+// publication VIDE (les 5 disciplines à 0 ligne) a pu être archivée avant que
+// savePublication (lib/rank-history.mjs) ne refuse ce cas — l'API répond
+// parfois total:0/data:[] en HTTP 200 pour un publicationId qu'elle ne sert
+// pas. La prendre en aveugle viderait bwfRank/bwfPoints sur TOUTES les
+// entités Elo (silencieusement, et de façon permanente tant que la publication
+// suivante n'est pas plus récente). On retient donc la dernière NON vide.
+let latestPub = null, publicationsVides = 0;
+for (let i = publications.length - 1; i >= 0; i--) {
+  if (publicationTotal(publications[i]) > 0) { latestPub = publications[i]; break; }
+  publicationsVides++;
+}
+if (publicationsVides > 0) {
+  console.log(
+    `   ⚠️  ${publicationsVides} publication(s) vide(s) ignorée(s) en fin de série ` +
+    `(dernière retenue : ${latestPub ? latestPub.date : "aucune"}).`,
+  );
+}
 const playerRankHistory = buildPlayerRankHistory(publications);
 
 let worldMeta = null;
