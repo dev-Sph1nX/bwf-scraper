@@ -1,62 +1,76 @@
 // fetch-rankings.mjs
-// Télécharge le classement mondial officiel BWF (5 disciplines) et le stocke
-// dans data/<year>/rankings/world.json. À lancer pour l'année courante.
+// Synchronise l'historique du classement mondial BWF : récupère l'index des
+// publications et télécharge celles dont le fichier manque dans data/rankings/.
 //
-//   node fetch-rankings.mjs            # année courante, refetch SEULEMENT si la
-//                                      # publication de la semaine n'est pas déjà là
-//   node fetch-rankings.mjs 2026       # année précisée
-//   node fetch-rankings.mjs --force    # force le re-téléchargement
+//   node fetch-rankings.mjs            # synchronise (ne fait rien si à jour)
+//   node fetch-rankings.mjs --force    # réécrit tous les fichiers de la fenêtre
 //
-// Pourquoi conditionnel : la BWF ne publie le classement mondial qu'une fois par
-// semaine (le mardi). Le workflow tourne tous les jours ; inutile de re-télécharger
-// chaque jour. On se cale sur le MERCREDI (un jour de marge après la publication du
-// mardi) : on ne refetch que si le classement en cache est antérieur au dernier
-// mercredi. Au pire 1 jour de retard, mais on est sûr d'avoir la nouvelle publication.
+// À lancer quotidiennement : la BWF publie une fois par semaine (le mardi), donc
+// le script ne fera rien la plupart du temps. Il n'y a pas de test de fraîcheur
+// sur l'heure d'exécution : l'idempotence vient de l'existence du fichier de la
+// publication, c'est-à-dire de l'identité BWF elle-même.
+//
+// Un run manqué se rattrape tout seul : les publications absentes sont reprises
+// au run suivant, tant qu'elles sont encore dans la fenêtre de 60 semaines de
+// l'API.
 
-import { mkdir, writeFile, readFile } from "node:fs/promises";
+import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { fetchWorldRankings } from "./lib/rankings.mjs";
+import { BwfClient } from "./lib/client.mjs";
+import { fetchPublicationIndex, mergeIndex, loadIndex, saveIndex } from "./lib/publications.mjs";
+import { fetchPublication, DEFAULT_DEPTH } from "./lib/rankings.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
-const args = process.argv.slice(2);
-const FORCE = args.includes("--force");
-const YEAR = Number(args.find((a) => /^\d{4}$/.test(a))) || new Date().getFullYear();
+const DIR = join(ROOT, "data", "rankings");
+const INDEX_PATH = join(DIR, "publications.json");
 
-const path = join(ROOT, "data", String(YEAR), "rankings", "world.json");
+const FORCE = process.argv.slice(2).includes("--force");
 
-// Dernier mercredi 00:00 UTC (inclus si on est mercredi).
-function lastWednesdayUTC(now = new Date()) {
-  const d = new Date(now);
-  d.setUTCHours(0, 0, 0, 0);
-  const diff = (d.getUTCDay() - 3 + 7) % 7; // 3 = mercredi
-  d.setUTCDate(d.getUTCDate() - diff);
-  return d;
+const client = await new BwfClient().start();
+
+try {
+  const distant = await fetchPublicationIndex(client);
+  const local = await loadIndex(INDEX_PATH);
+  const fusion = mergeIndex(local?.publications ?? [], distant.publications);
+
+  console.log(
+    `Index : ${distant.publications.length} publications côté API, ` +
+    `${fusion.length} après fusion avec l'archive locale.`,
+  );
+
+  const manquantes = fusion.filter((p) => FORCE || !existsSync(join(DIR, `${p.date}.json`)));
+
+  if (manquantes.length === 0) {
+    console.log("⏭  Aucune publication manquante. Rien à faire.");
+    await saveIndex(INDEX_PATH, { source: distant.source, fetchedAt: distant.fetchedAt, publications: fusion });
+    process.exit(0);
+  }
+
+  console.log(`${manquantes.length} publication(s) à télécharger : ${manquantes.map((p) => p.date).join(", ")}`);
+
+  for (const pub of manquantes) {
+    const data = await fetchPublication(client, {
+      publicationId: pub.publicationId,
+      depth: DEFAULT_DEPTH,
+      onProgress: (c, n) => console.log(`   ✓ ${c} — ${n} lignes`),
+    });
+    await writeFile(join(DIR, `${pub.date}.json`), JSON.stringify({
+      publicationId: pub.publicationId,
+      date: pub.date,
+      week: pub.week,
+      year: pub.year,
+      rankId: data.rankId,
+      depth: data.depth,
+      fetchedAt: data.fetchedAt,
+      disciplines: data.disciplines,
+    }), "utf8");
+    console.log(`✅ écrit -> data/rankings/${pub.date}.json (S${pub.week}, id ${pub.publicationId})`);
+  }
+
+  await saveIndex(INDEX_PATH, { source: distant.source, fetchedAt: distant.fetchedAt, publications: fusion });
+  console.log(`✅ index mis à jour : ${fusion.length} publications.`);
+} finally {
+  await client.close();
 }
-
-// Décide s'il faut re-télécharger : oui si aucun cache, ou si le cache est
-// antérieur au dernier mercredi (⇒ nouvelle publication hebdo disponible).
-let prev = null;
-if (existsSync(path)) {
-  try { prev = JSON.parse(await readFile(path, "utf8")); } catch { prev = null; }
-}
-const prevAt = prev?.fetchedAt ? new Date(prev.fetchedAt) : null;
-const anchor = lastWednesdayUTC();
-const fresh = prevAt && prevAt >= anchor;
-
-if (prevAt) console.log(`Classement en cache : dernière MAJ ${prevAt.toISOString()}`);
-else console.log("Classement en cache : aucun.");
-
-if (fresh && !FORCE) {
-  console.log(`⏭  Déjà à jour pour cette semaine (≥ ${anchor.toISOString().slice(0, 10)}). Pas de re-téléchargement.`);
-  console.log("   (Forcer avec : node fetch-rankings.mjs --force)");
-  process.exit(0);
-}
-
-console.log(`Classement mondial BWF (${YEAR})${FORCE ? " — forcé" : ""}…`);
-const data = await fetchWorldRankings({ onProgress: (c, n) => console.log(`   ✓ ${c} — ${n} entités`) });
-
-await mkdir(dirname(path), { recursive: true });
-await writeFile(path, JSON.stringify(data), "utf8");
-console.log(`✅ écrit -> ${path} (fetchedAt ${data.fetchedAt})`);
