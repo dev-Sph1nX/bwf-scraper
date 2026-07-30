@@ -285,6 +285,48 @@ export default function Reliability() {
             </tbody>
           </table>
         </div>
+        {(d.byDiscipline?.[0]?.bands || []).length > 0 && (
+          <>
+            <h2 style={{ marginTop: 18 }}>Surprises par niveau de confiance</h2>
+            <p className="lead">
+              Le taux global est trompeur : un match donné à 51 % y compte autant
+              qu'un match donné à 95 %. C'est la colonne <b>Francs</b> qui départage
+              réellement les disciplines — là, le modèle est affirmatif dans tous les cas.
+            </p>
+            <div className="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Discipline</th>
+                    {d.byDiscipline[0].bands.map((b) => (
+                      <th key={b.key}>{b.label}<br /><span className="muted">{b.range}</span></th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {d.byDiscipline.map((x) => (
+                    <tr key={x.disc}>
+                      <td><b>{DISC_LABEL[x.disc] || x.disc}</b></td>
+                      {x.bands.map((b) => (
+                        <td key={b.key}>
+                          {b.upsetRate == null ? "—" : pc(b.upsetRate)}
+                          <br /><span className="muted">{nf(b.n)} matchs</span>
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="hint">
+              Sur les matchs serrés, toutes les disciplines se tiennent (41 à 44 %) :
+              un pile-ou-face reste un pile-ou-face. L'écart réel se lit sur les matchs
+              francs, où le simple messieurs surprend presque deux fois plus que le
+              simple dames.
+            </p>
+          </>
+        )}
+
         {(d.indistinguishable || []).length > 0 && (
           <p className="hint">
             <b>Non départageables</b> (intervalles qui se chevauchent) :{" "}

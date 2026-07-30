@@ -24,7 +24,7 @@ import { loadInitialRanks } from "./lib/seeds.mjs";
 import { loadPublications } from "./lib/rank-history.mjs";
 import { buildDataset } from "./lib/dataset.mjs";
 import { MODELS, predictAll, commonBase } from "./lib/models.mjs";
-import { evaluate, calibration, overlaps, accuracy, brier, bootstrapCI } from "./lib/metrics.mjs";
+import { evaluate, calibration, overlaps, accuracy, brier, bootstrapCI, upsetByBand } from "./lib/metrics.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data", "backtest.json");
@@ -141,6 +141,11 @@ for (const disc of ["MS", "WS", "MD", "WD", "XD"]) {
     brier: brierCI, accuracy: tauxFavori,
     upsetRate: 1 - pBar,
     sharpness: p.reduce((s, v) => s + Math.abs(v - 0.5), 0) / p.length,
+    // Décomposition par bande : le taux global mélange les pile-ou-face et les
+    // vraies surprises. Une discipline peu tranchée récolte mécaniquement plus
+    // de « surprises » sans être moins prévisible. C'est la bande « francs »
+    // (75-90 %) qui départage réellement les disciplines.
+    bands: upsetByBand(p, o),
   });
 }
 parDiscipline.sort((a, b) => a.brier.value - b.brier.value);

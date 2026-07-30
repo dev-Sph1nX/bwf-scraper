@@ -9,7 +9,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   accuracy, brier, logLoss, upsetRate, sharpness,
-  calibration, calibrationError, bootstrapCI, makeRng, overlaps, evaluate,
+  calibration, calibrationError, bootstrapCI, makeRng, overlaps, evaluate, upsetByBand,
 } from "../lib/metrics.mjs";
 import { MODELS, modelByKey, eloProb, isProvisional, predictAll, commonBase } from "../lib/models.mjs";
 
@@ -72,6 +72,48 @@ test("upsetRate ignore les prédictions à 0,5 et compte les surprises", () => {
 
 test("upsetRate rend null si aucune prédiction n'est tranchée", () => {
   assert.equal(upsetRate([0.5, 0.5], [1, 0]), null);
+});
+
+test("upsetByBand sépare les pile-ou-face des vraies surprises", () => {
+  // 4 matchs serrés (55 %) dont 2 perdus par le favori -> 50 % de surprises
+  // 4 matchs francs (85 %) dont 1 perdu -> 25 % de surprises
+  const preds = [0.55, 0.55, 0.55, 0.55, 0.85, 0.85, 0.85, 0.85];
+  const out = [1, 1, 0, 0, 1, 1, 1, 0];
+  const b = upsetByBand(preds, out);
+  const serres = b.find((x) => x.key === "tight");
+  const francs = b.find((x) => x.key === "strong");
+  proche(serres.upsetRate, 0.5);
+  proche(francs.upsetRate, 0.25);
+  assert.equal(serres.n, 4);
+  assert.equal(francs.n, 4);
+  proche(serres.share, 0.5);
+});
+
+test("upsetByBand oriente les prédictions sur le favori", () => {
+  // p=0.15 avec y=0 signifie que le favori (le camp B, à 85 %) a gagné
+  const b = upsetByBand([0.15, 0.85], [0, 1]);
+  const francs = b.find((x) => x.key === "strong");
+  assert.equal(francs.n, 2, "les deux tombent dans la bande 75-90 %");
+  assert.equal(francs.upsetRate, 0, "aucune surprise : les deux favoris ont gagné");
+});
+
+test("upsetByBand couvre les 4 bandes sans perdre de match", () => {
+  const preds = [0.52, 0.65, 0.80, 0.95];
+  const b = upsetByBand(preds, [1, 1, 1, 1]);
+  assert.equal(b.length, 4);
+  assert.equal(b.reduce((s, x) => s + x.n, 0), 4, "aucun match hors bande");
+  assert.deepEqual(b.map((x) => x.n), [1, 1, 1, 1]);
+});
+
+test("upsetByBand inclut p=1 dans la dernière bande", () => {
+  const b = upsetByBand([1], [1]);
+  assert.equal(b.find((x) => x.key === "heavy").n, 1);
+});
+
+test("upsetByBand rend null pour une bande vide, sans planter", () => {
+  const b = upsetByBand([0.55], [1]);
+  assert.equal(b.find((x) => x.key === "heavy").upsetRate, null);
+  assert.equal(b.find((x) => x.key === "heavy").n, 0);
 });
 
 test("sharpness mesure l'écart moyen à 0,5", () => {
