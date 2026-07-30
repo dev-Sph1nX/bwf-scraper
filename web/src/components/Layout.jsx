@@ -50,6 +50,7 @@ export default function Layout() {
           <NavLink to="/" end>Matchs à venir</NavLink>
           <NavLink to="/classement">Classement</NavLink>
           <NavLink to="/predictor">Prédicteur</NavLink>
+          <NavLink to="/fiabilite">Fiabilité</NavLink>
           <NavLink to="/tournaments">Calendrier</NavLink>
           <NavLink to="/odds">Audit cotes</NavLink>
           <NavLink to="/data">Données</NavLink>

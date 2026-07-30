@@ -532,7 +532,11 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 
   .topbar { height: auto; min-height: 58px; padding: 8px 16px; flex-wrap: wrap; }
   .topbar .spacer { flex-basis: 100%; height: 0; }
-  .tb-updates { font-size: 12px; }
+  /* Le bloc de mise à jour fait ~480px avec white-space: nowrap : sous 700px il
+     poussait la topbar à 497px et faisait déborder la PAGE entière, sur tous les
+     écrans du site. On l'autorise à passer à la ligne ici. */
+  .tb-updates { font-size: 12px; flex-wrap: wrap; white-space: normal; }
+  .topbar .tb-right { max-width: 100%; }
   main { padding: 16px; }
   .vs-grid { grid-template-columns: 1fr; }
   .vs-mid { padding-top: 0; text-align: center; }

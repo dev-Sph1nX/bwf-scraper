@@ -12,6 +12,7 @@ import Upcoming from "./pages/Upcoming.jsx";
 import Odds from "./pages/Odds.jsx";
 import Changelog from "./pages/Changelog.jsx";
 import Data from "./pages/Data.jsx";
+import Reliability from "./pages/Reliability.jsx";
 import "./styles.css";
 
 createRoot(document.getElementById("root")).render(
@@ -24,6 +25,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/predictor" element={<Predictor />} />
           <Route path="/tournaments" element={<Tournaments />} />
           <Route path="/odds" element={<Odds />} />
+          <Route path="/fiabilite" element={<Reliability />} />
           <Route path="/data" element={<Data />} />
           <Route path="/changelog" element={<Changelog />} />
           <Route path="/tournament/:id" element={<Tournament />} />
