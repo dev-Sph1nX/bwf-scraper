@@ -192,6 +192,14 @@ export default function Player() {
   }
   const discOrder = Object.keys(eloByDisc).sort((a, b) => eloByDisc[b].length - eloByDisc[a].length);
 
+  // Classement mondial groupé par discipline, même filtre temporel que l'Elo
+  const allRank = data.worldRank || [];
+  const rankByDisc = {};
+  for (const pt of allRank) {
+    if (cutoff && pt.t && new Date(pt.t) < cutoff) continue;
+    (rankByDisc[pt.disc] ??= []).push(pt);
+  }
+
   // Δelo par match (associé via tournoi + horodatage + discipline)
   const eloByMatch = new Map();
   for (const pt of allElo) eloByMatch.set(`${pt.tmtId}|${pt.t}|${pt.disc}`, pt.d);
@@ -264,7 +272,8 @@ export default function Player() {
           {discOrder.length === 0 ? (
             <p className="muted">Aucun match sur cette période.</p>
           ) : discOrder.map((code) => (
-            <EloChart key={code} points={eloByDisc[code]} label={DISC_LABEL[code] || code} onPointClick={goToMatch} />
+            <EloChart key={code} points={eloByDisc[code]} rankPoints={rankByDisc[code]}
+                      label={DISC_LABEL[code] || code} onPointClick={goToMatch} />
           ))}
         </div>
       )}
