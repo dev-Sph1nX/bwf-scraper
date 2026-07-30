@@ -279,12 +279,14 @@ mesurer sur les mêmes données ne mesurerait que notre capacité à décrire le
 | Variante | Variables | Période d'ajustement |
 |---|---|---|
 | **A** | Elo, forme, H2H, fraîcheur, repos, têtes de série | 2024-01 → 2025-12 |
-| **B** | A + écart au classement mondial | 2025-06-10 → 2025-12 |
+| **B** | A + écart au classement mondial | 2024-01 → 2025-12 |
 
-La variante B a un ajustement plus court parce que l'historique du classement
-mondial commence au 2025-06-10 (cf. spec dépendant). Les deux sont publiées et
-comparées : si B n'apporte rien à A, l'écart au classement mondial est retiré du
-modèle.
+Les deux variantes s'ajustent désormais sur la même période : l'import des
+exports CSV (`import-csv-rankings.mjs`) a porté l'historique du classement à
+**135 semaines continues** (2024-01-02 → 2026-07-28), couvrant **100 %** des
+matchs. La variante B n'est plus handicapée par un ajustement plus court. Les
+deux sont publiées et comparées : si B n'apporte rien à A, l'écart au classement
+mondial est retiré du modèle.
 
 **Un signal qui n'améliore pas significativement la prédiction est retiré du
 modèle et de l'interface.** Critère : le coefficient doit être significativement
@@ -324,7 +326,7 @@ seulement vérifiée par test : la somme des sauts doit égaler la probabilité 
 {
   "generatedAt": "...",
   "coverage": {
-    "common": { "n": 5412, "from": "2025-06-10", "to": "2026-07-28" },
+    "common": { "n": 12480, "from": "2024-01-09", "to": "2026-07-28" },
     "full":   { "n": 13638, "from": "2024-01-09", "to": "2026-07-30" },
     "withDuration": 13220,
     "excluded": { "walkover": 0, "provisional": 0, "unranked": 0 }
@@ -449,14 +451,13 @@ mesuré produit une confiance sans fondement, ce qui est pire que pas d'explicat
 
 ## Limites connues
 
-- **Le baseline « classement mondial » ne portera que sur ~5 700 matchs** (à partir
-  du 2025-06-10), pas 13 638, faute d'historique antérieur. C'est assez pour
-  conclure, et c'est affiché. Les PDF hebdomadaires trouvés sur le site corporate
-  BWF couvriraient 2024 mais exigeraient un parseur PDF — hors périmètre. Note
-  pour ce jour-là : la date des noms de fichiers n'est **pas** fiable (`Week-24`
-  est daté `2024-04-11`, seule des 53 dates de 2024 à ne pas être un mardi ; la
-  séquence prouve qu'il fallait lire `2024-06-11`), il faudra faire foi au numéro
-  de semaine.
+- **Limite levée** — le baseline « classement mondial » devait ne porter que sur
+  ~5 700 matchs, faute d'historique antérieur au 2025-06-10. L'import des exports
+  CSV fournis par le propriétaire du projet a comblé la période 2024-01 → 2025-06 :
+  l'historique compte désormais **135 semaines continues** et couvre **100 %** des
+  matchs (13 694 avec vainqueur et horodatage, contre 6 299 auparavant). Le
+  baseline est donc mesurable sur toute la période, sans restriction du socle
+  commun liée au classement.
 - **La fraîcheur n'est mesurable qu'à l'intérieur d'un tournoi**, et seulement pour
   les matchs déjà joués. Pour un match **à venir**, seuls 40 des 416 matchs non
   joués de 2026 ont un horaire publié : en production, l'indicateur sera souvent
