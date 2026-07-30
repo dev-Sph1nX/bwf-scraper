@@ -10,7 +10,8 @@
     "build-data": "node build-data.mjs",
     "refresh": "node run-update.mjs && node fetch-rankings.mjs && node scrape-odds.mjs && node build-data.mjs",
     "scrape-odds": "node scrape-odds.mjs",
-    "test": "node --test test/*.test.mjs"
+    "test": "node --test test/*.test.mjs",
+    "backtest": "node backtest.mjs"
   },
   "license": "ISC",
   "dependencies": {
