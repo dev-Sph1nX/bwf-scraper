@@ -7,7 +7,9 @@
     "update": "node run-update.mjs",
     "fetch-rankings": "node fetch-rankings.mjs",
     "build-data": "node build-data.mjs",
-    "refresh": "node run-update.mjs && node fetch-rankings.mjs && node build-data.mjs"
+    "refresh": "node run-update.mjs && node fetch-rankings.mjs && node scrape-odds.mjs && node build-data.mjs",
+    "scrape-odds": "node scrape-odds.mjs",
+    "test": "node --test test/*.test.mjs"
   },
   "license": "ISC",
   "dependencies": {

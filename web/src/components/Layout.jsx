@@ -51,6 +51,7 @@ export default function Layout() {
           <NavLink to="/classement">Classement</NavLink>
           <NavLink to="/predictor">Prédicteur</NavLink>
           <NavLink to="/tournaments">Calendrier</NavLink>
+          <NavLink to="/odds">Audit cotes</NavLink>
           <NavLink to="/data">Données</NavLink>
           <NavLink to="/changelog">Notes de version</NavLink>
         </nav>

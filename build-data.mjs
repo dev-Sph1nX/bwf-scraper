@@ -9,7 +9,7 @@
 //
 //   node build-data.mjs
 
-import { mkdir, writeFile, readFile, rm } from "node:fs/promises";
+import { mkdir, writeFile, readFile, rm, readdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -17,6 +17,7 @@ import * as views from "./lib/views.mjs";
 import * as store from "./lib/store.mjs";
 import { computeElo, seedEloByRank } from "./lib/elo.mjs";
 import { loadInitialRanks } from "./lib/seeds.mjs";
+import { matchOdds } from "./lib/odds-match.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data");
@@ -193,8 +194,20 @@ console.log(`   Paires : ${pairCount} fiches`);
 // ===== 5) Tournois (toutes saisons) : status.json + fiches tournoi =====
 const allTournaments = [];
 const upcomingMatches = []; // matchs prévus (non joués) des tournois à venir / en cours
+// Même population, mais avec les noms complets (lastName/firstName/slug) que
+// `teamLite` ne conserve pas : nécessaires à l'appariement avec les cotes. Liste
+// séparée pour ne rien changer à upcoming-matches.json.
+const oddsCandidates = [];
 let tCount = 0, tournamentsTotal = 0, tournamentsDownloaded = 0;
 const byYear = [];
+
+// Joueur tel qu'attendu par lib/odds-match.mjs : le nom de famille et le prénom
+// séparés sont ce qui permet de recoller "Prannoy H. S." à "H. S. PRANNOY".
+const playerForOdds = (p) => ({
+  id: String(p.id), nameDisplay: p.nameDisplay,
+  lastName: p.lastName || null, firstName: p.firstName || null,
+  slug: p.slug || null, countryCode: p.countryCode || null,
+});
 
 const teamLite = (team, seed) => ({
   players: (team?.players || []).map((p) => ({ id: String(p.id), nameDisplay: p.nameDisplay, countryFlagUrl: p.countryFlagUrl })),
@@ -337,6 +350,13 @@ for (const y of years) {
               prob,
               score: interest.score, tags: interest.tags, reasons: interest.reasons,
             });
+            oddsCandidates.push({
+              tmtId: t.id, tournamentName: t.name, year: y,
+              eventName: m.eventName, roundName: m.roundName, matchTime: m.matchTime || null,
+              team1: { players: p1.map(playerForOdds) },
+              team2: { players: p2.map(playerForOdds) },
+              a, b, prob,
+            });
           }
         }
       }
@@ -349,6 +369,65 @@ for (const y of years) {
 await write("status.json", { years, tournaments: allTournaments });
 await write("upcoming-matches.json", { generatedAt: ranking.generatedAt, matches: upcomingMatches });
 console.log(`   Matchs à venir : ${upcomingMatches.length}`);
+
+// ===== Cotes oddsportal : appariement et rapport de vérification =====
+// Étape exploratoire : on produit UNIQUEMENT odds-report.json, destiné à l'audit
+// manuel. Aucune sortie existante n'est modifiée, les cotes n'entrent pas encore
+// dans les prédictions.
+{
+  const oddsDir = join(ROOT, "data", "odds");
+  const files = existsSync(oddsDir)
+    ? (await readdir(oddsDir)).filter((f) => f.endsWith(".json")).sort()
+    : [];
+  const rows = [];
+  for (const f of files) {
+    const { matches } = JSON.parse(await readFile(join(oddsDir, f), "utf8"));
+    rows.push(...(matches || []));
+  }
+
+  const res = matchOdds(oddsCandidates, rows);
+  const names = (team) => (team?.players || []).map((p) => p.nameDisplay).join(" / ");
+  const opSide = (side) => ({ display: side.display, slug: side.slug, iso2: side.iso2 });
+  const base = (r) => ({
+    date: r.date, time: r.time, discipline: r.discipline,
+    tournament: r.tournamentKey, league: r.league, eventId: r.eventId,
+    op1: opSide(r.p1), op2: opSide(r.p2), odd1: r.odd1, odd2: r.odd2,
+  });
+
+  await write("odds-report.json", {
+    generatedAt: new Date().toISOString(),
+    dates: files.map((f) => f.replace(".json", "")),
+    stats: res.stats,
+    matched: res.matched.map((m) => ({
+      ...base(m.odds),
+      tournamentName: m.bwf.tournamentName, roundName: m.bwf.roundName,
+      bwf1: names(m.bwf.team1), bwf2: names(m.bwf.team2),
+      oddsTeam1: m.oddsTeam1, oddsTeam2: m.oddsTeam2,
+      swapped: m.swapped, score: m.score, margin: m.margin, prob: m.bwf.prob,
+    })),
+    ambiguous: res.ambiguous.map((x) => ({
+      ...base(x.odds),
+      candidates: x.candidates.map((c) => ({
+        tournamentName: c.bwf.tournamentName, roundName: c.bwf.roundName,
+        bwf1: names(c.bwf.team1), bwf2: names(c.bwf.team2), score: c.score,
+      })),
+    })),
+    unmatchedOdds: res.unmatchedOdds.map(base),
+    noOdds: res.noOdds.map(base),
+    // Les matchs déjà joués sont attendus en masse (page « aujourd'hui ») : on ne
+    // garde que le compte, la liste n'apprendrait rien.
+    unmatchedBwf: res.unmatchedBwf.map((c) => ({
+      tournamentName: c.tournamentName, discipline: c.eventName, roundName: c.roundName,
+      bwf1: names(c.team1), bwf2: names(c.team2),
+    })),
+  });
+  const s = res.stats;
+  console.log(
+    `   Cotes : ${s.matched} appariées / ${s.matched + s.ambiguous + s.unmatchedOdds} appariables ` +
+      `(${s.matchRate ?? "—"} %), ${s.ambiguous} ambiguës, ${s.unmatchedOdds} orphelines, ` +
+      `${s.noOdds} sans cote, ${s.settled} déjà jouées`
+  );
+}
 
 // ===== 6) summary.json (agrégat multi-années) =====
 const manifest = await store.getManifest();

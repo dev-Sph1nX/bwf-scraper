@@ -537,3 +537,41 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
   .vs-grid { grid-template-columns: 1fr; }
   .vs-mid { padding-top: 0; text-align: center; }
 }
+
+/* ===== Audit des cotes (/odds) ===================================== */
+/* Unité d'audit : le nom BWF empilé au-dessus du nom oddsportal, la cote à
+   droite. Ce format s'empile tel quel sur mobile — pas de tableau large à
+   faire scroller pour comparer deux noms. */
+.oa-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.oa-item { border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2); padding: 10px 12px; }
+
+.oa-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+.oa-disc { font-weight: bold; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1px 7px; }
+.oa-round { font-weight: bold; color: var(--ink); }
+.oa-tmt { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.oa-when { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.oa-flags { display: inline-flex; align-items: center; gap: 6px; }
+.oa-conf { font-weight: bold; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.oa-sides { display: flex; flex-direction: column; gap: 6px; }
+.oa-side { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; padding: 6px 0; border-top: 1px solid var(--line); }
+.oa-side:first-child { border-top: 0; }
+.oa-names { min-width: 0; }
+.oa-bwf { font-size: 13px; font-weight: bold; color: var(--ink); }
+.oa-op { font-size: 12px; color: var(--muted); }
+.oa-slug { margin-left: 6px; font-size: 11px; color: var(--muted); opacity: .75; }
+.oa-noslug { color: var(--accent); opacity: 1; }
+.oa-odd { font-size: 16px; font-weight: bold; font-variant-numeric: tabular-nums; min-width: 52px; text-align: right; }
+.oa-odd.fav { color: var(--accent); }
+
+.oa-cands { margin-top: 8px; border-top: 1px dashed var(--line); padding-top: 8px; font-size: 12px; }
+.oa-cands-t { color: var(--muted); margin-bottom: 4px; }
+.oa-cands ul { margin: 0; padding-left: 18px; }
+.oa-num { font-variant-numeric: tabular-nums; text-align: right; }
+
+@media (max-width: 700px) {
+  .oa-tmt { flex-basis: 100%; white-space: normal; }
+  .oa-odd { font-size: 15px; min-width: 46px; }
+  /* Cibles tactiles : la charte impose 40px mini, .tab n'en faisait que 33. */
+  .tab { min-height: 40px; }
+}
