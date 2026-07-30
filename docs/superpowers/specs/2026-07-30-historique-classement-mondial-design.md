@@ -391,8 +391,29 @@ lignes par discipline, comme `test/fixtures/oddsportal-2026-07-30.json`.
 
 **Top 250 par discipline plutôt que le classement complet.** Le complet pèse 1,5 Mo
 par publication, soit ~90 Mo versionnés dans un repo public — inacceptable. Le top
-250 tient en 16 Mo sur disque et ~3,9 Mo dans `.git` (mesuré), reste lisible et
-diffable en clair, et couvre tous les
+**Profondeur validée par mesure, après coup.** L'ancien `world.json` avait une
+profondeur illimitée (8 157 lignes) ; la série est plafonnée à 1 250. Le passage
+au top 250 fait donc perdre son rang mondial à 1 136 des 1 999 entités Elo
+(56,8 %), ce que ce spec n'avait pas anticipé. Mesure faite sur la population qui
+compte réellement — les **125 matchs à venir**, c'est-à-dire la surface de pari :
+
+| Indicateur | Valeur |
+|---|---|
+| Rang mondial médian des camps | **65** |
+| 90ᵉ centile | 151 |
+| 99ᵉ centile | 397 |
+| Couverture à 250 | **97,6 %** (203/208 camps classés) |
+| Couverture à 500 | 99,5 % |
+
+Les 56,8 % « perdus » sont donc massivement des entités historiques (joueurs ayant
+joué depuis 2024 et qui ne rejoueront pas), pas la surface de pari. Le coût réel
+est de **5 camps sur 208** (2,4 %), typiquement des qualifiés. Et 42 camps n'ont de
+rang à aucune profondeur — paires de double éphémères, jamais classées.
+
+Décision confirmée : **top 250**, sans fichier de profondeur totale en complément.
+
+Le top 250 tient en 16 Mo sur disque et ~3,9 Mo dans `.git` (mesuré), reste lisible
+et diffable en clair, et couvre tous les
 joueurs susceptibles d'entrer en tableau principal sur le World Tour. L'alternative
 gzip (~9 Mo, couverture 100 %) a été écartée : elle rend les diffs git inutilisables
 et impose une décompression au build pour un gain de couverture qui ne sert pas
