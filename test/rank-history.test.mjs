@@ -5,7 +5,13 @@
 
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { entityKeyOf, buildWorldMap, buildPlayerRankHistory } from "../lib/rank-history.mjs";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import {
+  entityKeyOf, buildWorldMap, buildPlayerRankHistory, loadPublications,
+  publicationTotal, savePublication,
+} from "../lib/rank-history.mjs";
 
 const L = (rank, points, players, extra = {}) => ({
   rank, rankPrevious: rank, rankChange: 0, points, tournaments: 10, players, ...extra,
@@ -118,4 +124,81 @@ test("buildPlayerRankHistory trie chronologiquement", () => {
 
 test("buildPlayerRankHistory renvoie un objet vide sans publication", () => {
   assert.deepEqual(buildPlayerRankHistory([]), {});
+});
+
+// --- publicationTotal ------------------------------------------------------
+
+test("publicationTotal somme les lignes de toutes les disciplines", () => {
+  assert.equal(publicationTotal(PUB("2025-06-10", { MS: [L(1, 1, [J(1)])], WS: [] })), 1);
+  assert.equal(publicationTotal(PUB("2025-06-10", { MS: [L(1, 1, [J(1)])], MD: [L(2, 1, [J(2), J(3)])] })), 2);
+});
+
+test("publicationTotal renvoie 0 pour une publication vide ou absente", () => {
+  assert.equal(publicationTotal(PUB("2025-06-10", { MS: [], WS: [], MD: [], WD: [], XD: [] })), 0);
+  assert.equal(publicationTotal({ date: "2025-06-10" }), 0);
+  assert.equal(publicationTotal(null), 0);
+});
+
+// --- savePublication ---------------------------------------------------------
+// Écrit dans un répertoire temporaire (jamais data/rankings) pour ne pas
+// polluer l'archive réelle pendant les tests.
+
+function tmpDir() {
+  return fs.mkdtempSync(path.join(os.tmpdir(), "bwf-rank-history-test-"));
+}
+
+test("savePublication écrit un fichier relisible par loadPublications", async () => {
+  const dir = tmpDir();
+  try {
+    const pub = { publicationId: 4402, date: "2026-07-28", week: 31, year: 2026 };
+    const data = {
+      rankId: 2, depth: 250, fetchedAt: "2026-07-28T00:00:00.000Z",
+      disciplines: { MS: [L(1, 97179, [J(64032)])] },
+    };
+    const ecrite = await savePublication(dir, pub, data);
+    assert.equal(ecrite, true);
+
+    const relues = await loadPublications(dir);
+    assert.equal(relues.length, 1);
+    assert.equal(relues[0].publicationId, 4402);
+    assert.equal(relues[0].date, "2026-07-28");
+    assert.equal(relues[0].week, 31);
+    assert.equal(relues[0].year, 2026);
+    assert.equal(relues[0].rankId, 2);
+    assert.equal(relues[0].depth, 250);
+    assert.equal(relues[0].disciplines.MS[0].rank, 1);
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test("savePublication crée le répertoire s'il n'existe pas", async () => {
+  const parent = tmpDir();
+  const dir = path.join(parent, "rankings");
+  try {
+    const pub = { publicationId: 1, date: "2025-06-10", week: 24, year: 2025 };
+    const data = { rankId: 2, depth: 250, fetchedAt: "2025-06-10T00:00:00.000Z", disciplines: { MS: [L(1, 1, [J(1)])] } };
+    assert.equal(fs.existsSync(dir), false);
+    const ecrite = await savePublication(dir, pub, data);
+    assert.equal(ecrite, true);
+    assert.equal(fs.existsSync(dir), true);
+  } finally {
+    fs.rmSync(parent, { recursive: true, force: true });
+  }
+});
+
+test("savePublication refuse d'écrire une publication vide (0 ligne sur les 5 disciplines)", async () => {
+  const dir = tmpDir();
+  try {
+    const pub = { publicationId: 3849, date: "2025-07-08", week: 27, year: 2025 };
+    const data = {
+      rankId: 2, depth: 250, fetchedAt: "2025-07-08T00:00:00.000Z",
+      disciplines: { MS: [], WS: [], MD: [], WD: [], XD: [] },
+    };
+    const ecrite = await savePublication(dir, pub, data);
+    assert.equal(ecrite, false, "une publication vide n'est pas écrite");
+    assert.deepEqual(await loadPublications(dir), [], "rien n'a été écrit sur le disque");
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
 });
