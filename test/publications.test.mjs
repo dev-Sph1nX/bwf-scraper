@@ -94,6 +94,18 @@ test("validateIndex rejette un trou dans la suite hebdomadaire", () => {
   assert.throws(() => validateIndex(p), /trou/i);
 });
 
+test("validateIndex accepte une suite hebdomadaire contiguë passée dans le désordre", () => {
+  // validateIndex est exportée et appelable seule (le futur mergeIndex de la
+  // tâche 2 pourra lui passer un tableau non trié) : le calcul de continuité
+  // ne doit pas supposer que dates[0]/dates[dates.length-1] sont les bornes.
+  const p = [
+    { publicationId: 2, date: "2025-06-17", week: 25, year: 2025 },
+    { publicationId: 1, date: "2025-06-10", week: 24, year: 2025 },
+    { publicationId: 3, date: "2025-06-24", week: 26, year: 2025 },
+  ];
+  assert.doesNotThrow(() => validateIndex(p));
+});
+
 test("validateIndex rejette une ancre présente avec une mauvaise date", () => {
   const p = normalizeIndex(brut).map((x) =>
     x.publicationId === 3835 ? { ...x, date: "2025-07-08" } : x);
@@ -113,7 +125,8 @@ test("validateIndex liste TOUS les désaccords, pas seulement le premier", () =>
     validateIndex(p);
     assert.fail("aurait dû lever");
   } catch (e) {
-    // la date faussée casse à la fois la suite hebdomadaire et l'ancre
+    // la date faussée crée un doublon (première/dernière date inchangées, donc
+    // la suite hebdomadaire reste satisfaite) et casse l'ancre : deux désaccords
     assert.match(e.message, /ancre/i);
     assert.ok(e.message.split("\n").length > 2, "plusieurs désaccords listés");
   }
