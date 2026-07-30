@@ -37,8 +37,17 @@ jobs:
       # 1) Scrape incrémental de l'année courante (met à jour data/)
       - run: node run-update.mjs
 
-      # 1b) Classement mondial officiel BWF (pour la comparaison Elo)
+      # 1b) Classement mondial officiel BWF (pour la comparaison Elo).
+      # continue-on-error : le script tourne désormais (Chromium + au moins une
+      # requête) à CHAQUE run quotidien, plus seulement 1 jour sur 7 comme avant
+      # cette branche. Une erreur réseau (Cloudflare, timeout, 5xx) ne doit pas
+      # bloquer build-data/le build web/le déploiement ni empêcher l'étape
+      # "Commit data" de committer le travail du scraper du jour : le rattrapage
+      # est déjà géré par le script lui-même (une publication absente est
+      # reprise au run suivant), donc tolérer l'échec ici est sans danger pour
+      # l'archive — alors qu'un blocage coûterait tout le déploiement.
       - run: node fetch-rankings.mjs
+        continue-on-error: true
 
       # 2) Génère les JSON statiques (Elo sur TOUTES les saisons présentes dans data/)
       - run: node build-data.mjs
