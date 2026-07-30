@@ -6,6 +6,7 @@
   "scripts": {
     "update": "node run-update.mjs",
     "fetch-rankings": "node fetch-rankings.mjs",
+    "backfill-rankings": "node backfill-rankings.mjs",
     "build-data": "node build-data.mjs",
     "refresh": "node run-update.mjs && node fetch-rankings.mjs && node scrape-odds.mjs && node build-data.mjs",
     "scrape-odds": "node scrape-odds.mjs",
