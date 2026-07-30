@@ -24,7 +24,11 @@ import { loadInitialRanks } from "./lib/seeds.mjs";
 import { loadPublications } from "./lib/rank-history.mjs";
 import { buildDataset } from "./lib/dataset.mjs";
 import { MODELS, predictAll, commonBase } from "./lib/models.mjs";
-import { evaluate, calibration, overlaps, accuracy, brier, bootstrapCI, upsetByBand } from "./lib/metrics.mjs";
+import { evaluate, calibration, overlaps, accuracy, brier, bootstrapCI, upsetByBand, logLoss, makeRng } from "./lib/metrics.mjs";
+import { featuresOf, FEATURE_KEYS, featureLabel } from "./lib/features.mjs";
+import { fitLogistic, predictLogistic } from "./lib/logistic.mjs";
+import { isProvisional, eloProb } from "./lib/models.mjs";
+import { recalibrate } from "./lib/calibrate.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data", "backtest.json");
@@ -160,6 +164,61 @@ for (let i = 0; i < parDiscipline.length; i++) {
   }
 }
 
+// ---- 6b) Modèle additif : les signaux supplémentaires servent-ils ? --------
+// Chaque signal est pesé sur 2024-2025 puis le modèle est ÉVALUÉ sur 2026, jamais
+// vu par l'ajustement — sans quoi on ne mesurerait que notre capacité à décrire
+// le passé. Un signal dont l'intervalle bootstrap contient zéro est retiré.
+//
+// Ce bloc publie un résultat NÉGATIF, et c'est délibéré : il doit rester
+// revérifiable. Voir la clé `verdict` ci-dessous.
+const utilisables = rows.filter((r) => !isProvisional(r.nA) && !isProvisional(r.nB));
+const appr = utilisables.filter((r) => r.t < "2026-01-01");
+const verif = utilisables.filter((r) => r.t >= "2026-01-01");
+let additif = null;
+
+if (appr.length > 500 && verif.length > 200) {
+  const Xa = appr.map(featuresOf), ya = appr.map((r) => r.won);
+  const plein = fitLogistic(Xa, ya, { keys: FEATURE_KEYS, epochs: 4000, l2: 1e-3 });
+
+  // Intervalle bootstrap de chaque poids : lesquels excluent zéro ?
+  const rng = makeRng(SEED);
+  const tirages = FEATURE_KEYS.map(() => []);
+  for (let k = 0; k < 40; k++) {
+    const ix = Array.from({ length: appr.length }, () => Math.floor(rng() * appr.length));
+    const bm = fitLogistic(ix.map((i) => Xa[i]), ix.map((i) => ya[i]), { keys: FEATURE_KEYS, epochs: 1200, l2: 1e-3 });
+    bm.weights.forEach((w, j) => tirages[j].push(w));
+  }
+  const signaux = FEATURE_KEYS.map((key, j) => {
+    const s2 = tirages[j].slice().sort((x, z) => x - z);
+    const lo = s2[Math.floor(0.025 * s2.length)], hi = s2[Math.floor(0.975 * s2.length)];
+    return { key, label: featureLabel(key), weight: plein.weights[j], lo, hi, kept: (lo > 0 && hi > 0) || (lo < 0 && hi < 0) };
+  });
+
+  // Modèle restreint aux signaux retenus
+  const gardes = signaux.filter((x) => x.kept).map((x) => x.key);
+  const sousEns = (r) => { const f = featuresOf(r); return gardes.map((k) => f[FEATURE_KEYS.indexOf(k)]); };
+  const restreint = fitLogistic(appr.map(sousEns), ya, { keys: gardes, epochs: 4000, l2: 1e-3 });
+
+  const yv = verif.map((r) => r.won);
+  const pElo = verif.map((r) => recalibrate(eloProb(r.eloA, r.eloB), r.disc));
+  const pAdd = verif.map((r) => predictLogistic(restreint, sousEns(r)));
+  const ciE = { accuracy: bootstrapCI(pElo, yv, accuracy, { draws: DRAWS, seed: SEED }), brier: bootstrapCI(pElo, yv, brier, { draws: DRAWS, seed: SEED }) };
+  const ciA = { accuracy: bootstrapCI(pAdd, yv, accuracy, { draws: DRAWS, seed: SEED }), brier: bootstrapCI(pAdd, yv, brier, { draws: DRAWS, seed: SEED }) };
+
+  additif = {
+    trainedOn: { n: appr.length, to: "2025-12-31" },
+    testedOn: { n: verif.length, from: "2026-01-01" },
+    signals: signaux,
+    kept: gardes,
+    reference: { label: "Elo recalibré", accuracy: ciE.accuracy, brier: ciE.brier, logLoss: logLoss(pElo, yv) },
+    additive: { label: "Modèle additif", accuracy: ciA.accuracy, brier: ciA.brier, logLoss: logLoss(pAdd, yv) },
+    separable: !overlaps(ciE.brier, ciA.brier) && !overlaps(ciE.accuracy, ciA.accuracy),
+  };
+  additif.verdict = additif.separable
+    ? (ciA.brier.value < ciE.brier.value ? "le modèle additif améliore la prédiction" : "le modèle additif la dégrade")
+    : "aucun gain démontrable : les intervalles se chevauchent sur la réussite comme sur le Brier";
+}
+
 // ---- 7) Écriture -----------------------------------------------------------
 const rapport = {
   generatedAt: new Date().toISOString(),
@@ -184,6 +243,7 @@ const rapport = {
   calibration: calibElo,
   byDiscipline: parDiscipline,
   indistinguishable,
+  additive: additif,
 };
 
 await mkdir(dirname(OUT), { recursive: true });
@@ -229,4 +289,18 @@ for (const b of calibElo) {
 }
 const eElo = parModele.find((m) => m.key === "elo");
 log(`\nerreur de calibration : ${(eElo.calibrationError * 100).toFixed(1)} pt d'écart moyen`);
+if (additif) {
+  log("\n=== SIGNAUX DU MODÈLE ADDITIF (pesés sur 2024-2025) ===");
+  log("signal                          poids   intervalle        verdict");
+  for (const s2 of additif.signals) {
+    log(s2.label.padEnd(30), s2.weight.toFixed(3).padStart(7),
+        `   [${s2.lo.toFixed(2)} , ${s2.hi.toFixed(2)}]`.padEnd(20),
+        s2.kept ? "retenu" : "RETIRÉ (zéro dans l'intervalle)");
+  }
+  log(`\n=== LE MODÈLE ADDITIF BAT-IL L'ELO ? (sur ${additif.testedOn.n} matchs de 2026) ===`);
+  log(`  ${additif.reference.label.padEnd(16)} ${pc(additif.reference.accuracy.value)}  Brier ${additif.reference.brier.value.toFixed(4)}`);
+  log(`  ${additif.additive.label.padEnd(16)} ${pc(additif.additive.accuracy.value)}  Brier ${additif.additive.brier.value.toFixed(4)}`);
+  log(`  -> ${additif.verdict}`);
+}
+
 log(`\n✅ écrit -> web/public/data/backtest.json`);
