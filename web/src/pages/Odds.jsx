@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import { getJSON } from "../data.js";
+import OddsChart from "../components/OddsChart.jsx";
 import { ROUND_LABEL } from "../components/UpcomingMatch.jsx";
 
 // Page d'audit de l'appariement cotes oddsportal <-> matchs BWF.
@@ -113,9 +114,12 @@ export default function Odds() {
   const [data, setData] = useState(null);
   const [tab, setTab] = useState("matched");
   const [disc, setDisc] = useState("all");
+  const [hist, setHist] = useState(null);
+  const [ouvert, setOuvert] = useState(null);   // eventId du graphe déplié
 
   useEffect(() => { setTitle("Audit des cotes"); }, [setTitle]);
   useEffect(() => { getJSON("odds-report.json").then(setData).catch(() => setData(false)); }, []);
+  useEffect(() => { getJSON("odds-history.json").then(setHist).catch(() => setHist(false)); }, []);
 
   // Taux d'appariement par discipline : c'est l'indicateur qui décide si on peut
   // intégrer les cotes au reste de l'app (les doubles sont les plus risqués).
@@ -213,6 +217,67 @@ export default function Odds() {
           </div>
         )}
       </div>
+
+      {/* Évolution des cotes dans le temps — l'historique commence au premier
+          relevé append-only, il se remplit à chaque passage du scraper. */}
+      {hist && hist.series?.length > 0 && (
+        <div className="card">
+          <h2>Évolution des cotes</h2>
+          <p className="lead">
+            <b>{hist.stats.withOdds}</b> matchs suivis sur <b>{hist.runs.length}</b> relevé
+            {hist.runs.length > 1 ? "s" : ""}, dont <b>{hist.stats.moved}</b> dont la cote a bougé.
+            Commission moyenne du bookmaker : <b>{(hist.stats.meanOverround * 100).toFixed(1)} %</b>.
+          </p>
+          {hist.stats.moved === 0 && (
+            <p className="hint">
+              Aucun mouvement encore observé : l'historisation vient de démarrer et il
+              faut au moins deux relevés d'un même match pour voir une évolution. Le
+              scraper tourne une fois par jour.
+            </p>
+          )}
+          <div className="table-scroll">
+            <table>
+              <thead>
+                <tr><th>Match</th><th>Disc.</th><th>Ouverture</th><th>Dernière</th><th>Dérive</th><th>Relevés</th><th></th></tr>
+              </thead>
+              <tbody>
+                {hist.series
+                  .filter((s) => disc === "all" || s.discipline === disc)
+                  .slice(0, 40)
+                  .map((s) => (
+                    <tr key={s.eventId}>
+                      <td>
+                        <b>{s.p1?.display}</b> <span className="muted">vs</span> {s.p2?.display}
+                        <br /><span className="muted">{s.date}</span>
+                      </td>
+                      <td>{s.discipline}</td>
+                      <td>{s.opening ? `${s.opening.odd1} / ${s.opening.odd2}` : "—"}</td>
+                      <td>{s.closing ? `${s.closing.odd1} / ${s.closing.odd2}` : "—"}</td>
+                      <td>
+                        {s.driftP1 == null ? "—" : (
+                          <span className={`form ${s.driftP1 > 0.001 ? "up" : s.driftP1 < -0.001 ? "down" : "flat"}`}>
+                            {s.driftP1 >= 0 ? "+" : ""}{(s.driftP1 * 100).toFixed(1)} pt
+                          </span>
+                        )}
+                      </td>
+                      <td>{s.readings}</td>
+                      <td>
+                        <button className="range-btn" onClick={() => setOuvert(ouvert === s.eventId ? null : s.eventId)}>
+                          {ouvert === s.eventId ? "Masquer" : "Voir"}
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
+          {ouvert && (() => {
+            const s = hist.series.find((x) => x.eventId === ouvert);
+            if (!s) return null;
+            return <OddsChart serie={s} label1={s.p1?.display} label2={s.p2?.display} />;
+          })()}
+        </div>
+      )}
 
       <div className="tabs">
         {TABS.map((t) => (
