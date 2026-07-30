@@ -35,6 +35,11 @@ if (!years.length) years.push(Number(process.argv[2]) || new Date().getFullYear(
 const latestYear = years[years.length - 1];
 console.log(`Génération multi-années : ${years.join(", ")}`);
 
+// On repart d'un dossier propre : les dérivés sont tous régénérés ici.
+// ATTENTION : cela supprime AUSSI backtest.json, produit par backtest.mjs qui est
+// un script séparé. Il doit donc toujours être relancé APRÈS build-data, sans quoi
+// la page /fiabilite reste vide. C'est câblé dans `npm run refresh` et dans le
+// workflow ; ce commentaire est là pour qui ajouterait un autre producteur.
 await rm(OUT, { recursive: true, force: true });
 
 // ===== 1) Elo sur tout l'historique (seedé par le classement mondial initial) =====

@@ -52,6 +52,12 @@ jobs:
       # 2) Génère les JSON statiques (Elo sur TOUTES les saisons présentes dans data/)
       - run: node build-data.mjs
 
+      # 2b) Backtest : baselines, calibration, prévisibilité par discipline.
+      # APRÈS build-data, impérativement : build-data.mjs fait un rm -rf de
+      # web/public/data/ avant de régénérer, donc l'inverse effacerait ce rapport
+      # et la page /fiabilite resterait vide.
+      - run: node backtest.mjs --quiet
+
       # 3) Build de l'app React
       - name: Build web
         working-directory: web

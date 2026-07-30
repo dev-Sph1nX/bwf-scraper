@@ -5,6 +5,11 @@
 Ce document est la liste ordonnée des chantiers. Les dépendances sont **strictes** :
 chaque lot exige le précédent, et l'ordre n'est pas un choix de confort.
 
+> **Tout ce qui a été mesuré est consigné dans [`journal-des-mesures.md`](journal-des-mesures.md)**,
+> avec les chiffres, la méthode et le moyen de refaire chaque mesure — résultats
+> négatifs inclus. À lire avant de proposer un facteur : plusieurs ont déjà été
+> testés et écartés, preuves à l'appui.
+
 ## Les 5 couches
 
 Toute idée entrante se range dans l'une de ces couches. Les confondre est la

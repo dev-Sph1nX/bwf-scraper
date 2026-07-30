@@ -1,0 +1,421 @@
+# Journal des mesures
+
+**Dernière mise à jour :** 2026-07-30
+
+Ce document consigne **tout ce qui a été mesuré**, avec les chiffres, la méthode et
+le moyen de le refaire. Il existe pour une raison précise : ne pas retester ce qui
+l'a déjà été, et ne pas reproposer de bonne foi un facteur déjà écarté.
+
+Les résultats **négatifs y ont autant de place que les positifs** — ce sont eux
+qu'on oublie et qu'on refait.
+
+## Comment refaire les mesures
+
+```bash
+npm run backtest        # baselines, calibration, prévisibilité par discipline
+npm test                # 249 tests, dont les garde-fous méthodologiques
+npm run build-data      # régénère les données de l'app
+```
+
+Le rapport complet est écrit dans `web/public/data/backtest.json` et affiché sur
+la page `/fiabilite`. Tous les intervalles de confiance sont calculés par bootstrap
+à **graine fixe** : deux exécutions donnent exactement les mêmes bornes.
+
+## La méthode de validation d'un facteur
+
+Établie avec le propriétaire du projet. Un facteur doit franchir **trois** étapes,
+et sauter la première ou la deuxième conduit à des erreurs opposées :
+
+| Étape | Question | Outil |
+|---|---|---|
+| 1. **Isolation** | ce facteur porte-t-il de l'information ? | `lib/screen.mjs` |
+| 2. **Ajustement conjoint** | en apporte-t-il **en plus des autres** ? | `lib/logistic.mjs` |
+| 3. **Hors échantillon** | le gain survit-il sur des données neuves ? | réglage 2024-2025, vérification 2026 |
+
+**Pourquoi l'étape 1 est indispensable.** Un test conditionnel — comparer le
+résultat observé à la probabilité prédite par l'Elo — peut **masquer** un effet
+réel, parce que celui-ci se noie dans la variance d'un échantillon aux écarts de
+niveau hétérogènes. L'isolation se fait donc à **niveau contrôlé** : on ne garde
+que les matchs entre entités d'Elo quasi identique, la référence devient un 50 %
+propre, et aucune hypothèse sur la justesse de la probabilité Elo n'est requise.
+
+**Pourquoi l'étape 2 est indispensable.** Deux facteurs peuvent être excellents
+séparément et porter la **même** information. Les pondérer tous les deux revient à
+la compter deux fois. La régression donne à chacun son poids *marginal*, ce qu'il
+ajoute une fois les autres connus.
+
+**Pourquoi l'étape 3 tranche.** Sélectionner les facteurs *est déjà* une forme
+d'ajustement. Screener et régler sur les mêmes données surapprend deux fois.
+
+---
+
+# 1. Le modèle : ce qui prédit
+
+## 1.1 Comparaison des méthodes
+
+Backtest **en marche avant** sur 13 370 matchs (2024-01-09 → 2026-07-30) : chaque
+match est prédit avec l'état des connaissances **d'avant ce match**.
+
+| Méthode | Réussite | Brier | n |
+|---|---|---|---|
+| Hasard | 50,0 % | 0,250 | 13 370 |
+| Tête de série | 63,5 % | 0,365 | 951 |
+| **Classement mondial officiel** | **68,7 %** | 0,313 | 11 512 |
+| **Elo (le nôtre)** | **71,8 %** | **0,189** | 8 798 |
+
+Sur 2026 seul, jamais utilisé pour aucun réglage : **71,4 %**.
+
+**Duel décisif** — sur les 8 750 matchs où les deux se prononcent, l'Elo bat le
+classement mondial de **+3,1 points**, intervalles de confiance **disjoints**.
+L'écart de Brier est plus net encore (0,189 contre 0,313), parce que le classement
+désigne un vainqueur sans dire à quel point il est sûr.
+
+**Non départageables** : « tête de série » et « classement mondial » (63,9 % contre
+64,5 % sur 925 matchs, intervalles qui se chevauchent). Logique — le placement des
+têtes de série *est* dérivé du classement.
+
+**Couverture** : l'Elo s'abstient quand une entité a moins de 5 matchs joués, soit
+34 % des rencontres. Il n'y a pas de pronostic sur celles-là.
+
+## 1.2 Comparaison au marché — la seule qui décide de gagner de l'argent
+
+Sur **47 matchs** du Taipei Open 2026 appariés à leur cote :
+
+| | Réussite | Brier |
+|---|---|---|
+| Bookmaker | 68,1 % | **0,1923** |
+| Notre Elo | 68,1 % | 0,2064 |
+
+Même réussite, mais le bookmaker est **mieux calibré**. Et il prend **9,5 % de
+commission** (overround mesuré) : pour gagner, il ne suffit pas de l'égaler.
+
+**n = 47 : ce n'est pas un verdict**, l'intervalle serait énorme. Et la mesure est
+optimiste pour nous — ces cotes sont les dernières observées, mais notre Elo a été
+calculé avec le recul. Le test propre exige de figer la prédiction *avant* le match
+et de la comparer à la cote de clôture : c'est l'objet de l'historisation (§4).
+
+## 1.3 Calibration : le modèle est trop TIMIDE
+
+Sur les 10 tranches de probabilité, **les 10 vont dans le même sens** : le favori
+gagne plus souvent qu'annoncé. Biais moyen **+3,0 points**.
+
+| Annoncé | Observé |
+|---|---|
+| 52 % | 57 % |
+| 72 % | 78 % |
+| 92 % | 97 % |
+
+Présent sur les trois années (+2,94 / +3,31 / +2,50 pt), donc pas un artefact de
+démarrage.
+
+**Correction retenue** (`lib/calibrate.mjs`) : étirement des log-cotes, appliqué
+**seulement là où le défaut est démontré**. Facteur ajusté par année puis borné par
+bootstrap ; seuls ceux dont l'intervalle **exclut 1** sont retenus :
+
+| Discipline | 2024 | 2025 | 2026 | IC bootstrap | Retenu |
+|---|---|---|---|---|---|
+| Simple dames | 1,42 | 1,53 | 1,34 | [1,38 ; 1,66] | **oui (1,50)** |
+| Double dames | 1,38 | 1,27 | 1,37 | [1,14 ; 1,52] | **oui (1,31)** |
+| Double mixte | 1,19 | 1,16 | 0,92 | [1,02 ; 1,32] | non — instable |
+| Double messieurs | 1,02 | 1,03 | 1,19 | [0,93 ; 1,16] | non — 1 est dedans |
+| Simple messieurs | 1,13 | 0,97 | 0,84 | [0,88 ; 1,18] | non — 1 est dedans |
+
+**Constat de fond : la sous-confiance ne concerne que les disciplines féminines.**
+
+Effet : erreur de calibration **2,98 → 1,20 pt** (−60 %), réussite **inchangée au
+centième** (l'étirement ne change jamais qui est favori — un test le verrouille).
+
+**Un facteur global unique était contre-productif** : il dégradait la calibration
+(3,00 → 3,13 pt) en moyennant des besoins opposés.
+
+**Pourquoi ça compte alors que le gain de précision est nul.** Parier est une
+décision à **seuil**. Un favori sous-estimé implique un outsider surestimé
+d'autant, et le signe de la valeur attendue s'inverse : un outsider à la cote 4,00
+a besoin de 25 % pour valoir le pari ; annoncer 28 % au lieu de 22 % transforme un
+pari perdant en « opportunité ». C'est un prérequis de **sécurité**, pas une
+amélioration du modèle.
+
+## 1.4 Réglage des paramètres de l'Elo : aucun gain
+
+Les 5 paramètres avaient été choisis à la main au démarrage et jamais évalués.
+Balayage avec sélection sur 2024-2025 et vérification sur 2026 :
+
+| Paramètre | Actuel | Meilleur sur la sélection | Effet sur 2026 |
+|---|---|---|---|
+| `scale` (échelle Elo→proba) | 400 | 300 | réussite **−0,20 pt** |
+| `k` | 32 | 48 | réussite **−0,48 pt** |
+| `threeSetMultiplier` | 0,85 | 1,0 | réussite −0,12 pt |
+| `kProvisional` | 48 | 80 | réussite +0,04 pt |
+| **Combinaison** | | | **+0,00 pt**, calibration 3,02 → 3,45 pt |
+
+Le log loss s'améliore sur la sélection (0,5607 → 0,5550) mais **ne se transfère
+pas**. Signature du surapprentissage. **Valeurs actuelles conservées.**
+
+À noter : `threeSetMultiplier` optimal vaut **1,0**, soit *aucune* décote des
+victoires en 3 manches. L'hypothèse de départ du projet (« un 2-1 informe moins
+qu'un 2-0 ») n'est pas soutenue par les données — mais l'effet sur 2026 étant nul,
+rien ne justifie de changer.
+
+---
+
+# 2. Les facteurs testés
+
+## 2.1 Criblage en isolation, à niveau contrôlé
+
+Trois fenêtres d'écart d'Elo. Un facteur qui ne dépasse pas 50 % de façon
+significative ne porte aucune information exploitable.
+
+| Facteur | < 30 | < 50 | < 80 | Verdict |
+|---|---|---|---|---|
+| Fraîcheur, écart ≥ 20 min | **56,0 %** | **57,2 %** | **55,6 %** | ✅ retenu |
+| Repos (moins de jours d'arrêt) | **55,6 %** | **55,1 %** | **55,4 %** | ✅ retenu |
+| Fraîcheur (tout écart) | **54,7 %** | **54,1 %** | **53,1 %** | ✅ retenu |
+| Classement mondial | **53,0 %** | **53,4 %** | **54,4 %** | ✅ retenu |
+| Forme récente | 48,7 % | 50,4 % | 51,4 % | ❌ écarté |
+| Face-à-face | 46,6 % | 50,4 % | 52,3 % | ❌ écarté |
+| Tête de série | 54,4 % | 50,4 % | 54,2 % | ❌ écarté |
+| Expérience (plus de matchs joués) | 49,8 % | 50,0 % | 50,2 % | ❌ écarté |
+
+**Deux enseignements majeurs.**
+
+**La forme récente et le face-à-face ne prédisent rien à niveau égal** — 48,7 % et
+46,6 % sur les matchs les plus serrés, donc *sous* le hasard. Ils ne
+« fonctionnaient » que par leur corrélation au niveau, que l'Elo dit déjà mieux.
+⚠️ **L'app les affiche pourtant comme des indices utiles** (forme sur la fiche
+joueur, alerte H2H dans le prédicteur) : à revoir.
+
+**Contrôle de validité de la méthode** : l'« expérience », qu'on n'attendait pas
+prédictive, ressort à 49,8 / 50,0 / 50,2 %. La méthode ne fabrique pas de faux
+signaux.
+
+## 2.2 Ajustement conjoint — poids marginaux
+
+Ajustés sur 6 359 matchs (2024-2025), intervalles par bootstrap :
+
+| Variable | Poids marginal | Intervalle | Verdict |
+|---|---|---|---|
+| Écart Elo | **1,296** | [1,19 ; 1,42] | ✅ |
+| Fraîcheur **à seuil** (≥ 20 min) | **0,111** | [0,04 ; 0,23] | ✅ |
+| Repos | **−0,087** | [−0,14 ; −0,02] | ✅ |
+| Forme récente | 0,136 | [0,09 ; 0,19] | ⚠️ voir ci-dessous |
+| Face-à-face | 0,056 | [0,03 ; 0,13] | ⚠️ voir ci-dessous |
+| Fraîcheur (écart continu) | −0,030 | [−0,13 ; 0,06] | ❌ redondante |
+| Classement mondial (log) | −0,001 | [−0,12 ; 0,15] | ❌ redondant |
+| Têtes de série | 0,011 | [−0,02 ; 0,06] | ❌ redondant |
+
+⚠️ **Forme et face-à-face passent l'étape 2 mais échouent l'étape 1.** Leur poids
+marginal est significatif, et pourtant le criblage à niveau contrôlé les donne
+*sous* le hasard (48,7 % et 46,6 %). C'est le cas d'école qui justifie de faire
+**les deux** tests : la régression capte leur corrélation au niveau, que
+l'isolation démasque. Ils sont donc écartés.
+
+**Le classement mondial n'apporte rien au-delà de l'Elo.** Seul, il prédit à
+68,7 % ; ajouté à l'Elo, sa contribution marginale est indiscernable de zéro.
+
+**Le signe du repos est négatif** : l'inactivité nuit. Cela confirme l'intuition de
+départ du propriétaire (« faire baisser l'Elo quand on ne joue pas ») — mais comme
+signal séparé, pas comme décote de la note.
+
+**C'est la forme à SEUIL qui survit, pas la proportionnelle** : l'effet est un
+palier, pas une progression (cf. §2.4).
+
+## 2.3 Vérification hors échantillon : NON DÉPARTAGEABLE
+
+Sur 2 439 matchs de 2026 jamais vus par l'ajustement :
+
+| | Réussite | Brier |
+|---|---|---|
+| Elo recalibré | **71,4 %** | **0,1899** |
+| Modèle additif | 71,0 % | 0,1902 |
+
+Non départageable sur les deux métriques. Et **aucun sous-ensemble ne gagne** :
+
+| Sous-ensemble | n | Brier |
+|---|---|---|
+| Fraîcheur active | 699 | 0,1962 → 0,1968 ❌ |
+| Fraîcheur active **et** match serré | 329 | 0,2385 → 0,2361 ❌ |
+| Matchs serrés | 1 078 | 0,2373 → 0,2360 ❌ |
+
+**L'arithmétique explique tout** : la fraîcheur n'est active que sur **29 %** des
+matchs, **13 %** en croisant avec « match serré ». Un effet de 2 points sur 13 %
+des matchs pèse **0,26 point** sur l'ensemble — il faudrait environ **dix fois
+plus** de matchs de vérification pour le distinguer de zéro.
+
+**Conclusion : l'Elo recalibré reste le meilleur prédicteur disponible.** Les
+facteurs sont réels mais trop rares pour être exploitables.
+
+## 2.4 La fatigue, en détail
+
+Investigation approfondie, plusieurs mesures successives.
+
+**L'écart de charge se construit bien avec les tours** :
+
+| Tour | Matchs | Écart nul | Écart médian | ≥ 20 min |
+|---|---|---|---|---|
+| 1er match | 3 698 | **100 %** | 0 | 0 % |
+| 2e match | 2 477 | 2 % | 16 min | 43 % |
+| 3e match | 1 456 | 1 % | 25 min | 60 % |
+| 4e match | 768 | 1 % | 31 min | 66 % |
+| 5e match | 379 | 1 % | 35 min | 71 % |
+
+**Mais l'effet ne suit pas** : significatif uniquement au 2e match (+4,6 pt,
+[1,9 ; 6,9]), puis +1,2 / +2,9 / −0,9 pt. **L'effet est le plus fort là où l'écart
+est le plus petit** — le contraire d'une relation dose-effet.
+
+**Pas de relation dose-effet.** Régression sur les 5 019 matchs avec écart : pente
+**0,55 pt par 30 min**, intervalle **[−0,94 ; 2,06]** — zéro dedans. Détail par
+tranche erratique : −0,2 / +2,5 / +3,3 / −1,6 / +3,5 / −1,0.
+
+**Pousser le seuil détruit l'échantillon** : ≥120 min d'écart ne concerne que
+**40 matchs** sur 13 370. Structurel — dans un tableau à élimination directe, les
+deux joueurs ont disputé le même nombre de tours (88,7 % des cas), l'écart ne vient
+que de la durée.
+
+**Le nombre de matchs joués n'est pas mesurable** : 991 matchs seulement avec un
+écart (11,3 %), effet +1,8 pt [−0,6 ; 4,5]. Il faudrait ~2 000-2 500 matchs.
+
+**Simple contre double : hypothèse non soutenue.** Double +3,2 pt [0,9 ; 5,6]
+significatif, simple +2,2 pt [−0,4 ; 4,7] non — mais **les intervalles se
+chevauchent largement**, les deux ne sont pas départageables.
+
+**Le taux brut est trompeur.** À partir du 3e match, le plus frais gagne 55 à 60 %
+du temps — mais **l'Elo l'attendait déjà** (59,5 % observé contre 59,6 % prédit).
+Le plus frais est aussi le plus fort : Elo moyen **1652 contre 1580**, et il est le
+mieux noté dans **68 %** des cas. Il gagne parce qu'il est meilleur, pas parce
+qu'il est frais.
+
+**Le critère seul vaut 55,7 %** contre 71,2 % pour « le mieux noté », sur les mêmes
+matchs. Et surtout : dans les **42 %** de matchs où les deux critères désignent des
+joueurs **différents**, la fraîcheur a raison **31,7 %** du temps contre **68,3 %**
+pour l'Elo. Elle n'a raison que quand elle est d'accord avec l'Elo — donc quand
+elle n'apporte rien.
+
+**Ce qui est malgré tout établi** (isolation à niveau contrôlé) : à niveau égal, le
+plus frais gagne **54,9 à 57,2 %** au lieu de 50 %. L'effet existe, il est juste
+inexploitable en agrégat.
+
+## 2.5 Facteur écarté sur décision, vérification faite
+
+**« L'adversaire sortait d'un 3 manches »** sortait **premier** du criblage
+(57,5 / 57,3 / 55,6 %). Écarté sur décision du propriétaire, après vérification :
+
+- 93 % d'accord avec « fraîcheur ≥ 20 min » (330 cas sur 355)
+- ses 113 matchs propres donnent 56,6 % **[46,9 ; 65,5]** — non significatif
+
+Ce n'était pas un signal distinct : un match qui part au 3e set est un match long.
+
+**Test discriminant fatigue / information** : au 2e tour, sur 692 matchs à écart
+≥ 20 min, la répartition est **89 %** « frais 2-0 / fatigué 2-1 », 7 % « les deux
+2-0 », 5 % « les deux 2-1 », et **0 %** de cas inverse. Le cas qui isolerait la
+fatigue pure (marge identique, durée différente) ne compte que 45 matchs, et le
+cas contradictoire **n'existe jamais**. Les deux explications sont **collinéaires
+par construction** : impossible de les départager avec ces données.
+
+---
+
+# 3. Prévisibilité par discipline
+
+Mesurée **à information constante** : le favori est toujours celui que l'Elo
+simple désigne, pour que les disciplines soient comparables entre elles.
+
+| Discipline | Brier | Le favori gagne | Surprises | n |
+|---|---|---|---|---|
+| **Simple dames** | **0,168 ± 0,008** | 76,0 % | 24,0 % | 2 038 |
+| Double dames | 0,172 ± 0,009 | 76,7 % | 23,3 % | 1 363 |
+| Double mixte | 0,186 ± 0,010 | 72,3 % | 27,7 % | 1 519 |
+| Double messieurs | 0,198 ± 0,008 | 69,9 % | 30,1 % | 1 642 |
+| **Simple messieurs** | **0,214 ± 0,007** | 66,0 % | 34,0 % | 2 236 |
+
+**Non départageables** (intervalles qui se chevauchent) : WS/WD, WD/XD, XD/MD. Il
+serait abusif de les traiter différemment dans le modèle. Seul **MS** se distingue
+nettement.
+
+**L'hypothèse de départ était à moitié fausse.** Le propriétaire supposait « XD le
+plus stable, MS le moins ». MS est bien le moins prévisible — mais le plus stable
+est le **simple dames**, pas le double mixte (3e).
+
+## 3.1 Décomposition par niveau de confiance
+
+Le taux de surprise global mélange deux phénomènes : un match donné à 51 % y compte
+autant qu'un match donné à 95 %.
+
+| Discipline | Serrés 50-60 % | Nets 60-75 % | **Francs 75-90 %** | Écrasants 90 %+ |
+|---|---|---|---|---|
+| Simple dames | 41,4 % | 25,4 % | **10,9 %** | 1,8 % |
+| Double dames | 35,8 % | 25,8 % | **13,2 %** | 4,4 % |
+| Double mixte | 43,5 % | 29,1 % | **18,0 %** | 3,6 % |
+| Double messieurs | 43,6 % | 31,7 % | **17,0 %** | 3,6 % |
+| Simple messieurs | 43,4 % | 34,2 % | **20,9 %** | 2,9 % |
+
+**Sur les matchs serrés, toutes les disciplines se tiennent** (41-44 %) : un
+pile-ou-face reste un pile-ou-face, cette colonne ne distingue rien.
+
+**C'est la colonne « francs » qui départage** : 10,9 % contre 20,9 %, presque le
+double. Là on ne peut plus invoquer l'indécision du modèle.
+
+Et MS a **35 %** de matchs serrés contre 25-29 % ailleurs : il cumule un plateau
+plus homogène **et** plus de surprises à confiance égale.
+
+---
+
+# 4. Historisation des cotes
+
+**Démarrée le 2026-07-30.** Aucun historique antérieur n'existe — les cotes du
+passé ne sont pas récupérables.
+
+**Stockage** : `data/odds/runs/<horodatage>.json`, un fichier par passage, jamais
+réécrit. L'append-only est structurel : un nom horodaté ne peut pas entrer en
+collision.
+
+**Mesuré à ce jour** : commission du bookmaker **9,5 %** en moyenne (overround).
+
+**Deux défauts corrigés :**
+
+1. `matchOdds` écartait les matchs joués **avant** de tenter l'appariement, donc
+   jetait les cotes de clôture — la donnée la plus précieuse du projet.
+2. Le drapeau `settled` d'oddsportal est une propriété **de l'instant du relevé**,
+   traitée comme une vérité intemporelle : un match scrapé la veille reste marqué
+   « à venir » après avoir été joué. Corrigé en faisant autorité sur nos données.
+   Cotes classées à tort « orphelines » : **21 → 1**.
+
+**Ce que ça débloquera** : la comparaison à la cote de clôture, seul étalon qui
+dise si le modèle peut rapporter. Il faut au moins deux relevés d'un même match
+pour voir un mouvement — donc quelques jours de scraping.
+
+---
+
+# 5. Abandonné définitivement
+
+| Piste | Raison |
+|---|---|
+| **Arbitrage multi-bookmakers** | la source ne fournit qu'une cote **agrégée** par côté, sans opérateur nommé. La formule de détection produirait des opportunités **fantômes** (cotes non simultanées, limites de mise ignorées). Piège actif, pas raccourci imparfait. |
+| **Avantage du gaucher** | aucune donnée de latéralité dans les 13 champs joueur de l'API BWF. |
+| **Style de jeu** | `lastPointWinner` et `serve` sont **toujours `null`** : pas de point par point. |
+| **Météo / conditions d'air** | lieu et dates présents pour 100 % des tournois, mais sans coordonnées. Géocodage + API externe pour un signal marginal. |
+| **Glicko-2** (repoussé, pas abandonné) | proposé pour corriger la surconfiance sur les joueurs peu actifs. Or le défaut mesuré est **l'inverse** (sous-confiance). Reste utile pour afficher un intervalle, mais n'est plus prioritaire. |
+| **Panneau « POURQUOI » à 5 signaux** | les signaux ne battent pas l'Elo (§2.3). Un panneau attribuant des points à des signaux sans valeur prédictive produirait de la **confiance sans fondement** — pire qu'aucune explication. |
+
+---
+
+# 6. Erreurs commises, et ce qu'elles ont appris
+
+Consignées parce qu'elles sont instructives et qu'elles pourraient se répéter.
+
+| Erreur | Détection | Leçon |
+|---|---|---|
+| Conclure que la fraîcheur ne valait rien | criblage à niveau contrôlé | un test conditionnel peut **masquer** un effet réel |
+| Retenir forme et face-à-face (poids « significatifs » 0,136 et 0,055) | criblage à niveau contrôlé | un poids significatif peut n'être que de la corrélation au niveau |
+| Annoncer « 3 points à récupérer » via la recalibration | mesure du gain réel | erreur de calibration ≠ gain de performance |
+| Variable de fraîcheur **linéaire** | mesure par tranches | l'effet est un **palier**, pas une proportion |
+| Variable de fraîcheur **globale** | duels par sous-ensemble | l'effet se concentre sur les matchs serrés |
+| Taux de surprise global | question du propriétaire | mélangeait pile-ou-face et vraies surprises |
+| `process.exit()` dans un `try` | revue de code | saute le `finally`, laissait Chromium orphelin 6 j/7 |
+| `team1seed` stocké en **chaîne** | test de type | `"10" < "9"` en lexicographique aurait inversé le baseline |
+| Fenêtre de découverte `+7…+30` | interception de l'API | les écarts réels vont de **4 à 50** |
+| `marginMultiplier` hors de `computeElo` | contrôle d'effet | surcharger le paramètre restait **sans effet** |
+
+**Le fil commun** : chaque erreur a été trouvée par une **mesure**, jamais par
+relecture. D'où les garde-fous en tests — notamment celui qui vérifie qu'un facteur
+sans lien avec le résultat **ne ressort pas** (`test/screen.test.mjs`), et le test
+anti-fuite du jeu de données (`test/dataset-leak.test.mjs`), le seul dont l'échec
+serait invisible.

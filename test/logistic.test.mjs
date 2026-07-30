@@ -197,6 +197,40 @@ test("designMatrix rend une matrice alignée avec la cible", () => {
   assert.equal(X[0].length, FEATURE_KEYS.length);
 });
 
+test("l'ORDRE de FEATURES correspond au tableau renvoyé par featuresOf", () => {
+  // Une désynchronisation attribuerait silencieusement le poids d'une variable à
+  // une autre — l'erreur la plus grave possible ici, et invisible sans ce test.
+  // On isole chaque variable : une ligne qui ne fait varier qu'elle doit produire
+  // un tableau où SEULE sa position est non nulle.
+  const cas = {
+    elo: L({ eloA: 1900, eloB: 1500 }),
+    form: L({ formA: 50, formB: 0 }),
+    h2h: L({ h2hA: 3, h2hB: 0 }),
+    fresh: L({ loadA: 0, loadB: 10 }),     // 10 min : sous le seuil de fresh20
+    rest: L({ daysOffA: 10, daysOffB: 50 }),
+    bwf: L({ bwfRankA: 5, bwfRankB: 50 }),
+    seed: L({ seedA: 1, seedB: 8 }),
+  };
+  for (const [key, row] of Object.entries(cas)) {
+    const f = featuresOf(row);
+    const i = FEATURE_KEYS.indexOf(key);
+    assert.ok(Math.abs(f[i]) > 1e-9, `${key} doit être non nul en position ${i}, obtenu ${f[i]}`);
+    f.forEach((v, j) => {
+      if (j !== i) assert.ok(Math.abs(v) < 1e-9, `${key} : la position ${j} (${FEATURE_KEYS[j]}) devrait être nulle, obtenu ${v}`);
+    });
+  }
+});
+
+test("fresh20 ne s'active qu'au-delà du seuil, indépendamment de fresh", () => {
+  const i20 = FEATURE_KEYS.indexOf("fresh20");
+  const iC = FEATURE_KEYS.indexOf("fresh");
+  const sous = featuresOf(L({ loadA: 0, loadB: 15 }));
+  const au = featuresOf(L({ loadA: 0, loadB: 40 }));
+  assert.equal(sous[i20], 0, "15 min : sous le seuil");
+  assert.equal(au[i20], 1, "40 min : au-dessus, et normalisé à 1");
+  assert.ok(au[iC] > sous[iC], "la variable continue, elle, croît avec l'écart");
+});
+
 test("chaque variable a un libellé lisible", () => {
   for (const k of FEATURE_KEYS) {
     assert.ok(featureLabel(k) && featureLabel(k) !== k, `libellé manquant pour ${k}`);
