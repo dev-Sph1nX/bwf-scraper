@@ -904,6 +904,8 @@ git commit -m "feat(rankings): fetchPublication avec profondeur et variations de
 d'attente fait perdre définitivement une publication récupérable. Le commit de
 l'étape 8 n'est pas optionnel.
 
+**Piège Node à ne pas reproduire.** Un `process.exit()` placé dans un `try` **ne déroule pas la pile** et saute donc le `finally` — ici `await client.close()`, qui ferme le Chromium de Playwright. Ce plan contenait initialement cette erreur ; les deux scripts sortent désormais du `try` par un `if / else` et laissent l'exécution atteindre naturellement le `finally`.
+
 - [ ] **Step 1 : Écrire le script**
 
 Créer `backfill-rankings.mjs` :
@@ -961,9 +963,12 @@ try {
   await saveIndex(INDEX_PATH, index);
   console.log(`   ✅ index écrit -> ${INDEX_PATH} (${fusion.length} publications)`);
 
+  // Pas de sortie anticipée ici : un process.exit() dans un try ne déroule pas
+  // la pile et sauterait le finally ci-dessous (donc client.close()).
   if (INDEX_ONLY) {
     console.log("--index : arrêt après l'index.");
-    process.exit(0);
+  } else {
+    // ... le téléchargement des publications manquantes va dans ce bloc else ...
   }
 
   // ---- 2) Téléchargement des publications manquantes ---------------------
@@ -1118,6 +1123,8 @@ trois semaines au lieu de les perdre définitivement.
 L'idempotence vient de l'existence du fichier `data/rankings/<date>.json`, donc de
 l'identité BWF elle-même — aucun horodatage d'exécution n'intervient.
 
+**Piège Node à ne pas reproduire.** Un `process.exit()` placé dans un `try` **ne déroule pas la pile** et saute donc le `finally` — ici `await client.close()`, qui ferme le Chromium de Playwright. Ce plan contenait initialement cette erreur ; les deux scripts sortent désormais du `try` par un `if / else` et laissent l'exécution atteindre naturellement le `finally`.
+
 - [ ] **Step 1 : Réécrire le script**
 
 Remplacer intégralement `fetch-rankings.mjs` :
@@ -1167,11 +1174,14 @@ try {
 
   const manquantes = fusion.filter((p) => FORCE || !existsSync(join(DIR, `${p.date}.json`)));
 
+  // Pas de sortie anticipée ici : un process.exit() dans un try ne déroule pas
+  // la pile et sauterait le finally ci-dessous (donc client.close()).
   if (manquantes.length === 0) {
     console.log("⏭  Aucune publication manquante. Rien à faire.");
-    await saveIndex(INDEX_PATH, { source: distant.source, fetchedAt: distant.fetchedAt, publications: fusion });
-    process.exit(0);
+  } else {
+    // ... la boucle de téléchargement va dans ce bloc else ...
   }
+  // saveIndex est appelé une seule fois, après le if/else, sur tous les chemins.
 
   console.log(`${manquantes.length} publication(s) à télécharger : ${manquantes.map((p) => p.date).join(", ")}`);
 

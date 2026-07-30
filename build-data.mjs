@@ -18,6 +18,7 @@ import * as store from "./lib/store.mjs";
 import { computeElo, seedEloByRank } from "./lib/elo.mjs";
 import { loadInitialRanks } from "./lib/seeds.mjs";
 import { matchOdds } from "./lib/odds-match.mjs";
+import { loadPublications, buildWorldMap, buildPlayerRankHistory, publicationTotal } from "./lib/rank-history.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data");
@@ -52,22 +53,49 @@ const DOUBLES = new Set(["MD", "WD", "XD"]);
 const pairKeyOf = (players) => `pair:${players.map((p) => String(p.id)).sort().join("-")}`;
 
 // ===== 2) Classement mondial officiel BWF + comparaison =====
-let worldMeta = null;
-const worldMap = {}; // disc -> Map(entityKey -> {rank, points})
-const wrPath = join(ROOT, "data", String(latestYear), "rankings", "world.json");
-if (existsSync(wrPath)) {
-  const wr = JSON.parse(await readFile(wrPath, "utf8"));
-  worldMeta = { fetchedAt: wr.fetchedAt };
-  for (const [disc, rows] of Object.entries(wr.disciplines || {})) {
-    const m = new Map();
-    for (const row of rows) {
-      const ids = row.players.map((p) => String(p.id)).sort();
-      const key = ids.length === 1 ? `p:${ids[0]}` : `pair:${ids.join("-")}`;
-      m.set(key, { rank: row.rank, points: row.points });
-    }
-    worldMap[disc] = m;
-  }
+// Source : la série hebdomadaire de data/rankings/ (cf. backfill-rankings.mjs).
+// La publication la plus récente joue le rôle de l'ancien instantané unique ;
+// les précédentes alimentent la série worldRank des fiches joueurs.
+const publications = await loadPublications(join(ROOT, "data", "rankings"));
+// La dernière publication du répertoire n'est pas forcément exploitable : une
+// publication VIDE (les 5 disciplines à 0 ligne) a pu être archivée avant que
+// savePublication (lib/rank-history.mjs) ne refuse ce cas — l'API répond
+// parfois total:0/data:[] en HTTP 200 pour un publicationId qu'elle ne sert
+// pas. La prendre en aveugle viderait bwfRank/bwfPoints sur TOUTES les
+// entités Elo (silencieusement, et de façon permanente tant que la publication
+// suivante n'est pas plus récente). On retient donc la dernière NON vide.
+let latestPub = null, publicationsVides = 0;
+for (let i = publications.length - 1; i >= 0; i--) {
+  if (publicationTotal(publications[i]) > 0) { latestPub = publications[i]; break; }
+  publicationsVides++;
 }
+if (publicationsVides > 0) {
+  console.log(
+    `   ⚠️  ${publicationsVides} publication(s) vide(s) ignorée(s) en fin de série ` +
+    `(dernière retenue : ${latestPub ? latestPub.date : "aucune"}).`,
+  );
+}
+const playerRankHistory = buildPlayerRankHistory(publications);
+
+let worldMeta = null;
+let worldMap = {}; // disc -> Map(entityKey -> {rank, points})
+if (latestPub) {
+  worldMeta = {
+    fetchedAt: latestPub.fetchedAt,
+    date: latestPub.date,
+    publicationId: latestPub.publicationId,
+    week: latestPub.week,
+    year: latestPub.year,
+    depth: latestPub.depth,
+    weeks: publications.length,
+    firstDate: publications[0].date,
+  };
+  worldMap = buildWorldMap(latestPub);
+}
+console.log(
+  `   Classement mondial : ${publications.length} publications` +
+  (latestPub ? ` (${publications[0].date} → ${latestPub.date})` : " — aucune"),
+);
 
 // Enrichit chaque entité Elo de son rang mondial + construit la comparaison par joueur
 const playerCompare = {}; // id -> [{disc, eloRank, eloRating, matches, bwfRank, bwfPoints}]
@@ -154,6 +182,7 @@ for (const e of index.values()) {
     matches: e.matches,
     upcoming: (e.upcoming || []).slice().sort((a, b) => (a.matchTime || "").localeCompare(b.matchTime || "")),
     elo: playerHistory[e.id] || [],
+    worldRank: playerRankHistory[e.id] || [],
     comparison: playerCompare[e.id] || [],
   });
   pCount++;
