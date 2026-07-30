@@ -31,7 +31,13 @@ export const parseT = (t) => {
   const s = t.includes(" ") ? t.replace(" ", "T") : t.includes("T") ? t : `${t}T00:00:00`;
   return new Date(s).getTime();
 };
-const fmtDate = (t) => (t ? new Date(t.replace(" ", "T")).toLocaleDateString("fr-FR", { day: "numeric", month: "short", year: "2-digit" }) : "");
+const DATE_FMT = { day: "numeric", month: "short", year: "2-digit" };
+const fmtDate = (t) => (t ? new Date(t.replace(" ", "T")).toLocaleDateString("fr-FR", DATE_FMT) : "");
+// Variante pour un horodatage déjà résolu en millisecondes (bornes du domaine
+// temporel partagé `tmin`/`tmax`, cf. plus bas) : évite de re-sérialiser un
+// nombre en chaîne pour repasser par `fmtDate`. Rend "" (pas "Invalid Date")
+// si la valeur n'est pas exploitable.
+const fmtDateMs = (ms) => (Number.isFinite(ms) ? new Date(ms).toLocaleDateString("fr-FR", DATE_FMT) : "");
 
 export default function EloChart({ points, rankPoints, label, onPointClick }) {
   const svgRef = useRef(null);
@@ -51,7 +57,22 @@ export default function EloChart({ points, rankPoints, label, onPointClick }) {
     const allT = [...eloT, ...rkT].filter(Number.isFinite);
     const tmin = allT.length ? Math.min(...allT) : NaN;
     const tmax = allT.length ? Math.max(...allT) : NaN;
-    const hasTime = Number.isFinite(tmin) && tmax > tmin;
+    // `hasTime` porte sur la série ELO SEULE (pas sur l'union avec le rang) et
+    // exige que TOUS ses points soient datés — comme avant l'ajout du rang
+    // mondial (`times.every(Number.isFinite) && times.at(-1) > times[0]`). Un
+    // simple `allT.filter(Number.isFinite)` laisserait passer un point Elo sans
+    // date (souvent le DERNIER — un match sans matchTime connu) : `xOfT(NaN)`
+    // retomberait alors sur sa branche de repli 0.5, épinglant ce point au
+    // milieu horizontal du graphe (marqueur final, fermeture de l'aire et
+    // dernier segment compris) au lieu de vraiment dégrader l'espacement.
+    // On restaure donc le comportement d'origine — un seul point non daté fait
+    // basculer TOUTE la série Elo en espacement par index — plutôt que
+    // d'exclure ce point de `pts` : `last`/`cur` doivent rester la cote la plus
+    // récente même non datée (c'est ce qu'affiche le reste de la fiche), et le
+    // rang mondial n'est alors plus superposé sur une base temporelle fiable
+    // (cf. `rank` ci-dessous, qui exige aussi `hasTime`) — même dégradation
+    // groupée que pour l'Elo, pas une position individuelle trompeuse.
+    const hasTime = eloT.every(Number.isFinite) && eloT[eloT.length - 1] > eloT[0];
 
     const xOfT = (t) => PAD.l + (hasTime && Number.isFinite(t) ? (t - tmin) / (tmax - tmin) : 0.5) * PW;
     const x = (i) => (hasTime ? xOfT(eloT[i]) : PAD.l + (pts.length === 1 ? 0.5 : i / (pts.length - 1)) * PW);
@@ -99,13 +120,13 @@ export default function EloChart({ points, rankPoints, label, onPointClick }) {
       rank = { pts: rk, yR, paths, isolated, ticks: [...new Set(rTicks)], first: rk[0], last: rk[rk.length - 1] };
     }
 
-    return { pts, x, y, xOfT, ticks, line, area, base, hasTime,
+    return { pts, x, y, xOfT, ticks, line, area, base, hasTime, tmin, tmax,
              first: pts[0], last: pts[pts.length - 1], rank };
   }, [points, rankPoints]);
 
   if (!geo) return <div className="muted" style={{ padding: "8px 0" }}>Pas encore d'historique de cote.</div>;
 
-  const { pts, x, y, xOfT, ticks, line, area, first, last, rank } = geo;
+  const { pts, x, y, xOfT, ticks, line, area, first, last, rank, hasTime, tmin, tmax } = geo;
 
   const onMove = (e) => {
     const rect = svgRef.current.getBoundingClientRect();
@@ -193,8 +214,17 @@ export default function EloChart({ points, rankPoints, label, onPointClick }) {
             </g>
           )}
 
-          <text x={PAD.l} y={H - 6} fontSize="12" fill="var(--muted)">{fmtDate(first.t)}</text>
-          <text x={W - PAD.r} y={H - 6} textAnchor="end" fontSize="12" fill="var(--muted)">{fmtDate(last.t)}</text>
+          {/* Bornes de l'axe X : quand l'axe est temporel (hasTime), il couvre le
+              domaine PARTAGÉ (tmin/tmax, éventuellement étendu par le rang
+              mondial au-delà du dernier point Elo) — les libellés doivent donc
+              décrire ce domaine, pas la série Elo seule (first.t/last.t), sans
+              quoi ils mentiraient sur la période couverte à droite du graphe.
+              Quand l'axe retombe en espacement par index (pas de date
+              exploitable sur toute la série Elo), il n'y a plus de domaine
+              temporel réel : on redonne alors les dates des points réellement
+              tracés aux deux extrémités, comme avant l'ajout du rang mondial. */}
+          <text x={PAD.l} y={H - 6} fontSize="12" fill="var(--muted)">{hasTime ? fmtDateMs(tmin) : fmtDate(first.t)}</text>
+          <text x={W - PAD.r} y={H - 6} textAnchor="end" fontSize="12" fill="var(--muted)">{hasTime ? fmtDateMs(tmax) : fmtDate(last.t)}</text>
         </svg>
 
         {hi != null && (
