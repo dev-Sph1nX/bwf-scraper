@@ -237,8 +237,13 @@ data/rankings/2026-07-28.json
 ```
 
 Un fichier par publication, nommé par sa date, contenant son `publicationId`, sa
-date, sa semaine et les 5 disciplines. Environ 120 Ko par fichier, **~7 Mo au
-total** pour 60 semaines.
+date, sa semaine et les 5 disciplines.
+
+**Poids réel, mesuré après backfill** (l'estimation initiale de ce spec, ~7 Mo,
+était fausse d'un facteur 2,3) : **274 Ko par fichier** (1 250 lignes), soit
+**16 Mo** pour 60 semaines — 12,4 % de `data/`, qui pèse déjà 129 Mo. Ces JSON
+compressent 4,2×, donc l'empreinte réelle dans `.git` est de **~3,9 Mo**
+(`.git` passe de 18 à ~22 Mo). Coût jugé justifié pour une donnée irremplaçable.
 
 Ce répertoire est **délibérément hors de `data/<année>/`** : l'historique traverse
 2025 et 2026, un découpage annuel obligerait à recoller les morceaux à chaque
@@ -386,7 +391,8 @@ lignes par discipline, comme `test/fixtures/oddsportal-2026-07-30.json`.
 
 **Top 250 par discipline plutôt que le classement complet.** Le complet pèse 1,5 Mo
 par publication, soit ~90 Mo versionnés dans un repo public — inacceptable. Le top
-250 tient en ~7 Mo, reste lisible et diffable en clair dans git, et couvre tous les
+250 tient en 16 Mo sur disque et ~3,9 Mo dans `.git` (mesuré), reste lisible et
+diffable en clair, et couvre tous les
 joueurs susceptibles d'entrer en tableau principal sur le World Tour. L'alternative
 gzip (~9 Mo, couverture 100 %) a été écartée : elle rend les diffs git inutilisables
 et impose une décompression au build pour un gain de couverture qui ne sert pas
