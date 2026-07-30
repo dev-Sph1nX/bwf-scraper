@@ -155,3 +155,61 @@ test("fetchPublicationIndex accepte une réponse enveloppée dans results", asyn
   const index = await fetchPublicationIndex(client);
   assert.equal(index.publications.length, 60);
 });
+
+// --- Fusion et persistance -------------------------------------------------
+
+import { mergeIndex, loadIndex, saveIndex } from "../lib/publications.mjs";
+import os from "node:os";
+import path from "node:path";
+
+const P = (publicationId, date, week = 1, year = 2025) => ({ publicationId, date, week, year });
+
+test("mergeIndex conserve les entrées locales sorties de la fenêtre de l'API", () => {
+  const local = [P(3821, "2025-06-10"), P(3828, "2025-06-17"), P(3835, "2025-06-24")];
+  const remote = [P(3828, "2025-06-17"), P(3835, "2025-06-24"), P(3842, "2025-07-01")];
+  const m = mergeIndex(local, remote);
+  assert.deepEqual(m.map((p) => p.publicationId), [3821, 3828, 3835, 3842]);
+});
+
+test("mergeIndex ajoute les nouvelles publications de l'API", () => {
+  const m = mergeIndex([P(3821, "2025-06-10")], [P(3821, "2025-06-10"), P(3828, "2025-06-17")]);
+  assert.equal(m.length, 2);
+  assert.equal(m[1].publicationId, 3828);
+});
+
+test("mergeIndex ne crée pas de doublon quand les deux listes coïncident", () => {
+  const l = [P(3821, "2025-06-10"), P(3828, "2025-06-17")];
+  assert.equal(mergeIndex(l, l).length, 2);
+});
+
+test("mergeIndex trie le résultat par date croissante", () => {
+  const m = mergeIndex([P(4402, "2026-07-28")], [P(3821, "2025-06-10")]);
+  assert.deepEqual(m.map((p) => p.date), ["2025-06-10", "2026-07-28"]);
+});
+
+test("mergeIndex lève si un même id porte deux dates différentes", () => {
+  assert.throws(
+    () => mergeIndex([P(3821, "2025-06-10")], [P(3821, "2025-06-17")]),
+    /3821/,
+  );
+});
+
+test("mergeIndex fonctionne avec un index local vide", () => {
+  const remote = [P(3821, "2025-06-10")];
+  assert.deepEqual(mergeIndex([], remote), remote);
+  assert.deepEqual(mergeIndex(null, remote), remote);
+});
+
+test("loadIndex renvoie null pour un fichier absent", async () => {
+  assert.equal(await loadIndex(path.join(os.tmpdir(), "aucun-index-bwf-xyz.json")), null);
+});
+
+test("saveIndex puis loadIndex rendent le même index", async () => {
+  const f = path.join(os.tmpdir(), `index-bwf-test-${process.pid}.json`);
+  const index = { source: "vue-rankingweek", fetchedAt: "2026-07-30T00:00:00.000Z",
+                  publications: [P(3821, "2025-06-10", 24, 2025)] };
+  await saveIndex(f, index);
+  const relu = await loadIndex(f);
+  assert.deepEqual(relu, index);
+  fs.unlinkSync(f);
+});
