@@ -14,7 +14,7 @@ export default function OddsModal({ open, onClose, title, children }) {
       <div className="odds-modal card" onClick={(e) => e.stopPropagation()}>
         <div className="odds-modal-head">
           <h2>{title}</h2>
-          <button type="button" className="range-btn" onClick={onClose} aria-label="Fermer">✕</button>
+          <button type="button" className="range-btn odds-modal-close" onClick={onClose} aria-label="Fermer">✕</button>
         </div>
         {children}
       </div>
