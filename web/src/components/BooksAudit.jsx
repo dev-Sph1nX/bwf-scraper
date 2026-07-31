@@ -65,12 +65,6 @@ function CarteMatch({ g, maintenant }) {
   const b1 = best.odd1 === -Infinity ? null : best.odd1;
   const b2 = best.odd2 === -Infinity ? null : best.odd2;
   const livres = BOOK_ORDER.filter((b) => g.books[b]);
-  // Graphe d'évolution : un opérateur à la fois (3 courbes superposées par
-  // camp seraient illisibles), points déjà réorientés vers p1 du groupe.
-  const traçables = livres.filter((b) => (g.books[b].points || []).length > 0);
-  const [graphe, setGraphe] = useState(false);
-  const [livre, setLivre] = useState(null);
-  const livreActif = livre && traçables.includes(livre) ? livre : traçables[0];
   return (
     <li className="oa-item">
       <div className="oa-head">
@@ -119,34 +113,80 @@ function CarteMatch({ g, maintenant }) {
           les noms affichés sont ceux de l'opérateur.
         </p>
       )}
-      {traçables.length > 0 && (
-        <div className="ba-chart">
-          <div className="ba-chart-btns">
-            <button type="button" className="range-btn" onClick={() => setGraphe(!graphe)}>
-              {graphe ? "Masquer l'évolution" : "Évolution des cotes"}
-            </button>
-            {graphe && traçables.length > 1 && traçables.map((b) => (
-              <button
-                key={b}
-                type="button"
-                className={`range-btn${livreActif === b ? " active" : ""}`}
-                aria-pressed={livreActif === b}
-                onClick={() => setLivre(b)}
-              >
-                {BOOK_LABEL[b]}
-              </button>
-            ))}
-          </div>
-          {graphe && (
-            <OddsChart
-              serie={{ points: g.books[livreActif].points }}
-              label1={`${g.p1} — ${BOOK_LABEL[livreActif]}`}
-              label2={g.p2}
-            />
-          )}
-        </div>
-      )}
     </li>
+  );
+}
+
+// --- Journal des relevés : l'évolution de chaque cote suivie -------------------
+// Une ligne par (match, opérateur), « Voir » déplie le graphe. Les points sont
+// déjà réorientés vers p1 du groupe : les dérives se comparent entre opérateurs.
+function JournalEvolution({ matches }) {
+  const [ouvert, setOuvert] = useState(null); // "clé-du-groupe:opérateur"
+
+  const lignes = [];
+  for (const g of matches) {
+    for (const book of BOOK_ORDER) {
+      const b = g.books[book];
+      if (b && (b.points || []).length > 0) lignes.push({ g, book, b, cle: `${g.key}:${book}` });
+    }
+  }
+  lignes.sort((x, y) => String(x.g.startUtc).localeCompare(String(y.g.startUtc)) || x.book.localeCompare(y.book));
+
+  if (lignes.length === 0) {
+    return <p className="muted">Aucune cote suivie pour l'instant : le prochain relevé remplira ce journal.</p>;
+  }
+
+  const actif = lignes.find((l) => l.cle === ouvert);
+  const fmtCotes = (p) => (p ? `${fmtOdd(p.odd1)} / ${fmtOdd(p.odd2)}` : "—");
+
+  return (
+    <>
+      <div className="table-scroll">
+        <table className="ba-table">
+          <thead>
+            <tr>
+              <th>Match</th><th>Opérateur</th>
+              <th className="oa-num">Ouverture</th><th className="oa-num">Dernière</th>
+              <th className="oa-num" title="Déplacement de la probabilité implicite du camp 1 entre le premier et le dernier relevé.">Dérive</th>
+              <th className="oa-num">Relevés</th><th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {lignes.map(({ g, book, b, cle }) => (
+              <tr key={cle}>
+                <td>
+                  <b>{g.p1}</b> <span className="muted">vs</span> {g.p2}
+                  <br /><span className="muted">{fmtHeure(g.startUtc)} · {g.discipline || "?"}</span>
+                </td>
+                <td>{BOOK_LABEL[book]}</td>
+                <td className="oa-num">{fmtCotes(b.opening)}</td>
+                <td className="oa-num">{fmtCotes(b.closing)}</td>
+                <td className="oa-num">
+                  {b.driftP1 == null ? "—" : (
+                    <span className={`form ${b.driftP1 > 0.001 ? "up" : b.driftP1 < -0.001 ? "down" : "flat"}`}>
+                      {b.driftP1 >= 0 ? "+" : ""}{(b.driftP1 * 100).toFixed(1)} pt
+                    </span>
+                  )}
+                </td>
+                <td className="oa-num">{b.readings}</td>
+                <td>
+                  <button className="range-btn" onClick={() => setOuvert(ouvert === cle ? null : cle)}>
+                    {ouvert === cle ? "Masquer" : "Voir"}
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {actif && (
+        <OddsChart
+          serie={{ points: actif.b.points }}
+          label1={`${actif.g.p1} — ${BOOK_LABEL[actif.book]}`}
+          label2={actif.g.p2}
+        />
+      )}
+    </>
   );
 }
 
@@ -333,6 +373,17 @@ export default function BooksAudit() {
       )}
 
       {vue === "releves" && (
+        <>
+        <div className="card">
+          <h2>Évolution des cotes</h2>
+          <p className="lead">
+            Le journal de tout ce qui est suivi : une ligne par cote relevée chez un
+            opérateur, de l'<b>ouverture</b> (premier relevé) à la <b>dernière</b> valeur.
+            « Voir » déplie le graphe. La dernière cote avant le match approche la{" "}
+            <b>cote de clôture</b>, la référence du marché.
+          </p>
+          <JournalEvolution matches={filtres} />
+        </div>
         <div className="card">
           <h2>Relevés historisés</h2>
           <p className="lead">
@@ -365,6 +416,7 @@ export default function BooksAudit() {
             </>
           )}
         </div>
+        </>
       )}
     </>
   );
