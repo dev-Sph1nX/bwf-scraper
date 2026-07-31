@@ -96,7 +96,7 @@ export default function Ranking() {
                 <span className="lb-sort-label">Trier :</span>
                 <button
                   type="button"
-                  className={`range-btn ${sort === "elo" ? "active" : ""}`}
+                  className={`range-btn rk-ctrl ${sort === "elo" ? "active" : ""}`}
                   aria-pressed={sort === "elo"}
                   onClick={() => setSort("elo")}
                 >
@@ -104,7 +104,7 @@ export default function Ranking() {
                 </button>
                 <button
                   type="button"
-                  className={`range-btn ${sort === "progression" ? "active" : ""}`}
+                  className={`range-btn rk-ctrl ${sort === "progression" ? "active" : ""}`}
                   aria-pressed={sort === "progression"}
                   onClick={() => setSort("progression")}
                 >
@@ -113,7 +113,7 @@ export default function Ranking() {
               </div>
               <button
                 type="button"
-                className={`range-btn ${includeProvisional ? "active" : ""}`}
+                className={`range-btn rk-ctrl ${includeProvisional ? "active" : ""}`}
                 aria-pressed={includeProvisional}
                 onClick={() => setIncludeProvisional((v) => !v)}
               >

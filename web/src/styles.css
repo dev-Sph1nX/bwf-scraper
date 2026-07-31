@@ -593,6 +593,11 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
    avec les onglets de plage — cf. même traitement pour .odds-modal-close). */
 .bc-graph { min-height: 40px; display: inline-flex; align-items: center; }
 
+/* Cible tactile ≥ 40px pour les contrôles de tri/toggle du Classement, sans
+   changer .range-btn (partagé avec les onglets de plage — même traitement
+   que .bc-graph / .odds-modal-close ci-dessus). */
+.rk-ctrl { min-height: 40px; display: inline-flex; align-items: center; }
+
 /* Modale d'évolution des cotes */
 .odds-modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 16px; }
 .odds-modal { width: 100%; max-width: 480px; max-height: 90vh; overflow-y: auto; }
