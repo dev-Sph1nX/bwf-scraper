@@ -1,6 +1,6 @@
 # Journal des mesures
 
-**Dernière mise à jour :** 2026-07-30
+**Dernière mise à jour :** 2026-07-31
 
 Ce document consigne **tout ce qui a été mesuré**, avec les chiffres, la méthode et
 le moyen de le refaire. Il existe pour une raison précise : ne pas retester ce qui
@@ -13,8 +13,11 @@ qu'on oublie et qu'on refait.
 
 ```bash
 npm run backtest        # baselines, calibration, prévisibilité par discipline
-npm test                # 249 tests, dont les garde-fous méthodologiques
+npm test                # 277 tests, dont les garde-fous méthodologiques
 npm run build-data      # régénère les données de l'app
+node measures/mesure-gymnase-3sets.mjs   # effet gymnase sur les 3 sets (§7)
+node measures/mesure-terrain.mjs         # avantage du terrain (§2.6)
+node measures/mesure-ecart-points.mjs    # écart de points, étape 1 (§2.7)
 ```
 
 Le rapport complet est écrit dans `web/public/data/backtest.json` et affiché sur
@@ -313,6 +316,105 @@ par construction** : impossible de les départager avec ces données.
 
 ---
 
+## 2.6 L'avantage du terrain : réel, petit, et seulement en SIMPLE
+
+*Mesuré le 2026-07-31 — `node measures/mesure-terrain.mjs`.*
+
+« À domicile » = tous les joueurs du camp ont le code pays du tournoi (code
+extrait du drapeau, le champ texte étant un nom anglais). 1 569 matchs ont
+exactement un camp à domicile et deux Elo non provisoires — **12 % des matchs**.
+
+| Test | Résultat |
+|---|---|
+| Conditionnel (vs proba Elo) | domicile gagne **55,8 %** contre 53,6 % attendus : **+2,2 pt**, z = 2,0 |
+| **Isolation, \|ΔElo\| ≤ 50** | **55,6 %** (349 matchs, z = 2,1) |
+| Isolation, \|ΔElo\| ≤ 100 | **55,5 %** (634 matchs, z = 2,8) |
+
+L'effet survit à l'isolation à niveau contrôlé : ce n'est **pas** un artefact de
+la sous-confiance de l'Elo (§1.3). Ordre de grandeur : **≈ 16 points d'Elo**.
+
+Par discipline (conditionnel) : tout l'effet est en **simple** — MS z = 1,7 et
+WS z = 1,7, rien d'interprétable en double (MD 0,8 ; WD −0,3 ; XD 0,2).
+
+**Limites.** Le facteur ne touche que 12 % des rencontres — le piège documenté :
+un facteur rare ne déplace pas les métriques agrégées, même réel (cf. fraîcheur,
+§2.4). Et une part de l'effet peut être de la **sélection** (wild-cards et
+invitations locales font entrer des joueurs du pays plus motivés/avantagés que
+leur Elo ne le dit). Étapes 2 (apport marginal) et 3 (hors échantillon) **non
+faites** : à faire avant toute intégration au modèle.
+
+## 2.7 L'écart de POINTS : le plus fort criblage jamais mesuré ici
+
+*Mesuré le 2026-07-31 — `node measures/mesure-ecart-points.mjs`. Étape 1 seulement.*
+
+L'Elo ne compte que les manches : 21-19 et 21-5 produisent la même mise à jour.
+Facteur testé : la **domination passée** — part moyenne de points gagnés sur les
+10 derniers matchs (0,5 = équilibre), accumulée chronologiquement et lue avant
+mise à jour (mêmes garanties anti-fuite que le jeu de données). Le facteur
+désigne le camp le plus dominateur (écart minimal d'1 pt de %) ; il se prononce
+sur **8 752 matchs** (~65 %).
+
+| Fenêtre \|ΔElo\| | n | Réussite | IC 95 % |
+|---|---|---|---|
+| ≤ 30 | 910 | **58,4 %** | [55,2 ; 61,6] ✅ |
+| ≤ 50 | 1 483 | **57,2 %** | [54,7 ; 59,8] ✅ |
+| ≤ 80 | 2 283 | **57,9 %** | [55,9 ; 59,9] ✅ |
+
+Significatif sur les **trois** fenêtres. Référence : la fatigue plafonnait à
+56-57 % sur une fraction des matchs, la forme à 48,7 %. À niveau Elo égal, celui
+qui écrase ses adversaires aux points bat celui qui gagne petit — l'information
+existe, l'Elo ne la voit pas, et elle agit sur les deux tiers des rencontres.
+
+**Ne pas confondre** avec le `threeSetMultiplier` (§1.4) : lui ne compte que les
+MANCHES, et son balayage ne portait que sur le poids de mise à jour de l'Elo —
+pas sur un signal de points par match.
+
+**Étapes restantes avant intégration** : 2) ajustement conjoint (la domination
+apporte-t-elle quelque chose EN PLUS de l'Elo et des autres facteurs ? — c'est le
+vrai risque : elle est corrélée au niveau) puis 3) vérification hors échantillon
+sur 2026. Un facteur qui brille en isolation peut mourir en marginal — forme et
+face-à-face l'ont prouvé.
+
+## 2.8 Elo-bis à marge de points : mieux partout, mais PAS prouvé sur 2026
+
+*Mesuré le 2026-07-31 — `node measures/mesure-elo-points.mjs`. Idée du
+propriétaire : injecter l'écart de points dans la CONSTRUCTION de la note (un
+21-5 met à jour plus fort qu'un 21-19), plutôt que comme signal externe.*
+
+Implémentation : `pointsFactor` dans `lib/elo.mjs` (0 = désactivé, production
+inchangée — verrouillé par test). Multiplicateur linéaire autour de la marge de
+référence mesurée (part de points du vainqueur − 0,5 = **0,078** en moyenne),
+borné [0,25 ; 2,5], avec option d'**amortissement anti-autocorrélation** façon
+FiveThirtyEight (une victoire large du favori annoncé compte moins que la même
+victoire par l'outsider — sans ce frein, les notes des dominants s'envolent).
+
+Protocole : grille réglée sur 2024-2025, verdict sur 2026 seul, comparaison
+**appariée** sur exactement les mêmes 2 439 matchs.
+
+| | log loss | Brier | Réussite |
+|---|---|---|---|
+| Sélection 24-25 — Elo actuel | 0,5558 | 0,1881 | 71,9 % |
+| Sélection 24-25 — meilleure variante (factor 1,5 + amorti) | **0,5489** | 0,1854 | 72,0 % |
+| **2026 — Elo actuel** | 0,5615 | 0,1910 | 71,4 % |
+| **2026 — variante** | 0,5593 | 0,1904 | 71,1 % |
+
+Δ log loss 2026 (variante − actuel) : **−0,0022, IC 95 % [−0,0079 ; +0,0035]**
+→ **NON DÉPARTAGEABLE**. Trois nuances honnêtes :
+
+- le signe est favorable **partout** (les 6 configs de la grille battent
+  l'actuel en sélection, et la meilleure reste devant sur 2026) — ce n'est pas
+  le profil d'un pur surapprentissage comme au §1.4, où le « gain » s'inversait ;
+- mais l'intervalle contient 0 et la réussite brute recule (71,1 vs 71,4 %) :
+  au standard du projet, **on n'adopte pas** ;
+- l'amplitude est petite parce que l'info de marge est en partie redondante
+  avec ce que l'Elo apprend déjà en accumulant les victoires.
+
+**Décision : variante conservée dans le code (désactivée), à re-mesurer quand
+2026 sera plus fourni** — l'IC se resserre avec les matchs. Si le −0,002 tient
+avec un intervalle qui exclut 0, on l'adopte.
+
+---
+
 # 3. Prévisibilité par discipline
 
 Mesurée **à information constante** : le favori est toujours celui que l'Elo
@@ -419,3 +521,47 @@ relecture. D'où les garde-fous en tests — notamment celui qui vérifie qu'un 
 sans lien avec le résultat **ne ressort pas** (`test/screen.test.mjs`), et le test
 anti-fuite du jeu de données (`test/dataset-leak.test.mjs`), le seul dont l'échec
 serait invisible.
+
+---
+
+# 7. Effet gymnase sur les matchs en 3 sets
+
+*Mesuré le 2026-07-31 — `node measures/mesure-gymnase-3sets.mjs`. Intuition du
+propriétaire : dans certaines salles, un côté du terrain est défavorisé
+(courants d'air) → matchs plus accrochés → plus de 3 sets. Le marché « match en
+3 sets » existe chez les bookmakers.*
+
+**Verdict : l'effet lieu est réel, fort, et STABLE d'une année sur l'autre.**
+
+Méthode : 13 368 matchs, gymnase = ville du tournoi (normalisée). Le taux de
+3 sets attendu de chaque gymnase est contrôlé par la composition de ses affiches
+(tranche d'écart Elo de 50 × discipline, taux empiriques globaux — aucune
+hypothèse de calibration). z par gymnase = (observé − attendu)/écart-type.
+
+| Test | Résultat |
+|---|---|
+| Taux global de 3 sets | 32,8 % |
+| Sur-dispersion (35 lieux ≥ 60 matchs) | Σz² = 86 pour 35 attendus → **+6,1 σ** : le hasard est exclu |
+| **Persistance N → N+1** (37 paires) | **r = 0,42** — le classement d'une année prédit la suivante |
+
+Extrêmes (z au-delà de ±2) :
+
+| Gymnase | Matchs | 3 sets obs. | Attendu | z |
+|---|---|---|---|---|
+| Séoul | 152 | 42,8 % | 32,8 % | +2,7 |
+| Changzhou | 440 | 37,3 % | 31,5 % | +2,6 |
+| Shenzhen | 303 | 37,6 % | 31,8 % | +2,2 |
+| Lucknow | 353 | 25,8 % | 33,9 % | −3,2 |
+| Sarrebruck | 324 | 24,7 % | 33,3 % | −3,3 |
+| Sydney | 515 | 23,9 % | 32,5 % | **−4,2** |
+
+**Ce qui est prouvé / pas prouvé.** Un effet *lieu* stable est prouvé. Son
+*mécanisme* (courants d'air, vitesse du volant, altitude, sol) est indiscernable
+dans ces données — et pour parier sur « plus/moins de 3 sets », le mécanisme
+importe peu. Limites : regroupement par ville (pas par salle) ; le contrôle par
+écart d'Elo ne capture pas tout ce qui rend un plateau homogène — mais la
+persistance inter-années ne peut pas venir d'un défaut de contrôle ponctuel.
+
+**Suite logique.** Relever les cotes « nombre de sets » chez les bookmakers
+(marchés déjà présents dans leurs flux) et confronter : le marché price-t-il
+Sydney et Séoul pareil ? L'écart éventuel est la valeur exploitable.
