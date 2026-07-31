@@ -3382,12 +3382,19 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Taipei Arena",
-        "duration": 0,
+        "duration": 9,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 11,
+            "away": 11,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -7622,8 +7629,8 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Taipei Arena",
-      "duration": 0,
-      "time": "00:00",
+      "duration": 9,
+      "time": "00:09",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
