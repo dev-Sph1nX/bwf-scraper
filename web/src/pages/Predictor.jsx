@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useOutletContext, useSearchParams, Link } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { getJSON } from "../data.js";
 import MatchTeam from "../components/MatchTeam.jsx";
 import EloCompareChart from "../components/EloCompareChart.jsx";
@@ -159,7 +159,6 @@ function PlayerCard({ entity, matches }) {
 }
 
 export default function Predictor() {
-  const { setTitle } = useOutletContext();
   const [data, setData] = useState(null);
   const [disc, setDisc] = useState("MS");
   const [a, setA] = useState(null);
@@ -172,7 +171,6 @@ export default function Predictor() {
   const [searchParams] = useSearchParams();
   const preInit = useRef(false);
 
-  useEffect(() => { setTitle("Prédicteur"); }, [setTitle]);
   useEffect(() => { getJSON("elo/ranking.json").then(setData).catch(() => setData(false)); }, []);
 
   // Préselection depuis l'URL (?disc=MS&a=<id>&b=<id>) — ex. bouton « comparer »

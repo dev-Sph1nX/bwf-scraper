@@ -611,3 +611,7 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
   /* Cibles tactiles : la charte impose 40px mini, .tab n'en faisait que 33. */
   .tab { min-height: 40px; }
 }
+
+/* ---- Coulisses (accordéon pédagogique, 5 sections montées à la demande) ---- */
+.coulisse-head { display: flex; width: 100%; justify-content: space-between; align-items: center; background: none; border: 0; color: var(--ink); font: inherit; cursor: pointer; min-height: 40px; padding: 0; }
+.coulisse-chevron { color: var(--muted); }

@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { useOutletContext } from "react-router-dom";
 import { CHANGELOG } from "../changelog.js";
 
 const TYPE = {
@@ -14,9 +12,6 @@ function fmtDay(s) {
 }
 
 export default function Changelog() {
-  const { setTitle } = useOutletContext();
-  useEffect(() => { setTitle("Notes de version"); }, [setTitle]);
-
   return (
     <>
       <div className="card">
