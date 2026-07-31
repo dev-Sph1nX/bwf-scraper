@@ -214,7 +214,7 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 .proba-row.dog .proba-fill { background: var(--muted); }
 .proba-row.dog .proba-head .pct { color: var(--muted); }
 .hint { color: var(--muted); font-size: 13px; text-align: center; padding: 24px 8px; }
-.lead code { background: var(--surface-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px; font-size: 12px; color: var(--ink); white-space: nowrap; }
+.lead code { background: var(--surface-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px; font-size: 12px; color: var(--ink); white-space: normal; overflow-wrap: anywhere; }
 
 /* Alerte contradiction Elo / H2H */
 .h2h-alert { margin-top: 16px; background: var(--bwf-red-soft); border: 1px solid var(--bwf-red); border-radius: 8px; padding: 10px 12px; font-size: 13px; line-height: 1.5; }
