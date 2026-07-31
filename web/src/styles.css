@@ -577,6 +577,22 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 .ba-table { margin-top: 10px; }
 .ba-best { color: var(--accent); font-weight: bold; }
 
+/* ===== BetCard : carte de match à deux lignes joueur (accueil, refonte) === */
+.bc-card table.ligne { margin-top: 10px; }
+/* Nom du tournoi en lien dans l'en-tête .oa-head (BooksAudit s'en sert aussi,
+   mais en texte simple : on ne cible que le cas <a> pour ne pas le changer). */
+.oa-head a.oa-tmt { color: var(--ink); text-decoration: none; }
+.oa-head a.oa-tmt:hover { color: var(--accent); text-decoration: underline; }
+.bc-name a { color: var(--ink); font-weight: bold; }
+.bc-proba { color: var(--accent); font-weight: bold; font-size: 14px; }
+.bc-proba.dim { color: var(--muted); }
+.bc-ev { background: var(--surface-2); color: var(--muted); border-radius: 5px; padding: 2px 7px; font-weight: bold; }
+.bc-ev.pos { background: rgba(53,196,139,.15); color: var(--green); }
+.bc-pourquoi { color: var(--muted); font-size: 11px; margin: 8px 0 0; border-top: 1px dashed var(--line); padding-top: 8px; }
+/* Cible tactile ≥ 40px pour le bouton graphe, sans changer .range-btn (partagé
+   avec les onglets de plage — cf. même traitement pour .odds-modal-close). */
+.bc-graph { min-height: 40px; display: inline-flex; align-items: center; }
+
 /* Modale d'évolution des cotes */
 .odds-modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 16px; }
 .odds-modal { width: 100%; max-width: 480px; max-height: 90vh; overflow-y: auto; }
