@@ -89,7 +89,12 @@ Par valeur attendue décroissante :
    relever ce marché chez les 3 opérateurs et vérifier si le prix intègre
    l'effet lieu (Sydney vs Séoul). C'est une **nouvelle famille de paris**, pas
    une amélioration du modèle vainqueur.
-3. **Main dominante (gaucher)** — rouvert : la donnée existe pour 620 joueurs.
+3. **Main dominante (gaucher)** — rouvert : la donnée existe pour 620 joueurs
+   (Wikidata), et l'API BWF la sert directement (découverte du propriétaire) :
+   `GET https://extranet-lv.bwfbadminton.com/api/vue-player-bio?activeTab=1&playerId=<id>`
+   avec en-têtes `origin: https://bwfbadminton.com` + `referer: https://bwfbadminton.com/`
+   → `{"hand": "R"|"L", "height": …, "age": …}`. Jointure par id exacte —
+   collecte du reste du panel en cours (2026-07-31).
 4. **Avantage du terrain, étapes 2-3** — l'isolation est passée (§2.6), reste
    l'apport marginal et le hors-échantillon. Ne touche que 12 % des matchs :
    espérance modeste.
