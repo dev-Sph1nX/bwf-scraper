@@ -1,0 +1,66 @@
+# Relevé fréquent des cotes bookmakers (Betclic, Unibet, Winamax).
+#
+# POURQUOI un workflow dédié, toutes les 2 heures : la référence du marché est
+# la COTE DE CLÔTURE (la dernière cote avant le match) — indispensable pour
+# mesurer la CLV (Closing Line Value). Le relevé quotidien de deploy.yml est
+# bien trop espacé pour l'approcher ; ici on échantillonne l'évolution des
+# cotes tout au long de la journée, à coût quasi nul (HTTP pur, ~1 min).
+name: Relevé cotes bookmakers
+
+on:
+  schedule:
+    - cron: "0 */2 * * *" # toutes les 2 heures, pour approcher les cotes de clôture
+  workflow_dispatch: {} # bouton "Run workflow" manuel
+
+# Groupe DISTINCT de "bwf-update" (deploy.yml) : les deux workflows peuvent
+# tourner en parallèle — la collision éventuelle au push est gérée plus bas
+# par un pull --rebase + retries.
+concurrency:
+  group: books-scrape
+  cancel-in-progress: false
+
+permissions:
+  contents: write # pour committer data/books/
+
+jobs:
+  scrape-books:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # PAS de npm install ni de Playwright : scrape-books.mjs est en HTTP pur
+      # (fetch natif de Node), il n'importe que des modules node:* et lib/.
+      # Le script n'écrit RIEN si 0 ligne récupérée (période creuse) : dans ce
+      # cas l'étape suivante n'a rien à committer et sort proprement.
+      - run: node scrape-books.mjs
+
+      # Commit du relevé. [skip ci] est OBLIGATOIRE : deploy.yml se déclenche
+      # sur TOUT push sur main — sans lui, chaque relevé bi-horaire lancerait
+      # un scrape complet + déploiement GitHub Pages.
+      # Protection contre les pushs concurrents (deploy.yml ou un autre run) :
+      # pull --rebase juste avant le push, avec 3 tentatives.
+      - name: Commit data/books
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add data/books
+          if git diff --cached --quiet; then
+            echo "Rien à committer (aucun relevé écrit)."
+            exit 0
+          fi
+          git commit -m "chore: relevé cotes bookmakers [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin main; then
+              echo "Push réussi (tentative $i)."
+              exit 0
+            fi
+            echo "Push refusé (tentative $i), on retente..."
+            sleep 5
+          done
+          echo "Échec du push après 3 tentatives." >&2
+          exit 1
