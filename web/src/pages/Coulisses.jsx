@@ -31,10 +31,13 @@ export default function Coulisses() {
       </div>
       {SECTIONS.map(({ key, titre, resume, C }) => (
         <div className="card" key={key}>
-          <button type="button" className="coulisse-head" aria-expanded={open === key}
-                  onClick={() => setOpen(open === key ? null : key)}>
-            <h2>{titre}</h2><span className="coulisse-chevron">{open === key ? "▴" : "▾"}</span>
-          </button>
+          <h2 className="coulisse-h2">
+            <button type="button" className="coulisse-head" aria-expanded={open === key}
+                    onClick={() => setOpen(open === key ? null : key)}>
+              <span className="coulisse-title">{titre}</span>
+              <span className="coulisse-chevron" aria-hidden="true">{open === key ? "▴" : "▾"}</span>
+            </button>
+          </h2>
           <p className="lead">{resume}</p>
           {open === key && <Suspense fallback={<p className="muted">Chargement…</p>}><C /></Suspense>}
         </div>

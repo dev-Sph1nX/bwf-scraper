@@ -613,5 +613,15 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 }
 
 /* ---- Coulisses (accordéon pédagogique, 5 sections montées à la demande) ---- */
+/* h2 > button (pas l'inverse) : un <button> n'accepte que du contenu de
+   flux/phrasing, un <h2> n'en est pas — le nid original cassait la sémantique
+   et risquait de faire disparaître le titre à la navigation par en-têtes au
+   lecteur d'écran. Le point rouge du h2 générique (h2::before) est neutralisé
+   ici et reporté sur .coulisse-title : sinon, comme le bouton est un conteneur
+   flex (donc de type bloc), il romprait la ligne et isolerait le point sur sa
+   propre ligne au-dessus du bouton au lieu de rester collé au titre. */
+.coulisse-h2 { margin: 0; }
+.coulisse-h2::before { content: none; }
 .coulisse-head { display: flex; width: 100%; justify-content: space-between; align-items: center; background: none; border: 0; color: var(--ink); font: inherit; cursor: pointer; min-height: 40px; padding: 0; }
+.coulisse-title::before { content: ""; display: inline-block; width: 8px; height: 8px; background: var(--bwf-red); border-radius: 50%; margin-right: 8px; vertical-align: middle; }
 .coulisse-chevron { color: var(--muted); }
