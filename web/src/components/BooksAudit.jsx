@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { getJSON } from "../data.js";
+import OddsChart from "./OddsChart.jsx";
 import { ROUND_LABEL } from "./UpcomingMatch.jsx";
 
 // Cotes par OPÉRATEUR (Betclic, Unibet, Winamax), historisées par le cron.
@@ -64,6 +65,12 @@ function CarteMatch({ g, maintenant }) {
   const b1 = best.odd1 === -Infinity ? null : best.odd1;
   const b2 = best.odd2 === -Infinity ? null : best.odd2;
   const livres = BOOK_ORDER.filter((b) => g.books[b]);
+  // Graphe d'évolution : un opérateur à la fois (3 courbes superposées par
+  // camp seraient illisibles), points déjà réorientés vers p1 du groupe.
+  const traçables = livres.filter((b) => (g.books[b].points || []).length > 0);
+  const [graphe, setGraphe] = useState(false);
+  const [livre, setLivre] = useState(null);
+  const livreActif = livre && traçables.includes(livre) ? livre : traçables[0];
   return (
     <li className="oa-item">
       <div className="oa-head">
@@ -111,6 +118,33 @@ function CarteMatch({ g, maintenant }) {
           Non rapproché d'un match BWF (noms trop abrégés ou match absent de nos données) :
           les noms affichés sont ceux de l'opérateur.
         </p>
+      )}
+      {traçables.length > 0 && (
+        <div className="ba-chart">
+          <div className="ba-chart-btns">
+            <button type="button" className="range-btn" onClick={() => setGraphe(!graphe)}>
+              {graphe ? "Masquer l'évolution" : "Évolution des cotes"}
+            </button>
+            {graphe && traçables.length > 1 && traçables.map((b) => (
+              <button
+                key={b}
+                type="button"
+                className={`range-btn${livreActif === b ? " active" : ""}`}
+                aria-pressed={livreActif === b}
+                onClick={() => setLivre(b)}
+              >
+                {BOOK_LABEL[b]}
+              </button>
+            ))}
+          </div>
+          {graphe && (
+            <OddsChart
+              serie={{ points: g.books[livreActif].points }}
+              label1={`${g.p1} — ${BOOK_LABEL[livreActif]}`}
+              label2={g.p2}
+            />
+          )}
+        </div>
       )}
     </li>
   );

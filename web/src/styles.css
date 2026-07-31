@@ -576,6 +576,8 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 /* Audit bookmakers : tableau de cotes par opérateur dans une carte match */
 .ba-table { margin-top: 10px; }
 .ba-best { color: var(--accent); font-weight: bold; }
+.ba-chart { margin-top: 10px; }
+.ba-chart-btns { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
 
 @media (max-width: 700px) {
   .oa-tmt { flex-basis: 100%; white-space: normal; }

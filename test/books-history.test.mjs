@@ -97,6 +97,11 @@ test("l'orientation des cotes suit p1/p2 de CHAQUE opérateur (pas d'inversion s
   // Après réorientation, odd1 du groupe = cote de Hoh chez les deux.
   assert.equal(g.books.winamax.odd1, 1.58);
   assert.equal(g.books.unibet.odd1, 1.55);
+  // …et la probabilité implicite des points suit la réorientation : Hoh est
+  // favori (cote 1,55 contre 2,0), sa proba implicite dépasse 50 % chez les
+  // DEUX opérateurs. Sans ce retournement, un graphe tracerait le mauvais camp.
+  assert.ok(g.books.winamax.points[0].impliedP1 > 0.5);
+  assert.ok(g.books.unibet.points[0].impliedP1 > 0.5, `unibet impliedP1 = ${g.books.unibet.points[0].impliedP1}`);
 });
 
 test("la dérive (driftP1) d'un opérateur inversé est réorientée elle aussi", () => {
