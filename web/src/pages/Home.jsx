@@ -8,8 +8,12 @@ import UpcomingMatch from "../components/UpcomingMatch.jsx";
 const BOOKS = ["betclic", "unibet", "winamax"];
 const BOOK_LABEL = { betclic: "Betclic", unibet: "Unibet", winamax: "Winamax" };
 const lireSelection = () => {
-  try { const v = JSON.parse(localStorage.getItem("books-selected")); return Array.isArray(v) && v.length ? v.filter((b) => BOOKS.includes(b)) : BOOKS; }
-  catch { return BOOKS; }
+  try {
+    const v = JSON.parse(localStorage.getItem("books-selected"));
+    if (!Array.isArray(v) || !v.length) return BOOKS;
+    const f = v.filter((b) => BOOKS.includes(b));
+    return f.length ? f : BOOKS; // stockage corrompu/périmé (valeurs hors BOOKS) -> jamais 0 sélection
+  } catch { return BOOKS; }
 };
 
 export default function Home() {
