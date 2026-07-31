@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useOutletContext, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { getJSON } from "../data.js";
 
 const ORDER = ["MS", "WS", "MD", "WD", "XD"];
@@ -23,11 +23,9 @@ function fmtDateTime(iso) {
 const nf = (n) => (n ?? 0).toLocaleString("fr-FR");
 
 export default function Data() {
-  const { setTitle } = useOutletContext();
   const [s, setS] = useState(null);
   const [upd, setUpd] = useState(null);
 
-  useEffect(() => { setTitle("Données"); }, [setTitle]);
   useEffect(() => { getJSON("summary.json").then(setS).catch(() => setS(false)); }, []);
   useEffect(() => { getJSON("updates.json").then(setUpd).catch(() => setUpd(false)); }, []);
 

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
 import { getJSON } from "../data.js";
 
 // Écran « Fiabilité » : juge le MODÈLE, pas le parieur.
@@ -91,10 +90,8 @@ function CalibrationChart({ bins }) {
 }
 
 export default function Reliability() {
-  const { setTitle } = useOutletContext();
   const [d, setD] = useState(null);
 
-  useEffect(() => { setTitle("Fiabilité du modèle"); }, [setTitle]);
   useEffect(() => { getJSON("backtest.json").then(setD).catch(() => setD(false)); }, []);
 
   if (d === false) {
@@ -148,8 +145,13 @@ export default function Reliability() {
         <h2>Notre Elo vaut-il mieux que des règles triviales&nbsp;?</h2>
         <p className="lead">
           Chaque match est prédit avec l'état des connaissances <b>d'avant ce match</b>,
-          jamais avec l'état final. Le chiffre intéressant n'est pas celui de chaque
-          ligne, c'est <b>l'écart entre les lignes</b>.
+          jamais avec l'état final. La <b>réussite</b> est le taux de bons pronostics : le
+          bon vainqueur désigné, sans juger de la marge. Le score de <b>Brier</b> va plus
+          loin — c'est la distance entre la probabilité annoncée et ce qui s'est vraiment
+          passé, <b>plus bas = mieux</b> (0 = toujours certain et juste). Plus bas, la{" "}
+          <b>calibration</b>, étudiée en fin de page, vérifie qu'une probabilité annoncée à
+          70&nbsp;% se réalise bien ~70&nbsp;% du temps. Le chiffre intéressant n'est pas
+          celui de chaque ligne, c'est <b>l'écart entre les lignes</b>.
         </p>
         <div className="table-scroll">
           <table>

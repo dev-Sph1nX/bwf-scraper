@@ -20,6 +20,9 @@ import { loadInitialRanks } from "./lib/seeds.mjs";
 import { loadBookRuns, buildBookSeries, groupBooks } from "./lib/books-history.mjs";
 import { matchBooks } from "./lib/books-match.mjs";
 import { loadPublications, buildWorldMap, buildPlayerRankHistory, publicationTotal } from "./lib/rank-history.mjs";
+import { recalibrate } from "./lib/calibrate.mjs";
+import { ev, bestOdd } from "./lib/ev.mjs";
+import { oddsForMatch } from "./lib/home-data.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data");
@@ -273,6 +276,7 @@ for (const [disc, d] of Object.entries(ranking.disciplines)) {
 const withElo = (team, entity) => ({
   ...team,
   elo: entity?.rating ?? null,
+  eloRank: entity?.rank ?? null,
   bwfRank: entity?.bwfRank ?? null,
   form: entity?.form ?? null,
 });
@@ -400,6 +404,9 @@ for (const y of years) {
             const ea = eloLookup[m.eventName]?.get(a) || null;
             const eb = eloLookup[m.eventName]?.get(b) || null;
             const prob = ea && eb ? Math.round(winProb(ea.rating, eb.rating) * 100) : null;
+            // Proba calibrée (étirement par discipline, cf. lib/calibrate.mjs) :
+            // c'est elle, jamais la proba brute, qui sert de base à l'EV des cotes.
+            const probCal = prob == null ? null : Math.round(recalibrate(prob / 100, m.eventName) * 100);
             const name1 = p1.map((p) => p.nameDisplay).join(" / ");
             const name2 = p2.map((p) => p.nameDisplay).join(" / ");
             const interest = interestOf(ea, eb, prob, a, b, m.eventName, name1, name2);
@@ -412,15 +419,18 @@ for (const y of years) {
               team2: withElo(teamLite(m.team2, m.team2seed), eb),
               a, b,
               // Proba de victoire de team1 (null si l'une des deux n'est pas classée).
-              prob,
+              prob, probCal,
               score: interest.score, tags: interest.tags, reasons: interest.reasons,
             });
+            // Relie ce candidat de cotes à l'entrée upcoming qu'on vient de pousser
+            // (même itération) : permet d'embarquer les cotes appariées plus loin.
             oddsCandidates.push({
               tmtId: t.id, tournamentName: t.name, year: y,
               eventName: m.eventName, roundName: m.roundName, matchTime: m.matchTime || null,
               team1: { players: p1.map(playerForOdds) },
               team2: { players: p2.map(playerForOdds) },
               a, b, prob,
+              uIdx: upcomingMatches.length - 1,
             });
           }
         }
@@ -432,7 +442,6 @@ for (const y of years) {
   byYear.push({ year: y, matchCount: yearMatchCount[y] || 0, tournaments: dl });
 }
 await write("status.json", { years, tournaments: allTournaments });
-await write("upcoming-matches.json", { generatedAt: ranking.generatedAt, matches: upcomingMatches });
 console.log(`   Matchs à venir : ${upcomingMatches.length}`);
 
 // ===== Cotes oddsportal : RETIRÉ (2026-07-31) =====
@@ -457,6 +466,24 @@ console.log(`   Matchs à venir : ${upcomingMatches.length}`);
     ...playedCandidates.map((c) => ({ ...c, played: true })),
   ];
   const res = matchBooks(candidats, groups);
+
+  // Embarque les cotes appariées dans les matchs à venir : la carte d'accueil
+  // lit UN seul fichier, orienté team1/team2, avec l'EV déjà calculée.
+  for (const m of res.matched) {
+    const i = m.bwf.uIdx;
+    if (i == null || m.bwf.played) continue;
+    const u = upcomingMatches[i];
+    const o = oddsForMatch(m.group, m.swapped);
+    const p1 = u.probCal == null ? null : u.probCal / 100;
+    const b1 = bestOdd(o.books, 1), b2 = bestOdd(o.books, 2);
+    u.odds = {
+      ...o,
+      ev1: p1 == null || !b1 ? null : ev(b1.odd, p1),
+      ev2: p1 == null || !b2 ? null : ev(b2.odd, 1 - p1),
+    };
+  }
+  await write("upcoming-matches.json", { generatedAt: ranking.generatedAt, matches: upcomingMatches });
+
   const names = (team) => (team?.players || []).map((p) => p.nameDisplay).join(" / ");
 
   const bwfOf = new Map(res.matched.map((m) => [m.group.key, m]));

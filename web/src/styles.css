@@ -35,13 +35,14 @@ a { color: inherit; }
   position: sticky; top: 0; height: 100vh;
 }
 .sidebar .brand { font-size: 18px; font-weight: bold; letter-spacing: .5px; padding: 0 20px 22px; display: flex; align-items: center; gap: 8px; color: #fff; }
-.sidebar nav { display: flex; flex-direction: column; gap: 2px; }
+.sidebar nav { display: flex; flex-direction: column; gap: 2px; flex: 1; }
 .sidebar nav a {
   color: var(--muted); text-decoration: none; padding: 12px 20px;
   font-weight: bold; border-left: 3px solid transparent;
 }
 .sidebar nav a:hover { background: rgba(255,255,255,.05); color: var(--ink); }
 .sidebar nav a.active { color: #fff; background: var(--bwf-red-soft); border-left-color: var(--bwf-red); }
+.nav-coulisses { margin-top: auto; font-size: 12px; color: var(--muted); }
 .sidebar .side-foot { margin-top: auto; padding: 16px 20px 0; font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); }
 .sidebar .side-foot b { color: var(--ink); }
 
@@ -213,7 +214,7 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 .proba-row.dog .proba-fill { background: var(--muted); }
 .proba-row.dog .proba-head .pct { color: var(--muted); }
 .hint { color: var(--muted); font-size: 13px; text-align: center; padding: 24px 8px; }
-.lead code { background: var(--surface-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px; font-size: 12px; color: var(--ink); white-space: nowrap; }
+.lead code { background: var(--surface-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px; font-size: 12px; color: var(--ink); white-space: normal; overflow-wrap: anywhere; }
 
 /* Alerte contradiction Elo / H2H */
 .h2h-alert { margin-top: 16px; background: var(--bwf-red-soft); border: 1px solid var(--bwf-red); border-radius: 8px; padding: 10px 12px; font-size: 13px; line-height: 1.5; }
@@ -525,9 +526,10 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
   .layout { flex-direction: column; }
   .sidebar { width: 100%; height: auto; position: static; flex-direction: row; align-items: center; padding: 10px; flex-wrap: wrap; border-right: 0; border-bottom: 1px solid var(--line); }
   .sidebar .brand { padding: 0 12px 0 8px; }
-  .sidebar nav { flex-direction: row; overflow-x: auto; max-width: 100%; }
+  .sidebar nav { flex: 0 1 auto; flex-direction: row; overflow-x: auto; max-width: 100%; }
   .sidebar nav a { padding: 8px 12px; border-left: 0; border-bottom: 3px solid transparent; white-space: nowrap; }
   .sidebar nav a.active { border-left: 0; border-bottom-color: var(--bwf-red); }
+  .nav-coulisses { margin-top: 0; }
   .sidebar .side-foot { display: none; }
 
   .topbar { height: auto; min-height: 58px; padding: 8px 16px; flex-wrap: wrap; }
@@ -577,9 +579,51 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 .ba-table { margin-top: 10px; }
 .ba-best { color: var(--accent); font-weight: bold; }
 
+/* ===== BetCard : carte de match à deux lignes joueur (accueil, refonte) === */
+.bc-card table.ligne { margin-top: 10px; }
+/* Nom du tournoi en lien dans l'en-tête .oa-head (BooksAudit s'en sert aussi,
+   mais en texte simple : on ne cible que le cas <a> pour ne pas le changer). */
+.oa-head a.oa-tmt { color: var(--ink); text-decoration: none; }
+.oa-head a.oa-tmt:hover { color: var(--accent); text-decoration: underline; }
+.bc-name a { color: var(--ink); font-weight: bold; }
+.bc-proba { color: var(--accent); font-weight: bold; font-size: 14px; }
+.bc-proba.dim { color: var(--muted); }
+.bc-ev { background: var(--surface-2); color: var(--muted); border-radius: 5px; padding: 2px 7px; font-weight: bold; }
+.bc-ev.pos { background: rgba(53,196,139,.15); color: var(--green); }
+.bc-pourquoi { color: var(--muted); font-size: 11px; margin: 8px 0 0; border-top: 1px dashed var(--line); padding-top: 8px; }
+/* Cible tactile ≥ 40px pour le bouton graphe, sans changer .range-btn (partagé
+   avec les onglets de plage — cf. même traitement pour .odds-modal-close). */
+.bc-graph { min-height: 40px; display: inline-flex; align-items: center; }
+
+/* Cible tactile ≥ 40px pour les contrôles de tri/toggle du Classement, sans
+   changer .range-btn (partagé avec les onglets de plage — même traitement
+   que .bc-graph / .odds-modal-close ci-dessus). */
+.rk-ctrl { min-height: 40px; display: inline-flex; align-items: center; }
+
+/* Modale d'évolution des cotes */
+.odds-modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 16px; }
+.odds-modal { width: 100%; max-width: 480px; max-height: 90vh; overflow-y: auto; }
+.odds-modal-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+/* Cible tactile ≥ 40px pour la fermeture, sans changer .range-btn (partagé avec les onglets de plage). */
+.odds-modal-close { min-width: 40px; min-height: 40px; display: inline-flex; align-items: center; justify-content: center; padding: 5px 11px; }
+
 @media (max-width: 700px) {
   .oa-tmt { flex-basis: 100%; white-space: normal; }
   .oa-odd { font-size: 15px; min-width: 46px; }
   /* Cibles tactiles : la charte impose 40px mini, .tab n'en faisait que 33. */
   .tab { min-height: 40px; }
 }
+
+/* ---- Coulisses (accordéon pédagogique, 5 sections montées à la demande) ---- */
+/* h2 > button (pas l'inverse) : un <button> n'accepte que du contenu de
+   flux/phrasing, un <h2> n'en est pas — le nid original cassait la sémantique
+   et risquait de faire disparaître le titre à la navigation par en-têtes au
+   lecteur d'écran. Le point rouge du h2 générique (h2::before) est neutralisé
+   ici et reporté sur .coulisse-title : sinon, comme le bouton est un conteneur
+   flex (donc de type bloc), il romprait la ligne et isolerait le point sur sa
+   propre ligne au-dessus du bouton au lieu de rester collé au titre. */
+.coulisse-h2 { margin: 0; }
+.coulisse-h2::before { content: none; }
+.coulisse-head { display: flex; width: 100%; justify-content: space-between; align-items: center; background: none; border: 0; color: var(--ink); font: inherit; cursor: pointer; min-height: 40px; padding: 0; }
+.coulisse-title::before { content: ""; display: inline-block; width: 8px; height: 8px; background: var(--bwf-red); border-radius: 50%; margin-right: 8px; vertical-align: middle; }
+.coulisse-chevron { color: var(--muted); }

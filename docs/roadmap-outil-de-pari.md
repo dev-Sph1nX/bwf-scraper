@@ -19,8 +19,8 @@ principale source de désordre.
 |---|---|---|---|
 | 1 | **Modèle** | `p`, la probabilité de victoire | ✅ mesuré, il bat le classement mondial (§1.1) |
 | 2 | **Calibration** | *est-ce que `p` est juste ?* | ✅ corrigée là où c'était démontré (§1.3) |
-| 3 | **Détection** | `p` comparé au marché | 🔨 la matière première existe, l'écran manque |
-| 4 | **Mise** | combien miser | à faire, après la couche 3 |
+| 3 | **Détection** | `p` comparé au marché | ✅ EV affichée par match/opérateur sur l'Accueil (refonte du 2026-07-31) |
+| 4 | **Mise** | combien miser | à faire, après la couche 3 (lot B) |
 | 5 | **Journal** | *est-ce que je gagne ?* | à faire ; la CLV s'accumule déjà toute seule |
 
 Les couches 2 et 5 ne mesurent pas la même chose : la 2 juge le **modèle** (mes
@@ -41,30 +41,13 @@ qualité du modèle. Deux écrans distincts, jamais fusionnés.
 | **Historisation des cotes** (ex-lot 6) | fait et dépassé : relevés append-only **par opérateur nommé** (Betclic/Unibet/Winamax), cron toutes les 2 h, **prématch seulement**, jointure inter-opérateurs exacte (id Sportradar) | `data/books/runs/` |
 | **Dates de naissance + main dominante** | collectées (97,7 % des apparitions ; 620 mains) — la MESURE du facteur âge reste à faire | `data/players/` |
 | Mesures ponctuelles | gymnases→3 sets (réel, persistant r = 0,42) ; terrain (+2,2 pt, simple seulement) ; écart de points (étape 1 : 58,4 %) ; Elo-bis à marge de points (non départageable sur 2026, code conservé désactivé) | §7, §2.6, §2.7, §2.8 |
+| **EV sur les écrans** (ex-lot A) | absorbée par la refonte UX : `EV = cote × p − 1` (p calibrée) calculée par camp et par opérateur, affichée sur la carte de match (Accueil) pour la meilleure cote ; renommage du tag `value` → « sous-coté BWF » complet côté UI | refonte du 2026-07-31, `docs/superpowers/specs/2026-07-31-refonte-ux-design.md` |
 
 ---
 
-# Lot A — Valeur attendue (EV) sur les écrans ⭐ prochain
+# Lot B — Mise (Kelly fractionné) et journal de paris ⭐ prochain
 
-**Couche 3. Débloqué à 100 %, coût faible.**
-
-Les ingrédients sont côte à côte dans `books-report.json` : `prob` (Elo calibré)
-et les cotes **réellement misables de chaque opérateur**. Il manque
-l'arithmétique (`EV = cote × p − 1`) et son affichage : sur la page cotes,
-l'EV par opérateur pour chaque match apparié, les rares lignes positives mises
-en avant.
-
-- L'ancienne réserve « la cote scrapée est la meilleure du marché, EV biaisé à
-  la hausse » **est levée** : ce sont les cotes des opérateurs où l'on parie.
-- Inclut le **renommage** du tag `value` → « sous-coté BWF » (il ne regarde
-  aucune cote — sans renommage, confusion garantie avec la vraie EV).
-- Couverture attendue : dépend du nombre de matchs cotés (~8-20 en période de
-  tournoi). L'écran doit rester peuplé par les signaux du modèle, lignes cotées
-  mises en avant.
-
-# Lot B — Mise (Kelly fractionné) et journal de paris
-
-**Couches 4 et 5. Après le lot A — sans EV affichée, rien à enregistrer.**
+**Couches 4 et 5. Après l'EV affichée (ex-lot A, fait) — sans elle, rien à enregistrer.**
 
 Tiroir de mise sur la fiche d'un match (bankroll, fraction de Kelly, mise
 calculée, enregistrement en un geste), puis le journal : chaque pari **figé au

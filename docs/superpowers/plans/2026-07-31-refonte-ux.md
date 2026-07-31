@@ -1,6 +1,6 @@
 # Refonte UX Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Passer de 8 écrans à 3 pages + Coulisses, avec un Accueil « sur quoi parier aujourd'hui ? » : carte de match à deux lignes joueur (drapeau · nom · #mondial · #Elo · prédiction · cotes par opérateur choisi · 📈(n) · EV calibrée), modale d'évolution multi-opérateurs, Classement enrichi, Coulisses pédagogiques.
 
@@ -31,7 +31,7 @@
 **Interfaces:**
 - Produces: `ev(odd, p) -> number|null` ; `bestOdd(booksBySide, side) -> {odd, book}|null` où `booksBySide = {betclic: {odd1, odd2}, ...}` et `side ∈ {1,2}` ; `pointsTotal(books) -> number` (somme des `points.length`).
 
-- [ ] **Step 1: Écrire les tests qui échouent**
+- [x] **Step 1: Écrire les tests qui échouent**
 
 ```js
 // test/ev.test.mjs
@@ -66,9 +66,9 @@ test("pointsTotal : somme des points traçables (règle du bouton graphe : actif
 });
 ```
 
-- [ ] **Step 2: Vérifier l'échec** — `node --test test/ev.test.mjs` → FAIL `Cannot find module '../lib/ev.mjs'`.
+- [x] **Step 2: Vérifier l'échec** — `node --test test/ev.test.mjs` → FAIL `Cannot find module '../lib/ev.mjs'`.
 
-- [ ] **Step 3: Implémentation minimale**
+- [x] **Step 3: Implémentation minimale**
 
 ```js
 // lib/ev.mjs
@@ -98,8 +98,8 @@ export function pointsTotal(books) {
 }
 ```
 
-- [ ] **Step 4: Vérifier le vert** — `node --test test/ev.test.mjs` → PASS ; puis `npm test` complet → 0 fail.
-- [ ] **Step 5: Commit** — `git add lib/ev.mjs test/ev.test.mjs && git commit -m "feat(ev): valeur attendue et meilleure cote par camp (pur, testé)"`
+- [x] **Step 4: Vérifier le vert** — `node --test test/ev.test.mjs` → PASS ; puis `npm test` complet → 0 fail.
+- [x] **Step 5: Commit** — `git add lib/ev.mjs test/ev.test.mjs && git commit -m "feat(ev): valeur attendue et meilleure cote par camp (pur, testé)"`
 
 ---
 
@@ -113,7 +113,7 @@ export function pointsTotal(books) {
 - Consumes: groupes de `groupBooks` (lib/books-history.mjs) : `{key, books: {op: {odd1, odd2, points, readings}}}` — `odd1/odd2` orientées vers p1 DU GROUPE ; et `swapped` du résultat `matchBooks` (true = p1 du groupe correspond à team2 BWF).
 - Produces: `oddsForMatch(group, swapped) -> {bookKey, n, books: {op: {odd1, odd2, points}}}` avec `odd1` = cote de TEAM1 BWF (points réorientés pareil, impliedP1 retourné si swapped).
 
-- [ ] **Step 1: Test qui échoue**
+- [x] **Step 1: Test qui échoue**
 
 ```js
 // test/home-data.test.mjs
@@ -146,9 +146,9 @@ test("swapped=true : cotes ET points retournés vers team1 BWF", () => {
 });
 ```
 
-- [ ] **Step 2: Vérifier l'échec** — `node --test test/home-data.test.mjs` → FAIL module manquant.
+- [x] **Step 2: Vérifier l'échec** — `node --test test/home-data.test.mjs` → FAIL module manquant.
 
-- [ ] **Step 3: Implémentation**
+- [x] **Step 3: Implémentation**
 
 ```js
 // lib/home-data.mjs
@@ -174,8 +174,8 @@ export function oddsForMatch(group, swapped) {
 }
 ```
 
-- [ ] **Step 4: Vert** — `node --test test/home-data.test.mjs` puis `npm test`.
-- [ ] **Step 5: Commit** — `git commit -m "feat(home): cotes d'un match réorientées vers team1/team2 BWF (pur, testé)"`
+- [x] **Step 4: Vert** — `node --test test/home-data.test.mjs` puis `npm test`.
+- [x] **Step 5: Commit** — `git commit -m "feat(home): cotes d'un match réorientées vers team1/team2 BWF (pur, testé)"`
 
 ---
 
@@ -188,7 +188,7 @@ export function oddsForMatch(group, swapped) {
 - Consumes: `recalibrate(p, disc)` (lib/calibrate.mjs, p ∈ (0,1)) ; `oddsForMatch` (Task 2) ; `res.matched` de `matchBooks` (chaque m : `{group, bwf, swapped}`) ; `ev`/`bestOdd` (Task 1).
 - Produces: chaque entrée de `upcoming-matches.json` gagne : `team1.eloRank`/`team2.eloRank` (rang dans le classement Elo de la discipline, null si non classé), `probCal` (proba calibrée team1, entier %, null si prob null), et — si le match est apparié à des cotes — `odds = {bookKey, n, books, ev1, ev2}` où `ev1/ev2` = EV de la MEILLEURE cote de chaque camp (null si probCal null).
 
-- [ ] **Step 1: Ajouter `eloRank` dans `withElo`** — l'entité de `eloLookup` est une entrée du classement (elle porte `rank`) :
+- [x] **Step 1: Ajouter `eloRank` dans `withElo`** — l'entité de `eloLookup` est une entrée du classement (elle porte `rank`) :
 
 ```js
 const withElo = (team, entity) => ({
@@ -200,7 +200,7 @@ const withElo = (team, entity) => ({
 });
 ```
 
-- [ ] **Step 2: Proba calibrée à la création du match à venir** — juste après le calcul de `prob` (~l.404), importer `recalibrate` en tête de fichier (`import { recalibrate } from "./lib/calibrate.mjs";`) et pousser :
+- [x] **Step 2: Proba calibrée à la création du match à venir** — juste après le calcul de `prob` (~l.404), importer `recalibrate` en tête de fichier (`import { recalibrate } from "./lib/calibrate.mjs";`) et pousser :
 
 ```js
 const probCal = prob == null ? null : Math.round(recalibrate(prob / 100, m.eventName) * 100);
@@ -208,9 +208,9 @@ const probCal = prob == null ? null : Math.round(recalibrate(prob / 100, m.event
 
 et ajouter `probCal` à l'objet poussé dans `upcomingMatches`.
 
-- [ ] **Step 3: Relier candidat de cotes → entrée upcoming** — dans le push `oddsCandidates`, ajouter `uIdx: upcomingMatches.length - 1` (le candidat est créé juste après son entrée upcoming, même itération).
+- [x] **Step 3: Relier candidat de cotes → entrée upcoming** — dans le push `oddsCandidates`, ajouter `uIdx: upcomingMatches.length - 1` (le candidat est créé juste après son entrée upcoming, même itération).
 
-- [ ] **Step 4: Déplacer l'écriture** — supprimer la ligne `await write("upcoming-matches.json", …)` actuelle (~l.435, garder le `console.log`) ; dans la section bookmakers, APRÈS `const res = matchBooks(...)`, enrichir puis écrire :
+- [x] **Step 4: Déplacer l'écriture** — supprimer la ligne `await write("upcoming-matches.json", …)` actuelle (~l.435, garder le `console.log`) ; dans la section bookmakers, APRÈS `const res = matchBooks(...)`, enrichir puis écrire :
 
 ```js
 // Embarque les cotes appariées dans les matchs à venir : la carte d'accueil
@@ -233,7 +233,7 @@ await write("upcoming-matches.json", { generatedAt: ranking.generatedAt, matches
 
 avec les imports `import { ev, bestOdd } from "./lib/ev.mjs";` et `import { oddsForMatch } from "./lib/home-data.mjs";`.
 
-- [ ] **Step 5: Vérifier sur données réelles** — `node build-data.mjs` puis :
+- [x] **Step 5: Vérifier sur données réelles** — `node build-data.mjs` puis :
 
 ```bash
 python3 -c "
@@ -248,7 +248,7 @@ print('probCal', m.get('probCal'), '| eloRank t1', m['team1'].get('eloRank'), '|
 
 Attendu : ≥ 1 match avec cotes quand un tournoi est coté (sinon 0 en période creuse — vérifier alors `probCal`/`eloRank` seuls), aucun crash, `npm test` vert.
 
-- [ ] **Step 6: Commit** — `git commit -m "feat(build-data): rang Elo, proba calibrée et cotes embarquées dans les matchs à venir"`
+- [x] **Step 6: Commit** — `git commit -m "feat(build-data): rang Elo, proba calibrée et cotes embarquées dans les matchs à venir"`
 
 ---
 
@@ -263,9 +263,9 @@ Attendu : ≥ 1 match avec cotes quand un tournoi est coté (sinon 0 en période
 - Consumes: `series = [{ book, label, points: [{at, lastSeen, odd1, odd2, impliedP1}] }]` (points orientés team1) ; `BOOK_LABEL` local.
 - Produces: `<MultiOddsChart series={series} label1={nomJoueur1} label2={nomJoueur2} />` et `<OddsModal open onClose title>` (overlay plein écran, ferme sur ✕, clic fond et touche Échap).
 
-- [ ] **Step 1: MultiOddsChart** — adapter `OddsChart.jsx` (copie assumée, le mono-série reste utilisé par les Coulisses) : mêmes constantes viewBox 360×210, mêmes paliers, mais une `<path>` par série avec couleurs `["var(--accent)", "var(--accent-2)", "var(--green)"]` dans l'ordre des séries, légende `.chart-legend` AVANT le graphe (`.chart-leg-swatch` de la couleur de la série + nom opérateur + `(n)`), et un point isolé rendu par un `<circle>` seul. Axe temps commun = min/max de toutes les séries (lastSeen inclus). Pas de tooltip au survol multi-séries (hors périmètre) : le dernier % de chaque série s'affiche dans la légende.
+- [x] **Step 1: MultiOddsChart** — adapter `OddsChart.jsx` (copie assumée, le mono-série reste utilisé par les Coulisses) : mêmes constantes viewBox 360×210, mêmes paliers, mais une `<path>` par série avec couleurs `["var(--accent)", "var(--accent-2)", "var(--green)"]` dans l'ordre des séries, légende `.chart-legend` AVANT le graphe (`.chart-leg-swatch` de la couleur de la série + nom opérateur + `(n)`), et un point isolé rendu par un `<circle>` seul. Axe temps commun = min/max de toutes les séries (lastSeen inclus). Pas de tooltip au survol multi-séries (hors périmètre) : le dernier % de chaque série s'affiche dans la légende.
 
-- [ ] **Step 2: OddsModal**
+- [x] **Step 2: OddsModal**
 
 ```jsx
 // web/src/components/OddsModal.jsx
@@ -302,8 +302,8 @@ CSS (dans styles.css, section commentée `/* Modale d'évolution des cotes */`) 
 .odds-modal-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
 ```
 
-- [ ] **Step 3: Vérifier** — `cd web && npm run build` (compile sans erreur ; l'intégration visuelle se vérifie en Task 5).
-- [ ] **Step 4: Commit** — `git commit -m "feat(ui): graphe d'évolution multi-opérateurs + modale"`
+- [x] **Step 3: Vérifier** — `cd web && npm run build` (compile sans erreur ; l'intégration visuelle se vérifie en Task 5).
+- [x] **Step 4: Commit** — `git commit -m "feat(ui): graphe d'évolution multi-opérateurs + modale"`
 
 ---
 
@@ -317,7 +317,7 @@ CSS (dans styles.css, section commentée `/* Modale d'évolution des cotes */`) 
 - Consumes: une entrée d'`upcoming-matches.json` enrichie (Task 3) ; `books` = tableau des opérateurs sélectionnés (`["betclic","unibet","winamax"]` filtré) ; `ev`, `bestOdd`, `pointsTotal` recodés côté UI ? NON — l'EV vient précalculée (`odds.ev1/ev2`), la meilleure cote se déduit en comparant les colonnes affichées (max), `n` vient de `odds.n`.
 - Produces: `<BetCard match={m} selectedBooks={[...]} />` — carte autonome, ouvre sa propre `OddsModal`.
 
-- [ ] **Step 1: Composant** — structure (classes CSS nouvelles préfixées `.bc-`, tableau dans `.table-scroll`) :
+- [x] **Step 1: Composant** — structure (classes CSS nouvelles préfixées `.bc-`, tableau dans `.table-scroll`) :
 
 ```jsx
 // web/src/components/BetCard.jsx
@@ -397,8 +397,8 @@ const nomDe = (side) => (side === 1 ? m.team1 : m.team2).players.map((p) => p.na
 
 CSS `.bc-*` : `.bc-name a { color: var(--ink); font-weight: bold; }`, `.bc-proba { color: var(--accent); font-weight: bold; font-size: 14px; }`, `.bc-proba.dim { color: var(--muted); }`, `.bc-ev { background: var(--surface-2); color: var(--muted); border-radius: 5px; padding: 2px 7px; font-weight: bold; }`, `.bc-ev.pos { background: rgba(53,196,139,.15); color: var(--green); }`, `.bc-pourquoi { color: var(--muted); font-size: 11px; margin: 8px 0 0; border-top: 1px dashed var(--line); padding-top: 8px; }`.
 
-- [ ] **Step 2: Build** — `cd web && npm run build` sans erreur.
-- [ ] **Step 3: Commit** — `git commit -m "feat(ui): BetCard — carte de match à deux lignes joueur (spec refonte)"`
+- [x] **Step 2: Build** — `cd web && npm run build` sans erreur.
+- [x] **Step 3: Commit** — `git commit -m "feat(ui): BetCard — carte de match à deux lignes joueur (spec refonte)"`
 
 ---
 
@@ -413,7 +413,7 @@ CSS `.bc-*` : `.bc-name a { color: var(--ink); font-weight: bold; }`, `.bc-proba
 - Consumes: `upcoming-matches.json` (Task 3), `localStorage["books-selected"]` (JSON array), `BetCard` (Task 5).
 - Produces: page par défaut de l'app.
 
-- [ ] **Step 1: Page**
+- [x] **Step 1: Page**
 
 ```jsx
 // web/src/pages/Home.jsx — « Sur quoi parier aujourd'hui ? »
@@ -483,10 +483,10 @@ export default function Home() {
 
 La prop d'`UpcomingMatch` est `m` (vérifié : `export default function UpcomingMatch({ m, detailed })`) — écrire `<UpcomingMatch key={i} m={m} />`. Le tri par heure des cotés utilise l'heure du premier relevé faute d'heure BWF (91 % absents) ; quand `matchTime` existera côté BWF il primera — laisser un commentaire le disant.
 
-- [ ] **Step 2: Route** — dans `main.jsx` : `import Home from "./pages/Home.jsx";` et `<Route path="/" element={<Home />} />` ; supprimer l'import `Upcoming`.
-- [ ] **Step 3: Vérifier en local** — `node build-data.mjs && cd web && npm run build && npx vite preview --port 4180 &`, Playwright : ouvrir `/#/`, vérifier 0 débordement à 375 px, chips cliquables (colonnes qui apparaissent/disparaissent), modale 📈 qui s'ouvre sur un match à n ≥ 2, capture d'écran à lire.
-- [ ] **Step 4: Supprimer `Upcoming.jsx`**, re-build, re-tester.
-- [ ] **Step 5: Commit** — `git commit -m "feat(ui): Accueil « sur quoi parier aujourd'hui ? » (chips bookmakers, cartes, modale)"`
+- [x] **Step 2: Route** — dans `main.jsx` : `import Home from "./pages/Home.jsx";` et `<Route path="/" element={<Home />} />` ; supprimer l'import `Upcoming`.
+- [x] **Step 3: Vérifier en local** — `node build-data.mjs && cd web && npm run build && npx vite preview --port 4180 &`, Playwright : ouvrir `/#/`, vérifier 0 débordement à 375 px, chips cliquables (colonnes qui apparaissent/disparaissent), modale 📈 qui s'ouvre sur un match à n ≥ 2, capture d'écran à lire.
+- [x] **Step 4: Supprimer `Upcoming.jsx`**, re-build, re-tester.
+- [x] **Step 5: Commit** — `git commit -m "feat(ui): Accueil « sur quoi parier aujourd'hui ? » (chips bookmakers, cartes, modale)"`
 
 ---
 
@@ -501,10 +501,10 @@ La prop d'`UpcomingMatch` est `m` (vérifié : `export default function Upcoming
 - Consumes: `elo/ranking.json` → `disciplines[disc].entities[]` : `{rank, key, name, country, players[{id, slug, flag}], rating, bwfRank, form, provisional, matches}`.
 - Produces: page Classement (onglets disciplines, tri Elo/progression, colonne « sous-coté BWF »).
 
-- [ ] **Step 1: Page** — onglets `.tabs` MS/WS/MD/WD/XD ; tableau `.table-scroll` : `# | Joueur/Paire (Link fiche) | Elo | # mondial | sous-coté BWF | Progression`. `sous-coté BWF = bwfRank − rank` (positif = le mondial le sous-estime ; « — » si bwfRank null). Tri : boutons `.range-btn` « Par Elo » (défaut, ordre `rank`) / « Par progression » (tri `form` décroissant, null en dernier). Sous le tableau : `<p className="hint">La progression (variation d'Elo sur les 5 derniers matchs) est un outil de découverte, pas un pronostic : mesurée, elle ne prédit pas le vainqueur (journal §2.1).</p>`. Masquer les entités `provisional` derrière un toggle « inclure les Elo provisoires ». Trois états gérés comme dans Home.
-- [ ] **Step 2: Route + suppression Dashboard** — remplacer l'élément de la route `/classement` ; supprimer `Dashboard.jsx` et son import. Chercher les liens internes : `grep -rn '"/classement"' web/src` → ils continuent de marcher (même chemin).
-- [ ] **Step 3: Vérifier** — build + Playwright 375 px (`/#/classement`) : onglets, tri, aucun débordement ; capture lue.
-- [ ] **Step 4: Commit** — `git commit -m "feat(ui): Classement enrichi (sous-coté BWF, tri progression) — remplace Dashboard"`
+- [x] **Step 1: Page** — onglets `.tabs` MS/WS/MD/WD/XD ; tableau `.table-scroll` : `# | Joueur/Paire (Link fiche) | Elo | # mondial | sous-coté BWF | Progression`. `sous-coté BWF = bwfRank − rank` (positif = le mondial le sous-estime ; « — » si bwfRank null). Tri : boutons `.range-btn` « Par Elo » (défaut, ordre `rank`) / « Par progression » (tri `form` décroissant, null en dernier). Sous le tableau : `<p className="hint">La progression (variation d'Elo sur les 5 derniers matchs) est un outil de découverte, pas un pronostic : mesurée, elle ne prédit pas le vainqueur (journal §2.1).</p>`. Masquer les entités `provisional` derrière un toggle « inclure les Elo provisoires ». Trois états gérés comme dans Home.
+- [x] **Step 2: Route + suppression Dashboard** — remplacer l'élément de la route `/classement` ; supprimer `Dashboard.jsx` et son import. Chercher les liens internes : `grep -rn '"/classement"' web/src` → ils continuent de marcher (même chemin).
+- [x] **Step 3: Vérifier** — build + Playwright 375 px (`/#/classement`) : onglets, tri, aucun débordement ; capture lue.
+- [x] **Step 4: Commit** — `git commit -m "feat(ui): Classement enrichi (sous-coté BWF, tri progression) — remplace Dashboard"`
 
 ---
 
@@ -520,8 +520,8 @@ La prop d'`UpcomingMatch` est `m` (vérifié : `export default function Upcoming
 - Consumes: les 5 composants existants, montés à la demande.
 - Produces: `/coulisses`, sections dépliables ; anciennes routes redirigées (Task 9).
 
-- [ ] **Step 1: Neutraliser setTitle** — dans Reliability/Predictor/Data/Changelog : supprimer `const { setTitle } = useOutletContext();`, le `useEffect` de titre et l'import `useOutletContext` (garder le reste intact).
-- [ ] **Step 2: Page Coulisses** — accordéon maison (`<button>` ≥ 40 px, montage à l'ouverture) :
+- [x] **Step 1: Neutraliser setTitle** — dans Reliability/Predictor/Data/Changelog : supprimer `const { setTitle } = useOutletContext();`, le `useEffect` de titre et l'import `useOutletContext` (garder le reste intact).
+- [x] **Step 2: Page Coulisses** — accordéon maison (`<button>` ≥ 40 px, montage à l'ouverture) :
 
 ```jsx
 // web/src/pages/Coulisses.jsx — « est-ce que ça marche ? », expliqué pour humains.
@@ -572,9 +572,9 @@ export default function Coulisses() {
 
 CSS : `.coulisse-head { display: flex; width: 100%; justify-content: space-between; align-items: center; background: none; border: 0; color: var(--ink); font: inherit; cursor: pointer; min-height: 40px; padding: 0; } .coulisse-chevron { color: var(--muted); }`.
 
-- [ ] **Step 3: Réécrire les 2 leads les plus jargonneux** — dans `Reliability.jsx`, remplacer le premier paragraphe d'intro par un texte qui définit chaque terme à la première utilisation (réussite, calibration, Brier expliqué comme « distance entre l'annonce et la réalité, plus bas = mieux ») ; dans `BooksAudit.jsx`, le lead « Comment lire cette page » définit déjà marge/jointure — vérifier qu'aucun terme (drift, overround, srId) n'apparaît sans sa définition française à l'écran, corriger sinon.
-- [ ] **Step 4: Vérifier** — build + Playwright `/#/coulisses` : chaque section s'ouvre et charge son contenu, 375 px sans débordement.
-- [ ] **Step 5: Commit** — `git commit -m "feat(ui): page Coulisses — fiabilité, cotes, duel, données, versions, expliqués"`
+- [x] **Step 3: Réécrire les 2 leads les plus jargonneux** — dans `Reliability.jsx`, remplacer le premier paragraphe d'intro par un texte qui définit chaque terme à la première utilisation (réussite, calibration, Brier expliqué comme « distance entre l'annonce et la réalité, plus bas = mieux ») ; dans `BooksAudit.jsx`, le lead « Comment lire cette page » définit déjà marge/jointure — vérifier qu'aucun terme (drift, overround, srId) n'apparaît sans sa définition française à l'écran, corriger sinon.
+- [x] **Step 4: Vérifier** — build + Playwright `/#/coulisses` : chaque section s'ouvre et charge son contenu, 375 px sans débordement.
+- [x] **Step 5: Commit** — `git commit -m "feat(ui): page Coulisses — fiabilité, cotes, duel, données, versions, expliqués"`
 
 ---
 
@@ -587,7 +587,7 @@ CSS : `.coulisse-head { display: flex; width: 100%; justify-content: space-betwe
 **Interfaces:**
 - Produces: nav `Accueil · Tournois · Classement` + lien discret `Coulisses` ; anciennes URL (`/odds`, `/fiabilite`, `/predictor`, `/data`, `/changelog`) redirigées vers `/coulisses`.
 
-- [ ] **Step 1: Nav** — remplacer les 8 `NavLink` par :
+- [x] **Step 1: Nav** — remplacer les 8 `NavLink` par :
 
 ```jsx
 <NavLink to="/" end>Accueil</NavLink>
@@ -598,7 +598,7 @@ CSS : `.coulisse-head { display: flex; width: 100%; justify-content: space-betwe
 
 CSS : `.nav-coulisses { margin-top: auto; font-size: 12px; color: var(--muted); }` (en bas de sidebar ; < 700 px la barre horizontale le garde en dernier). Vérifier la structure flex de la sidebar pour que `margin-top:auto` fonctionne (sinon classe `.nav-sep` avec marge fixe).
 
-- [ ] **Step 2: Routes** — `import { Navigate } from "react-router-dom";` puis :
+- [x] **Step 2: Routes** — `import { Navigate } from "react-router-dom";` puis :
 
 ```jsx
 <Route path="/coulisses" element={<Coulisses />} />
@@ -609,8 +609,8 @@ CSS : `.nav-coulisses { margin-top: auto; font-size: 12px; color: var(--muted); 
 
 et supprimer les imports des pages retirées (`Odds`, `Reliability`… restent importées UNIQUEMENT par Coulisses via lazy).
 
-- [ ] **Step 3: Chasse aux liens morts** — `grep -rn '"/odds"\|"/fiabilite"\|"/predictor"\|"/data"\|"/changelog"' web/src` : remplacer chaque `<Link>` interne par `/coulisses` (ou supprimer si redondant).
-- [ ] **Step 4: Vérifier + commit** — build, Playwright : nav 4 entrées, anciennes URL redirigent ; `git commit -m "feat(ui): navigation 3 pages + Coulisses, redirections des anciennes URL"`
+- [x] **Step 3: Chasse aux liens morts** — `grep -rn '"/odds"\|"/fiabilite"\|"/predictor"\|"/data"\|"/changelog"' web/src` : remplacer chaque `<Link>` interne par `/coulisses` (ou supprimer si redondant).
+- [x] **Step 4: Vérifier + commit** — build, Playwright : nav 4 entrées, anciennes URL redirigent ; `git commit -m "feat(ui): navigation 3 pages + Coulisses, redirections des anciennes URL"`
 
 ---
 
@@ -619,8 +619,8 @@ et supprimer les imports des pages retirées (`Odds`, `Reliability`… restent i
 **Files:**
 - Modify: `docs/roadmap-outil-de-pari.md` (lot A absorbé → Fait), `docs/superpowers/plans/2026-07-31-refonte-ux.md` (cases cochées)
 
-- [ ] **Step 1: Suite complète** — `npm test` (≥ 292 tests, 0 fail), `node build-data.mjs`, `cd web && npm run build`.
-- [ ] **Step 2: Tour Playwright complet** — 375 px ET 1280 px sur `/#/`, `/#/tournaments`, `/#/classement`, `/#/coulisses` (chaque section ouverte une fois) : `scrollWidth − clientWidth === 0` partout, captures LUES (pas seulement prises). Ouvrir une modale 📈 et la fermer à l'Échap.
-- [ ] **Step 3: Critères de la spec** — relire la section « Critères de succès » de la spec un par un et vérifier chacun explicitement.
-- [ ] **Step 4: Roadmap** — dans `docs/roadmap-outil-de-pari.md`, déplacer « Lot A — EV sur les écrans » dans le tableau Fait avec renvoi à cette refonte ; le lot B devient le prochain.
+- [x] **Step 1: Suite complète** — `npm test` (≥ 292 tests, 0 fail), `node build-data.mjs`, `cd web && npm run build`.
+- [x] **Step 2: Tour Playwright complet** — 375 px ET 1280 px sur `/#/`, `/#/tournaments`, `/#/classement`, `/#/coulisses` (chaque section ouverte une fois) : `scrollWidth − clientWidth === 0` partout, captures LUES (pas seulement prises). Ouvrir une modale 📈 et la fermer à l'Échap.
+- [x] **Step 3: Critères de la spec** — relire la section « Critères de succès » de la spec un par un et vérifier chacun explicitement.
+- [x] **Step 4: Roadmap** — dans `docs/roadmap-outil-de-pari.md`, déplacer « Lot A — EV sur les écrans » dans le tableau Fait avec renvoi à cette refonte ; le lot B devient le prochain.
 - [ ] **Step 5: Commit final + push** — `git add -A -- ':!docs/notes-idees.md'` (le carnet reste local), commit `feat(ux): refonte — 3 pages + coulisses, accueil de pari avec EV`, `git pull --rebase origin main && git push origin main`, surveiller le run GitHub Actions jusqu'au vert et vérifier la page publiée.

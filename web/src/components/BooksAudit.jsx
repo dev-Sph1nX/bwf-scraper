@@ -294,7 +294,10 @@ export default function BooksAudit() {
         <p className="lead muted">
           La « marge » est la commission cachée de l'opérateur (somme des probabilités implicites
           des deux camps moins 100 %) : pour gagner sur la durée, il faut battre le marché de plus
-          que cette marge. Ces cotes n'alimentent pas encore les prédictions.
+          que cette marge. La « dérive » indique de combien la probabilité implicite du camp 1 a
+          bougé entre le premier et le dernier relevé : positive, le marché croit de plus en plus
+          à sa victoire ; négative, de moins en moins. Ces cotes n'alimentent pas encore les
+          prédictions.
         </p>
       </div>
 
