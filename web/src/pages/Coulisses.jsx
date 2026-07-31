@@ -1,6 +1,6 @@
 // web/src/pages/Coulisses.jsx — « est-ce que ça marche ? », expliqué pour humains.
 import { useEffect, useState, lazy, Suspense } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useSearchParams } from "react-router-dom";
 const Reliability = lazy(() => import("./Reliability.jsx"));
 const BooksAudit = lazy(() => import("../components/BooksAudit.jsx"));
 const Predictor = lazy(() => import("./Predictor.jsx"));
@@ -21,7 +21,11 @@ const SECTIONS = [
 
 export default function Coulisses() {
   const { setTitle } = useOutletContext();
-  const [open, setOpen] = useState(null);
+  const [searchParams] = useSearchParams();
+  // Un lien de comparaison (?a=&b=&disc=) doit ouvrir directement « Simuler un duel ».
+  const [open, setOpen] = useState(() =>
+    (searchParams.get("a") || searchParams.get("b") || searchParams.get("disc")) ? "duel" : null
+  );
   useEffect(() => { setTitle("Coulisses"); }, [setTitle]);
   return (
     <>

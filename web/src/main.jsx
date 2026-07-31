@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import Ranking from "./pages/Ranking.jsx";
 import Tournaments from "./pages/Tournaments.jsx";
@@ -11,7 +11,14 @@ import Home from "./pages/Home.jsx";
 import Coulisses from "./pages/Coulisses.jsx";
 import "./styles.css";
 
-const OLD_ROUTES = ["/odds", "/fiabilite", "/predictor", "/data", "/changelog"];
+const OLD_ROUTES = ["/odds", "/fiabilite", "/data", "/changelog"];
+
+// L'ancien /predictor peut porter des params de comparaison (?a=&b=&disc=) : on les
+// préserve vers /coulisses pour que la section « Simuler un duel » les récupère.
+function PredictorRedirect() {
+  const { search } = useLocation();
+  return <Navigate to={"/coulisses" + search} replace />;
+}
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -22,6 +29,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/classement" element={<Ranking />} />
           <Route path="/tournaments" element={<Tournaments />} />
           <Route path="/coulisses" element={<Coulisses />} />
+          <Route path="/predictor" element={<PredictorRedirect />} />
           {OLD_ROUTES.map((p) => (
             <Route key={p} path={p} element={<Navigate to="/coulisses" replace />} />
           ))}
