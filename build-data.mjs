@@ -19,6 +19,8 @@ import { computeElo, seedEloByRank } from "./lib/elo.mjs";
 import { loadInitialRanks } from "./lib/seeds.mjs";
 import { matchOdds } from "./lib/odds-match.mjs";
 import { loadRuns, buildOddsSeries, historyStats } from "./lib/odds-history.mjs";
+import { loadBookRuns, buildBookSeries, groupBooks } from "./lib/books-history.mjs";
+import { matchBooks } from "./lib/books-match.mjs";
 import { loadPublications, buildWorldMap, buildPlayerRankHistory, publicationTotal } from "./lib/rank-history.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
@@ -537,6 +539,71 @@ console.log(`   Matchs à venir : ${upcomingMatches.length}`);
     `   Cotes : ${s.matched} appariées / ${s.matched + s.ambiguous + s.unmatchedOdds} appariables ` +
       `(${s.matchRate ?? "—"} %), ${s.ambiguous} ambiguës, ${s.unmatchedOdds} orphelines, ` +
       `${s.noOdds} sans cote, ${s.settled} déjà jouées`
+  );
+}
+
+// ===== Cotes par OPÉRATEUR (Betclic, Unibet, Winamax) =====
+// Source : les relevés append-only de data/books/runs/ (scrape-books.mjs).
+// Un même match est joint entre opérateurs par son identifiant Sportradar
+// (exact), puis rapproché des matchs BWF par discipline + date + noms — au
+// moindre doute, pas d'appariement (l'audit montre les cas douteux).
+{
+  const runs = await loadBookRuns(join(ROOT, "data", "books", "runs"));
+  const series = buildBookSeries(runs);
+  const groups = groupBooks(series);
+  // Les matchs joués récents sont candidats aussi : une cote dont on connaît
+  // l'issue reste la matière de la comparaison au marché (cote de clôture).
+  const candidats = [
+    ...oddsCandidates.map((c) => ({ ...c, played: false })),
+    ...playedCandidates.map((c) => ({ ...c, played: true })),
+  ];
+  const res = matchBooks(candidats, groups);
+  const names = (team) => (team?.players || []).map((p) => p.nameDisplay).join(" / ");
+
+  const bwfOf = new Map(res.matched.map((m) => [m.group.key, m]));
+  const perBook = {};
+  for (const g of groups) {
+    for (const [book, b] of Object.entries(g.books)) {
+      const st = (perBook[book] ||= { lines: 0, withOdds: 0, readingsTotal: 0 });
+      st.lines++;
+      if (b.odd1 != null && b.odd2 != null) st.withOdds++;
+      st.readingsTotal += b.readings;
+    }
+  }
+
+  await write("books-report.json", {
+    generatedAt: new Date().toISOString(),
+    runs: runs.map((r) => r.fetchedAt),
+    stats: { ...res.stats, perBook },
+    matches: groups.map((g) => {
+      const m = bwfOf.get(g.key);
+      return {
+        ...g,
+        bwf: m
+          ? {
+              tournamentName: m.bwf.tournamentName, roundName: m.bwf.roundName,
+              discipline: m.bwf.eventName, matchTime: m.bwf.matchTime,
+              bwf1: names(m.bwf.team1), bwf2: names(m.bwf.team2),
+              prob: m.bwf.prob ?? null, played: !!m.bwf.played, winner: m.bwf.winner ?? null,
+              // true si p1 du groupe correspond à team2 BWF : permet d'aligner
+              // les colonnes de cotes sur team1/team2 côté interface.
+              swapped: m.swapped, score: m.score,
+            }
+          : null,
+      };
+    }),
+    ambiguous: res.ambiguous.map((x) => ({
+      key: x.group.key, p1: x.group.p1, p2: x.group.p2,
+      tournament: x.group.tournament, discipline: x.group.discipline, startUtc: x.group.startUtc,
+      candidates: x.candidates.map((c) => ({
+        tournamentName: c.bwf.tournamentName, roundName: c.bwf.roundName,
+        bwf1: names(c.bwf.team1), bwf2: names(c.bwf.team2), score: c.score,
+      })),
+    })),
+  });
+  console.log(
+    `   Bookmakers : ${groups.length} matchs (${runs.length} relevés), ` +
+      `${res.stats.matched} appariés BWF, ${res.stats.ambiguous} ambigus, ${res.stats.unmatched} orphelins`
   );
 }
 

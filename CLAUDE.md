@@ -49,8 +49,9 @@ rétro-adaptée après coup :
 # Scraper (racine)
 npm install && npx playwright install chromium
 npm run update       # scrape l'année
+npm run scrape-books # cotes Betclic/Unibet/Winamax (HTTP pur) -> data/books/runs/ (append-only)
 npm run build-data   # génère les JSON pour l'app
-npm run refresh      # les deux d'un coup
+npm run refresh      # tout d'un coup (update + rankings + odds + build + backtest)
 
 # App web
 cd web && npm install

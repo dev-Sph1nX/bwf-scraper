@@ -49,6 +49,14 @@ jobs:
       - run: node fetch-rankings.mjs
         continue-on-error: true
 
+      # 1c) Cotes des bookmakers français (Betclic, Unibet, Winamax) : HTTP pur,
+      # relevé append-only dans data/books/runs/ (committé par l'étape "Commit
+      # data"). continue-on-error : un opérateur qui change son format ou nous
+      # bloque ne doit pas coûter le déploiement — le relevé manquant du jour
+      # est perdu, mais l'historique reste intact et le run suivant reprend.
+      - run: node scrape-books.mjs
+        continue-on-error: true
+
       # 2) Génère les JSON statiques (Elo sur TOUTES les saisons présentes dans data/)
       - run: node build-data.mjs
 

@@ -2,10 +2,14 @@ import { useEffect, useMemo, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import { getJSON } from "../data.js";
 import OddsChart from "../components/OddsChart.jsx";
+import BooksAudit from "../components/BooksAudit.jsx";
 import { ROUND_LABEL } from "../components/UpcomingMatch.jsx";
 
-// Page d'audit de l'appariement cotes oddsportal <-> matchs BWF.
-// Objectif : vérifier ligne par ligne que la bonne cote est collée au bon match.
+// Page d'audit des cotes, deux sources :
+//   - « Bookmakers FR » : Betclic / Unibet / Winamax, cotes par opérateur nommé
+//     (vue par match, vue brute par opérateur, relevés historisés) ;
+//   - « oddsportal »    : l'agrégateur historique, avec l'audit d'appariement
+//     ligne par ligne.
 // Les cotes n'alimentent pas encore les prédictions.
 
 const DISC_LABEL = {
@@ -111,13 +115,32 @@ function AmbiguousItem({ row }) {
 
 export default function Odds() {
   const { setTitle } = useOutletContext();
+  const [source, setSource] = useState("books");
+
+  useEffect(() => { setTitle("Audit des cotes"); }, [setTitle]);
+
+  return (
+    <>
+      <div className="tabs">
+        <button type="button" className={`tab${source === "books" ? " active" : ""}`} aria-pressed={source === "books"} onClick={() => setSource("books")}>
+          Bookmakers FR
+        </button>
+        <button type="button" className={`tab${source === "oddsportal" ? " active" : ""}`} aria-pressed={source === "oddsportal"} onClick={() => setSource("oddsportal")}>
+          oddsportal
+        </button>
+      </div>
+      {source === "books" ? <BooksAudit /> : <OddsportalAudit />}
+    </>
+  );
+}
+
+function OddsportalAudit() {
   const [data, setData] = useState(null);
   const [tab, setTab] = useState("matched");
   const [disc, setDisc] = useState("all");
   const [hist, setHist] = useState(null);
   const [ouvert, setOuvert] = useState(null);   // eventId du graphe déplié
 
-  useEffect(() => { setTitle("Audit des cotes"); }, [setTitle]);
   useEffect(() => { getJSON("odds-report.json").then(setData).catch(() => setData(false)); }, []);
   useEffect(() => { getJSON("odds-history.json").then(setHist).catch(() => setHist(false)); }, []);
 
