@@ -91,6 +91,25 @@ test("doubles : initiales en tête et collées (« A.Chia », « H.C.Chiu ») re
   assert.equal(res.matched[0].swapped, false);
 });
 
+test("deux groupes appariés à deux matchs JOUÉS distincts ne se bloquent pas entre eux", () => {
+  // Régression (vue en production le 2026-07-31) : les candidats joués n'ont
+  // pas de champs a/b — la garde anti-doublon les voyait donc tous identiques
+  // (« …|undefined|undefined ») et classait à tort le 2e groupe en ambigu.
+  const joue1 = bwf({ winner: 1, matchTime: "2026-07-31 19:30:00" });
+  delete joue1.a; delete joue1.b; // forme réelle de playedCandidates
+  const joue2 = bwf({
+    winner: 2, matchTime: "2026-07-31 19:15:00",
+    team1: { players: [{ id: "20", nameDisplay: "Yudai OKIMOTO", lastName: "OKIMOTO", firstName: "Yudai", slug: "yudai-okimoto", countryCode: "JPN" }] },
+    team2: { players: [{ id: "21", nameDisplay: "Kiran GEORGE", lastName: "GEORGE", firstName: "Kiran", slug: "kiran-george", countryCode: "IND" }] },
+  });
+  delete joue2.a; delete joue2.b;
+  const g1 = groupe();
+  const g2 = groupe({ key: "73295562", srId: "73295562", p1: "Yudai Okimoto", p2: "Kiran George", startUtc: "2026-07-31T11:15:00.000Z" });
+  const res = matchBooks([joue1, joue2], [g1, g2]);
+  assert.equal(res.matched.length, 2);
+  assert.equal(res.ambiguous.length, 0);
+});
+
 test("une discipline différente ne matche jamais, même à noms égaux", () => {
   const res = matchBooks([bwf({ eventName: "WS" })], [groupe()]);
   assert.equal(res.matched.length, 0);
