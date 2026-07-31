@@ -8,8 +8,7 @@
     "fetch-rankings": "node fetch-rankings.mjs",
     "backfill-rankings": "node backfill-rankings.mjs",
     "build-data": "node build-data.mjs",
-    "refresh": "node run-update.mjs && node fetch-rankings.mjs && node scrape-odds.mjs && node scrape-books.mjs && node build-data.mjs && node backtest.mjs --quiet",
-    "scrape-odds": "node scrape-odds.mjs",
+    "refresh": "node run-update.mjs && node fetch-rankings.mjs && node scrape-books.mjs && node build-data.mjs && node backtest.mjs --quiet",
     "scrape-books": "node scrape-books.mjs",
     "test": "node --test test/*.test.mjs",
     "backtest": "node backtest.mjs"

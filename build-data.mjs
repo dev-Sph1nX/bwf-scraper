@@ -17,8 +17,6 @@ import * as views from "./lib/views.mjs";
 import * as store from "./lib/store.mjs";
 import { computeElo, seedEloByRank } from "./lib/elo.mjs";
 import { loadInitialRanks } from "./lib/seeds.mjs";
-import { matchOdds } from "./lib/odds-match.mjs";
-import { loadRuns, buildOddsSeries, historyStats } from "./lib/odds-history.mjs";
 import { loadBookRuns, buildBookSeries, groupBooks } from "./lib/books-history.mjs";
 import { matchBooks } from "./lib/books-match.mjs";
 import { loadPublications, buildWorldMap, buildPlayerRankHistory, publicationTotal } from "./lib/rank-history.mjs";
@@ -437,110 +435,11 @@ await write("status.json", { years, tournaments: allTournaments });
 await write("upcoming-matches.json", { generatedAt: ranking.generatedAt, matches: upcomingMatches });
 console.log(`   Matchs à venir : ${upcomingMatches.length}`);
 
-// ===== Cotes oddsportal : appariement et rapport de vérification =====
-// Étape exploratoire : on produit UNIQUEMENT odds-report.json, destiné à l'audit
-// manuel. Aucune sortie existante n'est modifiée, les cotes n'entrent pas encore
-// dans les prédictions.
-{
-  // Source : les relevés append-only de data/odds/runs/ (un fichier par passage).
-  // On reconstitue la série temporelle de chaque match, puis on n'utilise que la
-  // DERNIÈRE cote connue pour le rapport d'appariement — mais la série complète
-  // est publiée à part, pour le graphe d'évolution et pour la cote de clôture.
-  const runsDir = join(ROOT, "data", "odds", "runs");
-  const runs = await loadRuns(runsDir);
-  const series = buildOddsSeries(runs);
-  const files = runs.map((r) => r.fetchedAt);
-
-  // Une ligne par match, portant sa cote la plus récente : c'est ce qu'attend
-  // matchOdds, qui raisonne sur un état courant et non sur une série.
-  //
-  // `settled` d'oddsportal est une propriété DE L'INSTANT DU RELEVÉ, pas une
-  // vérité intemporelle : un match scrapé la veille est marqué « à venir » et le
-  // reste dans nos fichiers, même après avoir été joué. S'en servir tel quel
-  // faisait classer des cotes de matchs passés parmi les « orphelines », comme
-  // s'il s'agissait d'un échec d'appariement.
-  //
-  // On le recoupe donc avec la date du match : une rencontre dont la date est
-  // révolue est passée, quoi qu'en dise le relevé. Limite assumée : pour les
-  // matchs du JOUR, on s'en remet encore au drapeau du relevé, faute de savoir
-  // l'heure exacte à laquelle il a été pris.
-  //
-  // On apparie d'abord les cotes aux matchs JOUÉS : si une cote correspond à une
-  // rencontre dont nous connaissons le vainqueur, elle est passée, quoi qu'en
-  // dise le relevé. C'est nos données qui font autorité, pas un drapeau périmé.
-  const dejaJoues = new Set();
-  {
-    const brut = series.map((s) => ({
-      eventId: s.eventId, date: s.date, time: s.time, discipline: s.discipline,
-      tournamentKey: s.tournamentKey, p1: s.p1, p2: s.p2, settled: false,
-      odd1: s.closing?.odd1 ?? null, odd2: s.closing?.odd2 ?? null,
-    }));
-    for (const m of matchOdds(playedCandidates, brut, { includeSettled: true }).matched) {
-      dejaJoues.add(m.odds.eventId);
-    }
-  }
-  const aujourdhui = new Date().toISOString().slice(0, 10);
-  const estPasse = (s) => dejaJoues.has(s.eventId) || s.settled || (s.date && s.date < aujourdhui);
-
-  const rows = series.map((s) => ({
-    eventId: s.eventId, date: s.date, time: s.time, discipline: s.discipline,
-    tournamentKey: s.tournamentKey, league: s.league, href: s.href,
-    p1: s.p1, p2: s.p2, settled: estPasse(s),
-    odd1: s.closing?.odd1 ?? null, odd2: s.closing?.odd2 ?? null,
-  }));
-
-  await write("odds-history.json", {
-    generatedAt: new Date().toISOString(),
-    runs: runs.map((r) => r.fetchedAt),
-    stats: historyStats(series),
-    // On ne publie que les matchs ayant au moins une cote : les autres n'ont
-    // rien à montrer dans un graphe.
-    series: series.filter((s) => s.readings > 0),
-  });
-
-  const res = matchOdds(oddsCandidates, rows);
-  const names = (team) => (team?.players || []).map((p) => p.nameDisplay).join(" / ");
-  const opSide = (side) => ({ display: side.display, slug: side.slug, iso2: side.iso2 });
-  const base = (r) => ({
-    date: r.date, time: r.time, discipline: r.discipline,
-    tournament: r.tournamentKey, league: r.league, eventId: r.eventId,
-    op1: opSide(r.p1), op2: opSide(r.p2), odd1: r.odd1, odd2: r.odd2,
-  });
-
-  await write("odds-report.json", {
-    generatedAt: new Date().toISOString(),
-    runs: files,
-    stats: res.stats,
-    matched: res.matched.map((m) => ({
-      ...base(m.odds),
-      tournamentName: m.bwf.tournamentName, roundName: m.bwf.roundName,
-      bwf1: names(m.bwf.team1), bwf2: names(m.bwf.team2),
-      oddsTeam1: m.oddsTeam1, oddsTeam2: m.oddsTeam2,
-      swapped: m.swapped, score: m.score, margin: m.margin, prob: m.bwf.prob,
-    })),
-    ambiguous: res.ambiguous.map((x) => ({
-      ...base(x.odds),
-      candidates: x.candidates.map((c) => ({
-        tournamentName: c.bwf.tournamentName, roundName: c.bwf.roundName,
-        bwf1: names(c.bwf.team1), bwf2: names(c.bwf.team2), score: c.score,
-      })),
-    })),
-    unmatchedOdds: res.unmatchedOdds.map(base),
-    noOdds: res.noOdds.map(base),
-    // Les matchs déjà joués sont attendus en masse (page « aujourd'hui ») : on ne
-    // garde que le compte, la liste n'apprendrait rien.
-    unmatchedBwf: res.unmatchedBwf.map((c) => ({
-      tournamentName: c.tournamentName, discipline: c.eventName, roundName: c.roundName,
-      bwf1: names(c.team1), bwf2: names(c.team2),
-    })),
-  });
-  const s = res.stats;
-  console.log(
-    `   Cotes : ${s.matched} appariées / ${s.matched + s.ambiguous + s.unmatchedOdds} appariables ` +
-      `(${s.matchRate ?? "—"} %), ${s.ambiguous} ambiguës, ${s.unmatchedOdds} orphelines, ` +
-      `${s.noOdds} sans cote, ${s.settled} déjà jouées`
-  );
-}
+// ===== Cotes oddsportal : RETIRÉ (2026-07-31) =====
+// L'audit oddsportal (odds-report.json, odds-history.json) a été retiré au
+// profit des bookmakers FR ci-dessous : cotes par opérateur nommé, réellement
+// misables, jointes par identifiant Sportradar. L'historique déjà relevé reste
+// archivé dans data/odds/runs/ (append-only, jamais réécrit).
 
 // ===== Cotes par OPÉRATEUR (Betclic, Unibet, Winamax) =====
 // Source : les relevés append-only de data/books/runs/ (scrape-books.mjs).
