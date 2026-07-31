@@ -47,6 +47,13 @@ test("l'orientation inversée est détectée (p1 opérateur = team2 BWF)", () =>
   assert.equal(res.matched[0].swapped, true);
 });
 
+test("un match BWF SANS horaire reste appariable (l'ordre de jeu paraît la veille)", () => {
+  // 91 % des matchs à venir n'ont pas encore de matchTime (mesuré) : exiger la
+  // proximité de date les rendrait tous orphelins jusqu'à la veille du match.
+  const res = matchBooks([bwf({ matchTime: null })], [groupe()]);
+  assert.equal(res.matched.length, 1);
+});
+
 test("hors fenêtre de date, aucun appariement (autre édition du même duel)", () => {
   const res = matchBooks([bwf({ matchTime: "2026-05-02 19:30:00" })], [groupe()]);
   assert.equal(res.matched.length, 0);

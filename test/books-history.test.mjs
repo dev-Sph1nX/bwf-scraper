@@ -57,6 +57,20 @@ test("groupement par srId : un match, trois opérateurs, noms pris chez Winamax"
   assert.equal(g.books.unibet.closing.odd2, 2.0);
 });
 
+test("les cotes LIVE ne rentrent pas dans les séries (la clôture = dernier prématch)", () => {
+  // À un relevé toutes les 2 h on ne peut pas suivre du live : une cote prise
+  // pendant le match écraserait la « cote de clôture », qui doit être la
+  // dernière valeur d'AVANT match (c'est elle qu'on compare au modèle).
+  const runs = [
+    run("2026-07-31T08:00:00Z", { unibet: [ligne("unibet", "e1", "73288292", 1.5, 2.4)] }),
+    run("2026-07-31T12:00:00Z", { unibet: [ligne("unibet", "e1", "73288292", 5.0, 1.05, { isLive: true })] }),
+  ];
+  const [s] = buildBookSeries(runs);
+  assert.equal(s.readings, 1);          // le point live est ignoré
+  assert.equal(s.closing.odd1, 1.5);    // la clôture reste le dernier prématch
+  assert.equal(s.isLive, true);         // …mais la métadonnée, elle, suit le relevé
+});
+
 test("chaque opérateur du groupe garde SON libellé de tournoi (vue brute fidèle)", () => {
   const runs = [
     run("2026-07-31T10:00:00Z", {

@@ -33,9 +33,14 @@ const errors = {};
 for (const [i, [name, fn]] of BOOKS.entries()) {
   if (i > 0) await new Promise((r) => setTimeout(r, 1500)); // on reste courtois
   try {
-    const { rows, complete } = await fn();
+    const { rows: toutes, complete } = await fn();
+    // PRÉMATCH SEULEMENT : les cotes live bougent point par point, et à un
+    // relevé toutes les 2 h on n'en capturerait que des instantanés trompeurs
+    // qui pollueraient les séries et la cote de clôture.
+    const rows = toutes.filter((r) => !r.isLive);
     books[name] = { complete, rows };
-    console.log(`📗 ${name} — ${rows.length} lignes${complete ? "" : " (INCOMPLET : pagination tronquée)"}`);
+    const live = toutes.length - rows.length;
+    console.log(`📗 ${name} — ${rows.length} lignes prématch${live ? ` (${live} live écartées)` : ""}${complete ? "" : " (INCOMPLET : des matchs du site manquent)"}`);
   } catch (err) {
     errors[name] = String(err.message || err);
     console.log(`⚠ ${name} : ${errors[name]}`);
