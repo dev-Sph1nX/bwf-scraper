@@ -1,0 +1,79 @@
+{
+ "fetchedAt": "2026-08-01T06:30:04.343Z",
+ "errors": {
+  "betclic": "https://www.betclic.fr/badminton-sbadminton -> HTTP 403",
+  "winamax": "https://www.winamax.fr/paris-sportifs/sports/31 -> HTTP 403"
+ },
+ "books": {
+  "unibet": {
+   "complete": true,
+   "rows": [
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368246",
+     "srId": "73323768",
+     "tournament": "Taipei Open",
+     "discipline": "WD",
+     "p1": "Tan/Thinaah",
+     "p2": "Corbett/Gai",
+     "odd1": 1.09,
+     "odd2": 4.45,
+     "startUtc": "2026-08-01T06:55:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368244",
+     "srId": "73323754",
+     "tournament": "Taipei Open",
+     "discipline": "MS",
+     "p1": "TB.Yoo",
+     "p2": "CY.Lin",
+     "odd1": 3.25,
+     "odd2": 1.2,
+     "startUtc": "2026-08-01T07:20:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368245",
+     "srId": "73323756",
+     "tournament": "Taipei Open",
+     "discipline": "MD",
+     "p1": "CK.Chen/Liu",
+     "p2": "Chia/Tai",
+     "odd1": 2.5,
+     "odd2": 1.35,
+     "startUtc": "2026-08-01T07:45:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368243",
+     "srId": "73323752",
+     "tournament": "Taipei Open",
+     "discipline": "MS",
+     "p1": "TC.Chou",
+     "p2": "Y.Okimoto",
+     "odd1": 1.42,
+     "odd2": 2.3,
+     "startUtc": "2026-08-01T08:10:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368248",
+     "srId": "73323852",
+     "tournament": "Taipei Open",
+     "discipline": "MD",
+     "p1": "Okamura/Yamash",
+     "p2": "Carnan/Marthin",
+     "odd1": 2.75,
+     "odd2": 1.28,
+     "startUtc": "2026-08-01T10:00:00.000Z",
+     "isLive": false
+    }
+   ]
+  }
+ }
+}
