@@ -1,0 +1,56 @@
+{
+ "fetchedAt": "2026-08-01T10:02:38.890Z",
+ "errors": {
+  "betclic": "https://www.betclic.fr/badminton-sbadminton -> HTTP 403"
+ },
+ "books": {
+  "unibet": {
+   "complete": true,
+   "rows": [
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368243",
+     "srId": "73323752",
+     "tournament": "Taipei Open",
+     "discipline": "MS",
+     "p1": "TC.Chou",
+     "p2": "Y.Okimoto",
+     "odd1": 1.36,
+     "odd2": 2.45,
+     "startUtc": "2026-08-01T10:10:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368384",
+     "srId": "73338680",
+     "tournament": "Taipei Open",
+     "discipline": "WS",
+     "p1": "TL.Nguyen",
+     "p2": "T.Sharma",
+     "odd1": 1.52,
+     "odd2": 2.05,
+     "startUtc": "2026-08-02T02:00:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368385",
+     "srId": "73338678",
+     "tournament": "Taipei Open DM",
+     "discipline": null,
+     "p1": "Watanabe/Taguc",
+     "p2": "Yang/Hu",
+     "odd1": 1.8,
+     "odd2": 1.7,
+     "startUtc": "2026-08-02T02:00:00.000Z",
+     "isLive": false
+    }
+   ]
+  },
+  "winamax": {
+   "complete": true,
+   "rows": []
+  }
+ }
+}
