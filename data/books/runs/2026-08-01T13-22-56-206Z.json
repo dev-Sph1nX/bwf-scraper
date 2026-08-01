@@ -1,0 +1,69 @@
+{
+ "fetchedAt": "2026-08-01T13:22:56.206Z",
+ "errors": {
+  "betclic": "https://www.betclic.fr/badminton-sbadminton -> HTTP 403"
+ },
+ "books": {
+  "unibet": {
+   "complete": true,
+   "rows": [
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368384",
+     "srId": "73338680",
+     "tournament": "Taipei Open",
+     "discipline": "WS",
+     "p1": "TL.Nguyen",
+     "p2": "T.Sharma",
+     "odd1": 1.52,
+     "odd2": 2.05,
+     "startUtc": "2026-08-02T04:00:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368385",
+     "srId": "73338678",
+     "tournament": "Taipei Open DM",
+     "discipline": null,
+     "p1": "Watanabe/Taguc",
+     "p2": "Yang/Hu",
+     "odd1": 1.72,
+     "odd2": 1.78,
+     "startUtc": "2026-08-02T04:30:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368394",
+     "srId": "73340630",
+     "tournament": "Taipei Open",
+     "discipline": "WD",
+     "p1": "Tan/Thinaah",
+     "p2": "Nakade/Takaha",
+     "odd1": 1.15,
+     "odd2": 3.7,
+     "startUtc": "2026-08-02T05:00:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368400",
+     "srId": "73345982",
+     "tournament": "Taipei Open",
+     "discipline": "MS",
+     "p1": "Y.Okimoto",
+     "p2": "TB.Yoo",
+     "odd1": 1.4,
+     "odd2": 2.35,
+     "startUtc": "2026-08-02T06:00:00.000Z",
+     "isLive": false
+    }
+   ]
+  },
+  "winamax": {
+   "complete": true,
+   "rows": []
+  }
+ }
+}
