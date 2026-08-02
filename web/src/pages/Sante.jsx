@@ -82,6 +82,59 @@ async function testerFichier(def, now) {
   }
 }
 
+// Une ligne du tableau des relevés bookmakers + son expansion : le fichier de
+// run BRUT (copié par build-data dans books/runs/), chargé à la demande —
+// exactement ce que le scraper a récupéré, ligne par ligne.
+function LigneRun({ r, ouvert, onToggle }) {
+  const [json, setJson] = useState(undefined); // undefined = pas encore chargé, false = erreur
+  useEffect(() => {
+    if (!ouvert || json !== undefined || !r.file) return;
+    fetch(`${BASE}data/${r.file}`)
+      .then((res) => (res.ok ? res.json() : Promise.reject(new Error(res.status))))
+      .then(setJson)
+      .catch(() => setJson(false));
+  }, [ouvert, json, r.file]);
+
+  return (
+    <>
+      <tr>
+        <td className="tmt-dates">{fmtDateTime(r.fetchedAt)}</td>
+        {BOOK_ORDER.map((b) => {
+          const d = r.books[b];
+          return (
+            <td key={b}>
+              {!d ? <span className="muted" title="Opérateur absent de ce relevé">—</span>
+                : d.error ? <span className="sante-ko" title={d.error}>✗ {erreurCourte(d.error)}</span>
+                : !d.complete ? <span className="sante-warn" title="Relevé partiel : toutes les pages n'ont pas pu être lues">⚠ partiel ({d.rows ?? 0} lignes)</span>
+                : <span className={d.rows > 0 ? "sante-ok" : "muted"}>✓ {d.rows} ligne{d.rows > 1 ? "s" : ""}</span>}
+            </td>
+          );
+        })}
+        <td>
+          {r.file && (
+            <button type="button" className="range-btn rk-ctrl" aria-expanded={ouvert} onClick={onToggle}>
+              {ouvert ? "Masquer" : "Voir"}
+            </button>
+          )}
+        </td>
+      </tr>
+      {ouvert && (
+        <tr>
+          <td colSpan={2 + BOOK_ORDER.length}>
+            <div className="jv-bar">
+              <code>{r.file}</code>
+              <a href={`${BASE}data/${r.file}`} target="_blank" rel="noreferrer">brut ↗</a>
+            </div>
+            {json === undefined ? <p className="muted">Chargement…</p>
+              : json === false ? <p className="muted">Relevé introuvable (relance <code>npm run build-data</code>).</p>
+              : <JsonViewer data={json} />}
+          </td>
+        </tr>
+      )}
+    </>
+  );
+}
+
 // Une ligne du tableau des fichiers + sa ligne d'expansion « visionneuse JSON »
 // (le JSON réel, brut, dépliable — pas un résumé). Le lien « brut ↗ » ouvre le
 // fichier tel que servi.
@@ -127,7 +180,8 @@ function FragmentLigne({ f, vu, setVu }) {
 export default function Sante() {
   const { setTitle } = useOutletContext();
   const [resultats, setResultats] = useState(null);
-  const [vu, setVu] = useState(null); // path du fichier ouvert dans la visionneuse JSON
+  const [vu, setVu] = useState(null);       // fichier ouvert dans la visionneuse JSON
+  const [runVu, setRunVu] = useState(null); // relevé bookmaker ouvert (fetchedAt)
   const [now] = useState(() => Date.now());
 
   useEffect(() => { setTitle("Santé des données"); }, [setTitle]);
@@ -243,24 +297,13 @@ export default function Sante() {
                   <tr>
                     <th>Relevé</th>
                     {BOOK_ORDER.map((b) => <th key={b}>{BOOK_LABEL[b]}</th>)}
+                    <th>JSON</th>
                   </tr>
                 </thead>
                 <tbody>
                   {runs.map((r) => (
-                    <tr key={r.fetchedAt}>
-                      <td className="tmt-dates">{fmtDateTime(r.fetchedAt)}</td>
-                      {BOOK_ORDER.map((b) => {
-                        const d = r.books[b];
-                        return (
-                          <td key={b}>
-                            {!d ? <span className="muted" title="Opérateur absent de ce relevé">—</span>
-                              : d.error ? <span className="sante-ko" title={d.error}>✗ {erreurCourte(d.error)}</span>
-                              : !d.complete ? <span className="sante-warn" title="Relevé partiel : toutes les pages n'ont pas pu être lues">⚠ partiel ({d.rows ?? 0} lignes)</span>
-                              : <span className={d.rows > 0 ? "sante-ok" : "muted"}>✓ {d.rows} ligne{d.rows > 1 ? "s" : ""}</span>}
-                          </td>
-                        );
-                      })}
-                    </tr>
+                    <LigneRun key={r.fetchedAt} r={r} ouvert={runVu === r.fetchedAt}
+                              onToggle={() => setRunVu(runVu === r.fetchedAt ? null : r.fetchedAt)} />
                   ))}
                 </tbody>
               </table>

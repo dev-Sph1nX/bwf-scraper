@@ -98,8 +98,21 @@ export default function Home() {
     else tournois.push({ id: String(m.tmtId), nom: m.tournamentName, n: 1 });
   }
   const parTmt = matchs.filter((m) => tmt === "tous" || String(m.tmtId) === tmt);
-  const discs = DISC_ORDER.filter((d) => parTmt.some((m) => m.eventName === d));
-  const parDisc = parTmt.filter((m) => disc === "tous" || m.eventName === disc);
+  // Tableaux (mêmes libellés que les onglets de la page tournoi : la
+  // qualification est un tableau à part entière). Repli sur la discipline
+  // pour un build antérieur à drawName.
+  const nomTableau = (m) => m.drawName || m.eventName;
+  const tableaux = [];
+  for (const m of parTmt) {
+    const key = nomTableau(m);
+    const t = tableaux.find((x) => x.key === key);
+    if (t) t.n++;
+    else tableaux.push({ key, eventName: m.eventName, n: 1 });
+  }
+  tableaux.sort((a, b) =>
+    DISC_ORDER.indexOf(a.eventName) - DISC_ORDER.indexOf(b.eventName)
+    || b.key.length - a.key.length); // « … - Qualification » avant le tableau final
+  const parDisc = parTmt.filter((m) => disc === "tous" || nomTableau(m) === disc);
   const nbCote = parDisc.filter((m) => m.odds).length;
   const visibles = parDisc.filter((m) =>
     filtre === "tous" ? true : filtre === "cote" ? !!m.odds : !m.odds);
@@ -113,27 +126,27 @@ export default function Home() {
       {tournois.length > 1 && (
         <div className="tabs">
           <button type="button" className={`tab${tmt === "tous" ? " active" : ""}`}
-                  aria-pressed={tmt === "tous"} onClick={() => setTmt("tous")}>
+                  aria-pressed={tmt === "tous"} onClick={() => { setTmt("tous"); setDisc("tous"); }}>
             Tous les tournois ({matchs.length})
           </button>
           {tournois.map((t) => (
             <button key={t.id} type="button" className={`tab${tmt === t.id ? " active" : ""}`}
-                    aria-pressed={tmt === t.id} onClick={() => setTmt(t.id)}>
+                    aria-pressed={tmt === t.id} onClick={() => { setTmt(t.id); setDisc("tous"); }}>
               {t.nom} ({t.n})
             </button>
           ))}
         </div>
       )}
-      {discs.length > 1 && (
+      {tableaux.length > 1 && (
         <div className="tabs">
           <button type="button" className={`tab${disc === "tous" ? " active" : ""}`}
                   aria-pressed={disc === "tous"} onClick={() => setDisc("tous")}>
-            Toutes disciplines ({parTmt.length})
+            Tous les tableaux ({parTmt.length})
           </button>
-          {discs.map((d) => (
-            <button key={d} type="button" className={`tab${disc === d ? " active" : ""}`}
-                    aria-pressed={disc === d} onClick={() => setDisc(d)}>
-              {d} ({parTmt.filter((m) => m.eventName === d).length})
+          {tableaux.map((t) => (
+            <button key={t.key} type="button" className={`tab${disc === t.key ? " active" : ""}`}
+                    aria-pressed={disc === t.key} onClick={() => setDisc(t.key)}>
+              {t.key} · {t.n}
             </button>
           ))}
         </div>

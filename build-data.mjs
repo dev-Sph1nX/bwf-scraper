@@ -420,6 +420,9 @@ for (const y of years) {
               startDate: t.start_date || null, endDate: t.end_date || null,
               date: t.date, category: t.category, flag_url: t.flag_url, live_status: t.live_status,
               eventName: m.eventName, roundName: m.roundName,
+              // Tableau exact (« MS - Qualification » vs « MS ») : le filtre de
+              // l'accueil reprend la granularité des onglets de la page tournoi.
+              drawName: disc.label || m.eventName,
               team1: withElo(teamLite(m.team1, m.team1seed), ea),
               team2: withElo(teamLite(m.team2, m.team2seed), eb),
               a, b,
@@ -466,7 +469,7 @@ let bookRunsHealth = [];
   // Détail de chaque passage du scraper de cotes, pour la page /sante : combien
   // de lignes par opérateur, et l'erreur exacte en cas d'échec (ex. HTTP 403).
   // Ces infos vivent dans les fichiers bruts mais n'étaient pas exportées.
-  bookRunsHealth = runs.slice(-30).map((r) => {
+  bookRunsHealth = await Promise.all(runs.slice(-30).map(async (r) => {
     const books = {};
     for (const b of new Set([...Object.keys(r.books || {}), ...Object.keys(r.errors || {})])) {
       const d = r.books?.[b];
@@ -476,8 +479,14 @@ let bookRunsHealth = [];
         error: r.errors?.[b] ?? null,
       };
     }
-    return { fetchedAt: r.fetchedAt, books };
-  }).reverse();
+    // Copie du relevé BRUT dans les données servies : la page /sante l'affiche
+    // tel quel (ligne par ligne, ce que le scraper a réellement récupéré).
+    // Nom de fichier = celui de data/books/runs/ (fetchedAt, ':' et '.' -> '-').
+    const file = `books/runs/${r.fetchedAt.replace(/[:.]/g, "-")}.json`;
+    await write(file, r);
+    return { fetchedAt: r.fetchedAt, file, books };
+  }));
+  bookRunsHealth.reverse();
   const series = buildBookSeries(runs);
   const groups = groupBooks(series);
   // Les matchs joués récents sont candidats aussi : une cote dont on connaît
