@@ -346,6 +346,18 @@ export default function Predictor() {
           {a && b && (
             <div className="card">
               <h2>Confrontations directes</h2>
+              <p className="lead">
+                Nos données ne couvrent que le World Tour depuis 2024 —{" "}
+                <a
+                  href={`https://bwfbadminton.com/players/head-to-head/?${[
+                    ["t1p1", a.players[0]?.id], ["t1p2", a.players[1]?.id],
+                    ["t2p1", b.players[0]?.id], ["t2p2", b.players[1]?.id],
+                  ].filter(([, id]) => id).map(([k, id]) => `${k}=${id}`).join("&")}`}
+                  target="_blank" rel="noreferrer"
+                >
+                  head-to-head complet sur bwfbadminton.com ↗
+                </a>
+              </p>
               {!aData || !bData ? (
                 <p className="muted">Chargement…</p>
               ) : h2h.length === 0 ? (

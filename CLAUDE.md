@@ -55,7 +55,9 @@ npm run refresh      # tout d'un coup (update + rankings + books + build + backt
 
 # App web
 cd web && npm install
-npm run dev          # dev local (http://localhost:5173)
+npm run dev          # dev local (http://localhost:5173) — rafraîchit d'abord les
+                     # données (scrape-books + build-data + backtest, ~1 min)
+npm run dev:vite     # dev local SANS rafraîchir les données
 npm run build        # build statique -> web/dist
 ```
 

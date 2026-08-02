@@ -9,6 +9,7 @@
     "backfill-rankings": "node backfill-rankings.mjs",
     "build-data": "node build-data.mjs",
     "refresh": "node run-update.mjs && node fetch-rankings.mjs && node scrape-books.mjs && node build-data.mjs && node backtest.mjs --quiet",
+    "get-data": "(node scrape-books.mjs || echo '⚠ relevé de cotes impossible (hors-ligne ?), on garde l’existant') && node build-data.mjs && node backtest.mjs --quiet",
     "scrape-books": "node scrape-books.mjs",
     "test": "node --test test/*.test.mjs",
     "backtest": "node backtest.mjs"
