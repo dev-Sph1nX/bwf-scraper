@@ -1,6 +1,6 @@
 # Feuille de route — outil de pari
 
-**Dernière mise à jour :** 2026-07-31
+**Dernière mise à jour :** 2026-08-02
 
 Ce document est la liste ordonnée des chantiers. Les dépendances sont **strictes** :
 chaque lot exige le précédent, et l'ordre n'est pas un choix de confort.
@@ -97,6 +97,28 @@ Par valeur attendue décroissante :
   surconfiance des inactifs que Glicko corrige. Reste pertinent pour afficher
   un intervalle et pour la volatilité (joueurs stables/instables). Réécriture
   du cœur du calcul : ne s'engage que sur un bénéfice démontré.
+
+# Lot E — Rapport quotidien par e-mail (indépendant, s'intercale quand on veut)
+
+**Étude de faisabilité faite le 2026-08-02 : [`etude-rapport-email-quotidien.md`](etude-rapport-email-quotidien.md).
+Verdict : ~½ journée, 0 €.** Seule dépendance : la couche 3 (EV affichée) — déjà
+faite. Aucun lien avec les lots B-D : ce lot peut se glisser avant ou après.
+
+Un e-mail par jour avec les matchs des prochaines 24 h et les cotes
+intéressantes (EV positives, sous-cotés BWF, programme trié par heure), composé
+depuis `upcoming-matches.json` et envoyé depuis un workflow GitHub Actions
+dédié (relevé de cotes frais, sans commit ni déploiement). Reco de l'étude :
+API **Brevo** (300 mails/j gratuits, `fetch` natif, zéro dépendance), secrets
+`BREVO_API_KEY` + `EMAIL_TO`.
+
+**Décisions en attente (propriétaire) :**
+- créer le compte Brevo et poser les 2 secrets GitHub ;
+- heure d'envoi : la veille 21h UTC (préconisé — cotes ouvertes, rien de
+  commencé) ou le matin 04h30 UTC (cotes plus proches de la clôture, mais les
+  premiers matchs asiatiques peuvent être lancés).
+
+On informe seulement : aucune mise placée automatiquement (décision existante,
+CGU Unibet art. 7.1).
 
 ---
 
