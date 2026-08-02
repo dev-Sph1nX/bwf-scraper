@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams, useOutletContext, Link } from "react-router-dom";
 import { getJSON } from "../data.js";
 import MatchTeam from "../components/MatchTeam.jsx";
 import EloCompareChart from "../components/EloCompareChart.jsx";
@@ -170,6 +170,10 @@ export default function Predictor() {
 
   const [searchParams] = useSearchParams();
   const preInit = useRef(false);
+
+  // Page dédiée depuis 2026-08 (avant : section des Coulisses).
+  const { setTitle } = useOutletContext();
+  useEffect(() => { setTitle("Simuler un duel"); }, [setTitle]);
 
   useEffect(() => { getJSON("elo/ranking.json").then(setData).catch(() => setData(false)); }, []);
 

@@ -17,6 +17,7 @@
   --muted: #9a9ba2;          /* texte secondaire */
 
   --green: #35c48b;          /* statut positif (forme en hausse) */
+  --green-soft: rgba(53,196,139,.15); /* fond teinté vert (EV positive, badge ok) */
   --white: #ffffff;          /* texte sur aplat rouge */
 
   font-family: Verdana, Geneva, sans-serif;
@@ -585,11 +586,10 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
    mais en texte simple : on ne cible que le cas <a> pour ne pas le changer). */
 .oa-head a.oa-tmt { color: var(--ink); text-decoration: none; }
 .oa-head a.oa-tmt:hover { color: var(--accent); text-decoration: underline; }
-.bc-name a { color: var(--ink); font-weight: bold; }
 .bc-proba { color: var(--accent); font-weight: bold; font-size: 14px; }
 .bc-proba.dim { color: var(--muted); }
 .bc-ev { background: var(--surface-2); color: var(--muted); border-radius: 5px; padding: 2px 7px; font-weight: bold; }
-.bc-ev.pos { background: rgba(53,196,139,.15); color: var(--green); }
+.bc-ev.pos { background: var(--green-soft); color: var(--green); }
 .bc-pourquoi { color: var(--muted); font-size: 11px; margin: 8px 0 0; border-top: 1px dashed var(--line); padding-top: 8px; }
 /* Cible tactile ≥ 40px pour le bouton graphe, sans changer .range-btn (partagé
    avec les onglets de plage — cf. même traitement pour .odds-modal-close). */
@@ -614,16 +614,58 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
   .tab { min-height: 40px; }
 }
 
-/* ---- Coulisses (accordéon pédagogique, 5 sections montées à la demande) ---- */
-/* h2 > button (pas l'inverse) : un <button> n'accepte que du contenu de
-   flux/phrasing, un <h2> n'en est pas — le nid original cassait la sémantique
-   et risquait de faire disparaître le titre à la navigation par en-têtes au
-   lecteur d'écran. Le point rouge du h2 générique (h2::before) est neutralisé
-   ici et reporté sur .coulisse-title : sinon, comme le bouton est un conteneur
-   flex (donc de type bloc), il romprait la ligne et isolerait le point sur sa
-   propre ligne au-dessus du bouton au lieu de rester collé au titre. */
-.coulisse-h2 { margin: 0; }
-.coulisse-h2::before { content: none; }
-.coulisse-head { display: flex; width: 100%; justify-content: space-between; align-items: center; background: none; border: 0; color: var(--ink); font: inherit; cursor: pointer; min-height: 40px; padding: 0; }
-.coulisse-title::before { content: ""; display: inline-block; width: 8px; height: 8px; background: var(--bwf-red); border-radius: 50%; margin-right: 8px; vertical-align: middle; }
-.coulisse-chevron { color: var(--muted); }
+/* ---- Coulisses : menu latéral interne (5 sections, une seule affichée) ---- */
+.coulisses-layout { display: flex; gap: 20px; align-items: flex-start; }
+.coulisses-menu { flex: 0 0 190px; position: sticky; top: 78px; display: flex; flex-direction: column; gap: 2px; }
+.coulisses-menu button {
+  text-align: left; background: none; border: 0; border-left: 3px solid transparent;
+  color: var(--muted); font: inherit; font-weight: bold; font-size: 13px;
+  padding: 10px 12px; min-height: 40px; cursor: pointer; border-radius: 0 8px 8px 0;
+  white-space: nowrap;
+}
+.coulisses-menu button:hover { color: var(--ink); background: rgba(255,255,255,.05); }
+.coulisses-menu button.active { color: var(--ink); background: var(--bwf-red-soft); border-left-color: var(--bwf-red); }
+.coulisses-body { flex: 1; min-width: 0; }
+@media (max-width: 700px) {
+  /* Le menu devient une barre horizontale scrollable, soulignement en bas.
+     align-items: stretch obligatoire en colonne : le flex-start du desktop
+     ferait prendre au corps la largeur de son CONTENU (tableaux > 375px) et
+     la page entière déborderait au lieu de scroller dans .table-scroll. */
+  .coulisses-layout { flex-direction: column; align-items: stretch; }
+  /* min/max-width : sans eux, l'item flex refuse de rétrécir sous la largeur
+     de son contenu (min-width:auto) et fait déborder la PAGE au lieu de
+     scroller dans son conteneur. */
+  .coulisses-menu { position: static; flex: none; width: 100%; min-width: 0; max-width: 100%; flex-direction: row; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .coulisses-menu button { border-left: 0; border-bottom: 3px solid transparent; border-radius: 0; }
+  .coulisses-menu button.active { border-left: 0; border-bottom-color: var(--bwf-red); }
+}
+
+/* ===== Santé des données (/sante) ===================================== */
+.badge.ok { background: var(--green-soft); color: var(--green); }
+.badge.warn { background: var(--surface-2); color: var(--muted); }
+.badge.ko { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.sante-ok { color: var(--green); font-weight: bold; white-space: nowrap; }
+.sante-ko { color: var(--accent); font-weight: bold; }
+.sante-warn { color: var(--muted); font-weight: bold; white-space: nowrap; }
+.sante-problemes { margin: 8px 0 0; padding-left: 20px; }
+.sante-problemes li { margin-bottom: 6px; }
+
+/* Lien discret vers /sante : sous la saison (desktop), dans la barre (mobile) */
+.side-foot .foot-link { display: block; margin-top: 8px; padding: 6px 0; color: var(--muted); text-decoration: none; }
+.side-foot .foot-link:hover { color: var(--ink); }
+.side-foot .foot-link.active { color: var(--accent); }
+.nav-sante { display: none; }
+@media (max-width: 700px) {
+  .sidebar nav a.nav-sante { display: block; font-size: 12px; }
+}
+
+/* BetCard : bouton « Duel » (Link stylé comme .range-btn, cible ≥ 40px) */
+.bc-duel { text-decoration: none; min-height: 40px; display: inline-flex; align-items: center; }
+
+/* BetCard : colonne joueur unique (drapeau · nom / mondial · Elo + rang) */
+.bc-player { min-width: 170px; }
+.bc-pl-id { display: flex; align-items: center; gap: 6px; }
+.bc-pl-id a { color: var(--ink); font-weight: bold; }
+.bc-pl-sub { display: block; margin-top: 3px; font-size: 12px; color: var(--muted); white-space: nowrap; }
+.bc-pl-sub b { color: var(--accent); }
+.bc-pl-rank { font-size: 11px; }
