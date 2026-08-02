@@ -650,6 +650,38 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 .sante-problemes { margin: 8px 0 0; padding-left: 20px; }
 .sante-problemes li { margin-bottom: 6px; }
 
+/* Accueil : en-tête de carte avec menu ⋮ « préférences d'affichage » */
+.home-head { display: flex; align-items: flex-start; gap: 10px; }
+.home-head h2 { flex: 1; min-width: 0; }
+.kebab-wrap { position: relative; flex-shrink: 0; }
+.kebab-btn { background: none; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); font-size: 18px; font-weight: bold; min-width: 40px; min-height: 40px; cursor: pointer; }
+.kebab-btn:hover, .kebab-btn[aria-expanded="true"] { color: var(--ink); background: var(--surface-2); }
+.kebab-menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 20; min-width: 210px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; box-shadow: 0 8px 24px rgba(0,0,0,.45); }
+.kebab-title { font-size: 11px; font-weight: bold; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.kebab-item { display: flex; align-items: center; min-height: 40px; }
+.kebab-hint { color: var(--muted); font-size: 11px; margin: 6px 0 0; }
+
+/* Visionneuse JSON (page Santé) : monospace assumé — c'est du code, pas de la
+   prose ; couleurs uniquement via variables (clé bleue, chaîne verte, nombre
+   accent), fond champ, hauteur bornée avec scroll interne. */
+.jv { max-height: 440px; overflow: auto; background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px; line-height: 1.7; text-align: left; }
+.jv-node { padding-left: 0; }
+.jv-children { margin-left: 14px; border-left: 1px solid var(--line); padding-left: 10px; }
+.jv-toggle { background: none; border: 0; color: var(--ink); font: inherit; cursor: pointer; padding: 2px 4px; display: inline-flex; align-items: center; gap: 6px; border-radius: 4px; }
+.jv-toggle:hover { background: rgba(255,255,255,.05); }
+.jv-caret { color: var(--muted); }
+.jv-key { color: var(--accent-2); }
+.jv-sep { color: var(--muted); }
+.jv-preview { color: var(--muted); }
+.jv-str { color: var(--green); overflow-wrap: anywhere; }
+.jv-num { color: var(--accent); }
+.jv-bool, .jv-null { color: var(--muted); font-style: italic; }
+.jv-line { overflow-wrap: anywhere; }
+.jv-more { background: none; border: 1px solid var(--line); border-radius: 6px; color: var(--muted); font: inherit; cursor: pointer; padding: 4px 10px; margin: 4px 0; min-height: 32px; }
+.jv-more:hover { color: var(--ink); }
+.jv-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 6px 0; }
+.jv-bar a { color: var(--accent); }
+
 /* Lien discret vers /sante : sous la saison (desktop), dans la barre (mobile) */
 .side-foot .foot-link { display: block; margin-top: 8px; padding: 6px 0; color: var(--muted); text-decoration: none; }
 .side-foot .foot-link:hover { color: var(--ink); }
