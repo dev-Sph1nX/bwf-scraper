@@ -5,6 +5,7 @@
 // échecs par opérateur (ex. HTTP 403), invisibles ailleurs.
 import { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
+import JsonViewer from "../components/JsonViewer.jsx";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -74,16 +75,59 @@ async function testerFichier(def, now) {
     return {
       ...def, ok: true, bytes: new Blob([texte]).size,
       stamp, fr: fraicheur(stamp, now), contenu: def.count(j),
-      json: def.path === "health.json" ? j : undefined,
+      json: j, // gardé pour la visionneuse JSON (dépliage à la demande)
     };
   } catch (e) {
     return { ...def, ok: false, error: "injoignable" };
   }
 }
 
+// Une ligne du tableau des fichiers + sa ligne d'expansion « visionneuse JSON »
+// (le JSON réel, brut, dépliable — pas un résumé). Le lien « brut ↗ » ouvre le
+// fichier tel que servi.
+function FragmentLigne({ f, vu, setVu }) {
+  const ouvert = vu === f.path;
+  return (
+    <>
+      <tr>
+        <td><code>{f.path}</code><br /><span className="muted">{f.role}</span></td>
+        <td>{f.ok
+          ? <span className="sante-ok">✓ chargé</span>
+          : <span className="sante-ko">✗ {f.error}</span>}</td>
+        <td className="tmt-dates">{fmtDateTime(f.stamp)}</td>
+        <td>{f.fr
+          ? <span className={`badge ${f.fr.cls}`} title={`il y a ${fmtAge(f.fr.h)}`}>{f.fr.label}</span>
+          : <span className="muted">—</span>}</td>
+        <td className="oa-num">{f.ok ? fmtBytes(f.bytes) : "—"}</td>
+        <td>{f.ok ? f.contenu : <span className="muted">—</span>}</td>
+        <td>
+          {f.ok && (
+            <button type="button" className="range-btn rk-ctrl" aria-expanded={ouvert}
+                    onClick={() => setVu(ouvert ? null : f.path)}>
+              {ouvert ? "Masquer" : "Voir"}
+            </button>
+          )}
+        </td>
+      </tr>
+      {ouvert && (
+        <tr>
+          <td colSpan={7}>
+            <div className="jv-bar">
+              <code>{f.path}</code>
+              <a href={`${BASE}data/${f.path}`} target="_blank" rel="noreferrer">brut ↗</a>
+            </div>
+            <JsonViewer data={f.json} />
+          </td>
+        </tr>
+      )}
+    </>
+  );
+}
+
 export default function Sante() {
   const { setTitle } = useOutletContext();
   const [resultats, setResultats] = useState(null);
+  const [vu, setVu] = useState(null); // path du fichier ouvert dans la visionneuse JSON
   const [now] = useState(() => Date.now());
 
   useEffect(() => { setTitle("Santé des données"); }, [setTitle]);
@@ -157,23 +201,12 @@ export default function Sante() {
             <thead>
               <tr>
                 <th>Fichier</th><th>Statut</th><th>Généré le</th><th>Fraîcheur</th>
-                <th className="oa-num">Taille</th><th>Contenu</th>
+                <th className="oa-num">Taille</th><th>Contenu</th><th>JSON</th>
               </tr>
             </thead>
             <tbody>
               {resultats.map((f) => (
-                <tr key={f.path}>
-                  <td><code>{f.path}</code><br /><span className="muted">{f.role}</span></td>
-                  <td>{f.ok
-                    ? <span className="sante-ok">✓ chargé</span>
-                    : <span className="sante-ko">✗ {f.error}</span>}</td>
-                  <td className="tmt-dates">{fmtDateTime(f.stamp)}</td>
-                  <td>{f.fr
-                    ? <span className={`badge ${f.fr.cls}`} title={`il y a ${fmtAge(f.fr.h)}`}>{f.fr.label}</span>
-                    : <span className="muted">—</span>}</td>
-                  <td className="oa-num">{f.ok ? fmtBytes(f.bytes) : "—"}</td>
-                  <td>{f.ok ? f.contenu : <span className="muted">—</span>}</td>
-                </tr>
+                <FragmentLigne key={f.path} f={f} vu={vu} setVu={setVu} />
               ))}
             </tbody>
           </table>
