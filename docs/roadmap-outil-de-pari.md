@@ -63,7 +63,23 @@ par pari.
 
 # Lot C — Mesures en file d'attente (méthode des 3 étapes, une par une)
 
+> **⭐ But affiché du propriétaire (2026-08-02) : l'étude n° 0 ci-dessous.**
+> « Combien j'aurais gagné si j'avais parié sur toutes les prédictions ? »
+
 Par valeur attendue décroissante :
+
+0. **ROI rétrospectif face au marché (paper trading)** ⭐ but final — dès que
+   plusieurs tournois de cotes seront archivés. Les deux ingrédients existent
+   déjà : les prédictions sont **reproductibles rétroactivement** (le backtest
+   rejoue chaque match avec l'état d'avant-match, aucune archive de pronostics
+   à figer) et les cotes s'archivent toutes les 2 h depuis le 2026-07-31.
+   L'étude croise les deux et simule un bankroll selon plusieurs règles à
+   comparer : parier tous les favoris du modèle vs seulement les EV > 0 ;
+   mise plate vs Kelly fractionné ; à la meilleure cote vs à la clôture.
+   **Seuil de déclenchement : ~200 paris simulés minimum** (en dessous, la
+   variance noie le ROI) — au rythme actuel (~6 matchs cotés/jour), compter
+   1 à 2 mois de collecte. Trou connu : Betclic absent (HTTP 403) depuis le
+   31/07, l'étude se fera sur Unibet/Winamax si ça persiste.
 
 1. **L'âge** ⭐ — données prêtes (97,7 % pondéré), orthogonal au niveau, agit
    sur tous les matchs. Écrire `measures/mesure-age.mjs` : courbe âge →
