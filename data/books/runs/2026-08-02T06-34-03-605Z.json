@@ -1,0 +1,43 @@
+{
+ "fetchedAt": "2026-08-02T06:34:03.605Z",
+ "errors": {
+  "betclic": "https://www.betclic.fr/badminton-sbadminton -> HTTP 403"
+ },
+ "books": {
+  "unibet": {
+   "complete": true,
+   "rows": [
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368401",
+     "srId": "73345498",
+     "tournament": "Taipei Open",
+     "discipline": "MD",
+     "p1": "Carnan/Marthin",
+     "p2": "Chia/Tai",
+     "odd1": 1.4,
+     "odd2": 2.35,
+     "startUtc": "2026-08-02T06:45:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3368400",
+     "srId": "73345982",
+     "tournament": "Taipei Open",
+     "discipline": "MS",
+     "p1": "Y.Okimoto",
+     "p2": "TB.Yoo",
+     "odd1": 1.38,
+     "odd2": 2.4,
+     "startUtc": "2026-08-02T07:10:00.000Z",
+     "isLive": false
+    }
+   ]
+  },
+  "winamax": {
+   "complete": true,
+   "rows": []
+  }
+ }
+}
