@@ -27,10 +27,15 @@ import { oddsForMatch } from "./lib/home-data.mjs";
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data");
 
+// Manifeste des écritures, exporté en fin de build dans health.json : les
+// fichiers de premier niveau un par un, les dossiers (player/, pair/…) agrégés.
+const written = [];
 async function write(rel, obj) {
   const path = join(OUT, rel);
   await mkdir(dirname(path), { recursive: true });
-  await writeFile(path, JSON.stringify(obj), "utf8");
+  const json = JSON.stringify(obj);
+  await writeFile(path, json, "utf8");
+  written.push({ name: rel, bytes: Buffer.byteLength(json, "utf8") });
 }
 
 const years = await store.listYears();
@@ -455,8 +460,24 @@ console.log(`   Matchs à venir : ${upcomingMatches.length}`);
 // Un même match est joint entre opérateurs par son identifiant Sportradar
 // (exact), puis rapproché des matchs BWF par discipline + date + noms — au
 // moindre doute, pas d'appariement (l'audit montre les cas douteux).
+let bookRunsHealth = [];
 {
   const runs = await loadBookRuns(join(ROOT, "data", "books", "runs"));
+  // Détail de chaque passage du scraper de cotes, pour la page /sante : combien
+  // de lignes par opérateur, et l'erreur exacte en cas d'échec (ex. HTTP 403).
+  // Ces infos vivent dans les fichiers bruts mais n'étaient pas exportées.
+  bookRunsHealth = runs.slice(-30).map((r) => {
+    const books = {};
+    for (const b of new Set([...Object.keys(r.books || {}), ...Object.keys(r.errors || {})])) {
+      const d = r.books?.[b];
+      books[b] = {
+        rows: d ? (d.rows || []).length : null,
+        complete: d ? d.complete !== false : false,
+        error: r.errors?.[b] ?? null,
+      };
+    }
+    return { fetchedAt: r.fetchedAt, books };
+  }).reverse();
   const series = buildBookSeries(runs);
   const groups = groupBooks(series);
   // Les matchs joués récents sont candidats aussi : une cote dont on connaît
@@ -603,5 +624,29 @@ for (const [day, agg] of runByDay) {
 updates.sort((a, b) => b.day.localeCompare(a.day));
 updates.splice(60);
 await write("updates.json", { generatedAt: ranking.generatedAt, updates });
+
+// ===== 8) health.json : manifeste du build, pour la page /sante =====
+// Écrit en DERNIER pour recenser toutes les écritures ci-dessus. Les fichiers
+// par entité (player/, pair/…) sont agrégés en compteurs. backtest.json est
+// produit par backtest.mjs APRÈS ce script : il n'apparaît pas ici, la page
+// /sante le teste directement côté navigateur.
+{
+  const topFiles = [];
+  const dirs = new Map(); // "player" -> { count, bytes }
+  for (const f of written) {
+    const slash = f.name.indexOf("/");
+    if (slash === -1) { topFiles.push(f); continue; }
+    const dir = f.name.slice(0, slash);
+    const agg = dirs.get(dir) || { count: 0, bytes: 0 };
+    agg.count++; agg.bytes += f.bytes;
+    dirs.set(dir, agg);
+  }
+  await write("health.json", {
+    generatedAt: new Date().toISOString(),
+    files: topFiles,
+    dirs: [...dirs.entries()].map(([name, a]) => ({ name, ...a })),
+    bookRuns: bookRunsHealth,
+  });
+}
 
 console.log(`✅ ${tCount} tournois, ${pCount} joueurs, ${updates.length} jours de MAJ, saisons ${years.join(", ")}`);
