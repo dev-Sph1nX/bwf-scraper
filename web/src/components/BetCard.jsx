@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import OddsModal from "./OddsModal.jsx";
-import MultiOddsChart from "./MultiOddsChart.jsx";
+import MatchOddsChart from "./MatchOddsChart.jsx";
 import { ROUND_LABEL } from "./UpcomingMatch.jsx";
 
 // Carte de match « riche » de la refonte : deux lignes joueur (une colonne
 // identité : drapeau · nom · #mondial · Elo (score + rang) · puis prédiction ·
-// une colonne de cote par opérateur sélectionné · bouton graphe · EV calibrée),
-// plus la ligne « pourquoi » et sa propre modale d'évolution des cotes. Autonome : `selectedBooks` vient du sélecteur de
-// bookmakers de l'accueil (Task 6), déjà filtré aux clés connues.
+// une colonne de cote par opérateur sélectionné · EV calibrée), la ligne
+// « pourquoi », et DANS L'EN-TÊTE : le bouton ⚔️ Duel et le bouton 📈 qui ouvre
+// LE graphe du match (les deux cotes, rouge = camp 1, bleu = camp 2, un
+// opérateur à la fois). Autonome : `selectedBooks` vient du sélecteur de
+// bookmakers de l'accueil, déjà filtré aux clés connues.
 
 const BOOK_LABEL = { betclic: "Betclic", unibet: "Unibet", winamax: "Winamax" };
 const fmtOdd = (v) => (v == null ? "—" : v.toFixed(2));
@@ -35,7 +37,7 @@ function meilleureCote(odds, selected, side) {
 
 // Une ligne joueur : identité dans UNE colonne (drapeau · nom, puis dessous
 // #mondial · score Elo avec son classement en petit) · prédiction · cotes · EV.
-function PlayerRow({ team, prob, odds, side, selected, best, n, onGraph }) {
+function PlayerRow({ team, prob, odds, side, selected, best }) {
   const players = team?.players || [];
   const fiche = players.length === 1
     ? `/player/${players[0].id}`
@@ -57,7 +59,7 @@ function PlayerRow({ team, prob, odds, side, selected, best, n, onGraph }) {
         </span>
       </td>
       <td className={`bc-proba${prob != null && prob >= 50 ? "" : " dim"}`}>{prob == null ? "—" : `${prob} %`}</td>
-      {/* Match sans cote : les colonnes cotes/graphe/EV n'existent pas du tout
+      {/* Match sans cote : les colonnes cotes/EV n'existent pas du tout
           (la carte affiche « pas de cote » dans son en-tête). */}
       {odds && selected.map((op) => {
         const odd = side === 1 ? odds?.books?.[op]?.odd1 : odds?.books?.[op]?.odd2;
@@ -67,21 +69,6 @@ function PlayerRow({ team, prob, odds, side, selected, best, n, onGraph }) {
           </td>
         );
       })}
-      {odds && (
-        <td>
-          {/* UN bouton graphe PAR LIGNE JOUEUR (maquette B validée) : la modale
-              trace la proba implicite de CE joueur, une courbe par opérateur. */}
-          <button
-            type="button"
-            className="range-btn bc-graph"
-            disabled={n < 2}
-            title={n < 2 ? "Un seul relevé pour l'instant — prochain passage dans moins de 2 h" : "Évolution des cotes"}
-            onClick={onGraph}
-          >
-            📈 ({n})
-          </button>
-        </td>
-      )}
       {odds && (
         <td>
           {evVal == null
@@ -95,15 +82,24 @@ function PlayerRow({ team, prob, odds, side, selected, best, n, onGraph }) {
 
 export default function BetCard({ match, selectedBooks }) {
   const m = match;
-  const [graphe, setGraphe] = useState(null); // null | 1 | 2
+  const [graphe, setGraphe] = useState(false);
+  const [opGraphe, setOpGraphe] = useState(null);
   const selected = selectedBooks || [];
-  const n = m.odds?.n ?? 0;
   const best1 = meilleureCote(m.odds, selected, 1);
   const best2 = meilleureCote(m.odds, selected, 2);
   const prob2 = m.probCal == null ? null : 100 - m.probCal;
 
+  // Le graphe n'a d'intérêt que si UN MÊME opérateur a plusieurs relevés :
+  // deux opérateurs à un relevé chacun ne donnent que des points isolés.
+  const releves = (op) => m.odds?.books?.[op]?.points?.length || 0;
+  const opsTracables = selected.filter((op) => releves(op) > 0);
+  const nMax = Math.max(0, ...opsTracables.map(releves));
+  const ouvrirGraphe = () => {
+    setOpGraphe(opsTracables.reduce((a, b) => (releves(b) > releves(a) ? b : a)));
+    setGraphe(true);
+  };
+
   const gap = m.team1?.elo != null && m.team2?.elo != null ? Math.abs(m.team1.elo - m.team2.elo) : null;
-  const flip = (p) => ({ ...p, odd1: p.odd2, odd2: p.odd1, impliedP1: p.impliedP1 == null ? null : 1 - p.impliedP1 });
   const nomDe = (side) => (side === 1 ? m.team1 : m.team2)?.players.map((p) => p.nameDisplay).join(" / ");
 
   return (
@@ -116,6 +112,19 @@ export default function BetCard({ match, selectedBooks }) {
           {m.odds?.startUtc ? fmtHeure(m.odds.startUtc) : `${m.date}${m.year ? ` ${m.year}` : ""}`}
         </span>
         {!m.odds && <span className="muted">pas de cote</span>}
+        {m.odds && (
+          <button
+            type="button"
+            className="range-btn bc-graph"
+            disabled={nMax < 2}
+            title={nMax < 2
+              ? "Aucun opérateur n'a encore plusieurs relevés — le graphe n'aurait qu'un point par courbe"
+              : "Évolution des deux cotes du match"}
+            onClick={ouvrirGraphe}
+          >
+            📈 ({nMax})
+          </button>
+        )}
         <Link
           className="range-btn bc-duel"
           title="Rejouer ce match dans le simulateur de duel"
@@ -132,13 +141,12 @@ export default function BetCard({ match, selectedBooks }) {
               <th>Joueur</th>
               <th>Préd.</th>
               {m.odds && selected.map((op) => <th key={op} className="oa-num">{BOOK_LABEL[op] || op}</th>)}
-              {m.odds && <th></th>}
               {m.odds && <th>EV</th>}
             </tr>
           </thead>
           <tbody>
-            <PlayerRow team={m.team1} prob={m.probCal} odds={m.odds} side={1} selected={selected} best={best1} n={n} onGraph={() => setGraphe(1)} />
-            <PlayerRow team={m.team2} prob={prob2} odds={m.odds} side={2} selected={selected} best={best2} n={n} onGraph={() => setGraphe(2)} />
+            <PlayerRow team={m.team1} prob={m.probCal} odds={m.odds} side={1} selected={selected} best={best1} />
+            <PlayerRow team={m.team2} prob={prob2} odds={m.odds} side={2} selected={selected} best={best2} />
           </tbody>
         </table>
       </div>
@@ -149,18 +157,22 @@ export default function BetCard({ match, selectedBooks }) {
         {m.tags?.includes("value") && <> · <b>sous-coté BWF</b></>}
       </p>
 
-      {graphe != null && (
-        <OddsModal open onClose={() => setGraphe(null)} title={`Évolution — ${nomDe(graphe)}`}>
-          <MultiOddsChart
-            series={selected
-              .filter((op) => m.odds?.books?.[op]?.points?.length)
-              .map((op) => ({
-                book: op,
-                label: BOOK_LABEL[op],
-                points: graphe === 1 ? m.odds.books[op].points : m.odds.books[op].points.map(flip),
-              }))}
-            label1={nomDe(graphe)}
-            label2={nomDe(graphe === 1 ? 2 : 1)}
+      {graphe && m.odds && (
+        <OddsModal open onClose={() => setGraphe(false)} title={`Cotes — ${nomDe(1)} vs ${nomDe(2)}`}>
+          {opsTracables.length > 1 && (
+            <div className="tabs">
+              {opsTracables.map((op) => (
+                <button key={op} type="button" className={`tab${opGraphe === op ? " active" : ""}`}
+                        aria-pressed={opGraphe === op} onClick={() => setOpGraphe(op)}>
+                  {BOOK_LABEL[op]} ({releves(op)})
+                </button>
+              ))}
+            </div>
+          )}
+          <MatchOddsChart
+            points={m.odds.books[opGraphe]?.points}
+            label1={nomDe(1)}
+            label2={nomDe(2)}
           />
         </OddsModal>
       )}
