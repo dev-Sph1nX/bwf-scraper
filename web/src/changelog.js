@@ -5,6 +5,18 @@
 
 export const CHANGELOG = [
   {
+    date: "2026-08-02",
+    title: "Santé des données, accueil unifié & navigation revue",
+    items: [
+      { type: "feat", text: "Nouvelle page « Santé des données » (lien en pied de menu) : chaque fichier JSON du site est réellement téléchargé et vérifié (chargement, fraîcheur, taille, contenu), et chaque relevé de cotes est détaillé opérateur par opérateur — les échecs (ex. HTTP 403 chez Betclic) deviennent enfin visibles." },
+      { type: "feat", text: "Accueil : une seule liste « À venir » triée par heure de match (heure relevée chez les bookmakers, affichée sur chaque carte), avec filtre Tous / Avec cote / Sans cote. Les matchs sans cote l'affichent simplement." },
+      { type: "feat", text: "Bouton « ⚔️ Duel » sur chaque carte de match : ouvre le simulateur pré-rempli avec les deux joueurs." },
+      { type: "improve", text: "Le simulateur de duel redevient une page dédiée (les anciens liens continuent de fonctionner)." },
+      { type: "improve", text: "Cartes de match : une seule colonne joueur — drapeau, nom, classement mondial, puis score Elo avec son rang." },
+      { type: "improve", text: "Coulisses : un menu latéral remplace les accordéons ; la section ouverte est dans l'URL, donc partageable." },
+    ],
+  },
+  {
     date: "2026-07-07",
     title: "Matchs à venir, analyse « value » & Mondiaux",
     items: [
