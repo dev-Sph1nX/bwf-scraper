@@ -48,13 +48,18 @@ for (const [i, [name, fn]] of BOOKS.entries()) {
 }
 
 const total = Object.values(books).reduce((s, b) => s + b.rows.length, 0);
+// Une seule écriture, en fin de passage : le fichier est immuable. Le relevé est
+// écrit MÊME à zéro ligne : un passage sans matière (période creuse, opérateur
+// qui bloque) doit rester visible dans la page /sante avec ses erreurs exactes —
+// sans trace, « pourquoi la liste s'arrête-t-elle ? » est indiagnosticable.
+// Les lectures (lib/books-history.mjs) ignorent naturellement un relevé sans
+// lignes : il n'ajoute aucun point aux séries de cotes.
+const file = path.join(OUT_DIR, runFileName(fetchedAt));
+await fs.writeFile(file, JSON.stringify({ fetchedAt, errors, books }, null, 1));
 if (total > 0) {
-  // Une seule écriture, en fin de passage : le fichier est immuable.
-  const file = path.join(OUT_DIR, runFileName(fetchedAt));
-  await fs.writeFile(file, JSON.stringify({ fetchedAt, errors, books }, null, 1));
   console.log(`\n✅ ${total} lignes (${Object.keys(books).length}/${BOOKS.length} opérateurs) -> ${file}`);
 } else {
-  console.log("\n⚠ aucune ligne récupérée : aucun fichier écrit (on ne crée pas de relevé vide).");
+  console.log(`\n⚠ aucune ligne récupérée : relevé vide écrit (erreurs consignées) -> ${file}`);
 }
 
 if (Object.keys(books).length === 0) {

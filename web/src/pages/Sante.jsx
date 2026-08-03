@@ -9,9 +9,10 @@ import JsonViewer from "../components/JsonViewer.jsx";
 
 const BASE = import.meta.env.BASE_URL;
 
-// Cadences réelles : le site est reconstruit 1×/jour (cron 22:00 UTC). Les
-// cotes sont relevées toutes les 2 h mais n'arrivent en ligne qu'au build
-// suivant : toute fraîcheur se juge donc à l'échelle de la journée.
+// Cadences réelles : scrape BWF complet + build 1×/jour (cron 22:00 UTC), et
+// depuis le 2026-08-03 le workflow de cotes rebuilde AUSSI le site toutes les
+// 2 h. Les seuils restent à l'échelle de la journée : c'est le build quotidien
+// qui fait foi pour les données BWF, le bi-horaire ne rafraîchit que les cotes.
 const FRAIS_H = 30; // ≤ 30 h : à jour (un build quotidien + marge)
 const VIEUX_H = 54; // ≤ 54 h : vieillissant (un build manqué)
 
@@ -42,6 +43,14 @@ const FILES = [
 ];
 
 const nf = (n) => (n ?? 0).toLocaleString("fr-FR");
+// Jour LOCAL d'un horodatage (les relevés sont en UTC : un run de 23h50 UTC
+// appartient au lendemain à Paris) — clé "AAAA-MM-JJ" pour le filtre par jour.
+function jourLocal(iso) {
+  const d = new Date(String(iso).replace(" ", "T"));
+  const p = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+const fmtJour = (k) => `${k.slice(8, 10)}/${k.slice(5, 7)}`;
 const fmtBytes = (b) =>
   b >= 1048576
     ? `${(b / 1048576).toLocaleString("fr-FR", { maximumFractionDigits: 1 })} Mo`
@@ -182,6 +191,7 @@ export default function Sante() {
   const [resultats, setResultats] = useState(null);
   const [vu, setVu] = useState(null);       // fichier ouvert dans la visionneuse JSON
   const [runVu, setRunVu] = useState(null); // relevé bookmaker ouvert (fetchedAt)
+  const [jour, setJour] = useState(null);   // jour affiché des relevés (null = le plus récent)
   const [now] = useState(() => Date.now());
 
   useEffect(() => { setTitle("Santé des données"); }, [setTitle]);
@@ -283,14 +293,43 @@ export default function Sante() {
           </p>
         ) : runs.length === 0 ? (
           <p className="muted">Aucun relevé de cotes exporté pour l'instant.</p>
-        ) : (
+        ) : (() => {
+          // Jours disponibles (runs déjà triés du plus récent au plus ancien).
+          // Par défaut : le jour le plus récent — aujourd'hui dès que le robot
+          // a tourné une fois dans la journée.
+          const jours = [...new Set(runs.map((r) => jourLocal(r.fetchedAt)))];
+          const jourSel = jour && jours.includes(jour) ? jour : jours[0];
+          const runsJour = runs.filter((r) => jourLocal(r.fetchedAt) === jourSel);
+          const aujourdHui = jourLocal(new Date().toISOString());
+          // Cotes récupérées par jour (somme des lignes de tous les opérateurs).
+          const cotesParJour = new Map();
+          for (const r of runs) {
+            const j = jourLocal(r.fetchedAt);
+            const n = Object.values(r.books || {}).reduce((s, d) => s + (d?.rows || 0), 0);
+            cotesParJour.set(j, (cotesParJour.get(j) || 0) + n);
+          }
+          return (
           <>
             <p className="lead">
               Un relevé = un passage du robot de cotes (toutes les 2 h). Chaque cellule dit ce que
               l'opérateur a donné : <span className="sante-ok">✓ n lignes</span> si tout va bien,{" "}
-              <span className="sante-ko">✗ l'erreur exacte</span> sinon. Les {runs.length} derniers
-              passages exportés au build, du plus récent au plus ancien.
+              <span className="sante-ko">✗ l'erreur exacte</span> sinon. Seul le jour choisi est
+              affiché ({runs.length} passages exportés en tout).
             </p>
+            <div className="lb-sort" style={{ marginBottom: 12 }}>
+              <label className="lb-sort-label" htmlFor="jour-releves">Jour :</label>
+              <select id="jour-releves" className="day-select" value={jourSel}
+                      onChange={(e) => setJour(e.target.value)}>
+                {jours.map((j) => {
+                  const n = cotesParJour.get(j) || 0;
+                  return (
+                    <option key={j} value={j}>
+                      {j === aujourdHui ? `Aujourd'hui (${fmtJour(j)})` : fmtJour(j)} — {n} cote{n > 1 ? "s" : ""} récupérée{n > 1 ? "s" : ""}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
             <div className="table-scroll">
               <table>
                 <thead>
@@ -301,7 +340,7 @@ export default function Sante() {
                   </tr>
                 </thead>
                 <tbody>
-                  {runs.map((r) => (
+                  {runsJour.map((r) => (
                     <LigneRun key={r.fetchedAt} r={r} ouvert={runVu === r.fetchedAt}
                               onToggle={() => setRunVu(runVu === r.fetchedAt ? null : r.fetchedAt)} />
                   ))}
@@ -310,10 +349,13 @@ export default function Sante() {
             </div>
             <p className="hint">
               « ✓ 0 ligne » n'est pas une panne : en période creuse, les opérateurs n'affichent
-              simplement aucun match de badminton.
+              simplement aucun match de badminton. Depuis le 3 août 2026, un passage sans aucune
+              ligne est quand même consigné (avec ses erreurs) et publié dans l'heure — avant,
+              il n'apparaissait pas ici, d'où des « trous » dans la liste.
             </p>
           </>
-        )}
+          );
+        })()}
       </div>
     </>
   );

@@ -5,6 +5,12 @@
 # mesurer la CLV (Closing Line Value). Le relevé quotidien de deploy.yml est
 # bien trop espacé pour l'approcher ; ici on échantillonne l'évolution des
 # cotes tout au long de la journée, à coût quasi nul (HTTP pur, ~1 min).
+#
+# Depuis 2026-08-03, ce workflow PUBLIE aussi le site : sans cela, les relevés
+# s'accumulaient dans data/books/runs/ mais la liste affichée (/sante,
+# books-report) restait figée jusqu'au build quotidien de deploy.yml — d'où des
+# « relevés » invisibles pendant 24 h. On régénère donc les JSON (build-data +
+# backtest) et on redéploie GitHub Pages à chaque passage.
 name: Relevé cotes bookmakers
 
 on:
@@ -12,19 +18,24 @@ on:
     - cron: "0 */2 * * *" # toutes les 2 heures, pour approcher les cotes de clôture
   workflow_dispatch: {} # bouton "Run workflow" manuel
 
-# Groupe DISTINCT de "bwf-update" (deploy.yml) : les deux workflows peuvent
-# tourner en parallèle — la collision éventuelle au push est gérée plus bas
-# par un pull --rebase + retries.
+# MÊME groupe que deploy.yml : les deux workflows committent data/ et déploient
+# Pages — les sérialiser évite les pushs concurrents et les déploiements qui se
+# doublent (un artefact plus vieux qui finirait après un plus récent).
 concurrency:
-  group: books-scrape
+  group: bwf-update
   cancel-in-progress: false
 
 permissions:
   contents: write # pour committer data/books/
+  pages: write # pour publier sur GitHub Pages
+  id-token: write
 
 jobs:
   scrape-books:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -32,17 +43,19 @@ jobs:
         with:
           node-version: 20
 
-      # PAS de npm install ni de Playwright : scrape-books.mjs est en HTTP pur
-      # (fetch natif de Node), il n'importe que des modules node:* et lib/.
-      # Le script n'écrit RIEN si 0 ligne récupérée (période creuse) : dans ce
-      # cas l'étape suivante n'a rien à committer et sort proprement.
+      # npm install SANS navigateurs Playwright : scrape-books.mjs est en HTTP
+      # pur, mais build-data.mjs importe lib/odds.mjs qui importe le paquet
+      # playwright (jamais lancé ici — pas de `npx playwright install`).
+      - run: npm install
+
+      # Le script écrit un relevé MÊME à zéro ligne (période creuse, opérateur
+      # qui bloque) : le passage et ses erreurs restent visibles sur /sante.
       - run: node scrape-books.mjs
 
       # Commit du relevé. [skip ci] est OBLIGATOIRE : deploy.yml se déclenche
       # sur TOUT push sur main — sans lui, chaque relevé bi-horaire lancerait
-      # un scrape complet + déploiement GitHub Pages.
-      # Protection contre les pushs concurrents (deploy.yml ou un autre run) :
-      # pull --rebase juste avant le push, avec 3 tentatives.
+      # un scrape complet en plus du déploiement fait ici.
+      # Protection contre les pushs concurrents : pull --rebase + 3 tentatives.
       - name: Commit data/books
         run: |
           git config user.name "${{ github.actor }}"
@@ -64,3 +77,25 @@ jobs:
           done
           echo "Échec du push après 3 tentatives." >&2
           exit 1
+
+      # Régénère les JSON servis par l'app (cotes fraîches incluses)…
+      - run: node build-data.mjs
+
+      # …puis le backtest, APRÈS build-data (qui fait un rm -rf de
+      # web/public/data/ : l'ordre inverse effacerait backtest.json).
+      - run: node backtest.mjs --quiet
+
+      # Build de l'app React
+      - name: Build web
+        working-directory: web
+        run: |
+          npm install
+          npm run build
+
+      # Publie web/dist sur GitHub Pages
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+      - id: deploy
+        uses: actions/deploy-pages@v4
