@@ -3,9 +3,10 @@ import { useParams, useOutletContext, Link } from "react-router-dom";
 import { getJSON } from "../data.js";
 import Bracket from "../components/Bracket.jsx";
 import MatchTeam from "../components/MatchTeam.jsx";
-import UpcomingMatch from "../components/UpcomingMatch.jsx";
+import UpcomingMatch, { ROUND_LABEL } from "../components/UpcomingMatch.jsx";
 
 const ORDER = ["MS", "WS", "MD", "WD", "XD"];
+const BOOK_LABEL = { betclic: "Betclic", unibet: "Unibet", winamax: "Winamax" };
 const DISC_LABEL = {
   MS: "Simple messieurs", WS: "Simple dames", MD: "Double messieurs",
   WD: "Double dames", XD: "Double mixte",
@@ -360,15 +361,104 @@ function GroupView({ disc }) {
   );
 }
 
+// "2026-07-31 18:45:00" -> "31/07 · 18h45" (l'heure manque parfois).
+function fmtMatchTime(t) {
+  if (!t) return "—";
+  const [d, h] = String(t).split(" ");
+  const [, M, D] = d.split("-");
+  return `${D}/${M}${h ? ` · ${h.slice(0, 5).replace(":", "h")}` : ""}`;
+}
+
+// Verdict d'un match : le prono était-il bon ? + les cotes de clôture relevées.
+function PronoVerdict({ m }) {
+  const pickTeam = m.pick === 1 ? m.team1 : m.team2;
+  const pickName = (pickTeam?.players || []).map((p) => p.nameDisplay).join(" / ");
+  const pickProb = m.pick === 1 ? m.prob : 100 - m.prob;
+  return (
+    <div className="prono-cell">
+      {m.walkover ? (
+        <span className="badge warn" title={m.status || "Forfait / abandon : pas un match à prédire"}>Forfait</span>
+      ) : m.pick == null ? (
+        <span className="badge warn" title="Pas de pronostic : au moins un des deux camps avait un Elo provisoire (moins de 5 matchs connus) au moment du match.">Sans prono</span>
+      ) : (
+        <>
+          <span className={`badge ${m.ok ? "ok" : "ko"}`}>{m.ok ? "✓ Prono réussi" : "✗ Prono raté"}</span>
+          <span className="prono-pick">Donné : <b>{pickName}</b> à <b>{pickProb}%</b></span>
+        </>
+      )}
+      {m.odds && (
+        <span className="prono-odds">
+          {Object.entries(m.odds.books).map(([op, b]) => (
+            <span key={op}>
+              {BOOK_LABEL[op] || op}{" "}
+              <span className={m.winner === 1 ? "win" : ""}>{b.odd1.toLocaleString("fr-FR")}</span>
+              {" / "}
+              <span className={m.winner === 2 ? "win" : ""}>{b.odd2.toLocaleString("fr-FR")}</span>
+            </span>
+          ))}
+        </span>
+      )}
+    </div>
+  );
+}
+
+// Liste des matchs joués du tournoi : résultat + verdict du prono + cotes.
+function PronoList({ pronos }) {
+  const [filtre, setFiltre] = useState("all");
+  if (pronos === null) return <div className="card muted">Chargement…</div>;
+  if (pronos === false || !pronos.matches?.length) {
+    return <div className="card muted">Aucun match joué pour l'instant — les pronostics apparaîtront ici après les premiers résultats.</div>;
+  }
+  const discs = ORDER.filter((c) => pronos.matches.some((m) => m.disc === c));
+  // Du plus récent au plus ancien : finales (et matchs cotés) en tête de liste.
+  const rows = [...pronos.matches].reverse().filter((m) => filtre === "all" || m.disc === filtre);
+  return (
+    <div className="card">
+      <h2>Pronostics sur les matchs joués</h2>
+      <p className="muted" style={{ fontSize: 12, margin: "0 0 12px" }}>
+        Pour chaque match, la probabilité que notre Elo donnait <b>avant</b> le match
+        (modèle « Elo recalibré », le même que le prédicteur). <b>✓</b> = le camp donné
+        favori l'a emporté. Les cotes sont les dernières relevées avant le match
+        (Betclic / Unibet / Winamax) — disponibles uniquement sur les tournois récents.
+      </p>
+      <div className="lb-sort" style={{ marginBottom: 12 }}>
+        <span className="lb-sort-label">Tableau :</span>
+        <button className={`range-btn ${filtre === "all" ? "active" : ""}`} onClick={() => setFiltre("all")}>Tous · {pronos.matches.length}</button>
+        {discs.map((c) => (
+          <button key={c} className={`range-btn ${filtre === c ? "active" : ""}`} onClick={() => setFiltre(c)}>
+            {c} · {pronos.matches.filter((m) => m.disc === c).length}
+          </button>
+        ))}
+      </div>
+      <div className="match-list">
+        {rows.map((m, i) => (
+          <div className="match-item" key={i}>
+            <div className="match-meta">
+              <span className="match-ev">{m.disc} · {ROUND_LABEL[m.roundName] || m.roundName}</span>
+              <span className="match-date">{fmtMatchTime(m.matchTime)}</span>
+            </div>
+            <div className="mcard mcard-flow">
+              <MatchTeam match={m} side={1} seed={m.team1?.seed} />
+              <MatchTeam match={m} side={2} seed={m.team2?.seed} />
+            </div>
+            <PronoVerdict m={m} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Tournament() {
   const { id } = useParams();
   const { setTitle, setRight } = useOutletContext();
   const [data, setData] = useState(null);
   const [sel, setSel] = useState(null);
   const [ranking, setRanking] = useState(null);
-  const [view, setView] = useState("bracket"); // bracket | players | palmares
+  const [view, setView] = useState("bracket"); // bracket | pronos | players | palmares
   const [pv, setPv] = useState("disc"); // vue Joueurs : disc | form | under
   const [upcoming, setUpcoming] = useState([]); // matchs à venir de CE tournoi
+  const [pronos, setPronos] = useState(null); // pronostics rétrospectifs (null = chargement)
 
   useEffect(() => {
     setRight(<Link className="tb-right" to="/tournaments">← Calendrier</Link>);
@@ -376,6 +466,7 @@ export default function Tournament() {
   }, [setRight]);
 
   useEffect(() => { getJSON("elo/ranking.json").then(setRanking).catch(() => setRanking(false)); }, []);
+  useEffect(() => { getJSON(`pronos/${id}.json`).then(setPronos).catch(() => setPronos(false)); }, [id]);
   useEffect(() => {
     getJSON("upcoming-matches.json")
       .then((u) => setUpcoming((u.matches || []).filter((m) => String(m.tmtId) === String(id))))
@@ -408,8 +499,27 @@ export default function Tournament() {
   const formCount = upcoming.filter((m) => Math.max(m.team1?.form ?? -1e9, m.team2?.form ?? -1e9) >= WATCH_FORM_MIN).length;
   const underCount = upcoming.filter((m) => Math.max(underGap(m.team1, m.eventName), underGap(m.team2, m.eventName)) >= UNDER_GAP_MIN).length;
 
+  const st = pronos && pronos.stats ? pronos.stats : null;
+
   return (
     <>
+      {st && st.total > 0 && (
+        <div className="stats">
+          <div className="stat">
+            <div className="stat-value">{st.total}</div>
+            <div className="stat-label">Matchs joués</div>
+          </div>
+          <div className="stat">
+            <div className="stat-value">{st.predicted ? `${Math.round((st.correct / st.predicted) * 100)} %` : "—"}</div>
+            <div className="stat-label">Pronos réussis · {st.correct}/{st.predicted}</div>
+          </div>
+          <div className="stat">
+            <div className="stat-value">{st.withOdds}</div>
+            <div className="stat-label">Matchs avec cotes</div>
+          </div>
+        </div>
+      )}
+
       {data.info && (
         <div className="card">
           <h2>{data.info.name}</h2>
@@ -425,14 +535,16 @@ export default function Tournament() {
       ) : (
         <>
           <div className="tabs" role="tablist" aria-label="Vue">
-            {[["bracket", "Tableau"], ["players", "Joueurs"], ["palmares", "Palmarès"]].map(([k, lbl]) => (
+            {[["bracket", "Tableau"], ["pronos", "Pronostics"], ["players", "Joueurs"], ["palmares", "Palmarès"]].map(([k, lbl]) => (
               <button key={k} role="tab" aria-selected={view === k} className={`tab ${view === k ? "active" : ""}`} onClick={() => setView(k)}>
                 {lbl}
               </button>
             ))}
           </div>
 
-          {view === "palmares" ? (
+          {view === "pronos" ? (
+            <PronoList pronos={pronos} />
+          ) : view === "palmares" ? (
             <Palmares disciplines={data.disciplines} />
           ) : (
             <>

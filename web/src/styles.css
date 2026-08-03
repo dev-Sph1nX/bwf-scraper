@@ -367,10 +367,25 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 /* Surbrillance d'un match ciblé depuis le graphe Elo */
 @keyframes flashMark { 0% { box-shadow: 0 0 0 2px var(--bwf-red); } 100% { box-shadow: 0 0 0 2px transparent; } }
 .match-item.flash .mcard { animation: flashMark 2.2s ease-out; }
+
+/* Sélecteur de jour des relevés bookmakers (/sante) */
+.day-select { font: inherit; font-size: 13px; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; min-height: 40px; cursor: pointer; }
+.day-select:hover { border-color: var(--accent); }
+.day-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* Pronostics d'un tournoi : verdict du prono + cotes, à droite du match */
+.prono-cell { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; font-size: 12px; flex: 0 0 190px; }
+.prono-pick { color: var(--muted); }
+.prono-pick b { color: var(--ink); font-weight: bold; }
+.prono-odds { display: flex; flex-direction: column; gap: 2px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.prono-odds .win { color: var(--ink); font-weight: bold; }
+
 @media (max-width: 700px) {
   .match-item { flex-direction: column; align-items: stretch; gap: 6px; }
   .match-meta { flex-direction: row; flex-wrap: wrap; gap: 10px; flex-basis: auto; align-items: baseline; }
   .mcard.mcard-flow { max-width: 100%; }
+  .prono-cell { flex-basis: auto; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+  .prono-odds { flex-direction: row; flex-wrap: wrap; gap: 2px 12px; }
 }
 
 /* ---- Comparaison Elo vs classement mondial ---- */

@@ -23,6 +23,8 @@ import { loadPublications, buildWorldMap, buildPlayerRankHistory, publicationTot
 import { recalibrate } from "./lib/calibrate.mjs";
 import { ev, bestOdd } from "./lib/ev.mjs";
 import { oddsForMatch } from "./lib/home-data.mjs";
+import { eloProb, isProvisional } from "./lib/models.mjs";
+import { isWalkover } from "./lib/dataset.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data");
@@ -60,7 +62,48 @@ for (const [disc, m] of Object.entries(initRanks)) {
   seeds[disc] = sm;
 }
 console.log(`   Seed initial : ${seededCount} entités depuis le classement mondial (data/seeds/)`);
-const elo = await computeElo(years, seeds);
+
+// Équipe allégée pour l'affichage (matchs à venir, pronostics par tournoi).
+const teamLite = (team, seed) => ({
+  players: (team?.players || []).map((p) => ({ id: String(p.id), nameDisplay: p.nameDisplay, countryFlagUrl: p.countryFlagUrl })),
+  country: team?.countryCode || null,
+  seed: seed || null,
+});
+const entityId = (players) => {
+  const ids = players.map((p) => String(p.id)).sort();
+  return ids.length > 1 ? `pair:${ids.join("-")}` : ids[0];
+};
+
+// ===== 1b) Pronostics rétrospectifs, collectés PENDANT le calcul de l'Elo =====
+// Le crochet onMatch de computeElo (cf. lib/elo.mjs) livre l'état des deux camps
+// d'AVANT chaque match : on fige ici la probabilité que l'app aurait affichée à
+// l'époque — même modèle que le prédicteur et que le backtest (« Elo
+// recalibré »), même règle d'abstention (aucun prono si un camp est provisoire).
+// Les forfaits sont listés (le tableau les montre) mais jamais pronostiqués :
+// ce n'est pas un match à prédire.
+const pronosByTmt = new Map(); // tmtId -> entrées de matchs joués
+const collectProno = ({ tmtId, disc, match, a, b }) => {
+  const walkover = isWalkover(match);
+  const p = walkover || isProvisional(a.entity.matches) || isProvisional(b.entity.matches)
+    ? null
+    : recalibrate(eloProb(a.entity.rating, b.entity.rating), disc);
+  let arr = pronosByTmt.get(tmtId);
+  if (!arr) pronosByTmt.set(tmtId, (arr = []));
+  arr.push({
+    disc, roundName: match.roundName || null, matchTime: match.matchTime || null,
+    team1: teamLite(match.team1, match.team1seed),
+    team2: teamLite(match.team2, match.team2seed),
+    a: entityId(match.team1.players), b: entityId(match.team2.players),
+    score: match.score || null, winner: match.winner,
+    walkover, status: walkover ? (match.scoreStatusValue || null) : null,
+    // Proba (team1) et camp prédit, calculés sur la valeur NON arrondie : un
+    // 49,6 % arrondi à 50 désignerait le mauvais favori.
+    prob: p == null ? null : Math.round(p * 100),
+    pick: p == null ? null : (p >= 0.5 ? 1 : 2),
+    ok: p == null ? null : ((p >= 0.5 ? 1 : 2) === match.winner),
+  });
+};
+const elo = await computeElo(years, seeds, { onMatch: collectProno });
 const { playerHistory, pairHistory, ...ranking } = elo;
 
 const DOUBLES = new Set(["MD", "WD", "XD"]);
@@ -250,6 +293,9 @@ const playedCandidates = [];
 const RECENT_DAYS = 30;   // au-delà, l'historique des cotes n'existe pas encore
 let tCount = 0, tournamentsTotal = 0, tournamentsDownloaded = 0;
 const byYear = [];
+// Tournois dont la fiche a été écrite : seuls eux reçoivent un fichier de
+// pronostics (les JO, exclus du calendrier, sont pourtant vus par le crochet).
+const writtenTmtIds = new Set();
 
 // Joueur tel qu'attendu par lib/odds-match.mjs : le nom de famille et le prénom
 // séparés sont ce qui permet de recoller "Prannoy H. S." à "H. S. PRANNOY".
@@ -259,15 +305,8 @@ const playerForOdds = (p) => ({
   slug: p.slug || null, countryCode: p.countryCode || null,
 });
 
-const teamLite = (team, seed) => ({
-  players: (team?.players || []).map((p) => ({ id: String(p.id), nameDisplay: p.nameDisplay, countryFlagUrl: p.countryFlagUrl })),
-  country: team?.countryCode || null,
-  seed: seed || null,
-});
-const entityId = (players) => {
-  const ids = players.map((p) => String(p.id)).sort();
-  return ids.length > 1 ? `pair:${ids.join("-")}` : ids[0];
-};
+// (teamLite et entityId sont définis plus haut, avant le calcul de l'Elo : le
+// collecteur de pronostics en a besoin pendant computeElo.)
 // Probabilité de victoire de A selon l'écart Elo (même formule que le prédicteur).
 const winProb = (ra, rb) => 1 / (1 + Math.pow(10, (rb - ra) / 400));
 // Lookup Elo par discipline (clé = même schéma que entityId) pour enrichir les matchs à venir.
@@ -372,6 +411,7 @@ for (const y of years) {
     if (t.matchCount > 0) {
       const tv = await views.getTournament(y, t.id);
       await write(`tournament/${t.id}.json`, tv);
+      writtenTmtIds.add(t.id);
       tCount++; dl++;
 
       // Matchs JOUÉS récents (tous tournois, y compris terminés).
@@ -464,12 +504,18 @@ console.log(`   Matchs à venir : ${upcomingMatches.length}`);
 // (exact), puis rapproché des matchs BWF par discipline + date + noms — au
 // moindre doute, pas d'appariement (l'audit montre les cas douteux).
 let bookRunsHealth = [];
+// Cotes de clôture des matchs JOUÉS appariés, pour les pronostics par tournoi.
+// Clé : tmtId|discipline|jour|entité1|entité2 (le jour départage deux
+// rencontres des mêmes adversaires dans un même tournoi, ex. poule puis finale).
+const oddsByPlayed = new Map();
 {
   const runs = await loadBookRuns(join(ROOT, "data", "books", "runs"));
   // Détail de chaque passage du scraper de cotes, pour la page /sante : combien
   // de lignes par opérateur, et l'erreur exacte en cas d'échec (ex. HTTP 403).
   // Ces infos vivent dans les fichiers bruts mais n'étaient pas exportées.
-  bookRunsHealth = await Promise.all(runs.slice(-30).map(async (r) => {
+  // 84 relevés = ~7 jours à un passage toutes les 2 h : de quoi alimenter le
+  // filtre par jour de la page /sante sans gonfler le build (~5 ko le fichier).
+  bookRunsHealth = await Promise.all(runs.slice(-84).map(async (r) => {
     const books = {};
     for (const b of new Set([...Object.keys(r.books || {}), ...Object.keys(r.errors || {})])) {
       const d = r.books?.[b];
@@ -515,6 +561,23 @@ let bookRunsHealth = [];
   await write("upcoming-matches.json", { generatedAt: ranking.generatedAt, matches: upcomingMatches });
 
   const names = (team) => (team?.players || []).map((p) => p.nameDisplay).join(" / ");
+
+  // Alimente la table des cotes des matchs joués (jointure vers les pronostics).
+  for (const m of res.matched) {
+    if (!m.bwf.played) continue;
+    const day = String(m.bwf.matchTime || "").slice(0, 10);
+    const k = `${m.bwf.tmtId}|${m.bwf.eventName}|${day}|${entityId(m.bwf.team1.players)}|${entityId(m.bwf.team2.players)}`;
+    const o = oddsForMatch(m.group, m.swapped);
+    const books = {};
+    // Seules les cotes de clôture sont retenues (odd1/odd2, orientées team1/team2) :
+    // les séries complètes restent dans books-report.json. Un opérateur sans
+    // couple de cotes complet (relevé passé en live, marché fermé) est écarté —
+    // sans quoi le tournoi afficherait « avec cotes » pour des cases vides.
+    for (const [op, b] of Object.entries(o.books)) {
+      if (b.odd1 != null && b.odd2 != null) books[op] = { odd1: b.odd1, odd2: b.odd2 };
+    }
+    if (Object.keys(books).length) oddsByPlayed.set(k, { books, startUtc: o.startUtc });
+  }
 
   const bwfOf = new Map(res.matched.map((m) => [m.group.key, m]));
   const perBook = {};
@@ -562,6 +625,33 @@ let bookRunsHealth = [];
       `${res.stats.matched} appariés BWF, ${res.stats.ambiguous} ambigus, ${res.stats.unmatched} orphelins`
   );
 }
+
+// ===== 5b) Pronostics par tournoi : pronos/<tmtId>.json =====
+// Un fichier par tournoi téléchargé : la liste chronologique de ses matchs
+// joués, chacun avec la proba d'avant match, le verdict (bon/mauvais prono) et
+// les cotes de clôture quand un bookmaker a été apparié (matchs récents
+// uniquement — l'historique de cotes n'existe que depuis fin juillet 2026).
+let pronoFiles = 0, pronoMatches = 0;
+for (const [tmtId, list] of pronosByTmt) {
+  if (!writtenTmtIds.has(tmtId)) continue;
+  list.sort((x, y) => (x.matchTime || "").localeCompare(y.matchTime || ""));
+  let predicted = 0, correct = 0, withOdds = 0, walkovers = 0;
+  for (const e of list) {
+    const day = String(e.matchTime || "").slice(0, 10);
+    const odds = oddsByPlayed.get(`${tmtId}|${e.disc}|${day}|${e.a}|${e.b}`);
+    if (odds) { e.odds = odds; withOdds++; }
+    if (e.walkover) walkovers++;
+    if (e.ok != null) { predicted++; if (e.ok) correct++; }
+  }
+  await write(`pronos/${tmtId}.json`, {
+    tmtId,
+    generatedAt: ranking.generatedAt,
+    stats: { total: list.length, walkovers, predicted, correct, withOdds },
+    matches: list,
+  });
+  pronoFiles++; pronoMatches += list.length;
+}
+console.log(`   Pronostics : ${pronoFiles} tournois, ${pronoMatches} matchs joués`);
 
 // ===== 6) summary.json (agrégat multi-années) =====
 const manifest = await store.getManifest();
