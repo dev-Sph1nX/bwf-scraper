@@ -89,7 +89,14 @@ const collectProno = ({ tmtId, disc, match, a, b }) => {
     : recalibrate(eloProb(a.entity.rating, b.entity.rating), disc);
   let arr = pronosByTmt.get(tmtId);
   if (!arr) pronosByTmt.set(tmtId, (arr = []));
+  // Sans prono (hors forfait) : on embarque le nombre de matchs CONNUS de
+  // chaque camp à l'instant du match — c'est la matière de l'explication
+  // affichée au survol du badge (« Elo provisoire : 2 matchs sur 5 requis »).
+  const prov = !walkover && p == null
+    ? { nA: a.entity.matches, nB: b.entity.matches }
+    : null;
   arr.push({
+    ...(prov || {}),
     disc, roundName: match.roundName || null, matchTime: match.matchTime || null,
     team1: teamLite(match.team1, match.team1seed),
     team2: teamLite(match.team2, match.team2seed),

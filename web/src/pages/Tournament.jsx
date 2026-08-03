@@ -369,6 +369,28 @@ function fmtMatchTime(t) {
   return `${D}/${M}${h ? ` · ${h.slice(0, 5).replace(":", "h")}` : ""}`;
 }
 
+// Seuil sous lequel un Elo est « provisoire » — même valeur que
+// provisionalMatches dans lib/elo.mjs (le modèle s'abstient en dessous).
+const PROV_MIN = 5;
+
+// Explication du « Sans prono », construite depuis le nombre de matchs CONNUS
+// de chaque camp à l'instant du match (embarqué par build-data).
+function sansPronoWhy(m) {
+  const name = (t) => (t?.players || []).map((p) => p.nameDisplay).join(" / ");
+  const bout = (t, n) => {
+    const paire = (t?.players || []).length > 1;
+    if (n === 0) return `${name(t)} n'avait encore jamais joué${paire ? " ensemble" : ""}`;
+    return `${name(t)} n'avait que ${n} match${n > 1 ? "s" : ""}${paire ? " ensemble" : ""}`;
+  };
+  const faibles = [];
+  if (m.nA != null && m.nA < PROV_MIN) faibles.push(bout(m.team1, m.nA));
+  if (m.nB != null && m.nB < PROV_MIN) faibles.push(bout(m.team2, m.nB));
+  if (!faibles.length) return "Pas de pronostic : Elo encore provisoire au moment du match.";
+  return `Pas de pronostic : ${faibles.join(" et ")} à notre connaissance au moment du match — ` +
+    `en dessous de ${PROV_MIN} matchs, l'Elo est encore provisoire et le modèle s'abstient ` +
+    `plutôt que d'inventer une probabilité.`;
+}
+
 // Verdict d'un match : le prono était-il bon ? + les cotes de clôture relevées.
 function PronoVerdict({ m }) {
   const pickTeam = m.pick === 1 ? m.team1 : m.team2;
@@ -379,7 +401,7 @@ function PronoVerdict({ m }) {
       {m.walkover ? (
         <span className="badge warn" title={m.status || "Forfait / abandon : pas un match à prédire"}>Forfait</span>
       ) : m.pick == null ? (
-        <span className="badge warn" title="Pas de pronostic : au moins un des deux camps avait un Elo provisoire (moins de 5 matchs connus) au moment du match.">Sans prono</span>
+        <span className="badge warn" tabIndex={0} title={sansPronoWhy(m)}>Sans prono</span>
       ) : (
         <>
           <span className={`badge ${m.ok ? "ok" : "ko"}`}>{m.ok ? "✓ Prono réussi" : "✗ Prono raté"}</span>
@@ -420,6 +442,7 @@ function PronoList({ pronos }) {
     total: rows.length,
     predicted: rows.filter((m) => m.ok != null).length,
     correct: rows.filter((m) => m.ok === true).length,
+    sansProno: rows.filter((m) => !m.walkover && m.pick == null).length,
     withOdds: rows.filter((m) => m.odds).length,
   };
   return (
@@ -432,6 +455,10 @@ function PronoList({ pronos }) {
       <div className="stat">
         <div className="stat-value">{st.predicted ? `${Math.round((st.correct / st.predicted) * 100)} %` : "—"}</div>
         <div className="stat-label">Pronos réussis · {st.correct}/{st.predicted}</div>
+      </div>
+      <div className="stat">
+        <div className="stat-value">{st.sansProno}</div>
+        <div className="stat-label">Sans prono (Elo provisoire)</div>
       </div>
       <div className="stat">
         <div className="stat-value">{st.withOdds}</div>
