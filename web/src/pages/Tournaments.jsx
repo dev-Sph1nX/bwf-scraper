@@ -79,7 +79,7 @@ function Featured({ featured, now }) {
   );
 }
 
-function TournamentRow({ t }) {
+function TournamentRow({ t, cotes }) {
   return (
     <tr>
       <td>
@@ -95,11 +95,14 @@ function TournamentRow({ t }) {
       <td><span className={`badge ${t.live_status}`}>{t.live_status}</span></td>
       <td>{t.drawCount}/{t.drawsTotal}</td>
       <td>{t.matchCount}</td>
+      {cotes && (
+        <td>{t.oddsMatchCount > 0 ? t.oddsMatchCount : <span className="muted">—</span>}</td>
+      )}
     </tr>
   );
 }
 
-function Section({ title, subtitle, rows, empty }) {
+function Section({ title, subtitle, rows, empty, cotes }) {
   return (
     <div className="card">
       <h2>{title}{subtitle ? <span className="muted" style={{ fontWeight: "normal" }}> · {subtitle}</span> : null}</h2>
@@ -109,10 +112,13 @@ function Section({ title, subtitle, rows, empty }) {
         <div className="table-scroll">
           <table>
             <thead>
-              <tr><th>Tournoi</th><th>Dates</th><th>Catégorie</th><th>État</th><th>Draws</th><th>Matchs</th></tr>
+              <tr>
+                <th>Tournoi</th><th>Dates</th><th>Catégorie</th><th>État</th><th>Draws</th><th>Matchs</th>
+                {cotes && <th title="Matchs joués dont une cote bookmaker a été relevée et appariée">Avec cotes</th>}
+              </tr>
             </thead>
             <tbody>
-              {rows.map((t) => <TournamentRow key={t.id} t={t} />)}
+              {rows.map((t) => <TournamentRow key={t.id} t={t} cotes={cotes} />)}
             </tbody>
           </table>
         </div>
@@ -185,6 +191,7 @@ export default function Tournaments() {
           subtitle={`${active.rows.length} tournoi${active.rows.length > 1 ? "s" : ""}`}
           rows={active.rows}
           empty=""
+          cotes={active.key === "past"}
         />
       ) : (
         <div className="card muted">Aucun tournoi ne correspond à « {q.trim()} ».</div>

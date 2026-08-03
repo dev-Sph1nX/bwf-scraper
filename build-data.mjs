@@ -496,7 +496,8 @@ for (const y of years) {
   tournamentsDownloaded += dl;
   byYear.push({ year: y, matchCount: yearMatchCount[y] || 0, tournaments: dl });
 }
-await write("status.json", { years, tournaments: allTournaments });
+// status.json est écrit plus bas (section 5b) : chaque tournoi y est enrichi
+// du nombre de ses matchs avec cotes, connu seulement après l'appariement.
 console.log(`   Matchs à venir : ${upcomingMatches.length}`);
 
 // ===== Cotes oddsportal : RETIRÉ (2026-07-31) =====
@@ -639,6 +640,7 @@ const oddsByPlayed = new Map();
 // les cotes de clôture quand un bookmaker a été apparié (matchs récents
 // uniquement — l'historique de cotes n'existe que depuis fin juillet 2026).
 let pronoFiles = 0, pronoMatches = 0;
+const oddsCountByTmt = new Map(); // tmtId -> nb de matchs joués avec cotes appariées
 for (const [tmtId, list] of pronosByTmt) {
   if (!writtenTmtIds.has(tmtId)) continue;
   list.sort((x, y) => (x.matchTime || "").localeCompare(y.matchTime || ""));
@@ -656,9 +658,16 @@ for (const [tmtId, list] of pronosByTmt) {
     stats: { total: list.length, walkovers, predicted, correct, withOdds },
     matches: list,
   });
+  oddsCountByTmt.set(tmtId, withOdds);
   pronoFiles++; pronoMatches += list.length;
 }
 console.log(`   Pronostics : ${pronoFiles} tournois, ${pronoMatches} matchs joués`);
+
+// Calendrier des tournois, enrichi du nombre de matchs joués avec cotes.
+await write("status.json", {
+  years,
+  tournaments: allTournaments.map((t) => ({ ...t, oddsMatchCount: oddsCountByTmt.get(t.id) ?? 0 })),
+});
 
 // ===== 6) summary.json (agrégat multi-années) =====
 const manifest = await store.getManifest();
