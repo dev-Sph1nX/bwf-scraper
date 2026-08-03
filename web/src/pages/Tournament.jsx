@@ -405,14 +405,39 @@ function PronoVerdict({ m }) {
 // Liste des matchs joués du tournoi : résultat + verdict du prono + cotes.
 function PronoList({ pronos }) {
   const [filtre, setFiltre] = useState("all");
+  const [coteF, setCoteF] = useState("all"); // all | with | without
   if (pronos === null) return <div className="card muted">Chargement…</div>;
   if (pronos === false || !pronos.matches?.length) {
     return <div className="card muted">Aucun match joué pour l'instant — les pronostics apparaîtront ici après les premiers résultats.</div>;
   }
   const discs = ORDER.filter((c) => pronos.matches.some((m) => m.disc === c));
   // Du plus récent au plus ancien : finales (et matchs cotés) en tête de liste.
-  const rows = [...pronos.matches].reverse().filter((m) => filtre === "all" || m.disc === filtre);
+  const parDisc = [...pronos.matches].reverse().filter((m) => filtre === "all" || m.disc === filtre);
+  const rows = parDisc.filter((m) => (coteF === "all" ? true : coteF === "with" ? !!m.odds : !m.odds));
+  const nAvec = parDisc.filter((m) => m.odds).length;
+  // Stats recalculées sur la liste filtrée : elles suivent les deux filtres.
+  const st = {
+    total: rows.length,
+    predicted: rows.filter((m) => m.ok != null).length,
+    correct: rows.filter((m) => m.ok === true).length,
+    withOdds: rows.filter((m) => m.odds).length,
+  };
   return (
+    <>
+    <div className="stats">
+      <div className="stat">
+        <div className="stat-value">{st.total}</div>
+        <div className="stat-label">Matchs joués</div>
+      </div>
+      <div className="stat">
+        <div className="stat-value">{st.predicted ? `${Math.round((st.correct / st.predicted) * 100)} %` : "—"}</div>
+        <div className="stat-label">Pronos réussis · {st.correct}/{st.predicted}</div>
+      </div>
+      <div className="stat">
+        <div className="stat-value">{st.withOdds}</div>
+        <div className="stat-label">Matchs avec cotes</div>
+      </div>
+    </div>
     <div className="card">
       <h2>Pronostics sur les matchs joués</h2>
       <p className="muted" style={{ fontSize: 12, margin: "0 0 12px" }}>
@@ -429,6 +454,10 @@ function PronoList({ pronos }) {
             {c} · {pronos.matches.filter((m) => m.disc === c).length}
           </button>
         ))}
+        <span className="lb-sort-label" style={{ marginLeft: "auto" }}>Cote :</span>
+        <button className={`range-btn ${coteF === "all" ? "active" : ""}`} onClick={() => setCoteF("all")}>Toutes</button>
+        <button className={`range-btn ${coteF === "with" ? "active" : ""}`} onClick={() => setCoteF("with")}>Avec · {nAvec}</button>
+        <button className={`range-btn ${coteF === "without" ? "active" : ""}`} onClick={() => setCoteF("without")}>Sans · {parDisc.length - nAvec}</button>
       </div>
       <div className="match-list">
         {rows.map((m, i) => (
@@ -446,6 +475,7 @@ function PronoList({ pronos }) {
         ))}
       </div>
     </div>
+    </>
   );
 }
 
@@ -499,27 +529,8 @@ export default function Tournament() {
   const formCount = upcoming.filter((m) => Math.max(m.team1?.form ?? -1e9, m.team2?.form ?? -1e9) >= WATCH_FORM_MIN).length;
   const underCount = upcoming.filter((m) => Math.max(underGap(m.team1, m.eventName), underGap(m.team2, m.eventName)) >= UNDER_GAP_MIN).length;
 
-  const st = pronos && pronos.stats ? pronos.stats : null;
-
   return (
     <>
-      {st && st.total > 0 && (
-        <div className="stats">
-          <div className="stat">
-            <div className="stat-value">{st.total}</div>
-            <div className="stat-label">Matchs joués</div>
-          </div>
-          <div className="stat">
-            <div className="stat-value">{st.predicted ? `${Math.round((st.correct / st.predicted) * 100)} %` : "—"}</div>
-            <div className="stat-label">Pronos réussis · {st.correct}/{st.predicted}</div>
-          </div>
-          <div className="stat">
-            <div className="stat-value">{st.withOdds}</div>
-            <div className="stat-label">Matchs avec cotes</div>
-          </div>
-        </div>
-      )}
-
       {data.info && (
         <div className="card">
           <h2>{data.info.name}</h2>
