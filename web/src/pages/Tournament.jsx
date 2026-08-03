@@ -470,8 +470,9 @@ function PronoList({ pronos }) {
       <p className="muted" style={{ fontSize: 12, margin: "0 0 12px" }}>
         Pour chaque match, la probabilité que notre Elo donnait <b>avant</b> le match
         (modèle « Elo recalibré », le même que le prédicteur). <b>✓</b> = le camp donné
-        favori l'a emporté. Les cotes sont les dernières relevées avant le match
-        (Betclic / Unibet / Winamax) — disponibles uniquement sur les tournois récents.
+        favori l'a emporté. Les cotes sont les cotes de clôture (dernières avant le match)
+        de Betclic / Unibet / Winamax — nos relevés pour les tournois récents, complétés
+        par l'historique Flashscore sur la saison 2026.
       </p>
       <div className="lb-sort" style={{ marginBottom: 12 }}>
         <span className="lb-sort-label">Tableau :</span>

@@ -25,6 +25,7 @@ import { ev, bestOdd } from "./lib/ev.mjs";
 import { oddsForMatch } from "./lib/home-data.mjs";
 import { eloProb, isProvisional } from "./lib/models.mjs";
 import { isWalkover } from "./lib/dataset.mjs";
+import { loadFlashscoreOdds, joinFlashscore } from "./lib/flashscore-join.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data");
@@ -632,6 +633,38 @@ const oddsByPlayed = new Map();
     `   Bookmakers : ${groups.length} matchs (${runs.length} relevés), ` +
       `${res.stats.matched} appariés BWF, ${res.stats.ambiguous} ambigus, ${res.stats.unmatched} orphelins`
   );
+}
+
+// ===== Cotes historiques Flashscore (backfill saison 2026) =====
+// Jointes par empreinte de score + jour ±1 + noms (cf. lib/flashscore-join.mjs),
+// elles COMPLÈTENT nos relevés bookmakers : un match déjà couvert par
+// data/books/ garde ses cotes à nous, Flashscore ne remplit que les trous.
+{
+  const fsFiles = await loadFlashscoreOdds(join(ROOT, "data", "flashscore", "odds"));
+  if (fsFiles.length) {
+    const bwfRows = [];
+    for (const [tmtId, list] of pronosByTmt) {
+      for (const e of list) {
+        if (!Array.isArray(e.score) || !e.score.length) continue;
+        bwfRows.push({
+          tmtId, disc: e.disc, day: String(e.matchTime || "").slice(0, 10),
+          name1: e.team1.players.map((p) => p.nameDisplay).join(" / "),
+          name2: e.team2.players.map((p) => p.nameDisplay).join(" / "),
+          sets: e.score.map((s) => ({ home: s.home, away: s.away })),
+          a: e.a, b: e.b,
+        });
+      }
+    }
+    const { joined, stats } = joinFlashscore(fsFiles, bwfRows);
+    let added = 0;
+    for (const [k, odds] of joined) {
+      if (!oddsByPlayed.has(k)) { oddsByPlayed.set(k, odds); added++; }
+    }
+    console.log(
+      `   Flashscore : ${stats.fsMatches} matchs cotés (${fsFiles.length} tournois), ` +
+      `${stats.joined} joints -> ${added} ajoutés, ${stats.unmatched} non joints, ${stats.ambiguous} ambigus`,
+    );
+  }
 }
 
 // ===== 5b) Pronostics par tournoi : pronos/<tmtId>.json =====
