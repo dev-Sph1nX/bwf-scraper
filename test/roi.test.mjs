@@ -202,3 +202,56 @@ test("computeRoi : le journal des paris est auditable (stratégies, ev sur value
 test("computeRoi : reproductible (même graine -> mêmes IC)", () => {
   assert.deepEqual(computeRoi(ROWS), computeRoi(ROWS));
 });
+
+// ---- avenant : CLV et découpage par discipline ------------------------------
+
+test("computeRoi : CLV — bat la clôture quand la cote d'ouverture prise est plus haute", () => {
+  // ouverture 1.8 -> clôture 1.5 : le marché a suivi notre camp, clv = +0.2
+  const books = { betclic: { odd1: 1.5, odd2: 2.5, open1: 1.8, open2: 2.2 } };
+  const r = computeRoi([mkRow(1, 0, { books })]); // pick 1, winner 2 (pari perdu)
+  const c = r.clv.favori;
+  assert.equal(c.n, 1);
+  assert.equal(c.beat, 1);
+  assert.equal(c.beatPct, 1);
+  assert.ok(Math.abs(c.avg - 0.2) < 1e-9);
+  assert.equal(c.roiBeat.n, 1);
+  assert.equal(c.roiBeat.net, -1); // battu la clôture mais perdu le pari : compatible
+  assert.equal(c.roiOther.n, 0);
+});
+
+test("computeRoi : CLV — pari d'ouverture sans cote de clôture exclu de la comparaison", () => {
+  const books = { betclic: { open1: 1.8, open2: 2.2 } };
+  const r = computeRoi([mkRow(1, 0, { books })]);
+  assert.equal(r.strategies.favori.global.open.n, 1); // le pari d'ouverture existe bien
+  assert.equal(r.clv.favori.n, 0);                    // mais rien pour le comparer
+  assert.equal(r.clv.favori.avg, null);
+});
+
+test("computeRoi : par discipline — somme des disciplines = global, ordre canonique", () => {
+  const rows = [
+    ...Array.from({ length: 4 }, (_, i) => mkRow(1, i, { disc: "WS", prob: 85 })),
+    ...Array.from({ length: 4 }, (_, i) => mkRow(1, i, { disc: "MS" })),
+  ];
+  const r = computeRoi(rows);
+  assert.deepEqual(r.byDisc.map((d) => d.disc), ["MS", "WS"]); // ordre MS,WS,MD,WD,XD
+  const sumN = r.byDisc.reduce((s, d) => s + d.favori.close.n, 0);
+  assert.equal(sumN, r.strategies.favori.global.close.n);
+});
+
+test("computeRoi : croisements — tranches et seuil d'EV par discipline", () => {
+  const rows = [
+    ...Array.from({ length: 4 }, (_, i) => mkRow(1, i, { disc: "WS", prob: 85 })),
+    ...Array.from({ length: 4 }, (_, i) => mkRow(1, i, { disc: "MS" })), // prob 65
+  ];
+  const r = computeRoi(rows);
+  const ws = r.byDisc.find((d) => d.disc === "WS");
+  assert.equal(ws.bands.find((b) => b.band === "80-90").close.n, 4);
+  assert.equal(ws.bands.find((b) => b.band === "60-70").close.n, 0);
+  for (let i = 1; i < ws.evSweep.length; i++) {
+    assert.ok(ws.evSweep[i].close.n <= ws.evSweep[i - 1].close.n);
+  }
+  // les tranches par discipline recomposent la tranche globale
+  const ms = r.byDisc.find((d) => d.disc === "MS");
+  const g6070 = r.bands.find((b) => b.band === "60-70").close.n;
+  assert.equal(ms.bands.find((b) => b.band === "60-70").close.n, g6070);
+});
