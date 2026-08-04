@@ -1,6 +1,6 @@
 # Journal des mesures
 
-**Dernière mise à jour :** 2026-08-04 (§8.2)
+**Dernière mise à jour :** 2026-08-04 (§8.3)
 
 Ce document consigne **tout ce qui a été mesuré**, avec les chiffres, la méthode et
 le moyen de le refaire. Il existe pour une raison précise : ne pas retester ce qui
@@ -657,3 +657,26 @@ chiffré : ~4 points — c'est l'objectif du chantier « là où le modèle saig
 value WS : points positifs à presque tous les seuils d'EV mais n minuscules
 (EV>0,20 : +15,4 % sur 22 paris, IC [−46 ; +79]). À revoir après le backfill
 2024-2025.
+
+## 8.3 Hypothèses GELÉES avant le hors-échantillon 2024-2025 (2026-08-04)
+
+Les croisements de /rentabilite font briller des cases vertes. Toutes sont
+exploratoires (biais de sélection, IC contenant 0) : on fige ICI, AVANT de voir
+les données 2024-2025, les stratégies candidates. Le backfill Flashscore
+2024-2025 servira de test hors échantillon — une case choisie après coup ne
+compte que si elle ressort positive sur ces données neuves.
+
+1. **WS × confiance élevée** (favori, ≥ 80 %) : +1,3 % [−3,5 ; +5,5] sur 176
+   paris en 2026. Mécanisme candidat : discipline la plus prévisible (§3).
+2. **WD × confiance 50-60 %** (favori) : +12,3 % [−15 ; +39] sur 41 paris
+   (proposée par Lucas). Aucun mécanisme identifié ; zigzag suspect (70-80 % à
+   −32,7 %).
+3. **XD × value, seuils élevés** (EV > 0,10-0,20) : colonne entièrement
+   positive MAIS lignes emboîtées et net porté par 3 paris (dont 2 cotes à 9 :
+   +22,50 € des 3 top gains pour +0,52 € de net total à seuil 0). Mécanisme
+   candidat : le mixte serait mal pricé par le marché aussi.
+4. **Parier à l'ouverture plutôt qu'à la clôture** (CLV §8.2, seule hypothèse
+   déjà PROUVÉE en 2026) : à confirmer sur 2024-2025.
+
+Verdict attendu : IC hors de 0 sur 2024-2025 pour adopter ; sinon, retour au
+chantier modèle (lot C n° 0).
