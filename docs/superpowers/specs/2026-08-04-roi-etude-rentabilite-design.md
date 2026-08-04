@@ -40,9 +40,9 @@ mise. C'est la brique « preuve » de l'outil d'aide au pari.
 | # | Analyse | Règle de mise | Granularité |
 |---|---------|---------------|-------------|
 | 1 | **Favori** | 1 € sur notre pick (proba ≥ 50 %) à chaque match coté | par tournoi + global |
-| 2 | **Value EV+** | pour *chaque camp* : si `proba × meilleure cote > 1`, 1 € dessus (0, 1 ou rarement 2 paris par match) | par tournoi + global |
+| 2 | **Value EV+** | pour *chaque camp* : si `EV = proba × meilleure cote − 1 > 0` (convention de `lib/ev.mjs`, déjà affichée par le prédicteur), 1 € dessus (0, 1 ou rarement 2 paris par match) | par tournoi + global |
 | 3 | **Tranches de confiance** | paris « favori » regroupés par proba du pick : 50–60, 60–70, 70–80, 80–90, 90–100 % | global saison |
-| 4 | **Balayage du seuil EV** | value betting avec seuil variable : EV > 1,00 / 1,05 / 1,10 / 1,15 / 1,20 — ROI et volume de chacun | global saison |
+| 4 | **Balayage du seuil EV** | value betting avec seuil variable : EV > 0 / 0,05 / 0,10 / 0,15 / 0,20 — ROI et volume de chacun | global saison |
 | 5 | **Désaccord bookmaker** | 1 € sur notre favori uniquement quand le marché le donne outsider (sa meilleure cote > 2) | global saison |
 | 6 | **Par bookmaker** | stratégies 1 et 2 rejouées avec les cotes d'un SEUL bookmaker à la fois (Betclic, Unibet, Winamax), pour désigner celui qui paie le mieux | global saison |
 
