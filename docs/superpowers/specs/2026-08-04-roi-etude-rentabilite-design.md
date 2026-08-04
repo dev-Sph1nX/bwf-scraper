@@ -127,3 +127,24 @@ pas de boîte noire.
 - Chaque chiffre affiché est traçable jusqu'aux paris individuels.
 - La page explique chaque notion en français simple (règle « pas de boîte
   noire ») et tourne impeccablement à 375 px.
+
+## Avenant (2026-08-04, demande de Lucas après le premier verdict)
+
+Trois extensions, précalculées dans `lib/roi.mjs` et affichées sur /rentabilite :
+
+1. **CLV (Closing Line Value)** : pour chaque pari placé à l'OUVERTURE
+   (stratégies favori et value), comparer la cote prise à la meilleure cote de
+   CLÔTURE du même camp : `clv = cote_ouverture / cote_clôture − 1`. Battre la
+   clôture (clv > 0) est le signal standard d'un avantage réel, visible bien
+   avant que le ROI sorte du bruit. Sortie par stratégie : nb de paris
+   comparables, % qui battent la clôture, CLV moyenne + IC bootstrap, et ROI
+   (à l'ouverture) des paris CLV+ contre les autres — teste si la CLV prédit
+   le gain.
+2. **Par discipline** : favori et value, deux instants, une ligne par
+   discipline présente (`byDisc`).
+3. **Croisements** : tranches de confiance × discipline et seuil d'EV ×
+   discipline (mêmes agrégats, dans `byDisc[].bands` / `byDisc[].evSweep`) ;
+   l'interface ajoute des onglets Toutes/MS/WS/MD/WD/XD aux deux tableaux.
+
+Garde-fou affiché : découpages exploratoires, multiplier les cases augmente le
+risque de faux positif ; confirmation attendue du backfill 2024-2025.
