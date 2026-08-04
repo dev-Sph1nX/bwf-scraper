@@ -26,6 +26,7 @@ import { oddsForMatch } from "./lib/home-data.mjs";
 import { eloProb, isProvisional } from "./lib/models.mjs";
 import { isWalkover } from "./lib/dataset.mjs";
 import { loadFlashscoreOdds, joinFlashscore } from "./lib/flashscore-join.mjs";
+import { computeRoi } from "./lib/roi.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data");
@@ -674,6 +675,10 @@ const oddsByPlayed = new Map();
 // uniquement — l'historique de cotes n'existe que depuis fin juillet 2026).
 let pronoFiles = 0, pronoMatches = 0;
 const oddsCountByTmt = new Map(); // tmtId -> nb de matchs joués avec cotes appariées
+// Lignes de l'étude de rentabilité : chaque match joué qui a un prono ET des
+// cotes appariées. Construites ici même, où e.odds vient d'être attaché.
+const tournamentName = new Map(allTournaments.map((t) => [t.id, t.name]));
+const roiRows = [];
 for (const [tmtId, list] of pronosByTmt) {
   if (!writtenTmtIds.has(tmtId)) continue;
   list.sort((x, y) => (x.matchTime || "").localeCompare(y.matchTime || ""));
@@ -682,6 +687,15 @@ for (const [tmtId, list] of pronosByTmt) {
     const day = String(e.matchTime || "").slice(0, 10);
     const odds = oddsByPlayed.get(`${tmtId}|${e.disc}|${day}|${e.a}|${e.b}`);
     if (odds) { e.odds = odds; withOdds++; }
+    if (e.prob != null && e.odds?.books) {
+      roiRows.push({
+        tmtId, name: tournamentName.get(tmtId) ?? String(tmtId),
+        disc: e.disc, roundName: e.roundName, matchTime: e.matchTime,
+        team1: e.team1.players.map((p) => p.nameDisplay).join(" / "),
+        team2: e.team2.players.map((p) => p.nameDisplay).join(" / "),
+        prob: e.prob, pick: e.pick, winner: e.winner, books: e.odds.books,
+      });
+    }
     if (e.walkover) walkovers++;
     if (e.ok != null) { predicted++; if (e.ok) correct++; }
   }
@@ -695,6 +709,21 @@ for (const [tmtId, list] of pronosByTmt) {
   pronoFiles++; pronoMatches += list.length;
 }
 console.log(`   Pronostics : ${pronoFiles} tournois, ${pronoMatches} matchs joués`);
+
+// ===== 5c) Étude de rentabilité : roi.json =====
+// Simule des mises plates de 1 € sur les pronos selon 6 stratégies (cf.
+// docs/superpowers/specs/2026-08-04-roi-etude-rentabilite-design.md).
+{
+  const roi = computeRoi(roiRows);
+  await write("roi.json", { generatedAt: ranking.generatedAt, ...roi });
+  const pc = (v) => (v == null ? "—" : (v * 100).toFixed(1) + " %");
+  const g = roi.strategies;
+  console.log(
+    `   ROI : ${roi.totalMatches} matchs prono+cotes — clôture : ` +
+    `favori ${pc(g.favori.global.close.roi)} (${g.favori.global.close.n} paris), ` +
+    `value ${pc(g.value.global.close.roi)} (${g.value.global.close.n} paris)`
+  );
+}
 
 // Calendrier des tournois, enrichi du nombre de matchs joués avec cotes.
 await write("status.json", {
