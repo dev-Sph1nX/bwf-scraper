@@ -97,6 +97,10 @@ Par valeur attendue décroissante :
    est la valeur exploitable. C'est une **nouvelle famille de paris**, pas une
    amélioration du modèle vainqueur — potentiellement notre edge le plus
    crédible, car le marché « vainqueur » est le plus efficace (§8).
+   **Préalable (doute du propriétaire, 2026-08-04) : vérifier pendant un
+   tournoi EN COURS que le scraper capte bien ces cotes de sets** — invérifiable
+   à vide, les marchés n'existent que pendant les tournois (prochaine fenêtre :
+   Korea Masters 4-9 août, qui commence justement le jour de cette note).
 2. **Main dominante (gaucher)** — rouvert : la donnée existe pour 620 joueurs
    (Wikidata), et l'API BWF la sert directement (découverte du propriétaire) :
    `GET https://extranet-lv.bwfbadminton.com/api/vue-player-bio?activeTab=1&playerId=<id>`
