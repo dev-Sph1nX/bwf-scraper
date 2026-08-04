@@ -1,6 +1,6 @@
 # Journal des mesures
 
-**Dernière mise à jour :** 2026-08-04
+**Dernière mise à jour :** 2026-08-04 (§8.1)
 
 Ce document consigne **tout ce qui a été mesuré**, avec les chiffres, la méthode et
 le moyen de le refaire. Il existe pour une raison précise : ne pas retester ce qui
@@ -601,3 +601,30 @@ modèle perd de l'argent. Pas prouvé : qu'une stratégie sélective (EV élevé
 hautes confiances) soit rentable — les IC sont trop larges, il faut plus de
 saison. Limite : cotes Flashscore = clôture/ouverture d'agrégateur, pas
 forcément la cote réellement disponible au moment où on aurait cliqué.
+
+## 8.1 ROI par discipline : le simple DAMES surnage, MS et XD coulent (2026-08-04)
+
+Découpage du journal des paris de §8 par discipline (même méthode, IC bootstrap).
+Refaire : filtrer `roi.json .bets` par `disc` et agréger via `lib/roi.mjs`.
+
+| Favori, clôture | Paris | ROI | IC 95 % |
+|---|---|---|---|
+| **WS** | 317 | **−2,5 %** | [−9,1 ; +3,9] |
+| WD | 231 | −5,7 % | [−13,0 ; +1,3] |
+| MD | 248 | −6,5 % | [−14,9 ; +1,2] |
+| XD | 275 | −11,2 % | [−19,6 ; −4,4] — perte prouvée |
+| MS | 327 | **−14,3 %** | [−22,0 ; −6,7] — perte prouvée |
+
+Le classement est le MÊME aux deux instants et en value (WS value clôture :
++0,7 % [−12,8 ; +14,3] ; MS value : −17,6 %). Croisement le plus net :
+**favori WS à confiance ≥ 80 % : +1,3 % [−3,5 ; +5,5] sur 176 paris** — seule
+case quasi neutre avec du volume.
+
+**Lecture.** Cohérent avec §3 (WS = discipline la plus prévisible pour le
+modèle) : là où le modèle est le plus fort, il rattrape la marge du bookmaker.
+MS/XD : le modèle est le plus faible ET le marché n'y est pas plus tendre.
+
+**Garde-fou.** Découpage exploratoire : en regardant 5 disciplines, la
+meilleure paraît toujours bonne (biais de sélection). AUCUNE case n'est
+prouvée positive. À retester quand le backfill 2024-2025 aura triplé
+l'échantillon — si WS reste en tête hors échantillon, là ce sera un signal.
