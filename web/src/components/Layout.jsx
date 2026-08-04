@@ -50,6 +50,7 @@ export default function Layout() {
           <NavLink to="/" end>Accueil</NavLink>
           <NavLink to="/tournaments">Tournois</NavLink>
           <NavLink to="/classement">Classement</NavLink>
+          <NavLink to="/rentabilite">Rentabilité</NavLink>
           <NavLink to="/coulisses" className="nav-coulisses">Coulisses</NavLink>
           {/* Sur mobile le pied de sidebar est masqué : le lien Santé remonte dans la barre. */}
           <NavLink to="/sante" className="nav-sante">Santé</NavLink>

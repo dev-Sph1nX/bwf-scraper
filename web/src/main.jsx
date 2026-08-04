@@ -11,6 +11,7 @@ import Home from "./pages/Home.jsx";
 import Coulisses from "./pages/Coulisses.jsx";
 import Sante from "./pages/Sante.jsx";
 import Predictor from "./pages/Predictor.jsx";
+import Rentabilite from "./pages/Rentabilite.jsx";
 import "./styles.css";
 
 const OLD_ROUTES = ["/odds", "/fiabilite", "/data", "/changelog"];
@@ -26,6 +27,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/coulisses" element={<Coulisses />} />
           <Route path="/sante" element={<Sante />} />
           <Route path="/predictor" element={<Predictor />} />
+          <Route path="/rentabilite" element={<Rentabilite />} />
           {OLD_ROUTES.map((p) => (
             <Route key={p} path={p} element={<Navigate to="/coulisses" replace />} />
           ))}

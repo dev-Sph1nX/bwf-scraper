@@ -716,3 +716,15 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 .bc-pl-sub { display: block; margin-top: 3px; font-size: 12px; color: var(--muted); white-space: nowrap; }
 .bc-pl-sub b { color: var(--accent); }
 .bc-pl-rank { font-size: 11px; }
+
+/* --- page Rentabilité ------------------------------------------------------ */
+/* Bouton-lien du tableau par tournoi : déplie le journal des paris. */
+.linklike { background: none; border: none; color: var(--accent); font: inherit; cursor: pointer; padding: 10px 0; min-height: 40px; text-align: left; }
+.linklike:hover { text-decoration: underline; }
+.linklike:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; border-radius: 4px; }
+/* La ligne dépliée : fond distinct pour séparer le journal du tableau parent. */
+td.roi-detail { background: var(--bg); padding: 12px; }
+/* Les cellules chiffrées de l'étude ne se replient pas : les tableaux sont
+   larges et scrollent dans .table-scroll, une cellule sur 3 lignes est pire. */
+.roi-page th, .roi-page td { white-space: nowrap; }
+.roi-page .lead { white-space: normal; }
