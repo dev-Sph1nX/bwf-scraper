@@ -3,6 +3,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   bestOddAt, favoriBets, valueBets, disagreementBets, aggregate,
+  computeRoi, EV_THRESHOLDS, BANDS, BOOKS,
 } from "../lib/roi.mjs";
 
 // Jeux de cotes : flashscore (open+close) et relevé maison (close seule).
@@ -114,4 +115,90 @@ test("disagreementBets : seulement si la meilleure cote du favori dépasse 2", (
   const [bet] = disagreementBets(row({ books: { betclic: { odd1: 2.1 } } }), "close");
   assert.equal(bet.odd, 2.1);
   assert.equal(bet.side, 1);
+});
+
+// ---- computeRoi : le rapport complet ----------------------------------------
+// Petit jeu : 2 tournois, cotes complètes (open+close) pour rendre tout actif.
+const mkRow = (tmtId, i, over = {}) => ({
+  tmtId, name: `Tournoi ${tmtId}`, disc: "MS", roundName: "R16",
+  matchTime: `2026-03-0${tmtId} 1${i}:00:00`, team1: `A${i}`, team2: `B${i}`,
+  prob: 65, pick: 1, winner: i % 2 ? 1 : 2, books: BOOKS_FULL, ...over,
+});
+const ROWS = [
+  ...Array.from({ length: 6 }, (_, i) => mkRow(1, i)),
+  ...Array.from({ length: 6 }, (_, i) => mkRow(2, i)),
+];
+
+test("computeRoi : écarte les lignes inutilisables", () => {
+  const r = computeRoi([
+    ...ROWS,
+    mkRow(3, 0, { prob: null, pick: null }),  // sans prono
+    mkRow(3, 1, { winner: null }),            // sans vainqueur
+    mkRow(3, 2, { books: {} }),               // sans cotes
+  ]);
+  assert.equal(r.totalMatches, ROWS.length);
+  assert.equal(r.strategies.favori.tournois.length, 2);
+});
+
+test("computeRoi : la somme des tournois = le global (net et n), par stratégie/instant", () => {
+  const r = computeRoi(ROWS);
+  for (const key of ["favori", "value"]) {
+    for (const instant of ["open", "close"]) {
+      const t = r.strategies[key].tournois;
+      const sumN = t.reduce((s, x) => s + x[instant].n, 0);
+      const sumNet = t.reduce((s, x) => s + x[instant].net, 0);
+      assert.equal(sumN, r.strategies[key].global[instant].n, `${key}/${instant}`);
+      assert.ok(Math.abs(sumNet - r.strategies[key].global[instant].net) < 0.02, `${key}/${instant}`);
+    }
+  }
+});
+
+test("computeRoi : tranches — prob 50 tombe en 50-60, prob 100 en 90-100", () => {
+  const rows = [mkRow(1, 0, { prob: 50, pick: 1 }), mkRow(1, 1, { prob: 100, pick: 1 })];
+  const r = computeRoi(rows);
+  const bandN = (band, instant) => r.bands.find((b) => b.band === band)[instant].n;
+  assert.equal(bandN("50-60", "close"), 1);
+  assert.equal(bandN("90-100", "close"), 1);
+  assert.equal(r.bands.length, BANDS.length);
+});
+
+test("computeRoi : tranches — la proba du PICK, pas celle de team1 (pick 2, prob 20 -> 80-90)", () => {
+  const r = computeRoi([mkRow(1, 0, { prob: 20, pick: 2, winner: 2 })]);
+  assert.equal(r.bands.find((b) => b.band === "80-90").close.n, 1);
+});
+
+test("computeRoi : balayage — le volume ne peut que baisser quand le seuil monte", () => {
+  const r = computeRoi(ROWS);
+  assert.equal(r.evSweep.length, EV_THRESHOLDS.length);
+  for (const instant of ["open", "close"]) {
+    for (let i = 1; i < r.evSweep.length; i++) {
+      assert.ok(r.evSweep[i][instant].n <= r.evSweep[i - 1][instant].n, instant);
+    }
+  }
+  // seuil 0 = la stratégie value elle-même
+  assert.equal(r.evSweep[0].close.n, r.strategies.value.global.close.n);
+});
+
+test("computeRoi : par bookmaker — le panier commun est inclus dans « tous ses matchs »", () => {
+  // un match où seul betclic cote -> exclu du panier commun
+  const rows = [...ROWS, mkRow(1, 9, { books: { betclic: { odd1: 1.8, odd2: 2.0 } } })];
+  const r = computeRoi(rows);
+  assert.equal(r.byBook.length, BOOKS.length);
+  const bc = r.byBook.find((b) => b.book === "betclic");
+  assert.ok(bc.favori.common.close.n < bc.favori.all.close.n);
+  const wina = r.byBook.find((b) => b.book === "winamax");
+  assert.equal(wina.favori.common.close.n, wina.favori.all.close.n); // winamax ne cote pas le match ajouté
+});
+
+test("computeRoi : le journal des paris est auditable (stratégies, ev sur value)", () => {
+  const r = computeRoi(ROWS);
+  const strategies = new Set(r.bets.map((b) => b.strategy));
+  assert.deepEqual([...strategies].sort(), ["favori", "value"]); // pas de désaccord : cotes favori < 2
+  assert.ok(r.bets.filter((b) => b.strategy === "value").every((b) => typeof b.ev === "number"));
+  const fav = r.bets.filter((b) => b.strategy === "favori" && b.instant === "close");
+  assert.equal(fav.length, r.strategies.favori.global.close.n);
+});
+
+test("computeRoi : reproductible (même graine -> mêmes IC)", () => {
+  assert.deepEqual(computeRoi(ROWS), computeRoi(ROWS));
 });
