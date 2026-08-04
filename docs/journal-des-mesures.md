@@ -1,6 +1,6 @@
 # Journal des mesures
 
-**Dernière mise à jour :** 2026-08-04 (§8.1)
+**Dernière mise à jour :** 2026-08-04 (§8.2)
 
 Ce document consigne **tout ce qui a été mesuré**, avec les chiffres, la méthode et
 le moyen de le refaire. Il existe pour une raison précise : ne pas retester ce qui
@@ -628,3 +628,32 @@ MS/XD : le modèle est le plus faible ET le marché n'y est pas plus tendre.
 meilleure paraît toujours bonne (biais de sélection). AUCUNE case n'est
 prouvée positive. À retester quand le backfill 2024-2025 aura triplé
 l'échantillon — si WS reste en tête hors échantillon, là ce sera un signal.
+
+## 8.2 CLV : le modèle bat la cote de clôture — premier signal positif PROUVÉ (2026-08-04)
+
+CLV (Closing Line Value) = cote prise à l'ouverture / meilleure cote de clôture
+du même camp − 1. Positive : le marché a fini par nous donner raison. C'est le
+test standard d'un avantage réel, indépendant de la chance des résultats.
+Refaire : `roi.json .clv` (calcul dans `lib/roi.mjs`, IC bootstrap).
+
+| Paris à l'ouverture | n | Battent la clôture | CLV moyenne | IC 95 % |
+|---|---|---|---|---|
+| Favori | 1387 | 49,5 % | **+1,28 %** | [+0,93 ; +1,66] — prouvé |
+| **Value EV+** | 761 | **62,7 %** | **+3,11 %** | [+2,22 ; +4,16] — prouvé |
+
+Et la CLV **prédit** la performance : ROI (ouverture) des paris qui battent la
+clôture −4,2 % (favori) / −5,4 % (value), contre −9,7 % / −14,5 % pour les
+autres.
+
+**Lecture.** Quand le modèle voit de la valeur à l'ouverture, le marché bouge
+ensuite DANS NOTRE SENS bien plus souvent que le hasard : le modèle possède un
+vrai contenu informationnel en avance sur le marché. Mais l'avantage (+3 % de
+cote) ne couvre pas la marge du bookmaker (~7 %) : d'où un ROI encore négatif.
+Conséquences : (a) parier tôt, jamais à la clôture ; (b) l'écart à combler est
+chiffré : ~4 points — c'est l'objectif du chantier « là où le modèle saigne ».
+
+**Croisements WS (exploratoires, AUCUN prouvé positif)** : favori WS 80-90 % :
++2,0 % [−8,9 ; +12,1] (62 paris) ; 90-100 % : +0,9 % [−3,6 ; +5,0] (114 paris) ;
+value WS : points positifs à presque tous les seuils d'EV mais n minuscules
+(EV>0,20 : +15,4 % sur 22 paris, IC [−46 ; +79]). À revoir après le backfill
+2024-2025.
