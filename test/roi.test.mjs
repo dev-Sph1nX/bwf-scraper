@@ -2,7 +2,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
-  bestOddAt, favoriBets, valueBets, disagreementBets,
+  bestOddAt, favoriBets, valueBets, disagreementBets, aggregate,
 } from "../lib/roi.mjs";
 
 // Jeux de cotes : flashscore (open+close) et relevé maison (close seule).
@@ -77,6 +77,34 @@ test("valueBets : restriction à un bookmaker", () => {
   const bets = valueBets(row(), "close", { onlyBook: "winamax" }); // odd1 1.48 -> EV 0.036
   assert.equal(bets.length, 1);
   assert.equal(bets[0].book, "winamax");
+});
+
+test("aggregate : liste vide -> zéros et roi/ci null", () => {
+  assert.deepEqual(aggregate([]), { n: 0, staked: 0, net: 0, roi: null, ci: null, won: 0 });
+});
+
+test("aggregate : net, roi et won exacts", () => {
+  const bets = [
+    { gain: 0.55, won: true }, { gain: -1, won: false },
+    { gain: 1.4, won: true }, { gain: -1, won: false },
+  ];
+  const a = aggregate(bets);
+  assert.equal(a.n, 4);
+  assert.equal(a.staked, 4);
+  assert.ok(Math.abs(a.net - -0.05) < 1e-9);
+  assert.ok(Math.abs(a.roi - -0.0125) < 1e-4);
+  assert.equal(a.won, 2);
+});
+
+test("aggregate : bootstrap reproductible (graine fixe) et IC autour du ROI", () => {
+  const bets = Array.from({ length: 100 }, (_, i) => (
+    i % 2 ? { gain: 0.9, won: true } : { gain: -1, won: false }
+  ));
+  const a = aggregate(bets, { seed: 42 });
+  const b = aggregate(bets, { seed: 42 });
+  assert.deepEqual(a.ci, b.ci); // même graine -> même IC
+  assert.ok(a.ci[0] <= a.roi && a.roi <= a.ci[1]); // l'IC contient le ROI ponctuel
+  assert.ok(a.ci[0] < a.ci[1]);
 });
 
 test("disagreementBets : seulement si la meilleure cote du favori dépasse 2", () => {
