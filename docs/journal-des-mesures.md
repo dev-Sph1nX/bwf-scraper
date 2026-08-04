@@ -1,6 +1,6 @@
 # Journal des mesures
 
-**Dernière mise à jour :** 2026-07-31
+**Dernière mise à jour :** 2026-08-04
 
 Ce document consigne **tout ce qui a été mesuré**, avec les chiffres, la méthode et
 le moyen de le refaire. Il existe pour une raison précise : ne pas retester ce qui
@@ -565,3 +565,39 @@ persistance inter-années ne peut pas venir d'un défaut de contrôle ponctuel.
 **Suite logique.** Relever les cotes « nombre de sets » chez les bookmakers
 (marchés déjà présents dans leurs flux) et confronter : le marché price-t-il
 Sydney et Séoul pareil ? L'écart éventuel est la valeur exploitable.
+
+# 8. Étude de rentabilité : suivre les pronos PERD de l'argent (2026-08-04)
+
+**Question.** En misant 1 € sur chaque prono du modèle aux cotes réelles
+(backfill Flashscore 2026 : 1398 matchs prono+cotes, 19 tournois, meilleure
+cote entre Betclic/Unibet/Winamax), gagne-t-on de l'argent ?
+
+**Méthode.** `lib/roi.mjs` (+22 tests), rapport `web/public/data/roi.json`,
+page /rentabilite. Probas figées d'avant match (Elo recalibré, le même que le
+backtest), mise plate 1 €, IC 95 % par bootstrap (500 tirages, graine 42).
+Refaire : `npm run build-data` (ligne « ROI : … » en console).
+
+| Stratégie (clôture) | Paris | ROI | IC 95 % |
+|---|---|---|---|
+| Favori (1 € sur notre pick) | 1398 | **−8,2 %** | [−11,5 ; −5,1] — perte PROUVÉE |
+| Value EV>0 (meilleure cote) | 709 | −7,3 % | [−17,4 ; +3,2] |
+| Value EV>0,20 | 270 | −0,0 % | [−21,9 ; +23,8] |
+| Tranche 90-100 % (favori) | 234 | −1,1 % | [−4,8 ; +1,8] |
+| Désaccord marché (cote pick > 2) | 72 | −3,5 % | [−28,4 ; +20,8] |
+
+**Lecture.** La perte « favori » ≈ la marge du bookmaker (6-9 %) : le modèle ne
+la compense pas. Le value betting ne prouve PAS qu'on bat le marché (IC
+contient 0 mais point négatif). Signaux les moins mauvais : les quasi-
+certitudes (90-100 %) frôlent l'équilibre, et exiger EV>0,20 remonte vers 0 —
+sans jamais passer positif. À l'ouverture, même tableau (favori −7,0 %).
+
+**Par bookmaker** (favori, clôture, panier commun de 553 paris) : Winamax
+−10,8 % < Unibet −11,3 % < Betclic −12,1 %. Prendre la meilleure des 3 cotes
+récupère ~3 points de ROI (−8,2 % contre −11/−12 % mono-compte) : comparer
+les comptes est le levier le plus sûr mesuré ici.
+
+**Ce qui est prouvé / pas prouvé.** Prouvé : suivre naïvement le favori du
+modèle perd de l'argent. Pas prouvé : qu'une stratégie sélective (EV élevée,
+hautes confiances) soit rentable — les IC sont trop larges, il faut plus de
+saison. Limite : cotes Flashscore = clôture/ouverture d'agrégateur, pas
+forcément la cote réellement disponible au moment où on aurait cliqué.
