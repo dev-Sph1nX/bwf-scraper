@@ -666,16 +666,17 @@ les données 2024-2025, les stratégies candidates. Le backfill Flashscore
 2024-2025 servira de test hors échantillon — une case choisie après coup ne
 compte que si elle ressort positive sur ces données neuves.
 
-1. **WS × confiance élevée** (favori, ≥ 80 %) : +1,3 % [−3,5 ; +5,5] sur 176
-   paris en 2026. Mécanisme candidat : discipline la plus prévisible (§3).
-2. **WD × confiance 50-60 %** (favori) : +12,3 % [−15 ; +39] sur 41 paris
-   (proposée par Lucas). Aucun mécanisme identifié ; zigzag suspect (70-80 % à
-   −32,7 %).
-3. **XD × value, seuils élevés** (EV > 0,10-0,20) : colonne entièrement
-   positive MAIS lignes emboîtées et net porté par 3 paris (dont 2 cotes à 9 :
-   +22,50 € des 3 top gains pour +0,52 € de net total à seuil 0). Mécanisme
-   candidat : le mixte serait mal pricé par le marché aussi.
-4. **Parier à l'ouverture plutôt qu'à la clôture** (CLV §8.2, seule hypothèse
+1. **WS et XD seraient les deux disciplines exploitables** (posée par Lucas,
+   2026-08-04) : le simple dames et le double mixte sont suspectés d'être les
+   plus « prévisibles » pour nous face au marché — chacun par une voie
+   différente en 2026 : WS via le favori (−2,5 % au global, +1,3 % à confiance
+   ≥ 80 %, seule discipline où le modèle rattrape presque la marge) ; XD via le
+   value (colonne de seuils d'EV entièrement positive, mais net porté par
+   3 paris dont 2 cotes à 9 — à confirmer impérativement). Nuance à trancher :
+   pour le MODÈLE seul (§3), WS est bien la plus prévisible mais XD est parmi
+   les pires — l'hypothèse XD est donc « le marché price encore plus mal le
+   mixte que nous », pas « notre modèle y est bon ».
+2. **Parier à l'ouverture plutôt qu'à la clôture** (CLV §8.2, seule hypothèse
    déjà PROUVÉE en 2026) : à confirmer sur 2024-2025.
 
 Verdict attendu : IC hors de 0 sur 2024-2025 pour adopter ; sinon, retour au
