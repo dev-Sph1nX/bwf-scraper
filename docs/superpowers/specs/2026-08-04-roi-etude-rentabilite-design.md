@@ -35,7 +35,7 @@ mise. C'est la brique « preuve » de l'outil d'aide au pari.
   (rééchantillonnage des paris, graine fixe, même esprit que `backtest.mjs`).
   Indispensable : 30 à 120 paris par tournoi, c'est bruité.
 
-## Les 5 analyses
+## Les 6 analyses
 
 | # | Analyse | Règle de mise | Granularité |
 |---|---------|---------------|-------------|
@@ -44,12 +44,18 @@ mise. C'est la brique « preuve » de l'outil d'aide au pari.
 | 3 | **Tranches de confiance** | paris « favori » regroupés par proba du pick : 50–60, 60–70, 70–80, 80–90, 90–100 % | global saison |
 | 4 | **Balayage du seuil EV** | value betting avec seuil variable : EV > 1,00 / 1,05 / 1,10 / 1,15 / 1,20 — ROI et volume de chacun | global saison |
 | 5 | **Désaccord bookmaker** | 1 € sur notre favori uniquement quand le marché le donne outsider (sa meilleure cote > 2) | global saison |
+| 6 | **Par bookmaker** | stratégies 1 et 2 rejouées avec les cotes d'un SEUL bookmaker à la fois (Betclic, Unibet, Winamax), pour désigner celui qui paie le mieux | global saison |
 
-Les analyses 3–5 restent globales : par tranche ET par tournoi, les effectifs
+Les analyses 3–6 restent globales : par tranche ET par tournoi, les effectifs
 seraient minuscules (bruit pur).
 
+Précaution pour l'analyse 6 : les 3 bookmakers ne couvrent pas les mêmes
+matchs. Chaque bookmaker est donc mesuré deux fois : sur tous ses matchs
+couverts (réalité d'un compte unique) ET sur le sous-ensemble des matchs cotés
+par les trois (comparaison équitable, même panier de paris).
+
 Hors périmètre (différé) : Kelly, découpage par discipline, cote moyenne au
-lieu de la meilleure, simulation mono-bookmaker. Exclu définitivement :
+lieu de la meilleure. Exclu définitivement :
 placement automatique des paris (CGU).
 
 ## Architecture
@@ -79,6 +85,9 @@ placement automatique des paris (CGU).
   "bands":    [ { "band": "90-100", "open": {…}, "close": {…} } ],   // analyse 3
   "evSweep":  [ { "threshold": 1.05, "open": {…}, "close": {…} } ],  // analyse 4
   "disagreement": { "open": {…}, "close": {…} },                     // analyse 5
+  "byBook": [ { "book": "betclic",                                   // analyse 6
+                "favori": { "all": { "open": {…}, "close": {…} }, "common": { … } },
+                "value":  { … même forme … } } ],
   "bets": [ /* détail auditable de chaque pari : tmtId, disc, camps, proba,
                stratégie(s), instant, cote prise + bookmaker, résultat, gain */ ]
 }
@@ -93,7 +102,8 @@ pas de boîte noire.
 - Encart pédagogique : définitions (ROI, EV+, cote de clôture = juge de paix,
   pourquoi l'intervalle de confiance), rappel mise plate 1 €.
 - Tableau par tournoi (stratégies 1–2, ouverture/clôture), ligne Total en tête.
-- Sections globales : tranches de confiance, balayage du seuil, désaccord.
+- Sections globales : tranches de confiance, balayage du seuil, désaccord,
+  comparatif des bookmakers.
 - Détail des paris d'un tournoi au clic (audit).
 - Mobile : tableaux dans `.table-scroll`, vérif rendu ~375 px.
 
@@ -106,6 +116,8 @@ pas de boîte noire.
 - Tranches : bornes (50 % → tranche 50–60 ; 100 % → 90–100).
 - Balayage : monotonie du volume (plus le seuil monte, moins de paris).
 - Désaccord : déclenchement uniquement si cote du favori > 2.
+- Par bookmaker : restriction correcte au sous-ensemble commun ; un bookmaker
+  absent d'un match n'y génère aucun pari.
 - Bootstrap : reproductible à graine fixe ; IC contient le ROI ponctuel.
 - Agrégats : somme des tournois = global (pour une même stratégie/instant).
 
