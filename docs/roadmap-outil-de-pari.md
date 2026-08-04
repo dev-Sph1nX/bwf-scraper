@@ -1,6 +1,6 @@
 # Feuille de route — outil de pari
 
-**Dernière mise à jour :** 2026-08-02
+**Dernière mise à jour :** 2026-08-04
 
 Ce document est la liste ordonnée des chantiers. Les dépendances sont **strictes** :
 chaque lot exige le précédent, et l'ordre n'est pas un choix de confort.
@@ -41,6 +41,7 @@ qualité du modèle. Deux écrans distincts, jamais fusionnés.
 | **Historisation des cotes** (ex-lot 6) | fait et dépassé : relevés append-only **par opérateur nommé** (Betclic/Unibet/Winamax), cron toutes les 2 h, **prématch seulement**, jointure inter-opérateurs exacte (id Sportradar) | `data/books/runs/` |
 | **Dates de naissance + main dominante** | collectées (97,7 % des apparitions ; 620 mains) — la MESURE du facteur âge reste à faire | `data/players/` |
 | Mesures ponctuelles | gymnases→3 sets (réel, persistant r = 0,42) ; terrain (+2,2 pt, simple seulement) ; écart de points (étape 1 : 58,4 %) ; Elo-bis à marge de points (non départageable sur 2026, code conservé désactivé) | §7, §2.6, §2.7, §2.8 |
+| **ROI rétrospectif (ex-étude n° 0 du lot C)** | fait le 2026-08-04, en avance grâce au backfill Flashscore (1398 matchs 2026 au lieu d'attendre ~200 paris) : `lib/roi.mjs` + page /rentabilite. **Verdict : favori −8,2 % (perte prouvée ≈ marge bookmaker), value EV>0 −7,3 % (non départagé)**. Poches les moins mauvaises : WS (−2,5 %, et +1,3 % à confiance ≥ 80 %), tranche 90-100 % (−1,1 %), EV > 0,20 (~0 %) ; multi-comptes = +3 pts vs mono-bookmaker | §8, §8.1 |
 | **EV sur les écrans** (ex-lot A) | absorbée par la refonte UX : `EV = cote × p − 1` (p calibrée) calculée par camp et par opérateur, affichée sur la carte de match (Accueil) pour la meilleure cote ; renommage du tag `value` → « sous-coté BWF » complet côté UI | refonte du 2026-07-31, `docs/superpowers/specs/2026-07-31-refonte-ux-design.md` |
 
 ---
@@ -63,44 +64,51 @@ par pari.
 
 # Lot C — Mesures en file d'attente (méthode des 3 étapes, une par une)
 
-> **⭐ But affiché du propriétaire (2026-08-02) : l'étude n° 0 ci-dessous.**
-> « Combien j'aurais gagné si j'avais parié sur toutes les prédictions ? »
+> **⭐ Cap affiché du propriétaire (2026-08-04, après le verdict de l'étude ROI) :**
+> « Améliorer le modèle là où il saigne. La méthode de travail sera de comparer
+> les résultats en ROI toujours — notre recherche doit se concentrer là-dessus,
+> c'est l'objectif final de l'outil. Trouver d'autres facteurs, ajuster les
+> poids, etc. »
+>
+> Conséquence méthodologique : **le ROI (étude /rentabilite, IC compris) devient
+> le juge de paix de toute modification du modèle**, en complément de la
+> précision/calibration du backtest. Chaque facteur ou réglage suit désormais :
+> mesure isolée → apport marginal → **re-run de l'étude ROI** (backtest →
+> build-data → roi.json) et comparaison des poches (disciplines, tranches,
+> seuils d'EV). Prérequis transverse pour que les IC tranchent : **backfiller
+> les cotes Flashscore 2024-2025** (triple l'échantillon, ~×√3 sur la précision).
 
 Par valeur attendue décroissante :
 
-0. **ROI rétrospectif face au marché (paper trading)** ⭐ but final — dès que
-   plusieurs tournois de cotes seront archivés. Les deux ingrédients existent
-   déjà : les prédictions sont **reproductibles rétroactivement** (le backtest
-   rejoue chaque match avec l'état d'avant-match, aucune archive de pronostics
-   à figer) et les cotes s'archivent toutes les 2 h depuis le 2026-07-31.
-   L'étude croise les deux et simule un bankroll selon plusieurs règles à
-   comparer : parier tous les favoris du modèle vs seulement les EV > 0 ;
-   mise plate vs Kelly fractionné ; à la meilleure cote vs à la clôture.
-   **Seuil de déclenchement : ~200 paris simulés minimum** (en dessous, la
-   variance noie le ROI) — au rythme actuel (~6 matchs cotés/jour), compter
-   1 à 2 mois de collecte. Trou connu : Betclic absent (HTTP 403) depuis le
-   31/07, l'étude se fera sur Unibet/Winamax si ça persiste.
-
-1. **L'âge** ⭐ — données prêtes (97,7 % pondéré), orthogonal au niveau, agit
-   sur tous les matchs. Écrire `measures/mesure-age.mjs` : courbe âge →
-   performance à niveau contrôlé, puis apport marginal.
-2. **Marché « nombre de sets »** — débouché direct de la mesure gymnases (§7) :
-   relever ce marché chez les 3 opérateurs et vérifier si le prix intègre
-   l'effet lieu (Sydney vs Séoul). C'est une **nouvelle famille de paris**, pas
-   une amélioration du modèle vainqueur.
-3. **Main dominante (gaucher)** — rouvert : la donnée existe pour 620 joueurs
+0. **Là où le modèle saigne** ⭐ (2026-08-04) — diagnostiquer la tranche
+   70-80 % : elle perd −15,1 % [−22,7 ; −8,0], deux fois pire que le reste ;
+   suspicion de défaut de calibration localisé (un « 75 % » annoncé vaudrait
+   ~68-70 % en réalité). Vérifier la calibration par tranche × discipline
+   (le correctif §1.3 n'a été appliqué qu'aux disciplines féminines — et MS/XD
+   sont justement les pires en ROI, §8.1). Ensuite seulement, les facteurs non
+   encore mesurés : **l'âge** (données prêtes à 97,7 %, `measures/mesure-age.mjs`
+   à écrire), **l'Elo-bis à marge de points** (meilleur partout mais non prouvé
+   sur 2026, § 2.8 — le backfill 2024-2025 aidera), puis réajustement des poids.
+   Chaque étape validée par son effet sur le ROI, pas seulement sur la précision.
+1. **Marché « nombre de sets » + effet gymnase** ⭐ (inscrit par le propriétaire
+   le 2026-08-04) — débouché direct de la mesure gymnases (§7 : effet réel à
+   +6,1 σ, persistant r = 0,42). Relever ce marché chez les 3 opérateurs et
+   vérifier si le prix intègre l'effet lieu (Sydney vs Séoul) : l'écart éventuel
+   est la valeur exploitable. C'est une **nouvelle famille de paris**, pas une
+   amélioration du modèle vainqueur — potentiellement notre edge le plus
+   crédible, car le marché « vainqueur » est le plus efficace (§8).
+2. **Main dominante (gaucher)** — rouvert : la donnée existe pour 620 joueurs
    (Wikidata), et l'API BWF la sert directement (découverte du propriétaire) :
    `GET https://extranet-lv.bwfbadminton.com/api/vue-player-bio?activeTab=1&playerId=<id>`
    avec en-têtes `origin: https://bwfbadminton.com` + `referer: https://bwfbadminton.com/`
    → `{"hand": "R"|"L", "height": …, "age": …}`. Jointure par id exacte —
    collecte du reste du panel en cours (2026-07-31).
-4. **Avantage du terrain, étapes 2-3** — l'isolation est passée (§2.6), reste
+3. **Avantage du terrain, étapes 2-3** — l'isolation est passée (§2.6), reste
    l'apport marginal et le hors-échantillon. Ne touche que 12 % des matchs :
    espérance modeste.
-5. **Elo-bis à marge de points** — re-mesurer quand 2026 sera plus fourni
-   (`node measures/mesure-elo-points.mjs`) ; adopter si l'IC exclut 0 (§2.8).
-6. **Les abandons** (`Retired` au tour précédent) et **la catégorie du
+4. **Les abandons** (`Retired` au tour précédent) et **la catégorie du
    tournoi** — données présentes, jamais testées.
+   (L'Elo-bis à marge de points, ex-n° 5, est absorbé par le chantier n° 0.)
 
 # Lot D — Rouverts sous conditions
 
