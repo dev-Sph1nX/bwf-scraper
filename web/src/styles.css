@@ -728,3 +728,18 @@ td.roi-detail { background: var(--bg); padding: 12px; }
    larges et scrollent dans .table-scroll, une cellule sur 3 lignes est pire. */
 .roi-page th, .roi-page td { white-space: nowrap; }
 .roi-page .lead { white-space: normal; }
+/* Sommaire latéral de l'étude : rail sticky en desktop, barre horizontale
+   sticky (scrollable) sous 1000px. Boutons + scrollIntoView, pas d'ancres
+   href="#…" (conflit HashRouter). */
+.roi-layout { display: flex; gap: 20px; align-items: flex-start; }
+.roi-content { flex: 1; min-width: 0; }
+.roi-toc { position: sticky; top: 14px; width: 150px; flex-shrink: 0; display: flex; flex-direction: column; gap: 2px; }
+.roi-toc button { background: none; border: none; border-left: 2px solid var(--line); border-radius: 0 8px 8px 0; color: var(--muted); font: inherit; font-size: 13px; text-align: left; padding: 10px 12px; min-height: 40px; cursor: pointer; }
+.roi-toc button:hover { color: var(--ink); background: var(--surface); border-left-color: var(--accent); }
+.roi-toc button:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+.roi-content .card { scroll-margin-top: 62px; }
+@media (max-width: 1000px) {
+  .roi-layout { display: block; }
+  .roi-toc { position: sticky; top: 0; z-index: 5; width: auto; flex-direction: row; overflow-x: auto; -webkit-overflow-scrolling: touch; background: var(--bg); padding: 8px 0; gap: 6px; margin-bottom: 14px; border-bottom: 1px solid var(--line); }
+  .roi-toc button { white-space: nowrap; border: 1px solid var(--line); border-radius: 20px; padding: 8px 13px; }
+}

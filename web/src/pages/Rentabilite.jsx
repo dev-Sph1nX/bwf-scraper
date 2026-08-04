@@ -7,6 +7,7 @@ import { useOutletContext } from "react-router-dom";
 import { getJSON } from "../data.js";
 
 const BOOK_LABEL = { betclic: "Betclic", unibet: "Unibet", winamax: "Winamax" };
+const DISC_LABEL = { MS: "Simple hommes", WS: "Simple dames", MD: "Double hommes", WD: "Double dames", XD: "Double mixte" };
 
 const fmt = (v, digits = 1) => v.toLocaleString("fr-FR", { minimumFractionDigits: digits, maximumFractionDigits: digits });
 const pc = (v, digits = 1) => (v == null ? "—" : `${v > 0 ? "+" : ""}${fmt(v * 100, digits)} %`);
@@ -35,6 +36,38 @@ function AggCells({ agg }) {
 const AGG_HEADS = ["Paris", "ROI", "IC 95 %"];
 const aggHeads = (groups) =>
   groups.flatMap((g, i) => AGG_HEADS.map((h) => <th key={`${i}-${h}`} className="oa-num">{h}</th>));
+
+// Sommaire latéral : boutons + scrollIntoView (pas d'ancres href="#…", elles
+// entreraient en conflit avec le HashRouter).
+const SECTIONS = [
+  { id: "roi-lecture", label: "Comment lire" },
+  { id: "roi-tournois", label: "Par tournoi" },
+  { id: "roi-disciplines", label: "Par discipline" },
+  { id: "roi-tranches", label: "Confiance" },
+  { id: "roi-seuil", label: "Seuil d'EV" },
+  { id: "roi-clv", label: "CLV" },
+  { id: "roi-desaccord", label: "Désaccord" },
+  { id: "roi-books", label: "Bookmakers" },
+];
+const scrollToSection = (id) =>
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+// Onglets de discipline (Toutes + celles présentes dans l'étude).
+function DiscTabs({ discs, value, onChange }) {
+  return (
+    <div className="tabs">
+      <button type="button" className={`tab ${value == null ? "active" : ""}`} onClick={() => onChange(null)}>
+        Toutes
+      </button>
+      {discs.map((d) => (
+        <button key={d} type="button" className={`tab ${value === d ? "active" : ""}`}
+                title={DISC_LABEL[d] ?? d} onClick={() => onChange(d)}>
+          {d}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 // Journal des paris d'un tournoi (clôture) : la preuve de chaque ligne du tableau.
 function BetDetail({ bets, tmtId }) {
@@ -71,6 +104,8 @@ export default function Rentabilite() {
   const { setTitle } = useOutletContext();
   const [roi, setRoi] = useState(null);
   const [openTmt, setOpenTmt] = useState(null);
+  const [discBands, setDiscBands] = useState(null);
+  const [discSweep, setDiscSweep] = useState(null);
   useEffect(() => { setTitle("Rentabilité"); }, [setTitle]);
   useEffect(() => { getJSON("roi.json").then(setRoi).catch(() => setRoi(false)); }, []);
 
@@ -78,13 +113,22 @@ export default function Rentabilite() {
   if (!roi) return <p className="hint">Chargement de l'étude…</p>;
   if (!roi.totalMatches) return <p className="hint">Aucun match avec prono et cotes pour l'instant — l'étude se remplira avec les prochains tournois.</p>;
 
-  const { strategies, bands, evSweep, disagreement, byBook, bets } = roi;
+  const { strategies, bands, evSweep, disagreement, byBook, bets, clv, byDisc = [] } = roi;
   const favClose = strategies.favori.global.close;
   const valClose = strategies.value.global.close;
+  const discs = byDisc.map((d) => d.disc);
+  const bandsShown = discBands ? byDisc.find((d) => d.disc === discBands)?.bands ?? bands : bands;
+  const sweepShown = discSweep ? byDisc.find((d) => d.disc === discSweep)?.evSweep ?? evSweep : evSweep;
 
   return (
-    <div className="roi-page">
-      <div className="card">
+    <div className="roi-page roi-layout">
+      <nav className="roi-toc" aria-label="Sommaire de l'étude">
+        {SECTIONS.map((s) => (
+          <button key={s.id} type="button" onClick={() => scrollToSection(s.id)}>{s.label}</button>
+        ))}
+      </nav>
+      <div className="roi-content">
+      <div className="card" id="roi-lecture">
         <h2>Comment lire cette page</h2>
         <p className="lead">
           On rejoue la saison : <b>1 € misé</b> sur chaque prono du modèle, aux cotes réelles
@@ -113,7 +157,7 @@ export default function Rentabilite() {
         </div>
       </div>
 
-      <div className="card">
+      <div className="card" id="roi-tournois">
         <h2>Par tournoi</h2>
         <p className="lead">
           <b>Favori</b> : 1 € sur le camp que le modèle donne gagnant, à chaque match coté.{" "}
@@ -173,13 +217,53 @@ export default function Rentabilite() {
         </div>
       </div>
 
-      <div className="card">
+      <div className="card" id="roi-disciplines">
+        <h2>Par discipline</h2>
+        <p className="lead">
+          Les mêmes stratégies, découpées par tableau. Le modèle n'est pas aussi bon partout
+          (le simple dames est sa discipline la plus prévisible) — et le marché non plus :
+          c'est dans ces écarts que peut se nicher la rentabilité.
+        </p>
+        <div className="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th rowSpan={2}>Discipline</th>
+                <th colSpan={3}>Favori — clôture</th>
+                <th colSpan={3}>Value — clôture</th>
+                <th colSpan={3}>Favori — ouverture</th>
+                <th colSpan={3}>Value — ouverture</th>
+              </tr>
+              <tr>{aggHeads([0, 1, 2, 3])}</tr>
+            </thead>
+            <tbody>
+              {byDisc.map((d) => (
+                <tr key={d.disc}>
+                  <td title={DISC_LABEL[d.disc] ?? d.disc}>{DISC_LABEL[d.disc] ?? d.disc} ({d.disc})</td>
+                  <AggCells agg={d.favori.close} />
+                  <AggCells agg={d.value.close} />
+                  <AggCells agg={d.favori.open} />
+                  <AggCells agg={d.value.open} />
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="hint">
+          Garde-fou : découpage exploratoire — en regardant 5 disciplines, la meilleure paraît
+          toujours bonne (biais de sélection). Aucune case n'est prouvée positive à ce stade.
+        </p>
+      </div>
+
+      <div className="card" id="roi-tranches">
         <h2>Par tranche de confiance</h2>
         <p className="lead">
           Les paris « favori », regroupés par la probabilité annoncée par le modèle. Répond à :
           « et si je ne pariais que sur les quasi-certitudes ? » — attention, plus la confiance
           est haute, plus les cotes sont basses : un seul raté efface beaucoup de petits gains.
+          Les onglets croisent avec la discipline (effectifs plus petits : lire l'IC d'abord).
         </p>
+        <DiscTabs discs={discs} value={discBands} onChange={setDiscBands} />
         <div className="table-scroll">
           <table>
             <thead>
@@ -187,7 +271,7 @@ export default function Rentabilite() {
               <tr><th />{aggHeads([0, 1])}</tr>
             </thead>
             <tbody>
-              {bands.map((b) => (
+              {bandsShown.map((b) => (
                 <tr key={b.band}>
                   <td>{b.band} %</td>
                   <AggCells agg={b.close} />
@@ -199,14 +283,15 @@ export default function Rentabilite() {
         </div>
       </div>
 
-      <div className="card">
+      <div className="card" id="roi-seuil">
         <h2>Exiger plus de marge : le seuil d'EV</h2>
         <p className="lead">
           La stratégie value avec un seuil de plus en plus exigeant. EV &gt; 0 mise dès que la
           cote paie mieux que notre probabilité ; EV &gt; 0,10 exige 10 centimes d'avantage
           théorique par euro misé. Plus de marge = moins de paris : ce tableau montre si la
-          sélectivité paie.
+          sélectivité paie. Les onglets croisent avec la discipline.
         </p>
+        <DiscTabs discs={discs} value={discSweep} onChange={setDiscSweep} />
         <div className="table-scroll">
           <table>
             <thead>
@@ -214,7 +299,7 @@ export default function Rentabilite() {
               <tr><th />{aggHeads([0, 1])}</tr>
             </thead>
             <tbody>
-              {evSweep.map((e) => (
+              {sweepShown.map((e) => (
                 <tr key={e.threshold}>
                   <td>EV &gt; {fmt(e.threshold, 2)}</td>
                   <AggCells agg={e.close} />
@@ -226,7 +311,55 @@ export default function Rentabilite() {
         </div>
       </div>
 
-      <div className="card">
+      <div className="card" id="roi-clv">
+        <h2>La CLV : bat-on la cote de clôture ?</h2>
+        <p className="lead">
+          Le test standard des parieurs professionnels. Pour chaque pari pris à l'<b>ouverture</b>,
+          on compare la cote obtenue à la cote de <b>clôture</b> du même camp : si la cote a baissé
+          entre-temps (CLV positive), le marché a fini par nous donner raison. Une CLV moyenne
+          positive et prouvée est le signal d'un avantage réel — il apparaît bien avant que le
+          ROI ne sorte du bruit, car il ne dépend pas de la chance des résultats.
+        </p>
+        <div className="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Stratégie (paris à l'ouverture)</th>
+                <th className="oa-num">Paris comparés</th>
+                <th className="oa-num">Battent la clôture</th>
+                <th className="oa-num">CLV moyenne</th>
+                <th className="oa-num">IC 95 %</th>
+                <th className="oa-num" title="ROI (à l'ouverture) des paris dont la cote a battu la clôture">ROI des CLV+</th>
+                <th className="oa-num" title="ROI (à l'ouverture) des paris qui n'ont pas battu la clôture">ROI des autres</th>
+              </tr>
+            </thead>
+            <tbody>
+              {["favori", "value"].map((k) => {
+                const c = clv?.[k];
+                if (!c) return null;
+                return (
+                  <tr key={k}>
+                    <td>{k === "favori" ? "Favori" : "Value EV+"}</td>
+                    <td className="oa-num">{c.n}</td>
+                    <td className="oa-num">{c.beatPct == null ? "—" : `${c.beat} (${fmt(c.beatPct * 100, 1)} %)`}</td>
+                    <td className="oa-num"><span className={`form ${trend(c.avg)}`}>{pc(c.avg, 2)}</span></td>
+                    <td className="oa-num">{c.ci ? `${pc(c.ci[0], 2)} à ${pc(c.ci[1], 2)}` : "—"}</td>
+                    <td className="oa-num"><span className={`form ${trend(c.roiBeat.roi)}`}>{pc(c.roiBeat.roi)}</span> ({c.roiBeat.n})</td>
+                    <td className="oa-num"><span className={`form ${trend(c.roiOther.roi)}`}>{pc(c.roiOther.roi)}</span> ({c.roiOther.n})</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p className="hint">
+          Lecture : une CLV moyenne positive dont l'IC exclut 0 prouve que le modèle détecte de
+          la valeur avant le marché. Si le ROI reste négatif malgré tout, l'avantage existe mais
+          ne couvre pas encore la marge du bookmaker.
+        </p>
+      </div>
+
+      <div className="card" id="roi-desaccord">
         <h2>Quand on contredit le marché</h2>
         <p className="lead">
           Paris placés uniquement quand notre favori est l'outsider du bookmaker (cote supérieure
@@ -244,7 +377,7 @@ export default function Rentabilite() {
         </div>
       </div>
 
-      <div className="card">
+      <div className="card" id="roi-books">
         <h2>Quel bookmaker paie le mieux ?</h2>
         <p className="lead">
           Chaque stratégie rejouée avec les cotes d'un <b>seul</b> bookmaker. Le « panier
@@ -278,6 +411,7 @@ export default function Rentabilite() {
           Mise plate 1 € par pari, probabilités figées d'avant match (modèle « Elo recalibré »,
           le même que le prédicteur et le backtest). Généré le {new Date(roi.generatedAt).toLocaleDateString("fr-FR")}.
         </p>
+      </div>
       </div>
     </div>
   );
