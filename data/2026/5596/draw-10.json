@@ -3824,7 +3824,7 @@
         "tournamentCode": 5596,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -3917,9 +3917,9 @@
         },
         "team1seed": "1",
         "team2seed": "3",
-        "matchTime": "2026-08-08 12:40:00",
-        "matchTimeUtc": "2026-08-08 03:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-08 13:15:00",
+        "matchTimeUtc": "2026-08-08 04:15:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3930,12 +3930,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Asan Yi Sun-sin Gymnasium",
-        "duration": null,
+        "duration": 47,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 17,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 10,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -3945,7 +3964,7 @@
         "tournamentCode": 5596,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -4040,7 +4059,7 @@
         "team2seed": "2",
         "matchTime": "2026-08-08 11:00:00",
         "matchTimeUtc": "2026-08-08 02:00:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "1",
         "oopText": "Starting at 11:00 AM",
         "oopTypeId": 1,
@@ -4051,12 +4070,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Asan Yi Sun-sin Gymnasium",
-        "duration": null,
+        "duration": 53,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
         "reliability": 0,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 14,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 15,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 13,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -4068,41 +4106,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "58240",
+              "nameDisplay": "Yuta WATANABE",
+              "nameType": 0,
+              "firstName": "Yuta",
+              "lastName": "WATANABE",
+              "initials": "YW",
+              "nameShort": "Y WATANABE",
+              "nameShort2": "WATANABE",
+              "slug": "yuta-watanabe",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Yuta WATANABE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627952995/assets/players/thumbnail/58240.jpg"
+              }
+            },
+            {
+              "id": "60335",
+              "nameDisplay": "Maya TAGUCHI",
+              "nameType": 0,
+              "firstName": "Maya",
+              "lastName": "TAGUCHI",
+              "initials": "MT",
+              "nameShort": "M TAGUCHI",
+              "nameShort2": "TAGUCHI",
+              "slug": "maya-taguchi",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Maya TAGUCHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696906156/assets/players/thumbnail/60335.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "80293",
+              "nameDisplay": "KIM Jae Hyeon",
+              "nameType": 1,
+              "firstName": "Jae Hyeon",
+              "lastName": "KIM",
+              "initials": "KJ",
+              "nameShort": "KIM J H ",
+              "nameShort2": "KIM",
+              "slug": "kim-jae-hyeon",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Jae Hyeon KIM",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784098171/assets/players/thumbnail/80293.jpg"
+              }
+            },
+            {
+              "id": "64819",
+              "nameDisplay": "JANG Ha Jeong",
+              "nameType": 1,
+              "firstName": "Ha Jeong",
+              "lastName": "JANG",
+              "initials": "JH",
+              "nameShort": "JANG H J ",
+              "nameShort2": "JANG",
+              "slug": "ha-jeong-jang",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Ha Jeong JANG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896437/assets/players/thumbnail/64819.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team1seed": "1",
+        "team2seed": "2",
+        "matchTime": "2026-08-09 11:50:00",
+        "matchTimeUtc": "2026-08-09 02:50:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "2",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "XD",
         "roundName": "Final",
         "drawName": "XD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Asan Yi Sun-sin Gymnasium",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 5,
         "matchTypeValue": "Mixed Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -8142,7 +8254,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -8235,10 +8347,10 @@
       },
       "team1seed": "1",
       "team2seed": "3",
-      "matchTime": "2026-08-08 12:40:00",
-      "matchTimeUtc": "2026-08-08 03:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-08 13:15:00",
+      "matchTimeUtc": "2026-08-08 04:15:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -8250,14 +8362,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Asan Yi Sun-sin Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 47,
+      "time": "00:47",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 17,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 10,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -8268,7 +8402,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -8363,8 +8497,8 @@
       "team2seed": "2",
       "matchTime": "2026-08-08 11:00:00",
       "matchTimeUtc": "2026-08-08 02:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "1",
       "oopText": "Starting at 11:00 AM",
       "oopTypeId": 1,
@@ -8376,14 +8510,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Asan Yi Sun-sin Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 53,
+      "time": "00:53",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
       "reliability": 0,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 15,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -8396,45 +8552,119 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "58240",
+            "nameDisplay": "Yuta WATANABE",
+            "nameType": 0,
+            "firstName": "Yuta",
+            "lastName": "WATANABE",
+            "initials": "YW",
+            "nameShort": "Y WATANABE",
+            "nameShort2": "WATANABE",
+            "slug": "yuta-watanabe",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Yuta WATANABE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627952995/assets/players/thumbnail/58240.jpg"
+            }
+          },
+          {
+            "id": "60335",
+            "nameDisplay": "Maya TAGUCHI",
+            "nameType": 0,
+            "firstName": "Maya",
+            "lastName": "TAGUCHI",
+            "initials": "MT",
+            "nameShort": "M TAGUCHI",
+            "nameShort2": "TAGUCHI",
+            "slug": "maya-taguchi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Maya TAGUCHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696906156/assets/players/thumbnail/60335.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "80293",
+            "nameDisplay": "KIM Jae Hyeon",
+            "nameType": 1,
+            "firstName": "Jae Hyeon",
+            "lastName": "KIM",
+            "initials": "KJ",
+            "nameShort": "KIM J H ",
+            "nameShort2": "KIM",
+            "slug": "kim-jae-hyeon",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Jae Hyeon KIM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784098171/assets/players/thumbnail/80293.jpg"
+            }
+          },
+          {
+            "id": "64819",
+            "nameDisplay": "JANG Ha Jeong",
+            "nameType": 1,
+            "firstName": "Ha Jeong",
+            "lastName": "JANG",
+            "initials": "JH",
+            "nameShort": "JANG H J ",
+            "nameShort2": "JANG",
+            "slug": "ha-jeong-jang",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Ha Jeong JANG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896437/assets/players/thumbnail/64819.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "team1seed": "1",
+      "team2seed": "2",
+      "matchTime": "2026-08-09 11:50:00",
+      "matchTimeUtc": "2026-08-09 02:50:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "2",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "XD",
       "roundName": "Final",
       "drawName": "XD",
       "drawCode": "10",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Asan Yi Sun-sin Gymnasium",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 5,
       "matchTypeValue": "Mixed Doubles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 1,
       "score": [],
       "matches": []
     }

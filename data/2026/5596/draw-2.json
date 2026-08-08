@@ -2810,7 +2810,7 @@
         "tournamentCode": 5596,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2867,9 +2867,9 @@
         },
         "team1seed": "1",
         "team2seed": null,
-        "matchTime": "2026-08-08 13:30:00",
-        "matchTimeUtc": "2026-08-08 04:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-08 14:10:00",
+        "matchTimeUtc": "2026-08-08 05:10:00",
+        "matchStatus": "F",
         "oopRound": "4",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2880,12 +2880,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Asan Yi Sun-sin Gymnasium",
-        "duration": null,
+        "duration": 44,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 18,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2895,7 +2908,7 @@
         "tournamentCode": 5596,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "CHN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -2952,9 +2965,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-08-08 11:50:00",
-        "matchTimeUtc": "2026-08-08 02:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-08 12:05:00",
+        "matchTimeUtc": "2026-08-08 03:05:00",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2965,12 +2978,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Asan Yi Sun-sin Gymnasium",
-        "duration": null,
+        "duration": 58,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 8,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 16,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 12,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2982,41 +3014,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "97115",
+              "nameDisplay": "YOO Tae Bin",
+              "nameType": 1,
+              "firstName": "Tae Bin",
+              "lastName": "YOO",
+              "initials": "YT",
+              "nameShort": "YOO T B ",
+              "nameShort2": "YOO",
+              "slug": "yoo-tae-bin",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Tae Bin YOO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1783919594/assets/players/thumbnail/97115.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "97345",
+              "nameDisplay": "ZHU Xuan Chen",
+              "nameType": 1,
+              "firstName": "Xuan Chen",
+              "lastName": "ZHU",
+              "initials": "ZX",
+              "nameShort": "ZHU X C ",
+              "nameShort2": "ZHU",
+              "slug": "zhu-xuan-chen",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Xuan Chen ZHU",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1783920220/assets/players/thumbnail/97345.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-08-09 12:40:00",
+        "matchTimeUtc": "2026-08-09 03:40:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "3",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MS",
         "roundName": "Final",
         "drawName": "MS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Asan Yi Sun-sin Gymnasium",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -6041,7 +6111,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -6098,10 +6168,10 @@
       },
       "team1seed": "1",
       "team2seed": null,
-      "matchTime": "2026-08-08 13:30:00",
-      "matchTimeUtc": "2026-08-08 04:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-08 14:10:00",
+      "matchTimeUtc": "2026-08-08 05:10:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "4",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6113,14 +6183,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Asan Yi Sun-sin Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 44,
+      "time": "00:44",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6131,7 +6216,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "CHN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -6188,15 +6273,127 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-08-08 11:50:00",
-      "matchTimeUtc": "2026-08-08 02:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-08 12:05:00",
+      "matchTimeUtc": "2026-08-08 03:05:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "MS",
       "roundName": "SF",
+      "drawName": "MS",
+      "drawCode": "2",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Asan Yi Sun-sin Gymnasium",
+      "duration": 58,
+      "time": "00:58",
+      "matchOrder": null,
+      "matchTypeId": 1,
+      "matchTypeValue": "Men's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 8,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 12,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1532654,
+      "code": "29",
+      "tournamentCode": "5A942038-9A9E-4202-886D-539B48CB0867",
+      "tournamentName": "VICTOR Korea Masters 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "97115",
+            "nameDisplay": "YOO Tae Bin",
+            "nameType": 1,
+            "firstName": "Tae Bin",
+            "lastName": "YOO",
+            "initials": "YT",
+            "nameShort": "YOO T B ",
+            "nameShort2": "YOO",
+            "slug": "yoo-tae-bin",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Tae Bin YOO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1783919594/assets/players/thumbnail/97115.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "97345",
+            "nameDisplay": "ZHU Xuan Chen",
+            "nameType": 1,
+            "firstName": "Xuan Chen",
+            "lastName": "ZHU",
+            "initials": "ZX",
+            "nameShort": "ZHU X C ",
+            "nameShort2": "ZHU",
+            "slug": "zhu-xuan-chen",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Xuan Chen ZHU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1783920220/assets/players/thumbnail/97345.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-08-09 12:40:00",
+      "matchTimeUtc": "2026-08-09 03:40:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "3",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "MS",
+      "roundName": "Final",
       "drawName": "MS",
       "drawCode": "2",
       "courtName": "Court 1",
@@ -6210,58 +6407,6 @@
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1532654,
-      "code": "29",
-      "tournamentCode": "5A942038-9A9E-4202-886D-539B48CB0867",
-      "tournamentName": "VICTOR Korea Masters 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "MS",
-      "roundName": "Final",
-      "drawName": "MS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 1,
-      "matchTypeValue": "Men's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
       "score": [],
       "matches": []
     }

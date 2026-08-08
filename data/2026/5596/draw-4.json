@@ -2834,7 +2834,7 @@
         "tournamentCode": 5596,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "IND",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -2893,7 +2893,7 @@
         "team2seed": null,
         "matchTime": "2026-08-08 15:00:00",
         "matchTimeUtc": "2026-08-08 06:00:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "1",
         "oopText": "Starting at 3:00 PM",
         "oopTypeId": 1,
@@ -2904,12 +2904,31 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Asan Yi Sun-sin Gymnasium",
-        "duration": null,
+        "duration": 48,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 0,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 16,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2919,7 +2938,7 @@
         "tournamentCode": 5596,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "CHN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -2976,9 +2995,9 @@
         },
         "team1seed": "4",
         "team2seed": null,
-        "matchTime": "2026-08-08 14:20:00",
-        "matchTimeUtc": "2026-08-08 05:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-08 15:05:00",
+        "matchTimeUtc": "2026-08-08 06:05:00",
+        "matchStatus": "F",
         "oopRound": "5",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2989,12 +3008,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Asan Yi Sun-sin Gymnasium",
-        "duration": null,
+        "duration": 65,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 22,
+            "away": 20,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 18,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -3006,41 +3044,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "IND",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "75628",
+              "nameDisplay": "Ashmita CHALIHA",
+              "nameType": 0,
+              "firstName": "Ashmita",
+              "lastName": "CHALIHA",
+              "initials": "AC",
+              "nameShort": "A CHALIHA",
+              "nameShort2": "CHALIHA",
+              "slug": "ashmita-chaliha",
+              "countryCode": "IND",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+              "avatar": {
+                "title": "Ashmita CHALIHA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897837/assets/players/thumbnail/75628.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "92928",
+              "nameDisplay": "HAN Qian Xi",
+              "nameType": 1,
+              "firstName": "Qian Xi",
+              "lastName": "HAN",
+              "initials": "HQ",
+              "nameShort": "HAN Q X ",
+              "nameShort2": "HAN",
+              "slug": "han-qian-xi",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "HAN Qian Xi",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team2seed": "4",
+        "matchTime": "2026-08-09 11:00:00",
+        "matchTimeUtc": "2026-08-09 02:00:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "1",
+        "oopText": "Starting at 11:00 AM",
+        "oopTypeId": 1,
         "eventName": "WS",
         "roundName": "Final",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Asan Yi Sun-sin Gymnasium",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 0,
         "score": [],
         "matches": []
       }
@@ -6093,7 +6169,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "IND",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -6152,8 +6228,8 @@
       "team2seed": null,
       "matchTime": "2026-08-08 15:00:00",
       "matchTimeUtc": "2026-08-08 06:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "1",
       "oopText": "Starting at 3:00 PM",
       "oopTypeId": 1,
@@ -6165,14 +6241,36 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Asan Yi Sun-sin Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 48,
+      "time": "00:48",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 0,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6183,7 +6281,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "CHN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -6240,10 +6338,10 @@
       },
       "team1seed": "4",
       "team2seed": null,
-      "matchTime": "2026-08-08 14:20:00",
-      "matchTimeUtc": "2026-08-08 05:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-08 15:05:00",
+      "matchTimeUtc": "2026-08-08 06:05:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "5",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6255,14 +6353,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Asan Yi Sun-sin Gymnasium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 65,
+      "time": "01:05",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 22,
+          "away": 20,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6275,45 +6395,83 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "75628",
+            "nameDisplay": "Ashmita CHALIHA",
+            "nameType": 0,
+            "firstName": "Ashmita",
+            "lastName": "CHALIHA",
+            "initials": "AC",
+            "nameShort": "A CHALIHA",
+            "nameShort2": "CHALIHA",
+            "slug": "ashmita-chaliha",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "Ashmita CHALIHA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897837/assets/players/thumbnail/75628.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "92928",
+            "nameDisplay": "HAN Qian Xi",
+            "nameType": 1,
+            "firstName": "Qian Xi",
+            "lastName": "HAN",
+            "initials": "HQ",
+            "nameShort": "HAN Q X ",
+            "nameShort2": "HAN",
+            "slug": "han-qian-xi",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "HAN Qian Xi",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "team2seed": "4",
+      "matchTime": "2026-08-09 11:00:00",
+      "matchTimeUtc": "2026-08-09 02:00:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "1",
+      "oopText": "Starting at 11:00 AM",
+      "oopTypeId": 1,
       "eventName": "WS",
       "roundName": "Final",
       "drawName": "WS",
       "drawCode": "4",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Asan Yi Sun-sin Gymnasium",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 0,
       "score": [],
       "matches": []
     }
