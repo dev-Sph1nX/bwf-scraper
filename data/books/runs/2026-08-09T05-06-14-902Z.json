@@ -1,0 +1,43 @@
+{
+ "fetchedAt": "2026-08-09T05:06:14.902Z",
+ "errors": {
+  "betclic": "https://www.betclic.fr/badminton-sbadminton -> HTTP 403"
+ },
+ "books": {
+  "unibet": {
+   "complete": true,
+   "rows": [
+    {
+     "book": "unibet",
+     "bookMatchId": "e3370036",
+     "srId": "73544632",
+     "tournament": "Corée",
+     "discipline": "MD",
+     "p1": "Man/Soh",
+     "p2": "Tee/Yap",
+     "odd1": 1.59,
+     "odd2": 1.96,
+     "startUtc": "2026-08-09T05:15:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3370029",
+     "srId": "73544634",
+     "tournament": "Corée",
+     "discipline": "WD",
+     "p1": "Luo/Wang",
+     "p2": "Aimsaard/Aimsa",
+     "odd1": 2,
+     "odd2": 1.57,
+     "startUtc": "2026-08-09T05:40:00.000Z",
+     "isLive": false
+    }
+   ]
+  },
+  "winamax": {
+   "complete": true,
+   "rows": []
+  }
+ }
+}
