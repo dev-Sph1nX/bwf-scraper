@@ -10,19 +10,25 @@
 // détruirait précisément ce qu'on collecte. Ces relevés par OPÉRATEUR NOMMÉ
 // sont la matière première des stats futures : EV réel par opérateur, CLV,
 // comparaison inter-bookmakers d'un même match (jointure par srId Sportradar).
+//
+// Depuis 2026-08-10, chaque ligne prématch porte AUSSI, quand l'opérateur le
+// cote, le marché « nombre de sets » (champ optionnel `sets`, documenté dans
+// lib/books.mjs) — préalable du futur marché lié à l'effet gymnase (journal
+// §7). Ajout strictement additif : les relevés antérieurs restent lisibles
+// tels quels, et un marché absent ne fait jamais échouer le relevé vainqueur.
 
 import fs from "node:fs/promises";
 import path from "node:path";
 import { runFileName } from "./lib/odds-history.mjs";
-import { fetchBetclic } from "./lib/book-betclic.mjs";
-import { fetchUnibet } from "./lib/book-unibet.mjs";
-import { fetchWinamax } from "./lib/book-winamax.mjs";
+import { fetchBetclic, enrichBetclicSets } from "./lib/book-betclic.mjs";
+import { fetchUnibet, enrichUnibetSets } from "./lib/book-unibet.mjs";
+import { fetchWinamax, enrichWinamaxSets } from "./lib/book-winamax.mjs";
 
 const OUT_DIR = path.join("data", "books", "runs");
 const BOOKS = [
-  ["betclic", fetchBetclic],
-  ["unibet", fetchUnibet],
-  ["winamax", fetchWinamax],
+  ["betclic", fetchBetclic, enrichBetclicSets],
+  ["unibet", fetchUnibet, enrichUnibetSets],
+  ["winamax", fetchWinamax, enrichWinamaxSets],
 ];
 
 await fs.mkdir(OUT_DIR, { recursive: true });
@@ -30,17 +36,30 @@ await fs.mkdir(OUT_DIR, { recursive: true });
 const fetchedAt = new Date().toISOString();
 const books = {};
 const errors = {};
-for (const [i, [name, fn]] of BOOKS.entries()) {
+for (const [i, [name, fn, enrichSets]] of BOOKS.entries()) {
   if (i > 0) await new Promise((r) => setTimeout(r, 1500)); // on reste courtois
   try {
-    const { rows: toutes, complete } = await fn();
+    const { rows: toutes, complete, ctx } = await fn();
     // PRÉMATCH SEULEMENT : les cotes live bougent point par point, et à un
     // relevé toutes les 2 h on n'en capturerait que des instantanés trompeurs
     // qui pollueraient les séries et la cote de clôture.
     const rows = toutes.filter((r) => !r.isLive);
+    // Marché « nombre de sets » (lot C, effet gymnase §7 du journal) : BEST-
+    // EFFORT après la capture du vainqueur — champ optionnel `sets` sur la
+    // ligne (voir lib/books.mjs). Un échec ici ne coûte JAMAIS le relevé
+    // vainqueur : les lignes sont déjà acquises, on ne fait que les enrichir.
+    let setsNote = "";
+    if (rows.length) {
+      try {
+        const n = await enrichSets(rows, ctx);
+        setsNote = `, sets: ${n}/${rows.length}`;
+      } catch (err) {
+        setsNote = `, sets KO (${String(err.message || err)})`;
+      }
+    }
     books[name] = { complete, rows };
     const live = toutes.length - rows.length;
-    console.log(`📗 ${name} — ${rows.length} lignes prématch${live ? ` (${live} live écartées)` : ""}${complete ? "" : " (INCOMPLET : des matchs du site manquent)"}`);
+    console.log(`📗 ${name} — ${rows.length} lignes prématch${live ? ` (${live} live écartées)` : ""}${setsNote}${complete ? "" : " (INCOMPLET : des matchs du site manquent)"}`);
   } catch (err) {
     errors[name] = String(err.message || err);
     console.log(`⚠ ${name} : ${errors[name]}`);
