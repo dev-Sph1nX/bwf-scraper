@@ -4,8 +4,18 @@ on:
   push:
     branches: [main] # tout push sur main redéploie (les commits data [skip ci] ne bouclent pas)
   schedule:
-    - cron: "0 22 * * *" # ~minuit heure de Paris (22:00 UTC = 00:00 en été CEST, 23:00 en hiver)
-  workflow_dispatch: {} # bouton "Run workflow" manuel
+    # Cron HORAIRE, mais la mise à jour ne tourne pas toutes les heures : le
+    # job "garde" ci-dessous (léger, ~30 s) décide à chaque passage si c'est
+    # le bon moment. Objectif : pendant un tournoi, mettre à jour juste APRÈS
+    # le dernier match du jour (l'Elo de forme doit intégrer les résultats du
+    # jour avant les matchs du lendemain), qui tombe à des heures très
+    # différentes selon le fuseau (Corée ~13 h UTC, Europe ~22 h, Amériques
+    # parfois après minuit UTC) — un cron fixe ne peut pas suivre. Hors
+    # tournoi, la garde reproduit l'ancien comportement : un run vers 22 h UTC.
+    # Minute 17 et pas 0 : les crons à l'heure pile sont les plus retardés
+    # (voire sautés) par GitHub Actions, la file y étant la plus chargée.
+    - cron: "17 * * * *"
+  workflow_dispatch: {} # bouton "Run workflow" manuel — bypasse la garde (run forcé)
 
 # Un seul run à la fois
 concurrency:
@@ -18,7 +28,34 @@ permissions:
   id-token: write
 
 jobs:
+  # Garde du cron horaire : checkout + node, PAS de npm install ni de
+  # Playwright — le but est justement de pouvoir tourner 24 fois par jour pour
+  # trois fois rien. tools/should-update.mjs lit les données committées
+  # (calendrier, draws, run-log) et répond « faut-il mettre à jour
+  # maintenant ? » dans la sortie `run`. Ne tourne QUE sur le cron : push et
+  # workflow_dispatch déclenchent la mise à jour sans passer par la garde.
+  garde:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.decision.outputs.run }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - id: decision
+        run: node tools/should-update.mjs
+
   update-and-deploy:
+    # `needs` + condition : sur cron, on n'exécute le job lourd que si la
+    # garde a dit oui ; sur push et workflow_dispatch la garde est "skipped"
+    # (son `if` est faux) et on exécute sans condition — d'où le `!cancelled()`,
+    # OBLIGATOIRE : sans fonction de statut dans le `if`, un job dont un
+    # `needs` a été skipped est lui-même skipped, quoi que dise le reste de la
+    # condition, et push/dispatch ne déploieraient plus jamais.
+    needs: garde
+    if: ${{ !cancelled() && (github.event_name != 'schedule' || needs.garde.outputs.run == 'true') }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
