@@ -47,7 +47,16 @@ qualité du modèle. Deux écrans distincts, jamais fusionnés.
 
 ---
 
-# Lot B — Mise (Kelly fractionné) et journal de paris ⭐ prochain
+# Lot B — Mise (Kelly fractionné) et journal de paris — ⚠️ remis en question
+
+> **Doute du propriétaire (2026-08-10) :** sans connexion à la plateforme de
+> paris (exclue, CGU art. 7.1), le journal impose une **double saisie** —
+> « relou de devoir marquer en double ». Options sur la table : réduire le lot
+> au seul calculateur Kelly (zéro saisie récurrente) ; journal à friction
+> minimale (un clic « pari pris » préremplit cote/proba/heure, reste la mise) ;
+> import manuel a posteriori de l'historique opérateur. Tant que le modèle ne
+> bat pas le marché (value −14,5 %, §8.4), reporter ce lot est défendable : le
+> banc d'essai suffit à la recherche. **Décision à prendre avant tout code.**
 
 **Couches 4 et 5. Après l'EV affichée (ex-lot A, fait) — sans elle, rien à enregistrer.**
 
