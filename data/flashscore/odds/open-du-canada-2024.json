@@ -1,0 +1,6840 @@
+{
+ "source": "flashscore.fr (feed embarqué + GraphQL oce)",
+ "fetchedAt": "2026-08-04T19:55:30.253Z",
+ "tournamentSlug": "open-du-canada-2024",
+ "books": [
+  "betclic",
+  "unibet",
+  "winamax"
+ ],
+ "stats": {
+  "scanned": 148,
+  "withOdds": 141,
+  "from": "2024-07-02",
+  "to": "2024-07-07"
+ },
+ "matches": [
+  {
+   "fsId": "UeKtQSRs",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-02T22:05:00.000Z",
+   "home": {
+    "name": "Lu C./Po Li-Wei",
+    "country": "Taïwan",
+    "fsParticipantId": "2Jfzjcnf"
+   },
+   "away": {
+    "name": "Chang Ko Ch./Chen X.",
+    "country": "Taïwan",
+    "fsParticipantId": "AqbrlyH6"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 23
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.32,
+      "closing": 1.48
+     },
+     "away": {
+      "opening": 2.49,
+      "closing": 2.07
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.48,
+      "closing": 1.45
+     },
+     "away": {
+      "opening": 2.15,
+      "closing": 2.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "x6eScQRb",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-02T22:05:00.000Z",
+   "home": {
+    "name": "Wang T. G./Wang Y. D.",
+    "country": "Chine",
+    "fsParticipantId": "l0QEMwKs"
+   },
+   "away": {
+    "name": "Ng T./Zhang W. Y.",
+    "country": "Canada",
+    "fsParticipantId": "MDOMKHlf"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 21,
+     "away": 6
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 6,
+      "closing": 5.7
+     }
+    }
+   }
+  },
+  {
+   "fsId": "2g2g7Xal",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-02T22:10:00.000Z",
+   "home": {
+    "name": "Astrup K./Rasmussen A. S.",
+    "country": "Danemark",
+    "fsParticipantId": "jFHpPHNk"
+   },
+   "away": {
+    "name": "Chen Z. Y./Smith P.",
+    "country": "USA",
+    "fsParticipantId": "buLhNeh2"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.5,
+      "closing": 5.5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 5.9,
+      "closing": 6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "pEycRhiK",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-02T22:10:00.000Z",
+   "home": {
+    "name": "Ma R./Zhou D.",
+    "country": "USA",
+    "fsParticipantId": "jFySO8T6"
+   },
+   "away": {
+    "name": "Jansen J. R./Neumann K.",
+    "country": "Allemagne",
+    "fsParticipantId": "h2EJUbHP"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 22,
+     "away": 24
+    },
+    {
+     "home": 9,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 4.8,
+      "closing": 4.8
+     },
+     "away": {
+      "opening": 1.05,
+      "closing": 1.05
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 5,
+      "closing": 4.5
+     },
+     "away": {
+      "opening": 1.06,
+      "closing": 1.04
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OSEqIlE6",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-02T22:45:00.000Z",
+   "home": {
+    "name": "Mitsuhashi K./Okamura H.",
+    "country": "Japon",
+    "fsParticipantId": "CraMwxft"
+   },
+   "away": {
+    "name": "Lai J. B. T./Mak J. L.",
+    "country": "Canada",
+    "fsParticipantId": "bacUyGOh"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.1,
+      "closing": 6.1
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 7,
+      "closing": 5.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "AJgzd4dB",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-02T22:50:00.000Z",
+   "home": {
+    "name": "Corbett F./Lee A. Q.",
+    "country": "USA",
+    "fsParticipantId": "8UMUIeJ6"
+   },
+   "away": {
+    "name": "Gai J./Ho C.",
+    "country": "USA",
+    "fsParticipantId": "GfQxHZmJ"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 10
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.09
+     },
+     "away": {
+      "opening": 4.8,
+      "closing": 4.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "hrN9uqCU",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-02T22:50:00.000Z",
+   "home": {
+    "name": "Lee C. C./Yen Yu L.",
+    "country": "Taïwan",
+    "fsParticipantId": "QkRs8v5l"
+   },
+   "away": {
+    "name": "Nakatsui N./Yu A.",
+    "country": "Canada",
+    "fsParticipantId": "Icqk6IZ0"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.05,
+      "closing": 6.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "WSY0s5sI",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-02T23:10:00.000Z",
+   "home": {
+    "name": "Ngo K./Siu J.",
+    "country": "USA",
+    "fsParticipantId": "Mgx4FMCE"
+   },
+   "away": {
+    "name": "Hsieh P. S./Hung E-T.",
+    "country": "Taïwan",
+    "fsParticipantId": "f7zCD0sR"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 5.95,
+      "closing": 5.95
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "4KB8wdtp",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-02T23:15:00.000Z",
+   "home": {
+    "name": "Choi C./Kani S.",
+    "country": "Canada",
+    "fsParticipantId": "8lDOvwtQ"
+   },
+   "away": {
+    "name": "Hirokami R./Kato Y.",
+    "country": "Japon",
+    "fsParticipantId": "vX3fZG3m"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 7,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 5.45,
+      "closing": 5.45
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.02
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 6,
+      "closing": 7.25
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.04
+     }
+    }
+   }
+  },
+  {
+   "fsId": "WYyBY9bm",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-02T23:20:00.000Z",
+   "home": {
+    "name": "Lin Bing-Wei/Su C. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "8CuAlg8b"
+   },
+   "away": {
+    "name": "Dong A./Yakura N.",
+    "country": "Canada",
+    "fsParticipantId": "GxqInXxB"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 22,
+     "away": 20
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.1,
+      "closing": 1.14
+     },
+     "away": {
+      "opening": 4.3,
+      "closing": 4.6
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.11,
+      "closing": 1.1
+     },
+     "away": {
+      "opening": 3.88,
+      "closing": 4.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Kf8hGSrJ",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-02T23:50:00.000Z",
+   "home": {
+    "name": "Grimley C./Grimley M.",
+    "country": "Ecosse",
+    "fsParticipantId": "6P0xzfg5"
+   },
+   "away": {
+    "name": "Geiss B./Voelker J. C.",
+    "country": "Allemagne",
+    "fsParticipantId": "vwapYXNH"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 17,
+     "away": 8
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.38,
+      "closing": 1.35
+     },
+     "away": {
+      "opening": 2.4,
+      "closing": 2.25
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.36,
+      "closing": 1.35
+     },
+     "away": {
+      "opening": 2.34,
+      "closing": 2.38
+     }
+    }
+   }
+  },
+  {
+   "fsId": "CpFGyzBd",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-02T23:50:00.000Z",
+   "home": {
+    "name": "Pang C. Y./Su L.",
+    "country": "Canada",
+    "fsParticipantId": "pU62XfYa"
+   },
+   "away": {
+    "name": "Dent J./Lai C.",
+    "country": "Canada",
+    "fsParticipantId": "Is5AVY2C"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 3,
+     "away": 21
+    },
+    {
+     "home": 5,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 6.1,
+      "closing": 6.1
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "r72Jancn",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T00:15:00.000Z",
+   "home": {
+    "name": "Anthonisen N. P./Tirtosentono A.",
+    "country": "Danemark",
+    "fsParticipantId": "jBsc4d4D"
+   },
+   "away": {
+    "name": "Hoang C./Zhang E.",
+    "country": "Canada",
+    "fsParticipantId": "IHZrSadK"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.1,
+      "closing": 6.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "O2VhqRC5",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T00:20:00.000Z",
+   "home": {
+    "name": "Buhrova P./Kantemyr Y.",
+    "country": "Ukraine",
+    "fsParticipantId": "8WoAguje"
+   },
+   "away": {
+    "name": "Hsu Y. H./Lin J. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "fmpIiJK7"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 5.7,
+      "closing": 4.8
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.05
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 6.25,
+      "closing": 4.5
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "WnHqm9Dt",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T00:25:00.000Z",
+   "home": {
+    "name": "Lohau I./Nguyen Thuc Phuong",
+    "country": "Allemagne",
+    "fsParticipantId": "4G6xuty2"
+   },
+   "away": {
+    "name": "Sjoo M./Sjoo T.",
+    "country": "Suède",
+    "fsParticipantId": "dAgO2qT8"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.35,
+      "closing": 4.5
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.06
+     },
+     "away": {
+      "opening": 4.1,
+      "closing": 4.2
+     }
+    }
+   }
+  },
+  {
+   "fsId": "U5gA3kaD",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T00:30:00.000Z",
+   "home": {
+    "name": "Lee K./Lindeman T. A.",
+    "country": "Canada",
+    "fsParticipantId": "rkYJQUbf"
+   },
+   "away": {
+    "name": "Chiu V./Yuan J.",
+    "country": "USA",
+    "fsParticipantId": "OSZZMnbJ"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.1,
+      "closing": 1.88
+     },
+     "away": {
+      "opening": 1.5,
+      "closing": 1.55
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 2.06,
+      "closing": 1.92
+     },
+     "away": {
+      "opening": 1.48,
+      "closing": 1.56
+     }
+    }
+   }
+  },
+  {
+   "fsId": "xCGyKAqf",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T00:50:00.000Z",
+   "home": {
+    "name": "Lu M. C./Tang K. W.",
+    "country": "Taïwan",
+    "fsParticipantId": "l6L4LfvC"
+   },
+   "away": {
+    "name": "Kjaer R./Sogaard F.",
+    "country": "Danemark",
+    "fsParticipantId": "dWOCJY8O"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 22,
+     "away": 24
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3.75,
+      "closing": 4
+     },
+     "away": {
+      "opening": 1.14,
+      "closing": 1.07
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 3.6,
+      "closing": 4.3
+     },
+     "away": {
+      "opening": 1.13,
+      "closing": 1.08
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ClevvWzQ",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T01:00:00.000Z",
+   "home": {
+    "name": "Cui H. C./Peng J. Q.",
+    "country": "Chine",
+    "fsParticipantId": "n32hWBhU"
+   },
+   "away": {
+    "name": "Rusev I./Stoynov I.",
+    "country": "Bulgarie",
+    "fsParticipantId": "zas2jFwn"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 5.95,
+      "closing": 5.95
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.75,
+      "closing": 5.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "GdSSLWEs",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T01:10:00.000Z",
+   "home": {
+    "name": "Garaga P./Sai Pratheek K.",
+    "country": "Inde",
+    "fsParticipantId": "8SJlPxum"
+   },
+   "away": {
+    "name": "Pong L. K. K./Pong L.",
+    "country": "Canada",
+    "fsParticipantId": "ttIdNG9a"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 5.85,
+      "closing": 5.85
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.5,
+      "closing": 5.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "40Fiomrg",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T01:45:00.000Z",
+   "home": {
+    "name": "Efler L./Macpherson J.",
+    "country": "Allemagne",
+    "fsParticipantId": "4zcW0NcL"
+   },
+   "away": {
+    "name": "Chang A./Sheung K.",
+    "country": "USA",
+    "fsParticipantId": "zJm2e1Lr"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 5
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.1,
+      "closing": 6.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "j3Ua9lp3",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T16:05:00.000Z",
+   "home": {
+    "name": "Sondergaard A./Toft J.",
+    "country": "Danemark",
+    "fsParticipantId": "hhFL7NYF"
+   },
+   "away": {
+    "name": "Lee A./Wales Li S.",
+    "country": "USA",
+    "fsParticipantId": "Q5DT513S"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.25,
+      "closing": 6.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "hQLMmRo1",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T16:10:00.000Z",
+   "home": {
+    "name": "Nguyen N.",
+    "country": "Irlande",
+    "fsParticipantId": "SrNZR4Lt"
+   },
+   "away": {
+    "name": "Koljonen K.",
+    "country": "Finlande",
+    "fsParticipantId": "z9QsQrjg"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.24,
+      "closing": 1.29
+     },
+     "away": {
+      "opening": 2.82,
+      "closing": 2.58
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.28,
+      "closing": 1.28
+     },
+     "away": {
+      "opening": 2.8,
+      "closing": 2.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "dfzMPuGF",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T16:15:00.000Z",
+   "home": {
+    "name": "Lam L.",
+    "country": "USA",
+    "fsParticipantId": "lnT6WaVF"
+   },
+   "away": {
+    "name": "Castillo Salazar I. L.",
+    "country": "Pérou",
+    "fsParticipantId": "fqWEUw0S"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 7
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 6.75,
+      "closing": 5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 6,
+      "closing": 5.7
+     }
+    }
+   }
+  },
+  {
+   "fsId": "pdrRURcC",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T16:15:00.000Z",
+   "home": {
+    "name": "Sukphun P./Teeraratsakul P.",
+    "country": "Thaïlande",
+    "fsParticipantId": "Ctzs3hNi"
+   },
+   "away": {
+    "name": "Chen C. K./Chen S. F.",
+    "country": "Taïwan",
+    "fsParticipantId": "K6wk1Wi4"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.2,
+      "closing": 1.22
+     },
+     "away": {
+      "opening": 2.85,
+      "closing": 2.7
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.2,
+      "closing": 1.24
+     },
+     "away": {
+      "opening": 3.05,
+      "closing": 2.8
+     }
+    }
+   }
+  },
+  {
+   "fsId": "M13iiL9j",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T16:45:00.000Z",
+   "home": {
+    "name": "Chan R.",
+    "country": "Canada",
+    "fsParticipantId": "pYCEhpmB"
+   },
+   "away": {
+    "name": "Suizu M.",
+    "country": "Japon",
+    "fsParticipantId": "IoBMjOHN"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 6,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 3.9,
+      "closing": 3.62
+     },
+     "away": {
+      "opening": 1.11,
+      "closing": 1.13
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 4.1,
+      "closing": 3.5
+     },
+     "away": {
+      "opening": 1.11,
+      "closing": 1.12
+     }
+    }
+   }
+  },
+  {
+   "fsId": "6DXWcFsJ",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T16:50:00.000Z",
+   "home": {
+    "name": "Ongbamrungphan B.",
+    "country": "Thaïlande",
+    "fsParticipantId": "j9l77ZeU"
+   },
+   "away": {
+    "name": "Hoang C.",
+    "country": "Canada",
+    "fsParticipantId": "6LOGRxsn"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 7,
+      "closing": 5.5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.1,
+      "closing": 6.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "YH6Mmn3b",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T16:55:00.000Z",
+   "home": {
+    "name": "Obayashi T.",
+    "country": "Japon",
+    "fsParticipantId": "8EMtZbjL"
+   },
+   "away": {
+    "name": "Zilberman M.",
+    "country": "Israël",
+    "fsParticipantId": "vcDCTxEr"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.04,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.5,
+      "closing": 5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.04,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.1,
+      "closing": 5.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "CWcsMRT8",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T17:25:00.000Z",
+   "home": {
+    "name": "Antonsen A.",
+    "country": "Danemark",
+    "fsParticipantId": "f5NvHnTQ"
+   },
+   "away": {
+    "name": "Tang N.",
+    "country": "Australie",
+    "fsParticipantId": "jkO9BQjl"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 4
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 7,
+      "closing": 5.5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.25,
+      "closing": 6.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "EcJN1crf",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T17:25:00.000Z",
+   "home": {
+    "name": "Dent J.",
+    "country": "Canada",
+    "fsParticipantId": "d8tyFact"
+   },
+   "away": {
+    "name": "Hemanth T.",
+    "country": "Inde",
+    "fsParticipantId": "25qqDwSh"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3.4,
+      "closing": 3.9
+     },
+     "away": {
+      "opening": 1.18,
+      "closing": 1.09
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 3.3,
+      "closing": 4.1
+     },
+     "away": {
+      "opening": 1.17,
+      "closing": 1.09
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OtfIWmTa",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T17:40:00.000Z",
+   "home": {
+    "name": "Liu K. H./Yang P. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "O2nQpB7N"
+   },
+   "away": {
+    "name": "Chen Z. R./Lin Y. C.",
+    "country": "Taïwan",
+    "fsParticipantId": "KYXeukVp"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.17,
+      "closing": 1.85
+     },
+     "away": {
+      "opening": 1.43,
+      "closing": 1.61
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 2.1,
+      "closing": 1.82
+     },
+     "away": {
+      "opening": 1.42,
+      "closing": 1.58
+     }
+    }
+   }
+  },
+  {
+   "fsId": "nVN87SEF",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T18:05:00.000Z",
+   "home": {
+    "name": "Barkman K./Ho V.",
+    "country": "Canada",
+    "fsParticipantId": "zuaa0uRk"
+   },
+   "away": {
+    "name": "Lane B./Vendy S.",
+    "country": "Angleterre",
+    "fsParticipantId": "r527bJe2"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 7,
+     "away": 21
+    },
+    {
+     "home": 8,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 6.25,
+      "closing": 6.25
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "zunDR1o3",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T18:20:00.000Z",
+   "home": {
+    "name": "Christophersen L.",
+    "country": "Danemark",
+    "fsParticipantId": "lSxDAI8d"
+   },
+   "away": {
+    "name": "Gupta D.",
+    "country": "USA",
+    "fsParticipantId": "tMPbYL03"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.02,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 5.7,
+      "closing": 5.85
+     }
+    }
+   }
+  },
+  {
+   "fsId": "048Ek8Yo",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T18:30:00.000Z",
+   "home": {
+    "name": "Nishimoto K.",
+    "country": "Japon",
+    "fsParticipantId": "rgMmDHT1"
+   },
+   "away": {
+    "name": "Oldorff J.",
+    "country": "Finlande",
+    "fsParticipantId": "zm9ZzLL8"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 4.8,
+      "closing": 5.15
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.06,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 5.25,
+      "closing": 4.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "hnDLdsnT",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T18:30:00.000Z",
+   "home": {
+    "name": "Zhang B.",
+    "country": "USA",
+    "fsParticipantId": "Us6bdSmn"
+   },
+   "away": {
+    "name": "Liang T. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "x896f6Ib"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 21,
+     "away": 7
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.8,
+      "closing": 5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "S2YbmIiI",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T18:35:00.000Z",
+   "home": {
+    "name": "Gemke R.",
+    "country": "Danemark",
+    "fsParticipantId": "QFz020Fq"
+   },
+   "away": {
+    "name": "Rajawat P.",
+    "country": "Inde",
+    "fsParticipantId": "bTY70vpd"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.5,
+      "closing": 1.4
+     },
+     "away": {
+      "opening": 2.1,
+      "closing": 2.15
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.48,
+      "closing": 1.39
+     },
+     "away": {
+      "opening": 2.06,
+      "closing": 2.28
+     }
+    }
+   }
+  },
+  {
+   "fsId": "hWGY1qBt",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T19:05:00.000Z",
+   "home": {
+    "name": "Tanaka Y.",
+    "country": "Japon",
+    "fsParticipantId": "p2fNkeCd"
+   },
+   "away": {
+    "name": "Toti G.",
+    "country": "Italie",
+    "fsParticipantId": "jas9Db43"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.5,
+      "closing": 5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.04,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 5,
+      "closing": 5.35
+     }
+    }
+   }
+  },
+  {
+   "fsId": "xUBqjUh2",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T19:20:00.000Z",
+   "home": {
+    "name": "Devereux C./Toepffer D.",
+    "country": "Allemagne",
+    "fsParticipantId": "QJt07kUq"
+   },
+   "away": {
+    "name": "Chang Ko Ch./Yen Yu L.",
+    "country": "Taïwan",
+    "fsParticipantId": "Yqp85Tbd"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 8,
+     "away": 21
+    },
+    {
+     "home": 9,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 6.15,
+      "closing": 6.15
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "6mpjkvN5",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T19:40:00.000Z",
+   "home": {
+    "name": "Lin Chun-Yi",
+    "country": "Taïwan",
+    "fsParticipantId": "4pS9KayS"
+   },
+   "away": {
+    "name": "Su L. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "zTIuFwak"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.28,
+      "closing": 1.28
+     },
+     "away": {
+      "opening": 2.65,
+      "closing": 2.65
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.3,
+      "closing": 1.28
+     },
+     "away": {
+      "opening": 2.75,
+      "closing": 2.55
+     }
+    }
+   }
+  },
+  {
+   "fsId": "IVPE3JDs",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T19:50:00.000Z",
+   "home": {
+    "name": "Wang P.",
+    "country": "Taïwan",
+    "fsParticipantId": "bFRH94L0"
+   },
+   "away": {
+    "name": "Ng Ka L. A.",
+    "country": "Hong Kong",
+    "fsParticipantId": "WSPP7rjD"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 3.68,
+      "closing": 3.8
+     },
+     "away": {
+      "opening": 1.13,
+      "closing": 1.12
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 3.9,
+      "closing": 3.6
+     },
+     "away": {
+      "opening": 1.14,
+      "closing": 1.11
+     }
+    }
+   }
+  },
+  {
+   "fsId": "WhGeWZ1T",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T19:50:00.000Z",
+   "home": {
+    "name": "Smith P./Lee A. Q.",
+    "country": "USA",
+    "fsParticipantId": "2qCHtmQQ"
+   },
+   "away": {
+    "name": "Lee K./Zhang E.",
+    "country": "Canada",
+    "fsParticipantId": "YR2myRml"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 10
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.1,
+      "closing": 6.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "CI4A1M8a",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T19:55:00.000Z",
+   "home": {
+    "name": "Ng T.",
+    "country": "Canada",
+    "fsParticipantId": "xU0CYyrS"
+   },
+   "away": {
+    "name": "Jakobsen J. D.",
+    "country": "Danemark",
+    "fsParticipantId": "8CirTF5k"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3.25,
+      "closing": 3.4
+     },
+     "away": {
+      "opening": 1.2,
+      "closing": 1.13
+     }
+    }
+   }
+  },
+  {
+   "fsId": "0dKt0Nug",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T20:30:00.000Z",
+   "home": {
+    "name": "Subramanian S. M.",
+    "country": "Inde",
+    "fsParticipantId": "bPpHBxZF"
+   },
+   "away": {
+    "name": "Lanier A.",
+    "country": "France",
+    "fsParticipantId": "WxqP9G3S"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 3.15,
+      "closing": 3.92
+     },
+     "away": {
+      "opening": 1.19,
+      "closing": 1.1
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 3.3,
+      "closing": 3.75
+     },
+     "away": {
+      "opening": 1.2,
+      "closing": 1.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "YJPILIZP",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T20:30:00.000Z",
+   "home": {
+    "name": "Shi E.",
+    "country": "USA",
+    "fsParticipantId": "hxNOPGBb"
+   },
+   "away": {
+    "name": "Sung S. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "02QWNftB"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 6,
+      "closing": 5
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.02
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 5.5,
+      "closing": 5.55
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.02
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ADrdaYVF",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T20:35:00.000Z",
+   "home": {
+    "name": "Zhou Z. H./Yang J. Y.",
+    "country": "Chine",
+    "fsParticipantId": "KMck0YMG"
+   },
+   "away": {
+    "name": "Lu M. C./Hung E-T.",
+    "country": "Taïwan",
+    "fsParticipantId": "CUFdbCiT"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.04,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 5,
+      "closing": 5.3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "O6L40Pn4",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T20:45:00.000Z",
+   "home": {
+    "name": "Huang Y-H.",
+    "country": "Taïwan",
+    "fsParticipantId": "6TzQfFCs"
+   },
+   "away": {
+    "name": "Kjaersfeldt L. H.",
+    "country": "Danemark",
+    "fsParticipantId": "vsZXhgsf"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 3.12,
+      "closing": 3.35
+     },
+     "away": {
+      "opening": 1.19,
+      "closing": 1.16
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 3.25,
+      "closing": 3.2
+     },
+     "away": {
+      "opening": 1.2,
+      "closing": 1.15
+     }
+    }
+   }
+  },
+  {
+   "fsId": "bNtri0hg",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T21:20:00.000Z",
+   "home": {
+    "name": "Abian P.",
+    "country": "Espagne",
+    "fsParticipantId": "YaAKMU0b"
+   },
+   "away": {
+    "name": "Louda J.",
+    "country": "République Tchèque",
+    "fsParticipantId": "KG8SK8VA"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 23
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.05,
+      "closing": 2.25
+     },
+     "away": {
+      "opening": 1.52,
+      "closing": 1.35
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 2.02,
+      "closing": 2.17
+     },
+     "away": {
+      "opening": 1.5,
+      "closing": 1.43
+     }
+    }
+   }
+  },
+  {
+   "fsId": "MB8kb1A5",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T21:25:00.000Z",
+   "home": {
+    "name": "Lei L. X.",
+    "country": "Chine",
+    "fsParticipantId": "2LZf4fRk"
+   },
+   "away": {
+    "name": "Yang B.",
+    "country": "Canada",
+    "fsParticipantId": "8Ix32Ye2"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.38,
+      "closing": 1.38
+     },
+     "away": {
+      "opening": 2.4,
+      "closing": 2.15
+     }
+    }
+   }
+  },
+  {
+   "fsId": "6kweBt1M",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T22:05:00.000Z",
+   "home": {
+    "name": "Korosi A.",
+    "country": "Hongrie",
+    "fsParticipantId": "t2g2311T"
+   },
+   "away": {
+    "name": "Okuhara N.",
+    "country": "Japon",
+    "fsParticipantId": "xYvYcuPj"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 7,
+      "closing": 5.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 6.1,
+      "closing": 6.1
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "SvSe2oIi",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T22:05:00.000Z",
+   "home": {
+    "name": "Upadhyaya A.",
+    "country": "Inde",
+    "fsParticipantId": "Umc8xYdD"
+   },
+   "away": {
+    "name": "Darragh R.",
+    "country": "Irlande",
+    "fsParticipantId": "zopf0ykK"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.8,
+      "closing": 5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.25,
+      "closing": 5.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "nBHVayD6",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T22:20:00.000Z",
+   "home": {
+    "name": "Nidaira N.",
+    "country": "Japon",
+    "fsParticipantId": "zJsiBHd5"
+   },
+   "away": {
+    "name": "Setien A.",
+    "country": "Espagne",
+    "fsParticipantId": "rqoa9eRH"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 5.9,
+      "closing": 5.85
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.5,
+      "closing": 5.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "buImYeXG",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T22:40:00.000Z",
+   "home": {
+    "name": "Lock T./Hoang C.",
+    "country": "Canada",
+    "fsParticipantId": "2PZPzcx8"
+   },
+   "away": {
+    "name": "Chen Z. Y./Corbett F.",
+    "country": "USA",
+    "fsParticipantId": "UVD9r9eE"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 5.6,
+      "closing": 5.7
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.02
+     }
+    }
+   }
+  },
+  {
+   "fsId": "j3G13rvm",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T22:45:00.000Z",
+   "home": {
+    "name": "Jaiswal I.",
+    "country": "USA",
+    "fsParticipantId": "bJadxKr3"
+   },
+   "away": {
+    "name": "Hsu W. Ch.",
+    "country": "Taïwan",
+    "fsParticipantId": "4G24zbDF"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 6.25,
+      "closing": 6.25
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.02
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 5.7,
+      "closing": 5.7
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.02
+     }
+    }
+   }
+  },
+  {
+   "fsId": "nuc1wi9d",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T22:45:00.000Z",
+   "home": {
+    "name": "Zilberman M./Zilberman S.",
+    "country": "Israël",
+    "fsParticipantId": "MPG1kH8b"
+   },
+   "away": {
+    "name": "Jordan P./Kani S.",
+    "country": "Indonésie",
+    "fsParticipantId": "UkK9mewB"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 6.15,
+      "closing": 6.1
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 7,
+      "closing": 5.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "lpFEnenA",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T23:00:00.000Z",
+   "home": {
+    "name": "Mao A./Pang C. Y.",
+    "country": "Canada",
+    "fsParticipantId": "pQWTzIg5"
+   },
+   "away": {
+    "name": "Yuan J./Chang A.",
+    "country": "USA",
+    "fsParticipantId": "hjzxZeOH"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 6,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 6.15,
+      "closing": 6.1
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "lhFVo5GD",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T23:25:00.000Z",
+   "home": {
+    "name": "Shetty A.",
+    "country": "Inde",
+    "fsParticipantId": "SGrkOMK5"
+   },
+   "away": {
+    "name": "Watanabe K.",
+    "country": "Japon",
+    "fsParticipantId": "0UtcM0kI"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3.5,
+      "closing": 3.7
+     },
+     "away": {
+      "opening": 1.18,
+      "closing": 1.1
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 3.32,
+      "closing": 3.85
+     },
+     "away": {
+      "opening": 1.17,
+      "closing": 1.11
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ppIHa0wC",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T23:25:00.000Z",
+   "home": {
+    "name": "Li M.",
+    "country": "Canada",
+    "fsParticipantId": "GxejRgz2"
+   },
+   "away": {
+    "name": "Schulz A.",
+    "country": "Danemark",
+    "fsParticipantId": "8WsxkcS8"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.8,
+      "closing": 5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 5.3,
+      "closing": 5.4
+     }
+    }
+   }
+  },
+  {
+   "fsId": "dAIMpZGM",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T23:25:00.000Z",
+   "home": {
+    "name": "Jansen J. R./Nguyen Thuc Phuong",
+    "country": "Allemagne",
+    "fsParticipantId": "bmwpXZhU"
+   },
+   "away": {
+    "name": "Neumann K./Efler L.",
+    "country": "Allemagne",
+    "fsParticipantId": "EaDgiwvn"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.06
+     },
+     "away": {
+      "opening": 4.75,
+      "closing": 4.3
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.06,
+      "closing": 1.06
+     },
+     "away": {
+      "opening": 4.55,
+      "closing": 4.65
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OOG3ePUs",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-03T23:30:00.000Z",
+   "home": {
+    "name": "Toft J./Magelund A.",
+    "country": "Danemark",
+    "fsParticipantId": "QwXgTWj3"
+   },
+   "away": {
+    "name": "Chiu H. C./Lin J. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "Y3z2RALF"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 23,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.33,
+      "closing": 1.25
+     },
+     "away": {
+      "opening": 2.55,
+      "closing": 2.6
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.32,
+      "closing": 1.27
+     },
+     "away": {
+      "opening": 2.48,
+      "closing": 2.7
+     }
+    }
+   }
+  },
+  {
+   "fsId": "vLQtgMNt",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-04T00:05:00.000Z",
+   "home": {
+    "name": "Huang Y. K.",
+    "country": "Taïwan",
+    "fsParticipantId": "8fp5KvKU"
+   },
+   "away": {
+    "name": "Wangcharoen K.",
+    "country": "Thaïlande",
+    "fsParticipantId": "0nCCOjWo"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.3,
+      "closing": 2.3
+     },
+     "away": {
+      "opening": 1.42,
+      "closing": 1.33
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 2.22,
+      "closing": 2.37
+     },
+     "away": {
+      "opening": 1.41,
+      "closing": 1.35
+     }
+    }
+   }
+  },
+  {
+   "fsId": "WSW4cC0S",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-04T00:05:00.000Z",
+   "home": {
+    "name": "Ji M./Dent J.",
+    "country": "Canada",
+    "fsParticipantId": "801ShjFj"
+   },
+   "away": {
+    "name": "Dunn A./Macpherson J.",
+    "country": "Ecosse",
+    "fsParticipantId": "z7gEGg7c"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 5,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 6.15,
+      "closing": 6.1
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "0OYJQDPj",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-04T00:05:00.000Z",
+   "home": {
+    "name": "Chen O./Su L.",
+    "country": "Canada",
+    "fsParticipantId": "th6eZ4I0"
+   },
+   "away": {
+    "name": "Chen C. K./Hsu Y. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "E543XrmD"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 6.2,
+      "closing": 6.2
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "vT2m0p7k",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-04T00:10:00.000Z",
+   "home": {
+    "name": "Teh J. H. J.",
+    "country": "Singapour",
+    "fsParticipantId": "E7VUbm7r"
+   },
+   "away": {
+    "name": "Liao J.-F.",
+    "country": "Taïwan",
+    "fsParticipantId": "nLTxcRye"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.42,
+      "closing": 1.38
+     },
+     "away": {
+      "opening": 2.3,
+      "closing": 2.2
+     }
+    }
+   }
+  },
+  {
+   "fsId": "dKJCb3HG",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-04T00:40:00.000Z",
+   "home": {
+    "name": "Zhang W. Y.",
+    "country": "Canada",
+    "fsParticipantId": "n7xtiXB6"
+   },
+   "away": {
+    "name": "Buhrova P.",
+    "country": "Ukraine",
+    "fsParticipantId": "vFfmkBtJ"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 26,
+     "away": 24
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.22,
+      "closing": 1.26
+     },
+     "away": {
+      "opening": 2.95,
+      "closing": 2.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "t2IzhjOk",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-04T00:40:00.000Z",
+   "home": {
+    "name": "Voelker J. C./Lohau I.",
+    "country": "Allemagne",
+    "fsParticipantId": "rXdMEXyA"
+   },
+   "away": {
+    "name": "Ferdinansyah D./Widjaja G. E.",
+    "country": "Indonésie",
+    "fsParticipantId": "GpeUCB6M"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 5.4,
+      "closing": 5.1
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.04
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 6,
+      "closing": 4.75
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.03
+     }
+    }
+   }
+  },
+  {
+   "fsId": "2ctvFO1c",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-04T01:20:00.000Z",
+   "home": {
+    "name": "Svabikova T.",
+    "country": "République Tchèque",
+    "fsParticipantId": "SKdho2uo"
+   },
+   "away": {
+    "name": "Sandorhazi V.",
+    "country": "Hongrie",
+    "fsParticipantId": "fRlv95Xi"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3.25,
+      "closing": 2
+     },
+     "away": {
+      "opening": 1.2,
+      "closing": 1.48
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 3.12,
+      "closing": 2.03
+     },
+     "away": {
+      "opening": 1.19,
+      "closing": 1.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "UNbVDXp9",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-04T01:20:00.000Z",
+   "home": {
+    "name": "Chen L./Lee C. C.",
+    "country": "Chine",
+    "fsParticipantId": "xz2Z825l"
+   },
+   "away": {
+    "name": "Chiu V./Gai J.",
+    "country": "USA",
+    "fsParticipantId": "Am0s7tz1"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.45,
+      "closing": 1.38
+     },
+     "away": {
+      "opening": 2.2,
+      "closing": 2.2
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.44,
+      "closing": 1.39
+     },
+     "away": {
+      "opening": 2.14,
+      "closing": 2.28
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Uq0VoQXA",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2024-07-04T01:45:00.000Z",
+   "home": {
+    "name": "Takahashi K.",
+    "country": "Japon",
+    "fsParticipantId": "CABKRGre"
+   },
+   "away": {
+    "name": "Naraoka K.",
+    "country": "Japon",
+    "fsParticipantId": "KzFSPfD7"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 5.2,
+      "closing": 5.3
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.03
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 5.6,
+      "closing": 4.75
+     },
+     "away": {
+      "opening": 1.04,
+      "closing": 1.03
+     }
+    }
+   }
+  },
+  {
+   "fsId": "8CdwWd4C",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T16:05:00.000Z",
+   "home": {
+    "name": "Nishimoto K.",
+    "country": "Japon",
+    "fsParticipantId": "hh1WbD8r"
+   },
+   "away": {
+    "name": "Wang Z. X.",
+    "country": "Chine",
+    "fsParticipantId": "Qw5XIYaE"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.25,
+      "closing": 1.25
+     },
+     "away": {
+      "opening": 2.7,
+      "closing": 2.7
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.37,
+      "closing": 1.26
+     },
+     "away": {
+      "opening": 2.34,
+      "closing": 2.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "0jJnPRcJ",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T16:05:00.000Z",
+   "home": {
+    "name": "Nidaira N.",
+    "country": "Japon",
+    "fsParticipantId": "Ai4ZCeU1"
+   },
+   "away": {
+    "name": "Sung S. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "2oiLzaM8"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.5,
+      "closing": 1.35
+     },
+     "away": {
+      "opening": 2.1,
+      "closing": 2.3
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.48,
+      "closing": 1.36
+     },
+     "away": {
+      "opening": 2.06,
+      "closing": 2.34
+     }
+    }
+   }
+  },
+  {
+   "fsId": "lCsDBgBT",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T16:15:00.000Z",
+   "home": {
+    "name": "Su L. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "SIPMbyZA"
+   },
+   "away": {
+    "name": "Lanier A.",
+    "country": "France",
+    "fsParticipantId": "0WNUdF3N"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.75,
+      "closing": 1.58
+     },
+     "away": {
+      "opening": 1.75,
+      "closing": 1.85
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.72,
+      "closing": 1.59
+     },
+     "away": {
+      "opening": 1.72,
+      "closing": 1.88
+     }
+    }
+   }
+  },
+  {
+   "fsId": "f7sBPe9a",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T16:15:00.000Z",
+   "home": {
+    "name": "Smith P./Lee A. Q.",
+    "country": "USA",
+    "fsParticipantId": "nBv1mx6E"
+   },
+   "away": {
+    "name": "Chen Z. Y./Corbett F.",
+    "country": "USA",
+    "fsParticipantId": "KOx9oGzR"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.08
+     },
+     "away": {
+      "opening": 4.35,
+      "closing": 4.3
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.08,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.6,
+      "closing": 4.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "WbkpA1iM",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T17:00:00.000Z",
+   "home": {
+    "name": "Jakobsen J. D.",
+    "country": "Danemark",
+    "fsParticipantId": "8jzTEmP8"
+   },
+   "away": {
+    "name": "Kjaersfeldt L. H.",
+    "country": "Danemark",
+    "fsParticipantId": "GGwyDRgL"
+   },
+   "winner": "away",
+   "sets": [],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3.9,
+      "closing": 4
+     },
+     "away": {
+      "opening": 1.14,
+      "closing": 1.12
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 3.68,
+      "closing": 3.82
+     },
+     "away": {
+      "opening": 1.13,
+      "closing": 1.11
+     }
+    }
+   }
+  },
+  {
+   "fsId": "IqTE6y4D",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T17:05:00.000Z",
+   "home": {
+    "name": "Jansen J. R./Nguyen Thuc Phuong",
+    "country": "Allemagne",
+    "fsParticipantId": "6DvPvKy2"
+   },
+   "away": {
+    "name": "Chen L./Lee C. C.",
+    "country": "Chine",
+    "fsParticipantId": "b7RA2NT8"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 23
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.58,
+      "closing": 1.88
+     },
+     "away": {
+      "opening": 1.95,
+      "closing": 1.55
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.56,
+      "closing": 1.92
+     },
+     "away": {
+      "opening": 1.93,
+      "closing": 1.57
+     }
+    }
+   }
+  },
+  {
+   "fsId": "hQFvRmT6",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T17:10:00.000Z",
+   "home": {
+    "name": "Lu M. C./Hung E-T.",
+    "country": "Taïwan",
+    "fsParticipantId": "hhFeKwxS"
+   },
+   "away": {
+    "name": "Lai J. B. T./Lai C.",
+    "country": "Canada",
+    "fsParticipantId": "2R0REHak"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.05
+     },
+     "away": {
+      "opening": 4.4,
+      "closing": 4.4
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.08,
+      "closing": 1.05
+     },
+     "away": {
+      "opening": 4.25,
+      "closing": 4.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "U9HbAJ4l",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T17:35:00.000Z",
+   "home": {
+    "name": "Toft J./Magelund A.",
+    "country": "Danemark",
+    "fsParticipantId": "lfqVkpp3"
+   },
+   "away": {
+    "name": "Voelker J. C./Lohau I.",
+    "country": "Allemagne",
+    "fsParticipantId": "finwlOEF"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.68,
+      "closing": 1.46
+     },
+     "away": {
+      "opening": 1.77,
+      "closing": 2.1
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.7,
+      "closing": 1.45
+     },
+     "away": {
+      "opening": 1.8,
+      "closing": 2.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "zR2pveOh",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T18:05:00.000Z",
+   "home": {
+    "name": "Christiansen M./Boje A.",
+    "country": "Danemark",
+    "fsParticipantId": "820TwPYH"
+   },
+   "away": {
+    "name": "Dunn A./Macpherson J.",
+    "country": "Ecosse",
+    "fsParticipantId": "GS3yx33U"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.5,
+      "closing": 5.25
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 5.9,
+      "closing": 5.9
+     }
+    }
+   }
+  },
+  {
+   "fsId": "EcZ2RHvm",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T18:05:00.000Z",
+   "home": {
+    "name": "Yuan J./Chang A.",
+    "country": "USA",
+    "fsParticipantId": "Cvq7Rfqe"
+   },
+   "away": {
+    "name": "Jordan P./Kani S.",
+    "country": "Indonésie",
+    "fsParticipantId": "K4nFPYD7"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 23,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 23
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 5.5,
+      "closing": 5.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 6.1,
+      "closing": 6.05
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "xYNTKbR7",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T18:10:00.000Z",
+   "home": {
+    "name": "Lee K./Lindeman T. A.",
+    "country": "Canada",
+    "fsParticipantId": "Gh1ZS3Aj"
+   },
+   "away": {
+    "name": "Liu K. H./Yang P. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "8nlLj72c"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 5.8,
+      "closing": 6.75
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.01
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 5.3,
+      "closing": 5.95
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "b7pHTnlC",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T18:15:00.000Z",
+   "home": {
+    "name": "Teeraratsakul P./Muenwong P.",
+    "country": "Thaïlande",
+    "fsParticipantId": "8hw9863S"
+   },
+   "away": {
+    "name": "Chang Ko Ch./Yen Yu L.",
+    "country": "Taïwan",
+    "fsParticipantId": "vyUv3pRk"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.15,
+      "closing": 1.12
+     },
+     "away": {
+      "opening": 3.45,
+      "closing": 3.75
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.11,
+      "closing": 1.11
+     },
+     "away": {
+      "opening": 3.6,
+      "closing": 3.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "21MebVem",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T18:40:00.000Z",
+   "home": {
+    "name": "Antonsen A.",
+    "country": "Danemark",
+    "fsParticipantId": "EeR9q4o1"
+   },
+   "away": {
+    "name": "Nguyen N.",
+    "country": "Irlande",
+    "fsParticipantId": "n9PHsrGD"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.8,
+      "closing": 5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.3,
+      "closing": 5.55
+     }
+    }
+   }
+  },
+  {
+   "fsId": "GhWZDT7m",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T18:50:00.000Z",
+   "home": {
+    "name": "Zhang B.",
+    "country": "USA",
+    "fsParticipantId": "dAJY7s1M"
+   },
+   "away": {
+    "name": "Suizu M.",
+    "country": "Japon",
+    "fsParticipantId": "ShA42LOq"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.22,
+      "closing": 1.15
+     },
+     "away": {
+      "opening": 3,
+      "closing": 3.2
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.22,
+      "closing": 1.16
+     },
+     "away": {
+      "opening": 2.95,
+      "closing": 3.35
+     }
+    }
+   }
+  },
+  {
+   "fsId": "WfROUeCt",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T18:55:00.000Z",
+   "home": {
+    "name": "Garaga P./Sai Pratheek K.",
+    "country": "Inde",
+    "fsParticipantId": "Eq3qkXvA"
+   },
+   "away": {
+    "name": "Lin Bing-Wei/Su C. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "nc1imB9M"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2,
+      "closing": 2.25
+     },
+     "away": {
+      "opening": 1.48,
+      "closing": 1.35
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 2.14,
+      "closing": 2.3
+     },
+     "away": {
+      "opening": 1.45,
+      "closing": 1.38
+     }
+    }
+   }
+  },
+  {
+   "fsId": "KGc6CEdC",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T19:10:00.000Z",
+   "home": {
+    "name": "Astrup K./Rasmussen A. S.",
+    "country": "Danemark",
+    "fsParticipantId": "dQNBzYPG"
+   },
+   "away": {
+    "name": "Cui H. C./Peng J. Q.",
+    "country": "Chine",
+    "fsParticipantId": "4jRJYBfT"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.02,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5,
+      "closing": 5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.02,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.5,
+      "closing": 5.55
+     }
+    }
+   }
+  },
+  {
+   "fsId": "KvjrovYq",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T19:35:00.000Z",
+   "home": {
+    "name": "Ongbamrungphan B.",
+    "country": "Thaïlande",
+    "fsParticipantId": "KAeoiOpQ"
+   },
+   "away": {
+    "name": "Hemanth T.",
+    "country": "Inde",
+    "fsParticipantId": "jgnHo28m"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 5.3,
+      "closing": 5.3
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 5.8,
+      "closing": 5.8
+     }
+    }
+   }
+  },
+  {
+   "fsId": "YwWSFusR",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T19:45:00.000Z",
+   "home": {
+    "name": "Zhang W. Y.",
+    "country": "Canada",
+    "fsParticipantId": "lzgyU2Nq"
+   },
+   "away": {
+    "name": "Okuhara N.",
+    "country": "Japon",
+    "fsParticipantId": "MmiqSthd"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 9,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 5.1,
+      "closing": 5.5
+     },
+     "away": {
+      "opening": 1.04,
+      "closing": 1.02
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 5,
+      "closing": 5
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.02
+     }
+    }
+   }
+  },
+  {
+   "fsId": "tY84e73U",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T20:05:00.000Z",
+   "home": {
+    "name": "Iwanaga R./Nakanishi K.",
+    "country": "Japon",
+    "fsParticipantId": "df7HkFgl"
+   },
+   "away": {
+    "name": "Wang T. G./Wang Y. D.",
+    "country": "Chine",
+    "fsParticipantId": "U75PmgO0"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 26,
+     "away": 24
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.02,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.5,
+      "closing": 5.45
+     }
+    }
+   }
+  },
+  {
+   "fsId": "CKPApQgn",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T20:15:00.000Z",
+   "home": {
+    "name": "Rajawat P.",
+    "country": "Inde",
+    "fsParticipantId": "vR4U2aG7"
+   },
+   "away": {
+    "name": "Obayashi T.",
+    "country": "Japon",
+    "fsParticipantId": "6XdGQ28E"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.35,
+      "closing": 1.4
+     },
+     "away": {
+      "opening": 2.5,
+      "closing": 2.15
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.33,
+      "closing": 1.41
+     },
+     "away": {
+      "opening": 2.45,
+      "closing": 2.22
+     }
+    }
+   }
+  },
+  {
+   "fsId": "xCxKH1CE",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T20:25:00.000Z",
+   "home": {
+    "name": "Wangcharoen K.",
+    "country": "Thaïlande",
+    "fsParticipantId": "dKSelX8b"
+   },
+   "away": {
+    "name": "Watanabe K.",
+    "country": "Japon",
+    "fsParticipantId": "ryR3nBwB"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 3.92,
+      "closing": 3.92
+     },
+     "away": {
+      "opening": 1.1,
+      "closing": 1.1
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 4.2,
+      "closing": 3.7
+     },
+     "away": {
+      "opening": 1.11,
+      "closing": 1.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "zZA0aUhf",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T20:25:00.000Z",
+   "home": {
+    "name": "Christophersen L.",
+    "country": "Danemark",
+    "fsParticipantId": "Gx9SiVAO"
+   },
+   "away": {
+    "name": "Lam L.",
+    "country": "USA",
+    "fsParticipantId": "WlqxCYet"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.13,
+      "closing": 1.12
+     },
+     "away": {
+      "opening": 4,
+      "closing": 3.4
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.12,
+      "closing": 1.13
+     },
+     "away": {
+      "opening": 3.78,
+      "closing": 3.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "tQKbzh6K",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T21:05:00.000Z",
+   "home": {
+    "name": "Tanaka Y.",
+    "country": "Japon",
+    "fsParticipantId": "l4E89MN9"
+   },
+   "away": {
+    "name": "Yang B.",
+    "country": "Canada",
+    "fsParticipantId": "dUHG70hM"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.75,
+      "closing": 1.58
+     },
+     "away": {
+      "opening": 1.75,
+      "closing": 1.82
+     }
+    }
+   }
+  },
+  {
+   "fsId": "GCfCj0AM",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T21:10:00.000Z",
+   "home": {
+    "name": "Leung D./Lock T.",
+    "country": "Canada",
+    "fsParticipantId": "fkehVtO6"
+   },
+   "away": {
+    "name": "Kjaer R./Sogaard F.",
+    "country": "Danemark",
+    "fsParticipantId": "S2g0TKhJ"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 7,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 6.25,
+      "closing": 6.25
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 7,
+      "closing": 7
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "nqRaZQwH",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T21:20:02.000Z",
+   "home": {
+    "name": "Liao J.-F.",
+    "country": "Taïwan",
+    "fsParticipantId": "SbkemoPc"
+   },
+   "away": {
+    "name": "Naraoka K.",
+    "country": "Japon",
+    "fsParticipantId": "zPh3oPgA"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 7,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 6,
+      "closing": 5.5
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "6XmPRQIO",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T21:30:00.000Z",
+   "home": {
+    "name": "Louda J.",
+    "country": "République Tchèque",
+    "fsParticipantId": "Wrnn1Oe2"
+   },
+   "away": {
+    "name": "Ng Ka L. A.",
+    "country": "Hong Kong",
+    "fsParticipantId": "Q5LV8zF8"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 7,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3.6,
+      "closing": 3.6
+     },
+     "away": {
+      "opening": 1.16,
+      "closing": 1.11
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 3.45,
+      "closing": 3.78
+     },
+     "away": {
+      "opening": 1.15,
+      "closing": 1.12
+     }
+    }
+   }
+  },
+  {
+   "fsId": "QyB78cZ0",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T21:40:00.000Z",
+   "home": {
+    "name": "Sandorhazi V.",
+    "country": "Hongrie",
+    "fsParticipantId": "S4pon2qS"
+   },
+   "away": {
+    "name": "Hsu W. Ch.",
+    "country": "Taïwan",
+    "fsParticipantId": "bmyHtt7k"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 6.5,
+      "closing": 5.25
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 5.8,
+      "closing": 5.9
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OdhlrxkU",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T22:00:00.000Z",
+   "home": {
+    "name": "Sondergaard A./Toft J.",
+    "country": "Danemark",
+    "fsParticipantId": "Clxqv8ET"
+   },
+   "away": {
+    "name": "Jansen J. R./Neumann K.",
+    "country": "Allemagne",
+    "fsParticipantId": "MNNEYoxi"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.02,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.25,
+      "closing": 5.25
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.02,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.7,
+      "closing": 5.65
+     }
+    }
+   }
+  },
+  {
+   "fsId": "QH4cEzSa",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T22:00:00.000Z",
+   "home": {
+    "name": "Hsu Y. H./Lin J. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "GnMevGQi"
+   },
+   "away": {
+    "name": "Xu A./Xu K.",
+    "country": "USA",
+    "fsParticipantId": "l0K3xfe4"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.28,
+      "closing": 1.28
+     },
+     "away": {
+      "opening": 2.5,
+      "closing": 2.45
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.29,
+      "closing": 1.3
+     },
+     "away": {
+      "opening": 2.6,
+      "closing": 2.55
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Ii1kGdcm",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T22:15:00.000Z",
+   "home": {
+    "name": "Anthonisen N. P./Tirtosentono A.",
+    "country": "Danemark",
+    "fsParticipantId": "YFOvMYAN"
+   },
+   "away": {
+    "name": "Jolly T./Pullela G. G.",
+    "country": "Inde",
+    "fsParticipantId": "4bFAGCYp"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 7,
+     "away": 21
+    },
+    {
+     "home": 8,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 5,
+      "closing": 5
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.02
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 5.5,
+      "closing": 5.5
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.02
+     }
+    }
+   }
+  },
+  {
+   "fsId": "t0qP6q34",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T22:20:00.000Z",
+   "home": {
+    "name": "Sukphun P./Teeraratsakul P.",
+    "country": "Thaïlande",
+    "fsParticipantId": "SI5PNp8r"
+   },
+   "away": {
+    "name": "Grimley C./Grimley M.",
+    "country": "Ecosse",
+    "fsParticipantId": "0W3XLOxe"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.15,
+      "closing": 1.04
+     },
+     "away": {
+      "opening": 3.45,
+      "closing": 4.95
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.16,
+      "closing": 1.04
+     },
+     "away": {
+      "opening": 3.6,
+      "closing": 4.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "6eWq6cHk",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T22:45:00.000Z",
+   "home": {
+    "name": "Kanlaha L./Muenwong P.",
+    "country": "Thaïlande",
+    "fsParticipantId": "COrqVsDc"
+   },
+   "away": {
+    "name": "Lee C. C./Yen Yu L.",
+    "country": "Taïwan",
+    "fsParticipantId": "pxsiTLsA"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.06,
+      "closing": 1.06
+     },
+     "away": {
+      "opening": 5.25,
+      "closing": 5.25
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.04,
+      "closing": 1.05
+     },
+     "away": {
+      "opening": 4.95,
+      "closing": 4.85
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OnZRLD8O",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T23:05:00.000Z",
+   "home": {
+    "name": "Li M.",
+    "country": "Canada",
+    "fsParticipantId": "dnufxCcD"
+   },
+   "away": {
+    "name": "Upadhyaya A.",
+    "country": "Inde",
+    "fsParticipantId": "MRe5qT4t"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.13,
+      "closing": 1.14
+     },
+     "away": {
+      "opening": 3.68,
+      "closing": 3.58
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.14,
+      "closing": 1.14
+     },
+     "away": {
+      "opening": 3.9,
+      "closing": 3.3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "hYoQRj1N",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T23:05:00.000Z",
+   "home": {
+    "name": "Keng S. L./Zhang C.",
+    "country": "Chine",
+    "fsParticipantId": "YZx7Hw1l"
+   },
+   "away": {
+    "name": "Dent J./Lai C.",
+    "country": "Canada",
+    "fsParticipantId": "6myFFHV0"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.7,
+      "closing": 5.7
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 5.25,
+      "closing": 5.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "GQZp5aPF",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T23:15:00.000Z",
+   "home": {
+    "name": "Chen O./Mao A.",
+    "country": "Canada",
+    "fsParticipantId": "zN5bogE4"
+   },
+   "away": {
+    "name": "Lane B./Vendy S.",
+    "country": "Angleterre",
+    "fsParticipantId": "rm96qXrH"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 9,
+     "away": 21
+    },
+    {
+     "home": 5,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 6.25,
+      "closing": 6.25
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 7,
+      "closing": 7
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "vLUWSZtg",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T23:25:00.000Z",
+   "home": {
+    "name": "Corbett F./Lee A. Q.",
+    "country": "USA",
+    "fsParticipantId": "IuhNskXq"
+   },
+   "away": {
+    "name": "Efler L./Macpherson J.",
+    "country": "Allemagne",
+    "fsParticipantId": "OxeVuT1d"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 23
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.37,
+      "closing": 1.43
+     },
+     "away": {
+      "opening": 2.34,
+      "closing": 2.17
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.35,
+      "closing": 1.42
+     },
+     "away": {
+      "opening": 2.3,
+      "closing": 2.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "hUeEAhRO",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T23:40:00.000Z",
+   "home": {
+    "name": "Lohau I./Nguyen Thuc Phuong",
+    "country": "Allemagne",
+    "fsParticipantId": "0MCkTkIj"
+   },
+   "away": {
+    "name": "Fruergaard M./Thygesen S.",
+    "country": "Danemark",
+    "fsParticipantId": "6JayigAc"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 4.4,
+      "closing": 4
+     },
+     "away": {
+      "opening": 1.05,
+      "closing": 1.07
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 4.75,
+      "closing": 4.4
+     },
+     "away": {
+      "opening": 1.05,
+      "closing": 1.07
+     }
+    }
+   }
+  },
+  {
+   "fsId": "xttEBJgS",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-04T23:55:00.000Z",
+   "home": {
+    "name": "Mitsuhashi K./Okamura H.",
+    "country": "Japon",
+    "fsParticipantId": "G20RC0cT"
+   },
+   "away": {
+    "name": "Chang Ko Ch./Chen X.",
+    "country": "Taïwan",
+    "fsParticipantId": "noic7vLj"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.44,
+      "closing": 1.26
+     },
+     "away": {
+      "opening": 2.14,
+      "closing": 2.72
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.42,
+      "closing": 1.25
+     },
+     "away": {
+      "opening": 2.1,
+      "closing": 2.65
+     }
+    }
+   }
+  },
+  {
+   "fsId": "p8rITCWA",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2024-07-05T00:15:00.000Z",
+   "home": {
+    "name": "Hsieh P. S./Hung E-T.",
+    "country": "Taïwan",
+    "fsParticipantId": "GzlTOL8E"
+   },
+   "away": {
+    "name": "Hirokami R./Kato Y.",
+    "country": "Japon",
+    "fsParticipantId": "2inyNawR"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 3.12,
+      "closing": 3.22
+     },
+     "away": {
+      "opening": 1.19,
+      "closing": 1.18
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 3.3,
+      "closing": 3.3
+     },
+     "away": {
+      "opening": 1.2,
+      "closing": 1.2
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OCdzKSx3",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T16:05:00.000Z",
+   "home": {
+    "name": "Christiansen M./Boje A.",
+    "country": "Danemark",
+    "fsParticipantId": "65xTOjk2"
+   },
+   "away": {
+    "name": "Teeraratsakul P./Muenwong P.",
+    "country": "Thaïlande",
+    "fsParticipantId": "YBUEnfs9"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.11
+     },
+     "away": {
+      "opening": 4.15,
+      "closing": 3.88
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.11
+     },
+     "away": {
+      "opening": 4.4,
+      "closing": 3.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "l81ygAt9",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T16:10:00.000Z",
+   "home": {
+    "name": "Chen C. K./Hsu Y. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "8SPZDhKO"
+   },
+   "away": {
+    "name": "Chen L./Lee C. C.",
+    "country": "Chine",
+    "fsParticipantId": "bi5qYe5t"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 26,
+     "away": 24
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.51,
+      "closing": 1.65
+     },
+     "away": {
+      "opening": 2,
+      "closing": 1.81
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.55,
+      "closing": 1.62
+     },
+     "away": {
+      "opening": 2.05,
+      "closing": 1.78
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ARNg7kgc",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T16:15:00.000Z",
+   "home": {
+    "name": "Yuan J./Chang A.",
+    "country": "USA",
+    "fsParticipantId": "27p9xGI8"
+   },
+   "away": {
+    "name": "Toft J./Magelund A.",
+    "country": "Danemark",
+    "fsParticipantId": "zLrHzfmL"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 5.9,
+      "closing": 6
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 5.5,
+      "closing": 5.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "tC1cJEb5",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T16:50:00.000Z",
+   "home": {
+    "name": "Tanaka Y.",
+    "country": "Japon",
+    "fsParticipantId": "OxTXlfM6"
+   },
+   "away": {
+    "name": "Ng Ka L. A.",
+    "country": "Hong Kong",
+    "fsParticipantId": "djRumYjJ"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 23,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.15,
+      "closing": 2.37
+     },
+     "away": {
+      "opening": 1.44,
+      "closing": 1.35
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 2.2,
+      "closing": 2.3
+     },
+     "away": {
+      "opening": 1.45,
+      "closing": 1.33
+     }
+    }
+   }
+  },
+  {
+   "fsId": "jsgkWXG5",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T16:55:00.000Z",
+   "home": {
+    "name": "Smith P./Lee A. Q.",
+    "country": "USA",
+    "fsParticipantId": "YJUX6kW0"
+   },
+   "away": {
+    "name": "Lu M. C./Hung E-T.",
+    "country": "Taïwan",
+    "fsParticipantId": "KzTu5T0D"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.29,
+      "closing": 1.37
+     },
+     "away": {
+      "opening": 2.6,
+      "closing": 2.32
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.3,
+      "closing": 1.35
+     },
+     "away": {
+      "opening": 2.7,
+      "closing": 2.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "W4EpquqJ",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T17:00:00.000Z",
+   "home": {
+    "name": "Nishimoto K.",
+    "country": "Japon",
+    "fsParticipantId": "6cIPdMFM"
+   },
+   "away": {
+    "name": "Lanier A.",
+    "country": "France",
+    "fsParticipantId": "2T3ei0wp"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.2,
+      "closing": 1.2
+     },
+     "away": {
+      "opening": 3.25,
+      "closing": 2.9
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.19,
+      "closing": 1.2
+     },
+     "away": {
+      "opening": 3.12,
+      "closing": 3.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ldV74nBd",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T17:30:00.000Z",
+   "home": {
+    "name": "Nidaira N.",
+    "country": "Japon",
+    "fsParticipantId": "Sl6mvWLG"
+   },
+   "away": {
+    "name": "Kjaersfeldt L. H.",
+    "country": "Danemark",
+    "fsParticipantId": "024exAjT"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 22,
+     "away": 24
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.85,
+      "closing": 1.82
+     },
+     "away": {
+      "opening": 1.62,
+      "closing": 1.64
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.88,
+      "closing": 1.78
+     },
+     "away": {
+      "opening": 1.65,
+      "closing": 1.62
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OITqByle",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T17:45:00.000Z",
+   "home": {
+    "name": "Antonsen A.",
+    "country": "Danemark",
+    "fsParticipantId": "8Ep2gaSk"
+   },
+   "away": {
+    "name": "Rajawat P.",
+    "country": "Inde",
+    "fsParticipantId": "ttb9iwc2"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.06
+     },
+     "away": {
+      "opening": 4.4,
+      "closing": 4.2
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.15,
+      "closing": 4.45
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Qy7L4fSE",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T17:50:00.000Z",
+   "home": {
+    "name": "Watanabe K.",
+    "country": "Japon",
+    "fsParticipantId": "A5TOlQYb"
+   },
+   "away": {
+    "name": "Naraoka K.",
+    "country": "Japon",
+    "fsParticipantId": "2DoWn43B"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3,
+      "closing": 2.8
+     },
+     "away": {
+      "opening": 1.25,
+      "closing": 1.22
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 2.88,
+      "closing": 2.88
+     },
+     "away": {
+      "opening": 1.23,
+      "closing": 1.23
+     }
+    }
+   }
+  },
+  {
+   "fsId": "4nIfKlph",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T18:30:00.000Z",
+   "home": {
+    "name": "Lin Bing-Wei/Su C. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "YBrCLj85"
+   },
+   "away": {
+    "name": "Lane B./Vendy S.",
+    "country": "Angleterre",
+    "fsParticipantId": "6PtKJUxI"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 4.2,
+      "closing": 3.7
+     },
+     "away": {
+      "opening": 1.11,
+      "closing": 1.1
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 3.98,
+      "closing": 3.88
+     },
+     "away": {
+      "opening": 1.1,
+      "closing": 1.11
+     }
+    }
+   }
+  },
+  {
+   "fsId": "xrmbs0Uj",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T19:10:00.000Z",
+   "home": {
+    "name": "Liu K. H./Yang P. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "CEsRxQvB"
+   },
+   "away": {
+    "name": "Kjaer R./Sogaard F.",
+    "country": "Danemark",
+    "fsParticipantId": "KvoZz49N"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.25,
+      "closing": 2.29
+     },
+     "away": {
+      "opening": 1.4,
+      "closing": 1.38
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 2.3,
+      "closing": 2.25
+     },
+     "away": {
+      "opening": 1.42,
+      "closing": 1.38
+     }
+    }
+   }
+  },
+  {
+   "fsId": "46tXdLnR",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T19:20:00.000Z",
+   "home": {
+    "name": "Astrup K./Rasmussen A. S.",
+    "country": "Danemark",
+    "fsParticipantId": "ruDkcXWG"
+   },
+   "away": {
+    "name": "Sondergaard A./Toft J.",
+    "country": "Danemark",
+    "fsParticipantId": "j5GceB1T"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 27,
+     "away": 25
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.13,
+      "closing": 1.09
+     },
+     "away": {
+      "opening": 3.68,
+      "closing": 4.1
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.14,
+      "closing": 1.08
+     },
+     "away": {
+      "opening": 3.9,
+      "closing": 3.9
+     }
+    }
+   }
+  },
+  {
+   "fsId": "pQqxx5hB",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T19:30:00.000Z",
+   "home": {
+    "name": "Zhang B.",
+    "country": "USA",
+    "fsParticipantId": "d8jOwi7E"
+   },
+   "away": {
+    "name": "Lam L.",
+    "country": "USA",
+    "fsParticipantId": "lG8VyVyR"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.04,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.6,
+      "closing": 5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.04,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 5.1,
+      "closing": 5.35
+     }
+    }
+   }
+  },
+  {
+   "fsId": "dGweJNHl",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T20:05:00.000Z",
+   "home": {
+    "name": "Hsu Y. H./Lin J. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "E7o7zSPq"
+   },
+   "away": {
+    "name": "Lohau I./Nguyen Thuc Phuong",
+    "country": "Allemagne",
+    "fsParticipantId": "MXlFY5fd"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.38,
+      "closing": 1.42
+     },
+     "away": {
+      "opening": 2.4,
+      "closing": 2.05
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.37,
+      "closing": 1.45
+     },
+     "away": {
+      "opening": 2.34,
+      "closing": 2.12
+     }
+    }
+   }
+  },
+  {
+   "fsId": "jwaUXMWs",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T20:10:50.000Z",
+   "home": {
+    "name": "Hsieh P. S./Hung E-T.",
+    "country": "Taïwan",
+    "fsParticipantId": "WIxl7Q0L"
+   },
+   "away": {
+    "name": "Jolly T./Pullela G. G.",
+    "country": "Inde",
+    "fsParticipantId": "SlOJ14Or"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 5.4,
+      "closing": 5.05
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.04
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 4.6,
+      "closing": 4.6
+     },
+     "away": {
+      "opening": 1.04,
+      "closing": 1.04
+     }
+    }
+   }
+  },
+  {
+   "fsId": "MTsDDqSq",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T20:15:00.000Z",
+   "home": {
+    "name": "Hsu W. Ch.",
+    "country": "Taïwan",
+    "fsParticipantId": "tzicEV6F"
+   },
+   "away": {
+    "name": "Okuhara N.",
+    "country": "Japon",
+    "fsParticipantId": "Emk5C9yS"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 9,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.95,
+      "closing": 2.25
+     },
+     "away": {
+      "opening": 1.58,
+      "closing": 1.35
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.93,
+      "closing": 2.3
+     },
+     "away": {
+      "opening": 1.56,
+      "closing": 1.38
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Cr2OOqfR",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T21:05:00.000Z",
+   "home": {
+    "name": "Ongbamrungphan B.",
+    "country": "Thaïlande",
+    "fsParticipantId": "CvcTsAX9"
+   },
+   "away": {
+    "name": "Li M.",
+    "country": "Canada",
+    "fsParticipantId": "Iy0ytl2M"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.38,
+      "closing": 1.35
+     },
+     "away": {
+      "opening": 2.4,
+      "closing": 2.25
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.37,
+      "closing": 1.38
+     },
+     "away": {
+      "opening": 2.34,
+      "closing": 2.3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "rXy3H1n1",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T21:15:00.000Z",
+   "home": {
+    "name": "Kanlaha L./Muenwong P.",
+    "country": "Thaïlande",
+    "fsParticipantId": "lvs1d9n3"
+   },
+   "away": {
+    "name": "Efler L./Macpherson J.",
+    "country": "Allemagne",
+    "fsParticipantId": "Miu9fmHF"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.04
+     },
+     "away": {
+      "opening": 4.15,
+      "closing": 5.05
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.04
+     },
+     "away": {
+      "opening": 4.4,
+      "closing": 4.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "vaVBFuHD",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T22:25:00.000Z",
+   "home": {
+    "name": "Mitsuhashi K./Okamura H.",
+    "country": "Japon",
+    "fsParticipantId": "fJhGhRoS"
+   },
+   "away": {
+    "name": "Grimley C./Grimley M.",
+    "country": "Ecosse",
+    "fsParticipantId": "Q1qnm59k"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.23,
+      "closing": 1.18
+     },
+     "away": {
+      "opening": 2.85,
+      "closing": 3.2
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.25,
+      "closing": 1.16
+     },
+     "away": {
+      "opening": 3,
+      "closing": 3.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "489gT4pK",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2024-07-05T23:10:00.000Z",
+   "home": {
+    "name": "Iwanaga R./Nakanishi K.",
+    "country": "Japon",
+    "fsParticipantId": "CKQAHxzp"
+   },
+   "away": {
+    "name": "Keng S. L./Zhang C.",
+    "country": "Chine",
+    "fsParticipantId": "KpUIFG4d"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.1,
+      "closing": 1.11
+     },
+     "away": {
+      "opening": 3.92,
+      "closing": 3.92
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.11,
+      "closing": 1.1
+     },
+     "away": {
+      "opening": 4.2,
+      "closing": 3.7
+     }
+    }
+   }
+  },
+  {
+   "fsId": "KtmW9Bup",
+   "disc": "XD",
+   "round": "Demi-finales",
+   "startUtc": "2024-07-06T16:05:00.000Z",
+   "home": {
+    "name": "Chen C. K./Hsu Y. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "GxZEH0TP"
+   },
+   "away": {
+    "name": "Toft J./Magelund A.",
+    "country": "Danemark",
+    "fsParticipantId": "C8KpCvim"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 4.15,
+      "closing": 4.45
+     },
+     "away": {
+      "opening": 1.09,
+      "closing": 1.07
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 4.4,
+      "closing": 4.2
+     },
+     "away": {
+      "opening": 1.1,
+      "closing": 1.06
+     }
+    }
+   }
+  },
+  {
+   "fsId": "zkm1pDYg",
+   "disc": "XD",
+   "round": "Demi-finales",
+   "startUtc": "2024-07-06T16:50:00.000Z",
+   "home": {
+    "name": "Christiansen M./Boje A.",
+    "country": "Danemark",
+    "fsParticipantId": "O4732qtC"
+   },
+   "away": {
+    "name": "Lu M. C./Hung E-T.",
+    "country": "Taïwan",
+    "fsParticipantId": "U3ZzpyQp"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 4
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.02,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.5,
+      "closing": 5.65
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 6,
+      "closing": 5.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "dGggCytf",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "startUtc": "2024-07-06T17:40:00.000Z",
+   "home": {
+    "name": "Rajawat P.",
+    "country": "Inde",
+    "fsParticipantId": "6PzEkt8L"
+   },
+   "away": {
+    "name": "Lanier A.",
+    "country": "France",
+    "fsParticipantId": "GbMqpKVr"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.51,
+      "closing": 1.49
+     },
+     "away": {
+      "opening": 2,
+      "closing": 2.04
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.55,
+      "closing": 1.48
+     },
+     "away": {
+      "opening": 2.05,
+      "closing": 2
+     }
+    }
+   }
+  },
+  {
+   "fsId": "jDmyNhfC",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "startUtc": "2024-07-06T18:00:00.000Z",
+   "home": {
+    "name": "Tanaka Y.",
+    "country": "Japon",
+    "fsParticipantId": "GfndPbC6"
+   },
+   "away": {
+    "name": "Watanabe K.",
+    "country": "Japon",
+    "fsParticipantId": "OKk4NxsJ"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.06,
+      "closing": 1.84
+     },
+     "away": {
+      "opening": 1.48,
+      "closing": 1.62
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 2.1,
+      "closing": 1.8
+     },
+     "away": {
+      "opening": 1.5,
+      "closing": 1.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "IRguXGw3",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "startUtc": "2024-07-06T18:30:00.000Z",
+   "home": {
+    "name": "Astrup K./Rasmussen A. S.",
+    "country": "Danemark",
+    "fsParticipantId": "AwoYS9Fc"
+   },
+   "away": {
+    "name": "Mitsuhashi K./Okamura H.",
+    "country": "Japon",
+    "fsParticipantId": "I3ltRmpA"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.1,
+      "closing": 1.14
+     },
+     "away": {
+      "opening": 3.92,
+      "closing": 3.58
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.11,
+      "closing": 1.13
+     },
+     "away": {
+      "opening": 4.2,
+      "closing": 3.4
+     }
+    }
+   }
+  },
+  {
+   "fsId": "j9elXizA",
+   "disc": "WS",
+   "round": "Demi-finales",
+   "startUtc": "2024-07-06T19:30:00.000Z",
+   "home": {
+    "name": "Kjaersfeldt L. H.",
+    "country": "Danemark",
+    "fsParticipantId": "rk6movpm"
+   },
+   "away": {
+    "name": "Okuhara N.",
+    "country": "Japon",
+    "fsParticipantId": "ln9eqIEa"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.92,
+      "closing": 3.48
+     },
+     "away": {
+      "opening": 1.22,
+      "closing": 1.15
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 3,
+      "closing": 3.3
+     },
+     "away": {
+      "opening": 1.22,
+      "closing": 1.14
+     }
+    }
+   }
+  },
+  {
+   "fsId": "MZOtcKht",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "startUtc": "2024-07-06T20:40:00.000Z",
+   "home": {
+    "name": "Lane B./Vendy S.",
+    "country": "Angleterre",
+    "fsParticipantId": "Y7A9YWP0"
+   },
+   "away": {
+    "name": "Kjaer R./Sogaard F.",
+    "country": "Danemark",
+    "fsParticipantId": "tYDHWAfD"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.8,
+      "closing": 1.78
+     },
+     "away": {
+      "opening": 1.7,
+      "closing": 1.62
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.77,
+      "closing": 1.81
+     },
+     "away": {
+      "opening": 1.68,
+      "closing": 1.65
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ld57t3fe",
+   "disc": "WS",
+   "round": "Demi-finales",
+   "startUtc": "2024-07-06T21:25:00.000Z",
+   "home": {
+    "name": "Zhang B.",
+    "country": "USA",
+    "fsParticipantId": "4pKq5Yhm"
+   },
+   "away": {
+    "name": "Ongbamrungphan B.",
+    "country": "Thaïlande",
+    "fsParticipantId": "j1Ii3CNa"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.5,
+      "closing": 1.45
+     },
+     "away": {
+      "opening": 2.1,
+      "closing": 2
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.48,
+      "closing": 1.48
+     },
+     "away": {
+      "opening": 2.06,
+      "closing": 2.07
+     }
+    }
+   }
+  },
+  {
+   "fsId": "nq7YK4o1",
+   "disc": "WD",
+   "round": "Demi-finales",
+   "startUtc": "2024-07-06T22:15:00.000Z",
+   "home": {
+    "name": "Iwanaga R./Nakanishi K.",
+    "country": "Japon",
+    "fsParticipantId": "8CLAtwtn"
+   },
+   "away": {
+    "name": "Kanlaha L./Muenwong P.",
+    "country": "Thaïlande",
+    "fsParticipantId": "GxPIvHAb"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.1
+     },
+     "away": {
+      "opening": 4.4,
+      "closing": 3.7
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.1
+     },
+     "away": {
+      "opening": 4.15,
+      "closing": 3.92
+     }
+    }
+   }
+  },
+  {
+   "fsId": "CteXWrtR",
+   "disc": "WD",
+   "round": "Demi-finales",
+   "startUtc": "2024-07-06T23:05:00.000Z",
+   "home": {
+    "name": "Hsieh P. S./Hung E-T.",
+    "country": "Taïwan",
+    "fsParticipantId": "CbB8iz8C"
+   },
+   "away": {
+    "name": "Hsu Y. H./Lin J. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "pC9GkExP"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.45,
+      "closing": 2.45
+     },
+     "away": {
+      "opening": 1.3,
+      "closing": 1.3
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 2.95,
+      "closing": 2.5
+     },
+     "away": {
+      "opening": 1.22,
+      "closing": 1.32
+     }
+    }
+   }
+  },
+  {
+   "fsId": "QyqQr7BT",
+   "disc": "XD",
+   "round": "Finale",
+   "startUtc": "2024-07-07T16:05:00.000Z",
+   "home": {
+    "name": "Christiansen M./Boje A.",
+    "country": "Danemark",
+    "fsParticipantId": "hnxtnAbJ"
+   },
+   "away": {
+    "name": "Toft J./Magelund A.",
+    "country": "Danemark",
+    "fsParticipantId": "KhGPgMHP"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 22,
+     "away": 24
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 5.8,
+      "closing": 4.75
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 5.3,
+      "closing": 5.3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "KWZaoJan",
+   "disc": "WS",
+   "round": "Finale",
+   "startUtc": "2024-07-07T17:20:00.000Z",
+   "home": {
+    "name": "Ongbamrungphan B.",
+    "country": "Thaïlande",
+    "fsParticipantId": "ANvYAsJ5"
+   },
+   "away": {
+    "name": "Kjaersfeldt L. H.",
+    "country": "Danemark",
+    "fsParticipantId": "2Vdu9LmI"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.3,
+      "closing": 1.28
+     },
+     "away": {
+      "opening": 2.65,
+      "closing": 2.5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.29,
+      "closing": 1.29
+     },
+     "away": {
+      "opening": 2.6,
+      "closing": 2.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "b722BCIF",
+   "disc": "MD",
+   "round": "Finale",
+   "startUtc": "2024-07-07T18:25:00.000Z",
+   "home": {
+    "name": "Astrup K./Rasmussen A. S.",
+    "country": "Danemark",
+    "fsParticipantId": "6LG8yJjD"
+   },
+   "away": {
+    "name": "Lane B./Vendy S.",
+    "country": "Angleterre",
+    "fsParticipantId": "YR8faMrK"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.16,
+      "closing": 1.14
+     },
+     "away": {
+      "opening": 3.6,
+      "closing": 3.3
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.15,
+      "closing": 1.15
+     },
+     "away": {
+      "opening": 3.45,
+      "closing": 3.42
+     }
+    }
+   }
+  },
+  {
+   "fsId": "COkqpqw0",
+   "disc": "WD",
+   "round": "Finale",
+   "startUtc": "2024-07-07T19:35:00.000Z",
+   "home": {
+    "name": "Iwanaga R./Nakanishi K.",
+    "country": "Japon",
+    "fsParticipantId": "CvHz0lVF"
+   },
+   "away": {
+    "name": "Hsu Y. H./Lin J. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "K4KrbSaS"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 5.5,
+      "closing": 4.75
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.04,
+      "closing": 1.04
+     },
+     "away": {
+      "opening": 4.95,
+      "closing": 5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "6saGNxEF",
+   "disc": "MS",
+   "round": "Finale",
+   "startUtc": "2024-07-07T20:35:00.000Z",
+   "home": {
+    "name": "Lanier A.",
+    "country": "France",
+    "fsParticipantId": "zc8hhGNh"
+   },
+   "away": {
+    "name": "Watanabe K.",
+    "country": "Japon",
+    "fsParticipantId": "8A60jfh5"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 6,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.5,
+      "closing": 2.2
+     },
+     "away": {
+      "opening": 1.35,
+      "closing": 1.38
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 2.45,
+      "closing": 2.27
+     },
+     "away": {
+      "opening": 1.33,
+      "closing": 1.39
+     }
+    }
+   }
+  }
+ ]
+}
