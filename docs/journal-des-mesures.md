@@ -1,6 +1,6 @@
 # Journal des mesures
 
-**Dernière mise à jour :** 2026-08-04 (§8.3)
+**Dernière mise à jour :** 2026-08-10 (§9)
 
 Ce document consigne **tout ce qui a été mesuré**, avec les chiffres, la méthode et
 le moyen de le refaire. Il existe pour une raison précise : ne pas retester ce qui
@@ -18,6 +18,8 @@ npm run build-data      # régénère les données de l'app
 node measures/mesure-gymnase-3sets.mjs   # effet gymnase sur les 3 sets (§7)
 node measures/mesure-terrain.mjs         # avantage du terrain (§2.6)
 node measures/mesure-ecart-points.mjs    # écart de points, étape 1 (§2.7)
+node measures/mesure-roi-modele.mjs      # BANC D'ESSAI du modèle (§9) — après build-data
+node measures/mesure-calibration-tranches.mjs  # calibration tranche × discipline (§9.1)
 ```
 
 Le rapport complet est écrit dans `web/public/data/backtest.json` et affiché sur
@@ -681,3 +683,720 @@ compte que si elle ressort positive sur ces données neuves.
 
 Verdict attendu : IC hors de 0 sur 2024-2025 pour adopter ; sinon, retour au
 chantier modèle (lot C n° 0).
+
+## 8.4 Hors-échantillon 2024-2025 : H1 rejetée, H2 confirmée (2026-08-05)
+
+**Prérequis réalisé le 2026-08-04/05 :** backfill Flashscore 2024-2025 complet
+— 62/62 tournois joués couverts (manquent 2 annulés + JO), 8 130 matchs avec
+cotes au total, jointure 7 982/8 064 (99 %, 0 ambigu), **étude ROI sur 6 297
+matchs prono+cotes** (×4,5). Présentation d'ensemble :
+[`bilan-backfill-cotes-2024-2025.md`](bilan-backfill-cotes-2024-2025.md).
+Méthode : `tools/flashscore/backfill-odds.mjs --seasons=2024,2025` (pages
+archives + fenêtres de dates pour les éditions encore « courantes » + `--cats=`
+pour les Mondiaux). Verdicts calculés sur les paris `matchTime < 2026` du
+journal `bets[]` de `web/public/data/roi.json` (mise plate, IC normal 95 %).
+
+**❌ H1 (« WS et XD exploitables ») rejetée des deux côtés :**
+- WS favori clôture : −6,0 % [−9,2 ; −2,7] (n=1 092) ; à confiance ≥ 80 % :
+  −4,4 % [−8,4 ; −0,4] (n=264) — le +1,3 % de 2026 ne se reproduit pas ;
+- XD value clôture : **−22,1 % [−35,9 ; −8,3]** (n=480) ; à EV ≥ 0,20 :
+  −22,9 % [−43,4 ; −2,3] — la colonne verte de 2026 était bien 2 cotes à 9.
+
+**✅ H2 (« parier à l'ouverture ») confirmée, en comparaison appariée**
+(même stratégie aux deux instants, sur les mêmes matchs, 2024-2025) :
+favori +2,0 pts [+1,7 ; +2,2] (n=4 888), value +2,8 pts [+1,4 ; +4,3]
+(n=2 087). L'ouverture rend *moins perdant*, pas gagnant ; l'écart s'érode
+d'année en année (value : +5,8 % en 2024 → +2,8 % en 2025 → +0,4 % en 2026).
+
+**Au global, les IC tranchent désormais** : favori −9,6 % [−11,2 ; −8,1]
+(n=6 287), value −14,5 % [−19,2 ; −10,0] (n=3 094) — la stratégie value, « non
+départagée » sur 2026 seul, est prouvée perdante et pire que le favori. 2024
+est uniformément pire (−12,7 %, S1 comme S2) : Elo à faible historique toute
+l'année, à pondérer dans les mesures fines. Conséquence actée par le protocole
+du §8.3 : **retour au chantier modèle (lot C n° 0)**, avec le banc d'essai
+[`banc-essai-modele.md`](banc-essai-modele.md) désormais alimenté.
+
+---
+
+# 9. Le banc d'essai du modèle : construit, validé, premiers verdicts (2026-08-10)
+
+**Le script du protocole [`banc-essai-modele.md`](banc-essai-modele.md) existe :
+`measures/mesure-roi-modele.mjs`.** C'est désormais LE passage obligé de toute
+modification du modèle (facteur âge, Elo à marge de points, calibration…).
+
+**S'en servir :**
+
+```bash
+npm run build-data                        # prérequis : la jointure prono ↔ cotes
+node measures/mesure-roi-modele.mjs       # table par défaut (référence + elo-brut)
+node measures/mesure-roi-modele.mjs --toutes --annees=2025,2026  # + variantes d'étude
+node measures/mesure-roi-modele.mjs --devig=power                # sensibilité au dé-vig
+```
+
+Une variante = une entrée dans le tableau `VARIANTES` du script : `p(row)` rend
+la proba (team1) d'avant match, `prepare(rows)` (optionnel) ajuste ses
+paramètres **en marche avant** (jamais avec des données du match jugé).
+
+**Comment il tient le protocole.** Probas d'avant match par le crochet
+`onMatch` de `lib/elo.mjs` (le même rejeu walk-forward que le backtest et que
+la prod) ; cotes lues dans la **jointure de production**
+(`web/public/data/pronos/*.json`, écrite par build-data — pas de deuxième
+jointure qui pourrait diverger) ; mêmes matchs pour toutes les variantes ;
+paris construits par `lib/roi.mjs` (stratégie value EV>0, meilleure cote,
+probas arrondies au pourcent comme dans l'app) ; graine 42 partout ; dé-vig
+multiplicatif par défaut, `power` et `Shin` en test de sensibilité. Un contrôle
+de parité recalcule la proba de prod et la compare à celle des fichiers
+pronos : **0 écart sur 6 297 matchs**.
+
+**Validation (non-régression contre les chiffres publiés) :**
+
+| Chiffre | Publié (§8/§8.2, roi.json) | Banc d'essai |
+|---|---|---|
+| ROI favori clôture | −9,64 % (n=6 287) | −9,63 % (n=6 286) |
+| ROI value clôture | −14,49 % (n=3 094) | −14,32 % (n=3 088) |
+| CLV value ouverture 2024-2026 | +5,94 % | +5,97 % |
+| CLV value ouverture 2026 seul | +3,11 % (n=761, §8.2) | **+3,11 % (n=761)** — exact |
+
+Les micro-écarts viennent de 11 matchs sans proba marché exploitable (aucun
+bookmaker ne cote les deux camps à plus de 1,00 à la clôture), écartés du banc
+car M0/M1 y sont incalculables.
+
+**La table de référence (2024-2026, 6 286 matchs jugés, dé-vig mult, graine 42) :**
+
+| modèle | M0 Δll global | M0 Δll paris | M1 EV/clôture | M2 CLV ouv. | M3 ΔROI vs réf [IC 95 %] | log loss | calib. |
+|---|---|---|---|---|---|---|---|
+| elo-recalibré (réf) | +0,0198 | +0,0528 | −6,42 % [−7,1 ; −5,7] | +5,97 % [+5,5 ; +6,5] | (référence) | 0,5472 | 1,1 pt |
+| elo-brut | +0,0236 | +0,0522 | −4,62 % [−5,3 ; −3,9] | +6,14 % [+5,6 ; +6,7] | **−3,5 pt [−5,9 ; −1,4]** | 0,5509 | 2,1 pt |
+
+Lecture : M0 > 0 = le marché prédit mieux que nous (attendu, cf. §1.2) ; M1
+négatif = en moyenne nos paris achètent des cotes que la clôture dé-viggée juge
+perdantes (c'est la marge non compensée) ; M2 positif = mais pris à l'ouverture
+ils battent la clôture (§8.2) ; M3 : l'elo-brut fait perdre **3,5 points de ROI
+de plus** que la référence sur les mêmes matchs, IC entièrement négatif — le
+contrôle de cohérence attendu (la recalibration §1.3 vaut de l'argent réel, pas
+seulement de la calibration).
+
+**Leçon de méthode découverte en validant : le dé-vig multiplicatif peut MAL
+CLASSER les variantes sur M1.** Sous `mult`, l'elo-brut paraît meilleur que la
+référence (M1 −4,62 % contre −6,42 %) ; sous `power` et `shin` (qui modélisent
+la marge chargée sur l'outsider), l'ordre s'inverse (−36,2 % contre −30,8 %) —
+et c'est cet ordre-là que confirme l'argent réel (M3 : brut pire de 3,5 pts,
+prouvé). Explication : l'elo-brut, trop timide, surestime les outsiders et
+mise dessus ; le dé-vig multiplicatif redistribue la marge au prorata et rend
+ces cotes d'outsiders artificiellement « pas si mauvaises ». **Règle
+pratique : ne jamais lire M1 sans sa ligne de sensibilité (imprimée par le
+script) ; si le classement dépend de la méthode de dé-vig, c'est M3 qui parle.**
+Au passage, cela éclaire le « saignement » des tranches moyennes (§3.1, §8) :
+la marge y est structurellement plus chère pour l'outsider que ne le dit la
+lecture multiplicative.
+
+## 9.1 Calibration tranche × discipline : la piste « un 75 % vaut 68-70 % » ne tient PAS (2026-08-10)
+
+**Question (lot C n° 0).** La tranche 70-80 % perd le plus en ROI ; suspicion
+d'un défaut de calibration localisé, d'autant que le correctif §1.3 n'a été
+appliqué qu'à WS/WD alors que MS/XD sont les pires en ROI (§8.1).
+
+**Méthode.** `node measures/mesure-calibration-tranches.mjs` (options
+`--annees=`, `--paries`) : prédictions walk-forward 2024-2026 (8 840 matchs),
+probabilité repliée sur le favori, 5 tranches × 5 disciplines, IC 95 %
+binomial (Wilson) sur la fréquence observée ; une case est « en défaut » si la
+proba annoncée sort de l'IC. Garde-fou : 25 cases testées à 95 % ≈ 1 fausse
+alerte attendue — ne lire que les motifs cohérents.
+
+**Modèle de production (annoncé → observé, ⚠️ = significatif) :**
+
+| | 50-60 | 60-70 | 70-80 | 80-90 | 90-100 | toutes |
+|---|---|---|---|---|---|---|
+| MS | 54,9→56,4 (777) | 65,0→62,4 (684) | 74,8→73,8 (504) | 84,3→84,6 (247) | 92,0→97,1 (35) | 66,2→65,9 |
+| WS | 55,0→57,4 (420) | 65,0→66,4 (360) | 74,9→71,8 (390) | 85,3→87,9 (405) | **95,0→93,0 (470) ⚠️** | 75,7→75,9 |
+| MD | 54,7→56,4 (477) | 65,0→65,5 (443) | 74,8→78,2 (399) | 84,3→83,6 (274) | 92,5→96,4 (56) | 68,5→70,0 |
+| WD | **55,0→62,5 (304) ⚠️** | **65,0→71,1 (287) ⚠️** | 75,0→74,5 (267) | 85,2→84,9 (258) | 94,3→93,0 (257) | 74,0→76,5 ⚠️ |
+| XD | 54,9→56,7 (388) | 65,2→69,0 (410) | 74,7→76,8 (341) | 84,5→83,6 (275) | 93,4→96,4 (112) | 70,2→72,3 |
+| TOUT | 54,9→57,4 ⚠️ | 65,0→66,1 | **74,8→75,0** | 84,8→85,2 | 94,4→93,8 | |
+
+**Verdicts.**
+
+1. **La suspicion du n° 0 est REJETÉE : la tranche 70-80 % est bien calibrée.**
+   74,8 % annoncé → 75,0 % observé au global (n=1 901) ; aucune discipline n'y
+   est significative ; sur le sous-ensemble parié (`--paries`, le terrain exact
+   de l'étude ROI) : 74,8 → 73,9 (n=1 385), l'annoncé reste dans l'IC. Le
+   saignement en ROI de cette tranche n'est donc **pas un problème de modèle**
+   mais un problème de **prix** : c'est la zone où la marge du bookmaker,
+   chargée sur l'outsider (cf. leçon dé-vig du §9), est la plus chère par
+   rapport à notre avantage.
+2. **Ne pas avoir corrigé MS/XD (§1.3) était justifié.** MS : 66,2 → 65,9 au
+   global, aucune tranche en défaut (les points 2026 confirment même un léger
+   excès de confiance non significatif). XD : 70,2 → 72,3, IC contient
+   l'annoncé.
+3. **Deux défauts résiduels réels, localisés PAR TRANCHE :** WD reste timide en
+   bas de gamme malgré le 1,31 (50-60 : 55,0 → 62,5, +7,5 pts ; 60-70 :
+   65,0 → 71,1, +6,1 pts) et WS est légèrement sur-corrigée tout en haut
+   (90-100 : 95,0 → 93,0, −2,0 pts, n=470). Un étirement de log-cotes ne PEUT
+   PAS corriger cela : il agit d'un bloc, dans le même sens, sur toutes les
+   tranches d'une discipline. Un correctif par tranche exigerait un modèle à
+   2+ paramètres ajusté walk-forward sur des cases de ~300 matchs — au risque
+   d'apprendre du bruit ; on ne le tente pas tant qu'un gain M3 n'est pas
+   plausible (les paris WD 50-70 et WS 90-100 ne pèsent qu'une fraction du
+   volume).
+
+## 9.2 Variante « recalibration walk-forward 5 disciplines » : NEUTRE — production inchangée (2026-08-10)
+
+Correctif candidat passé au banc : le même étirement de log-cotes que §1.3,
+mais ajusté **sans fuite** (facteur de l'année N ajusté sur les années < N,
+appliqué seulement si l'IC bootstrap exclut 1) et **ouvert aux 5 disciplines**.
+Rappel honnête : le facteur de production (WS 1,50 / WD 1,31) a été ajusté sur
+2024-2026 entier, période jugée comprise — cette variante teste donc aussi si
+la prod tient sans cet avantage.
+
+Facteurs trouvés en marche avant : WS 1,43 (2025) / 1,49 (2026) ; WD 1,38 /
+1,31 ; **XD 1,18 en 2026** (IC [1,04 ; 1,35] sur 2024-2025 — la règle mécanique
+l'applique, là où §1.3 l'avait écarté pour instabilité) ; MS et MD : 1 (IC
+contient 1). Jugement sur 2025-2026 (2024 n'a pas d'antériorité pour
+s'ajuster ; 4 233 matchs) :
+
+| modèle | M1 EV/clôture | M2 CLV ouv. | M3 ΔROI vs réf [IC 95 %] | log loss | calib. |
+|---|---|---|---|---|---|
+| elo-recalibré (réf) | −4,02 % | +4,86 % | (référence) | 0,5366 | 1,6 pt |
+| elo-brut | −1,38 % | +5,09 % | −5,0 pt [−7,6 ; −2,3] | 0,5411 | 2,2 pt |
+| recal-wf-5disc | −4,01 % | +4,88 % | **+0,4 pt [−0,7 ; +1,6]** | 0,5375 | 1,5 pt |
+
+Refaire : `node measures/mesure-roi-modele.mjs --toutes --annees=2025,2026`.
+
+**Verdict : NON DÉPARTAGEABLE (M3 contient 0), la production reste inchangée**
+— règle du protocole : on ne touche pas au modèle sans preuve M3. Deux
+enseignements quand même :
+
+- **La recalibration de production est validée hors fuite** : un ajustement
+  n'utilisant que le passé retrouve quasi exactement ses facteurs et son ROI
+  (M1/M2/M3 confondus avec la réf). Le +3,5 pts de la recalibration sur
+  l'elo-brut n'était donc pas un artefact d'ajustement rétrospectif.
+- **Étendre la correction à XD (1,18) n'apporte rien de mesurable** en argent
+  réel : la décision §1.3 de l'écarter ne coûte rien.
+
+La variante reste dans le script (`actif: false`) : elle servira de base de
+comparaison aux prochains candidats (âge, Elo à marge de points).
+
+## 9.3 Facteur âge : signal RÉEL au-delà de l'Elo (les jeunes sont sous-cotés), mais variante non départageable en argent (2026-08-10)
+
+**Question (lot C n° 0, jamais mesurée).** Les dates de naissance sont
+collectées depuis fin juillet (`data/players/birthdates.json`) : l'âge
+apporte-t-il une information EN PLUS de l'Elo ? Deux temps : une mesure
+descriptive (le signal existe-t-il ?), puis une variante au banc d'essai §9
+(vaut-il de l'argent ?). Logique et mesures : `measures/variante-age.mjs`.
+
+**Les données et la jointure.** `birthdates.json` : 1 432 joueurs, format
+`id → {name, country, dob, hand, source, confidence}` — 100 % avec `dob`
+exacte (sources : Wikidata 1 274, BWF 158). Jointure par id de joueur, âge
+calculé AU JOUR du match (années décimales). Sur les 8 840 matchs prédictibles
+du banc (2024-2026, joueurs « provisoires » exclus) : **8 839 matchs ont l'âge
+complet des deux camps (100,0 %)**, dans les 5 disciplines — la couverture de
+97,7 % pondérée annoncée à la collecte portait sur TOUTES les apparitions ;
+une fois retirés les joueurs à moins de 10 matchs (déjà exclus des pronos),
+il ne manque plus personne. **En double, l'âge d'une équipe = moyenne des
+deux joueurs** (les deux jouent chaque point ; vérifié plus bas que min/max ne
+changent rien).
+
+**Mesure descriptive (`node measures/variante-age.mjs`).** Si l'âge n'apportait
+rien au-delà de l'Elo, le résidu (victoire observée − proba du modèle de prod)
+serait ≈ 0 dans chaque tranche d'écart d'âge. Il ne l'est pas — et le motif est
+monotone, pas une case isolée :
+
+| écart d'âge A−B (ans) | n | obs − attendu | IC 95 % |
+|---|---|---|---|
+| ≤ −8 (A bien plus jeune) | 374 | **+11,0 pt** | [+6,5 ; +15,4] ⚠️ |
+| −8 à −3 | 1 873 | +1,3 pt | [−0,6 ; +3,3] |
+| −3 à +3 | 4 268 | −1,0 pt | [−2,3 ; +0,3] |
+| +3 à +8 | 1 855 | −2,2 pt | [−4,1 ; −0,2] ⚠️ |
+| > +8 (A bien plus vieux) | 469 | **−5,4 pt** | [−9,3 ; −1,5] ⚠️ |
+
+Régression logistique du résidu — victoire ~ sigmoïde(logit(p_prod) + b ×
+écart d'âge), b en log-cotes par année d'écart, IC bootstrap 500 tirages
+graine 42 : **global b = −0,027/an [−0,036 ; −0,018], significatif**. En
+clair : à Elo égal, le camp le plus vieux gagne moins souvent que le modèle
+ne l'annonce ; l'explication classique est que **l'Elo est en retard sur les
+trajectoires** — il sous-note les jeunes qui progressent vite et sur-note les
+vétérans qui déclinent. Ordre de grandeur : à 50/50 Elo, 5 ans d'écart
+déplacent la vraie proba vers ~53,4 % pour le plus jeune. Le signal est
+**concentré en SIMPLE** (MS −0,041 [−0,058 ; −0,023] ; WS −0,044
+[−0,065 ; −0,024]) et **absent en double** (MD/WD/XD : IC contiennent tous 0,
+que l'âge d'équipe soit moyenne, min ou max), et il est stable en direction
+sur les 3 années (2024 −0,014 n.s. ; 2025 −0,020 ⚠️ ; 2026 −0,048 ⚠️).
+
+**La variante `elo-age` (motif recal-wf-5disc, aucune fuite).** Terme b ×
+écart d'âge ajouté au logit de la proba de production ; b ajusté PAR
+DISCIPLINE en marche avant (année N sur les années < N, minimum 300 matchs),
+appliqué seulement si l'IC bootstrap (200 tirages, graine 42) exclut 0 ; pas
+d'ordonnée à l'origine (l'écart d'âge est antisymétrique, le modèle reste
+symétrique par construction) ; proba de prod inchangée si b = 0 ou date de
+naissance manquante. La règle mécanique ouvre la porte à : WS 2025 (−0,055),
+WS 2026 (−0,046), MS 2026 (−0,023) — les 7 autres cases restent à 0 (IC
+contient 0), en accord avec le descriptif. 2024 reste sans correction (rien
+d'antérieur), donc jugement sur 2025-2026 (4 233 matchs, parité prod 0 écart) :
+
+| modèle | M0 Δll global | M0 Δll paris | M1 EV/clôture | M2 CLV ouv. | M3 ΔROI vs réf [IC 95 %] | log loss | calib. |
+|---|---|---|---|---|---|---|---|
+| elo-recalibré (réf) | +0,0161 | +0,0486 | −4,02 % | +4,86 % | (référence) | 0,5366 | 1,6 pt |
+| elo-age | +0,0154 | +0,0471 | −3,94 % | +4,87 % | **+0,9 pt [−0,6 ; +2,4]** | 0,5359 | 1,5 pt |
+
+Refaire : `node measures/variante-age.mjs` (descriptif) puis
+`node measures/mesure-roi-modele.mjs --variantes=elo-age --annees=2025,2026`.
+
+**Verdict : NON DÉPARTAGEABLE — production inchangée** (règle du protocole :
+M3 doit exclure 0 ; +0,9 pt [−0,6 ; +2,4] ne le fait pas). La variante reste
+dans le script (`actif: false`). À noter honnêtement, dans les deux sens :
+
+- **Le signal probabiliste, lui, est prouvé** (descriptif significatif), et la
+  variante améliore TOUT le tableau d'un cran : meilleur log loss jamais vu
+  sur ce banc (0,5359 contre 0,5366), M0 global et « paris » en baisse,
+  calibration 1,5 pt, M1 +0,08 pt, sensibilité au dé-vig sans inversion de
+  classement (power −28,55 % vs −28,44 % : égalité pratique). Rien ne se
+  dégrade — c'est un candidat sérieux à re-juger quand le banc aura plus
+  d'années (le coefficient 2026 est le plus fort mesuré : −0,048).
+- **Pourquoi si peu d'argent pour un signal si net ?** La correction ne touche
+  que le simple (WS dès 2025, MS en 2026 seulement) ; pour l'écart d'âge
+  médian (≈ 3 ans) elle ne déplace la proba que d'environ 1,5 pt (MS) à 3 pts
+  (WS) autour de 50/50, et la stratégie value ne change de décision que près
+  des seuils d'EV : le signal est réel mais son levier monétaire est dilué.
+
+**Limites honnêtes.** Deux années jugées seulement (2025-2026), et le gel
+« par discipline » de la variante a été choisi APRÈS avoir vu le descriptif
+complet — le motif mécanique (5 disciplines, porte IC) limite ce biais mais ne
+l'annule pas ; l'écart d'âge est peut-être le proxy d'autre chose que l'Elo ne
+voit pas (montée en gamme des jeunes du circuit secondaire, blessures des
+vétérans) — pour parier, peu importe la cause, mais l'extrapoler serait
+hasardeux ; enfin la tranche extrême « A plus jeune de 8 ans+ » (n=374,
++11 pts) suggère un effet NON linéaire que le terme linéaire n'exploite pas —
+piste ouverte si le facteur repasse au banc.
+
+## 9.4 Avantage du terrain — étapes 2 et 3 : marginal réel mais NON DÉPARTAGEABLE au banc (2026-08-10)
+
+*Mesuré le 2026-08-10 — `node measures/variante-terrain.mjs` (étape 2) puis
+`node measures/mesure-roi-modele.mjs --variantes=elo-terrain --annees=2025,2026`
+(étape 3, banc d'essai). Fait suite au §2.6 (étape 1 : isolation passée,
++2,2 pt, simple seulement).*
+
+**En une phrase : le facteur terrain apporte bien quelque chose EN PLUS de
+l'Elo (étape 2 passée, de justesse), mais il touche trop peu de matchs pour
+faire bouger le banc d'essai — M3 non départageable, on n'adopte pas.**
+
+### Étape 2 — apport marginal, à Elo donné
+
+La question : l'Elo capte-t-il déjà l'effet domicile ? Réponse par **ajustement
+conjoint** : on garde la formule de proba Elo telle quelle et on n'ajoute qu'un
+seul paramètre libre, un bonus H (en points d'Elo) au camp à domicile, ajusté
+par maximum de vraisemblance. Si H ressort de zéro, le facteur ajoute de
+l'information que l'Elo n'a pas. Même définition du « domicile » que l'étape 1
+(tous les joueurs du camp ont le code pays du tournoi, exactement un camp à
+domicile), simple (MS+WS) seulement puisque §2.6 n'a rien prouvé en double.
+
+Sur 8 840 matchs rejoués (2024-2026, Elo non provisoire des 2 côtés), 736
+matchs de simple ont exactement un camp à domicile :
+
+| Ajustement (MLE, IC bootstrap 1000 tirages, graine 42) | H (points d'Elo) | IC 95 % | Verdict |
+|---|---|---|---|
+| **Simple (MS+WS), 2024-2026** | **+30,4** | **[+2,7 ; +57,5]** | ✅ exclut 0 |
+| MS seul (n=390) | +28,5 | [−8,9 ; +67,7] | 0 dans l'IC |
+| WS seul (n=346) | +32,7 | [−5,9 ; +74,6] | 0 dans l'IC |
+| MD (contrôle, n=304) | +18,9 | [−26,0 ; +59,8] | 0 dans l'IC |
+| WD (contrôle, n=256) | −8,5 | [−52,0 ; +37,0] | 0 dans l'IC |
+| XD (contrôle, n=289) | +5,0 | [−40,2 ; +49,2] | 0 dans l'IC |
+
+Lecture vulgarisée : +30 points d'Elo ≈ +4 points de probabilité sur un match
+équilibré. **L'étape 2 passe, de justesse** : l'IC groupé simple exclut 0, mais
+son bord bas (+2,7) frôle zéro, et aucune discipline seule n'y suffit (trop peu
+de matchs chacune). Cohérent avec l'étape 1 : §2.6 donnait ≈ 16 points d'Elo
+toutes disciplines confondues — en ne gardant que le simple (où l'effet vit),
+on retrouve logiquement plus.
+
+Δ log loss sur ces 736 matchs, avec vs sans bonus : **−0,0031, IC
+[−0,0086 ; +0,0025]** — le signe aide mais l'IC contient 0, et surtout **H est
+ajusté sur ces mêmes matchs : ce chiffre est optimiste par construction**.
+C'est l'étape 3 qui tranche.
+
+### Étape 3 — hors échantillon, au banc d'essai
+
+Variante `elo-terrain` du banc (`measures/variante-terrain.mjs`) : Elo du camp
+à domicile + H, puis la chaîne de production inchangée (recalibration comprise).
+H est ajusté **en marche avant** (motif `recal-wf-5disc`, aucune fuite) :
+l'année N n'utilise que les années < N, et le bonus n'est appliqué que si son
+IC bootstrap (200 tirages, graine 42) exclut 0.
+
+| Année jugée | H ajusté sur le passé | IC | Appliqué |
+|---|---|---|---|
+| 2024 | — (pas d'antériorité) | — | 0 |
+| 2025 (réglé sur 2024, n=223) | +46,4 | [−3,7 ; +104,8] | **0** (0 dans l'IC : rien de prouvé) |
+| 2026 (réglé sur 2024-2025, n=554) | +35,6 | [+4,5 ; +77,8] | **+35,6** |
+
+Le garde-fou anti-bruit ne laisse donc passer un bonus qu'en 2026 — c'est
+exactement le schéma « réglage 2024-2025, vérification 2026 » de la méthode.
+
+**La ligne du banc (sortie réelle), jugée sur 2025-2026 (4 233 matchs)** :
+
+| modèle | M0 Δll global | M0 Δll paris | M1 EV/clôture | M2 CLV ouv. | M3 ΔROI vs réf [IC] | logloss | calib. |
+|---|---|---|---|---|---|---|---|
+| elo-recalibré (réf) | +0,0161 | +0,0486 | −4,02 % [−4,9 ; −3,0] | +4,86 % [+4,2 ; +5,5] | (référence) | 0,5366 | 1,6 pt |
+| **elo-terrain (wf)** | +0,0163 | +0,0489 | −4,04 % [−5,0 ; −3,0] | +4,87 % [+4,3 ; +5,5] | **+0,2 pt [−0,2 ; +0,5]** | 0,5367 | 1,5 pt |
+
+Et sur **2026 seul** (1 398 matchs — le vrai hors échantillon, seul 2026 porte
+un bonus) :
+
+| modèle | M0 Δll global | M0 Δll paris | M1 EV/clôture | M2 CLV ouv. | M3 ΔROI vs réf [IC] | logloss | calib. |
+|---|---|---|---|---|---|---|---|
+| elo-recalibré (réf) | +0,0139 | +0,0387 | −6,42 % [−7,3 ; −5,5] | +3,11 % [+2,2 ; +4,0] | (référence) | 0,5515 | 4,0 pt |
+| **elo-terrain (wf)** | +0,0144 | +0,0397 | −6,48 % [−7,3 ; −5,5] | +3,13 % [+2,2 ; +4,1] | **+0,5 pt [−0,6 ; +1,7]** | 0,5520 | 3,8 pt |
+
+Sensibilité au dé-vig : le classement réf/terrain ne bouge pas (mult/power/shin
+quasi identiques des deux côtés).
+
+### Verdict (règle du banc : décider avec M3, IC hors de 0)
+
+**NON DÉPARTAGEABLE → on n'adopte pas.** M3 = +0,2 pt [−0,2 ; +0,5] sur
+2025-2026 et +0,5 pt [−0,6 ; +1,7] sur 2026 seul : le signe est favorable mais
+l'IC contient 0 des deux côtés. Les autres métriques n'apportent aucun feu
+vert : M0 et M1 se dégradent d'un cheveu, M2 est plate, log loss quasi
+identique (seule la calibration s'améliore d'un dixième de point).
+
+C'était le scénario annoncé par §2.6 (« un facteur rare ne déplace pas les
+métriques agrégées, même réel ») et il se chiffre : le bonus ne touche que les
+matchs de simple avec un camp à domicile, soit **98 des 1 398 matchs jugés de
+2026 (7,0 %)** — 8,8 % en 2024, 8,1 % en 2025. Même si le bonus valait +2 pt
+de ROI sur ces matchs-là, l'effet global serait ~+0,15 pt : indétectable avec
+cet échantillon. **Un M3 non départageable est ici un résultat valide, pas un
+échec du facteur** — le marginal existe (étape 2), il est juste trop rare pour
+être prouvé rentable aujourd'hui.
+
+**Décision : variante conservée dans le code, désactivée (`actif: false`),
+même statut que l'Elo-bis à marge de points (§2.8) — à re-mesurer quand 2026
+sera plus fourni.** Deux issues possibles alors : l'IC de M3 se resserre autour
+d'un positif (on adopte), ou le bord bas reste sous 0 (on enterre).
+
+### Limites honnêtes
+
+- **Sélection non exclue** : comme au §2.6, une partie de l'effet peut venir
+  des wild-cards/invitations locales (joueurs du pays plus en forme que leur
+  Elo ne le dit) — le bonus capterait alors un biais d'échantillon, pas un
+  vrai avantage du terrain. Indiscernable avec ces données.
+- **Bord bas de l'étape 2 à +2,7** : l'IC exclut 0 de justesse ; avec une autre
+  graine ou un autre découpage, il pourrait le toucher. L'étape 2 est passée
+  au sens strict, pas confortablement.
+- **H commun MS+WS, sur l'échelle Elo brute** : pour WS, la recalibration de
+  production (étirement 1,50 des log-cotes) amplifie mécaniquement le bonus
+  d'environ moitié en logit. Un H par discipline serait plus propre, mais les
+  n par discipline ne le supportent pas (aucun IC par discipline n'exclut 0).
+- **2025 jugé sans bonus** : le garde-fou (IC sur 2024 seul contient 0) a mis
+  H=0 en 2025 ; la comparaison 2025-2026 ne mesure donc l'effet que sur 2026.
+  C'est le prix de la règle anti-bruit, assumé.
+- **Puissance faible par construction** : 98 matchs touchés en 2026 — le banc
+  ne peut pas trancher un effet aussi rare ; il faudra du volume, pas une
+  meilleure méthode.
+- Appariement des matchs par clé `tournoi|discipline|jour|entités` (la même
+  que le banc) : deux matchs des mêmes entités le même jour dans le même
+  tableau se confondraient — cas marginal, déjà accepté par le banc.
+
+### Refaire les mesures
+
+```bash
+node measures/variante-terrain.mjs                                        # étape 2 + réglages walk-forward
+node measures/mesure-roi-modele.mjs --variantes=elo-terrain --annees=2025,2026   # étape 3 (banc)
+node measures/mesure-roi-modele.mjs --variantes=elo-terrain --annees=2026        # 2026 seul (hors échantillon strict)
+```
+
+Fichiers : `measures/variante-terrain.mjs` (toute la logique : carte domicile,
+ajustement MLE, bootstrap, variante du banc, mode autonome étape 2) ;
+`measures/mesure-roi-modele.mjs` (edit additif : 1 import + l'entrée
+`varianteTerrain` dans VARIANTES, `actif: false` — la production est inchangée).
+Non-régression du banc vérifiée après l'edit (favori −9,63 %, value −14,32 %,
+CLV +5,97 % : ✅ conformes à roi.json).
+
+## 9.5 Elo-bis à marge de points : TRANCHÉ sur le banc d'essai — on n'adopte pas (2026-08-10)
+
+*Mesuré le 2026-08-10 — lot C n°0 de la roadmap (ex-§2.8). Commandes :
+`node measures/mesure-roi-modele.mjs --variantes=elo-points-brut,elo-points-recal-wf,recal-wf-5disc`
+(+ `--annees=2025,2026` et `--annees=2026` en sensibilité), et re-run de
+`node measures/mesure-elo-points.mjs`. Code des variantes :
+`measures/variante-elo-points.mjs` (la production ne bouge pas : `pointsFactor`
+reste à 0 dans `lib/elo.mjs`, variantes `actif: false` dans le banc).*
+
+### Rappel vulgarisé : c'est quoi, l'Elo-bis ?
+
+L'Elo actuel ne regarde que **qui a gagné** : un 21-5, 21-5 et un 22-20, 21-19
+font monter la note du vainqueur exactement pareil. L'Elo-bis (§2.8) module la
+mise à jour par la **domination aux points** — une démonstration compte plus
+qu'un match arraché — avec un frein anti-emballement façon FiveThirtyEight (une
+victoire large du favori annoncé n'apprend presque rien ; la même victoire par
+l'outsider apprend beaucoup). Config figée en §2.8 sur la grille 2024-2025 :
+`pointsFactor 1,5 + amorti`, marge de référence mesurée 0,0778 (0,0788 hors
+2026 : ce scalaire est une constante du sport, pas un réglage par époque).
+
+Le §2.8 avait conclu « meilleur partout, mais NON DÉPARTAGEABLE sur 2026 seul »
+(Δ log loss −0,0022, IC contenant 0) et gelé le code. Deux choses ont changé :
+le backfill des cotes 2024-2026 (**6 286 matchs jugés** au lieu de ~1 400) et le
+banc d'essai figé (`docs/banc-essai-modele.md`, juge **financier** M3 et non
+plus seulement le log loss).
+
+### Méthode — comparaison loyale
+
+- **Walk-forward strict** : un second rejeu `computeElo` avec les paramètres
+  Elo-bis, crochet d'avant match (mêmes garanties que la production) ; chaque
+  ligne du banc est appariée à sa proba Elo-bis par clé de match. Couverture
+  100 % (le code CASSE si une ligne manquait — aucune n'a manqué).
+- **Piège évité** : la référence de production est RE-CALIBRÉE (§1.3). Comparer
+  l'Elo-bis brut au modèle de prod mélangerait « meilleure note » et « meilleure
+  calibration ». Donc deux formes jugées : `elo-points-brut` (tel quel) et
+  `elo-points-recal-wf` (recalibré par discipline **en marche avant**, motif
+  identique à `recal-wf-5disc` : l'année N corrigée sur les années < N, facteur
+  appliqué seulement si l'IC bootstrap exclut 1 — aucune fuite). `recal-wf-5disc`
+  était dans le tableau pour l'apples-to-apples. Fait rassurant : les facteurs
+  ajustés sur l'Elo-bis retombent sur le même motif qu'en prod (WS ~1,37,
+  WD ~1,18-1,30, rien de prouvé en MS/MD ; XD s'active en 2026 côté Elo actuel
+  mais pas côté Elo-bis).
+
+### Les chiffres du banc (sortie réelle, dé-vig mult, graine 42)
+
+**2024-2026, 6 286 matchs** (non-régression vs roi.json ✅, parité prod 0 écart) :
+
+| modèle | M0 Δll global | M0 Δll paris | M1 EV/clôture | M2 CLV ouv. | M3 ΔROI vs réf [IC] | logloss | calib. |
+|---|---|---|---|---|---|---|---|
+| elo-recalibré (réf) | +0,0198 | +0,0528 | −6,42 % | +5,97 % | (référence) | 0,5472 | 1,1 pt |
+| elo-brut | +0,0236 | +0,0522 | −4,62 % | +6,14 % | −3,5 pt [−5,9 ; −1,4] | 0,5509 | 2,1 pt |
+| recal-wf-5disc | +0,0211 | +0,0542 | −6,49 % | +6,00 % | +0,1 pt [−1,5 ; +1,6] | 0,5484 | 0,9 pt |
+| **elo-points-brut** | +0,0186 | +0,0481 | −5,53 % | +6,18 % | **−0,1 pt [−3,5 ; +3,1]** | 0,5459 | 0,6 pt |
+| **elo-points-recal-wf** | +0,0175 | +0,0468 | −7,01 % | +6,09 % | **+2,2 pt [−1,1 ; +5,5]** | 0,5448 | 0,7 pt |
+
+**2025-2026, 4 233 matchs** : elo-points-brut M3 −2,5 pt [−7,0 ; +1,6] ;
+elo-points-recal-wf M3 **+0,9 pt [−3,1 ; +4,9]** (logloss 0,5356 vs réf 0,5366).
+
+**2026 seul, 1 398 matchs** : elo-points-brut M3 −2,3 pt [−9,6 ; +5,4] ;
+elo-points-recal-wf M3 **+0,9 pt [−5,6 ; +7,8]** — tout est noyé dans le bruit.
+
+**Re-run de la mesure §2.8 d'origine** (log loss apparié, 2026 passé de 2 439 à
+2 481 matchs) : Δ log loss −0,0022, IC 95 % **[−0,0076 ; +0,0033]** → toujours
+non départageable, l'intervalle n'a presque pas bougé en 10 jours.
+
+### Verdict selon la règle du banc : ON N'ADOPTE PAS
+
+La règle : décider avec M3, IC bootstrap apparié hors de 0. **Aucune des deux
+formes n'y arrive**, sur aucune fenêtre. Et le dossier est plus net que « pas
+encore assez de données » :
+
+1. **Le juge financier dégonfle le « meilleur partout » du §2.8.** L'Elo-bis
+   brut, celui qui battait l'Elo actuel sur toutes les configs en log loss,
+   fait **ΔROI ≈ 0** (−0,1 pt) sur 6 286 matchs — et −2,5 pt sur 2025-2026. Le
+   micro-gain de log loss (~−0,002, réel mais jamais hors de l'IC) ne se
+   convertit pas en euros.
+2. **Le +2,2 pt de la forme recalibrée n'est pas corroboré.** Son M1 — le juge
+   d'entraînement — est **pire que la référence partout** (−7,01 vs −6,42 % ;
+   −5,01 vs −4,02 % ; −7,22 vs −6,42 %) : au verdict du marché, elle achète des
+   cotes légèrement moins bonnes, pas meilleures. Un M3 positif que M1
+   contredit, avec un IC qui contient 0, c'est le profil du bruit qui sourit.
+3. **La sensibilité au dé-vig confirme la fragilité** : en dé-vig mult,
+   elo-points-recal-wf est dernier au M1 ; en power et shin il devient premier
+   (−29,38 vs −30,81 % ; −18,19 vs −18,65 %). Un classement qui dépend de la
+   méthode de retrait de marge = écarts plus petits que l'incertitude de mesure.
+4. À mettre au crédit de l'Elo-bis, pour être honnête : **les garde-fous sont
+   ses meilleurs alliés** — meilleur log loss du tableau (0,5448) et meilleure
+   calibration (0,6-0,7 pt vs 1,1) sur 2024-2026, M2 (CLV) toujours un cheveu
+   au-dessus de la référence (+6,09/+6,18 vs +5,97 %). L'idée n'est pas
+   absurde ; son effet est simplement trop petit pour être prouvé, en partie
+   parce que la marge de points est redondante avec ce que l'Elo apprend déjà
+   en accumulant les victoires (déjà noté en §2.8).
+
+**Décision : le code reste conservé et désactivé (`pointsFactor: 0` en prod),
+et on RAYE ce candidat de la liste des espoirs actifs.** Le §2.8 disait « à
+re-mesurer quand 2026 sera plus fourni » ; c'est fait, avec 4,5× plus de matchs
+et le juge financier : rien à adopter. Rouvrir seulement si une refonte change
+la nature du signal (p. ex. marge par set plutôt que par match), pas pour
+re-goûter la même config.
+
+### Limites honnêtes
+
+- **2024-2025 a servi à choisir la config** (grille §2.8) : sur la fenêtre
+  2024-2026 du banc, ces deux années sont partiellement « à domicile » pour
+  l'Elo-bis. La seule fenêtre 100 % hors échantillon pour la config est 2026,
+  où l'IC de M3 fait ±7 pts. Ça ne change pas le verdict (même à domicile, M3
+  ne sort pas de 0), ça l'aggrave plutôt.
+- **La marge de référence (0,0778) est mesurée sur tout l'historique**, comme
+  en §2.8 — regard en arrière théorique, mais c'est un scalaire global stable
+  (0,0788 hors 2026), pas un paramètre par époque : effet négligeable, vérifié.
+- **M3 compare chaque variante à la référence**, pas les variantes entre elles :
+  « +2,2 vs +0,1 » (elo-points-recal-wf vs recal-wf-5disc) n'est pas un test
+  apparié entre les deux ; ne pas sur-lire cet écart.
+- Le banc juge la **stratégie value EV>0 à la clôture** ; un autre style de mise
+  (favori, ouverture) pourrait réagir autrement, mais M2 (ouverture) ne montre
+  pas non plus d'écart prouvé.
+
+### Fichiers et reproduction
+
+- **Créé** : `measures/variante-elo-points.mjs` — rejeu Elo-bis walk-forward
+  (déclenché seulement si demandé, pour ne pas ralentir les autres runs du
+  banc) + recalibration marche avant + les deux variantes exportées.
+- **Modifié (additif)** : `measures/mesure-roi-modele.mjs` — un import + spread
+  `...VARIANTES_ELO_POINTS` dans `VARIANTES` (`actif: false`). Rien d'autre ;
+  `lib/elo.mjs` et la production intacts.
+- **Rejouer** :
+  `node measures/mesure-roi-modele.mjs --variantes=elo-points-brut,elo-points-recal-wf,recal-wf-5disc`
+  puis `--annees=2025,2026` et `--annees=2026` ; `node measures/mesure-elo-points.mjs`
+  pour le test log loss d'origine. Prérequis : `npm run build-data` déjà passé.
+
+## 9.6 Main dominante (gaucher) : signal descriptif léger mais INSTABLE, variante non départageable au banc — on n'adopte pas (2026-08-10)
+
+*Mesuré le 2026-08-10 — lot C n° 2 de la roadmap, juste après la fin de la
+collecte des mains (675 mains dans `data/players/birthdates.json`). Commandes :
+`node measures/variante-hand.mjs` (descriptif) puis
+`node measures/mesure-roi-modele.mjs --variantes=elo-hand --annees=2025,2026`
+(+ `--annees=2026` en sensibilité). Logique et mesures :
+`measures/variante-hand.mjs` (calqué sur le facteur âge, §9.3).*
+
+**En une phrase : à Elo égal, le camp gaucher gagne un peu plus souvent que le
+modèle ne l'annonce (b = +0,12 par gaucher d'écart, IC [+0,01 ; +0,21]), mais
+le signal est fragile — instable d'une année à l'autre, porté par des cases
+rares — et la variante `elo-hand` ne fait rien bouger au banc (M3 −0,1 pt
+[−0,6 ; +0,4]) : on n'adopte pas.**
+
+### L'hypothèse et le codage
+
+Classique des sports de raquette : les gauchers, rares, imposent des angles que
+leurs adversaires ont peu l'habitude de travailler — un avantage que l'Elo
+capte peut-être déjà (un gaucher qui gagne grâce à sa main a une note qui
+monte). La question du journal est donc, comme pour l'âge : **reste-t-il un
+signal AU-DELÀ de l'Elo ?**
+
+Codage : « gaucherie » d'un camp = **nombre de gauchers** (0/1 en simple,
+0/1/2 en double) — chaque gaucher d'une paire impose ses angles sur une partie
+des échanges, le comptage est l'extension linéaire naturelle (même esprit que
+la moyenne d'âge du §9.3) ; écart du match = gaucherie(A) − gaucherie(B),
+antisymétrique, donc pas d'ordonnée à l'origine (le modèle reste symétrique).
+Vérifié plus bas que le codage binaire « au moins un gaucher » ne change pas
+la conclusion en double. Main inconnue pour un seul joueur du match : exclu du
+descriptif, et la variante rend la proba de production telle quelle.
+
+### Les données et la jointure
+
+`birthdates.json` porte **675 joueurs à main connue, dont 82 gauchers
+(12,1 %)** — l'API BWF (`vue-player-bio`) ne renseigne pas tout le monde,
+contrairement aux dates de naissance (100 % au §9.3). Sur les 8 840 matchs
+prédictibles du banc (2024-2026) :
+
+- **matchs où la main de TOUS les joueurs est connue : 6 154/8 840 (69,6 %)**
+  — les autres sont exclus du descriptif ;
+- par discipline : MS 88,7 %, WS 78,1 %, MD 58,5 %, WD 53,8 %, XD 56,4 %
+  (en double il faut 4 mains, la couverture chute mécaniquement) ;
+- 83,8 % des apparitions de joueurs sont datées en main (les 72,9 % pondérés
+  annoncés à la collecte portaient sur toutes les apparitions ; le banc exclut
+  déjà les joueurs « provisoires », moins bien couverts) ;
+- **19,2 % des camps ont au moins un gaucher** — la rareté annoncée.
+
+### Mesure descriptive (`node measures/variante-hand.mjs`)
+
+Résidu = victoire observée − proba du modèle de prod, pris **du point de vue
+du camp le plus gaucher** dans les configurations asymétriques (dans les
+configurations miroir — D vs D, G vs G — l'avantage disparaît par
+construction : elles servent de contrôle, résidu pris du point de vue du
+camp A, arbitraire).
+
+| configuration | n | obs − attendu | IC 95 % |
+|---|---|---|---|
+| SIMPLE — D vs D (contrôle) | 2 797 | −1,5 pt | [−3,1 ; +0,1] |
+| SIMPLE — **G vs D (résidu du gaucher)** | 749 | **+3,1 pt** | [−0,2 ; +6,4] |
+| SIMPLE — G vs G (contrôle miroir) | 46 | +7,7 pt | [−5,6 ; +21,0] (trop peu) |
+| — dont MS : G vs D | 498 | **+4,3 pt** | [+0,1 ; +8,5] ⚠️ |
+| — dont WS : G vs D | 251 | +0,8 pt | [−4,4 ; +6,1] |
+| DOUBLE — 0G vs 0G (contrôle) | 1 241 | −0,9 pt | [−3,4 ; +1,6] |
+| DOUBLE — **camp plus gaucher** | 1 155 | +1,7 pt | [−0,9 ; +4,3] |
+| — dont écart de 2 gauchers | 101 | +7,1 pt | [−2,0 ; +16,2] |
+| — dont MD | 420 | +1,6 pt | [−2,6 ; +5,9] |
+| — dont WD | 302 | **+6,3 pt** | [+1,2 ; +11,4] ⚠️ |
+| — dont XD | 433 | −1,4 pt | [−5,7 ; +2,8] |
+
+Régression logistique du résidu — victoire ~ sigmoïde(logit(p_prod) + b ×
+écart de gaucherie), IC bootstrap 500 tirages graine 42 :
+
+- **global b = +0,117 [+0,010 ; +0,205], significatif** — mais le bord bas
+  frôle 0 (à 50/50 Elo, un gaucher contre un droitier vaudrait ~52,9 %) ;
+- par discipline : MS **+0,203 [+0,022 ; +0,396] ⚠️** ; WD **+0,362
+  [+0,064 ; +0,500] ⚠️** (borne haute = le garde-fou numérique ±0,5 de
+  l'ajusteur : l'IC est écrasé contre le plafond, signe d'un n trop petit) ;
+  WS +0,047, MD +0,122, XD **−0,035** : IC contenant tous 0 ;
+- **par année : 2024 +0,132 n.s. ; 2025 +0,196 ⚠️ ; 2026 −0,058 n.s.** — la
+  direction ne tient pas en 2026, contrairement au facteur âge (§9.3, stable
+  sur les 3 années) ;
+- sensibilité au codage en double : comptage +0,096 vs « ≥1 gaucher » +0,111,
+  tous deux n.s. — la conclusion ne dépend pas du codage.
+
+### La variante `elo-hand` au banc (motif elo-age, aucune fuite)
+
+Terme b × écart de gaucherie ajouté au logit de la proba de production ; b
+ajusté PAR DISCIPLINE en marche avant (année N sur les années < N, minimum
+300 matchs à mains connues), appliqué seulement si l'IC bootstrap (200
+tirages, graine 42) exclut 0. La porte mécanique ne s'ouvre que pour **une
+seule case : WD 2026 (b = +0,419, IC [+0,085 ; +0,500])** — les 8 autres
+restent à 0. Conséquence de puissance : la variante ne diffère de la référence
+que sur **54 des 1 398 matchs jugés de 2026 (3,9 %)** — encore moins que le
+terrain (§9.4, 7 %).
+
+Jugement sur 2025-2026 (4 233 matchs, parité prod 0 écart, non-régression
+roi.json ✅) :
+
+| modèle | M0 Δll global | M0 Δll paris | M1 EV/clôture | M2 CLV ouv. | M3 ΔROI vs réf [IC] | log loss | calib. |
+|---|---|---|---|---|---|---|---|
+| elo-recalibré (réf) | +0,0161 | +0,0486 | −4,02 % | +4,86 % | (référence) | 0,5366 | 1,6 pt |
+| **elo-hand** | +0,0163 | +0,0488 | −4,03 % | +4,87 % | **−0,1 pt [−0,6 ; +0,4]** | 0,5367 | 1,6 pt |
+
+Sur **2026 seul** (1 398 matchs, la seule année où la variante agit) : M3
+**−0,2 pt [−1,7 ; +1,2]**, log loss 0,5520 vs 0,5515, M0 +0,0144 vs +0,0139.
+Sensibilité au dé-vig : aucun changement de classement (mult −4,03 vs −4,02 %,
+power et shin identiques à l'arrondi).
+
+### Verdict (règle du banc : décider avec M3, IC hors de 0)
+
+**NON DÉPARTAGEABLE, et rien ne plaide pour insister → on n'adopte pas ;
+variante conservée désactivée (`actif: false`).** Contrairement au facteur âge
+(§9.3), qui améliorait TOUT le tableau sans être départageable, `elo-hand`
+n'améliore **rien** : M3 de signe négatif (−0,1 / −0,2 pt), M0, M1 et log loss
+un cheveu plus mauvais, M2 plate. Lecture honnête du dossier :
+
+- **le signal descriptif global existe** (IC hors de 0) mais il est **léger et
+  mal assis** : bord bas à +0,01, absent de 3 disciplines sur 5, négatif en
+  2026, et les deux cases significatives (MS, WD) sortent d'une grille de
+  ~10 tests — à ce niveau, une fausse découverte n'aurait rien d'étonnant ;
+- **l'essentiel de l'avantage du gaucher est déjà DANS l'Elo** : un gaucher
+  qui gagne grâce à sa main a une note qui monte comme n'importe quel
+  vainqueur ; ce qu'on mesure ici n'est que le reliquat ;
+- **la puissance est structurellement trop faible** : la seule correction que
+  la marche avant autorise (WD 2026) touche 54 matchs jugés. Même un vrai
+  effet y serait invisible en argent (leçon du terrain, §9.4).
+
+### Limites honnêtes
+
+- **Biais de couverture plausible** : la main n'est connue que si la fiche BWF
+  est remplie — plutôt les joueurs en vue. En double (couverture ~55 %),
+  l'échantillon joint n'est pas forcément représentatif du circuit entier.
+- **Le garde-fou numérique ±0,5** de l'ajusteur (hérité de `variante-age.mjs`)
+  écrase l'IC de WD contre le plafond : le b WD (+0,36, +0,42 en marche avant)
+  est en réalité « au moins ça, mal estimé » — un n si petit (302 matchs à
+  écart non nul) ne mérite pas mieux.
+- **Multiplicité** : ~10 IC regardés au descriptif (disciplines × configs ×
+  années) sans correction — les deux ⚠️ isolés valent moins que le global.
+- Le contrôle miroir G vs G en simple (n = 46) est trop petit pour vérifier
+  quoi que ce soit ; l'écart de 2 gauchers en double (n = 101) idem.
+- **2025-2026 jugés, mais 2025 sans correction** (aucun IC ne s'ouvrait sur
+  2024 seul) : le M3 de la fenêtre 2025-2026 ne mesure l'effet que sur 2026,
+  comme pour le terrain (§9.4). Prix de la règle anti-bruit, assumé.
+- La main vient d'une source unique par joueur (API BWF/Wikidata, champ
+  déclaratif) : quelques erreurs de saisie sont possibles, non vérifiables ici.
+
+### Refaire les mesures
+
+```bash
+node measures/variante-hand.mjs                                          # descriptif + réglages marche avant
+node measures/mesure-roi-modele.mjs --variantes=elo-hand --annees=2025,2026   # le banc (juge)
+node measures/mesure-roi-modele.mjs --variantes=elo-hand --annees=2026        # 2026 seul (là où la variante agit)
+```
+
+Fichiers : **créé** `measures/variante-hand.mjs` (jointure mains, codage,
+descriptif, variante marche avant — réutilise l'ajusteur et le bootstrap
+exportés par `variante-age.mjs`) ; **modifié (additif)**
+`measures/mesure-roi-modele.mjs` — un import + l'entrée `makeVarianteHand()`
+dans VARIANTES (`actif: false`). La production est inchangée. Non-régression
+du banc vérifiée après l'edit (favori −9,63 %, value −14,32 %, CLV +5,97 % :
+✅ conformes à roi.json).
