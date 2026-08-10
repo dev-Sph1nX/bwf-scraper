@@ -18,6 +18,20 @@ const fmtEv = (v) => (v == null ? "—" : `${v >= 0 ? "+" : ""}${(v * 100).toFix
 // Heure de départ relevée chez les bookmakers, affichée dans le fuseau du visiteur.
 const fmtHeure = (iso) =>
   new Date(iso).toLocaleString("fr-FR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+// Heure officielle du match (matchTimeUtc, planning BWF), dans le fuseau du
+// visiteur, 24 h : « 14:30 » si c'est aujourd'hui, sinon « mar. 11, 14:30 ».
+// null si la date est absente ou invalide (on ne rend alors rien).
+function fmtHeureMatch(iso) {
+  if (!iso) return null;
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return null;
+  const now = new Date();
+  const heure = d.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" });
+  const aujourdHui = d.getFullYear() === now.getFullYear()
+    && d.getMonth() === now.getMonth() && d.getDate() === now.getDate();
+  if (aujourdHui) return heure;
+  return `${d.toLocaleDateString("fr-FR", { weekday: "short", day: "numeric" })}, ${heure}`;
+}
 // Clé prédicteur d'une équipe : id du joueur en simple, clé `pair:` en double.
 const cleDuel = (team) => {
   const ids = (team?.players || []).map((p) => String(p.id));
@@ -108,8 +122,12 @@ export default function BetCard({ match, selectedBooks }) {
         <span className="oa-disc">{m.eventName || "?"}</span>
         <span className="oa-round">{ROUND_LABEL[m.roundName] || m.roundName}</span>
         <Link className="oa-tmt" to={`/tournament/${m.tmtId}`}>{m.tournamentName}</Link>
+        {/* Heure du match : planning BWF (matchTimeUtc) en priorité, sinon heure
+            relevée chez les bookmakers, sinon dates du tournoi. Court en appoint. */}
         <span className="oa-when">
-          {m.odds?.startUtc ? fmtHeure(m.odds.startUtc) : `${m.date}${m.year ? ` ${m.year}` : ""}`}
+          {fmtHeureMatch(m.matchTimeUtc)
+            ?? (m.odds?.startUtc ? fmtHeure(m.odds.startUtc) : `${m.date}${m.year ? ` ${m.year}` : ""}`)}
+          {m.courtName ? ` · ${m.courtName}` : ""}
         </span>
         {!m.odds && <span className="muted">pas de cote</span>}
         {m.odds && (

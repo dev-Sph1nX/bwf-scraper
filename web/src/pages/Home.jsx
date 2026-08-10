@@ -69,12 +69,13 @@ export default function Home() {
 
   const matchs = useMemo(() => {
     const ms = data?.matches || [];
-    // Ordre horaire : l'heure de départ vient des bookmakers (odds.startUtc),
-    // le flux BWF ne la donnant presque jamais. À défaut : heure du premier
-    // relevé de cote. Les matchs SANS heure connue passent après, triés par
-    // date de tournoi (leur startDate, souvent déjà entamé, ne dit rien de
-    // l'heure réelle du match).
-    const heure = (m) => m.odds?.startUtc
+    // Ordre horaire : d'abord l'heure officielle du planning BWF (matchTimeUtc,
+    // propagée par build-data), sinon l'heure de départ relevée chez les
+    // bookmakers (odds.startUtc), à défaut l'heure du premier relevé de cote.
+    // Les matchs SANS heure connue passent après, triés par date de tournoi
+    // (leur startDate, souvent déjà entamé, ne dit rien de l'heure réelle du match).
+    const heure = (m) => m.matchTimeUtc
+      || m.odds?.startUtc
       || (m.odds?.books && Object.values(m.odds.books)[0]?.points?.[0]?.at)
       || null;
     const ts = (v) => (v ? Date.parse(String(v).replace(" ", "T")) : NaN);

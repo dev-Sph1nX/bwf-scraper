@@ -371,6 +371,12 @@ function h2hRecord(aKey, ea, eb, disc) {
 //           et notre Elo lui donne >= 40%.
 const GAP_MIN = 10, PUNDER_VALUE = 0.45, PUNDER_BOGEY = 0.40, CONF_MIN = 0.45;
 const clamp01 = (x) => Math.max(0, Math.min(1, x));
+// "2026-08-04 00:50:00" (UTC, format API BWF) -> "2026-08-04T00:50:00Z" (ISO),
+// null si absent ou mal formé (le front n'affiche alors pas d'heure).
+function toIsoUtc(s) {
+  if (typeof s !== "string" || !/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/.test(s)) return null;
+  return s.replace(" ", "T") + "Z";
+}
 function interestOf(ea, eb, probTeam1, aKey, bKey, disc, name1, name2) {
   if (!ea || !eb || probTeam1 == null || !ea.bwfRank || !eb.bwfRank) return { score: 0, tags: [], reasons: [] };
   const pForm1 = probTeam1 / 100;
@@ -469,6 +475,8 @@ for (const y of years) {
               startDate: t.start_date || null, endDate: t.end_date || null,
               date: t.date, category: t.category, flag_url: t.flag_url, live_status: t.live_status,
               eventName: m.eventName, roundName: m.roundName,
+              // Heure programmée (UTC, ISO) et court : null si non encore planifié.
+              matchTimeUtc: toIsoUtc(m.matchTimeUtc), courtName: m.courtName || null,
               // Tableau exact (« MS - Qualification » vs « MS ») : le filtre de
               // l'accueil reprend la granularité des onglets de la page tournoi.
               drawName: disc.label || m.eventName,
