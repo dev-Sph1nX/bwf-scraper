@@ -3,7 +3,9 @@ import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const DATA = "/Users/lucasleperlier/Documents/bwf-scraper/data";
-const OUT = "/private/tmp/claude-501/-Users-lucasleperlier-Documents-bwf-scraper/30cbbb29-611a-4142-af78-2a5c6d40cecb/scratchpad/agents/birthdates/players.json";
+// players.json est un dérivé (régénérable à volonté depuis data/) : il vit à
+// côté du script — les anciens chemins /tmp disparaissaient entre sessions.
+const OUT = new URL("./players.json", import.meta.url).pathname;
 
 const players = new Map(); // id -> {id, nameDisplay, firstName, lastName, countryCode, slug, matches}
 

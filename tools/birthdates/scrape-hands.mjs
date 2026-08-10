@@ -34,9 +34,9 @@ const args = Object.fromEntries(
   })
 );
 
-const PLAYERS_PATH =
-  args.players ||
-  "/private/tmp/claude-501/-Users-lucasleperlier-Documents-bwf-scraper/30cbbb29-611a-4142-af78-2a5c6d40cecb/scratchpad/agents/birthdates/players.json";
+// players.json vit à côté du script (produit par extract-players.mjs — les
+// anciens chemins /tmp disparaissaient entre sessions).
+const PLAYERS_PATH = args.players || join(HERE, "players.json");
 const BIRTHDATES_PATH =
   args.birthdates || "/Users/lucasleperlier/Documents/bwf-scraper/data/players/birthdates.json";
 const PROGRESS_PATH = args.progress || join(HERE, "hands-progress.json");

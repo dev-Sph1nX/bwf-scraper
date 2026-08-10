@@ -18,8 +18,9 @@ import { fileURLToPath } from "node:url";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const BIRTHDATES = "/Users/lucasleperlier/Documents/bwf-scraper/data/players/birthdates.json";
-const PLAYERS =
-  "/private/tmp/claude-501/-Users-lucasleperlier-Documents-bwf-scraper/30cbbb29-611a-4142-af78-2a5c6d40cecb/scratchpad/agents/birthdates/players.json";
+// players.json vit à côté du script (produit par extract-players.mjs — les
+// anciens chemins /tmp disparaissaient entre sessions).
+const PLAYERS = join(HERE, "players.json");
 const PROGRESS = join(HERE, "hands-progress.json");
 const OUT = join(HERE, "birthdates-enrichi.json");
 
