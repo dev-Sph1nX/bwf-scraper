@@ -73,13 +73,26 @@ const years = await store.listYears();
 const norm = (s) =>
   String(s).normalize("NFD").replace(/\p{M}/gu, "").toLowerCase()
     .replace(/\bcity\b/g, "").replace(/[,\s]+/g, " ").trim();
+// Niveau du tournoi (lot C n°4, jamais mesuré jusqu'ici) : un Super 1000 et un
+// Super 300 n'ont ni le même plateau ni la même densité de matchs serrés. C'est
+// aussi le facteur qui manque le plus à notre modèle sur les matchs COTÉS, qui
+// sont précisément ceux des gros tournois.
+const NIVEAU_CAT = [
+  [/finals/i, 1250], [/grade 1/i, 1250], [/super 1000/i, 1000],
+  [/super 750/i, 750], [/super 500/i, 500], [/super 300/i, 300], [/super 100/i, 100],
+];
+const niveauDe = (cat) => NIVEAU_CAT.find(([re]) => re.test(cat || ""))?.[1] ?? 500;
+const categories = new Map();
+
 const lieux = new Map();
 for (const y of years) {
   try {
     const t = JSON.parse(await readFile(join(ROOT, "data", String(y), "tournaments.json"), "utf8"));
     for (const m of (Array.isArray(t) ? t : t.results ?? []))
-      for (const tt of m.tournaments ?? [])
+      for (const tt of m.tournaments ?? []) {
         lieux.set(Number(tt.id), norm(tt.location || tt.country || `t${tt.id}`));
+        categories.set(Number(tt.id), niveauDe(tt.category));
+      }
   } catch { /* année sans calendrier lisible : les matchs garderont `t<id>` */ }
 }
 
@@ -100,6 +113,7 @@ await computeElo(years, seeds, {
       disc,
       venue: lieux.get(Number(tmtId)) ?? `t${tmtId}`,
       gap: Math.abs(a.entity.rating - b.entity.rating),
+      niveauTournoi: categories.get(Number(tmtId)) ?? 500,
       rangA: ra,
       rangB: rb,
       three: wentThreeSets(match.score) ? 1 : 0,
@@ -157,6 +171,13 @@ const parBande = agg(rows, (r) => bandeDe(r.gap));
 for (let i = 0; i < BANDES.length; i++) {
   const s = parBande.get(i); if (!s) continue;
   console.log(`   ΔElo ${nomBande(i).padEnd(8)} ${String(s.n).padStart(5)} matchs   ${pct(s.k / s.n).padStart(7)}  ± ${(ic95(s.k, s.n) * 100).toFixed(1)} pt`);
+}
+
+console.log("\nTaux de 3 sets par NIVEAU DE TOURNOI (lot C n°4, jamais mesuré)");
+const parCat = agg(rows, (r) => r.niveauTournoi);
+for (const niv of [...parCat.keys()].sort((a, b) => a - b)) {
+  const s2 = parCat.get(niv);
+  console.log(`   ${String(niv).padStart(4)}  ${String(s2.n).padStart(5)} matchs   ${pct(s2.k / s2.n).padStart(7)}  ± ${(ic95(s2.k, s2.n) * 100).toFixed(1)} pt`);
 }
 
 // --- 2 bis. Le classement mondial dit-il mieux que l'Elo ? -------------------
@@ -233,6 +254,11 @@ const MODELES = [
     nom: "D · Elo+classement",
     cles: ["ΔElo/100", "Δlog-rang", "log niveau", ...DUMMIES.map((d) => `disc=${d}`)],
     encode: (r) => [r.gap / 100, ecartRang(r), lg(niveau(r)), ...dummiesDe(r)],
+  },
+  {
+    nom: "F · D + niveau tournoi",
+    cles: ["ΔElo/100", "Δlog-rang", "log niveau", ...DUMMIES.map((d) => `disc=${d}`), "log niv. tournoi"],
+    encode: (r) => [r.gap / 100, ecartRang(r), lg(niveau(r)), ...dummiesDe(r), lg(r.niveauTournoi)],
   },
   {
     nom: "E · D + lieu",
