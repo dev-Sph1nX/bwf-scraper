@@ -20,6 +20,12 @@
 //    Walkovers et matchs sans score écartés.
 // 2. Descriptif : taux de 3 sets global, par discipline, par tranche d'écart
 //    d'Elo. C'est le fait de base — un match serré va plus souvent en 3 sets.
+// 2 bis. CLASSEMENT MONDIAL vs Elo (demande du propriétaire, 2026-08-18) : la
+//    relation à l'écart d'Elo n'étant PAS monotone, on soupçonne l'Elo d'être
+//    du bruit dans les tranches serrées (joueurs peu joués, note proche de
+//    l'amorce). Le rang mondial sert d'arbitre — il ne dépend pas de notre
+//    calcul et porte en plus une information que l'Elo ne dit pas : le NIVEAU
+//    de l'affiche (deux 200es ne jouent pas le même match que deux top 10).
 // 3. Modèle : régression logistique sur |ΔElo| + discipline, ajustée en
 //    MARCHE AVANT (entraînée sur les années strictement antérieures à l'année
 //    jugée). Deux variantes pour isoler l'apport du lieu :
@@ -40,6 +46,8 @@ import { computeElo, seedEloByRank } from "../lib/elo.mjs";
 import { loadInitialRanks } from "../lib/seeds.mjs";
 import { isWalkover, wentThreeSets } from "../lib/dataset.mjs";
 import { fitLogistic, predictLogistic } from "../lib/logistic.mjs";
+import { loadPublications } from "../lib/rank-history.mjs";
+import { makeRankLookup } from "../lib/dataset.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -75,16 +83,25 @@ for (const y of years) {
   } catch { /* année sans calendrier lisible : les matchs garderont `t<id>` */ }
 }
 
+// Classement mondial à la date du match (publication strictement antérieure).
+const publications = await loadPublications(join(ROOT, "data", "rankings"));
+const rangDe = makeRankLookup(publications);
+console.log(`${publications.length} publications de classement chargées.`);
+
 const rows = [];
 await computeElo(years, seeds, {
   onMatch: ({ tmtId, disc, match, a, b }) => {
     if (isWalkover(match) || !match.matchTime) return;
     if (!Array.isArray(match.score) || match.score.length < 2) return;
+    const ra = rangDe(match.matchTime, disc, a.key)?.rank ?? null;
+    const rb = rangDe(match.matchTime, disc, b.key)?.rank ?? null;
     rows.push({
       year: Number(String(match.matchTime).slice(0, 4)),
       disc,
       venue: lieux.get(Number(tmtId)) ?? `t${tmtId}`,
       gap: Math.abs(a.entity.rating - b.entity.rating),
+      rangA: ra,
+      rangB: rb,
       three: wentThreeSets(match.score) ? 1 : 0,
     });
   },
@@ -142,14 +159,87 @@ for (let i = 0; i < BANDES.length; i++) {
   console.log(`   ΔElo ${nomBande(i).padEnd(8)} ${String(s.n).padStart(5)} matchs   ${pct(s.k / s.n).padStart(7)}  ± ${(ic95(s.k, s.n) * 100).toFixed(1)} pt`);
 }
 
+// --- 2 bis. Le classement mondial dit-il mieux que l'Elo ? -------------------
+
+const avecRang = rows.filter((r) => r.rangA && r.rangB);
+console.log(`\nClassement mondial connu pour les DEUX camps : ${avecRang.length}/${rows.length} matchs (${pct(avecRang.length / rows.length)})`);
+
+// Rangs très étalés (1 à plusieurs centaines) : on raisonne en log, sinon
+// l'écart 1↔20 pèserait autant que 200↔219, ce qui n'a aucun sens sportif.
+const lg = (x) => Math.log10(Math.max(1, x));
+const ecartRang = (r) => Math.abs(lg(r.rangA) - lg(r.rangB));
+const niveau = (r) => Math.min(r.rangA, r.rangB); // le meilleur des deux camps
+
+const BANDES_RANG = [0, 0.15, 0.3, 0.5, 0.8, 1.2];
+const bandeRang = (e) => { let i = 0; while (i + 1 < BANDES_RANG.length && e >= BANDES_RANG[i + 1]) i++; return i; };
+const nomBandeRang = (i) => (i === BANDES_RANG.length - 1
+  ? `≥${BANDES_RANG[i]}`
+  : `${BANDES_RANG[i]}-${BANDES_RANG[i + 1]}`);
+
+console.log("\nTaux de 3 sets par écart de rang mondial (en log10 : 0,3 ≈ un rapport de 2)");
+const parRang = agg(avecRang, (r) => bandeRang(ecartRang(r)));
+for (let i = 0; i < BANDES_RANG.length; i++) {
+  const s = parRang.get(i); if (!s) continue;
+  console.log(`   Δlog-rang ${nomBandeRang(i).padEnd(9)} ${String(s.n).padStart(5)} matchs   ${pct(s.k / s.n).padStart(7)}  ± ${(ic95(s.k, s.n) * 100).toFixed(1)} pt`);
+}
+
+const BANDES_NIV = [1, 10, 25, 50, 100, 1e9];
+const bandeNiv = (n) => { let i = 0; while (i + 1 < BANDES_NIV.length && n >= BANDES_NIV[i + 1]) i++; return i; };
+const nomNiv = (i) => (i === BANDES_NIV.length - 2 ? "100+" : `top ${BANDES_NIV[i + 1]}`);
+
+console.log("\nTaux de 3 sets par NIVEAU de l'affiche (meilleur rang des deux camps) — information absente de l'Elo");
+const parNiv = agg(avecRang, (r) => bandeNiv(niveau(r)));
+for (let i = 0; i < BANDES_NIV.length - 1; i++) {
+  const s = parNiv.get(i); if (!s) continue;
+  console.log(`   ${nomNiv(i).padEnd(10)} ${String(s.n).padStart(5)} matchs   ${pct(s.k / s.n).padStart(7)}  ± ${(ic95(s.k, s.n) * 100).toFixed(1)} pt`);
+}
+
+// LE test de l'hypothèse : dans la tranche d'Elo la plus serrée (< 50), qui
+// produit ANORMALEMENT peu de 3 sets, le classement voit-il des affiches en
+// réalité déséquilibrées ? Si oui, l'Elo y est bien du bruit.
+console.log("\nTranche ΔElo < 50 (l'anomalie) découpée par le classement mondial");
+const serres = avecRang.filter((r) => r.gap < 50);
+const parRangSerres = agg(serres, (r) => bandeRang(ecartRang(r)));
+for (let i = 0; i < BANDES_RANG.length; i++) {
+  const s = parRangSerres.get(i); if (!s) continue;
+  console.log(`   Δlog-rang ${nomBandeRang(i).padEnd(9)} ${String(s.n).padStart(5)} matchs   ${pct(s.k / s.n).padStart(7)}  ± ${(ic95(s.k, s.n) * 100).toFixed(1)} pt`);
+}
+const parNivSerres = agg(serres, (r) => bandeNiv(niveau(r)));
+console.log("   et par niveau :");
+for (let i = 0; i < BANDES_NIV.length - 1; i++) {
+  const s = parNivSerres.get(i); if (!s) continue;
+  console.log(`   ${nomNiv(i).padEnd(12)} ${String(s.n).padStart(5)} matchs   ${pct(s.k / s.n).padStart(7)}  ± ${(ic95(s.k, s.n) * 100).toFixed(1)} pt`);
+}
+
 // --- 3. Modèles, en marche avant --------------------------------------------
 
-const encode = (r, residuLieu) => [
-  r.gap / 100, // en centaines de points d'Elo, pour un coefficient lisible
-  ...DISCIPLINES.slice(1).map((d) => (r.disc === d ? 1 : 0)), // MS = référence
-  residuLieu,
+// Tous les modèles sont jugés sur les MÊMES matchs (ceux dont les deux rangs
+// sont connus, 86 %) : sinon l'écart mesuré serait celui des échantillons.
+const DUMMIES = DISCIPLINES.slice(1); // MS = référence
+const dummiesDe = (r) => DUMMIES.map((d) => (r.disc === d ? 1 : 0));
+
+const MODELES = [
+  {
+    nom: "A · Elo",
+    cles: ["ΔElo/100", ...DUMMIES.map((d) => `disc=${d}`)],
+    encode: (r) => [r.gap / 100, ...dummiesDe(r)],
+  },
+  {
+    nom: "C · classement",
+    cles: ["Δlog-rang", "log niveau", ...DUMMIES.map((d) => `disc=${d}`)],
+    encode: (r) => [ecartRang(r), lg(niveau(r)), ...dummiesDe(r)],
+  },
+  {
+    nom: "D · Elo+classement",
+    cles: ["ΔElo/100", "Δlog-rang", "log niveau", ...DUMMIES.map((d) => `disc=${d}`)],
+    encode: (r) => [r.gap / 100, ecartRang(r), lg(niveau(r)), ...dummiesDe(r)],
+  },
+  {
+    nom: "E · D + lieu",
+    cles: ["ΔElo/100", "Δlog-rang", "log niveau", ...DUMMIES.map((d) => `disc=${d}`), "résidu lieu"],
+    encode: (r, residu) => [r.gap / 100, ecartRang(r), lg(niveau(r)), ...dummiesDe(r), residu(r)],
+  },
 ];
-const CLES = ["ΔElo/100", ...DISCIPLINES.slice(1).map((d) => `disc=${d}`), "résidu lieu"];
 
 /** Taux par case (discipline × tranche d'Elo) estimé sur les lignes fournies. */
 function tauxParCase(liste) {
@@ -184,65 +274,64 @@ const logLoss = (ps, ys) => -ps.reduce((s, p, i) => {
   return s + (ys[i] ? Math.log(q) : Math.log(1 - q));
 }, 0) / ps.length;
 
-const anneesDispo = [...new Set(rows.map((r) => r.year))].sort();
+const anneesDispo = [...new Set(avecRang.map((r) => r.year))].sort();
 const anneesTest = (ANNEES_TEST ?? anneesDispo.slice(1)).filter((y) => anneesDispo.includes(y));
 
-console.log(`\nJugement HORS ÉCHANTILLON (entraînement sur les années strictement antérieures)`);
-console.log("année |     n | log loss : constante | case disc×ΔElo | modèle A | modèle B");
+console.log(`\nJugement HORS ÉCHANTILLON — mêmes matchs pour tous (log loss, plus bas = mieux)`);
+console.log(`année |     n | constante | ${MODELES.map((m) => m.nom.padEnd(9)).join(" | ")}`);
 
 const toutesPreds = [];
+let dernier = null;
 for (const an of anneesTest) {
-  const passe = rows.filter((r) => r.year < an);
-  const test = rows.filter((r) => r.year === an);
+  const passe = avecRang.filter((r) => r.year < an);
+  const test = avecRang.filter((r) => r.year === an);
   if (passe.length < 500 || !test.length) continue;
 
   const constante = passe.reduce((s, r) => s + r.three, 0) / passe.length;
-  const parCase = tauxParCase(passe);
   const residu = residusParLieu(passe);
-
-  const XA = passe.map((r) => encode(r, 0));
-  const XB = passe.map((r) => encode(r, residu(r)));
   const y = passe.map((r) => r.three);
-  const mA = fitLogistic(XA, y, { keys: CLES, epochs: 4000 });
-  const mB = fitLogistic(XB, y, { keys: CLES, epochs: 4000 });
-
   const ys = test.map((r) => r.three);
-  const pConst = test.map(() => constante);
-  const pCase = test.map((r) => parCase(r));
-  const pA = test.map((r) => predictLogistic(mA, encode(r, 0)));
-  const pB = test.map((r) => predictLogistic(mB, encode(r, residu(r))));
 
-  console.log(
-    `${an}  | ${String(test.length).padStart(5)} |` +
-    `        ${logLoss(pConst, ys).toFixed(4)}      |` +
-    `     ${logLoss(pCase, ys).toFixed(4)}     |` +
-    `  ${logLoss(pA, ys).toFixed(4)}  |  ${logLoss(pB, ys).toFixed(4)}`,
-  );
-  test.forEach((r, i) => toutesPreds.push({ ...r, pA: pA[i], pB: pB[i] }));
-
-  if (an === anneesTest.at(-1)) {
-    console.log("\n   Coefficients du modèle B (log-cote, variables centrées-réduites) :");
-    mB.keys.forEach((k, j) => console.log(`      ${k.padEnd(12)} ${mB.weights[j] >= 0 ? "+" : ""}${mB.weights[j].toFixed(3)}`));
+  const scores = [];
+  for (const m of MODELES) {
+    const modele = fitLogistic(passe.map((r) => m.encode(r, residu)), y, { keys: m.cles, epochs: 4000 });
+    const ps = test.map((r) => predictLogistic(modele, m.encode(r, residu)));
+    scores.push({ nom: m.nom, ll: logLoss(ps, ys), modele, ps });
   }
+  console.log(
+    `${an}  | ${String(test.length).padStart(5)} |  ${logLoss(test.map(() => constante), ys).toFixed(4)}   | ` +
+    scores.map((s) => `${s.ll.toFixed(4)}   `).join("| "),
+  );
+  // Le modèle retenu pour la calibration est le meilleur de l'année en cours.
+  const meilleur = scores.reduce((a, b) => (b.ll < a.ll ? b : a));
+  test.forEach((r, i) => toutesPreds.push({ ...r, p: meilleur.ps[i] }));
+  dernier = { an, scores, meilleur };
+}
+
+if (dernier) {
+  console.log(`\n   Meilleur sur ${dernier.an} : ${dernier.meilleur.nom}`);
+  console.log("   Coefficients (log-cote, variables centrées-réduites) :");
+  const m = dernier.meilleur.modele;
+  m.keys.forEach((k, j) => console.log(`      ${k.padEnd(12)} ${m.weights[j] >= 0 ? "+" : ""}${m.weights[j].toFixed(3)}`));
 }
 
 // --- 4. Calibration hors échantillon ----------------------------------------
 
 if (toutesPreds.length) {
-  console.log("\nCalibration hors échantillon du modèle B (un pari ne vaut que si `p` est juste)");
-  const tri = [...toutesPreds].sort((a, b) => a.pB - b.pB);
+  console.log("\nCalibration hors échantillon du meilleur modèle (un pari ne vaut que si `p` est juste)");
+  const tri = [...toutesPreds].sort((a, b) => a.p - b.p);
   const taille = Math.ceil(tri.length / 10);
   console.log("   décile |     n | prédit | observé | écart");
   let ecartAbs = 0;
   for (let i = 0; i < 10; i++) {
     const bloc = tri.slice(i * taille, (i + 1) * taille);
     if (!bloc.length) continue;
-    const p = bloc.reduce((s, r) => s + r.pB, 0) / bloc.length;
+    const p = bloc.reduce((s, r) => s + r.p, 0) / bloc.length;
     const o = bloc.reduce((s, r) => s + r.three, 0) / bloc.length;
     ecartAbs += Math.abs(p - o) * bloc.length;
     console.log(`      ${String(i + 1).padStart(2)}   | ${String(bloc.length).padStart(5)} | ${pct(p).padStart(6)} | ${pct(o).padStart(6)}  | ${((o - p) * 100 >= 0 ? "+" : "")}${((o - p) * 100).toFixed(1)} pt`);
   }
   console.log(`   Erreur de calibration moyenne : ${(ecartAbs / toutesPreds.length * 100).toFixed(2)} pt`);
-  const etendue = Math.max(...toutesPreds.map((r) => r.pB)) - Math.min(...toutesPreds.map((r) => r.pB));
+  const etendue = Math.max(...toutesPreds.map((r) => r.p)) - Math.min(...toutesPreds.map((r) => r.p));
   console.log(`   Étendue des probas prédites : ${(etendue * 100).toFixed(1)} pt — c'est elle qui borne ce qu'on pourra détecter comme mal coté.`);
 }

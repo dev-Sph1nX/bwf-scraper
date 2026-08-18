@@ -1409,7 +1409,7 @@ d'autant que l'effet gymnase (§7) y est réel et persistant. Trois étapes :
 **que sait-on prédire (§10.1) → le prix le sait-il déjà (§10.2) → est-ce
 rentable (§10.3)**.
 
-## 10.1 Étape 1 — ce qu'on sait prédire : très peu au-delà du taux de base (2026-08-18)
+## 10.1 Étape 1 — ce qu'on sait prédire : peu, et le classement mondial y aide plus que l'Elo (2026-08-18)
 
 `node measures/mesure-marche-sets.mjs` — 13 684 matchs joués (2024-2026),
 écart d'Elo d'AVANT match (crochet `onMatch`, mêmes garanties anti-fuite que
@@ -1446,36 +1446,65 @@ joueurs mal notés (peu de matchs au compteur, Elo proche de la valeur d'amorce)
 dont les rencontres sont en réalité déséquilibrées — l'Elo y est du bruit, pas
 une égalité de niveau.
 
-**Jugement hors échantillon** (entraînement sur les années strictement
-antérieures, log loss, plus bas = mieux) :
+**Le CLASSEMENT MONDIAL fait mieux que l'Elo sur ce marché** (piste du
+propriétaire, 2026-08-18 — rang connu pour les deux camps sur 11 766 matchs,
+86 %). Là où l'Elo n'est pas monotone, le rang l'est parfaitement :
 
-| Année testée | n | constante | case disc×ΔElo | modèle A (ΔElo+disc) | modèle B (A + résidu de lieu) |
-|---|---|---|---|---|---|
-| 2025 | 5 222 | 0,6308 | 0,6308 | **0,6239** | 0,6255 |
-| 2026 | 3 476 | 0,6454 | 0,6445 | 0,6435 | **0,6429** |
+| Δlog-rang (0,3 ≈ un rapport de 2) | n | 3 sets |
+|---|---|---|
+| 0-0,15 | 2 640 | **38,4 %** |
+| 0,15-0,3 | 2 288 | 36,8 % |
+| 0,3-0,5 | 2 530 | 35,1 % |
+| 0,5-0,8 | 2 273 | 30,6 % |
+| 0,8-1,2 | 1 406 | 28,5 % |
+| ≥1,2 | 629 | **21,6 %** |
 
-**VERDICT : le nombre de sets est presque imprévisible au-delà du taux de
-base.** Le gain sur la constante est de 1,1 % de log loss en 2025 et 0,3 % en
-2026 — à comparer aux 6-8 % de marge que le bookmaker charge sur ce marché.
-Le résidu de gymnase pèse pourtant lourd dans les coefficients (+0,203, du même
-ordre que l'écart d'Elo à −0,226) mais **n'améliore pas la prédiction hors
-échantillon** (pire que A en 2025, mieux de 0,0006 en 2026) : l'effet §7 est
-réel en descriptif, il ne se transporte pas en prédiction match par match.
+Et il **explique l'anomalie** : dans la tranche ΔElo < 50, le classement
+redécoupe proprement (38,7 % → 33,6 % quand l'écart de rang grandit) et surtout
+sépare par niveau — **top 10 : 42,3 %** contre 32,6 % au-delà du 100e. Quand
+l'Elo dit « égalité », c'est souvent qu'il ne sait rien : hypothèse du bruit
+d'amorce CONFIRMÉE. Noter que le niveau est plat en descriptif global (32,9 %
+en top 10 vs 34,8 % en top 100) mais pèse une fois l'écart d'Elo contrôlé
+(coefficient −0,198) : c'est un effet de suppression, il ne se voit qu'à écart
+donné.
 
-**Calibration hors échantillon (modèle B), le point qui coince :**
+**Jugement hors échantillon** (mêmes matchs pour tous les modèles — ceux dont
+les deux rangs sont connus ; log loss, plus bas = mieux) :
+
+| Année testée | n | constante | A · Elo | C · classement | **D · Elo+classement** | E · D + lieu |
+|---|---|---|---|---|---|---|
+| 2025 | 4 516 | 0,6348 | 0,6266 | 0,6276 | **0,6236** | 0,6272 |
+| 2026 | 3 016 | 0,6530 | 0,6507 | 0,6503 | **0,6485** | 0,6489 |
+
+**VERDICT : le nombre de sets reste très peu prévisible, mais Elo et
+classement se complètent.** Le meilleur modèle (D) gagne 1,8 % de log loss sur
+la constante en 2025 et 0,7 % en 2026 — le double de l'Elo seul (1,1 % / 0,3 %),
+mais toujours petit devant les 6-8 % de marge que le bookmaker charge sur ce
+marché. Les deux mesures ne disent pas la même chose : l'Elo suit la forme
+récente, le rang porte le niveau, et aucune ne domine l'autre (C bat A en 2026,
+l'inverse en 2025).
+
+**Le résidu de gymnase ne se transporte PAS** : le modèle E est battu par D
+dans les deux années. L'effet §7 (réel à +6,1 σ, persistant r = 0,42) est un
+fait descriptif de lieu, pas un prédicteur match par match — c'était pourtant
+le socle de l'intuition d'origine du lot C n°1, et c'est le premier résultat
+négatif de ce chantier.
+
+**Calibration hors échantillon (modèle D), le point qui coince encore :**
 
 | Décile | prédit | observé | écart |
 |---|---|---|---|
-| 1 | 18,1 % | 21,8 % | +3,8 pt |
-| 3 | 27,1 % | 31,6 % | +4,5 pt |
-| 7 | 34,9 % | 39,1 % | +4,2 pt |
-| 10 | 42,6 % | 37,8 % | −4,8 pt |
+| 1 | 17,8 % | 19,5 % | +1,7 pt |
+| 3 | 27,5 % | 33,0 % | +5,6 pt |
+| 7 | 35,6 % | 38,1 % | +2,4 pt |
+| 10 | 44,1 % | 42,5 % | −1,6 pt |
 
-Erreur de calibration moyenne **3,06 pt**, et le motif est systématique : le
-modèle **étale trop** ses probabilités (46 pt d'étendue prédite pour ~16 pt
-d'étendue observée). Il faudra le rétrécir (shrinkage) avant tout pari — une
-proba de 42,6 % annoncée qui en vaut 37,8 % transforme un « pari value » en
-perte mécanique.
+Erreur de calibration moyenne **2,37 pt** (contre 3,06 pt sans le classement :
+il aide aussi là). Le motif reste le même — le modèle **étale trop** ses
+probabilités (47 pt d'étendue prédite pour ~23 pt observée) et sous-estime
+systématiquement le milieu de table. À rétrécir (shrinkage) avant tout pari :
+une proba annoncée trop extrême transforme un « pari value » en perte
+mécanique.
 
 **Ce que ça implique pour les étapes suivantes.** L'edge ne viendra pas d'une
 meilleure prédiction du nombre de sets : on ne bat le taux de base que de
