@@ -3518,7 +3518,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -3613,7 +3613,7 @@
         "team2seed": null,
         "matchTime": "2026-08-18 20:40:00",
         "matchTimeUtc": "2026-08-18 14:40:00",
-        "matchStatus": "P",
+        "matchStatus": "F",
         "oopRound": "14",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3624,7 +3624,7 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": 16,
+        "duration": 38,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
@@ -3632,7 +3632,13 @@
         "score": [
           {
             "set": 1,
-            "home": 19,
+            "home": 21,
+            "away": 16,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
             "away": 13,
             "serve": 1
           }
@@ -3739,12 +3745,12 @@
         },
         "team1seed": "10",
         "team2seed": null,
-        "matchTime": "2026-08-18 21:00:00",
-        "matchTimeUtc": "2026-08-18 16:00:00",
+        "matchTime": "2026-08-18 21:50:00",
+        "matchTimeUtc": "2026-08-18 15:50:00",
         "matchStatus": "N",
         "oopRound": "16",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MD",
         "roundName": "R32",
         "drawName": "MD",
@@ -4283,7 +4289,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "CHN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -4376,9 +4382,9 @@
         },
         "team1seed": "7",
         "team2seed": null,
-        "matchTime": "2026-08-18 20:55:00",
-        "matchTimeUtc": "2026-08-18 14:55:00",
-        "matchStatus": "P",
+        "matchTime": "2026-08-18 20:35:00",
+        "matchTimeUtc": "2026-08-18 14:35:00",
+        "matchStatus": "F",
         "oopRound": "14",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -4389,7 +4395,7 @@
         "courtCode": "4",
         "courtIndex": 3,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": 22,
+        "duration": 43,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
@@ -4403,8 +4409,8 @@
           },
           {
             "set": 2,
-            "home": 3,
-            "away": 3,
+            "home": 18,
+            "away": 21,
             "serve": 2
           }
         ],
@@ -5521,11 +5527,48 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "61444",
+              "nameDisplay": "KIM Won Ho",
+              "nameType": 1,
+              "firstName": "Won Ho",
+              "lastName": "KIM",
+              "initials": "KW",
+              "nameShort": "KIM W H ",
+              "nameShort2": "KIM",
+              "slug": "won-ho-kim",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Won Ho KIM",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895351/assets/players/thumbnail/61444.jpg"
+              }
+            },
+            {
+              "id": "66513",
+              "nameDisplay": "SEO Seung Jae",
+              "nameType": 1,
+              "firstName": "Seung Jae",
+              "lastName": "SEO",
+              "initials": "SS",
+              "nameShort": "SEO S J ",
+              "nameShort2": "SEO",
+              "slug": "seung-jae-seo",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Seung Jae SEO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895418/assets/players/thumbnail/66513.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
@@ -5536,7 +5579,7 @@
           "players": [],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "1",
         "team2seed": null,
         "matchTime": null,
         "matchTimeUtc": null,
@@ -5736,11 +5779,48 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "97601",
+              "nameDisplay": "HU Ke Yuan",
+              "nameType": 1,
+              "firstName": "Ke Yuan",
+              "lastName": "HU",
+              "initials": "HK",
+              "nameShort": "HU K Y ",
+              "nameShort2": "HU",
+              "slug": "hu-ke-yuan",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "HU Ke Yuan",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+              }
+            },
+            {
+              "id": "62220",
+              "nameDisplay": "LIN Xiang Yi",
+              "nameType": 1,
+              "firstName": "Xiang Yi",
+              "lastName": "LIN",
+              "initials": "LX",
+              "nameShort": "LIN X Y ",
+              "nameShort2": "LIN",
+              "slug": "xiang-yi-lin",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Xiang Yi LIN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1728624398/assets/players/thumbnail/62220.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
@@ -8623,7 +8703,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -8718,8 +8798,8 @@
       "team2seed": null,
       "matchTime": "2026-08-18 20:40:00",
       "matchTimeUtc": "2026-08-18 14:40:00",
-      "matchStatus": "P",
-      "matchStatusValue": "In Progress",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "14",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -8731,14 +8811,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": 16,
-      "time": "00:16",
+      "duration": 38,
+      "time": "00:38",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -8842,13 +8937,13 @@
       },
       "team1seed": "10",
       "team2seed": null,
-      "matchTime": "2026-08-18 21:00:00",
-      "matchTimeUtc": "2026-08-18 16:00:00",
+      "matchTime": "2026-08-18 21:50:00",
+      "matchTimeUtc": "2026-08-18 15:50:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "16",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "MD",
       "roundName": "R32",
       "drawName": "MD",
@@ -9268,7 +9363,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "CHN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -9361,10 +9456,10 @@
       },
       "team1seed": "7",
       "team2seed": null,
-      "matchTime": "2026-08-18 20:55:00",
-      "matchTimeUtc": "2026-08-18 14:55:00",
-      "matchStatus": "P",
-      "matchStatusValue": "In Progress",
+      "matchTime": "2026-08-18 20:35:00",
+      "matchTimeUtc": "2026-08-18 14:35:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "14",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -9376,14 +9471,29 @@
       "courtCode": "4",
       "courtIndex": 3,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": 22,
-      "time": "00:22",
+      "duration": 43,
+      "time": "00:43",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -10026,11 +10136,48 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "61444",
+            "nameDisplay": "KIM Won Ho",
+            "nameType": 1,
+            "firstName": "Won Ho",
+            "lastName": "KIM",
+            "initials": "KW",
+            "nameShort": "KIM W H ",
+            "nameShort2": "KIM",
+            "slug": "won-ho-kim",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Won Ho KIM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895351/assets/players/thumbnail/61444.jpg"
+            }
+          },
+          {
+            "id": "66513",
+            "nameDisplay": "SEO Seung Jae",
+            "nameType": 1,
+            "firstName": "Seung Jae",
+            "lastName": "SEO",
+            "initials": "SS",
+            "nameShort": "SEO S J ",
+            "nameShort2": "SEO",
+            "slug": "seung-jae-seo",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Seung Jae SEO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895418/assets/players/thumbnail/66513.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
@@ -10041,7 +10188,7 @@
         "players": [],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "1",
       "team2seed": null,
       "matchTime": null,
       "matchTimeUtc": null,
@@ -10308,11 +10455,48 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "97601",
+            "nameDisplay": "HU Ke Yuan",
+            "nameType": 1,
+            "firstName": "Ke Yuan",
+            "lastName": "HU",
+            "initials": "HK",
+            "nameShort": "HU K Y ",
+            "nameShort2": "HU",
+            "slug": "hu-ke-yuan",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "HU Ke Yuan",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          },
+          {
+            "id": "62220",
+            "nameDisplay": "LIN Xiang Yi",
+            "nameType": 1,
+            "firstName": "Xiang Yi",
+            "lastName": "LIN",
+            "initials": "LX",
+            "nameShort": "LIN X Y ",
+            "nameShort2": "LIN",
+            "slug": "xiang-yi-lin",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Xiang Yi LIN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1728624398/assets/players/thumbnail/62220.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
