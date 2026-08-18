@@ -3613,7 +3613,7 @@
         "team2seed": null,
         "matchTime": "2026-08-18 20:40:00",
         "matchTimeUtc": "2026-08-18 14:40:00",
-        "matchStatus": "W",
+        "matchStatus": "P",
         "oopRound": "14",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3624,12 +3624,19 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": 0,
+        "duration": 10,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 12,
+            "away": 8,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -4382,7 +4389,7 @@
         "courtCode": "4",
         "courtIndex": 3,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": 4,
+        "duration": 16,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
@@ -4390,9 +4397,9 @@
         "score": [
           {
             "set": 1,
-            "home": 5,
-            "away": 7,
-            "serve": 2
+            "home": 16,
+            "away": 18,
+            "serve": 1
           }
         ],
         "matches": []
@@ -8705,8 +8712,8 @@
       "team2seed": null,
       "matchTime": "2026-08-18 20:40:00",
       "matchTimeUtc": "2026-08-18 14:40:00",
-      "matchStatus": "W",
-      "matchStatusValue": "WarmUp",
+      "matchStatus": "P",
+      "matchStatusValue": "In Progress",
       "oopRound": "14",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -8718,8 +8725,8 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": 0,
-      "time": "00:00",
+      "duration": 10,
+      "time": "00:10",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
@@ -9363,8 +9370,8 @@
       "courtCode": "4",
       "courtIndex": 3,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": 4,
-      "time": "00:04",
+      "duration": 16,
+      "time": "00:16",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",

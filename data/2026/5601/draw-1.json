@@ -1969,7 +1969,7 @@
         "team2seed": "7",
         "matchTime": "2026-08-18 20:35:00",
         "matchTimeUtc": "2026-08-18 14:35:00",
-        "matchStatus": "C",
+        "matchStatus": "P",
         "oopRound": "14",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1980,12 +1980,19 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": 0,
+        "duration": 9,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 7,
+            "away": 10,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -8036,8 +8043,8 @@
       "team2seed": "7",
       "matchTime": "2026-08-18 20:35:00",
       "matchTimeUtc": "2026-08-18 14:35:00",
-      "matchStatus": "C",
-      "matchStatusValue": "On Court",
+      "matchStatus": "P",
+      "matchStatusValue": "In Progress",
       "oopRound": "14",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -8049,8 +8056,8 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": 0,
-      "time": "00:00",
+      "duration": 9,
+      "time": "00:09",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
