@@ -1400,3 +1400,85 @@ exportés par `variante-age.mjs`) ; **modifié (additif)**
 dans VARIANTES (`actif: false`). La production est inchangée. Non-régression
 du banc vérifiée après l'edit (favori −9,63 %, value −14,32 %, CLV +5,97 % :
 ✅ conformes à roi.json).
+
+# 10. Le marché « nombre de sets » (2026-08-18)
+
+Lot C n°1. Le marché vainqueur est prouvé perdant pour nous (§8.4 : value
+−14,5 %) ; le pari est qu'un marché moins travaillé laisse davantage de place,
+d'autant que l'effet gymnase (§7) y est réel et persistant. Trois étapes :
+**que sait-on prédire (§10.1) → le prix le sait-il déjà (§10.2) → est-ce
+rentable (§10.3)**.
+
+## 10.1 Étape 1 — ce qu'on sait prédire : très peu au-delà du taux de base (2026-08-18)
+
+`node measures/mesure-marche-sets.mjs` — 13 684 matchs joués (2024-2026),
+écart d'Elo d'AVANT match (crochet `onMatch`, mêmes garanties anti-fuite que
+le backtest), aucune cote regardée à ce stade.
+
+**Taux de base : 32,8 % de matchs en 3 sets.** Stable d'une année sur l'autre
+(32,0 % / 32,5 % / 34,5 % — la hausse 2026 est à la limite des intervalles).
+
+Par discipline, l'écart est réel (9 points entre extrêmes, intervalles disjoints) :
+
+| Discipline | n | 3 sets |
+|---|---|---|
+| MS | 3 046 | **37,2 %** ± 1,7 |
+| MD | 2 715 | 33,4 % ± 1,8 |
+| WS | 2 738 | 32,7 % ± 1,8 |
+| XD | 2 679 | 32,0 % ± 1,8 |
+| WD | 2 506 | **28,0 %** ± 1,8 |
+
+Par écart d'Elo, la relation **n'est pas monotone** — fait à retenir :
+
+| ΔElo | n | 3 sets |
+|---|---|---|
+| 0-50 | 4 205 | 33,9 % |
+| 50-100 | 2 561 | **37,6 %** ← sommet |
+| 100-150 | 1 982 | 35,5 % |
+| 150-200 | 1 496 | 32,9 % |
+| 200-300 | 1 971 | 29,8 % |
+| 300-400 | 972 | 25,0 % |
+| 400+ | 497 | **15,7 %** |
+
+Les matchs les plus serrés (ΔElo < 50) produisent MOINS de 3 sets que la
+tranche 50-100. Hypothèse à tester plus tard : cette tranche concentre les
+joueurs mal notés (peu de matchs au compteur, Elo proche de la valeur d'amorce)
+dont les rencontres sont en réalité déséquilibrées — l'Elo y est du bruit, pas
+une égalité de niveau.
+
+**Jugement hors échantillon** (entraînement sur les années strictement
+antérieures, log loss, plus bas = mieux) :
+
+| Année testée | n | constante | case disc×ΔElo | modèle A (ΔElo+disc) | modèle B (A + résidu de lieu) |
+|---|---|---|---|---|---|
+| 2025 | 5 222 | 0,6308 | 0,6308 | **0,6239** | 0,6255 |
+| 2026 | 3 476 | 0,6454 | 0,6445 | 0,6435 | **0,6429** |
+
+**VERDICT : le nombre de sets est presque imprévisible au-delà du taux de
+base.** Le gain sur la constante est de 1,1 % de log loss en 2025 et 0,3 % en
+2026 — à comparer aux 6-8 % de marge que le bookmaker charge sur ce marché.
+Le résidu de gymnase pèse pourtant lourd dans les coefficients (+0,203, du même
+ordre que l'écart d'Elo à −0,226) mais **n'améliore pas la prédiction hors
+échantillon** (pire que A en 2025, mieux de 0,0006 en 2026) : l'effet §7 est
+réel en descriptif, il ne se transporte pas en prédiction match par match.
+
+**Calibration hors échantillon (modèle B), le point qui coince :**
+
+| Décile | prédit | observé | écart |
+|---|---|---|---|
+| 1 | 18,1 % | 21,8 % | +3,8 pt |
+| 3 | 27,1 % | 31,6 % | +4,5 pt |
+| 7 | 34,9 % | 39,1 % | +4,2 pt |
+| 10 | 42,6 % | 37,8 % | −4,8 pt |
+
+Erreur de calibration moyenne **3,06 pt**, et le motif est systématique : le
+modèle **étale trop** ses probabilités (46 pt d'étendue prédite pour ~16 pt
+d'étendue observée). Il faudra le rétrécir (shrinkage) avant tout pari — une
+proba de 42,6 % annoncée qui en vaut 37,8 % transforme un « pari value » en
+perte mécanique.
+
+**Ce que ça implique pour les étapes suivantes.** L'edge ne viendra pas d'une
+meilleure prédiction du nombre de sets : on ne bat le taux de base que de
+quelques millièmes de log loss. Il ne peut venir que d'une **erreur de prix**
+du bookmaker sur ce marché (§10.2), et il faudra qu'elle dépasse à la fois sa
+marge et notre erreur de calibration de 3 points.
