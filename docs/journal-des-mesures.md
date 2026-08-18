@@ -1637,3 +1637,34 @@ marge, un biais de 2 points ne paie pas.
 - **Catégorie du tournoi** (lot C n°4, jamais testée) : gradient descriptif réel
   (Super 300 : 32,6 % de 3 sets → Super 1000 : 35,2 %), **apport nul hors
   échantillon** — déjà capté par le niveau des joueurs au classement.
+
+## 10.6 Sensibilité individuelle aux gauchers : indiscernable du hasard, et surtout SANS persistance (2026-08-18)
+
+Idée du propriétaire, distincte de §9.6 (qui mesurait un avantage GLOBAL du
+gaucher) : tel joueur est-il personnellement plus à l'aise — ou en difficulté —
+contre les gauchers, au-delà de ce que son Elo prédit ? Périmètre MS + WS
+(décision propriétaire : couverture des mains 77 %/70 %, pas de paires).
+`node measures/mesure-sensibilite-gauchers.mjs`.
+
+3 152 duels à mains connues et Elo mûr (≥10 matchs chacun), soit **719
+observations joueur-contre-gaucher** — c'est la limite structurelle : les
+gauchers sont 12 % du circuit.
+
+| Test | Résultat | Référence |
+|---|---|---|
+| Sur-dispersion entre joueurs (34 joueurs ≥8 matchs vs G, effet global retiré) | **1,86 σ** | gymnase §7 : ~6 σ ; < 2 σ = bruit |
+| **Persistance** avant-2026 → 2026 (22 joueurs) | **r = −0,008** | gymnase : r = 0,42 ; ≈0 = non pariable |
+| Split-half (moitiés alternées, 34 joueurs) | r = 0,234 | faible |
+
+Les cas spectaculaires existent (Antonsen : −35,6 pt sur 17 matchs contre
+gauchers, z = −3,18) mais c'est exactement ce que 34 tirages du hasard
+produisent — et la persistance nulle le confirme : **la « sensibilité » d'un
+joueur mesurée sur 2024-2025 ne dit RIEN de celle de 2026.** Le split-half
+légèrement positif sans persistance temporelle suggère au mieux des poches
+transitoires (un adversaire gaucher récurrent battu deux fois la même saison),
+rien de projetable.
+
+**VERDICT : MORT en l'état.** Avec 719 observations, un effet réel mais petit
+resterait invisible ; le critère pariable (persistance) est à zéro. À ne
+re-mesurer que si le nombre de matchs à mains connues double (2-3 saisons de
+plus, ou une meilleure source de mains).
