@@ -54,7 +54,17 @@ async function essai(nom, url, headers) {
     const corps = await resp.text();
     console.log(`      statut : ${resp.status} ${resp.statusText} — ${corps.length} octets`);
     console.log(entete(resp));
-    if (!resp.ok) console.log(`      corps  : ${corps.replace(/\s+/g, " ").slice(0, 400)}`);
+    if (!resp.ok) {
+      // Le TEXTE visible, pas le CSS : c'est lui qui nomme le motif du refus
+      // (« pays non autorisé » ≠ « accès automatisé détecté »).
+      const texte = corps
+        .replace(/<(script|style)[\s\S]*?<\/\1>/gi, " ")
+        .replace(/<[^>]+>/g, " ")
+        .replace(/&nbsp;/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+      console.log(`      texte  : ${texte.slice(0, 500)}`);
+    }
     else console.log(`      ng-state présent : ${corps.includes("ng-state")}`);
   } catch (e) {
     console.log(`      ÉCHEC RÉSEAU : ${e.message}`);
