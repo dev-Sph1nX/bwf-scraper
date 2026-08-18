@@ -3920,7 +3920,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "HKG",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
@@ -4015,7 +4015,7 @@
         "team2seed": null,
         "matchTime": "2026-08-18 19:50:00",
         "matchTimeUtc": "2026-08-18 13:50:00",
-        "matchStatus": "P",
+        "matchStatus": "F",
         "oopRound": "13",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -4026,7 +4026,7 @@
         "courtCode": "4",
         "courtIndex": 3,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": 16,
+        "duration": 35,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
@@ -4036,6 +4036,12 @@
             "set": 1,
             "home": 21,
             "away": 16,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 17,
             "serve": 1
           }
         ],
@@ -4411,7 +4417,7 @@
         "team2seed": null,
         "matchTime": "2026-08-18 19:20:00",
         "matchTimeUtc": "2026-08-18 14:20:00",
-        "matchStatus": "W",
+        "matchStatus": "P",
         "oopRound": "14",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -4422,12 +4428,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": 0,
+        "duration": 30,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 15,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 7,
+            "away": 5,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -5707,11 +5726,48 @@
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "HKG",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "68015",
+              "nameDisplay": "YEUNG Nga Ting",
+              "nameType": 1,
+              "firstName": "Nga Ting",
+              "lastName": "YEUNG",
+              "initials": "YN",
+              "nameShort": "YEUNG N T ",
+              "nameShort2": "YEUNG",
+              "slug": "nga-ting-yeung",
+              "countryCode": "HKG",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+              "avatar": {
+                "title": "Nga Ting YEUNG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895439/assets/players/thumbnail/68015.jpg"
+              }
+            },
+            {
+              "id": "75864",
+              "nameDisplay": "YEUNG Pui Lam",
+              "nameType": 1,
+              "firstName": "Pui Lam",
+              "lastName": "YEUNG",
+              "initials": "YP",
+              "nameShort": "YEUNG P L ",
+              "nameShort2": "YEUNG",
+              "slug": "pui-lam-yeung",
+              "countryCode": "HKG",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+              "avatar": {
+                "title": "Pui Lam YEUNG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356623/assets/players/thumbnail/75864.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": "11",
@@ -9036,7 +9092,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "HKG",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
@@ -9131,8 +9187,8 @@
       "team2seed": null,
       "matchTime": "2026-08-18 19:50:00",
       "matchTimeUtc": "2026-08-18 13:50:00",
-      "matchStatus": "P",
-      "matchStatusValue": "In Progress",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "13",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -9144,14 +9200,29 @@
       "courtCode": "4",
       "courtIndex": 3,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": 16,
-      "time": "00:16",
+      "duration": 35,
+      "time": "00:35",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 17,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -9539,8 +9610,8 @@
       "team2seed": null,
       "matchTime": "2026-08-18 19:20:00",
       "matchTimeUtc": "2026-08-18 14:20:00",
-      "matchStatus": "W",
-      "matchStatusValue": "WarmUp",
+      "matchStatus": "P",
+      "matchStatusValue": "In Progress",
       "oopRound": "14",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -9552,8 +9623,8 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": 0,
-      "time": "00:00",
+      "duration": 30,
+      "time": "00:30",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
@@ -10418,11 +10489,48 @@
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "HKG",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "68015",
+            "nameDisplay": "YEUNG Nga Ting",
+            "nameType": 1,
+            "firstName": "Nga Ting",
+            "lastName": "YEUNG",
+            "initials": "YN",
+            "nameShort": "YEUNG N T ",
+            "nameShort2": "YEUNG",
+            "slug": "nga-ting-yeung",
+            "countryCode": "HKG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+            "avatar": {
+              "title": "Nga Ting YEUNG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895439/assets/players/thumbnail/68015.jpg"
+            }
+          },
+          {
+            "id": "75864",
+            "nameDisplay": "YEUNG Pui Lam",
+            "nameType": 1,
+            "firstName": "Pui Lam",
+            "lastName": "YEUNG",
+            "initials": "YP",
+            "nameShort": "YEUNG P L ",
+            "nameShort2": "YEUNG",
+            "slug": "pui-lam-yeung",
+            "countryCode": "HKG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+            "avatar": {
+              "title": "Pui Lam YEUNG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356623/assets/players/thumbnail/75864.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": "11",
