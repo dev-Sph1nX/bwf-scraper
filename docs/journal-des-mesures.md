@@ -1751,3 +1751,50 @@ facteurs dont chaque IC EXCLUT déjà zéro individuellement (même de peu). On
 n'en possède aucun : tout l'inventaire du lot C est « non départageable ».
 Chercher d'autres facteurs mineurs reste possible, mais la barre est désormais
 claire : un candidat n'entre dans une combinaison que s'il tient debout seul.
+
+## 10.9 Cartographie de la marge : le biais favori-outsider existe, mais AUCUNE tranche n'est sous 3 % (2026-08-18)
+
+La dernière question ouverte du diagnostic « l'edge < le péage » : le ~8 % de
+marge est une moyenne — existe-t-il des tranches de cotes où la marge effective
+d'un camp tombe sous la CLV prouvée (+3,1 %, §8.2) ? Mesure SANS hypothèse de
+dé-vig (le proportionnel attribue la marge également par construction) : le ROI
+d'un pari aveugle sur tous les camps d'une tranche = −(marge effective de la
+tranche). `node measures/mesure-structure-marge.mjs` — 8 041 matchs, meilleure
+cote multi-opérateurs, deux observations par match, grappe = match, tranches
+figées a priori.
+
+| Tranche (clôture) | n | marge effective | par année (24/25/26) |
+|---|---|---|---|
+| **1,01-1,1** | 2 850 | **6,1 %** [5,0 ; 7,2] | 7,1 / 5,7 / 4,6 |
+| 1,1-1,2 | 1 215 | 11,3 % | stable |
+| 1,2-1,35 | 1 422 | 11,4 % | stable |
+| 1,35-1,5 | 1 171 | 15,1 % | stable |
+| 1,5-3 | 4 832 | 10-15 % | stable |
+| 3-5 | 2 293 | 18,5 % | stable |
+| **5-10** | 2 080 | **51,3 %** | 64 / 46 / 40 |
+| 10+ | 200 | ~70 % | — |
+
+**Le biais favori-outsider existe, massif et persistant** : gros favoris à
+~6 %, gros outsiders à ~50-70 % — l'outsider porte l'essentiel du péage,
+conformément à la littérature. L'ouverture est quasi identique à la clôture.
+
+**Mais la tranche LA PLUS MINCE du marché (1,01-1,1) coûte encore 6,1 %
+[5,0 ; 7,2] — le double de notre CLV prouvée (+3,1 %).** Au seuil de viabilité
+fixé a priori (marge < 3 %, n ≥ 200) : **AUCUNE tranche ne passe**, à aucun
+instant, aucune année. Le croisement « nos paris value restreints aux tranches
+minces » est donc vide par construction.
+
+**VERDICT FINAL DU DIAGNOSTIC.** L'arithmétique ne se referme nulle part :
+même au coin le moins cher du marché, le péage vaut deux fois notre avantage.
+Ceci clôt la question ouverte depuis §8.2 (« l'écart à combler est ~4 pt ») —
+l'écart est en réalité ≥ 2 pt au MIEUX du marché, et notre modèle au meilleur
+de sa forme (combo-points, §10.8) n'en récupère qu'une fraction non
+significative. **Dans ces données, avec ces opérateurs, il n'existe pas de
+stratégie gagnante — c'est désormais démontré tranche par tranche, marché par
+marché, facteur par facteur.** Conditions de réouverture : un accès à des
+cotes dont la marge de tranche passe sous ~4 % (exchange, books asiatiques —
+hors périmètre ANJ actuel), ou un bond du modèle qui doublerait la CLV.
+
+Note en passant : le ROI value s'améliore d'année en année (−14,8 → −9,9 →
+−8,8 à l'ouverture) — cohérent avec un modèle qui apprend sur plus
+d'historique, mais la pente ne croise jamais zéro dans l'horizon visible.
