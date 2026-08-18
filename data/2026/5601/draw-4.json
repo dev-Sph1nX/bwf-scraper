@@ -3758,7 +3758,7 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": 22,
+        "duration": 28,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
@@ -3768,13 +3768,13 @@
             "set": 1,
             "home": 21,
             "away": 7,
-            "serve": 1
+            "serve": 2
           },
           {
             "set": 2,
-            "home": 5,
-            "away": 3,
-            "serve": 1
+            "home": 10,
+            "away": 7,
+            "serve": 2
           }
         ],
         "matches": []
@@ -4499,7 +4499,7 @@
         "team2seed": null,
         "matchTime": "2026-08-18 17:15:00",
         "matchTimeUtc": "2026-08-18 12:15:00",
-        "matchStatus": "W",
+        "matchStatus": "P",
         "oopRound": "11",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -4510,12 +4510,19 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": 0,
+        "duration": 3,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 2,
+            "away": 8,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -8809,8 +8816,8 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": 22,
-      "time": "00:22",
+      "duration": 28,
+      "time": "00:28",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
@@ -9426,8 +9433,8 @@
       "team2seed": null,
       "matchTime": "2026-08-18 17:15:00",
       "matchTimeUtc": "2026-08-18 12:15:00",
-      "matchStatus": "W",
-      "matchStatusValue": "WarmUp",
+      "matchStatus": "P",
+      "matchStatusValue": "In Progress",
       "oopRound": "11",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -9439,8 +9446,8 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": 0,
-      "time": "00:00",
+      "duration": 3,
+      "time": "00:03",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
