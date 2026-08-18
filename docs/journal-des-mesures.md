@@ -518,6 +518,7 @@ Consignées parce qu'elles sont instructives et qu'elles pourraient se répéter
 | Fenêtre de découverte `+7…+30` | interception de l'API | les écarts réels vont de **4 à 50** |
 | `marginMultiplier` hors de `computeElo` | contrôle d'effet | surcharger le paramètre restait **sans effet** |
 | Filtrer À LA COLLECTE ce qu'un endpoint renvoie | étude du marché des sets (2026-08-18) | **collecter tout, filtrer à l'analyse** — voir ci-dessous |
+| LCG de bootstrap qui déborde (`graine * 1103515245` > 2^53) | l'estimation ponctuelle tombait **hors de son propre IC** | un PRNG maison se vérifie (moyenne + déciles) **avant** de servir à conclure ; corrigé en mulberry32, plusieurs « IC excluant zéro » sont redevenus non significatifs |
 
 **La leçon du 2026-08-18, qui a coûté deux fois.** Le même appel GraphQL
 Flashscore (`_hash=oce`) sert quatre familles de paris et cinq opérateurs. Le
@@ -1524,3 +1525,115 @@ meilleure prédiction du nombre de sets : on ne bat le taux de base que de
 quelques millièmes de log loss. Il ne peut venir que d'une **erreur de prix**
 du bookmaker sur ce marché (§10.2), et il faudra qu'elle dépasse à la fois sa
 marge et notre erreur de calibration de 3 points.
+
+## 10.2 Étape 2 — le marché des sets nous bat, et il est bien calibré (2026-08-18)
+
+`node measures/mesure-roi-sets.mjs` — 97 tournois collectés
+(`tools/flashscore/backfill-sets.mjs`, 6 241 matchs sur 7 867 portent des cotes
+de score exact), **5 083 matchs joints** BWF ↔ cotes.
+
+Le prix vient du SCORE EXACT en sets (2-0, 2-1, 1-2, 0-2), seule forme archivée.
+« Match en 3 sets » se rejoue en misant 2-1 ET 1-2 : deux paris réels, prix
+combiné `1/(1/c(2-1) + 1/c(1-2))`. **Aucune cote n'est synthétisée.**
+
+| | log loss |
+|---|---|
+| Taux plat (37,4 % observé) | 0,6640 |
+| **Marché** | **0,6568** |
+| Nous | 0,6685 |
+| Nous, recentré a posteriori | 0,6617 |
+
+**Le marché est presque parfaitement calibré** sur ce marché — l'écart
+prix/réalité par tranche vaut +0,0, −0,1, +0,2, −0,3 point sur les tranches
+peuplées (l'anomalie à −3,0 pt vue sur un échantillon partiel était du bruit) :
+
+| p3 du marché | n | annoncé | observé |
+|---|---|---|---|
+| 25-30 % | 406 | 28,3 % | 28,3 % |
+| 30-35 % | 956 | 32,6 % | 32,5 % |
+| 35-40 % | 1 507 | 37,9 % | 38,0 % |
+| ≥ 40 % | 2 156 | 41,8 % | 41,5 % |
+
+**Nos deux défauts, séparés.** (a) **Mal centrés** : on annonce 33,9 % là où la
+réalité des matchs COTÉS est 37,4 %, parce que le modèle est ajusté sur tous
+les matchs (32,8 %) alors qu'on parie sur les gros tournois — biais de
+−3,5 pt, réparable d'un décalage. (b) **Non discriminants** : même recentré
+(0,6617), le modèle reste **pire qu'une proba plate** (0,6640)… non, il la bat
+de 0,0023 — mais reste loin du marché (0,6568). Notre finesse match par match
+n'apporte quasi rien ici.
+
+## 10.3 Étape 3 — toutes les stratégies perdent (2026-08-18)
+
+Marge moyenne du bookmaker sur les 4 issues : **29,2 %**. Mise de 1 €, meilleur
+prix entre opérateurs, IC bootstrap par grappe (graine 42).
+
+| Stratégie | n | ROI | IC 95 % |
+|---|---|---|---|
+| Tout sur 3 sets | 5 083 | **−22,9 %** | [−25,6 ; −22,3] |
+| Tout sur 2 sets | 5 083 | **−22,4 %** | [−23,0 ; −20,8] |
+| Sélectif EV>0, 2 sets, clôture | 127 | −22,4 % | [−33,3 ; −9,9] |
+| Sélectif EV>0, 3 sets, clôture | 49 | −9,3 % | [−44,5 ; +26,2] |
+
+La CLV sur « 3 sets » vaut **+0,4 %** [+0,3 ; +0,5] : les cotes bougent à peine
+entre ouverture et clôture, il n'y a pas non plus de gain de timing à prendre.
+
+**VERDICT DU MARCHÉ DES SETS : fermé.** Il est plus cher que le vainqueur
+(17-18 % en direct, 29,2 % en archives, contre 12-13 % mesurés sur les mêmes
+matchs), le marché le prédit mieux que nous, et il est bien calibré. L'hypothèse
+du lot C n°1 — « un marché moins travaillé laisse plus de place » — est
+**retournée par la mesure**.
+
+## 10.4 Le total de points : le marché se trompe, mais c'est un retard, pas une rente (2026-08-18)
+
+`node measures/mesure-total-points.mjs` — 3 694 matchs joints, **6 579 lignes**
+de pari (une ligne = un match × un total proposé). Marché servi par **Betclic
+seul** dans les archives.
+
+Le total est bimodal, ce qui dicte la méthode : **71,0 pts** en moyenne pour un
+match en 2 sets (±6,6), **110,4 pts** en 3 sets (±7,2), recouvrement quasi nul
+(96 matchs sur 13 684). On compose donc
+`P(total > N) = p3 × P(> N | 3 sets) + (1−p3) × P(> N | 2 sets)`, lois
+empiriques par discipline estimées sur le passé strict.
+
+**Marge : 11,0 %** — deux fois moins que les sets, d'où l'intérêt de l'essai.
+
+| | log loss |
+|---|---|
+| Taux plat | 0,6914 |
+| **Marché** | 0,6929 |
+| Nous | 0,6965 |
+
+**Fait notable : ici le marché est MOINS BON qu'une proba plate.** Personne ne
+sait prédire le franchissement de la ligne, bookmaker compris — et c'est de là
+que vient le biais mesuré.
+
+| Année | n | prix moyen | réalisé | écart |
+|---|---|---|---|---|
+| 2024 | 192 | 49,1 % | 49,5 % | +0,4 pt |
+| 2025 | 4 306 | 49,9 % | 51,9 % | +2,0 pt |
+| 2026 | 2 081 | 50,0 % | 55,4 % | **+5,5 pt** |
+
+Les paris sélectifs du côté PLUS donnent des ROI positifs (+4,3 % à +7,6 % selon
+le seuil, à l'ouverture comme à la clôture) **mais tous les IC contiennent
+zéro** — et miser tous les PLUS perd encore 4,3 %.
+
+**Interprétation, et c'est elle qui compte : le biais GRANDIT d'année en année,
+ce qui disqualifie l'hypothèse d'une erreur stable du marché.** L'explication
+est dans nos propres chiffres (§10.1) : le taux de 3 sets monte (32,0 % → 32,5 %
+→ 34,5 %), les matchs s'allongent, et les lignes suivent avec retard. Un retard
+se referme ; il ne se parie pas.
+
+**Verdict : fermé aussi, mais c'est le seul endroit du projet où le marché se
+trompe de façon répétée.** À ressortir si le coût d'accès baisse — à 11 % de
+marge, un biais de 2 points ne paie pas.
+
+## 10.5 Ce que l'étude a mesuré en passant (2026-08-18)
+
+- **Péage effectif par nombre d'opérateurs** (35 matchs, marché vainqueur) :
+  meilleur prix chez nos 3 books → **13,35 %** ; chez les 5 qui cotent le
+  badminton (+ bwin.fr, + netbet.fr, tous deux sous licence ANJ) → **10,85 %**.
+  **2,5 points de péage** gagnés, qui se transmettent intégralement au résultat.
+  C'est le seul levier mesuré qui agisse sur le facteur limitant.
+- **Catégorie du tournoi** (lot C n°4, jamais testée) : gradient descriptif réel
+  (Super 300 : 32,6 % de 3 sets → Super 1000 : 35,2 %), **apport nul hors
+  échantillon** — déjà capté par le niveau des joueurs au classement.

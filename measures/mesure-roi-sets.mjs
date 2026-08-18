@@ -245,8 +245,16 @@ for (let i = 0; i < tranches.length - 1; i++) {
 // Bootstrap déterministe (graine 42), même convention que le banc d'essai.
 function ic95Bootstrap(gains, tirages = 2000) {
   if (!gains.length) return [0, 0];
-  let graine = 42;
-  const alea = () => ((graine = (graine * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff);
+  // PRNG 32 bits (mulberry32) : l'ancien LCG débordait — `graine * 1103515245`
+  // dépasse 2^53, la précision disparaît AVANT le masque, et les tirages
+  // n'étaient plus uniformes (estimation ponctuelle hors de son propre IC).
+  let a = 42 >>> 0;
+  const alea = () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
   const moyennes = [];
   for (let t = 0; t < tirages; t++) {
     let s = 0;
