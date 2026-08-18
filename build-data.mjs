@@ -26,7 +26,7 @@ import { oddsForMatch } from "./lib/home-data.mjs";
 import { eloProb, isProvisional } from "./lib/models.mjs";
 import { isWalkover } from "./lib/dataset.mjs";
 import { loadFlashscoreOdds, joinFlashscore } from "./lib/flashscore-join.mjs";
-import { computeRoi } from "./lib/roi.mjs";
+import { computeRoi, BOOKS as MISABLE_BOOKS } from "./lib/roi.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "web", "public", "data");
@@ -592,6 +592,11 @@ const oddsByPlayed = new Map();
     // couple de cotes complet (relevé passé en live, marché fermé) est écarté —
     // sans quoi le tournoi afficherait « avec cotes » pour des cases vides.
     for (const [op, b] of Object.entries(o.books)) {
+      // Seuls les opérateurs MISABLES (lib/roi.mjs BOOKS) entrent dans les
+      // cotes d'un match : pinnacle (référence de mesure, non agréé ANJ) reste
+      // dans les relevés bruts et books-report, jamais dans « la meilleure
+      // cote » ni le ROI — sans ce filtre, bestOddAt le prendrait.
+      if (!MISABLE_BOOKS.includes(op)) continue;
       if (b.odd1 != null && b.odd2 != null) books[op] = { odd1: b.odd1, odd2: b.odd2 };
     }
     if (Object.keys(books).length) oddsByPlayed.set(k, { books, startUtc: o.startUtc });

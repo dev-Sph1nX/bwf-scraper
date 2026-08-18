@@ -23,12 +23,18 @@ import { runFileName } from "./lib/odds-history.mjs";
 import { fetchBetclic, enrichBetclicSets } from "./lib/book-betclic.mjs";
 import { fetchUnibet, enrichUnibetSets } from "./lib/book-unibet.mjs";
 import { fetchWinamax, enrichWinamaxSets } from "./lib/book-winamax.mjs";
+import { fetchPinnacle } from "./lib/book-pinnacle.mjs";
 
 const OUT_DIR = path.join("data", "books", "runs");
 const BOOKS = [
   ["betclic", fetchBetclic, enrichBetclicSets],
   ["unibet", fetchUnibet, enrichUnibetSets],
   ["winamax", fetchWinamax, enrichWinamaxSets],
+  // Pinnacle = RÉFÉRENCE DE MESURE (CLV vs la ligne mondiale, journal §10.9),
+  // pas un opérateur misable : build-data ne verse jamais ses cotes dans la
+  // « meilleure cote » ni le ROI. Pas d'enrichissement sets (l'API straight ne
+  // sert pas ce marché ; les totaux de points arrivent déjà avec les lignes).
+  ["pinnacle", fetchPinnacle, async () => 0],
 ];
 
 await fs.mkdir(OUT_DIR, { recursive: true });

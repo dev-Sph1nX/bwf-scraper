@@ -1,0 +1,478 @@
+{
+ "matchups": [
+  {
+   "ageLimit": 0,
+   "altTeaser": false,
+   "bestOfX": 3,
+   "featureOrder": -1,
+   "hasAltSpread": true,
+   "hasAltTotal": false,
+   "hasBetshare": false,
+   "hasLive": true,
+   "hasMarkets": true,
+   "id": 1634215731,
+   "isBetshareEnabled": false,
+   "isFeatured": false,
+   "isHighlighted": false,
+   "isLive": false,
+   "isPromoted": false,
+   "league": {
+    "ageLimit": 0,
+    "bestOfX": 3,
+    "featureOrder": -1,
+    "group": "Canada",
+    "id": 293665,
+    "isFeatured": false,
+    "isHidden": false,
+    "isPromoted": false,
+    "isSticky": false,
+    "matchupCount": 6,
+    "matchupCountSE": 6,
+    "name": "BWF World Championships - Men's Singles",
+    "sequence": 10,
+    "sport": {
+     "featureOrder": 4,
+     "id": 33,
+     "isFeatured": true,
+     "isHidden": false,
+     "isSticky": false,
+     "matchupCount": 190,
+     "matchupCountSE": 168,
+     "name": "Tennis",
+     "primaryMarketType": "moneyline"
+    }
+   },
+   "liveMode": null,
+   "parent": null,
+   "parentId": null,
+   "parlayRestriction": "unique_matchups",
+   "participants": [
+    {
+     "alignment": "home",
+     "name": "Jurij Rodionov",
+     "order": 0,
+     "stats": [
+      {
+       "period": 0
+      },
+      {
+       "period": 1
+      }
+     ]
+    },
+    {
+     "alignment": "away",
+     "name": "Rei Sakamoto",
+     "order": 1,
+     "stats": [
+      {
+       "period": 0
+      },
+      {
+       "period": 1
+      }
+     ]
+    }
+   ],
+   "periods": [
+    {
+     "cutoffAt": "2026-08-18T19:00:00Z",
+     "hasMoneyline": true,
+     "hasSpread": true,
+     "hasTeamTotal": false,
+     "hasTotal": true,
+     "period": 0,
+     "status": "open"
+    },
+    {
+     "cutoffAt": "2026-08-18T19:00:00Z",
+     "hasMoneyline": true,
+     "hasSpread": false,
+     "hasTeamTotal": false,
+     "hasTotal": false,
+     "period": 1,
+     "status": "open"
+    }
+   ],
+   "rotation": 12344,
+   "startTime": "2026-08-18T19:00:00Z",
+   "state": {},
+   "status": "pending",
+   "totalMarketCount": 10,
+   "type": "matchup",
+   "units": "Sets",
+   "version": 695978581
+  },
+  {
+   "ageLimit": 0,
+   "altTeaser": false,
+   "featureOrder": -1,
+   "hasAltSpread": true,
+   "hasAltTotal": false,
+   "hasBetshare": false,
+   "hasLive": true,
+   "hasMarkets": true,
+   "id": 1634243975,
+   "isBetshareEnabled": false,
+   "isFeatured": false,
+   "isHighlighted": false,
+   "isLive": true,
+   "isPromoted": false,
+   "league": {
+    "ageLimit": 0,
+    "bestOfX": 3,
+    "featureOrder": -1,
+    "group": "Switzerland",
+    "id": 206253,
+    "isFeatured": false,
+    "isHidden": false,
+    "isPromoted": false,
+    "isSticky": false,
+    "matchupCount": 5,
+    "matchupCountSE": 5,
+    "name": "BWF World Championships - Mixed Doubles",
+    "sequence": 15,
+    "sport": {
+     "featureOrder": 4,
+     "id": 33,
+     "isFeatured": true,
+     "isHidden": false,
+     "isSticky": false,
+     "matchupCount": 190,
+     "matchupCountSE": 168,
+     "name": "Tennis",
+     "primaryMarketType": "moneyline"
+    }
+   },
+   "liveMode": "live_delay",
+   "parent": {
+    "hasMarkets": false,
+    "id": 1634223773,
+    "isLive": false,
+    "participants": [
+     {
+      "alignment": "home",
+      "name": "Alexandra Biot",
+      "order": 0,
+      "state": {
+       "gamesBySet": [
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       "points": "15",
+       "serving": false,
+       "setsWon": 0
+      },
+      "stats": [
+       {
+        "period": 1
+       },
+       {
+        "period": 0
+       }
+      ]
+     },
+     {
+      "alignment": "away",
+      "name": "Valentini Grammatikopoulou",
+      "order": 1,
+      "state": {
+       "gamesBySet": [
+        1,
+        0,
+        0,
+        0,
+        0
+       ],
+       "points": "30",
+       "serving": true,
+       "setsWon": 0
+      },
+      "stats": [
+       {
+        "period": 1
+       },
+       {
+        "period": 0
+       }
+      ]
+     }
+    ],
+    "startTime": "2026-08-18T15:07:32Z",
+    "state": {
+     "set": 1
+    }
+   },
+   "parentId": 1634223773,
+   "parlayRestriction": "forbidden",
+   "participants": [
+    {
+     "alignment": "home",
+     "name": "Alexandra Biot",
+     "order": 0,
+     "stats": [
+      {
+       "period": 0
+      },
+      {
+       "period": 1
+      },
+      {
+       "period": 2
+      }
+     ]
+    },
+    {
+     "alignment": "away",
+     "name": "Valentini Grammatikopoulou",
+     "order": 1,
+     "stats": [
+      {
+       "period": 0
+      },
+      {
+       "period": 1
+      },
+      {
+       "period": 2
+      }
+     ]
+    }
+   ],
+   "periods": [
+    {
+     "cutoffAt": "2026-08-18T21:05:16Z",
+     "hasMoneyline": true,
+     "hasSpread": true,
+     "hasTeamTotal": false,
+     "hasTotal": true,
+     "period": 0,
+     "status": "open"
+    },
+    {
+     "cutoffAt": "2026-08-18T21:05:16Z",
+     "hasMoneyline": true,
+     "hasSpread": false,
+     "hasTeamTotal": false,
+     "hasTotal": false,
+     "period": 1,
+     "status": "open"
+    },
+    {
+     "cutoffAt": "2026-08-18T21:05:16Z",
+     "hasMoneyline": true,
+     "hasSpread": false,
+     "hasTeamTotal": false,
+     "hasTotal": false,
+     "period": 2,
+     "status": "open"
+    }
+   ],
+   "rotation": 34364,
+   "startTime": "2026-08-18T16:00:00Z",
+   "state": {},
+   "status": "pending",
+   "totalMarketCount": 5,
+   "type": "matchup",
+   "units": "Sets",
+   "version": 696000617
+  }
+ ],
+ "markets": [
+  {
+   "cutoffAt": "2026-08-18T19:00:00+00:00",
+   "isAlternate": false,
+   "key": "s;0;m",
+   "limits": [
+    {
+     "amount": 1300,
+     "type": "maxRiskStake"
+    }
+   ],
+   "matchupId": 1634215731,
+   "period": 0,
+   "prices": [
+    {
+     "designation": "home",
+     "price": 106
+    },
+    {
+     "designation": "away",
+     "price": -124
+    }
+   ],
+   "status": "open",
+   "type": "moneyline",
+   "version": 3695824409
+  },
+  {
+   "cutoffAt": "2026-08-18T19:00:00+00:00",
+   "isAlternate": false,
+   "key": "s;0;s;1.5",
+   "limits": [
+    {
+     "amount": 975,
+     "type": "maxRiskStake"
+    }
+   ],
+   "matchupId": 1634215731,
+   "period": 0,
+   "prices": [
+    {
+     "designation": "home",
+     "points": 1.5,
+     "price": -234
+    },
+    {
+     "designation": "away",
+     "points": -1.5,
+     "price": 192
+    }
+   ],
+   "status": "open",
+   "type": "spread",
+   "version": 3695824409
+  },
+  {
+   "cutoffAt": "2026-08-18T19:00:00+00:00",
+   "isAlternate": true,
+   "key": "s;0;s;-1.5",
+   "limits": [
+    {
+     "amount": 975,
+     "type": "maxRiskStake"
+    }
+   ],
+   "matchupId": 1634215731,
+   "period": 0,
+   "prices": [
+    {
+     "designation": "home",
+     "points": -1.5,
+     "price": 242
+    },
+    {
+     "designation": "away",
+     "points": 1.5,
+     "price": -302
+    }
+   ],
+   "status": "open",
+   "type": "spread",
+   "version": 3695824409
+  },
+  {
+   "cutoffAt": "2026-08-18T19:00:00+00:00",
+   "isAlternate": false,
+   "key": "s;0;ou;2.5",
+   "limits": [
+    {
+     "amount": 975,
+     "type": "maxRiskStake"
+    }
+   ],
+   "matchupId": 1634215731,
+   "period": 0,
+   "prices": [
+    {
+     "designation": "over",
+     "points": 2.5,
+     "price": 133
+    },
+    {
+     "designation": "under",
+     "points": 2.5,
+     "price": -159
+    }
+   ],
+   "status": "open",
+   "type": "total",
+   "version": 3695824409
+  },
+  {
+   "cutoffAt": "2026-08-18T21:05:16.603000+00:00",
+   "isAlternate": false,
+   "key": "s;0;m",
+   "limits": [
+    {
+     "amount": 150,
+     "type": "maxRiskStake"
+    }
+   ],
+   "matchupId": 1634243975,
+   "period": 0,
+   "prices": [
+    {
+     "designation": "home",
+     "price": 978
+    },
+    {
+     "designation": "away",
+     "price": -1227
+    }
+   ],
+   "status": "open",
+   "type": "moneyline",
+   "version": 3695829345
+  },
+  {
+   "cutoffAt": "2026-08-18T21:05:16.603000+00:00",
+   "isAlternate": false,
+   "key": "s;0;s;1.5",
+   "limits": [
+    {
+     "amount": 350,
+     "type": "maxRiskStake"
+    }
+   ],
+   "matchupId": 1634243975,
+   "period": 0,
+   "prices": [
+    {
+     "designation": "home",
+     "points": 1.5,
+     "price": 263
+    },
+    {
+     "designation": "away",
+     "points": -1.5,
+     "price": -329
+    }
+   ],
+   "status": "open",
+   "type": "spread",
+   "version": 3695829345
+  },
+  {
+   "cutoffAt": "2026-08-18T21:05:16.603000+00:00",
+   "isAlternate": false,
+   "key": "s;0;ou;2.5",
+   "limits": [
+    {
+     "amount": 250,
+     "type": "maxRiskStake"
+    }
+   ],
+   "matchupId": 1634243975,
+   "period": 0,
+   "prices": [
+    {
+     "designation": "over",
+     "points": 2.5,
+     "price": 339
+    },
+    {
+     "designation": "under",
+     "points": 2.5,
+     "price": -425
+    }
+   ],
+   "status": "open",
+   "type": "total",
+   "version": 3695829345
+  }
+ ]
+}

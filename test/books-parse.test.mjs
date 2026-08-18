@@ -302,3 +302,42 @@ test("unibet : URL de page match reconstruite depuis le flux (slugs non libres)"
   });
   assert.equal(paths.get("e3370126"), "wta/toronto-df/3370126/siniakov-zhang-vs-hunter-krawczy");
 });
+
+// --- Pinnacle (référence de mesure, jamais misable) -------------------------------
+
+import { parsePinnacle, americanToDecimal, disciplineOfLeague } from "../lib/book-pinnacle.mjs";
+
+test("pinnacle : cote américaine -> décimale", () => {
+  assert.equal(americanToDecimal(106), 2.06);   // +106
+  assert.equal(americanToDecimal(-124), 1.806); // −124
+  assert.equal(americanToDecimal(100), 2);
+  assert.equal(americanToDecimal(0), null);
+  assert.equal(americanToDecimal("n/a"), null);
+});
+
+test("pinnacle : matchups + marchés -> lignes normalisées (fixture réelle)", () => {
+  const { matchups, markets } = JSON.parse(read("pinnacle-badminton.json"));
+  const rows = parsePinnacle(matchups, markets);
+  const pre = rows.find((r) => !r.isLive);
+  assert.ok(pre, "le matchup prématch doit produire une ligne");
+  assert.equal(pre.book, "pinnacle");
+  assert.equal(pre.srId, null); // pas d'id Sportradar chez Pinnacle
+  assert.equal(pre.discipline, "MS"); // « Men's Singles » dans le nom de ligue
+  assert.equal(pre.odd1, 2.06);   // home +106
+  assert.equal(pre.odd2, 1.806);  // away −124
+  assert.ok(pre.maxStake > 0, "la limite de mise du vainqueur est conservée");
+  assert.ok(Array.isArray(pre.totals) && pre.totals.length, "les totaux de points sont collectés");
+  for (const t of pre.totals) {
+    assert.ok(Number.isFinite(t.n) && t.over > 1 && t.under > 1);
+  }
+  // le live est étiqueté (c'est scrape-books qui écarte, comme pour les autres)
+  const live = rows.find((r) => r.isLive);
+  if (live) assert.equal(live.discipline, "XD");
+});
+
+test("pinnacle : disciplines depuis le nom de ligue (libellés à confirmer en réel)", () => {
+  assert.equal(disciplineOfLeague("BWF World Tour - Women's Singles"), "WS");
+  assert.equal(disciplineOfLeague("Denmark Open - Men's Doubles"), "MD");
+  assert.equal(disciplineOfLeague("Ladies' Doubles"), "WD");
+  assert.equal(disciplineOfLeague("BWF World Championships"), null); // pas de discipline dans le nom
+});
