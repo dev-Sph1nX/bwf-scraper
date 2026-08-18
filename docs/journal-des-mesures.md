@@ -1668,3 +1668,42 @@ rien de projetable.
 resterait invisible ; le critère pariable (persistance) est à zéro. À ne
 re-mesurer que si le nombre de matchs à mains connues double (2-3 saisons de
 plus, ou une meilleure source de mains).
+
+## 10.7 L'effet gymnase face au prix du marché : le marché l'ignore, ET ça ne paie pas (2026-08-18)
+
+La question jamais posée frontalement — l'intuition d'origine du lot C n°1 :
+le prix du marché des sets varie-t-il d'un gymnase à l'autre ?
+`node measures/mesure-gymnase-prix-sets.mjs` — 3 780 matchs cotés avec lieu et
+prior de gymnase en marche avant (années jugées 2025-2026 ; prior = écart
+historique du lieu à l'attendu de la case disc×ΔElo, années antérieures
+seulement, amorti pseudo-effectif 50 — la même construction que §10.1).
+
+**A. Le marché ignore bien les gymnases** : pente du p3 marché sur le prior =
+**−0,01** — prix rigoureusement identique à Sydney et à Séoul. L'intuition du
+propriétaire était juste sur ce point.
+
+**B. Mais l'effet ne se matérialise pas sur le sous-ensemble coté** : l'observé
+par quintile de prior est quasi plat (36,6 / 38,4 / 35,7 / 37,8 / 38,2 %),
+pente de (observé − marché) sur le prior = **0,12 ± 0,47**, indiscernable de
+zéro. En argent, le filtre gymnase ne change rien :
+
+| Stratégie | n | ROI | IC 95 % (grappe = tournoi) |
+|---|---|---|---|
+| « 3 sets » aux lieux chauds | 669 | −22,5 % | [−30,8 ; −13,7] |
+| « 3 sets », seuil fort | 303 | −26,1 % | [−33,9 ; −18,8] |
+| « 2 sets » aux lieux froids | 449 | −20,8 % | [−23,3 ; −19,0] |
+| Référence « 3 sets » partout | 3 780 | **−22,9 %** | — |
+
+**Réconciliation avec le 6 σ de §7.** Le §7 est un fait descriptif même-année
+sur 13 368 matchs, tous tournois. En conditions de pari, trois rabots
+s'empilent : la marche avant ne connaît que le passé du lieu (persistance
+r = 0,42 → ~18 % de variance expliquée), l'amortissement nécessaire écrase les
+priors à ±3-5 pt, et le sous-ensemble coté (gros tournois 2025-2026) n'est pas
+l'échantillon du §7. Il reste un signal de quelques points face à **29 points
+de marge** : rapport de 1 à 10.
+
+**VERDICT : la branche « exploiter l'effet gymnase » est fermée en entier.**
+Le fait descriptif (§7) reste vrai et acquis ; il n'existe aucun chemin mesuré
+entre ce fait et un pari gagnant — ni par notre modèle (§10.1), ni par l'erreur
+de prix du marché (ici). Ne rouvrir que si un marché des sets à marge < ~8 %
+devient accessible.
