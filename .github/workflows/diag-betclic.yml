@@ -1,0 +1,26 @@
+# Sonde de diagnostic du 403 Betclic sur GitHub Actions (manuel uniquement).
+#
+# Betclic répond 200 depuis une machine française et 403 depuis le runner
+# (19 relevés sur 19 pendant les Championnats du monde 2026). Ce workflow ne
+# corrige rien et n'écrit rien : il exécute tools/diag-betclic-ci.mjs pour
+# rapporter l'IP de sortie du runner, son pays, et la réponse complète de
+# Betclic (en-têtes + corps) selon plusieurs jeux d'en-têtes et deux piles TLS.
+#
+# À supprimer une fois la cause tranchée et le correctif en place.
+name: Diag Betclic 403
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node tools/diag-betclic-ci.mjs
