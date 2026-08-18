@@ -1592,7 +1592,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -1649,9 +1649,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-08-18 13:20:00",
+        "matchTime": "2026-08-18 13:50:00",
         "matchTimeUtc": "2026-08-18 07:50:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "6",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1662,12 +1662,25 @@
         "courtCode": "4",
         "courtIndex": 3,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 29,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 8,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -1677,7 +1690,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "TUR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TUR.png",
@@ -1736,7 +1749,7 @@
         "team2seed": "11",
         "matchTime": "2026-08-18 09:00:00",
         "matchTimeUtc": "2026-08-18 03:30:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "1",
         "oopText": "Starting at 9:00 AM",
         "oopTypeId": 1,
@@ -1747,12 +1760,31 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 58,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 0,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 18,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 9,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -1762,7 +1794,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "USA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
@@ -1820,8 +1852,8 @@
         "team1seed": null,
         "team2seed": null,
         "matchTime": "2026-08-18 12:30:00",
-        "matchTimeUtc": "2026-08-18 07:00:00",
-        "matchStatus": "N",
+        "matchTimeUtc": "2026-08-18 07:30:00",
+        "matchStatus": "F",
         "oopRound": "5",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1832,12 +1864,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 21,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 10,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 5,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -1847,7 +1892,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "TUR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TUR.png",
@@ -1904,9 +1949,9 @@
         },
         "team1seed": null,
         "team2seed": "7",
-        "matchTime": "2026-08-18 09:50:00",
+        "matchTime": "2026-08-18 09:20:00",
         "matchTimeUtc": "2026-08-18 04:20:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1917,12 +1962,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 31,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 14,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 10,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -1932,7 +1990,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "NZL",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/NZL.png",
@@ -1989,9 +2047,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-08-18 10:50:00",
-        "matchTimeUtc": "2026-08-18 05:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-18 11:30:00",
+        "matchTimeUtc": "2026-08-18 05:30:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2002,12 +2060,31 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 45,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 18,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 12,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2017,7 +2094,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "SRI",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/SRI.png",
@@ -2076,7 +2153,7 @@
         "team2seed": "10",
         "matchTime": "2026-08-18 13:40:00",
         "matchTimeUtc": "2026-08-18 08:10:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "8",
         "oopText": "Not before 1:40 PM",
         "oopTypeId": 2,
@@ -2087,12 +2164,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 37,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 12,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2159,8 +2249,8 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-08-18 16:10:00",
-        "matchTimeUtc": "2026-08-18 10:40:00",
+        "matchTime": "2026-08-18 17:15:00",
+        "matchTimeUtc": "2026-08-18 12:15:00",
         "matchStatus": "N",
         "oopRound": "11",
         "oopText": "Followed by",
@@ -2187,7 +2277,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "HKG",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
@@ -2244,9 +2334,9 @@
         },
         "team1seed": null,
         "team2seed": "4",
-        "matchTime": "2026-08-18 13:10:00",
-        "matchTimeUtc": "2026-08-18 07:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-18 13:50:00",
+        "matchTimeUtc": "2026-08-18 07:50:00",
+        "matchStatus": "F",
         "oopRound": "6",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2257,12 +2347,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 55,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 18,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 8,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 11,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2272,7 +2381,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "MYA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MYA.png",
@@ -2329,9 +2438,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-08-18 12:20:00",
-        "matchTimeUtc": "2026-08-18 06:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-18 12:00:00",
+        "matchTimeUtc": "2026-08-18 07:00:00",
+        "matchStatus": "F",
         "oopRound": "5",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2342,12 +2451,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 40,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 20,
+            "away": 22,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2357,7 +2479,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -2414,9 +2536,9 @@
         },
         "team1seed": null,
         "team2seed": "13",
-        "matchTime": "2026-08-18 11:30:00",
-        "matchTimeUtc": "2026-08-18 06:00:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-18 11:20:00",
+        "matchTimeUtc": "2026-08-18 06:20:00",
+        "matchStatus": "F",
         "oopRound": "4",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2427,12 +2549,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 37,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 20,
+            "away": 22,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 12,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2499,8 +2634,8 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-08-18 19:30:00",
-        "matchTimeUtc": "2026-08-18 14:00:00",
+        "matchTime": "2026-08-18 21:35:00",
+        "matchTimeUtc": "2026-08-18 15:35:00",
         "matchStatus": "N",
         "oopRound": "15",
         "oopText": "Court and time TBA",
@@ -2584,8 +2719,8 @@
         },
         "team1seed": null,
         "team2seed": "8",
-        "matchTime": "2026-08-18 20:20:00",
-        "matchTimeUtc": "2026-08-18 14:50:00",
+        "matchTime": "2026-08-18 21:25:00",
+        "matchTimeUtc": "2026-08-18 16:25:00",
         "matchStatus": "N",
         "oopRound": "16",
         "oopText": "Court and time TBA",
@@ -2612,7 +2747,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "VIE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/VIE.png",
@@ -2669,9 +2804,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-08-18 15:20:00",
-        "matchTimeUtc": "2026-08-18 09:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-18 16:25:00",
+        "matchTimeUtc": "2026-08-18 11:25:00",
+        "matchStatus": "F",
         "oopRound": "10",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2682,12 +2817,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 29,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 9,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2697,7 +2845,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "CZE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CZE.png",
@@ -2754,9 +2902,9 @@
         },
         "team1seed": null,
         "team2seed": "14",
-        "matchTime": "2026-08-18 11:40:00",
-        "matchTimeUtc": "2026-08-18 06:10:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-18 11:20:00",
+        "matchTimeUtc": "2026-08-18 06:20:00",
+        "matchStatus": "F",
         "oopRound": "4",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2767,12 +2915,25 @@
         "courtCode": "4",
         "courtIndex": 3,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 31,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 17,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 17,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2839,9 +3000,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-08-18 16:10:00",
-        "matchTimeUtc": "2026-08-18 10:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-18 17:25:00",
+        "matchTimeUtc": "2026-08-18 12:25:00",
+        "matchStatus": "W",
         "oopRound": "11",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2852,7 +3013,7 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 0,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
@@ -2924,8 +3085,8 @@
         },
         "team1seed": null,
         "team2seed": "2",
-        "matchTime": "2026-08-18 17:20:00",
-        "matchTimeUtc": "2026-08-18 11:50:00",
+        "matchTime": "2026-08-18 18:40:00",
+        "matchTimeUtc": "2026-08-18 12:40:00",
         "matchStatus": "N",
         "oopRound": "11",
         "oopText": "Followed by",
@@ -3634,23 +3795,61 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "96725",
+              "nameDisplay": "LIN Hsiang Ti",
+              "nameType": 1,
+              "firstName": "Hsiang Ti",
+              "lastName": "LIN",
+              "initials": "LH",
+              "nameShort": "LIN H T ",
+              "nameShort2": "LIN",
+              "slug": "hsiang-ti-lin",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Hsiang Ti LIN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689666295/assets/players/thumbnail/96725.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "96713",
+              "nameDisplay": "Nozomi OKUHARA",
+              "nameType": 0,
+              "firstName": "Nozomi",
+              "lastName": "OKUHARA",
+              "initials": "NO",
+              "nameShort": "N OKUHARA",
+              "nameShort2": "OKUHARA",
+              "slug": "nozomi-okuhara",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Nozomi OKUHARA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895749/assets/players/thumbnail/96713.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
+        "team2seed": "11",
         "matchTime": null,
         "matchTimeUtc": null,
         "matchStatus": "N",
@@ -3681,23 +3880,61 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "USA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "88399",
+              "nameDisplay": "Ishika JAISWAL",
+              "nameType": 0,
+              "firstName": "Ishika",
+              "lastName": "JAISWAL",
+              "initials": "IJ",
+              "nameShort": "I JAISWAL",
+              "nameShort2": "JAISWAL",
+              "slug": "ishika-jaiswal",
+              "countryCode": "USA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+              "avatar": {
+                "title": "Ishika JAISWAL",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1677118023/assets/players/thumbnail/88399.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "THA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "35642",
+              "nameDisplay": "Ratchanok INTANON",
+              "nameType": 0,
+              "firstName": "Ratchanok",
+              "lastName": "INTANON",
+              "initials": "RI",
+              "nameShort": "R INTANON",
+              "nameShort2": "INTANON",
+              "slug": "ratchanok-intanon",
+              "countryCode": "THA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+              "avatar": {
+                "title": "Ratchanok INTANON",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897731/assets/players/thumbnail/35642.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
+        "team2seed": "7",
         "matchTime": null,
         "matchTimeUtc": null,
         "matchStatus": "N",
@@ -3728,23 +3965,61 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "NZL",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/NZL.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "62883",
+              "nameDisplay": "Shaunna LI",
+              "nameType": 0,
+              "firstName": "Shaunna",
+              "lastName": "LI",
+              "initials": "SL",
+              "nameShort": "S LI",
+              "nameShort2": "LI",
+              "slug": "shaunna-li",
+              "countryCode": "NZL",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/NZL.png",
+              "avatar": {
+                "title": "Shaunna LI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784095111/assets/players/thumbnail/62883.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "THA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "84062",
+              "nameDisplay": "Pornpawee CHOCHUWONG",
+              "nameType": 0,
+              "firstName": "Pornpawee",
+              "lastName": "CHOCHUWONG",
+              "initials": "PC",
+              "nameShort": "P CHOCHUWONG",
+              "nameShort2": "CHOCHUWONG",
+              "slug": "pornpawee-chochuwong",
+              "countryCode": "THA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+              "avatar": {
+                "title": "Pornpawee CHOCHUWONG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697765882/assets/players/thumbnail/84062.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
+        "team2seed": "10",
         "matchTime": null,
         "matchTimeUtc": null,
         "matchStatus": "N",
@@ -3783,15 +4058,34 @@
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "78778",
+              "nameDisplay": "CHEN Yu Fei",
+              "nameType": 1,
+              "firstName": "Yu Fei",
+              "lastName": "CHEN",
+              "initials": "CY",
+              "nameShort": "CHEN Y F ",
+              "nameShort2": "CHEN",
+              "slug": "yu-fei-chen",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Yu Fei CHEN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689647649/assets/players/thumbnail/78778.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
+        "team2seed": "4",
         "matchTime": null,
         "matchTimeUtc": null,
         "matchStatus": "N",
@@ -3822,23 +4116,61 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "IND",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "59687",
+              "nameDisplay": "Unnati HOODA",
+              "nameType": 0,
+              "firstName": "Unnati",
+              "lastName": "HOODA",
+              "initials": "UH",
+              "nameShort": "U HOODA",
+              "nameShort2": "HOODA",
+              "slug": "unnati-hooda",
+              "countryCode": "IND",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+              "avatar": {
+                "title": "Unnati HOODA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CAN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "84523",
+              "nameDisplay": "Michelle LI",
+              "nameType": 0,
+              "firstName": "Michelle",
+              "lastName": "LI",
+              "initials": "ML",
+              "nameShort": "M LI",
+              "nameShort2": "LI",
+              "slug": "michelle-li",
+              "countryCode": "CAN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
+              "avatar": {
+                "title": "Michelle LI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1721630779/assets/players/thumbnail/84523.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
+        "team2seed": "13",
         "matchTime": null,
         "matchTimeUtc": null,
         "matchStatus": "N",
@@ -3916,23 +4248,61 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "VIE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/VIE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "71455",
+              "nameDisplay": "VU Thi Trang (B)",
+              "nameType": 1,
+              "firstName": "Thi Trang (B)",
+              "lastName": "VU",
+              "initials": "VT",
+              "nameShort": "VU T T ( ",
+              "nameShort2": "VU",
+              "slug": "thi-trang-b-vu",
+              "countryCode": "VIE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/VIE.png",
+              "avatar": {
+                "title": "Thi Trang (B) VU",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897550/assets/players/thumbnail/71455.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "99069",
+              "nameDisplay": "SIM Yu Jin",
+              "nameType": 1,
+              "firstName": "Yu Jin",
+              "lastName": "SIM",
+              "initials": "SY",
+              "nameShort": "SIM Y J ",
+              "nameShort2": "SIM",
+              "slug": "yu-jin-sim",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Yu Jin SIM",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636594223/assets/players/thumbnail/99069.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
+        "team2seed": "14",
         "matchTime": null,
         "matchTimeUtc": null,
         "matchStatus": "N",
@@ -6418,7 +6788,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "MYA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MYA.png",
@@ -6475,10 +6845,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-08-18 12:20:00",
-      "matchTimeUtc": "2026-08-18 06:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-18 12:00:00",
+      "matchTimeUtc": "2026-08-18 07:00:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "5",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6490,14 +6860,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 40,
+      "time": "00:40",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 20,
+          "away": 22,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6565,10 +6950,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-08-18 16:10:00",
-      "matchTimeUtc": "2026-08-18 10:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-18 17:25:00",
+      "matchTimeUtc": "2026-08-18 12:25:00",
+      "matchStatus": "W",
+      "matchStatusValue": "WarmUp",
       "oopRound": "11",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6580,7 +6965,7 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
+      "duration": 0,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 2,
@@ -6598,7 +6983,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "CZE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CZE.png",
@@ -6655,10 +7040,10 @@
       },
       "team1seed": null,
       "team2seed": "14",
-      "matchTime": "2026-08-18 11:40:00",
-      "matchTimeUtc": "2026-08-18 06:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-18 11:20:00",
+      "matchTimeUtc": "2026-08-18 06:20:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "4",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6670,14 +7055,29 @@
       "courtCode": "4",
       "courtIndex": 3,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 31,
+      "time": "00:31",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 17,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 17,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6688,7 +7088,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "VIE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/VIE.png",
@@ -6745,10 +7145,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-08-18 15:20:00",
-      "matchTimeUtc": "2026-08-18 09:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-18 16:25:00",
+      "matchTimeUtc": "2026-08-18 11:25:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "10",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6760,14 +7160,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 29,
+      "time": "00:29",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 9,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6835,8 +7250,8 @@
       },
       "team1seed": null,
       "team2seed": "8",
-      "matchTime": "2026-08-18 20:20:00",
-      "matchTimeUtc": "2026-08-18 14:50:00",
+      "matchTime": "2026-08-18 21:25:00",
+      "matchTimeUtc": "2026-08-18 16:25:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "16",
@@ -6925,8 +7340,8 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-08-18 19:30:00",
-      "matchTimeUtc": "2026-08-18 14:00:00",
+      "matchTime": "2026-08-18 21:35:00",
+      "matchTimeUtc": "2026-08-18 15:35:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "15",
@@ -6958,7 +7373,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -7015,10 +7430,10 @@
       },
       "team1seed": null,
       "team2seed": "13",
-      "matchTime": "2026-08-18 11:30:00",
-      "matchTimeUtc": "2026-08-18 06:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-18 11:20:00",
+      "matchTimeUtc": "2026-08-18 06:20:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "4",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7030,14 +7445,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 37,
+      "time": "00:37",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 20,
+          "away": 22,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 12,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7105,8 +7535,8 @@
       },
       "team1seed": null,
       "team2seed": "2",
-      "matchTime": "2026-08-18 17:20:00",
-      "matchTimeUtc": "2026-08-18 11:50:00",
+      "matchTime": "2026-08-18 18:40:00",
+      "matchTimeUtc": "2026-08-18 12:40:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "11",
@@ -7138,7 +7568,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "HKG",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
@@ -7195,10 +7625,10 @@
       },
       "team1seed": null,
       "team2seed": "4",
-      "matchTime": "2026-08-18 13:10:00",
-      "matchTimeUtc": "2026-08-18 07:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-18 13:50:00",
+      "matchTimeUtc": "2026-08-18 07:50:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "6",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7210,14 +7640,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 55,
+      "time": "00:55",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 8,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 11,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7228,7 +7680,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "SRI",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/SRI.png",
@@ -7287,8 +7739,8 @@
       "team2seed": "10",
       "matchTime": "2026-08-18 13:40:00",
       "matchTimeUtc": "2026-08-18 08:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "8",
       "oopText": "Not before 1:40 PM",
       "oopTypeId": 2,
@@ -7300,14 +7752,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 37,
+      "time": "00:37",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 12,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7318,7 +7785,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "NZL",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/NZL.png",
@@ -7375,10 +7842,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-08-18 10:50:00",
-      "matchTimeUtc": "2026-08-18 05:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-18 11:30:00",
+      "matchTimeUtc": "2026-08-18 05:30:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7390,14 +7857,36 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 45,
+      "time": "00:45",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 12,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7408,7 +7897,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "TUR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TUR.png",
@@ -7465,10 +7954,10 @@
       },
       "team1seed": null,
       "team2seed": "7",
-      "matchTime": "2026-08-18 09:50:00",
+      "matchTime": "2026-08-18 09:20:00",
       "matchTimeUtc": "2026-08-18 04:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7480,14 +7969,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 31,
+      "time": "00:31",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 14,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 10,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7498,7 +8002,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "USA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
@@ -7556,9 +8060,9 @@
       "team1seed": null,
       "team2seed": null,
       "matchTime": "2026-08-18 12:30:00",
-      "matchTimeUtc": "2026-08-18 07:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTimeUtc": "2026-08-18 07:30:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "5",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7570,14 +8074,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 21,
+      "time": "00:21",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 10,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 5,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7588,7 +8107,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "TUR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TUR.png",
@@ -7647,8 +8166,8 @@
       "team2seed": "11",
       "matchTime": "2026-08-18 09:00:00",
       "matchTimeUtc": "2026-08-18 03:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "1",
       "oopText": "Starting at 9:00 AM",
       "oopTypeId": 1,
@@ -7660,14 +8179,36 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 58,
+      "time": "00:58",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 0,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 9,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7678,7 +8219,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -7735,10 +8276,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-08-18 13:20:00",
+      "matchTime": "2026-08-18 13:50:00",
       "matchTimeUtc": "2026-08-18 07:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "6",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7750,14 +8291,29 @@
       "courtCode": "4",
       "courtIndex": 3,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 29,
+      "time": "00:29",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 8,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7825,8 +8381,8 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-08-18 16:10:00",
-      "matchTimeUtc": "2026-08-18 10:40:00",
+      "matchTime": "2026-08-18 17:15:00",
+      "matchTimeUtc": "2026-08-18 12:15:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "11",
@@ -8596,15 +9152,34 @@
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "78778",
+            "nameDisplay": "CHEN Yu Fei",
+            "nameType": 1,
+            "firstName": "Yu Fei",
+            "lastName": "CHEN",
+            "initials": "CY",
+            "nameShort": "CHEN Y F ",
+            "nameShort2": "CHEN",
+            "slug": "yu-fei-chen",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Yu Fei CHEN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689647649/assets/players/thumbnail/78778.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
+      "team2seed": "4",
       "matchTime": null,
       "matchTimeUtc": null,
       "matchStatus": "N",
@@ -8692,23 +9267,61 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "VIE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/VIE.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "71455",
+            "nameDisplay": "VU Thi Trang (B)",
+            "nameType": 1,
+            "firstName": "Thi Trang (B)",
+            "lastName": "VU",
+            "initials": "VT",
+            "nameShort": "VU T T ( ",
+            "nameShort2": "VU",
+            "slug": "thi-trang-b-vu",
+            "countryCode": "VIE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/VIE.png",
+            "avatar": {
+              "title": "Thi Trang (B) VU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897550/assets/players/thumbnail/71455.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "99069",
+            "nameDisplay": "SIM Yu Jin",
+            "nameType": 1,
+            "firstName": "Yu Jin",
+            "lastName": "SIM",
+            "initials": "SY",
+            "nameShort": "SIM Y J ",
+            "nameShort2": "SIM",
+            "slug": "yu-jin-sim",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Yu Jin SIM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636594223/assets/players/thumbnail/99069.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
+      "team2seed": "14",
       "matchTime": null,
       "matchTimeUtc": null,
       "matchStatus": "N",
@@ -8796,23 +9409,61 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "59687",
+            "nameDisplay": "Unnati HOODA",
+            "nameType": 0,
+            "firstName": "Unnati",
+            "lastName": "HOODA",
+            "initials": "UH",
+            "nameShort": "U HOODA",
+            "nameShort2": "HOODA",
+            "slug": "unnati-hooda",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "Unnati HOODA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "CAN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "84523",
+            "nameDisplay": "Michelle LI",
+            "nameType": 0,
+            "firstName": "Michelle",
+            "lastName": "LI",
+            "initials": "ML",
+            "nameShort": "M LI",
+            "nameShort2": "LI",
+            "slug": "michelle-li",
+            "countryCode": "CAN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
+            "avatar": {
+              "title": "Michelle LI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1721630779/assets/players/thumbnail/84523.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
+      "team2seed": "13",
       "matchTime": null,
       "matchTimeUtc": null,
       "matchStatus": "N",
@@ -8848,23 +9499,61 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "NZL",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/NZL.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "62883",
+            "nameDisplay": "Shaunna LI",
+            "nameType": 0,
+            "firstName": "Shaunna",
+            "lastName": "LI",
+            "initials": "SL",
+            "nameShort": "S LI",
+            "nameShort2": "LI",
+            "slug": "shaunna-li",
+            "countryCode": "NZL",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/NZL.png",
+            "avatar": {
+              "title": "Shaunna LI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784095111/assets/players/thumbnail/62883.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "THA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "84062",
+            "nameDisplay": "Pornpawee CHOCHUWONG",
+            "nameType": 0,
+            "firstName": "Pornpawee",
+            "lastName": "CHOCHUWONG",
+            "initials": "PC",
+            "nameShort": "P CHOCHUWONG",
+            "nameShort2": "CHOCHUWONG",
+            "slug": "pornpawee-chochuwong",
+            "countryCode": "THA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+            "avatar": {
+              "title": "Pornpawee CHOCHUWONG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697765882/assets/players/thumbnail/84062.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
+      "team2seed": "10",
       "matchTime": null,
       "matchTimeUtc": null,
       "matchStatus": "N",
@@ -8900,23 +9589,61 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "USA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "88399",
+            "nameDisplay": "Ishika JAISWAL",
+            "nameType": 0,
+            "firstName": "Ishika",
+            "lastName": "JAISWAL",
+            "initials": "IJ",
+            "nameShort": "I JAISWAL",
+            "nameShort2": "JAISWAL",
+            "slug": "ishika-jaiswal",
+            "countryCode": "USA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+            "avatar": {
+              "title": "Ishika JAISWAL",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1677118023/assets/players/thumbnail/88399.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "THA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "35642",
+            "nameDisplay": "Ratchanok INTANON",
+            "nameType": 0,
+            "firstName": "Ratchanok",
+            "lastName": "INTANON",
+            "initials": "RI",
+            "nameShort": "R INTANON",
+            "nameShort2": "INTANON",
+            "slug": "ratchanok-intanon",
+            "countryCode": "THA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+            "avatar": {
+              "title": "Ratchanok INTANON",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897731/assets/players/thumbnail/35642.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
+      "team2seed": "7",
       "matchTime": null,
       "matchTimeUtc": null,
       "matchStatus": "N",
@@ -8952,23 +9679,61 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "96725",
+            "nameDisplay": "LIN Hsiang Ti",
+            "nameType": 1,
+            "firstName": "Hsiang Ti",
+            "lastName": "LIN",
+            "initials": "LH",
+            "nameShort": "LIN H T ",
+            "nameShort2": "LIN",
+            "slug": "hsiang-ti-lin",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Hsiang Ti LIN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689666295/assets/players/thumbnail/96725.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "96713",
+            "nameDisplay": "Nozomi OKUHARA",
+            "nameType": 0,
+            "firstName": "Nozomi",
+            "lastName": "OKUHARA",
+            "initials": "NO",
+            "nameShort": "N OKUHARA",
+            "nameShort2": "OKUHARA",
+            "slug": "nozomi-okuhara",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Nozomi OKUHARA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895749/assets/players/thumbnail/96713.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
+      "team2seed": "11",
       "matchTime": null,
       "matchTimeUtc": null,
       "matchStatus": "N",

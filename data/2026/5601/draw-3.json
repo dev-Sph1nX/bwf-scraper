@@ -3611,8 +3611,8 @@
         },
         "team1seed": "1",
         "team2seed": null,
-        "matchTime": "2026-08-18 19:50:00",
-        "matchTimeUtc": "2026-08-18 14:20:00",
+        "matchTime": "2026-08-18 20:10:00",
+        "matchTimeUtc": "2026-08-18 15:10:00",
         "matchStatus": "N",
         "oopRound": "14",
         "oopText": "Court and time TBA",
@@ -3732,8 +3732,8 @@
         },
         "team1seed": "10",
         "team2seed": null,
-        "matchTime": "2026-08-18 20:20:00",
-        "matchTimeUtc": "2026-08-18 14:50:00",
+        "matchTime": "2026-08-18 21:25:00",
+        "matchTimeUtc": "2026-08-18 16:25:00",
         "matchStatus": "N",
         "oopRound": "16",
         "oopText": "Court and time TBA",
@@ -3853,8 +3853,8 @@
         },
         "team1seed": "6",
         "team2seed": null,
-        "matchTime": "2026-08-18 20:40:00",
-        "matchTimeUtc": "2026-08-18 15:10:00",
+        "matchTime": "2026-08-18 21:35:00",
+        "matchTimeUtc": "2026-08-18 15:35:00",
         "matchStatus": "N",
         "oopRound": "15",
         "oopText": "Court and time TBA",
@@ -3974,8 +3974,8 @@
         },
         "team1seed": "14",
         "team2seed": null,
-        "matchTime": "2026-08-18 20:40:00",
-        "matchTimeUtc": "2026-08-18 15:10:00",
+        "matchTime": "2026-08-18 21:00:00",
+        "matchTimeUtc": "2026-08-18 16:00:00",
         "matchStatus": "N",
         "oopRound": "15",
         "oopText": "Court and time TBA",
@@ -4002,7 +4002,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "MAS",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -4095,9 +4095,9 @@
         },
         "team1seed": "4",
         "team2seed": null,
-        "matchTime": "2026-08-18 14:50:00",
-        "matchTimeUtc": "2026-08-18 09:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-18 15:50:00",
+        "matchTimeUtc": "2026-08-18 09:50:00",
+        "matchStatus": "F",
         "oopRound": "8",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -4108,12 +4108,31 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 58,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 15,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -4216,8 +4235,8 @@
         },
         "team1seed": "11",
         "team2seed": null,
-        "matchTime": "2026-08-18 18:10:00",
-        "matchTimeUtc": "2026-08-18 12:40:00",
+        "matchTime": "2026-08-18 19:30:00",
+        "matchTimeUtc": "2026-08-18 13:30:00",
         "matchStatus": "N",
         "oopRound": "12",
         "oopText": "Followed by",
@@ -4337,8 +4356,8 @@
         },
         "team1seed": "7",
         "team2seed": null,
-        "matchTime": "2026-08-18 18:40:00",
-        "matchTimeUtc": "2026-08-18 13:10:00",
+        "matchTime": "2026-08-18 20:45:00",
+        "matchTimeUtc": "2026-08-18 14:45:00",
         "matchStatus": "N",
         "oopRound": "14",
         "oopText": "Court and time TBA",
@@ -4365,7 +4384,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "DEN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
@@ -4458,9 +4477,9 @@
         },
         "team1seed": "13",
         "team2seed": null,
-        "matchTime": "2026-08-18 16:30:00",
-        "matchTimeUtc": "2026-08-18 11:00:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-18 16:25:00",
+        "matchTimeUtc": "2026-08-18 11:25:00",
+        "matchStatus": "F",
         "oopRound": "10",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -4471,12 +4490,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 34,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -5550,11 +5582,48 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "MAS",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "56203",
+              "nameDisplay": "Aaron CHIA",
+              "nameType": 0,
+              "firstName": "Aaron",
+              "lastName": "CHIA",
+              "initials": "AC",
+              "nameShort": "A CHIA",
+              "nameShort2": "CHIA",
+              "slug": "aaron-chia",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Aaron CHIA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627949889/assets/players/thumbnail/56203.jpg"
+              }
+            },
+            {
+              "id": "99389",
+              "nameDisplay": "SOH Wooi Yik",
+              "nameType": 1,
+              "firstName": "Wooi Yik",
+              "lastName": "SOH",
+              "initials": "SW",
+              "nameShort": "SOH W Y ",
+              "nameShort2": "SOH",
+              "slug": "wooi-yik-soh",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Wooi Yik SOH",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627949962/assets/players/thumbnail/99389.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
@@ -5565,7 +5634,7 @@
           "players": [],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "4",
         "team2seed": null,
         "matchTime": null,
         "matchTimeUtc": null,
@@ -5605,15 +5674,52 @@
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "DEN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "68134",
+              "nameDisplay": "Daniel LUNDGAARD",
+              "nameType": 0,
+              "firstName": "Daniel",
+              "lastName": "LUNDGAARD",
+              "initials": "DL",
+              "nameShort": "D LUNDGAARD",
+              "nameShort2": "LUNDGAARD",
+              "slug": "daniel-lundgaard",
+              "countryCode": "DEN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+              "avatar": {
+                "title": "Daniel LUNDGAARD",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896020/assets/players/thumbnail/68134.jpg"
+              }
+            },
+            {
+              "id": "60507",
+              "nameDisplay": "Mads VESTERGAARD",
+              "nameType": 0,
+              "firstName": "Mads",
+              "lastName": "VESTERGAARD",
+              "initials": "MV",
+              "nameShort": "M VESTERGAARD",
+              "nameShort2": "VESTERGAARD",
+              "slug": "mads-vestergaard",
+              "countryCode": "DEN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+              "avatar": {
+                "title": "Mads VESTERGAARD",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1724635601/assets/players/thumbnail/60507.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
+        "team2seed": "13",
         "matchTime": null,
         "matchTimeUtc": null,
         "matchStatus": "N",
@@ -8540,8 +8646,8 @@
       },
       "team1seed": "1",
       "team2seed": null,
-      "matchTime": "2026-08-18 19:50:00",
-      "matchTimeUtc": "2026-08-18 14:20:00",
+      "matchTime": "2026-08-18 20:10:00",
+      "matchTimeUtc": "2026-08-18 15:10:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "14",
@@ -8666,8 +8772,8 @@
       },
       "team1seed": "10",
       "team2seed": null,
-      "matchTime": "2026-08-18 20:20:00",
-      "matchTimeUtc": "2026-08-18 14:50:00",
+      "matchTime": "2026-08-18 21:25:00",
+      "matchTimeUtc": "2026-08-18 16:25:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "16",
@@ -8792,8 +8898,8 @@
       },
       "team1seed": "14",
       "team2seed": null,
-      "matchTime": "2026-08-18 20:40:00",
-      "matchTimeUtc": "2026-08-18 15:10:00",
+      "matchTime": "2026-08-18 21:00:00",
+      "matchTimeUtc": "2026-08-18 16:00:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "15",
@@ -8918,8 +9024,8 @@
       },
       "team1seed": "6",
       "team2seed": null,
-      "matchTime": "2026-08-18 20:40:00",
-      "matchTimeUtc": "2026-08-18 15:10:00",
+      "matchTime": "2026-08-18 21:35:00",
+      "matchTimeUtc": "2026-08-18 15:35:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "15",
@@ -9044,8 +9150,8 @@
       },
       "team1seed": "11",
       "team2seed": null,
-      "matchTime": "2026-08-18 18:10:00",
-      "matchTimeUtc": "2026-08-18 12:40:00",
+      "matchTime": "2026-08-18 19:30:00",
+      "matchTimeUtc": "2026-08-18 13:30:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "12",
@@ -9170,8 +9276,8 @@
       },
       "team1seed": "7",
       "team2seed": null,
-      "matchTime": "2026-08-18 18:40:00",
-      "matchTimeUtc": "2026-08-18 13:10:00",
+      "matchTime": "2026-08-18 20:45:00",
+      "matchTimeUtc": "2026-08-18 14:45:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "14",
@@ -9203,7 +9309,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "DEN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
@@ -9296,10 +9402,10 @@
       },
       "team1seed": "13",
       "team2seed": null,
-      "matchTime": "2026-08-18 16:30:00",
-      "matchTimeUtc": "2026-08-18 11:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-18 16:25:00",
+      "matchTimeUtc": "2026-08-18 11:25:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "10",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -9311,14 +9417,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 34,
+      "time": "00:34",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -9329,7 +9450,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "MAS",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -9422,10 +9543,10 @@
       },
       "team1seed": "4",
       "team2seed": null,
-      "matchTime": "2026-08-18 14:50:00",
-      "matchTimeUtc": "2026-08-18 09:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-18 15:50:00",
+      "matchTimeUtc": "2026-08-18 09:50:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "8",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -9437,14 +9558,36 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 58,
+      "time": "00:58",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 15,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -9954,11 +10097,48 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "56203",
+            "nameDisplay": "Aaron CHIA",
+            "nameType": 0,
+            "firstName": "Aaron",
+            "lastName": "CHIA",
+            "initials": "AC",
+            "nameShort": "A CHIA",
+            "nameShort2": "CHIA",
+            "slug": "aaron-chia",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Aaron CHIA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627949889/assets/players/thumbnail/56203.jpg"
+            }
+          },
+          {
+            "id": "99389",
+            "nameDisplay": "SOH Wooi Yik",
+            "nameType": 1,
+            "firstName": "Wooi Yik",
+            "lastName": "SOH",
+            "initials": "SW",
+            "nameShort": "SOH W Y ",
+            "nameShort2": "SOH",
+            "slug": "wooi-yik-soh",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Wooi Yik SOH",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627949962/assets/players/thumbnail/99389.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
@@ -9969,7 +10149,7 @@
         "players": [],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "4",
       "team2seed": null,
       "matchTime": null,
       "matchTimeUtc": null,
@@ -10014,15 +10194,52 @@
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "DEN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "68134",
+            "nameDisplay": "Daniel LUNDGAARD",
+            "nameType": 0,
+            "firstName": "Daniel",
+            "lastName": "LUNDGAARD",
+            "initials": "DL",
+            "nameShort": "D LUNDGAARD",
+            "nameShort2": "LUNDGAARD",
+            "slug": "daniel-lundgaard",
+            "countryCode": "DEN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+            "avatar": {
+              "title": "Daniel LUNDGAARD",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896020/assets/players/thumbnail/68134.jpg"
+            }
+          },
+          {
+            "id": "60507",
+            "nameDisplay": "Mads VESTERGAARD",
+            "nameType": 0,
+            "firstName": "Mads",
+            "lastName": "VESTERGAARD",
+            "initials": "MV",
+            "nameShort": "M VESTERGAARD",
+            "nameShort2": "VESTERGAARD",
+            "slug": "mads-vestergaard",
+            "countryCode": "DEN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+            "avatar": {
+              "title": "Mads VESTERGAARD",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1724635601/assets/players/thumbnail/60507.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
+      "team2seed": "13",
       "matchTime": null,
       "matchTimeUtc": null,
       "matchStatus": "N",
