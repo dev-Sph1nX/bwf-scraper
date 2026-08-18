@@ -215,6 +215,20 @@ const margeMoy = jugeables.reduce((s, r) => {
 }, 0) / (jugeables.length || 1);
 console.log(`   marge moyenne du bookmaker sur les 4 issues : ${pct(margeMoy)}`);
 
+// Diagnostic : notre modèle est-il MAL CENTRÉ sur les matchs cotés ? Il est
+// ajusté sur TOUS les matchs (taux global 32,8 %) alors que les matchs cotés
+// sont ceux des gros tournois. Un écart de niveau se corrige d'un décalage
+// d'ordonnée à l'origine ; une mauvaise DISCRIMINATION, non — et les deux
+// défauts n'ont rien à voir.
+const moyNous = pNous.reduce((s, x) => s + x, 0) / pNous.length;
+const moyMarche = pMarche.reduce((s, x) => s + x, 0) / pMarche.length;
+console.log(`   proba moyenne : nous ${pct(moyNous)} | marché ${pct(moyMarche)} | observé ${pct(tauxBase)}`);
+console.log(`   -> biais de niveau : nous ${pctSigne(moyNous - tauxBase)}, marché ${pctSigne(moyMarche - tauxBase)}`);
+// Ce que vaudrait notre modèle si on lui donnait le bon niveau de départ
+// (recentrage a posteriori — DIAGNOSTIC seulement, ça utilise le résultat).
+const recentre = pNous.map((p) => Math.min(0.99, Math.max(0.01, p + (tauxBase - moyNous))));
+console.log(`   log loss NOTRE modèle recentré : ${logLoss(recentre, ys).toFixed(4)} (vs marché ${logLoss(pMarche, ys).toFixed(4)})`);
+
 console.log("\n   Calibration du MARCHÉ par tranche de p3 (dé-viggée, clôture)");
 const tranches = [0, 0.25, 0.3, 0.35, 0.4, 1];
 for (let i = 0; i < tranches.length - 1; i++) {

@@ -1,0 +1,7256 @@
+{
+ "source": "flashscore.fr (GraphQL oce — CORRECT_SCORE + OVER_UNDER)",
+ "fetchedAt": "2026-08-18T13:27:19.145Z",
+ "tournamentSlug": "open-de-singapour",
+ "stats": {
+  "matchs": 114,
+  "avecScores": 89
+ },
+ "matches": [
+  {
+   "fsId": "K8z6Qmb2",
+   "startUtc": "2026-05-27T02:10:00.000Z",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "home": "Chen Y. F.",
+   "away": "Letshanaa K.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "Ec8nVryA",
+   "startUtc": "2026-05-27T02:10:00.000Z",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "home": "Yeung Nga T./Yeung P. L.",
+   "away": "Jia Y. F./Zhang S. X.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "GKXbPD4l",
+   "startUtc": "2026-05-27T02:15:00.000Z",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "home": "Lee K./Zhang E.",
+   "away": "Oupthong R./Sudjaipraparat J.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "zkUELV3D",
+   "startUtc": "2026-05-27T02:50:00.000Z",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "home": "Setiabudi B./Oktavianti M. D.",
+   "away": "Gao J. X./Wei Y. X.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "2eM0qZeK",
+   "startUtc": "2026-05-27T02:50:00.000Z",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "home": "Watanabe Y./Taguchi M.",
+   "away": "Guo X. W./Chen F. H.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 7
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 9,
+      "closing": 8
+     },
+     "2-1": {
+      "opening": 8,
+      "closing": 7.5
+     },
+     "1-2": {
+      "opening": 3.2,
+      "closing": 3.2
+     },
+     "0-2": {
+      "opening": 1.33,
+      "closing": 1.38
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.75
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.82
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.72,
+      "closing": 1.72
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "l4WcNNog",
+   "startUtc": "2026-05-27T03:20:00.000Z",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "home": "Hoh J.",
+   "away": "Popov C.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 15,
+      "closing": 16
+     },
+     "2-1": {
+      "opening": 10,
+      "closing": 11
+     },
+     "1-2": {
+      "opening": 3.5,
+      "closing": 3.5
+     },
+     "0-2": {
+      "opening": 1.18,
+      "closing": 1.16
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 15,
+      "closing": 16
+     },
+     "2-1": {
+      "opening": 10.5,
+      "closing": 11
+     },
+     "1-2": {
+      "opening": 3.45,
+      "closing": 3.5
+     },
+     "0-2": {
+      "opening": 1.18,
+      "closing": 1.16
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 70.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.72,
+      "closing": 1.72
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 70.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "0OihpQ4s",
+   "startUtc": "2026-05-27T03:30:00.000Z",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "home": "Nidaira N.",
+   "away": "Nguyen T. L.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 3.3,
+      "closing": 2.8
+     },
+     "2-1": {
+      "opening": 4.3,
+      "closing": 3.8
+     },
+     "1-2": {
+      "opening": 3.25,
+      "closing": 3.6
+     },
+     "0-2": {
+      "opening": 2.2,
+      "closing": 2.5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.78
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "IgcQN0Tq",
+   "startUtc": "2026-05-27T03:55:00.000Z",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "home": "Seidel M./Nguyen Thuc Phuong",
+   "away": "Teeraratsakul P./Taerattanachai S.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 6.75,
+      "closing": 5.5
+     },
+     "2-1": {
+      "opening": 7,
+      "closing": 6.25
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.45,
+      "closing": 1.58
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.75
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.78
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.82
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "Q5VhWIUN",
+   "startUtc": "2026-05-27T04:30:00.000Z",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "home": "Li S. F.",
+   "away": "Weng H. Y.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.05,
+      "closing": 2.15
+     },
+     "2-1": {
+      "opening": 3.25,
+      "closing": 3.3
+     },
+     "1-2": {
+      "opening": 4.5,
+      "closing": 4.4
+     },
+     "0-2": {
+      "opening": 3.5,
+      "closing": 3.25
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 2.05,
+      "closing": 2.15
+     },
+     "2-1": {
+      "opening": 3.25,
+      "closing": 3.4
+     },
+     "1-2": {
+      "opening": 4.55,
+      "closing": 4.75
+     },
+     "0-2": {
+      "opening": 3.5,
+      "closing": 3.6
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.8
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "ULAST4K0",
+   "startUtc": "2026-05-27T04:30:00.000Z",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "home": "Kim G. E.",
+   "away": "Chochuwong Po.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 9,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 23
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.55,
+      "closing": 2.65
+     },
+     "2-1": {
+      "opening": 3.6,
+      "closing": 3.7
+     },
+     "1-2": {
+      "opening": 3.8,
+      "closing": 3.7
+     },
+     "0-2": {
+      "opening": 2.7,
+      "closing": 2.65
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "lEP6I5i4",
+   "startUtc": "2026-05-27T04:55:00.000Z",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "home": "Ercetin B./Inci N.",
+   "away": "Chong J. Y./Ng V.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.25,
+      "closing": 1.22
+     },
+     "2-1": {
+      "opening": 3.3,
+      "closing": 3.4
+     },
+     "1-2": {
+      "opening": 9,
+      "closing": 9.5
+     },
+     "0-2": {
+      "opening": 11,
+      "closing": 13
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.72
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.85
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.82
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.85
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.72
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "UsYDJuoI",
+   "startUtc": "2026-05-27T05:20:00.000Z",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "home": "Chi Y. J.",
+   "away": "Teh J. H. J.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.45,
+      "closing": 2.4
+     },
+     "2-1": {
+      "opening": 3.5,
+      "closing": 3.5
+     },
+     "1-2": {
+      "opening": 3.9,
+      "closing": 4
+     },
+     "0-2": {
+      "opening": 2.85,
+      "closing": 2.9
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "G4gKlUXa",
+   "startUtc": "2026-05-27T05:30:00.000Z",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "home": "Shimogami Y./Hobara S.",
+   "away": "Ye H. W./Chan N. G.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 3.8,
+      "closing": 3
+     },
+     "2-1": {
+      "opening": 4.75,
+      "closing": 4.1
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3.4
+     },
+     "0-2": {
+      "opening": 1.95,
+      "closing": 2.35
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.82
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "vBfY621C",
+   "startUtc": "2026-05-27T05:40:00.000Z",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "home": "Lee C. Y.",
+   "away": "Lin Chun-Yi",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 3.2,
+      "closing": 3.3
+     },
+     "2-1": {
+      "opening": 4.3,
+      "closing": 4.4
+     },
+     "1-2": {
+      "opening": 3.4,
+      "closing": 3.25
+     },
+     "0-2": {
+      "opening": 2.2,
+      "closing": 2.15
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.8
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "OKmIAp2m",
+   "startUtc": "2026-05-27T06:15:00.000Z",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "home": "Prannoy H. S.",
+   "away": "Christie J.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 7,
+      "closing": 6.75
+     },
+     "2-1": {
+      "opening": 7,
+      "closing": 6.75
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.45,
+      "closing": 1.48
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.8
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "2e2Jqrj3",
+   "startUtc": "2026-05-27T06:15:00.000Z",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "home": "Wong T. C./Lim Chiew S.",
+   "away": "Kapila D./Crasto T.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 4.75,
+      "closing": 4.75
+     },
+     "2-1": {
+      "opening": 5.5,
+      "closing": 5.5
+     },
+     "1-2": {
+      "opening": 3,
+      "closing": 3
+     },
+     "0-2": {
+      "opening": 1.72,
+      "closing": 1.72
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "nRpZ36xB",
+   "startUtc": "2026-05-27T06:55:00.000Z",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "home": "Igarashi A./Shida C.",
+   "away": "Hsieh P. S./Hung E-T.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.62,
+      "closing": 1.72
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 6,
+      "closing": 5.5
+     },
+     "0-2": {
+      "opening": 5.25,
+      "closing": 4.6
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.75
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.8
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "jBT9O9rL",
+   "startUtc": "2026-05-27T07:25:00.000Z",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "home": "Gilmour K.",
+   "away": "Intanon R.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 11,
+      "closing": 10
+     },
+     "2-1": {
+      "opening": 9,
+      "closing": 8.5
+     },
+     "1-2": {
+      "opening": 3.3,
+      "closing": 3.3
+     },
+     "0-2": {
+      "opening": 1.28,
+      "closing": 1.28
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 9.7,
+      "closing": 11
+     },
+     "2-1": {
+      "opening": 8.4,
+      "closing": 9.3
+     },
+     "1-2": {
+      "opening": 3.3,
+      "closing": 3.5
+     },
+     "0-2": {
+      "opening": 1.29,
+      "closing": 1.3
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.72,
+      "closing": 1.72
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.85
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.72
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.72,
+      "closing": 1.72
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "jTjmgLmC",
+   "startUtc": "2026-05-27T07:25:00.000Z",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "home": "Lundgaard D./Vestergaard M.",
+   "away": "Lee K./Lindeman T. A.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "SYVfF557",
+   "startUtc": "2026-05-27T07:40:00.000Z",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "home": "Bansod M.",
+   "away": "Lin H. T.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 4.3,
+      "closing": 5.25
+     },
+     "2-1": {
+      "opening": 5,
+      "closing": 5.8
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.82,
+      "closing": 1.65
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.78
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.82
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.78
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "A1FXLvbd",
+   "startUtc": "2026-05-27T08:05:00.000Z",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "home": "Hoo P. R./Lai P. J.",
+   "away": "Chen T. J./Toh E. W.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 8.5,
+      "closing": 8.5
+     },
+     "2-1": {
+      "opening": 8,
+      "closing": 8
+     },
+     "1-2": {
+      "opening": 3.2,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.35,
+      "closing": 1.35
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.78
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "nexbS9Tk",
+   "startUtc": "2026-05-27T08:15:00.000Z",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "home": "Yeo J. M.",
+   "away": "Yamaguchi A.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "hhXpYv0B",
+   "startUtc": "2026-05-27T08:40:00.000Z",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "home": "Watanabe K.",
+   "away": "Wang T. W.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.78,
+      "closing": 1.75
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 5.5,
+      "closing": 5.5
+     },
+     "0-2": {
+      "opening": 4.4,
+      "closing": 4.5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "rcj2k7NH",
+   "startUtc": "2026-05-27T08:50:00.000Z",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "home": "Hiramoto R./Ishikawa K.",
+   "away": "Lui L. L./Tsang H. Y.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.52,
+      "closing": 1.62
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 6.5,
+      "closing": 6
+     },
+     "0-2": {
+      "opening": 6.25,
+      "closing": 5.25
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.85,
+      "closing": 1.78
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.72,
+      "closing": 1.8
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "nad0mjHj",
+   "startUtc": "2026-05-27T09:05:00.000Z",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "home": "Popov C./Popov T. J.",
+   "away": "Chia A./Soh W. Y.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 5,
+      "closing": 6
+     },
+     "2-1": {
+      "opening": 5.8,
+      "closing": 6.5
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.65,
+      "closing": 1.52
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 5,
+      "closing": 5.4
+     },
+     "2-1": {
+      "opening": 5.8,
+      "closing": 5.8
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 2.8
+     },
+     "0-2": {
+      "opening": 1.65,
+      "closing": 1.46
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.72,
+      "closing": 1.72
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.82
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "za7InvF4",
+   "startUtc": "2026-05-27T09:40:00.000Z",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "home": "Srikanth K.",
+   "away": "Loh K. Y.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 4.75,
+      "closing": 6
+     },
+     "2-1": {
+      "opening": 5.6,
+      "closing": 6.25
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3
+     },
+     "0-2": {
+      "opening": 1.7,
+      "closing": 1.55
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.75
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.82
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.8
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "Kvqs2p7N",
+   "startUtc": "2026-05-27T09:45:00.000Z",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "home": "Hu Ling F./Jheng Y. C.",
+   "away": "Tan P./Muralitharan T.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "nuj0r4Zg",
+   "startUtc": "2026-05-27T10:35:00.000Z",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "home": "Li M.",
+   "away": "Kjaersfeldt L. H.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 22,
+     "away": 20
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.1,
+      "closing": 1.95
+     },
+     "2-1": {
+      "opening": 3.25,
+      "closing": 3.2
+     },
+     "1-2": {
+      "opening": 4.4,
+      "closing": 4.75
+     },
+     "0-2": {
+      "opening": 3.4,
+      "closing": 3.8
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 2.1,
+      "closing": 2
+     },
+     "2-1": {
+      "opening": 3.25,
+      "closing": 3.3
+     },
+     "1-2": {
+      "opening": 4.45,
+      "closing": 5.1
+     },
+     "0-2": {
+      "opening": 3.4,
+      "closing": 3.95
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.78
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.8
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "ObtY1kWq",
+   "startUtc": "2026-05-27T10:40:00.000Z",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "home": "Lee F. C/Lee F. J.",
+   "away": "Alfian F./Fikri M. S.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 11,
+      "closing": 11
+     },
+     "2-1": {
+      "opening": 9,
+      "closing": 9
+     },
+     "1-2": {
+      "opening": 3.3,
+      "closing": 3.4
+     },
+     "0-2": {
+      "opening": 1.28,
+      "closing": 1.25
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "6iBvxilf",
+   "startUtc": "2026-05-27T10:55:00.000Z",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "home": "Smith P./Gai J.",
+   "away": "Puavaranukroh D./Paewsampran S.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 15,
+      "closing": 13
+     },
+     "2-1": {
+      "opening": 11,
+      "closing": 10
+     },
+     "1-2": {
+      "opening": 3.5,
+      "closing": 3.4
+     },
+     "0-2": {
+      "opening": 1.18,
+      "closing": 1.2
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.8
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.78
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "C84tdCuQ",
+   "startUtc": "2026-05-27T11:15:00.000Z",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "home": "Chen Z. Y./Corbett F.",
+   "away": "Garcia R./Rodriguez L.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 10
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "d8CKVQkl",
+   "startUtc": "2026-05-27T11:35:00.000Z",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "home": "Katethong S.",
+   "away": "Wang Z. Y.",
+   "nbSets": 1,
+   "sets": [
+    {
+     "home": 6,
+     "away": 11
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 13,
+      "closing": 16
+     },
+     "2-1": {
+      "opening": 10,
+      "closing": 11
+     },
+     "1-2": {
+      "opening": 3.4,
+      "closing": 3.5
+     },
+     "0-2": {
+      "opening": 1.2,
+      "closing": 1.16
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 70.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.82
+     },
+     {
+      "total": 70.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "GG5UhCgT",
+   "startUtc": "2026-05-27T11:55:00.000Z",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "home": "Kumagai K./Nishi H.",
+   "away": "Lane B./Vendy S.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 4.4,
+      "closing": 4.2
+     },
+     "2-1": {
+      "opening": 5.25,
+      "closing": 5
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.78,
+      "closing": 1.85
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.78
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "r3FxXY45",
+   "startUtc": "2026-05-27T12:05:00.000Z",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "home": "Carraggi J.",
+   "away": "Vitidsarn K.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 8,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "SIiGvMYI",
+   "startUtc": "2026-05-27T12:05:00.000Z",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "home": "Kang M. H./Ki D. J.",
+   "away": "Kral J./Kral O.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 25,
+     "away": 23
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "44WMENjT",
+   "startUtc": "2026-05-27T12:40:00.000Z",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "home": "Aimsaard B./Aimsaard N.",
+   "away": "Dent J./Lai C.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "rPAQpIqH",
+   "startUtc": "2026-05-27T12:55:00.000Z",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "home": "Christophersen L.",
+   "away": "Okuhara N.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 23,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 3,
+      "closing": 4.6
+     },
+     "2-1": {
+      "opening": 4.1,
+      "closing": 5.25
+     },
+     "1-2": {
+      "opening": 3.4,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 2.35,
+      "closing": 1.75
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "l0IpVCZH",
+   "startUtc": "2026-05-27T13:20:00.000Z",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "home": "Chen C. K./Liu K. H.",
+   "away": "Goh S. F./Izzuddin N.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 9.5,
+      "closing": 8
+     },
+     "2-1": {
+      "opening": 8.5,
+      "closing": 8
+     },
+     "1-2": {
+      "opening": 3.2,
+      "closing": 3.2
+     },
+     "0-2": {
+      "opening": 1.3,
+      "closing": 1.35
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.8
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "dvTEGqMG",
+   "startUtc": "2026-05-27T13:40:00.000Z",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "home": "Hsu Y. H./Lin J. Y.",
+   "away": "Stoeva G./Stoeva S.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 8,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 5.6,
+      "closing": 4.75
+     },
+     "2-1": {
+      "opening": 6.25,
+      "closing": 5.5
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.58,
+      "closing": 1.72
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.75
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "r3muesJa",
+   "startUtc": "2026-05-27T13:50:00.000Z",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "home": "Nomura T./Shimogami Y.",
+   "away": "Arif J./Yap R. K.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 3.1,
+      "closing": 3.2
+     },
+     "2-1": {
+      "opening": 4.2,
+      "closing": 4.2
+     },
+     "1-2": {
+      "opening": 3.3,
+      "closing": 3.3
+     },
+     "0-2": {
+      "opening": 2.25,
+      "closing": 2.25
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "WpiQ8OWa",
+   "startUtc": "2026-05-27T14:25:00.000Z",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "home": "Lu G. Z.",
+   "away": "Sen L.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 3,
+      "closing": 3.3
+     },
+     "2-1": {
+      "opening": 4,
+      "closing": 4.4
+     },
+     "1-2": {
+      "opening": 3.4,
+      "closing": 3.3
+     },
+     "0-2": {
+      "opening": 2.35,
+      "closing": 2.15
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 3,
+      "closing": 3.6
+     },
+     "2-1": {
+      "opening": 4.05,
+      "closing": 4.7
+     },
+     "1-2": {
+      "opening": 3.4,
+      "closing": 3.35
+     },
+     "0-2": {
+      "opening": 2.35,
+      "closing": 2.15
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.78
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "6ZTJ7lwn",
+   "startUtc": "2026-05-27T14:30:00.000Z",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "home": "Panda R./Panda S.",
+   "away": "Aiamvareesrisakul P./Janpeng S.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 9,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "unibet": {
+     "2-0": {
+      "opening": 9.9,
+      "closing": 11.5
+     },
+     "2-1": {
+      "opening": 8.4,
+      "closing": 9.7
+     },
+     "1-2": {
+      "opening": 3.25,
+      "closing": 3.6
+     },
+     "0-2": {
+      "opening": 1.29,
+      "closing": 1.28
+     }
+    },
+    "betclic": {
+     "2-0": {
+      "opening": 10,
+      "closing": 11
+     },
+     "2-1": {
+      "opening": 8.5,
+      "closing": 9
+     },
+     "1-2": {
+      "opening": 3.25,
+      "closing": 3.4
+     },
+     "0-2": {
+      "opening": 1.3,
+      "closing": 1.25
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.8
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "AepfJeTF",
+   "startUtc": "2026-05-28T02:00:00.000Z",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "home": "Li M.",
+   "away": "Yamaguchi A.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 6,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 16,
+      "closing": 16
+     },
+     "2-1": {
+      "opening": 11,
+      "closing": 11
+     },
+     "1-2": {
+      "opening": 3.5,
+      "closing": 3.5
+     },
+     "0-2": {
+      "opening": 1.16,
+      "closing": 1.16
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 70.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.72,
+      "closing": 1.72
+     },
+     {
+      "total": 70.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.85
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "hpsObgIr",
+   "startUtc": "2026-05-28T02:00:00.000Z",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "home": "Sindhu P. V.",
+   "away": "Gunji R.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.25,
+      "closing": 2.35
+     },
+     "2-1": {
+      "opening": 3.3,
+      "closing": 3.4
+     },
+     "1-2": {
+      "opening": 4.2,
+      "closing": 4.1
+     },
+     "0-2": {
+      "opening": 3.2,
+      "closing": 3
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 2.25,
+      "closing": 2.45
+     },
+     "2-1": {
+      "opening": 3.35,
+      "closing": 3.55
+     },
+     "1-2": {
+      "opening": 4.2,
+      "closing": 4.25
+     },
+     "0-2": {
+      "opening": 3.2,
+      "closing": 3.1
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.8
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "SYkaSYNr",
+   "startUtc": "2026-05-28T02:10:00.000Z",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "home": "Gutama S. K./Isfahani M. R. P.",
+   "away": "Kang K. X./Tai A.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.38,
+      "closing": 1.58
+     },
+     "2-1": {
+      "opening": 3.2,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 7.5,
+      "closing": 6.25
+     },
+     "0-2": {
+      "opening": 7.5,
+      "closing": 5.75
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.72
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.85,
+      "closing": 1.75
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.8
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.85
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.72,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "bmRwJMog",
+   "startUtc": "2026-05-28T02:45:00.000Z",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "home": "Watanabe K.",
+   "away": "Lee C. Y.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.7,
+      "closing": 2.7
+     },
+     "2-1": {
+      "opening": 3.75,
+      "closing": 3.75
+     },
+     "1-2": {
+      "opening": 3.7,
+      "closing": 3.6
+     },
+     "0-2": {
+      "opening": 2.6,
+      "closing": 2.55
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "jFa39oLt",
+   "startUtc": "2026-05-28T02:55:00.000Z",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "home": "An S. Y.",
+   "away": "Sung S. Y.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 21,
+     "away": 6
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "4I5es55E",
+   "startUtc": "2026-05-28T03:00:00.000Z",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "home": "Ercetin B./Inci N.",
+   "away": "Jia Y. F./Zhang S. X.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 6,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "lSMYqCfC",
+   "startUtc": "2026-05-28T03:35:00.000Z",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "home": "Christophersen L.",
+   "away": "Wang Z. Y.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 20,
+     "away": 22
+    }
+   ],
+   "winner": "away",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "lzZS8b7m",
+   "startUtc": "2026-05-28T03:35:00.000Z",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "home": "Nidaira N.",
+   "away": "Intanon R.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "unibet": {
+     "2-0": {
+      "opening": 3,
+      "closing": 4.05
+     },
+     "2-1": {
+      "opening": 4.05,
+      "closing": 5.2
+     },
+     "1-2": {
+      "opening": 3.65,
+      "closing": 3.25
+     },
+     "0-2": {
+      "opening": 2.5,
+      "closing": 1.98
+     }
+    },
+    "betclic": {
+     "2-0": {
+      "opening": 2.9,
+      "closing": 4.2
+     },
+     "2-1": {
+      "opening": 3.9,
+      "closing": 5
+     },
+     "1-2": {
+      "opening": 3.5,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 2.45,
+      "closing": 1.82
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.78
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.78
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "zwCUYfzg",
+   "startUtc": "2026-05-28T03:40:00.000Z",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "home": "Rankireddy S./Shetty C.",
+   "away": "Lee J-H./Yang Po-Hsuan",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.68,
+      "closing": 1.68
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 5.6,
+      "closing": 5.75
+     },
+     "0-2": {
+      "opening": 5,
+      "closing": 5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "lKIsUON5",
+   "startUtc": "2026-05-28T04:25:00.000Z",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "home": "Lin H. T.",
+   "away": "Chochuwong Po.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 9.5,
+      "closing": 7.5
+     },
+     "2-1": {
+      "opening": 8,
+      "closing": 7.5
+     },
+     "1-2": {
+      "opening": 3.25,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.33,
+      "closing": 1.4
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.72
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.8
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.85
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "lCflga0e",
+   "startUtc": "2026-05-28T04:25:00.000Z",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "home": "Kapila D./Crasto T.",
+   "away": "Watanabe Y./Taguchi M.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 8,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 3.5,
+      "closing": 4.1
+     },
+     "2-1": {
+      "opening": 4.5,
+      "closing": 5
+     },
+     "1-2": {
+      "opening": 3.25,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 2.05,
+      "closing": 1.85
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "fi8GURL8",
+   "startUtc": "2026-05-28T04:50:00.000Z",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "home": "Tang Chun M./Tse Y. S.",
+   "away": "Teeraratsakul P./Taerattanachai S.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.2,
+      "closing": 2.1
+     },
+     "2-1": {
+      "opening": 3.3,
+      "closing": 3.25
+     },
+     "1-2": {
+      "opening": 4.4,
+      "closing": 4.5
+     },
+     "0-2": {
+      "opening": 3.25,
+      "closing": 3.4
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "jyViQz1d",
+   "startUtc": "2026-05-28T05:20:00.000Z",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "home": "Baek H. N./Lee S. H.",
+   "away": "Lopez P./Rodriguez L.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "IyjjG4TF",
+   "startUtc": "2026-05-28T05:35:00.000Z",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "home": "Sen L.",
+   "away": "Vitidsarn K.",
+   "nbSets": 1,
+   "sets": [
+    {
+     "home": 2,
+     "away": 0
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "unibet": {
+     "2-0": {
+      "opening": 6.5,
+      "closing": 6.5
+     },
+     "2-1": {
+      "opening": 6.9,
+      "closing": 6.9
+     },
+     "1-2": {
+      "opening": 3.25,
+      "closing": 3.25
+     },
+     "0-2": {
+      "opening": 1.56,
+      "closing": 1.56
+     }
+    },
+    "betclic": {
+     "2-0": {
+      "opening": 6,
+      "closing": 6
+     },
+     "2-1": {
+      "opening": 6.5,
+      "closing": 6.5
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.52,
+      "closing": 1.52
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.85
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "jklbErbS",
+   "startUtc": "2026-05-28T05:35:00.000Z",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "home": "Aiamvareesrisakul P./Janpeng S.",
+   "away": "Stoeva G./Stoeva S.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 8,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "U9QG6DN8",
+   "startUtc": "2026-05-28T06:00:00.000Z",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "home": "Aimsaard B./Aimsaard N.",
+   "away": "Tan P./Muralitharan T.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 4.75,
+      "closing": 6
+     },
+     "2-1": {
+      "opening": 5.8,
+      "closing": 6.5
+     },
+     "1-2": {
+      "opening": 3,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.68,
+      "closing": 1.55
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.82
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.82
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "MR7Y4x33",
+   "startUtc": "2026-05-28T06:05:00.000Z",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "home": "Arif J./Yap R. K.",
+   "away": "Goh S. F./Izzuddin N.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 23
+    },
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 8,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 4.75,
+      "closing": 3.9
+     },
+     "2-1": {
+      "opening": 5.75,
+      "closing": 5
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.68,
+      "closing": 1.9
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.75
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.82
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "bDUumAbB",
+   "startUtc": "2026-05-28T06:10:00.000Z",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "home": "Lundgaard D./Vestergaard M.",
+   "away": "Alfian F./Fikri M. S.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 9,
+      "closing": 6
+     },
+     "2-1": {
+      "opening": 8.5,
+      "closing": 6.5
+     },
+     "1-2": {
+      "opening": 3.2,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.33,
+      "closing": 1.52
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.85,
+      "closing": 1.75
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.85
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.72,
+      "closing": 1.72
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.72,
+      "closing": 1.82
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "8jGHYl6m",
+   "startUtc": "2026-05-28T07:00:00.000Z",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "home": "Kang M. H./Ki D. J.",
+   "away": "Liang W. K./Wang C.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 23
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 5,
+      "closing": 4.6
+     },
+     "2-1": {
+      "opening": 5.8,
+      "closing": 5.5
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3
+     },
+     "0-2": {
+      "opening": 1.65,
+      "closing": 1.72
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "IXXlfopd",
+   "startUtc": "2026-05-28T07:00:00.000Z",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "home": "Gicquel T./Delrue D.",
+   "away": "Gao J. X./Wei Y. X.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 25,
+     "away": 27
+    }
+   ],
+   "winner": "away",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "EXQHjeb2",
+   "startUtc": "2026-05-28T07:50:00.000Z",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "home": "Fukushima Y./Matsumoto M.",
+   "away": "Lam L./Lee A. Q.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "0nl7QChe",
+   "startUtc": "2026-05-28T08:15:00.000Z",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "home": "Antonsen A.",
+   "away": "Lai V.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 27,
+     "away": 25
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "unibet": {
+     "2-0": {
+      "opening": 1.41,
+      "closing": 1.51
+     },
+     "2-1": {
+      "opening": 3.15,
+      "closing": 3.25
+     },
+     "1-2": {
+      "opening": 7.3,
+      "closing": 7.1
+     },
+     "0-2": {
+      "opening": 7.3,
+      "closing": 7
+     }
+    },
+    "betclic": {
+     "2-0": {
+      "opening": 1.42,
+      "closing": 1.48
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 7.5,
+      "closing": 6.75
+     },
+     "0-2": {
+      "opening": 7.5,
+      "closing": 6.5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.72,
+      "closing": 1.75
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.8
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.82
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.78
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "QmAhwe9l",
+   "startUtc": "2026-05-28T08:15:00.000Z",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "home": "Shi Y. Q.",
+   "away": "Farhan A.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.18,
+      "closing": 1.25
+     },
+     "2-1": {
+      "opening": 3.5,
+      "closing": 3.4
+     },
+     "1-2": {
+      "opening": 10,
+      "closing": 9.5
+     },
+     "0-2": {
+      "opening": 15,
+      "closing": 12
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "juHUWoSQ",
+   "startUtc": "2026-05-28T08:55:00.000Z",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "home": "Hiramoto R./Ishikawa K.",
+   "away": "Igarashi A./Shida C.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 12,
+      "closing": 9.5
+     },
+     "2-1": {
+      "opening": 9.5,
+      "closing": 8.5
+     },
+     "1-2": {
+      "opening": 3.4,
+      "closing": 3.2
+     },
+     "0-2": {
+      "opening": 1.22,
+      "closing": 1.3
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.72,
+      "closing": 1.72
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "8dVfwhcn",
+   "startUtc": "2026-05-28T09:35:00.000Z",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "home": "Lane B./Vendy S.",
+   "away": "Chia A./Soh W. Y.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 3.4,
+      "closing": 3.6
+     },
+     "2-1": {
+      "opening": 4.5,
+      "closing": 4.6
+     },
+     "1-2": {
+      "opening": 3.25,
+      "closing": 3.2
+     },
+     "0-2": {
+      "opening": 2.1,
+      "closing": 2.05
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 3.6,
+      "closing": 3.75
+     },
+     "2-1": {
+      "opening": 4.7,
+      "closing": 4.85
+     },
+     "1-2": {
+      "opening": 3.35,
+      "closing": 3.3
+     },
+     "0-2": {
+      "opening": 2.15,
+      "closing": 2.1
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "rVHwlvg3",
+   "startUtc": "2026-05-28T09:40:00.000Z",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "home": "Naraoka K.",
+   "away": "Lee C. H.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.42,
+      "closing": 1.4
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.2
+     },
+     "1-2": {
+      "opening": 7,
+      "closing": 7.5
+     },
+     "0-2": {
+      "opening": 7.5,
+      "closing": 7.5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "t86OS5jL",
+   "startUtc": "2026-05-28T09:50:00.000Z",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "home": "Weng H. Y.",
+   "away": "Lanier A.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "unibet": {
+     "2-0": {
+      "opening": 3.75,
+      "closing": 3.8
+     },
+     "2-1": {
+      "opening": 4.8,
+      "closing": 4.85
+     },
+     "1-2": {
+      "opening": 3.35,
+      "closing": 3.35
+     },
+     "0-2": {
+      "opening": 2.1,
+      "closing": 2.1
+     }
+    },
+    "betclic": {
+     "2-0": {
+      "opening": 3.6,
+      "closing": 3.6
+     },
+     "2-1": {
+      "opening": 4.6,
+      "closing": 4.6
+     },
+     "1-2": {
+      "opening": 3.2,
+      "closing": 3.2
+     },
+     "0-2": {
+      "opening": 2.05,
+      "closing": 2
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "nDaz7QeS",
+   "startUtc": "2026-05-28T10:30:00.000Z",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "home": "Loh K. Y.",
+   "away": "Prannoy H. S.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.58,
+      "closing": 1.65
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 6,
+      "closing": 5.75
+     },
+     "0-2": {
+      "opening": 5.6,
+      "closing": 5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.78
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.8
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "2cBDjwE8",
+   "startUtc": "2026-05-28T10:30:00.000Z",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "home": "Miyazaki T.",
+   "away": "Chiu P.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 23,
+     "away": 21
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.42,
+      "closing": 1.4
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.2
+     },
+     "1-2": {
+      "opening": 7,
+      "closing": 7
+     },
+     "0-2": {
+      "opening": 7.5,
+      "closing": 7.5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "QaWXlWTb",
+   "startUtc": "2026-05-28T10:40:00.000Z",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "home": "Chen Z. Y./Corbett F.",
+   "away": "Puavaranukroh D./Paewsampran S.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 6,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "2JYbtEvQ",
+   "startUtc": "2026-05-28T11:20:00.000Z",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "home": "Iwanaga R./Nakanishi K.",
+   "away": "Chang C. H./Yang C. T.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "tSCyhjxn",
+   "startUtc": "2026-05-28T11:25:00.000Z",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "home": "Liu S. S./Tan N.",
+   "away": "Hsu Y. C./Sung Y.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 7
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "OtTt4JtH",
+   "startUtc": "2026-05-28T11:40:00.000Z",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "home": "Kim W. H./Seo S. J.",
+   "away": "He Z./Huang Jui-Hsuan",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "0lB8yzZh",
+   "startUtc": "2026-05-28T12:05:00.000Z",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "home": "Oupthong R./Sudjaipraparat J.",
+   "away": "Shimogami Y./Hobara S.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.2,
+      "closing": 2.45
+     },
+     "2-1": {
+      "opening": 3.3,
+      "closing": 3.6
+     },
+     "1-2": {
+      "opening": 4.3,
+      "closing": 3.9
+     },
+     "0-2": {
+      "opening": 3.25,
+      "closing": 2.85
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "80LslrmQ",
+   "startUtc": "2026-05-28T12:10:00.000Z",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "home": "Hoki T./Kobayashi Y.",
+   "away": "Chen B. Y./Liu Y.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.2,
+      "closing": 2.25
+     },
+     "2-1": {
+      "opening": 3.3,
+      "closing": 3.4
+     },
+     "1-2": {
+      "opening": 4.2,
+      "closing": 4.2
+     },
+     "0-2": {
+      "opening": 3.2,
+      "closing": 3.1
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "pKZtd7Fq",
+   "startUtc": "2026-05-28T12:20:00.000Z",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "home": "Chen Y. F.",
+   "away": "Akechi H.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 5
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.22,
+      "closing": 1.28
+     },
+     "2-1": {
+      "opening": 3.4,
+      "closing": 3.3
+     },
+     "1-2": {
+      "opening": 9.5,
+      "closing": 8.5
+     },
+     "0-2": {
+      "opening": 13,
+      "closing": 10
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.72,
+      "closing": 1.75
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.75
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.82
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.82
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "tSCOXiYH",
+   "startUtc": "2026-05-28T13:30:00.000Z",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "home": "Chi Y. J.",
+   "away": "Popov C.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 23,
+     "away": 21
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 15,
+      "closing": 9
+     },
+     "2-1": {
+      "opening": 10,
+      "closing": 8
+     },
+     "1-2": {
+      "opening": 3.5,
+      "closing": 3.25
+     },
+     "0-2": {
+      "opening": 1.18,
+      "closing": 1.33
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 70.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.72
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.85
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.75
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 70.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.85
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.72
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.82
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "2FMMpsPc",
+   "startUtc": "2026-05-29T04:05:00.000Z",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "home": "Intanon R.",
+   "away": "Yamaguchi A.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 20,
+     "away": 22
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 10,
+      "closing": 7.5
+     },
+     "2-1": {
+      "opening": 8.5,
+      "closing": 7.5
+     },
+     "1-2": {
+      "opening": 3.25,
+      "closing": 3.2
+     },
+     "0-2": {
+      "opening": 1.28,
+      "closing": 1.4
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.75
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.85,
+      "closing": 1.8
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.85
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "0We8pgnC",
+   "startUtc": "2026-05-29T04:10:00.000Z",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "home": "Stoeva G./Stoeva S.",
+   "away": "Jia Y. F./Zhang S. X.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 12,
+      "closing": 10
+     },
+     "2-1": {
+      "opening": 9.5,
+      "closing": 8.5
+     },
+     "1-2": {
+      "opening": 3.3,
+      "closing": 3.3
+     },
+     "0-2": {
+      "opening": 1.25,
+      "closing": 1.28
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.72
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.85
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.72,
+      "closing": 1.72
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "YPmGwoZR",
+   "startUtc": "2026-05-29T05:15:00.000Z",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "home": "Chochuwong Po.",
+   "away": "Wang Z. Y.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 8.5,
+      "closing": 9
+     },
+     "2-1": {
+      "opening": 7.5,
+      "closing": 8
+     },
+     "1-2": {
+      "opening": 3.2,
+      "closing": 3.25
+     },
+     "0-2": {
+      "opening": 1.35,
+      "closing": 1.33
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.72,
+      "closing": 1.78
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.8
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.72,
+      "closing": 1.72
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "GCczkcFU",
+   "startUtc": "2026-05-29T05:25:00.000Z",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "home": "Baek H. N./Lee S. H.",
+   "away": "Fukushima Y./Matsumoto M.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.52,
+      "closing": 1.62
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 6.5,
+      "closing": 6
+     },
+     "0-2": {
+      "opening": 6.25,
+      "closing": 5.25
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.78
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "zikDy7vh",
+   "startUtc": "2026-05-29T06:00:00.000Z",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "home": "Liu S. S./Tan N.",
+   "away": "Iwanaga R./Nakanishi K.",
+   "nbSets": 0,
+   "sets": [],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.38,
+      "closing": 1.38
+     },
+     "2-1": {
+      "opening": 3.2,
+      "closing": 3.2
+     },
+     "1-2": {
+      "opening": 7.5,
+      "closing": 7.5
+     },
+     "0-2": {
+      "opening": 8,
+      "closing": 8
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.8
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.8
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.78
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "WvKsY3uh",
+   "startUtc": "2026-05-29T06:15:00.000Z",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "home": "An S. Y.",
+   "away": "Sindhu P. V.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.2,
+      "closing": 1.13
+     },
+     "2-1": {
+      "opening": 3.4,
+      "closing": 3.6
+     },
+     "1-2": {
+      "opening": 10,
+      "closing": 12
+     },
+     "0-2": {
+      "opening": 13,
+      "closing": 18
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 70.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.72,
+      "closing": 1.85
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.85
+     },
+     {
+      "total": 70.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.72
+     },
+     {
+      "total": 71.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.72
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "KG6hbCqp",
+   "startUtc": "2026-05-29T06:25:00.000Z",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "home": "Igarashi A./Shida C.",
+   "away": "Aimsaard B./Aimsaard N.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 3.3,
+      "closing": 2.65
+     },
+     "2-1": {
+      "opening": 4.3,
+      "closing": 3.7
+     },
+     "1-2": {
+      "opening": 3.3,
+      "closing": 3.7
+     },
+     "0-2": {
+      "opening": 2.2,
+      "closing": 2.65
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.75
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.82
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "GvdUqyEi",
+   "startUtc": "2026-05-29T07:15:00.000Z",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "home": "Goh S. F./Izzuddin N.",
+   "away": "Alfian F./Fikri M. S.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 5,
+      "closing": 4.5
+     },
+     "2-1": {
+      "opening": 5.8,
+      "closing": 5.5
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.65,
+      "closing": 1.75
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.85
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "0SsCwVWj",
+   "startUtc": "2026-05-29T07:20:00.000Z",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "home": "Chen Y. F.",
+   "away": "Miyazaki T.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.42,
+      "closing": 1.42
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 7,
+      "closing": 7.5
+     },
+     "0-2": {
+      "opening": 7,
+      "closing": 7.5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "f7v5AeOO",
+   "startUtc": "2026-05-29T08:15:00.000Z",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "home": "Gao J. X./Wei Y. X.",
+   "away": "Tang Chun M./Tse Y. S.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "MqJxsaOM",
+   "startUtc": "2026-05-29T08:45:00.000Z",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "home": "Rankireddy S./Shetty C.",
+   "away": "Kang K. X./Tai A.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.58,
+      "closing": 1.65
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3
+     },
+     "1-2": {
+      "opening": 6.25,
+      "closing": 5.75
+     },
+     "0-2": {
+      "opening": 5.6,
+      "closing": 5.25
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.75
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.82
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "ja1M6HAj",
+   "startUtc": "2026-05-29T09:05:00.000Z",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "home": "Shimogami Y./Hobara S.",
+   "away": "Puavaranukroh D./Paewsampran S.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 23
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "fXLjHS1T",
+   "startUtc": "2026-05-29T09:25:00.000Z",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "home": "Kim W. H./Seo S. J.",
+   "away": "Hoki T./Kobayashi Y.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.4,
+      "closing": 1.35
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.2
+     },
+     "1-2": {
+      "opening": 7.5,
+      "closing": 8
+     },
+     "0-2": {
+      "opening": 7.5,
+      "closing": 8.5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.82
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "KYuQhWdM",
+   "startUtc": "2026-05-29T10:00:00.000Z",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "home": "Kapila D./Crasto T.",
+   "away": "Chen T. J./Toh E. W.",
+   "nbSets": 1,
+   "sets": [
+    {
+     "home": 16,
+     "away": 18
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 11,
+      "closing": 12
+     },
+     "2-1": {
+      "opening": 9.5,
+      "closing": 9.5
+     },
+     "1-2": {
+      "opening": 3.3,
+      "closing": 3.3
+     },
+     "0-2": {
+      "opening": 1.25,
+      "closing": 1.22
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.72,
+      "closing": 1.75
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.85
+     },
+     {
+      "total": 72.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.82
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "StSWEhbk",
+   "startUtc": "2026-05-29T10:15:00.000Z",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "home": "Liang W. K./Wang C.",
+   "away": "Chia A./Soh W. Y.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.88,
+      "closing": 2.05
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.2
+     },
+     "1-2": {
+      "opening": 5,
+      "closing": 4.6
+     },
+     "0-2": {
+      "opening": 4.1,
+      "closing": 3.5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.82
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "ptkhlymm",
+   "startUtc": "2026-05-29T10:50:00.000Z",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "home": "Watanabe K.",
+   "away": "Sen L.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 3.4,
+      "closing": 3.7
+     },
+     "2-1": {
+      "opening": 4.6,
+      "closing": 4.75
+     },
+     "1-2": {
+      "opening": 3.25,
+      "closing": 3.2
+     },
+     "0-2": {
+      "opening": 2.1,
+      "closing": 1.95
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 3.7,
+      "closing": 3.8
+     },
+     "2-1": {
+      "opening": 4.8,
+      "closing": 4.85
+     },
+     "1-2": {
+      "opening": 3.35,
+      "closing": 3.3
+     },
+     "0-2": {
+      "opening": 2.1,
+      "closing": 2.1
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "M1I7yPYo",
+   "startUtc": "2026-05-29T11:00:00.000Z",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "home": "Yang Po-Hsuan/Hu Ling F.",
+   "away": "Christiansen M./Boje A.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 5.6,
+      "closing": 7
+     },
+     "2-1": {
+      "opening": 6,
+      "closing": 7
+     },
+     "1-2": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.58,
+      "closing": 1.45
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.78
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.8
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.72,
+      "closing": 1.72
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "CQ56mD4E",
+   "startUtc": "2026-05-29T12:00:00.000Z",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "home": "Farhan A.",
+   "away": "Naraoka K.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 3,
+      "closing": 2.5
+     },
+     "2-1": {
+      "opening": 4.1,
+      "closing": 3.6
+     },
+     "1-2": {
+      "opening": 3.4,
+      "closing": 3.9
+     },
+     "0-2": {
+      "opening": 2.35,
+      "closing": 2.75
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 2.55,
+      "closing": 2.55
+     },
+     "2-1": {
+      "opening": 3.75,
+      "closing": 3.75
+     },
+     "1-2": {
+      "opening": 4.05,
+      "closing": 4.05
+     },
+     "0-2": {
+      "opening": 2.9,
+      "closing": 2.9
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "YgaLsG2d",
+   "startUtc": "2026-05-29T12:10:00.000Z",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "home": "Antonsen A.",
+   "away": "Lanier A.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.05,
+      "closing": 2.1
+     },
+     "2-1": {
+      "opening": 3.2,
+      "closing": 3.3
+     },
+     "1-2": {
+      "opening": 4.6,
+      "closing": 4.5
+     },
+     "0-2": {
+      "opening": 3.6,
+      "closing": 3.4
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 2.15,
+      "closing": 2.15
+     },
+     "2-1": {
+      "opening": 3.4,
+      "closing": 3.4
+     },
+     "1-2": {
+      "opening": 4.65,
+      "closing": 4.65
+     },
+     "0-2": {
+      "opening": 3.55,
+      "closing": 3.55
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "EXxJMQwo",
+   "startUtc": "2026-05-29T13:05:00.000Z",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "home": "Loh K. Y.",
+   "away": "Chi Y. J.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 6
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.45,
+      "closing": 2.2
+     },
+     "2-1": {
+      "opening": 3.6,
+      "closing": 3.3
+     },
+     "1-2": {
+      "opening": 3.9,
+      "closing": 4.4
+     },
+     "0-2": {
+      "opening": 2.85,
+      "closing": 3.25
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "Ykc42j6j",
+   "startUtc": "2026-05-30T04:10:00.000Z",
+   "disc": "WS",
+   "round": "Demi-finales",
+   "home": "Yamaguchi A.",
+   "away": "Wang Z. Y.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 5,
+      "closing": 4.2
+     },
+     "2-1": {
+      "opening": 5.75,
+      "closing": 5
+     },
+     "1-2": {
+      "opening": 3,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 1.68,
+      "closing": 1.85
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.78
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "Ug8Q9YDG",
+   "startUtc": "2026-05-30T05:25:00.000Z",
+   "disc": "WD",
+   "round": "Demi-finales",
+   "home": "Liu S. S./Tan N.",
+   "away": "Baek H. N./Lee S. H.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 10
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.68,
+      "closing": 1.6
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 5.6,
+      "closing": 6
+     },
+     "0-2": {
+      "opening": 5,
+      "closing": 5.5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.8
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "4KdHRXPh",
+   "startUtc": "2026-05-30T06:15:00.000Z",
+   "disc": "WS",
+   "round": "Demi-finales",
+   "home": "An S. Y.",
+   "away": "Chen Y. F.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.4,
+      "closing": 1.3
+     },
+     "2-1": {
+      "opening": 3.2,
+      "closing": 3.2
+     },
+     "1-2": {
+      "opening": 7,
+      "closing": 8
+     },
+     "0-2": {
+      "opening": 7.5,
+      "closing": 9.5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.8
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.8,
+      "closing": 1.82
+     },
+     {
+      "total": 73.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.78
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "vJrVq93s",
+   "startUtc": "2026-05-30T07:50:00.000Z",
+   "disc": "XD",
+   "round": "Demi-finales",
+   "home": "Kapila D./Crasto T.",
+   "away": "Shimogami Y./Hobara S.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 3.4,
+      "closing": 4.6
+     },
+     "2-1": {
+      "opening": 4.4,
+      "closing": 5.25
+     },
+     "1-2": {
+      "opening": 3.2,
+      "closing": 3.1
+     },
+     "0-2": {
+      "opening": 2.15,
+      "closing": 1.75
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 3.55,
+      "closing": 4.4
+     },
+     "2-1": {
+      "opening": 4.65,
+      "closing": 5.5
+     },
+     "1-2": {
+      "opening": 3.35,
+      "closing": 3.25
+     },
+     "0-2": {
+      "opening": 2.2,
+      "closing": 1.87
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "v7jjVutf",
+   "startUtc": "2026-05-30T09:00:00.000Z",
+   "disc": "WD",
+   "round": "Demi-finales",
+   "home": "Jia Y. F./Zhang S. X.",
+   "away": "Igarashi A./Shida C.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.55,
+      "closing": 1.58
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3
+     },
+     "1-2": {
+      "opening": 6.25,
+      "closing": 6.25
+     },
+     "0-2": {
+      "opening": 5.8,
+      "closing": 5.6
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.72,
+      "closing": 1.72
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.8
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 75.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "Asw2g2t0",
+   "startUtc": "2026-05-30T09:55:00.000Z",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "home": "Kim W. H./Seo S. J.",
+   "away": "Rankireddy S./Shetty C.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.65,
+      "closing": 1.55
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 5.8,
+      "closing": 6.25
+     },
+     "0-2": {
+      "opening": 5,
+      "closing": 5.8
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.75
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.85
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "Ovd9bAun",
+   "startUtc": "2026-05-30T10:55:00.000Z",
+   "disc": "XD",
+   "round": "Demi-finales",
+   "home": "Christiansen M./Boje A.",
+   "away": "Gao J. X./Wei Y. X.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "winner": "home",
+   "scores": null,
+   "points": null
+  },
+  {
+   "fsId": "KKpAgTvI",
+   "startUtc": "2026-05-30T11:40:00.000Z",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "home": "Farhan A.",
+   "away": "Lanier A.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.75,
+      "closing": 2.9
+     },
+     "2-1": {
+      "opening": 3.9,
+      "closing": 4
+     },
+     "1-2": {
+      "opening": 3.6,
+      "closing": 3.5
+     },
+     "0-2": {
+      "opening": 2.5,
+      "closing": 2.35
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 2.9,
+      "closing": 2.7
+     },
+     "2-1": {
+      "opening": 4.05,
+      "closing": 3.65
+     },
+     "1-2": {
+      "opening": 3.7,
+      "closing": 3.2
+     },
+     "0-2": {
+      "opening": 2.6,
+      "closing": 2.25
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "tAkGIVRH",
+   "startUtc": "2026-05-30T12:40:00.000Z",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "home": "Alfian F./Fikri M. S.",
+   "away": "Liang W. K./Wang C.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 23,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 4
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.65,
+      "closing": 2.85
+     },
+     "2-1": {
+      "opening": 3.7,
+      "closing": 3.8
+     },
+     "1-2": {
+      "opening": 3.75,
+      "closing": 3.5
+     },
+     "0-2": {
+      "opening": 2.6,
+      "closing": 2.5
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "h8ehOa16",
+   "startUtc": "2026-05-30T13:25:00.000Z",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "home": "Loh K. Y.",
+   "away": "Watanabe K.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.45,
+      "closing": 2.2
+     },
+     "2-1": {
+      "opening": 3.5,
+      "closing": 3.4
+     },
+     "1-2": {
+      "opening": 4,
+      "closing": 4.2
+     },
+     "0-2": {
+      "opening": 2.85,
+      "closing": 3.25
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.78
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "ARlaCgyp",
+   "startUtc": "2026-05-31T06:10:00.000Z",
+   "disc": "WD",
+   "round": "Finale",
+   "home": "Liu S. S./Tan N.",
+   "away": "Jia Y. F./Zhang S. X.",
+   "nbSets": 2,
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "winner": "away",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2,
+      "closing": 1.7
+     },
+     "2-1": {
+      "opening": 3.2,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 4.75,
+      "closing": 5.6
+     },
+     "0-2": {
+      "opening": 3.6,
+      "closing": 4.75
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.82
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.75
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "rLt75oOa",
+   "startUtc": "2026-05-31T07:25:00.000Z",
+   "disc": "WS",
+   "round": "Finale",
+   "home": "An S. Y.",
+   "away": "Yamaguchi A.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.42,
+      "closing": 1.42
+     },
+     "2-1": {
+      "opening": 3.2,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 7,
+      "closing": 7.5
+     },
+     "0-2": {
+      "opening": 7,
+      "closing": 7
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.78
+     },
+     {
+      "total": 74.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "pUSmCuYo",
+   "startUtc": "2026-05-31T08:50:00.000Z",
+   "disc": "XD",
+   "round": "Finale",
+   "home": "Christiansen M./Boje A.",
+   "away": "Shimogami Y./Hobara S.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 1.68,
+      "closing": 1.58
+     },
+     "2-1": {
+      "opening": 3.1,
+      "closing": 3.1
+     },
+     "1-2": {
+      "opening": 5.75,
+      "closing": 6.25
+     },
+     "0-2": {
+      "opening": 5,
+      "closing": 5.75
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.78
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 76.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.8
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "8fCuxiTs",
+   "startUtc": "2026-05-31T10:10:00.000Z",
+   "disc": "MD",
+   "round": "Finale",
+   "home": "Rankireddy S./Shetty C.",
+   "away": "Alfian F./Fikri M. S.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.8,
+      "closing": 2.35
+     },
+     "2-1": {
+      "opening": 3.9,
+      "closing": 3.4
+     },
+     "1-2": {
+      "opening": 3.6,
+      "closing": 4.1
+     },
+     "0-2": {
+      "opening": 2.45,
+      "closing": 3
+     }
+    },
+    "unibet": {
+     "2-0": {
+      "opening": 2.75,
+      "closing": 2.4
+     },
+     "2-1": {
+      "opening": 3.9,
+      "closing": 3.55
+     },
+     "1-2": {
+      "opening": 3.8,
+      "closing": 4.25
+     },
+     "0-2": {
+      "opening": 2.7,
+      "closing": 3.1
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.78
+     },
+     {
+      "total": 80.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.82,
+      "closing": 1.82
+     },
+     {
+      "total": 79.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.8,
+      "closing": 1.8
+     },
+     {
+      "total": 80.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.75,
+      "closing": 1.75
+     }
+    ]
+   }
+  },
+  {
+   "fsId": "W0kFVLcl",
+   "startUtc": "2026-05-31T11:40:00.000Z",
+   "disc": "MS",
+   "round": "Finale",
+   "home": "Lanier A.",
+   "away": "Loh K. Y.",
+   "nbSets": 3,
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "winner": "home",
+   "scores": {
+    "betclic": {
+     "2-0": {
+      "opening": 2.25,
+      "closing": 1.9
+     },
+     "2-1": {
+      "opening": 3.3,
+      "closing": 3.2
+     },
+     "1-2": {
+      "opening": 4.2,
+      "closing": 4.75
+     },
+     "0-2": {
+      "opening": 3.1,
+      "closing": 3.9
+     }
+    }
+   },
+   "points": {
+    "betclic": [
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.75,
+      "closing": 1.78
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "OVER",
+      "opening": 1.78,
+      "closing": 1.82
+     },
+     {
+      "total": 77.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.82,
+      "closing": 1.8
+     },
+     {
+      "total": 78.5,
+      "type": "POINTS",
+      "selection": "UNDER",
+      "opening": 1.78,
+      "closing": 1.75
+     }
+    ]
+   }
+  }
+ ]
+}

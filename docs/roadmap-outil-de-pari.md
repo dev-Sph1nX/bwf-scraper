@@ -116,30 +116,25 @@ Par valeur attendue décroissante :
    actifs** (ne rouvrir que pour un signal repensé, ex. marge par set).
    Reste : le réajustement des poids. Chaque étape passe
    sur le banc d'essai (M1 pour entraîner, M3 pour décider).
-1. **Marché « nombre de sets » + effet gymnase** ⭐ (inscrit par le propriétaire
-   le 2026-08-04) — débouché direct de la mesure gymnases (§7 : effet réel à
-   +6,1 σ, persistant r = 0,42). Relever ce marché chez les 3 opérateurs et
-   vérifier si le prix intègre l'effet lieu (Sydney vs Séoul) : l'écart éventuel
-   est la valeur exploitable. C'est une **nouvelle famille de paris**, pas une
-   amélioration du modèle vainqueur — potentiellement notre edge le plus
-   crédible, car le marché « vainqueur » est le plus efficace (§8).
-   **Préalable : FAIT rétrospectivement le 2026-08-10**
-   ([`verif-cotes-sets.md`](verif-cotes-sets.md)) sur les 50 relevés du Korea
-   Masters : le marché des sets n'était demandé nulle part (les API de liste ne
-   servent que le vainqueur) → **extension livrée** (champ optionnel `sets` lu
-   sur les pages match, rétro-compatible, parsing validé sur le tennis).
-   **PRÉALABLE ENTIÈREMENT LEVÉ le 2026-08-18** (Championnats du monde, §6 du
-   doc) : libellés badminton confirmés chez les 3 opérateurs (Betclic « Nombre
-   de sets », Unibet « Nombre de Sets - Match », Winamax « Nombre de sets »),
-   17 matchs cotés simultanément par les 3, cotes concordantes. Les deux trous
-   de capture sont traités : **Winamax réparé** (0/52 → 22/52 — ses `marketId`
-   diffèrent d'un sport à l'autre, §6a) et **Betclic 403 en CI tranché sans
-   code** — refus par IP à l'edge CloudFront, insensible aux en-têtes et à la
-   pile TLS ; **décision : on tourne à 2 opérateurs sur 3 en CI**, Betclic
-   relevé à la main en local au besoin (§6b, ne pas rouvrir).
-   Reste : accumuler des relevés de sets sur plusieurs tournois, puis mesurer
-   si le prix intègre l'effet gymnase — c'est la mesure elle-même, elle attend
-   la matière (China Masters au 1er septembre, puis la saison d'octobre).
+1. **Marché « nombre de sets » + effet gymnase** — ❌ **FERMÉ le 2026-08-18,
+   l'hypothèse est retournée** (journal §10). On pariait qu'un marché moins
+   travaillé laisserait plus de place : il est en réalité **plus cher**
+   (17-18 % de marge en direct et ~29 % en archives, contre 12-13 % sur le
+   vainqueur, mesuré sur les mêmes matchs), le marché le prédit **mieux que
+   nous**, et l'effet gymnase (§7) — le socle de l'intuition — est un fait
+   descriptif de lieu qui **ne se transporte pas** en prédiction match par
+   match. Toutes les stratégies testées perdent. Le préalable de capture est
+   fait et livré (libellés validés chez les 3 opérateurs, Winamax réparé) :
+   les relevés continuent, mais aucun pari n'en découle. **Ne rouvrir que si
+   l'accès à un opérateur nettement moins chargé apparaît.**
+
+   Sous-produit : le marché **total de points** (marge 11 %, collecté au
+   passage) montre un biais réel et persistant — les matchs dépassent la ligne
+   3 à 4,5 points plus souvent que le prix ne le dit, dans les deux saisons
+   mesurées. **Trop petit pour le péage**, mais c'est le seul endroit du
+   projet où le marché se trompe de façon répétée : à ressortir si le coût
+   d'accès baisse (§10.4).
+
 2. **Main dominante (gaucher)** — rouvert : la donnée existe pour 620 joueurs
    (Wikidata), et l'API BWF la sert directement (découverte du propriétaire) :
    `GET https://extranet-lv.bwfbadminton.com/api/vue-player-bio?activeTab=1&playerId=<id>`
@@ -163,8 +158,12 @@ Par valeur attendue décroissante :
    au banc est **non départageable** (M3 +0,2 pt [−0,2 ; +0,5] — le facteur ne
    touche que 7 % des matchs jugés, indétectable à cet échantillon) → variante
    conservée désactivée, à re-mesurer quand 2026 sera plus fourni.
-4. **Les abandons** (`Retired` au tour précédent) et **la catégorie du
-   tournoi** — données présentes, jamais testées.
+4. **Les abandons** (`Retired` au tour précédent) — donnée présente, jamais
+   testée. La **catégorie du tournoi**, elle, est **MESURÉE le 2026-08-18**
+   (§10.1) : le gradient descriptif existe (32,6 % de 3 sets en Super 300
+   contre 35,2 % en Super 1000) mais son apport au modèle est **nul hors
+   échantillon** — il est déjà capté par le niveau des joueurs au classement.
+   Rayée des espoirs actifs.
    (L'Elo-bis à marge de points, ex-n° 5, est absorbé par le chantier n° 0.)
 
 # Lot D — Rouverts sous conditions

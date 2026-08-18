@@ -517,6 +517,19 @@ Consignées parce qu'elles sont instructives et qu'elles pourraient se répéter
 | `team1seed` stocké en **chaîne** | test de type | `"10" < "9"` en lexicographique aurait inversé le baseline |
 | Fenêtre de découverte `+7…+30` | interception de l'API | les écarts réels vont de **4 à 50** |
 | `marginMultiplier` hors de `computeElo` | contrôle d'effet | surcharger le paramètre restait **sans effet** |
+| Filtrer À LA COLLECTE ce qu'un endpoint renvoie | étude du marché des sets (2026-08-18) | **collecter tout, filtrer à l'analyse** — voir ci-dessous |
+
+**La leçon du 2026-08-18, qui a coûté deux fois.** Le même appel GraphQL
+Flashscore (`_hash=oce`) sert quatre familles de paris et cinq opérateurs. Le
+backfill du 2026-08-05 n'en gardait qu'une (`if (o.bettingType !== "HOME_AWAY")
+continue`) et trois opérateurs (`BOOK_KEY`). Résultat : quand le marché des sets
+est devenu la question du jour, la donnée avait été traversée puis jetée — il a
+fallu **repasser 8 000 matchs** pour la récupérer, alors qu'elle était déjà
+passée sous nos yeux. Idem pour les cotes de bwin.fr et netbet.fr, dont on a
+mesuré qu'elles valent **2,5 points de péage** (§10.4) et qu'on ne possède pas.
+Le stockage ne coûte rien (3 Mo pour 97 tournois), le re-scrape coûte une heure
+et de la politesse envers la source. **Règle : un collecteur écrit tout ce que
+la réponse contient ; c'est l'analyse qui choisit.**
 
 **Le fil commun** : chaque erreur a été trouvée par une **mesure**, jamais par
 relecture. D'où les garde-fous en tests — notamment celui qui vérifie qu'un facteur
