@@ -23,29 +23,20 @@ annexes. D'où le verdict de l'étude ROI : suivre les pronos perd de l'argent
 (§8, §8.4), et l'exploration des nouveaux marchés a échoué pour la même raison
 (§10).
 
-**Conséquence pour la suite : tout chantier se juge à ce qu'il fait au péage,
-pas à ce qu'il ajoute au modèle.** Un facteur de plus ne comble pas 8 points de
-marge ; un opérateur de plus, si.
+**Conséquence, tirée le 2026-08-18 : on arrête de chercher à gagner de
+l'argent avec.** Les deux façons d'agir sur le péage — ajouter des opérateurs
+(2,5 points, §10.5) et changer de marché (§10) — ont été mesurées : la première
+ne renverse pas l'économie du problème, la seconde est un cul-de-sac. Et aucun
+facteur ajouté au modèle ne comble 8 points de marge : le modèle n'a jamais été
+le problème.
+
+Ce qui reste vaut pour ce que l'outil montre, pas pour ce qu'il rapporte.
 
 ---
 
-## Ouvert
+## Ouvert — un seul chantier
 
-### 1. Payer moins cher (le seul levier sur le facteur limitant)
-
-Ajouter **bwin.fr** et **netbet.fr** au relevé : ce sont, avec nos trois, les
-seuls opérateurs sous licence ANJ qui cotent le badminton. Mesuré le
-2026-08-18 sur 35 matchs : le péage effectif au meilleur prix passe de
-**13,35 % à 10,85 %**, soit **2,5 points** gagnés, qui se transmettent
-intégralement au résultat (§10.4). Deux modules sur le modèle de
-`lib/book-*.mjs`.
-
-Option associée, non retenue par le propriétaire le 2026-08-18 : recollecter
-les archives Flashscore en gardant les 5 opérateurs pour rejouer l'étude ROI
-§8 au meilleur prix — cela chiffrerait ce que les 2,5 points récupèrent des
-−8,2 % (favori) et −14,5 % (value) avant d'écrire une ligne de production.
-
-### 2. Rapport quotidien par e-mail
+### Rapport quotidien par e-mail
 
 Un mail par jour : matchs des prochaines 24 h triés par heure, cotes,
 écarts modèle/marché. Étude de faisabilité faite le 2026-08-02
@@ -64,14 +55,6 @@ la clôture mais les premiers matchs asiatiques peuvent être lancés).
 
 On informe seulement : aucune mise placée automatiquement (CGU Unibet
 art. 7.1).
-
-### 3. Les abandons — dernier facteur jamais testé
-
-`Retired` au tour précédent : la donnée est là, la mesure n'a jamais été
-faite. Passer par le banc d'essai comme tout le reste
-([`banc-essai-modele.md`](banc-essai-modele.md) : entraîner sur M1, surveiller
-M2, décider avec M3). Attente faible — aucun facteur ne comble 8 points de
-marge — mais c'est le dernier de la liste.
 
 ---
 
@@ -111,4 +94,6 @@ Chacun a été tranché par une mesure ; le détail est au journal.
 | Marché « nombre de sets » + effet gymnase | hypothèse **retournée** : marché plus cher (17-29 %), mieux prédit par le marché que par nous ; l'effet gymnase ne se transporte pas | §10 |
 | Catégorie du tournoi | gradient descriptif réel, apport **nul** au banc (déjà capté par le classement) | §10.1 |
 | Betclic en CI | refus par IP à l'edge CloudFront, aucun correctif côté code — on tourne à 2 opérateurs sur 3 | `verif-cotes-sets.md` §6b |
+| Ajouter bwin.fr et netbet.fr | 2,5 points de péage mesurés (§10.5), mais ça n'inverse pas l'économie du problème — **écarté par le propriétaire le 2026-08-18** | §10.5 |
+| Les abandons (`Retired`) | jamais mesuré, et abandonné : aucun facteur isolé ne comble 8 points de marge — **écarté par le propriétaire le 2026-08-18** | — |
 | oddsportal, style de jeu, météo | source retirée / données absentes / signal marginal déjà capté par le lieu | — |
