@@ -255,12 +255,24 @@ d'erreur ne le dit pas. Conséquence pratique : une IP française de datacenter
 (VPS) suffit dans le premier cas seulement ; une IP résidentielle française
 marche dans les deux.
 
-**Remèdes possibles** (décision propriétaire, aucun n'est du code) : relevé
-depuis la machine du propriétaire (cron local — les relevés sont des fichiers
-autonomes horodatés, un relevé local coexiste sans conflit avec ceux du cron
-GitHub) ; VPS français (~2-5 €/mois, à tester d'abord car hypothèse
-« datacenter » non écartée) ; proxy à sortie française (payant) ; ou acter la
-perte de Betclic en CI et ne le relever qu'à la main pendant les tournois.
+**DÉCISION PRISE (2026-08-18) : on acte 2 opérateurs sur 3 en CI.** Betclic
+reste bloqué sur GitHub Actions ; on le relève à la main depuis une machine
+française (`node scrape-books.mjs`, ~2 min, 3/3 opérateurs) quand on le veut —
+les relevés sont des fichiers autonomes horodatés, un relevé local coexiste
+sans conflit avec ceux du cron GitHub. Écartés : cron local sur la machine du
+propriétaire (dépend d'une machine allumée), VPS français (~2-5 €/mois, et
+l'hypothèse « plages datacenter » n'est pas écartée), proxy à sortie française
+(payant, et un secret de plus dans un dépôt public). **Ne pas rouvrir sans
+élément nouveau** — il n'y a pas de correctif côté code à chercher.
+
+Conséquence à garder en tête pour les mesures : sur les tournois relevés en CI
+seule, la jointure inter-opérateurs porte sur Unibet + Winamax, et la « meilleure
+cote » est prise sur 2 books au lieu de 3 (l'étude ROI §8.1 chiffrait le
+multi-comptes à +3 pts vs mono-bookmaker).
+
+La sonde `tools/diag-betclic-ci.mjs` est conservée (elle tourne en local) ; le
+workflow `diag-betclic.yml` qui l'exécutait sur un runner est supprimé — pour
+le refaire tourner en CI, 6 lignes de `workflow_dispatch` suffisent.
 
 ### 6c. Ce qui reste ouvert
 1. **Betclic `complete: false`** — la liste s'arrête avant `totalCount` : des

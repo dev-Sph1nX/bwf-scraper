@@ -1,6 +1,6 @@
 # Feuille de route — outil de pari
 
-**Dernière mise à jour :** 2026-08-10
+**Dernière mise à jour :** 2026-08-18
 
 Ce document est la liste ordonnée des chantiers. Les dépendances sont **strictes** :
 chaque lot exige le précédent, et l'ordre n'est pas un choix de confort.
@@ -128,11 +128,18 @@ Par valeur attendue décroissante :
    Masters : le marché des sets n'était demandé nulle part (les API de liste ne
    servent que le vainqueur) → **extension livrée** (champ optionnel `sets` lu
    sur les pages match, rétro-compatible, parsing validé sur le tennis).
-   Restent : valider les libellés badminton au prochain tournoi (check-list
-   dans le doc) et surtout régler les trous de capture découverts au passage —
-   **Betclic 403 sur 100 % des relevés GitHub Actions pendant le tournoi**
-   (IP datacenter bloquée ; passe en local) et Winamax à 0 ligne : décision
-   propriétaire (réessais/en-têtes vs relevé hors datacenter).
+   **PRÉALABLE ENTIÈREMENT LEVÉ le 2026-08-18** (Championnats du monde, §6 du
+   doc) : libellés badminton confirmés chez les 3 opérateurs (Betclic « Nombre
+   de sets », Unibet « Nombre de Sets - Match », Winamax « Nombre de sets »),
+   17 matchs cotés simultanément par les 3, cotes concordantes. Les deux trous
+   de capture sont traités : **Winamax réparé** (0/52 → 22/52 — ses `marketId`
+   diffèrent d'un sport à l'autre, §6a) et **Betclic 403 en CI tranché sans
+   code** — refus par IP à l'edge CloudFront, insensible aux en-têtes et à la
+   pile TLS ; **décision : on tourne à 2 opérateurs sur 3 en CI**, Betclic
+   relevé à la main en local au besoin (§6b, ne pas rouvrir).
+   Reste : accumuler des relevés de sets sur plusieurs tournois, puis mesurer
+   si le prix intègre l'effet gymnase — c'est la mesure elle-même, elle attend
+   la matière (China Masters au 1er septembre, puis la saison d'octobre).
 2. **Main dominante (gaucher)** — rouvert : la donnée existe pour 620 joueurs
    (Wikidata), et l'API BWF la sert directement (découverte du propriétaire) :
    `GET https://extranet-lv.bwfbadminton.com/api/vue-player-bio?activeTab=1&playerId=<id>`
