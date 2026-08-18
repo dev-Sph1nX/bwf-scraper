@@ -166,5 +166,70 @@ la lecture « badminton délisté » Betclic assainissent le hors-saison).
 7. Reporter le verdict (libellés réels + éventuels écarts) ici même, et
    seulement ensuite lancer le chantier du marché des sets (lot C).
 
+## 6. Verdict de la fenêtre — Championnats du monde, 2026-08-18 (jour 2)
+
+Check-list §5 déroulée pendant le tournoi. **Les libellés extrapolés du tennis
+étaient bons pour Betclic et Unibet, faux pour Winamax.**
+
+| # | Point | Verdict |
+|---|---|---|
+| 1 | Le relevé tourne | ✅ toutes les 2 h sans trou depuis le 17/08 |
+| 2 | Le vainqueur revient | ✅ **en local, 3/3 opérateurs** (55 / 55 / 52 lignes, 0 erreur) — ❌ **en CI, Betclic 403 sur 19 relevés sur 19** (§1a, non traité) |
+| 3 | Libellés réels badminton | consignés ci-dessous |
+| 4 | URL de page match Unibet | ✅ `unibetMatchPaths` valide en badminton (19 lignes enrichies) |
+| 5 | SSR Betclic | ✅ marché sets présent sous forme directe, sans passer par les replis |
+| 6 | Durée du relevé | ✅ 2 min 01 en plein tournoi |
+
+**Libellés réels (relevé `2026-08-18T11-58-13-368Z`) :**
+
+```
+BETCLIC  "Nombre de sets"          23/55 lignes
+UNIBET   "Nombre de Sets - Match"  19/55 lignes
+WINAMAX  "Nombre de sets"          22/52 lignes   (marketId 241, special variant=sr:exact_games:bestof:3)
+```
+
+17 matchs sont cotés par les **trois** opérateurs simultanément ; les cotes
+concordent à un ou deux crans près (ex. Kuenzi–Tan : 1,30 / 1,30 / 1,30 en
+2 sets ; 2,45 / 2,50 / 2,50 en 3 sets).
+
+La couverture partielle (~40 %) n'est pas un défaut de scrape : **Winamax et
+Betclic n'ouvrent les marchés annexes que sur une partie de l'affiche** — 2 des
+3 pages match inspectées ne portaient qu'un seul bet, « Vainqueur ».
+
+### 6a. Correction Winamax (2026-08-18) — 0/52 → 22/52
+
+Winamax captait le vainqueur mais **jamais les sets**. Cause racine : le bet
+badminton tombait entre les deux prédicats de `parseWinamaxMatchSets`, tous
+deux calibrés sur le tennis.
+
+```
+marketId=241  betTitle="Nombre de sets"  special="variant=sr:exact_games:bestof:3"  ::  2@1.3 | 3@2.5
+```
+
+- prédicat « exact » : exigeait `marketId 196` **ou** un titre « Nombre **exact**
+  de sets » → le titre badminton n'a pas le mot « exact » ;
+- prédicat « over/under » : le titre matchait, mais la garde
+  `(!specialBetValue || /total=2.5/)` — écrite pour l'over/under du tennis —
+  rejetait `variant=sr:exact_games:bestof:3`.
+
+**Leçon : les `marketId` Winamax changent d'un sport à l'autre.** Le code ne s'y
+fie donc plus seul : un bet est retenu s'il parle de sets *au niveau du match*
+(rejet de `gamenr=` — marchés d'un set précis — et de tout `total=` autre que
+2,5, qui viserait le best of 5), et c'est `setsFromOutcomes` qui valide
+réellement le contenu. Tous les marchés de sets du match sont essayés, plus
+seulement le premier trouvé. 2 tests ajoutés (structure réelle du match
+73767394 + non-régression du best of 5) ; suite complète : 335 pass, 0 fail.
+
+### 6b. Ce qui reste ouvert
+
+1. **Betclic 403 en CI** — le point dur, inchangé depuis le Korea Masters :
+   le même code passe en local. Décision propriétaire en attente (en-têtes /
+   réessais / relevé hors datacenter).
+2. **Betclic `complete: false`** — la liste s'arrête avant `totalCount` : des
+   matchs du site manquent.
+3. Le **chantier lot C n°1** lui-même (le prix des sets intègre-t-il l'effet
+   gymnase ?) attend d'avoir de la matière : cette fenêtre sert à collecter,
+   pas encore à mesurer.
+
 Commandes utiles : `node scrape-books.mjs` ; `node --test test/books-parse.test.mjs` ;
 `grep -o '"sets":[^}]*}' data/books/runs/<run>.json | sort | uniq -c`.

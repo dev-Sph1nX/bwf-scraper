@@ -216,6 +216,38 @@ test("winamax : « Nombre exact de sets » (196) préféré sur la page match", 
   assert.equal(parseWinamaxMatchSets(state, "73999999"), null);
 });
 
+test("winamax : le badminton cote « Nombre de sets » (241, variant exact_games)", () => {
+  // Structure réelle des Championnats du monde (match 73767394, relevé le
+  // 2026-08-18) : le libellé n'est PAS « Nombre exact de sets » et l'id 241
+  // n'est pas celui du tennis (196/314) — seul le variant dit que c'est exact.
+  const state = {
+    bets: {
+      b1: { matchId: "73767394", marketId: 241, betTitle: "Nombre de sets", specialBetValue: "variant=sr:exact_games:bestof:3", outcomes: [10, 11] },
+      // pièges du même match : marchés de POINTS, et marchés d'un set précis
+      b2: { matchId: "73767394", marketId: 238, betTitle: "Nombre de points", specialBetValue: "total=74.5", outcomes: [20, 21] },
+      b3: { matchId: "73767394", marketId: 247, betTitle: "1er set - Nombre de points", specialBetValue: "gamenr=1|total=37.5", outcomes: [30, 31] },
+    },
+    outcomes: {
+      10: { label: "2" }, 11: { label: "3" },
+      20: { label: "Plus de 74,5" }, 21: { label: "Moins de 74,5" },
+      30: { label: "Plus de 37,5" }, 31: { label: "Moins de 37,5" },
+    },
+    odds: { 10: 1.3, 11: 2.5, 20: 1.74, 21: 1.72, 30: 2.1, 31: 1.41 },
+  };
+  assert.deepEqual(parseWinamaxMatchSets(state, "73767394"),
+    { market: "Nombre de sets", odd2: 1.3, odd3: 2.5 });
+});
+
+test("winamax : un « Nombre de sets » sur un AUTRE total que 2,5 est écarté", () => {
+  // Tennis best of 5 : « Moins de 3,5 sets » n'est pas « match en 2 sets ».
+  const state = {
+    bets: { b1: { matchId: "1", marketId: 314, betTitle: "Nombre de sets", specialBetValue: "total=3.5", outcomes: [10, 11] } },
+    outcomes: { 10: { label: "Plus de 3,5" }, 11: { label: "Moins de 3,5" } },
+    odds: { 10: 2.1, 11: 1.7 },
+  };
+  assert.equal(parseWinamaxMatchSets(state, "1"), null);
+});
+
 test("betclic : « Les deux joueurs gagnent un set » = 2/3 sets (Non/Oui)", () => {
   const markets = [
     { name: "Vainqueur du match", selections: [{ label: "A", odd: 1.75 }, { label: "B", odd: 2.03 }] },
