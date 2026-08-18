@@ -1557,9 +1557,9 @@ peuplées (l'anomalie à −3,0 pt vue sur un échantillon partiel était du bru
 **Nos deux défauts, séparés.** (a) **Mal centrés** : on annonce 33,9 % là où la
 réalité des matchs COTÉS est 37,4 %, parce que le modèle est ajusté sur tous
 les matchs (32,8 %) alors qu'on parie sur les gros tournois — biais de
-−3,5 pt, réparable d'un décalage. (b) **Non discriminants** : même recentré
-(0,6617), le modèle reste **pire qu'une proba plate** (0,6640)… non, il la bat
-de 0,0023 — mais reste loin du marché (0,6568). Notre finesse match par match
+−3,5 pt, réparable d'un décalage. (b) **Non discriminants** : une fois recentré
+(0,6617), le modèle ne bat une proba plate (0,6640) que de 0,0023, quand le
+marché la bat de 0,0072 — trois fois plus. Notre finesse match par match
 n'apporte quasi rien ici.
 
 ## 10.3 Étape 3 — toutes les stratégies perdent (2026-08-18)
