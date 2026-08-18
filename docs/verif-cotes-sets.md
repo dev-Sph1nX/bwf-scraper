@@ -220,14 +220,52 @@ réellement le contenu. Tous les marchés de sets du match sont essayés, plus
 seulement le premier trouvé. 2 tests ajoutés (structure réelle du match
 73767394 + non-régression du best of 5) ; suite complète : 335 pass, 0 fail.
 
-### 6b. Ce qui reste ouvert
+### 6b. Betclic 403 en CI — diagnostic du 2026-08-18 : c'est l'IP, rien d'autre
 
-1. **Betclic 403 en CI** — le point dur, inchangé depuis le Korea Masters :
-   le même code passe en local. Décision propriétaire en attente (en-têtes /
-   réessais / relevé hors datacenter).
-2. **Betclic `complete: false`** — la liste s'arrête avant `totalCount` : des
+Sonde `tools/diag-betclic-ci.mjs` exécutée sur un runner (workflow
+`diag-betclic.yml`, manuel). Depuis GitHub Actions — IP Azure US
+(`4.242.44.213` Washington, puis `64.236.200.86` Illinois) :
+
+| Client | Résultat |
+|---|---|
+| en-têtes de production | 403, page d'erreur de marque Betclic (3 537 o), `x-cache: Error from cloudfront` |
+| Chrome complet (`sec-ch-ua`, `sec-fetch-*`, `referer`) | 403 **identique à l'octet près** |
+| User-Agent nu | 403 identique |
+| curl (autre pile TLS, autre JA3) | 403 identique |
+| témoin Winamax | ✅ 200 |
+
+Texte de la page : « Betclic Error 403 - Forbidden / Please try again in a few
+minutes / Err (0x2005002) » — aucun motif nommé.
+
+**Conclusions fermes :**
+
+- ce n'est **pas** une empreinte d'en-têtes ni de TLS (curl et Chrome complet
+  bloqués pareil ; en local, un User-Agent nu passe) — donc **aucun réglage du
+  code ne contourne le refus** ;
+- ce n'est **pas** un anti-bot : la réponse ne porte aucune signature de ce
+  type. Contraste dans la même sonde : l'accueil Unibet, lui, est bloqué par
+  **DataDome** (`x-datadome-botname: Inconsistent HTTP headers`) — sans effet
+  sur la production, qui passe par l'API LVS et répond (63 lignes en CI) ;
+- ce n'est **pas** une réputation qu'on aurait dégradée en scrapant : deux IP
+  Azure distinctes, jamais utilisées par nous, refusées dès la 1re requête.
+  C'est une règle permanente sur ces plages.
+
+**Indéterminé :** règle par *pays* (US) ou par *plages datacenter*. La page
+d'erreur ne le dit pas. Conséquence pratique : une IP française de datacenter
+(VPS) suffit dans le premier cas seulement ; une IP résidentielle française
+marche dans les deux.
+
+**Remèdes possibles** (décision propriétaire, aucun n'est du code) : relevé
+depuis la machine du propriétaire (cron local — les relevés sont des fichiers
+autonomes horodatés, un relevé local coexiste sans conflit avec ceux du cron
+GitHub) ; VPS français (~2-5 €/mois, à tester d'abord car hypothèse
+« datacenter » non écartée) ; proxy à sortie française (payant) ; ou acter la
+perte de Betclic en CI et ne le relever qu'à la main pendant les tournois.
+
+### 6c. Ce qui reste ouvert
+1. **Betclic `complete: false`** — la liste s'arrête avant `totalCount` : des
    matchs du site manquent.
-3. Le **chantier lot C n°1** lui-même (le prix des sets intègre-t-il l'effet
+2. Le **chantier lot C n°1** lui-même (le prix des sets intègre-t-il l'effet
    gymnase ?) attend d'avoir de la matière : cette fenêtre sert à collecter,
    pas encore à mesurer.
 
