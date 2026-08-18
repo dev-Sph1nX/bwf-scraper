@@ -51,6 +51,7 @@ import { varianteTerrain } from "./variante-terrain.mjs";
 import { VARIANTES_ELO_POINTS } from "./variante-elo-points.mjs";
 import { makeVarianteAge } from "./variante-age.mjs";
 import { makeVarianteHand } from "./variante-hand.mjs";
+import { makeVariantesCombinees } from "./variante-combinee.mjs";
 
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const SEED = 42;
@@ -343,6 +344,11 @@ const VARIANTES = [
   // Logique et mesure descriptive : measures/variante-hand.mjs.
   // À juger sur --annees=2025,2026 (2024 sans antériorité, donc sans correction).
   makeVarianteHand(),
+  // Variantes COMBINÉES (2026-08-18) : âge + terrain (+ marge de points)
+  // assemblés sur le logit, chaque facteur gardant son verrou marche-avant.
+  // L'hypothèse : des facteurs non départageables SEULS le deviennent ENSEMBLE.
+  // Logique : measures/variante-combinee.mjs. À juger sur --annees=2025,2026.
+  ...makeVariantesCombinees(),
 ];
 
 const actives = VARIANTES.filter((v) => v.ref || v.actif || TOUTES || ACTIVEES.has(v.key));

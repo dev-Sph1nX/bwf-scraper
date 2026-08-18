@@ -50,7 +50,8 @@ const POINTS_DAMPING = true; // idem : « +amorti »
 const argVariantes = (process.argv.find((x) => x.startsWith("--variantes=")) || "").split("=")[1] || "";
 const requested =
   process.argv.includes("--toutes") ||
-  argVariantes.split(",").filter(Boolean).some((k) => KEYS.has(k));
+  // les variantes COMBINÉES (variante-combinee.mjs) consomment aussi pBisOf
+  argVariantes.split(",").filter(Boolean).some((k) => KEYS.has(k) || k.startsWith("combo"));
 
 // Même identifiant d'entité que le banc (ids triés ; `pair:` en double).
 const entityId = (players) => {
@@ -109,7 +110,7 @@ if (requested) {
 }
 
 /** Proba Elo-bis d'une ligne du banc. Un trou = passes non appariées : on CASSE. */
-function pBisOf(r) {
+export function pBisOf(r) {
   const p = pBisByMatch?.get(`${r.tmtId}|${r.disc}|${r.t}|${r.a}|${r.b}`);
   if (p == null) {
     throw new Error(
@@ -126,7 +127,7 @@ function pBisOf(r) {
 // 1 ; minimum 300 matchs d'antériorité ; 2024 reste sans correction). Recopié
 // plutôt qu'importé : le banc est un script, l'importer l'exécuterait.
 const CLAMP = (s) => Math.min(4, Math.max(0.25, s));
-function fitStretchWalkForwardBis(allRows) {
+export function fitStretchWalkForwardBis(allRows) {
   const fit = (zs, ys) => {
     let s = 1;
     for (let it = 0; it < 25; it++) {
@@ -178,7 +179,7 @@ function fitStretchWalkForwardBis(allRows) {
   return { table, detail };
 }
 
-const stretchP = (p, s) => {
+export const stretchP = (p, s) => {
   if (s === 1 || p <= 1e-9 || p >= 1 - 1e-9) return p;
   const z = Math.log(p / (1 - p));
   return 1 / (1 + Math.exp(-s * z));

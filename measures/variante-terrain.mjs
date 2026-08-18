@@ -89,7 +89,7 @@ const HOME = new Map(); // clé banc -> +1 | -1
   });
 }
 
-const homeSign = (r) => HOME.get(`${r.tmtId}|${r.disc}|${r.day}|${r.a}|${r.b}`) ?? 0;
+export const homeSign = (r) => HOME.get(`${r.tmtId}|${r.disc}|${r.day}|${r.a}|${r.b}`) ?? 0;
 
 // ==============================================================================
 // 2) Ajustement conjoint : à Elo donné, quel bonus H (en points d'Elo) maximise

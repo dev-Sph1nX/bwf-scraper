@@ -1707,3 +1707,47 @@ Le fait descriptif (§7) reste vrai et acquis ; il n'existe aucun chemin mesuré
 entre ce fait et un pari gagnant — ni par notre modèle (§10.1), ni par l'erreur
 de prix du marché (ici). Ne rouvrir que si un marché des sets à marge < ~8 %
 devient accessible.
+
+## 10.8 La variante COMBINÉE (âge + terrain + marge de points) : l'addition ne se produit pas (2026-08-18)
+
+Hypothèse du propriétaire : des facteurs non départageables SEULS pourraient le
+devenir ENSEMBLE — les effets s'additionnent, les bruits ne croissent qu'en
+racine. Somme des estimations solo : ≈ +3,3 pt (âge +0,9, terrain +0,2,
+Elo-points recalibré +2,2) pour un écart à combler de ~4 pt (§8.2). C'était la
+seule composition jamais testée — construite dans
+`measures/variante-combinee.mjs` (assemblage sur le logit, chaque facteur
+gardant exactement son ajustement et son verrou marche-avant d'origine, aucune
+réoptimisation) et jugée au banc :
+`node measures/mesure-roi-modele.mjs --variantes=combo-elo,combo-points --annees=2025,2026`
+(4 276 matchs jugés, mêmes matchs pour toutes les variantes).
+
+| Variante | M1 EV/clôture | M3 ΔROI vs réf | log loss | calib. |
+|---|---|---|---|---|
+| elo-recalibré (réf) | −4,09 % | — | 0,5358 | 1,5 pt |
+| combo-elo (âge+terrain) | −4,01 % | **+0,2 pt [−1,3 ; +1,7]** | 0,5352 | 1,7 pt |
+| combo-points (+ marge de points) | **−5,00 %** | **+1,4 pt [−3,1 ; +5,6]** | **0,5345** | 2,1 pt |
+
+**VERDICT : non départageable — l'addition ne se produit pas.**
+
+- **âge + terrain ensemble : +0,2 pt**, là où la somme des solos annonçait
+  +1,1. Les corrections ne se cumulent presque jamais : les verrous
+  marche-avant de chaque facteur s'ouvrent rarement sur les mêmes
+  matchs (l'âge surtout en simple certaines années, le terrain en simple à
+  domicile — 7 % des matchs).
+- **combo-points : +1,4 pt** d'estimation, mais l'IC est béant et M1 — le juge
+  d'entraînement — se DÉGRADE (−5,00 % contre −4,09 %) : la même contradiction
+  M1/M3 que l'Elo-points solo (§9.5). La règle du banc (entraîner sur M1,
+  décider avec M3) dit non deux fois.
+- À noter honnêtement : combo-points a le meilleur log loss du banc (0,5345)
+  et le meilleur ROI absolu jamais mesuré (value ouverture −7,18 % contre
+  −9,42 % pour la référence) — mais l'écart apparié n'est pas significatif, et
+  −7 % reste −7 %.
+
+**Ce que ça enseigne sur la stratégie « plein de petits facteurs » :** les
+estimations ponctuelles solo (+0,9, +0,2, +2,2) n'étaient pas des effets réels
+qui s'additionnent — c'était du bruit centré près de zéro, et le bruit ne
+s'additionne pas en notre faveur. Pour qu'un empilement fonctionne, il faut des
+facteurs dont chaque IC EXCLUT déjà zéro individuellement (même de peu). On
+n'en possède aucun : tout l'inventaire du lot C est « non départageable ».
+Chercher d'autres facteurs mineurs reste possible, mais la barre est désormais
+claire : un candidat n'entre dans une combinaison que s'il tient debout seul.
