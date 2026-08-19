@@ -406,6 +406,14 @@ svg.connectors { position: absolute; top: 0; left: 0; pointer-events: none; }
 .bar-track { height: 12px; background: var(--surface-2); border-radius: 6px; overflow: hidden; }
 .bar-fill { display: block; height: 100%; background: var(--bwf-red); border-radius: 6px; transition: width .35s ease; }
 .bar-val { text-align: right; font-weight: bold; font-variant-numeric: tabular-nums; }
+/* Barre « objectif à atteindre » (étude gymnases) : creuse et cerclée, pour se
+   distinguer d'un aplat plein qui se lirait comme une valeur acquise. La
+   variante .gy élargit les colonnes : « 48,4 % » se coupait en deux lignes
+   dans la piste de valeur standard (48px). */
+.bar-fill.goal { background: var(--bwf-red-soft); border: 1px solid var(--accent); }
+.bar-label small { color: var(--muted); font-size: 11px; }
+.bars.gy .bar-row { grid-template-columns: minmax(104px, 180px) 1fr 62px; }
+.bars.gy .bar-val { white-space: nowrap; }
 
 /* ---- Mise en avant (Calendrier) : en cours / prochain ---- */
 .feat { border-color: var(--bwf-red); background: linear-gradient(180deg, var(--bwf-red-soft), transparent); }

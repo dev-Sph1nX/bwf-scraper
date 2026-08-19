@@ -815,6 +815,20 @@ updates.sort((a, b) => b.day.localeCompare(a.day));
 updates.splice(60);
 await write("updates.json", { generatedAt: ranking.generatedAt, updates });
 
+// ===== 7 bis) Études figées de data/analyses/ =====
+// Résultats d'analyses ponctuelles, produits par un script de measures/ et
+// VERSIONNÉS (contrairement aux dérivés) : ce sont des verdicts datés, pas des
+// données vivantes. On les recopie tels quels pour l'app ; absents, la page
+// concernée affiche son état vide. Régénérer :
+//   node measures/mesure-rentabilite-gymnase.mjs
+for (const [fichier, source] of [["gymnases-3sets.json", join(ROOT, "data", "analyses", "gymnases-3sets.json")]]) {
+  try {
+    await write(fichier, JSON.parse(await readFile(source, "utf8")));
+  } catch {
+    console.warn(`⚠️  analyse absente, page correspondante vide : ${fichier}`);
+  }
+}
+
 // ===== 8) health.json : manifeste du build, pour la page /sante =====
 // Écrit en DERNIER pour recenser toutes les écritures ci-dessus. Les fichiers
 // par entité (player/, pair/…) sont agrégés en compteurs. backtest.json est

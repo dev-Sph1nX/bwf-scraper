@@ -1887,3 +1887,56 @@ journal de paris régénéré depuis (backfill classements, recalculs) en donne
 n=514, pour un ROI de même signe et d'ordre voisin (−3,3 % vs −4,4 %). La
 mesure n'était alors pas scriptée ; elle l'est désormais, et c'est le script
 qui fait référence.
+
+## 10.12 Rentabilité du marché des 3 sets, GYMNASE PAR GYMNASE : 0 sur 24, et le hasard aurait fait mieux (2026-08-19)
+
+Demande du propriétaire (2026-08-19) : « je veux les chiffres » — §10.7 avait
+fermé la branche gymnase sur des quintiles agrégés, sans jamais publier le
+détail lieu par lieu. Il est ici, avec l'arithmétique complète.
+`node measures/mesure-rentabilite-gymnase.mjs` — 3 780 matchs cotés sur le
+marché des manches (50 tournois, 30 lieux, années jugées 2025-2026), prior de
+gymnase en marche avant, meilleur prix des 3 opérateurs, IC bootstrap par
+grappe (grappe = tournoi). **Années de rejeu FIGÉES à 2024-2026** dans le
+script : le backfill 2022-2023 en cours changerait l'état de départ de l'Elo et
+rendrait la mesure irreproductible.
+
+**A. Aucun gymnase n'est rentable — 0 sur 24** (seuil : ≥ 40 matchs cotés).
+
+| Gymnase | n | 3 sets réel | prix marché | écart | ROI « 3 sets » | ROI « 2 sets » |
+|---|---|---|---|---|---|---|
+| New Delhi | 208 | 42,8 % | 37,1 % | **+5,7 pt** | **−11,9 %** [−13 ; −10] | −30,3 % |
+| Changzhou | 243 | 41,6 % | 36,9 % | +4,7 pt | −14,2 % | −29,1 % |
+| Jakarta | 452 | 40,3 % | 37,3 % | +3,0 pt | −17,0 % | −26,7 % |
+| … | | | | | | |
+| Suwon-si | 88 | 27,3 % | 37,5 % | −10,2 pt | −43,1 % | −10,2 % |
+| Basel | 49 | 28,6 % | 39,1 % | −10,5 pt | −44,6 % | −10,0 % |
+| **Tous** | **3 780** | **37,4 %** | **37,3 %** | +0,0 pt | **−22,9 %** [−25,7 ; −20,2] | — |
+
+Le pari miroir (« 2 manches ») perd partout aussi : il n'y a pas de côté
+gagnant, seulement un péage à payer dans les deux sens.
+
+**B. L'arithmétique, en trois nombres.** La cote « 3 sets » impose un seuil de
+**48,4 %** de réussite pour ne rien perdre ; le taux réel est de **37,4 %** ;
+il manque **11,0 pt**. Le meilleur gymnase du circuit (New Delhi, 42,8 %) en
+est encore à **5,6 pt**. Notre avantage maximal sur le prix vaut +5,7 pt pour
+un besoin de +11,0 pt : **le signal est réel, il est deux fois trop petit.**
+
+**C. LE TEST QUE §10.7 NE FAISAIT PAS — le biais de sélection, chiffré.**
+En regardant 24 gymnases, le meilleur paraît toujours bon : c'est ce qui avait
+fait croire à H1 (§8.3-§8.4). On le simule au lieu de l'invoquer — 2 000
+saisons sous l'hypothèse nulle « le marché a raison partout », aux vrais prix
+et dans la vraie structure de lieux :
+
+- **32,3 % des saisons de pur hasard montrent au moins un gymnase « rentable »**
+  (0,38 en moyenne) — trouver une case verte n'aurait rien prouvé ;
+- le meilleur gymnase sous hasard : médiane −3,0 %, et **+10,0 % une fois sur
+  20** (maximum atteint +30,0 %) ;
+- notre meilleur gymnase RÉEL (−11,9 %) est **moins bon que le hasard dans
+  95,2 % des saisons simulées** (p = 0,952).
+
+**VERDICT : confirmation définitive de §10.7, cette fois lieu par lieu et avec
+le contrôle du biais de sélection.** Non seulement aucun gymnase ne paie, mais
+la distribution réelle est en dessous de ce que produirait l'absence totale
+d'avantage — cohérent avec un marché correctement prixé auquel on ajoute une
+commission de 29,6 %. Publié sur la page **/gymnases** de l'app (données
+`data/analyses/gymnases-3sets.json`, versionnées, recopiées par build-data).

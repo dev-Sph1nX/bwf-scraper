@@ -91,7 +91,7 @@ Chacun a été tranché par une mesure ; le détail est au journal.
 | Fraîcheur | effet réel mais inexploitable (13 % des matchs, collinéaire) | §2.4 |
 | ROI rétrospectif et hors échantillon 2024-2025 | suivre les pronos perd ; « WS+XD exploitables » rejetée, « parier à l'ouverture » confirmée ; dernier tiroir « WS ≥ 80 % » fermé sur 2026 complet | §8, §8.4, §10.11 |
 | Âge, main dominante, terrain, Elo à marge de points | signaux parfois réels, tous **non départageables** au banc | §9.3-§9.6 |
-| Marché « nombre de sets » + effet gymnase | hypothèse **retournée** : marché plus cher (17-29 %), mieux prédit par le marché que par nous ; l'effet gymnase ne se transporte pas | §10 |
+| Marché « nombre de sets » + effet gymnase | hypothèse **retournée** : marché plus cher (17-29 %), mieux prédit par le marché que par nous ; l'effet gymnase ne se transporte pas. Détail lieu par lieu publié (page /gymnases) : **0 gymnase rentable sur 24**, et le hasard seul en produirait un dans 32 % des saisons | §10, §10.7, §10.12 |
 | Catégorie du tournoi | gradient descriptif réel, apport **nul** au banc (déjà capté par le classement) | §10.1 |
 | Machine learning (arbres boostés, et par extension NN) | GBM toutes features au banc : non départageable en M3, **pire** en M1 et aux garde-fous — ni facteur, ni somme, ni interaction | §10.10 |
 | Betclic en CI | refus par IP à l'edge CloudFront, aucun correctif côté code — on tourne à 2 opérateurs sur 3 | `verif-cotes-sets.md` §6b |
