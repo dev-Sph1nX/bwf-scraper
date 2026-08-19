@@ -1,0 +1,1623 @@
+{
+ "source": "flashscore.fr (feed embarqué + GraphQL oce)",
+ "fetchedAt": "2026-08-19T10:24:09.725Z",
+ "tournamentSlug": "us-open-2023",
+ "books": [
+  "betclic",
+  "unibet",
+  "winamax"
+ ],
+ "stats": {
+  "scanned": 147,
+  "withOdds": 35,
+  "from": "2023-07-14",
+  "to": "2023-07-16"
+ },
+ "matches": [
+  {
+   "fsId": "bVKivOzs",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T20:05:00.000Z",
+   "home": {
+    "name": "Christophersen L.",
+    "country": "Danemark",
+    "fsParticipantId": "hzt2GTC5"
+   },
+   "away": {
+    "name": "Zhang E.",
+    "country": "Canada",
+    "fsParticipantId": "M9p6FmSB"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 5.25,
+      "closing": 5.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "zyGGYJ4I",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T20:05:00.000Z",
+   "home": {
+    "name": "Smith P./Lee A. Q.",
+    "country": "USA",
+    "fsParticipantId": "KI76cUOG"
+   },
+   "away": {
+    "name": "Choo K. Z. H./Somerville G.",
+    "country": "Australie",
+    "fsParticipantId": "Eu7AdlvN"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 9,
+     "away": 21
+    },
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.45,
+      "closing": 1.68
+     },
+     "away": {
+      "opening": 2.25,
+      "closing": 1.77
+     }
+    }
+   }
+  },
+  {
+   "fsId": "jPqVis5t",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T20:10:00.000Z",
+   "home": {
+    "name": "Ye H. W./Lee Chia H.",
+    "country": "Taïwan",
+    "fsParticipantId": "jLlWDk9c"
+   },
+   "away": {
+    "name": "Chen Z. R./Yang C. T.",
+    "country": "Taïwan",
+    "fsParticipantId": "prlzD9O3"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.08,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.75,
+      "closing": 4.5
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.45,
+      "closing": 4.45
+     }
+    }
+   }
+  },
+  {
+   "fsId": "rZCFLpfs",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T20:50:00.000Z",
+   "home": {
+    "name": "Katethong S.",
+    "country": "Thaïlande",
+    "fsParticipantId": "hdVMGXpm"
+   },
+   "away": {
+    "name": "Jakobsen J. D.",
+    "country": "Danemark",
+    "fsParticipantId": "0MUQFi0g"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 7
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.08
+     },
+     "away": {
+      "opening": 4.45,
+      "closing": 4.35
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.08
+     },
+     "away": {
+      "opening": 4.5,
+      "closing": 4.4
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Obg7Xmh0",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T20:55:00.000Z",
+   "home": {
+    "name": "Chiu V./Gai J.",
+    "country": "USA",
+    "fsParticipantId": "Em5fbjIi"
+   },
+   "away": {
+    "name": "Thyrri M./Magelund A.",
+    "country": "Danemark",
+    "fsParticipantId": "8A4bcAXc"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 4.85,
+      "closing": 4.35
+     },
+     "away": {
+      "opening": 1.05,
+      "closing": 1.08
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 5.25,
+      "closing": 4.3
+     },
+     "away": {
+      "opening": 1.05,
+      "closing": 1.08
+     }
+    }
+   }
+  },
+  {
+   "fsId": "l4JUJUN0",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T21:15:00.000Z",
+   "home": {
+    "name": "Lin Chun-Yi",
+    "country": "Taïwan",
+    "fsParticipantId": "OM4r0iWs"
+   },
+   "away": {
+    "name": "Takahashi K.",
+    "country": "Japon",
+    "fsParticipantId": "Iq4naBol"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.35,
+      "closing": 4.45
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.75,
+      "closing": 4.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "zZdBW776",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T21:50:00.000Z",
+   "home": {
+    "name": "Yang Po-Hsuan/Hu Ling F.",
+    "country": "Taïwan",
+    "fsParticipantId": "MD82dUn4"
+   },
+   "away": {
+    "name": "Lindeman T. A./Wu J.",
+    "country": "Canada",
+    "fsParticipantId": "Gz86el2A"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 7
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.06,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.55,
+      "closing": 4.4
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.75,
+      "closing": 4.4
+     }
+    }
+   }
+  },
+  {
+   "fsId": "b9kxwqs7",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T22:00:00.000Z",
+   "home": {
+    "name": "Vitidsarn K.",
+    "country": "Thaïlande",
+    "fsParticipantId": "QLLvUdwf"
+   },
+   "away": {
+    "name": "Obayashi T.",
+    "country": "Japon",
+    "fsParticipantId": "KrLrTGh0"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.06
+     },
+     "away": {
+      "opening": 4.75,
+      "closing": 4.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "xMPGlttJ",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T22:00:00.000Z",
+   "home": {
+    "name": "Intanon R.",
+    "country": "Thaïlande",
+    "fsParticipantId": "Kt07iiyI"
+   },
+   "away": {
+    "name": "Nguyen T. L.",
+    "country": "Viêt Nam",
+    "fsParticipantId": "E3aBjBjO"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 7
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.18,
+      "closing": 1.1
+     },
+     "away": {
+      "opening": 3.4,
+      "closing": 4
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.13,
+      "closing": 1.1
+     },
+     "away": {
+      "opening": 3.68,
+      "closing": 4.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ddw8oPng",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T22:10:00.000Z",
+   "home": {
+    "name": "Subramanian S. M.",
+    "country": "Inde",
+    "fsParticipantId": "4vPHnh9m"
+   },
+   "away": {
+    "name": "Sen L.",
+    "country": "Inde",
+    "fsParticipantId": "b1OLoCOg"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 4.75,
+      "closing": 5.25
+     },
+     "away": {
+      "opening": 1.07,
+      "closing": 1.03
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 4.55,
+      "closing": 5.25
+     },
+     "away": {
+      "opening": 1.06,
+      "closing": 1.03
+     }
+    }
+   }
+  },
+  {
+   "fsId": "dpkzhFZq",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T22:55:00.000Z",
+   "home": {
+    "name": "Sindhu P. V.",
+    "country": "Inde",
+    "fsParticipantId": "txASgVRb"
+   },
+   "away": {
+    "name": "Gao F. J.",
+    "country": "Chine",
+    "fsParticipantId": "za9Whks5"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.52,
+      "closing": 1.38
+     },
+     "away": {
+      "opening": 2.1,
+      "closing": 2.3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Sl3jNbc5",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T22:55:00.000Z",
+   "home": {
+    "name": "Chang Ko Ch./Po Li-Wei",
+    "country": "Taïwan",
+    "fsParticipantId": "MJNbLAw1"
+   },
+   "away": {
+    "name": "Lee F. C/Lee F. J.",
+    "country": "Taïwan",
+    "fsParticipantId": "GtN2KUh7"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2,
+      "closing": 1.88
+     },
+     "away": {
+      "opening": 1.58,
+      "closing": 1.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "KGRUkpwn",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T23:05:00.000Z",
+   "home": {
+    "name": "Chen B. Y./Liu Y.",
+    "country": "Chine",
+    "fsParticipantId": "lAk1lEB2"
+   },
+   "away": {
+    "name": "Corvee L./Labar R.",
+    "country": "France",
+    "fsParticipantId": "S0l5mYQ8"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 23,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.05
+     },
+     "away": {
+      "opening": 4.45,
+      "closing": 4.85
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.08,
+      "closing": 1.05
+     },
+     "away": {
+      "opening": 4.75,
+      "closing": 4.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "I5v4n5Xn",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T23:40:00.000Z",
+   "home": {
+    "name": "Hsu Y. C./Lin Wan Ch.",
+    "country": "Taïwan",
+    "fsParticipantId": "YeYohEoQ"
+   },
+   "away": {
+    "name": "Chang C. H./Yang C. T.",
+    "country": "Taïwan",
+    "fsParticipantId": "jyLDmYgs"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 22,
+     "away": 20
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.29,
+      "closing": 1.28
+     },
+     "away": {
+      "opening": 2.62,
+      "closing": 2.65
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.3,
+      "closing": 1.28
+     },
+     "away": {
+      "opening": 2.7,
+      "closing": 2.65
+     }
+    }
+   }
+  },
+  {
+   "fsId": "4Gk0YEK3",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-14T23:50:00.000Z",
+   "home": {
+    "name": "Keng S. L./Zhang C.",
+    "country": "Chine",
+    "fsParticipantId": "b968m5Th"
+   },
+   "away": {
+    "name": "Li Y. J./Luo X. M.",
+    "country": "Chine",
+    "fsParticipantId": "SrBCnPra"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 7,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 4.3,
+      "closing": 3.75
+     },
+     "away": {
+      "opening": 1.1,
+      "closing": 1.12
+     }
+    }
+   }
+  },
+  {
+   "fsId": "G21KVthU",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-15T00:00:00.000Z",
+   "home": {
+    "name": "Su L. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "jJaNJ26B"
+   },
+   "away": {
+    "name": "Li S. F.",
+    "country": "Chine",
+    "fsParticipantId": "U9bRIMLH"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 4.75,
+      "closing": 4.6
+     },
+     "away": {
+      "opening": 1.08,
+      "closing": 1.06
+     }
+    }
+   }
+  },
+  {
+   "fsId": "bVQCkMQC",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-15T00:35:00.000Z",
+   "home": {
+    "name": "Liu S. S./Tan N.",
+    "country": "Chine",
+    "fsParticipantId": "CGdagD65"
+   },
+   "away": {
+    "name": "Lee Chia H./Teng Ch. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "tj13hXLB"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.06
+     },
+     "away": {
+      "opening": 4.5,
+      "closing": 4.6
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.06
+     },
+     "away": {
+      "opening": 4.75,
+      "closing": 4.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ro1qd4Pb",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-15T00:45:00.000Z",
+   "home": {
+    "name": "Chiu H. C./Yang M. T.",
+    "country": "Taïwan",
+    "fsParticipantId": "2TDyRBam"
+   },
+   "away": {
+    "name": "Goh S. F./Izzuddin N.",
+    "country": "Malaysie",
+    "fsParticipantId": "djDuQVEg"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.85,
+      "closing": 2.41
+     },
+     "away": {
+      "opening": 1.24,
+      "closing": 1.34
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 2.9,
+      "closing": 2.45
+     },
+     "away": {
+      "opening": 1.25,
+      "closing": 1.33
+     }
+    }
+   }
+  },
+  {
+   "fsId": "vLSCpq2a",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-15T01:00:00.000Z",
+   "home": {
+    "name": "Fruergaard M./Thygesen S.",
+    "country": "Danemark",
+    "fsParticipantId": "xhNPpWw0"
+   },
+   "away": {
+    "name": "Xu A./Xu K.",
+    "country": "USA",
+    "fsParticipantId": "pIMTqjg6"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.04
+     },
+     "away": {
+      "opening": 4.75,
+      "closing": 5.05
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.04
+     },
+     "away": {
+      "opening": 5.25,
+      "closing": 5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "hOWGq3H5",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2023-07-15T01:20:00.000Z",
+   "home": {
+    "name": "Su C. H./Ye H. W.",
+    "country": "Taïwan",
+    "fsParticipantId": "O8LXrA8C"
+   },
+   "away": {
+    "name": "Lin Y. C./Su L. W.",
+    "country": "Taïwan",
+    "fsParticipantId": "IVKyrUNI"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.18,
+      "closing": 1.22
+     },
+     "away": {
+      "opening": 3.5,
+      "closing": 2.85
+     }
+    }
+   }
+  },
+  {
+   "fsId": "dpXpuFlq",
+   "disc": "WS",
+   "round": "Demi-finales",
+   "startUtc": "2023-07-15T17:10:00.000Z",
+   "home": {
+    "name": "Katethong S.",
+    "country": "Thaïlande",
+    "fsParticipantId": "02SAVqy0"
+   },
+   "away": {
+    "name": "Christophersen L.",
+    "country": "Danemark",
+    "fsParticipantId": "UyXEU3j6"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.28,
+      "closing": 1.22
+     },
+     "away": {
+      "opening": 2.85,
+      "closing": 2.9
+     }
+    }
+   }
+  },
+  {
+   "fsId": "EsD97DjP",
+   "disc": "XD",
+   "round": "Demi-finales",
+   "startUtc": "2023-07-15T17:15:00.000Z",
+   "home": {
+    "name": "Ye H. W./Lee Chia H.",
+    "country": "Taïwan",
+    "fsParticipantId": "URwykzs5"
+   },
+   "away": {
+    "name": "Yang Po-Hsuan/Hu Ling F.",
+    "country": "Taïwan",
+    "fsParticipantId": "8IxulfdB"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.64,
+      "closing": 1.6
+     },
+     "away": {
+      "opening": 1.82,
+      "closing": 1.87
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.75,
+      "closing": 1.6
+     },
+     "away": {
+      "opening": 1.75,
+      "closing": 1.88
+     }
+    }
+   }
+  },
+  {
+   "fsId": "YozNqAbI",
+   "disc": "XD",
+   "round": "Demi-finales",
+   "startUtc": "2023-07-15T17:55:00.000Z",
+   "home": {
+    "name": "Thyrri M./Magelund A.",
+    "country": "Danemark",
+    "fsParticipantId": "llxLhIst"
+   },
+   "away": {
+    "name": "Smith P./Lee A. Q.",
+    "country": "USA",
+    "fsParticipantId": "SvyPixcn"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.05
+     },
+     "away": {
+      "opening": 5.25,
+      "closing": 4.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "jBvQAAYj",
+   "disc": "WS",
+   "round": "Demi-finales",
+   "startUtc": "2023-07-15T18:40:00.000Z",
+   "home": {
+    "name": "Intanon R.",
+    "country": "Thaïlande",
+    "fsParticipantId": "GK1JcK9n"
+   },
+   "away": {
+    "name": "Gao F. J.",
+    "country": "Chine",
+    "fsParticipantId": "UN5NdvPh"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 9,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.46,
+      "closing": 1.49
+     },
+     "away": {
+      "opening": 2.11,
+      "closing": 2.05
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.48,
+      "closing": 1.48
+     },
+     "away": {
+      "opening": 2.15,
+      "closing": 2.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "SvtdAqsm",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "startUtc": "2023-07-15T19:50:00.000Z",
+   "home": {
+    "name": "Vitidsarn K.",
+    "country": "Thaïlande",
+    "fsParticipantId": "GQIw3oBo"
+   },
+   "away": {
+    "name": "Lin Chun-Yi",
+    "country": "Taïwan",
+    "fsParticipantId": "fHHs25Qi"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.22,
+      "closing": 1.16
+     },
+     "away": {
+      "opening": 3.1,
+      "closing": 3.3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "tM8q31nl",
+   "disc": "WD",
+   "round": "Demi-finales",
+   "startUtc": "2023-07-15T20:30:00.000Z",
+   "home": {
+    "name": "Li Y. J./Luo X. M.",
+    "country": "Chine",
+    "fsParticipantId": "YeORXiiG"
+   },
+   "away": {
+    "name": "Liu S. S./Tan N.",
+    "country": "Chine",
+    "fsParticipantId": "CnNVWB6M"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.5,
+      "closing": 2.5
+     },
+     "away": {
+      "opening": 1.35,
+      "closing": 1.3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "lnCi1uH0",
+   "disc": "WD",
+   "round": "Demi-finales",
+   "startUtc": "2023-07-15T20:40:00.000Z",
+   "home": {
+    "name": "Fruergaard M./Thygesen S.",
+    "country": "Danemark",
+    "fsParticipantId": "xhD5Q9qj"
+   },
+   "away": {
+    "name": "Hsu Y. C./Lin Wan Ch.",
+    "country": "Taïwan",
+    "fsParticipantId": "jeH9PTbd"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.9,
+      "closing": 1.95
+     },
+     "away": {
+      "opening": 1.62,
+      "closing": 1.55
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.86,
+      "closing": 1.96
+     },
+     "away": {
+      "opening": 1.61,
+      "closing": 1.54
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Ach7Mkm9",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "startUtc": "2023-07-15T21:25:00.000Z",
+   "home": {
+    "name": "Sen L.",
+    "country": "Inde",
+    "fsParticipantId": "SvVPDWap"
+   },
+   "away": {
+    "name": "Li S. F.",
+    "country": "Chine",
+    "fsParticipantId": "6VTTCjFj"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 24,
+     "away": 22
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.88,
+      "closing": 1.8
+     },
+     "away": {
+      "opening": 1.65,
+      "closing": 1.65
+     }
+    }
+   }
+  },
+  {
+   "fsId": "AeDm2L1f",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "startUtc": "2023-07-15T23:00:00.000Z",
+   "home": {
+    "name": "Goh S. F./Izzuddin N.",
+    "country": "Malaysie",
+    "fsParticipantId": "tMRZVVLS"
+   },
+   "away": {
+    "name": "Chen B. Y./Liu Y.",
+    "country": "Chine",
+    "fsParticipantId": "rVD1RkUq"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.5,
+      "closing": 1.66
+     },
+     "away": {
+      "opening": 2.03,
+      "closing": 1.8
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.52,
+      "closing": 1.65
+     },
+     "away": {
+      "opening": 2.05,
+      "closing": 1.8
+     }
+    }
+   }
+  },
+  {
+   "fsId": "WA1d0aW6",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "startUtc": "2023-07-15T23:45:00.000Z",
+   "home": {
+    "name": "Lin Y. C./Su L. W.",
+    "country": "Taïwan",
+    "fsParticipantId": "4b5ilDyc"
+   },
+   "away": {
+    "name": "Lee F. C/Lee F. J.",
+    "country": "Taïwan",
+    "fsParticipantId": "rk4emXj3"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 4.75,
+      "closing": 3.8
+     },
+     "away": {
+      "opening": 1.07,
+      "closing": 1.11
+     }
+    }
+   }
+  },
+  {
+   "fsId": "IqsBpArj",
+   "disc": "XD",
+   "round": "Finale",
+   "startUtc": "2023-07-16T17:00:00.000Z",
+   "home": {
+    "name": "Ye H. W./Lee Chia H.",
+    "country": "Taïwan",
+    "fsParticipantId": "IFjp69eq"
+   },
+   "away": {
+    "name": "Thyrri M./Magelund A.",
+    "country": "Danemark",
+    "fsParticipantId": "d6kl5TAk"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 6
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.45,
+      "closing": 1.45
+     },
+     "away": {
+      "opening": 2.25,
+      "closing": 2.2
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 1.42,
+      "closing": 1.47
+     },
+     "away": {
+      "opening": 2.2,
+      "closing": 2.09
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OIVRzFXE",
+   "disc": "WS",
+   "round": "Finale",
+   "startUtc": "2023-07-16T17:50:00.000Z",
+   "home": {
+    "name": "Gao F. J.",
+    "country": "Chine",
+    "fsParticipantId": "hvhmxAKK"
+   },
+   "away": {
+    "name": "Katethong S.",
+    "country": "Thaïlande",
+    "fsParticipantId": "6sdiyUZQ"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.42,
+      "closing": 1.38
+     },
+     "away": {
+      "opening": 2.2,
+      "closing": 2.29
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.5,
+      "closing": 1.38
+     },
+     "away": {
+      "opening": 2.1,
+      "closing": 2.3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "l43cDEzp",
+   "disc": "WD",
+   "round": "Finale",
+   "startUtc": "2023-07-16T18:40:00.000Z",
+   "home": {
+    "name": "Fruergaard M./Thygesen S.",
+    "country": "Danemark",
+    "fsParticipantId": "Q15x4mpB"
+   },
+   "away": {
+    "name": "Liu S. S./Tan N.",
+    "country": "Chine",
+    "fsParticipantId": "KxKu37aH"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 6.75,
+      "closing": 5.75
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.02
+     }
+    },
+    "unibet": {
+     "home": {
+      "opening": 5.95,
+      "closing": 5.7
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.02
+     }
+    }
+   }
+  },
+  {
+   "fsId": "n9CujFDa",
+   "disc": "MD",
+   "round": "Finale",
+   "startUtc": "2023-07-16T19:30:00.000Z",
+   "home": {
+    "name": "Lee F. C/Lee F. J.",
+    "country": "Taïwan",
+    "fsParticipantId": "QRCOrS5t"
+   },
+   "away": {
+    "name": "Goh S. F./Izzuddin N.",
+    "country": "Malaysie",
+    "fsParticipantId": "KlCSsnLn"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 9,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.62,
+      "closing": 2.35
+     },
+     "away": {
+      "opening": 1.29,
+      "closing": 1.36
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 2.7,
+      "closing": 2.35
+     },
+     "away": {
+      "opening": 1.3,
+      "closing": 1.35
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Yqw3NDGs",
+   "disc": "MS",
+   "round": "Finale",
+   "startUtc": "2023-07-16T21:10:00.000Z",
+   "home": {
+    "name": "Vitidsarn K.",
+    "country": "Thaïlande",
+    "fsParticipantId": "Q93HbMrC"
+   },
+   "away": {
+    "name": "Li S. F.",
+    "country": "Chine",
+    "fsParticipantId": "KW2LctbI"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.75,
+      "closing": 1.65
+     },
+     "away": {
+      "opening": 1.75,
+      "closing": 1.88
+     }
+    }
+   }
+  }
+ ]
+}

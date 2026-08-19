@@ -1,0 +1,986 @@
+{
+ "source": "flashscore.fr (feed embarqué + GraphQL oce)",
+ "fetchedAt": "2026-08-19T09:07:00.570Z",
+ "tournamentSlug": "hylo-open-2022",
+ "books": [
+  "betclic",
+  "unibet",
+  "winamax"
+ ],
+ "stats": {
+  "scanned": 155,
+  "withOdds": 24,
+  "from": "2022-11-04",
+  "to": "2022-11-06"
+ },
+ "matches": [
+  {
+   "fsId": "fmN89Uc4",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T11:10:00.000Z",
+   "home": {
+    "name": "Hsu Y. C./Lin Wan Ch.",
+    "country": "Taïwan",
+    "fsParticipantId": "C2sf66YE"
+   },
+   "away": {
+    "name": "Jolly T./Pullela G. G.",
+    "country": "Inde",
+    "fsParticipantId": "MB9Nlv3s"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 8,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.31,
+      "closing": 2.31
+     },
+     "away": {
+      "opening": 1.38,
+      "closing": 1.37
+     }
+    }
+   }
+  },
+  {
+   "fsId": "jwucZH4a",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T11:15:00.000Z",
+   "home": {
+    "name": "Kititharakul J./Prajongjai R.",
+    "country": "Thaïlande",
+    "fsParticipantId": "KCnfTd1G"
+   },
+   "away": {
+    "name": "Lambert M./Tran A.",
+    "country": "France",
+    "fsParticipantId": "YFjbSGGM"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.05
+     },
+     "away": {
+      "opening": 4.85,
+      "closing": 4.85
+     }
+    }
+   }
+  },
+  {
+   "fsId": "O6wkg9DN",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T12:05:00.000Z",
+   "home": {
+    "name": "Zhang S. X./Zheng Y.",
+    "country": "Chine",
+    "fsParticipantId": "Sfo7ekKd"
+   },
+   "away": {
+    "name": "Hu Ling F./Lin X. M.",
+    "country": "Taïwan",
+    "fsParticipantId": "tbkBf9Z2"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.75,
+      "closing": 5.65
+     }
+    }
+   }
+  },
+  {
+   "fsId": "8Ekhzbkg",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T12:20:00.000Z",
+   "home": {
+    "name": "Rankireddy S./Shetty C.",
+    "country": "Inde",
+    "fsParticipantId": "nalnVIW3"
+   },
+   "away": {
+    "name": "Lane B./Vendy S.",
+    "country": "Angleterre",
+    "fsParticipantId": "QkmjUxnA"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.15,
+      "closing": 1.14
+     },
+     "away": {
+      "opening": 3.42,
+      "closing": 3.52
+     }
+    }
+   }
+  },
+  {
+   "fsId": "AHrYiw15",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T12:50:00.000Z",
+   "home": {
+    "name": "Aimsaard B./Aimsaard N.",
+    "country": "Thaïlande",
+    "fsParticipantId": "dpKU3w61"
+   },
+   "away": {
+    "name": "Yeung Nga T./Yeung P. L.",
+    "country": "Hong Kong",
+    "fsParticipantId": "zyJY2cL7"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.51,
+      "closing": 1.31
+     },
+     "away": {
+      "opening": 2,
+      "closing": 2.52
+     }
+    }
+   }
+  },
+  {
+   "fsId": "xje0HqqE",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T13:50:00.000Z",
+   "home": {
+    "name": "Okuhara N.",
+    "country": "Japon",
+    "fsParticipantId": "0fAuwDTl"
+   },
+   "away": {
+    "name": "Hsu W. Ch.",
+    "country": "Taïwan",
+    "fsParticipantId": "EcEqxXre"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.33,
+      "closing": 1.46
+     },
+     "away": {
+      "opening": 2.44,
+      "closing": 2.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "xhbfFrNd",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T14:15:00.000Z",
+   "home": {
+    "name": "Kjaersfeldt L. H.",
+    "country": "Danemark",
+    "fsParticipantId": "A76Fe2pU"
+   },
+   "away": {
+    "name": "Han Y.",
+    "country": "Chine",
+    "fsParticipantId": "CGhsiMho"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.7,
+      "closing": 3.08
+     },
+     "away": {
+      "opening": 1.27,
+      "closing": 1.2
+     }
+    }
+   }
+  },
+  {
+   "fsId": "vZ9zQ8fb",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T14:40:00.000Z",
+   "home": {
+    "name": "Lamsfuss M./Seidel M.",
+    "country": "Allemagne",
+    "fsParticipantId": "AeIEAZ4Q"
+   },
+   "away": {
+    "name": "Astrup K./Rasmussen A. S.",
+    "country": "Danemark",
+    "fsParticipantId": "nH9t6gDs"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 25,
+     "away": 27
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2,
+      "closing": 2.07
+     },
+     "away": {
+      "opening": 1.52,
+      "closing": 1.48
+     }
+    }
+   }
+  },
+  {
+   "fsId": "x8fvLuPE",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T15:05:00.000Z",
+   "home": {
+    "name": "Bansod M.",
+    "country": "Inde",
+    "fsParticipantId": "x8sdxNFJ"
+   },
+   "away": {
+    "name": "Tunjung G. M.",
+    "country": "Indonésie",
+    "fsParticipantId": "lro0ysVP"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 3.48,
+      "closing": 3.85
+     },
+     "away": {
+      "opening": 1.14,
+      "closing": 1.11
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Acrj6Ftj",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T15:05:00.000Z",
+   "home": {
+    "name": "Midorikawa H./Saito N.",
+    "country": "Japon",
+    "fsParticipantId": "bLpXY7rJ"
+   },
+   "away": {
+    "name": "Feng Y. Z./Huang D. P.",
+    "country": "Chine",
+    "fsParticipantId": "Accvs5zt"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 5,
+      "closing": 5
+     },
+     "away": {
+      "opening": 1.04,
+      "closing": 1.04
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OOl8EwZ9",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T15:35:00.000Z",
+   "home": {
+    "name": "Thyrri M./Magelund A.",
+    "country": "Danemark",
+    "fsParticipantId": "lfmhMUbD"
+   },
+   "away": {
+    "name": "Rivaldy R./Mentari P. H.",
+    "country": "Indonésie",
+    "fsParticipantId": "G0yzoEyE"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 3.28,
+      "closing": 3.08
+     },
+     "away": {
+      "opening": 1.17,
+      "closing": 1.2
+     }
+    }
+   }
+  },
+  {
+   "fsId": "KheAzJJH",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T15:40:00.000Z",
+   "home": {
+    "name": "Ginting A. S.",
+    "country": "Indonésie",
+    "fsParticipantId": "joWeNDRd"
+   },
+   "away": {
+    "name": "Loh K. Y.",
+    "country": "Singapour",
+    "fsParticipantId": "2LZaMXt3"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.37,
+      "closing": 2.04
+     },
+     "away": {
+      "opening": 1.35,
+      "closing": 1.49
+     }
+    }
+   }
+  },
+  {
+   "fsId": "E5B8nxQI",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T16:20:00.000Z",
+   "home": {
+    "name": "Christiansen M./Boje A.",
+    "country": "Danemark",
+    "fsParticipantId": "lAoqnNcr"
+   },
+   "away": {
+    "name": "Kusharjanto R. N./Kusumawati L. A.",
+    "country": "Indonésie",
+    "fsParticipantId": "S0pmosDl"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 8,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.44,
+      "closing": 1.48
+     },
+     "away": {
+      "opening": 2.15,
+      "closing": 2.06
+     }
+    }
+   }
+  },
+  {
+   "fsId": "AHAmrLqf",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2022-11-04T16:35:00.000Z",
+   "home": {
+    "name": "Christie J.",
+    "country": "Indonésie",
+    "fsParticipantId": "x2bgUzFb"
+   },
+   "away": {
+    "name": "Srikanth K.",
+    "country": "Inde",
+    "fsParticipantId": "WOccTfU4"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.69,
+      "closing": 1.59
+     },
+     "away": {
+      "opening": 1.76,
+      "closing": 1.88
+     }
+    }
+   }
+  },
+  {
+   "fsId": "QNBMBF7p",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "startUtc": "2022-11-05T13:00:00.000Z",
+   "home": {
+    "name": "Lu C. Y./Yang P. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "dUHCcC23"
+   },
+   "away": {
+    "name": "Astrup K./Rasmussen A. S.",
+    "country": "Danemark",
+    "fsParticipantId": "jiHGdWH9"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.03,
+      "closing": 2.02
+     },
+     "away": {
+      "opening": 1.5,
+      "closing": 1.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "fg0PVzaG",
+   "disc": "WS",
+   "round": "Demi-finales",
+   "startUtc": "2022-11-05T13:30:00.000Z",
+   "home": {
+    "name": "Han Y.",
+    "country": "Chine",
+    "fsParticipantId": "E7308TGL"
+   },
+   "away": {
+    "name": "Tunjung G. M.",
+    "country": "Indonésie",
+    "fsParticipantId": "8U247mWR"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.32,
+      "closing": 1.34
+     },
+     "away": {
+      "opening": 2.48,
+      "closing": 2.42
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Cv2w83WS",
+   "disc": "WD",
+   "round": "Demi-finales",
+   "startUtc": "2022-11-05T15:15:00.000Z",
+   "home": {
+    "name": "Kititharakul J./Prajongjai R.",
+    "country": "Thaïlande",
+    "fsParticipantId": "AwytrEj3"
+   },
+   "away": {
+    "name": "Zhang S. X./Zheng Y.",
+    "country": "Chine",
+    "fsParticipantId": "vDupsY59"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 27,
+     "away": 25
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.14,
+      "closing": 2.27
+     },
+     "away": {
+      "opening": 1.44,
+      "closing": 1.39
+     }
+    }
+   }
+  },
+  {
+   "fsId": "S22mirRg",
+   "disc": "XD",
+   "round": "Demi-finales",
+   "startUtc": "2022-11-05T15:20:00.000Z",
+   "home": {
+    "name": "Feng Y. Z./Huang D. P.",
+    "country": "Chine",
+    "fsParticipantId": "dQsPxiqR"
+   },
+   "away": {
+    "name": "Thyrri M./Magelund A.",
+    "country": "Danemark",
+    "fsParticipantId": "E5UjYAir"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.02,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.5,
+      "closing": 5.45
+     }
+    }
+   }
+  },
+  {
+   "fsId": "x2DnZuVR",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "startUtc": "2022-11-05T16:15:00.000Z",
+   "home": {
+    "name": "Popov T. J.",
+    "country": "France",
+    "fsParticipantId": "EiRydeHU"
+   },
+   "away": {
+    "name": "Chou T. Ch.",
+    "country": "Taïwan",
+    "fsParticipantId": "jD2sHvmt"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 3.45,
+      "closing": 3.35
+     },
+     "away": {
+      "opening": 1.15,
+      "closing": 1.16
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OE5CwGwB",
+   "disc": "WD",
+   "round": "Demi-finales",
+   "startUtc": "2022-11-05T17:00:00.000Z",
+   "home": {
+    "name": "Jolly T./Pullela G. G.",
+    "country": "Inde",
+    "fsParticipantId": "tzZbw5NO"
+   },
+   "away": {
+    "name": "Aimsaard B./Aimsaard N.",
+    "country": "Thaïlande",
+    "fsParticipantId": "fwNt2l0P"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 2.23,
+      "closing": 2.23
+     },
+     "away": {
+      "opening": 1.4,
+      "closing": 1.4
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Qegn0bRL",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "startUtc": "2022-11-05T18:15:00.000Z",
+   "home": {
+    "name": "Ginting A. S.",
+    "country": "Indonésie",
+    "fsParticipantId": "lbLOx61H"
+   },
+   "away": {
+    "name": "Srikanth K.",
+    "country": "Inde",
+    "fsParticipantId": "SlKSyQGN"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.47,
+      "closing": 1.42
+     },
+     "away": {
+      "opening": 2.08,
+      "closing": 2.19
+     }
+    }
+   }
+  },
+  {
+   "fsId": "AR96DjpH",
+   "disc": "WD",
+   "round": "Finale",
+   "startUtc": "2022-11-06T15:35:00.000Z",
+   "home": {
+    "name": "Kititharakul J./Prajongjai R.",
+    "country": "Thaïlande",
+    "fsParticipantId": "htHLJtuU"
+   },
+   "away": {
+    "name": "Aimsaard B./Aimsaard N.",
+    "country": "Thaïlande",
+    "fsParticipantId": "U18mF0mo"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.23,
+      "closing": 1.22
+     },
+     "away": {
+      "opening": 2.88,
+      "closing": 2.95
+     }
+    }
+   }
+  },
+  {
+   "fsId": "IFNDFza5",
+   "disc": "XD",
+   "round": "Finale",
+   "startUtc": "2022-11-06T17:05:00.000Z",
+   "home": {
+    "name": "Feng Y. Z./Huang D. P.",
+    "country": "Chine",
+    "fsParticipantId": "21Rr576f"
+   },
+   "away": {
+    "name": "Kusharjanto R. N./Kusumawati L. A.",
+    "country": "Indonésie",
+    "fsParticipantId": "G4Vn4RL0"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.14,
+      "closing": 1.13
+     },
+     "away": {
+      "opening": 3.58,
+      "closing": 3.68
+     }
+    }
+   }
+  },
+  {
+   "fsId": "lYExXys7",
+   "disc": "MS",
+   "round": "Finale",
+   "startUtc": "2022-11-06T18:00:00.000Z",
+   "home": {
+    "name": "Chou T. Ch.",
+    "country": "Taïwan",
+    "fsParticipantId": "6JT26oN3"
+   },
+   "away": {
+    "name": "Ginting A. S.",
+    "country": "Indonésie",
+    "fsParticipantId": "pAS655xA"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 22,
+     "away": 24
+    }
+   ],
+   "odds": {
+    "unibet": {
+     "home": {
+      "opening": 1.72,
+      "closing": 1.85
+     },
+     "away": {
+      "opening": 1.72,
+      "closing": 1.61
+     }
+    }
+   }
+  }
+ ]
+}
