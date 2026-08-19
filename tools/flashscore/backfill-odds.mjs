@@ -69,6 +69,8 @@ const START_UTC = "2026-01-06";
 // jeter à la collecte revenait à perdre ~1 200 matchs mesurables.
 // LE FILTRE MISABLE EST DANS build-data (lib/roi.mjs BOOKS) : ces cotes
 // n'entrent jamais dans « la meilleure cote » ni dans le ROI.
+const MISABLES = ["betclic", "winamax", "unibet"];
+const REFERENCE = ["bwin", "netbet"];
 const BOOK_KEY = (name) => {
   const n = String(name).toLowerCase();
   if (n.includes("betclic")) return "betclic";
@@ -312,11 +314,17 @@ for (const { slug, page = slug, window } of targets) {
   const { scanned, matches } = await backfillTournament(page, window);
   const from = matches[0]?.startUtc?.slice(0, 10) ?? null;
   const to = matches[matches.length - 1]?.startUtc?.slice(0, 10) ?? null;
+  // `books` DÉCRIT LE CONTENU RÉEL du fichier, il n'est pas une liste figée :
+  // depuis l'ouverture aux cotes de référence (2026-08-19), un tournoi peut
+  // n'être coté QUE par bwin/NetBet — une liste en dur annonçait alors trois
+  // opérateurs absents. `booksReference` isole ceux qui ne sont jamais misables.
+  const presents = [...new Set(matches.flatMap((m) => Object.keys(m.odds || {})))].sort();
   await writeFile(file, JSON.stringify({
     source: "flashscore.fr (feed embarqué + GraphQL oce)",
     fetchedAt: new Date().toISOString(),
     tournamentSlug: slug,
-    books: ["betclic", "unibet", "winamax"],
+    books: presents,
+    booksReference: presents.filter((o) => REFERENCE.includes(o)),
     stats: { scanned, withOdds: matches.length, from, to },
     matches,
   }, null, 1));
