@@ -1798,3 +1798,58 @@ hors périmètre ANJ actuel), ou un bond du modèle qui doublerait la CLV.
 Note en passant : le ROI value s'améliore d'année en année (−14,8 → −9,9 →
 −8,8 à l'ouverture) — cohérent avec un modèle qui apprend sur plus
 d'historique, mais la pente ne croise jamais zéro dans l'horizon visible.
+
+## 10.10 Arbres boostés : le test définitif du ML — non départageable, et garde-fous dégradés (2026-08-19)
+
+La question du propriétaire, ouverte depuis le début du chapitre modèle : « un
+réseau de neurones / du machine learning améliorerait-il la prédiction ? ».
+Tous les facteurs ont été jugés ~zéro individuellement (§9.3-§9.6) et leur
+somme additive aussi (§10.8) — restait l'hypothèse des **interactions non
+linéaires**, que le modèle additif ne peut pas voir par construction (indice
+qu'il pouvait en exister : la relation 3 sets ↔ ΔElo est non monotone, §10.1).
+Les arbres boostés sont l'outil de référence pour la chercher sur du tabulaire
+de cette taille ; un NN est écarté d'office (14 k matchs = terrain des arbres).
+
+**Dispositif** (`measures/variante-arbres.mjs` + `measures/gbm.mjs`, GBM maison
+en JS pur — pas de sklearn sur la machine — déterministe, testé sur XOR dans
+`test/gbm.test.mjs`) : hyperparamètres FIGÉS avant tout résultat (200 arbres,
+profondeur 3, lr 0,1, feuille min 50, λ = 1), aucune boucle de tuning — tuner
+« jusqu'à ce que ça marche » serait une sélection déguisée. Features : ΔElo,
+niveau du match, marge de points (§2.8), âge, gaucherie, domicile, discipline.
+Marche avant stricte : modèle 2025 entraîné sur 2 495 matchs < 2025, modèle
+2026 sur 6 359 matchs < 2026. Deux formes : **arbres-residuel** (les arbres
+partent du logit de la production et n'apprennent que ce qu'elle rate — LE
+test) et **arbres-brut** (contrôle sans la base Elo). Jugé sur
+`--annees=2025,2026`, 4 278 matchs, graine 42.
+
+| modèle | M0 Δll global | M1 EV/clôture | M3 ΔROI vs réf [IC] | log loss | calib. |
+|---|---|---|---|---|---|
+| elo-recalibré (réf) | +0,0159 | −4,09 % [−5,0 ; −3,1] | (référence) | 0,5358 | 1,5 pt |
+| arbres-residuel | +0,0290 | −7,35 % [−8,0 ; −6,6] | +4,4 pt [−0,6 ; +9,3] | 0,5488 | 4,4 pt |
+| arbres-brut | +0,0352 | −6,18 % [−7,0 ; −5,3] | +1,3 pt [−4,0 ; +6,3] | 0,5550 | 4,3 pt |
+
+**Verdict : non départageable au juge de décision (l'IC de M3 contient 0 dans
+les deux formes), et — première du banc — NÉGATIF au juge d'entraînement :**
+le M1 du résiduel (−7,35 %) est plus mauvais que la référence (−4,09 %) à
+intervalles disjoints. Les deux garde-fous se dégradent nettement (log loss
++0,013, calibration 1,5 → 4,4 pt) : les arbres **sur-affirment**. Le M3
+ponctuel positif (+4,4 pt) est exactement l'artefact que le protocole anticipe
+(« variante qui triche même si les métriques montent ») : surconfiant, le
+modèle mise plus (2 509 paris contre 2 170) et le hasard du résultat fait le
+reste — mais face au marché dé-viggé, chacun de ses paris est objectivement
+plus mal placé. Rien à adopter, rien d'ambigu.
+
+**Ce que ça ferme.** Si des interactions non linéaires exploitables existaient
+dans nos features, 200 arbres entraînés à les chercher en auraient trouvé au
+moins la trace (le moteur capture un XOR pur, c'est testé) ; la non-monotonie
+3 sets ↔ ΔElo de §10.1 ne se transporte donc pas au match gagnant. Combiné à
+§9 (facteurs solo ~zéro) et §10.8 (leur somme additive nulle), le chapitre
+modèle est clos sur les trois étages : **ni facteur, ni somme, ni interaction.
+Le pronostic annoncé (« non départageable ») est confirmé, et même en deçà —
+le ML fait pire que l'Elo calibré sur ces données.** Conditions de
+réouverture : des features nouvelles porteuses d'information nouvelle (pas de
+recombinaison des existantes), ou 10× plus de données.
+
+Note honnête : le ROI absolu value clôture du résiduel (−6,03 %) est le moins
+mauvais jamais affiché au banc — c'est l'artefact de surconfiance ci-dessus,
+pas un signal : non significatif apparié, et toujours négatif.

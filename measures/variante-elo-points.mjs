@@ -50,8 +50,9 @@ const POINTS_DAMPING = true; // idem : « +amorti »
 const argVariantes = (process.argv.find((x) => x.startsWith("--variantes=")) || "").split("=")[1] || "";
 const requested =
   process.argv.includes("--toutes") ||
-  // les variantes COMBINÉES (variante-combinee.mjs) consomment aussi pBisOf
-  argVariantes.split(",").filter(Boolean).some((k) => KEYS.has(k) || k.startsWith("combo"));
+  // les variantes COMBINÉES (variante-combinee.mjs) et ARBRES
+  // (variante-arbres.mjs) consomment aussi pBisOf
+  argVariantes.split(",").filter(Boolean).some((k) => KEYS.has(k) || k.startsWith("combo") || k.startsWith("arbres"));
 
 // Même identifiant d'entité que le banc (ids triés ; `pair:` en double).
 const entityId = (players) => {

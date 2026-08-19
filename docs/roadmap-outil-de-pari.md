@@ -93,6 +93,7 @@ Chacun a été tranché par une mesure ; le détail est au journal.
 | Âge, main dominante, terrain, Elo à marge de points | signaux parfois réels, tous **non départageables** au banc | §9.3-§9.6 |
 | Marché « nombre de sets » + effet gymnase | hypothèse **retournée** : marché plus cher (17-29 %), mieux prédit par le marché que par nous ; l'effet gymnase ne se transporte pas | §10 |
 | Catégorie du tournoi | gradient descriptif réel, apport **nul** au banc (déjà capté par le classement) | §10.1 |
+| Machine learning (arbres boostés, et par extension NN) | GBM toutes features au banc : non départageable en M3, **pire** en M1 et aux garde-fous — ni facteur, ni somme, ni interaction | §10.10 |
 | Betclic en CI | refus par IP à l'edge CloudFront, aucun correctif côté code — on tourne à 2 opérateurs sur 3 | `verif-cotes-sets.md` §6b |
 | Ajouter bwin.fr et netbet.fr | 2,5 points de péage mesurés (§10.5), mais ça n'inverse pas l'économie du problème — **écarté par le propriétaire le 2026-08-18** | §10.5 |
 | Les abandons (`Retired`) | jamais mesuré, et abandonné : aucun facteur isolé ne comble 8 points de marge — **écarté par le propriétaire le 2026-08-18** | — |
