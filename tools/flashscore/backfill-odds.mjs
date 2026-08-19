@@ -59,11 +59,23 @@ const START_UTC = "2026-01-06";
 
 // Bookmakers retenus (les seuls misables pour nous) ; le nom Flashscore varie
 // (« Betclic.fr », « Winamax »…), on normalise vers les clés de data/books/.
+// Opérateurs retenus à la COLLECTE. Les trois premiers sont misables ;
+// bwin et NetBet sont des cotes de RÉFÉRENCE — écartés du périmètre de pari le
+// 2026-08-18 (§10.5 : +2,5 points de péage, sans renverser l'économie), mais
+// conservés comme base de travail statistique sur les saisons passées
+// (décision du propriétaire, 2026-08-19). Motif identique à Pinnacle
+// (lib/book-pinnacle.mjs) et leçon §10.5 « collecter tout, filtrer à
+// l'analyse » : sur 2022, 8 tournois n'ont de cotes QUE chez ces deux-là, les
+// jeter à la collecte revenait à perdre ~1 200 matchs mesurables.
+// LE FILTRE MISABLE EST DANS build-data (lib/roi.mjs BOOKS) : ces cotes
+// n'entrent jamais dans « la meilleure cote » ni dans le ROI.
 const BOOK_KEY = (name) => {
   const n = String(name).toLowerCase();
   if (n.includes("betclic")) return "betclic";
   if (n.includes("winamax")) return "winamax";
   if (n.includes("unibet")) return "unibet";
+  if (n.includes("bwin")) return "bwin";
+  if (n.includes("netbet")) return "netbet";
   return null;
 };
 

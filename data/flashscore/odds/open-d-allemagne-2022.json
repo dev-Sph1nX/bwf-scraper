@@ -1,6 +1,6 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-08-19T09:25:41.803Z",
+ "fetchedAt": "2026-08-19T10:53:54.362Z",
  "tournamentSlug": "open-d-allemagne-2022",
  "books": [
   "betclic",
@@ -9,9 +9,49 @@
  ],
  "stats": {
   "scanned": 155,
-  "withOdds": 0,
-  "from": null,
-  "to": null
+  "withOdds": 1,
+  "from": "2022-03-08",
+  "to": "2022-03-08"
  },
- "matches": []
+ "matches": [
+  {
+   "fsId": "fRHUnWr3",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-03-08T15:35:00.000Z",
+   "home": {
+    "name": "Chen Y. F.",
+    "country": "Chine",
+    "fsParticipantId": "SGxWJKIk"
+   },
+   "away": {
+    "name": "Chaiwan L.",
+    "country": "Thaïlande",
+    "fsParticipantId": "MwxzJvYe"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1,
+      "closing": 1
+     },
+     "away": {
+      "opening": 16,
+      "closing": 16
+     }
+    }
+   }
+  }
+ ]
 }

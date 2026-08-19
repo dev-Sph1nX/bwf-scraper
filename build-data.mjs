@@ -670,13 +670,25 @@ const oddsByPlayed = new Map();
       }
     }
     const { joined, stats } = joinFlashscore(fsFiles, bwfRows);
-    let added = 0;
+    let added = 0, refSeules = 0;
     for (const [k, odds] of joined) {
-      if (!oddsByPlayed.has(k)) { oddsByPlayed.set(k, odds); added++; }
+      // MÊME GARDE-FOU QUE LE CHEMIN « MAISON » (plus haut) : seuls les
+      // opérateurs MISABLES entrent dans les cotes d'un match. Le backfill
+      // collecte aussi bwin et NetBet — cotes de référence, écartées du
+      // périmètre de pari (§10.5) — et bestOdd/bestOddAt parcourent TOUTES les
+      // clés de `books` : sans ce filtre, elles entreraient silencieusement
+      // dans « la meilleure cote » et fausseraient tout le ROI.
+      const books = {};
+      for (const [op, b] of Object.entries(odds.books || {})) {
+        if (MISABLE_BOOKS.includes(op)) books[op] = b;
+      }
+      if (!Object.keys(books).length) { refSeules++; continue; }
+      if (!oddsByPlayed.has(k)) { oddsByPlayed.set(k, { ...odds, books }); added++; }
     }
     console.log(
       `   Flashscore : ${stats.fsMatches} matchs cotés (${fsFiles.length} tournois), ` +
-      `${stats.joined} joints -> ${added} ajoutés, ${stats.unmatched} non joints, ${stats.ambiguous} ambigus`,
+      `${stats.joined} joints -> ${added} ajoutés, ${stats.unmatched} non joints, ${stats.ambiguous} ambigus` +
+      (refSeules ? `, ${refSeules} écartés (cotes de référence seules : bwin/NetBet)` : ""),
     );
   }
 }

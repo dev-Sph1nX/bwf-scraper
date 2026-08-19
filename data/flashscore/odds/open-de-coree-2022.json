@@ -1,6 +1,6 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-08-19T09:43:59.902Z",
+ "fetchedAt": "2026-08-19T10:58:38.853Z",
  "tournamentSlug": "open-de-coree-2022",
  "books": [
   "betclic",
@@ -9,9 +9,3503 @@
  ],
  "stats": {
   "scanned": 123,
-  "withOdds": 0,
-  "from": null,
-  "to": null
+  "withOdds": 88,
+  "from": "2022-04-05",
+  "to": "2022-04-10"
  },
- "matches": []
+ "matches": [
+  {
+   "fsId": "CKc2wTLs",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T01:05:00.000Z",
+   "home": {
+    "name": "Chen Y. F.",
+    "country": "Chine",
+    "fsParticipantId": "r9KfoOFL"
+   },
+   "away": {
+    "name": "Chaiwan L.",
+    "country": "Thaïlande",
+    "fsParticipantId": "xWJbprVR"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1
+     },
+     "away": {
+      "opening": 8.75,
+      "closing": 10.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "lIl1KxfH",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T01:50:00.000Z",
+   "home": {
+    "name": "Bruun K.",
+    "country": "Danemark",
+    "fsParticipantId": "QFpdHlIG"
+   },
+   "away": {
+    "name": "Svendsen V.",
+    "country": "Danemark",
+    "fsParticipantId": "fkk0G8XM"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.99,
+      "closing": 2.57
+     },
+     "away": {
+      "opening": 1.45,
+      "closing": 1.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "pprAIGOT",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T01:50:00.000Z",
+   "home": {
+    "name": "Sen L.",
+    "country": "Inde",
+    "fsParticipantId": "4OvzA6Aj"
+   },
+   "away": {
+    "name": "Choi J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "IRSHYkmi"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1
+     },
+     "away": {
+      "opening": 9.75,
+      "closing": 15
+     }
+    }
+   }
+  },
+  {
+   "fsId": "SSgpXia8",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T02:20:00.000Z",
+   "home": {
+    "name": "Ginting A. S.",
+    "country": "Indonésie",
+    "fsParticipantId": "IBM8IYuI"
+   },
+   "away": {
+    "name": "Claerbout L.",
+    "country": "France",
+    "fsParticipantId": "CYLCHheO"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.5,
+      "closing": 6.2
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Oz3qXFwN",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T03:00:00.000Z",
+   "home": {
+    "name": "Takahashi A.",
+    "country": "Japon",
+    "fsParticipantId": "pdktQI0l"
+   },
+   "away": {
+    "name": "Goh J. W.",
+    "country": "Malaysie",
+    "fsParticipantId": "vJlpPxGf"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.37,
+      "closing": 1.36
+     },
+     "away": {
+      "opening": 2.17,
+      "closing": 2.2
+     }
+    }
+   }
+  },
+  {
+   "fsId": "WM3a3Gu4",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T03:20:00.000Z",
+   "home": {
+    "name": "Kusumawardana P./Rambitan Y. E. Y. Y.",
+    "country": "Australie",
+    "fsParticipantId": "dz5AUgi3"
+   },
+   "away": {
+    "name": "Garaga P./Panjala V. G.",
+    "country": "Inde",
+    "fsParticipantId": "jc4ETD69"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.02,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 4.7,
+      "closing": 4.7
+     }
+    }
+   }
+  },
+  {
+   "fsId": "xv7mWZhT",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T03:45:00.000Z",
+   "home": {
+    "name": "Lee Se Yeon",
+    "country": "Corée du Sud",
+    "fsParticipantId": "hMhlOdV0"
+   },
+   "away": {
+    "name": "Polikarpova K.",
+    "country": "Israël",
+    "fsParticipantId": "nqhhNGp7"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 7
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1,
+      "closing": 1
+     },
+     "away": {
+      "opening": 10.5,
+      "closing": 11.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "tCDvYeOG",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T03:55:00.000Z",
+   "home": {
+    "name": "Intanon R.",
+    "country": "Thaïlande",
+    "fsParticipantId": "vcN8rRGF"
+   },
+   "away": {
+    "name": "Jeon J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "65jxRbor"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 5.4,
+      "closing": 5.4
+     }
+    }
+   }
+  },
+  {
+   "fsId": "bHXSOT6l",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T04:20:00.000Z",
+   "home": {
+    "name": "Cheam J. W.",
+    "country": "Malaysie",
+    "fsParticipantId": "QcTDEPvp"
+   },
+   "away": {
+    "name": "Prannoy H. S.",
+    "country": "Inde",
+    "fsParticipantId": "YNSHDqfj"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 7
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 3.55,
+      "closing": 3.55
+     },
+     "away": {
+      "opening": 1.1,
+      "closing": 1.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Y9hJQDGj",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T04:30:00.000Z",
+   "home": {
+    "name": "Choi C.",
+    "country": "Canada",
+    "fsParticipantId": "WWwrpvhK"
+   },
+   "away": {
+    "name": "Gilmour K.",
+    "country": "Ecosse",
+    "fsParticipantId": "Qgwnqb7Q"
+   },
+   "winner": "away",
+   "sets": [],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 14,
+      "closing": 18
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "CWLNyvPi",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T04:35:00.000Z",
+   "home": {
+    "name": "Weng H. Y.",
+    "country": "Chine",
+    "fsParticipantId": "xAryUR1M"
+   },
+   "away": {
+    "name": "Heo Kwang H.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "WWsuToHS"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.62,
+      "closing": 3.55
+     },
+     "away": {
+      "opening": 1.23,
+      "closing": 1.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ngUyEzXp",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T04:40:00.000Z",
+   "home": {
+    "name": "Kim Dong Hun",
+    "country": "Corée du Sud",
+    "fsParticipantId": "dIRLX92c"
+   },
+   "away": {
+    "name": "Schaefer K.",
+    "country": "Allemagne",
+    "fsParticipantId": "jgtPWTH3"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 5.4,
+      "closing": 5.4
+     }
+    }
+   }
+  },
+  {
+   "fsId": "6JhlWBEE",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T05:00:00.000Z",
+   "home": {
+    "name": "Koljonen K.",
+    "country": "Finlande",
+    "fsParticipantId": "O8PGGCAU"
+   },
+   "away": {
+    "name": "Ng T. Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "0U0Mydtt"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 3.35,
+      "closing": 3.7
+     },
+     "away": {
+      "opening": 1.12,
+      "closing": 1.09
+     }
+    }
+   }
+  },
+  {
+   "fsId": "nBkDiJth",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T05:00:00.000Z",
+   "home": {
+    "name": "Ko S. H./Shin B. Ch.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "4rs4szWp"
+   },
+   "away": {
+    "name": "Fikri M. S./Maulana B.",
+    "country": "Indonésie",
+    "fsParticipantId": "IoVo6J8o"
+   },
+   "winner": "away",
+   "sets": [],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.88,
+      "closing": 1.88
+     },
+     "away": {
+      "opening": 1.52,
+      "closing": 1.52
+     }
+    }
+   }
+  },
+  {
+   "fsId": "fqm7xmyl",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T05:25:00.000Z",
+   "home": {
+    "name": "Chochuwong Po.",
+    "country": "Thaïlande",
+    "fsParticipantId": "vu6Qu2wq"
+   },
+   "away": {
+    "name": "Svabikova T.",
+    "country": "République Tchèque",
+    "fsParticipantId": "n55UvMhk"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1,
+      "closing": 1
+     },
+     "away": {
+      "opening": 16,
+      "closing": 16
+     }
+    }
+   }
+  },
+  {
+   "fsId": "xn3izIBH",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-05T05:40:00.000Z",
+   "home": {
+    "name": "Bansod M.",
+    "country": "Inde",
+    "fsParticipantId": "MqVboqXI"
+   },
+   "away": {
+    "name": "Han Y.",
+    "country": "Chine",
+    "fsParticipantId": "8Yn6gtPu"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 21,
+     "away": 10
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 12.5,
+      "closing": 12.5
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "YoAWZHg4",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T01:05:00.000Z",
+   "home": {
+    "name": "Medel Y. S.",
+    "country": "Algérie",
+    "fsParticipantId": "t6XEMqfd"
+   },
+   "away": {
+    "name": "Wangcharoen K.",
+    "country": "Thaïlande",
+    "fsParticipantId": "f9LdoTWd"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 6,
+     "away": 21
+    },
+    {
+     "home": 8,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 13,
+      "closing": 13
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "tx7WrkbK",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T01:05:00.000Z",
+   "home": {
+    "name": "Zilberman M.",
+    "country": "Israël",
+    "fsParticipantId": "8xP0Ptg2"
+   },
+   "away": {
+    "name": "Li S. F.",
+    "country": "Chine",
+    "fsParticipantId": "dhIrlQV2"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 10.5,
+      "closing": 10.5
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "0dIJxK9o",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T01:25:00.000Z",
+   "home": {
+    "name": "Teh J. H. J.",
+    "country": "Singapour",
+    "fsParticipantId": "UquTVmX9"
+   },
+   "away": {
+    "name": "Son W. H.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "O6vXU7nG"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.65,
+      "closing": 2.47
+     },
+     "away": {
+      "opening": 1.23,
+      "closing": 1.27
+     }
+    }
+   }
+  },
+  {
+   "fsId": "fJgFRg1p",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T01:35:00.000Z",
+   "home": {
+    "name": "Gonda D.",
+    "country": "Hongrie",
+    "fsParticipantId": "QZjdMz0D"
+   },
+   "away": {
+    "name": "Ohori A.",
+    "country": "Japon",
+    "fsParticipantId": "htuvoKxE"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 9,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 14,
+      "closing": 13.5
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "feBSzbvb",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T01:55:00.000Z",
+   "home": {
+    "name": "Naraoka K.",
+    "country": "Japon",
+    "fsParticipantId": "YuU6O5Pq"
+   },
+   "away": {
+    "name": "Mammeri K.",
+    "country": "Algérie",
+    "fsParticipantId": "2FYANPvj"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1,
+      "closing": 1
+     },
+     "away": {
+      "opening": 13,
+      "closing": 13
+     }
+    }
+   }
+  },
+  {
+   "fsId": "t0kJZpL6",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T01:55:00.000Z",
+   "home": {
+    "name": "Kim H. M.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "z9pYsAQQ"
+   },
+   "away": {
+    "name": "Ongbamrungphan B.",
+    "country": "Thaïlande",
+    "fsParticipantId": "hlXawUYs"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 5,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 4.2,
+      "closing": 4.2
+     },
+     "away": {
+      "opening": 1.05,
+      "closing": 1.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "fNDnybdB",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T02:10:00.000Z",
+   "home": {
+    "name": "Lam L.",
+    "country": "USA",
+    "fsParticipantId": "lWWjm526"
+   },
+   "away": {
+    "name": "Sindhu P. V.",
+    "country": "Inde",
+    "fsParticipantId": "rgWfnPHC"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 13,
+      "closing": 13
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "2oncUkqR",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T02:30:00.000Z",
+   "home": {
+    "name": "Liew D.",
+    "country": "Malaysie",
+    "fsParticipantId": "no3YYgQb"
+   },
+   "away": {
+    "name": "Srikanth K.",
+    "country": "Inde",
+    "fsParticipantId": "t82xYDu5"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 3.3,
+      "closing": 3.3
+     },
+     "away": {
+      "opening": 1.13,
+      "closing": 1.13
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ABBzr9DQ",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T02:35:00.000Z",
+   "home": {
+    "name": "Soong J. V.",
+    "country": "Malaysie",
+    "fsParticipantId": "zqHnmpo9"
+   },
+   "away": {
+    "name": "Christie J.",
+    "country": "Indonésie",
+    "fsParticipantId": "U5Gjn40F"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 7.5,
+      "closing": 7.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "UZdKkLkJ",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T02:40:00.000Z",
+   "home": {
+    "name": "Choo Chan/Choo Jin",
+    "country": "Corée du Sud",
+    "fsParticipantId": "EXW5RmbE"
+   },
+   "away": {
+    "name": "Ahsan M./Setiawan H.",
+    "country": "Indonésie",
+    "fsParticipantId": "8fW9Q7DK"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 8.5,
+      "closing": 8.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "QsMVvtcn",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T02:55:00.000Z",
+   "home": {
+    "name": "Hoyaux Y.",
+    "country": "France",
+    "fsParticipantId": "p2xKY5mD"
+   },
+   "away": {
+    "name": "Tomalova K.",
+    "country": "République Tchèque",
+    "fsParticipantId": "b5Q1ckQD"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 10
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1,
+      "closing": 1
+     },
+     "away": {
+      "opening": 11.5,
+      "closing": 11.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "27uxnFAT",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T03:15:00.000Z",
+   "home": {
+    "name": "Azriyn N. M. A. A./Lim K. W.",
+    "country": "Malaysie",
+    "fsParticipantId": "63RUHG7c"
+   },
+   "away": {
+    "name": "Goh V S./Low J. S.",
+    "country": "Malaysie",
+    "fsParticipantId": "0QQYGzN3"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 5,
+      "closing": 5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "025KXOkJ",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T03:20:00.000Z",
+   "home": {
+    "name": "Katethong S.",
+    "country": "Thaïlande",
+    "fsParticipantId": "SrsQqWeE"
+   },
+   "away": {
+    "name": "Wang Z. Y.",
+    "country": "Chine",
+    "fsParticipantId": "dIoUrjBK"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.97,
+      "closing": 2.05
+     },
+     "away": {
+      "opening": 1.47,
+      "closing": 1.42
+     }
+    }
+   }
+  },
+  {
+   "fsId": "6eCfePLs",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T03:20:00.000Z",
+   "home": {
+    "name": "Kral O./Mendrek A.",
+    "country": "République Tchèque",
+    "fsParticipantId": "fREt7be2"
+   },
+   "away": {
+    "name": "Kim Tae Kwan/Lee S. M.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "AckMFja2"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 7,
+      "closing": 7
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "p4hRVQEi",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T03:40:00.000Z",
+   "home": {
+    "name": "Reddy B. S./Ponnappa A.",
+    "country": "Inde",
+    "fsParticipantId": "pQtezh0S"
+   },
+   "away": {
+    "name": "Kwek Jun/Jin Y. J.",
+    "country": "Singapour",
+    "fsParticipantId": "25TMVB8q"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.1,
+      "closing": 3.95
+     }
+    }
+   }
+  },
+  {
+   "fsId": "lrrgVVTK",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T03:55:00.000Z",
+   "home": {
+    "name": "Watanabe K.",
+    "country": "Japon",
+    "fsParticipantId": "vLaQzGen"
+   },
+   "away": {
+    "name": "Vitidsarn K.",
+    "country": "Thaïlande",
+    "fsParticipantId": "8f4UZZAh"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 4.2,
+      "closing": 4.1
+     },
+     "away": {
+      "opening": 1.05,
+      "closing": 1.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ncAvwKRb",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T03:55:00.000Z",
+   "home": {
+    "name": "Kawakami S.",
+    "country": "Australie",
+    "fsParticipantId": "8vGyim3s"
+   },
+   "away": {
+    "name": "Li M.",
+    "country": "Canada",
+    "fsParticipantId": "2FUvj7Im"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.47,
+      "closing": 1.47
+     },
+     "away": {
+      "opening": 1.97,
+      "closing": 1.97
+     }
+    }
+   }
+  },
+  {
+   "fsId": "4Arqc0zS",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T04:20:00.000Z",
+   "home": {
+    "name": "Zilberman M./Zilberman S.",
+    "country": "Israël",
+    "fsParticipantId": "OK58fsBP"
+   },
+   "away": {
+    "name": "Midorikawa H./Saito N.",
+    "country": "Japon",
+    "fsParticipantId": "QTizj1Jt"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 9,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 10.5,
+      "closing": 20
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "S8m5Jd9N",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T04:40:00.000Z",
+   "home": {
+    "name": "Louda J.",
+    "country": "République Tchèque",
+    "fsParticipantId": "Yul4FSnT"
+   },
+   "away": {
+    "name": "Lee D. K.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "jLzWAnep"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.47,
+      "closing": 2.32
+     },
+     "away": {
+      "opening": 1.27,
+      "closing": 1.31
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OW6afqyl",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T04:45:00.000Z",
+   "home": {
+    "name": "Kang M. H./Seo S. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "O0gQEAE8"
+   },
+   "away": {
+    "name": "Jang S. H./Ki D. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "INhUDUTE"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 25,
+     "away": 23
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 7,
+      "closing": 7.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "86Bzv0Ch",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T05:10:00.000Z",
+   "home": {
+    "name": "Sim Y. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "C8U5d9uK"
+   },
+   "away": {
+    "name": "Yeo J. M.",
+    "country": "Singapour",
+    "fsParticipantId": "6VT9eTfQ"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.82,
+      "closing": 1.87
+     },
+     "away": {
+      "opening": 1.55,
+      "closing": 1.53
+     }
+    }
+   }
+  },
+  {
+   "fsId": "UgLbYetU",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2022-04-06T05:45:00.000Z",
+   "home": {
+    "name": "Kudaravalli S. K. P.",
+    "country": "Inde",
+    "fsParticipantId": "hMlIjv9b"
+   },
+   "away": {
+    "name": "An S. Y.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "nqlMkbO4"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 5,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 14,
+      "closing": 15
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "x8Kyyklm",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T01:00:00.000Z",
+   "home": {
+    "name": "Claerbout L.",
+    "country": "France",
+    "fsParticipantId": "ngHuzFJr"
+   },
+   "away": {
+    "name": "Svendsen V.",
+    "country": "Danemark",
+    "fsParticipantId": "tGGqZYYl"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.73,
+      "closing": 1.61
+     },
+     "away": {
+      "opening": 1.63,
+      "closing": 1.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Kz0wTObA",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T01:00:00.000Z",
+   "home": {
+    "name": "Seo S. J./Chae Y. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "GSNKjDp9"
+   },
+   "away": {
+    "name": "Ong Y. S./Goh L. Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "AkNOkXaF"
+   },
+   "winner": "away",
+   "sets": [],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 7.75,
+      "closing": 7.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "O4GXyVYt",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T01:00:00.000Z",
+   "home": {
+    "name": "Ko S. H./Eom H. W.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "GAQ9uydL"
+   },
+   "away": {
+    "name": "Kang M. H./Baek H. N.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "ppVDveBR"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.27,
+      "closing": 1.22
+     },
+     "away": {
+      "opening": 2.47,
+      "closing": 2.7
+     }
+    }
+   }
+  },
+  {
+   "fsId": "fTlRUDRD",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T01:40:00.000Z",
+   "home": {
+    "name": "Maulana A./Bandaso M. C.",
+    "country": "Indonésie",
+    "fsParticipantId": "dCfefw6j"
+   },
+   "away": {
+    "name": "Shin T. Y./Jang Y. N.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "pSmwJMri"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 3.1,
+      "closing": 2.15
+     },
+     "away": {
+      "opening": 1.15,
+      "closing": 1.38
+     }
+    }
+   }
+  },
+  {
+   "fsId": "lC1cWQ2I",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T02:00:00.000Z",
+   "home": {
+    "name": "Sen L.",
+    "country": "Inde",
+    "fsParticipantId": "CtWMZ5Pa"
+   },
+   "away": {
+    "name": "Rhustavito S. H.",
+    "country": "Indonésie",
+    "fsParticipantId": "tGzRYPv6"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 9,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.17,
+      "closing": 1.06
+     },
+     "away": {
+      "opening": 3,
+      "closing": 4
+     }
+    }
+   }
+  },
+  {
+   "fsId": "xCAYT4q4",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T02:20:00.000Z",
+   "home": {
+    "name": "Na S. S./Kim M. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "lMVYS9h2"
+   },
+   "away": {
+    "name": "Tan Kian M./Lai P. J.",
+    "country": "Malaysie",
+    "fsParticipantId": "xxPGigV2"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 9,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.47,
+      "closing": 2.47
+     },
+     "away": {
+      "opening": 1.27,
+      "closing": 1.27
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Q9SttyWq",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T02:55:00.000Z",
+   "home": {
+    "name": "Lee Se Yeon",
+    "country": "Corée du Sud",
+    "fsParticipantId": "f1RdEDFC"
+   },
+   "away": {
+    "name": "Goh J. W.",
+    "country": "Malaysie",
+    "fsParticipantId": "84V0DXUI"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.55,
+      "closing": 1.65
+     },
+     "away": {
+      "opening": 1.82,
+      "closing": 1.7
+     }
+    }
+   }
+  },
+  {
+   "fsId": "8YHoueoj",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T03:10:00.000Z",
+   "home": {
+    "name": "Intanon R.",
+    "country": "Thaïlande",
+    "fsParticipantId": "M7JrxH7J"
+   },
+   "away": {
+    "name": "Gilmour K.",
+    "country": "Ecosse",
+    "fsParticipantId": "0bInyyNP"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.13
+     },
+     "away": {
+      "opening": 4.6,
+      "closing": 3.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "zuAX2bwc",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T03:25:00.000Z",
+   "home": {
+    "name": "Weng H. Y.",
+    "country": "Chine",
+    "fsParticipantId": "j5ILUYag"
+   },
+   "away": {
+    "name": "Cheam J. W.",
+    "country": "Malaysie",
+    "fsParticipantId": "48MPThFa"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.63,
+      "closing": 1.35
+     },
+     "away": {
+      "opening": 1.73,
+      "closing": 2.22
+     }
+    }
+   }
+  },
+  {
+   "fsId": "AD8CKN4a",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T03:40:00.000Z",
+   "home": {
+    "name": "Chochuwong Po.",
+    "country": "Thaïlande",
+    "fsParticipantId": "rgpLTnGh"
+   },
+   "away": {
+    "name": "Bansod M.",
+    "country": "Inde",
+    "fsParticipantId": "MqqPS6Vb"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 9.75,
+      "closing": 6.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "hYgnHJTu",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T03:45:00.000Z",
+   "home": {
+    "name": "Wang Z. Y.",
+    "country": "Chine",
+    "fsParticipantId": "M5nJFbzL"
+   },
+   "away": {
+    "name": "Ongbamrungphan B.",
+    "country": "Thaïlande",
+    "fsParticipantId": "0doNEIkR"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.02,
+      "closing": 2.12
+     },
+     "away": {
+      "opening": 1.43,
+      "closing": 1.39
+     }
+    }
+   }
+  },
+  {
+   "fsId": "KAY5NVJm",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T04:00:00.000Z",
+   "home": {
+    "name": "Chen Y. F.",
+    "country": "Chine",
+    "fsParticipantId": "YBvT8xLq"
+   },
+   "away": {
+    "name": "Kim G. E.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "SYwX7dzj"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 6.5,
+      "closing": 7.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OxrK9gST",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T04:30:00.000Z",
+   "home": {
+    "name": "Louda J.",
+    "country": "République Tchèque",
+    "fsParticipantId": "ruNpJXtD"
+   },
+   "away": {
+    "name": "Vitidsarn K.",
+    "country": "Thaïlande",
+    "fsParticipantId": "MVLlIidJ"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 9.75,
+      "closing": 9.75
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "EV8y2Ih3",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T04:55:00.000Z",
+   "home": {
+    "name": "Kim Dong Hun",
+    "country": "Corée du Sud",
+    "fsParticipantId": "bVLTSCU5"
+   },
+   "away": {
+    "name": "Ng T. Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "xMKXRWqC"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.35,
+      "closing": 2.7
+     },
+     "away": {
+      "opening": 1.31,
+      "closing": 1.22
+     }
+    }
+   }
+  },
+  {
+   "fsId": "YkvFoSwe",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T04:55:00.000Z",
+   "home": {
+    "name": "Ohori A.",
+    "country": "Japon",
+    "fsParticipantId": "j7qoJIOM"
+   },
+   "away": {
+    "name": "Sindhu P. V.",
+    "country": "Inde",
+    "fsParticipantId": "pUrkIxvT"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 4.6,
+      "closing": 3.7
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.09
+     }
+    }
+   }
+  },
+  {
+   "fsId": "SjnaEHDb",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T05:30:00.000Z",
+   "home": {
+    "name": "Hoyaux Y.",
+    "country": "France",
+    "fsParticipantId": "YRv56fc7"
+   },
+   "away": {
+    "name": "Kawakami S.",
+    "country": "Australie",
+    "fsParticipantId": "CIw95ECD"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 6,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 11.5,
+      "closing": 10.5
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "KnzBn8Ol",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T05:50:00.000Z",
+   "home": {
+    "name": "Wangcharoen K.",
+    "country": "Thaïlande",
+    "fsParticipantId": "rstwLvfA"
+   },
+   "away": {
+    "name": "Son W. H.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "CGpsKb9G"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.83,
+      "closing": 1.73
+     },
+     "away": {
+      "opening": 1.55,
+      "closing": 1.63
+     }
+    }
+   }
+  },
+  {
+   "fsId": "jHyFpHNS",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T05:50:00.000Z",
+   "home": {
+    "name": "Fikri M. S./Maulana B.",
+    "country": "Indonésie",
+    "fsParticipantId": "MmTlGZp0"
+   },
+   "away": {
+    "name": "Kusumawardana P./Rambitan Y. E. Y. Y.",
+    "country": "Australie",
+    "fsParticipantId": "0vShFg06"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.52,
+      "closing": 1.4
+     },
+     "away": {
+      "opening": 1.88,
+      "closing": 2.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "rR4E6TFK",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T06:05:00.000Z",
+   "home": {
+    "name": "Zilberman M.",
+    "country": "Israël",
+    "fsParticipantId": "ttYmaIll"
+   },
+   "away": {
+    "name": "Srikanth K.",
+    "country": "Inde",
+    "fsParticipantId": "AFxhbx4f"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 6,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 7.5,
+      "closing": 7.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "nPGkvF0d",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T06:05:00.000Z",
+   "home": {
+    "name": "Ong Y. S./Teo Ee Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "IiKDWfVt"
+   },
+   "away": {
+    "name": "Carnando L. R./Marthin D.",
+    "country": "Indonésie",
+    "fsParticipantId": "drJHVEpm"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.73,
+      "closing": 1.68
+     },
+     "away": {
+      "opening": 1.63,
+      "closing": 1.68
+     }
+    }
+   }
+  },
+  {
+   "fsId": "h0fl0Rhl",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T06:45:00.000Z",
+   "home": {
+    "name": "Naraoka K.",
+    "country": "Japon",
+    "fsParticipantId": "Y7tkJwtK"
+   },
+   "away": {
+    "name": "Christie J.",
+    "country": "Indonésie",
+    "fsParticipantId": "2sogIceQ"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 6.5,
+      "closing": 6.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "GlnBtzci",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T06:45:00.000Z",
+   "home": {
+    "name": "Yeo J. M.",
+    "country": "Singapour",
+    "fsParticipantId": "raaMXiD3"
+   },
+   "away": {
+    "name": "An S. Y.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "MkbQWBS9"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 8.5,
+      "closing": 7.25
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "dfbt1x89",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T06:45:00.000Z",
+   "home": {
+    "name": "Jin Y./Na S. S.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "6ePyRjaI"
+   },
+   "away": {
+    "name": "Kim J. H./Kim Y. H.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "pnOuQAEO"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.43,
+      "closing": 1.43
+     },
+     "away": {
+      "opening": 2.02,
+      "closing": 2.02
+     }
+    }
+   }
+  },
+  {
+   "fsId": "2obTHjKj",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T06:50:00.000Z",
+   "home": {
+    "name": "Hee Y. K. T./Loh K. H.",
+    "country": "Singapour",
+    "fsParticipantId": "zZeEZDri"
+   },
+   "away": {
+    "name": "Rankireddy S./Shetty C.",
+    "country": "Inde",
+    "fsParticipantId": "lx0IYXcc"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 5.9,
+      "closing": 5.3
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "QoUo5Dzo",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2022-04-07T07:30:00.000Z",
+   "home": {
+    "name": "Goh V S./Low J. S.",
+    "country": "Malaysie",
+    "fsParticipantId": "YLmeQllt"
+   },
+   "away": {
+    "name": "Kang M. H./Seo S. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "CCnaP83n"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 6,
+     "away": 21
+    },
+    {
+     "home": 20,
+     "away": 22
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.95,
+      "closing": 2.95
+     },
+     "away": {
+      "opening": 1.17,
+      "closing": 1.17
+     }
+    }
+   }
+  },
+  {
+   "fsId": "4tR6F2m7",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T02:10:00.000Z",
+   "home": {
+    "name": "Ong Y. S./Goh L. Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "2a6mw2um"
+   },
+   "away": {
+    "name": "Kim W. H./Jeong N. E.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "dM5ixMfg"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 23,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.9,
+      "closing": 3.3
+     },
+     "away": {
+      "opening": 1.18,
+      "closing": 1.13
+     }
+    }
+   }
+  },
+  {
+   "fsId": "MJQg27Vt",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T03:00:00.000Z",
+   "home": {
+    "name": "Srikanth K.",
+    "country": "Inde",
+    "fsParticipantId": "GAIy4v3n"
+   },
+   "away": {
+    "name": "Son W. H.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "AXHu3bIh"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.32,
+      "closing": 1.33
+     },
+     "away": {
+      "opening": 2.32,
+      "closing": 2.27
+     }
+    }
+   }
+  },
+  {
+   "fsId": "rXPAEM2D",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T03:25:00.000Z",
+   "home": {
+    "name": "Ko S. H./Eom H. W.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "8d9eytAa"
+   },
+   "away": {
+    "name": "Maulana A./Bandaso M. C.",
+    "country": "Indonésie",
+    "fsParticipantId": "2J8az0P5"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.12,
+      "closing": 1.21
+     },
+     "away": {
+      "opening": 3.35,
+      "closing": 2.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Cn6xyAFp",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T04:05:00.000Z",
+   "home": {
+    "name": "Ongbamrungphan B.",
+    "country": "Thaïlande",
+    "fsParticipantId": "OMjx5Qnm"
+   },
+   "away": {
+    "name": "Sindhu P. V.",
+    "country": "Inde",
+    "fsParticipantId": "Iqjt4p2g"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 4.6,
+      "closing": 5.3
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "KA2YfV6G",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T04:30:00.000Z",
+   "home": {
+    "name": "Ng T. Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "t0xQFs15"
+   },
+   "away": {
+    "name": "Weng H. Y.",
+    "country": "Chine",
+    "fsParticipantId": "zNyUE1GB"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.39,
+      "closing": 1.72
+     },
+     "away": {
+      "opening": 2.12,
+      "closing": 1.63
+     }
+    }
+   }
+  },
+  {
+   "fsId": "8jHTEpFn",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T05:00:00.000Z",
+   "home": {
+    "name": "Vitidsarn K.",
+    "country": "Thaïlande",
+    "fsParticipantId": "4YufD3cc"
+   },
+   "away": {
+    "name": "Christie J.",
+    "country": "Indonésie",
+    "fsParticipantId": "CbubCNC3"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.73,
+      "closing": 1.73
+     },
+     "away": {
+      "opening": 1.63,
+      "closing": 1.63
+     }
+    }
+   }
+  },
+  {
+   "fsId": "h0SsHFOB",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T05:25:00.000Z",
+   "home": {
+    "name": "Rivaldy R./Mentari P. H.",
+    "country": "Indonésie",
+    "fsParticipantId": "OjSFTl8j"
+   },
+   "away": {
+    "name": "Midorikawa H./Saito N.",
+    "country": "Japon",
+    "fsParticipantId": "C6LchYpi"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.19,
+      "closing": 1.22
+     },
+     "away": {
+      "opening": 2.85,
+      "closing": 2.7
+     }
+    }
+   }
+  },
+  {
+   "fsId": "bRpTSCNN",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T06:20:00.000Z",
+   "home": {
+    "name": "Intanon R.",
+    "country": "Thaïlande",
+    "fsParticipantId": "ShUooWeE"
+   },
+   "away": {
+    "name": "Chochuwong Po.",
+    "country": "Thaïlande",
+    "fsParticipantId": "MFTkpjBK"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.47,
+      "closing": 1.47
+     },
+     "away": {
+      "opening": 1.97,
+      "closing": 1.95
+     }
+    }
+   }
+  },
+  {
+   "fsId": "8CtMLwAt",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T07:30:00.000Z",
+   "home": {
+    "name": "Svendsen V.",
+    "country": "Danemark",
+    "fsParticipantId": "n9ZzHBOp"
+   },
+   "away": {
+    "name": "Rhustavito S. H.",
+    "country": "Indonésie",
+    "fsParticipantId": "0CNIue1o"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.67,
+      "closing": 3.1
+     },
+     "away": {
+      "opening": 1.23,
+      "closing": 1.15
+     }
+    }
+   }
+  },
+  {
+   "fsId": "vHCPFQat",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T07:50:00.000Z",
+   "home": {
+    "name": "Kawakami S.",
+    "country": "Australie",
+    "fsParticipantId": "Cvg8k05j"
+   },
+   "away": {
+    "name": "An S. Y.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "QssjEqri"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 7,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 6,
+      "closing": 7.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "bqIXFH3O",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T08:40:00.000Z",
+   "home": {
+    "name": "Jin Y. J./Wong J. Y. C.",
+    "country": "Singapour",
+    "fsParticipantId": "0Il58rBI"
+   },
+   "away": {
+    "name": "Jeong N. E./Kim H. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "xrCYjGuo"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 14,
+      "closing": 10.5
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "UuIKT7Q7",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T09:00:00.000Z",
+   "home": {
+    "name": "Alfian F./Ardianto M. R.",
+    "country": "Indonésie",
+    "fsParticipantId": "Cz5v3Dzq"
+   },
+   "away": {
+    "name": "Ong Y. S./Teo Ee Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "6c4r2Xkk"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 22,
+     "away": 20
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.43,
+      "closing": 1.45
+     },
+     "away": {
+      "opening": 2.02,
+      "closing": 1.99
+     }
+    }
+   }
+  },
+  {
+   "fsId": "MFECVTee",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T09:30:00.000Z",
+   "home": {
+    "name": "Choi S. G./Kim W. H.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "rw61Aer9"
+   },
+   "away": {
+    "name": "Ahsan M./Setiawan H.",
+    "country": "Indonésie",
+    "fsParticipantId": "x0559FcF"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.97,
+      "closing": 1.93
+     },
+     "away": {
+      "opening": 1.45,
+      "closing": 1.48
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Qyq7Zpqg",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T09:55:00.000Z",
+   "home": {
+    "name": "Jang Y. N./Jung K. E.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "Srkimlch"
+   },
+   "away": {
+    "name": "Jang Eun Seo/Kim H. R.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "QT7fn8Cb"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 29,
+     "away": 30
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.27,
+      "closing": 1.15
+     },
+     "away": {
+      "opening": 2.47,
+      "closing": 3.15
+     }
+    }
+   }
+  },
+  {
+   "fsId": "t8NSGclI",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2022-04-08T11:10:00.000Z",
+   "home": {
+    "name": "Ponnappa A./Reddy N. S.",
+    "country": "Inde",
+    "fsParticipantId": "fLocA4t6"
+   },
+   "away": {
+    "name": "Eom H. W./Kim B. R.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "6ek19OeC"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.9,
+      "closing": 3.75
+     },
+     "away": {
+      "opening": 1.18,
+      "closing": 1.08
+     }
+    }
+   }
+  },
+  {
+   "fsId": "AVRLjiSc",
+   "disc": "WS",
+   "round": "Demi-finales",
+   "startUtc": "2022-04-09T03:00:00.000Z",
+   "home": {
+    "name": "Sindhu P. V.",
+    "country": "Inde",
+    "fsParticipantId": "82rQQnDe"
+   },
+   "away": {
+    "name": "An S. Y.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "ngsUP6S1"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.35,
+      "closing": 3.7
+     },
+     "away": {
+      "opening": 1.31,
+      "closing": 1.09
+     }
+    }
+   }
+  },
+  {
+   "fsId": "lMQPkBs4",
+   "disc": "WS",
+   "round": "Demi-finales",
+   "startUtc": "2022-04-09T04:00:00.000Z",
+   "home": {
+    "name": "Kim G. E.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "8MYJnUZE"
+   },
+   "away": {
+    "name": "Chochuwong Po.",
+    "country": "Thaïlande",
+    "fsParticipantId": "IV0mV14s"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.68,
+      "closing": 2.15
+     },
+     "away": {
+      "opening": 1.68,
+      "closing": 1.38
+     }
+    }
+   }
+  },
+  {
+   "fsId": "08pTwjWI",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "startUtc": "2022-04-09T05:25:00.000Z",
+   "home": {
+    "name": "Christie J.",
+    "country": "Indonésie",
+    "fsParticipantId": "CbHBZnLn"
+   },
+   "away": {
+    "name": "Srikanth K.",
+    "country": "Inde",
+    "fsParticipantId": "jkGFY6zg"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.47,
+      "closing": 1.45
+     },
+     "away": {
+      "opening": 1.97,
+      "closing": 1.97
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OxEU5NX1",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "startUtc": "2022-04-09T06:25:00.000Z",
+   "home": {
+    "name": "Kang M. H./Seo S. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "b5IWNvb7"
+   },
+   "away": {
+    "name": "Ahsan M./Setiawan H.",
+    "country": "Indonésie",
+    "fsParticipantId": "C8MzNbDD"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.97,
+      "closing": 2.07
+     },
+     "away": {
+      "opening": 1.47,
+      "closing": 1.42
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Ozy41mPI",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "startUtc": "2022-04-09T07:30:00.000Z",
+   "home": {
+    "name": "Svendsen V.",
+    "country": "Danemark",
+    "fsParticipantId": "APiWyDLd"
+   },
+   "away": {
+    "name": "Weng H. Y.",
+    "country": "Chine",
+    "fsParticipantId": "OSezyXz3"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.85,
+      "closing": 3.8
+     },
+     "away": {
+      "opening": 1.19,
+      "closing": 1.08
+     }
+    }
+   }
+  },
+  {
+   "fsId": "MDHABVcm",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "startUtc": "2022-04-09T08:30:00.000Z",
+   "home": {
+    "name": "Fikri M. S./Maulana B.",
+    "country": "Indonésie",
+    "fsParticipantId": "CbsWeN96"
+   },
+   "away": {
+    "name": "Alfian F./Ardianto M. R.",
+    "country": "Indonésie",
+    "fsParticipantId": "tYozesPC"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 9,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.68,
+      "closing": 1.88
+     },
+     "away": {
+      "opening": 1.68,
+      "closing": 1.52
+     }
+    }
+   }
+  },
+  {
+   "fsId": "CAKPjt4U",
+   "disc": "WD",
+   "round": "Demi-finales",
+   "startUtc": "2022-04-09T08:35:00.000Z",
+   "home": {
+    "name": "Jang Y. N./Jung K. E.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "U5CPLLid"
+   },
+   "away": {
+    "name": "Jeong N. E./Kim H. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "r907p5Ud"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 23
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.58,
+      "closing": 1.58
+     },
+     "away": {
+      "opening": 1.78,
+      "closing": 1.78
+     }
+    }
+   }
+  },
+  {
+   "fsId": "lpLjO74S",
+   "disc": "XD",
+   "round": "Finale",
+   "startUtc": "2022-04-10T02:00:00.000Z",
+   "home": {
+    "name": "Ko S. H./Eom H. W.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "d4MXVcqo"
+   },
+   "away": {
+    "name": "Tan Kian M./Lai P. J.",
+    "country": "Malaysie",
+    "fsParticipantId": "A7AFfsMo"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.27,
+      "closing": 2.02
+     },
+     "away": {
+      "opening": 1.33,
+      "closing": 1.43
+     }
+    }
+   }
+  },
+  {
+   "fsId": "phvbOSLP",
+   "disc": "WS",
+   "round": "Finale",
+   "startUtc": "2022-04-10T03:10:00.000Z",
+   "home": {
+    "name": "Chochuwong Po.",
+    "country": "Thaïlande",
+    "fsParticipantId": "2k9jjd5t"
+   },
+   "away": {
+    "name": "An S. Y.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "WODfkGKn"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 4.1,
+      "closing": 4.4
+     },
+     "away": {
+      "opening": 1.06,
+      "closing": 1.04
+     }
+    }
+   }
+  },
+  {
+   "fsId": "lpq5D580",
+   "disc": "MS",
+   "round": "Finale",
+   "startUtc": "2022-04-10T04:15:00.000Z",
+   "home": {
+    "name": "Weng H. Y.",
+    "country": "Chine",
+    "fsParticipantId": "OfSLUcdn"
+   },
+   "away": {
+    "name": "Christie J.",
+    "country": "Indonésie",
+    "fsParticipantId": "IHRPTHBh"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 3.25,
+      "closing": 3.3
+     },
+     "away": {
+      "opening": 1.13,
+      "closing": 1.13
+     }
+    }
+   }
+  }
+ ]
 }

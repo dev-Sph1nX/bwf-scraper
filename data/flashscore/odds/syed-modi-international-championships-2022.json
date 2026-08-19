@@ -1,6 +1,6 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-08-19T10:17:39.816Z",
+ "fetchedAt": "2026-08-19T11:04:30.108Z",
  "tournamentSlug": "syed-modi-international-championships-2022",
  "books": [
   "betclic",
@@ -9,9 +9,49 @@
  ],
  "stats": {
   "scanned": 148,
-  "withOdds": 0,
-  "from": null,
-  "to": null
+  "withOdds": 1,
+  "from": "2022-01-19",
+  "to": "2022-01-19"
  },
- "matches": []
+ "matches": [
+  {
+   "fsId": "QcvlNg3m",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2022-01-19T07:25:00.000Z",
+   "home": {
+    "name": "Deswal G./Kaushik A.",
+    "country": "Inde",
+    "fsParticipantId": "Wlk30bLF"
+   },
+   "away": {
+    "name": "M.R. Arjun/Jolly T.",
+    "country": "Inde",
+    "fsParticipantId": "QBl7aIzM"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 8,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 15,
+      "closing": 14
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  }
+ ]
 }
