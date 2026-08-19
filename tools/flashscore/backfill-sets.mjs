@@ -135,17 +135,44 @@ async function existe(p) {
 async function collecte(slug) {
   const src = JSON.parse(await readFile(join(SRC_DIR, `${slug}.json`), "utf8"));
   const matchs = (src.matches || []).filter((m) => m.fsId);
+
+  // FILET DE SÉCURITÉ — une réécriture ne doit JAMAIS faire perdre des cotes
+  // déjà collectées. L'endpoint renvoie parfois HTTP 200 avec un corps SANS
+  // marché quand il limite le débit : sur une seule réponse, c'est
+  // indiscernable d'un vrai « ce match n'a pas de cotes archivées », et
+  // getJson ne réessaie que sur exception. Constaté le 2026-08-19 : une passe
+  // de réécriture a fait tomber arctic-open-2024 de 106 à 79 matchs cotés,
+  // alors que 10 des 27 « perdus », réinterrogés, étaient toujours servis —
+  // soit ~18 % de destruction silencieuse. On fusionne donc désormais : une
+  // nouvelle collecte ENRICHIT, elle ne retire rien.
+  const ancien = new Map();
+  try {
+    const prev = JSON.parse(await readFile(join(OUT_DIR, `${slug}.json`), "utf8"));
+    for (const m of prev.matches || []) if (m.scores || m.points) ancien.set(m.fsId, m);
+  } catch { /* pas de collecte antérieure : rien à préserver */ }
+
   const out = [];
-  let avecScores = 0;
+  let avecScores = 0, preserves = 0;
   for (const [i, m] of matchs.entries()) {
     let marches = null;
-    try {
-      marches = extraireMarches(await getJson(
-        `https://global.ds.lsapp.eu/pq_graphql?_hash=oce&eventId=${m.fsId}` +
-        `&projectId=16&geoIpCode=FR&geoIpSubdivisionCode=IDF`,
-      ));
-    } catch {
-      marches = null; // match sans cotes archivées : normal, on le note à null
+    // Deux tentatives quand la réponse est VIDE (et non en erreur) : si le
+    // second appel ramène un marché, le premier vide était un throttle.
+    for (let essai = 1; essai <= 2 && !marches; essai++) {
+      try {
+        marches = extraireMarches(await getJson(
+          `https://global.ds.lsapp.eu/pq_graphql?_hash=oce&eventId=${m.fsId}` +
+          `&projectId=16&geoIpCode=FR&geoIpSubdivisionCode=IDF`,
+        ));
+      } catch {
+        marches = null; // match sans cotes archivées : normal, on le note à null
+      }
+      if (!marches && essai === 1) await pause(1200);
+    }
+    // Rien de neuf, mais on avait déjà quelque chose : on garde l'ancien.
+    const garde = ancien.get(m.fsId);
+    if (garde && !marches?.scores && !marches?.points) {
+      marches = { scores: garde.scores ?? null, points: garde.points ?? null };
+      preserves++;
     }
     if (marches?.scores && Object.keys(marches.scores).length) avecScores++;
     out.push({
@@ -171,11 +198,11 @@ async function collecte(slug) {
       source: "flashscore.fr (GraphQL oce — CORRECT_SCORE + OVER_UNDER)",
       fetchedAt: new Date().toISOString(),
       tournamentSlug: slug,
-      stats: { matchs: out.length, avecScores },
+      stats: { matchs: out.length, avecScores, preserves },
       matches: out,
     }, null, 1) + "\n",
   );
-  return { n: out.length, avecScores };
+  return { n: out.length, avecScores, preserves };
 }
 
 await mkdir(OUT_DIR, { recursive: true });
@@ -184,18 +211,23 @@ const slugs = ONLY.length
   : (await readdir(SRC_DIR)).filter((f) => f.endsWith(".json") && f !== "_index.json").map((f) => f.slice(0, -5));
 
 console.log(`Collecte des cotes « sets » — ${slugs.length} tournois`);
-let totalMatchs = 0, totalScores = 0;
+let totalMatchs = 0, totalScores = 0, totalPreserves = 0;
 for (const slug of slugs) {
   if (SKIP_EXISTING && await existe(join(OUT_DIR, `${slug}.json`))) {
     console.log(`   ⏭  ${slug} (déjà collecté)`);
     continue;
   }
   try {
-    const { n, avecScores } = await collecte(slug);
-    totalMatchs += n; totalScores += avecScores;
-    console.log(`   ✅ ${slug.padEnd(38)} ${String(avecScores).padStart(4)}/${String(n).padEnd(4)} matchs avec cotes de sets`);
+    const { n, avecScores, preserves } = await collecte(slug);
+    totalMatchs += n; totalScores += avecScores; totalPreserves += preserves;
+    console.log(
+      `   ✅ ${slug.padEnd(38)} ${String(avecScores).padStart(4)}/${String(n).padEnd(4)} matchs avec cotes de sets` +
+      // Un compteur non nul = l'endpoint a renvoyé du vide là où on avait déjà
+      // des cotes : throttle probable. Sans la fusion, ces cotes seraient perdues.
+      (preserves ? `  (${preserves} préservées d'une collecte antérieure)` : ""),
+    );
   } catch (e) {
     console.log(`   ⚠  ${slug} : ${e.message}`);
   }
 }
-console.log(`\nTotal : ${totalScores}/${totalMatchs} matchs avec cotes « score exact en sets ».`);
+console.log(`\nTotal : ${totalScores}/${totalMatchs} matchs avec cotes « score exact en sets »` + (totalPreserves ? ` (dont ${totalPreserves} préservées d'une collecte antérieure — réponses vides de l'endpoint)` : "") + ".");
