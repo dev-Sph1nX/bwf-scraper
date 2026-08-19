@@ -44,6 +44,16 @@ const args = process.argv.slice(2);
 const SEUILS = (args.find((a) => a.startsWith("--seuils=")) || "")
   .split("=")[1]?.split(",").map(Number) ?? [0, 0.03, 0.05];
 
+// Opérateurs MISABLES (lib/roi.mjs BOOKS). Depuis le 2026-08-19, la collecte
+// peut aussi porter des cotes de RÉFÉRENCE (bwin, NetBet — écartés du périmètre
+// de pari, §10.5) : sans ce filtre, la boucle `Object.entries(pts)` plus bas les
+// traiterait comme des lignes jouables et gonflerait le ROI de cette étude.
+// Le filtre est un NO-OP sur les données d'avant cette date (3 opérateurs).
+// --tous-operateurs : les inclut volontairement, pour une mesure de référence
+// (ne JAMAIS comparer un tel run aux chiffres publiés du §10.4).
+const MISABLES = ["betclic", "winamax", "unibet"];
+const TOUS_OPERATEURS = args.includes("--tous-operateurs");
+
 const DISCIPLINES = ["MS", "WS", "MD", "WD", "XD"];
 const pct = (x) => `${(x * 100).toFixed(1)} %`;
 const pctSigne = (x) => `${x >= 0 ? "+" : ""}${(x * 100).toFixed(1)} %`;
@@ -208,6 +218,7 @@ for (const r of rows) {
   const lois = loisParMois.get(r.mois);
   if (!pts || p3 == null || !lois) continue;
   for (const [op, lignes] of Object.entries(pts)) {
+    if (!TOUS_OPERATEURS && !MISABLES.includes(op)) continue; // cotes de référence : hors ROI
     for (const quand of ["closing", "opening"]) {
       for (const l of lignesDe(lignes, quand)) {
         const nous = p3 * lois(r.disc, 1, l.N) + (1 - p3) * lois(r.disc, 0, l.N);

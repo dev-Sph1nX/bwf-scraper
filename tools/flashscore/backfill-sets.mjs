@@ -48,12 +48,24 @@ const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36";
 
+// Opérateurs retenus à la COLLECTE — les 3 misables, plus bwin et NetBet comme
+// cotes de RÉFÉRENCE (décision du propriétaire du 2026-08-19, motif identique à
+// backfill-odds.mjs et à Pinnacle : « collecter tout, filtrer à l'analyse »,
+// §10.5). Sur les saisons anciennes ils sont parfois les SEULS à coter.
+//
+// LES ANALYSES DOIVENT FILTRER. Elles le font déjà : mesure-roi-sets.mjs,
+// mesure-gymnase-prix-sets.mjs et mesure-rentabilite-gymnase.mjs ont leur
+// constante OPERATEURS à 3 ; mesure-total-points.mjs a reçu le même filtre le
+// 2026-08-19 (il parcourait tous les opérateurs). Toute NOUVELLE analyse de ces
+// données doit décider explicitement ce qu'elle inclut.
 const BOOK_KEY = (name) => {
   const n = String(name).toLowerCase();
   if (n.includes("betclic")) return "betclic";
   if (n.includes("winamax")) return "winamax";
   if (n.includes("unibet")) return "unibet";
-  return null; // hors des 3 opérateurs misables
+  if (n.includes("bwin")) return "bwin";
+  if (n.includes("netbet")) return "netbet";
+  return null;
 };
 
 const pause = (ms) => new Promise((r) => setTimeout(r, ms));
