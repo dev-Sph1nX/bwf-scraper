@@ -89,7 +89,7 @@ Chacun a été tranché par une mesure ; le détail est au journal.
 | Backtest, baselines, forme, face-à-face | l'Elo bat le classement mondial ; forme et H2H écartés | §1.1, §1.4, §2 |
 | Calibration | corrigée là où c'était démontré (disciplines féminines) | §1.3 |
 | Fraîcheur | effet réel mais inexploitable (13 % des matchs, collinéaire) | §2.4 |
-| ROI rétrospectif et hors échantillon 2024-2025 | suivre les pronos perd ; « WS+XD exploitables » rejetée, « parier à l'ouverture » confirmée | §8, §8.4 |
+| ROI rétrospectif et hors échantillon 2024-2025 | suivre les pronos perd ; « WS+XD exploitables » rejetée, « parier à l'ouverture » confirmée ; dernier tiroir « WS ≥ 80 % » fermé sur 2026 complet | §8, §8.4, §10.11 |
 | Âge, main dominante, terrain, Elo à marge de points | signaux parfois réels, tous **non départageables** au banc | §9.3-§9.6 |
 | Marché « nombre de sets » + effet gymnase | hypothèse **retournée** : marché plus cher (17-29 %), mieux prédit par le marché que par nous ; l'effet gymnase ne se transporte pas | §10 |
 | Catégorie du tournoi | gradient descriptif réel, apport **nul** au banc (déjà capté par le classement) | §10.1 |

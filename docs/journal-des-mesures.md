@@ -1853,3 +1853,37 @@ recombinaison des existantes), ou 10× plus de données.
 Note honnête : le ROI absolu value clôture du résiduel (−6,03 %) est le moins
 mauvais jamais affiché au banc — c'est l'artefact de surconfiance ci-dessus,
 pas un signal : non significatif apparié, et toujours négatif.
+
+## 10.11 Dernier tiroir de H1 : « favori WS à confiance ≥ 80 % » sur 2026 complet — rien, tiroir fermé (2026-08-19)
+
+La seule case encore verte de l'hypothèse H1 (§8.3, posée par le propriétaire) :
+en 2026 partiel (arrêt au 04/08), le favori WS à confiance ≥ 80 % affichait
++1,3 % [−3,5 ; +5,5] (§8.1) — déjà rejetée hors échantillon sur 2024-2025
+(§8.4). Restait à la juger sur 2026 complété. Mesure désormais SCRIPTÉE :
+`node measures/mesure-ws-favori-80.mjs` (filtre du journal `roi.json .bets`,
+confiance = proba repliée sur le camp misé, IC bootstrap graine 42). Contrôle
+de méthode : la reconstitution « 2026 arrêté au 04/08 » retombe EXACTEMENT sur
+§8.1 (n=176, +1,3 %).
+
+| WS favori ≥ 80 %, clôture | n | ROI | IC 95 % |
+|---|---|---|---|
+| 2024 | 173 | −6,8 % | [−12,7 ; −1,7] |
+| 2025 | 341 | −1,5 % | [−4,7 ; +1,7] |
+| 2026 (complet à date) | 184 | +1,3 % | [−3,5 ; +5,5] |
+| **Total 2024-2026** | **698** | **−2,1 %** | **[−4,5 ; +0,2]** |
+
+À l'ouverture (le meilleur instant prouvé, §8.4) : total −0,8 % [−3,6 ; +1,5].
+
+**Verdict : fermé.** Sur l'échantillon complet, la case est négative en
+estimation ponctuelle et son IC plafonne à **+0,2 %** (clôture) / +1,5 %
+(ouverture) : même dans la lecture la plus favorable, elle ne peut pas
+approcher les +3 % qui seraient nécessaires pour seulement égaler notre CLV —
+encore moins franchir un péage. Le +1,3 % de 2026 était du bruit dans son
+propre IC, pas une anomalie à confirmer. H1 est morte dans son intégralité :
+aucune sélection par discipline × confiance ne survit.
+
+Note de traçabilité : §8.4 citait n=264 pour cette case sur 2024-2025 ; le
+journal de paris régénéré depuis (backfill classements, recalculs) en donne
+n=514, pour un ROI de même signe et d'ordre voisin (−3,3 % vs −4,4 %). La
+mesure n'était alors pas scriptée ; elle l'est désormais, et c'est le script
+qui fait référence.
