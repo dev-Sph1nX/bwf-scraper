@@ -63,7 +63,7 @@ for (const [disc, m] of Object.entries(initRanks)) {
   for (const [key, rank] of m) { sm.set(key, seedEloByRank(rank)); seededCount++; }
   seeds[disc] = sm;
 }
-console.log(`   Seed initial : ${seededCount} entités depuis le classement mondial (data/seeds/)`);
+console.log(`   Seed initial : ${seededCount} entités depuis la publication la plus ancienne (data/rankings/)`);
 
 // Équipe allégée pour l'affichage (matchs à venir, pronostics par tournoi).
 const teamLite = (team, seed) => ({
