@@ -11,22 +11,26 @@
 //   export/matches.csv  une ligne par match JOUÉ : identité du match, résultat
 //                       détaillé, et le classement mondial des deux camps.
 //   export/players.csv  une ligne par JOUEUR apparaissant dans matches.csv :
-//                       état civil, physique, bilan de carrière, classement.
+//                       identité et biologie SEULEMENT (ni agrégat, ni classement).
 //   export/cotes.csv    une ligne par match × opérateur : les trois marchés
 //                       (vainqueur, score exact, total de points) à l'ouverture
-//                       ET à la clôture, plus les indicateurs dérivés utiles à
-//                       une analyse de prédiction (marge, probas dé-viguées,
-//                       dérive du marché, écart entre marchés).
+//                       ET à la clôture. PRIX BRUTS uniquement : aucune marge,
+//                       aucune probabilité dé-viguée (cf. lib/export-schema.mjs).
 //   export/cotes-totaux.csv  l'échelle complète des lignes over/under, qu'une
 //                       ligne par opérateur ne peut pas porter (58 % des
 //                       couples match × opérateur en ont plusieurs).
 //   export/README.md    le dictionnaire des colonnes (unités, pièges, trous).
 //
-// PÉRIMÈTRE. Demande du propriétaire (2026-08-20) : les prédictions du MODÈLE
-// (Elo, probabilités calibrées) restent HORS export — elles appartiennent à la
-// chaîne du projet (build-data, backtest). Les cotes, elles, sont exportées :
-// ce sont des données de marché observées, la matière d'une analyse de
-// prédiction. Ne pas rajouter les colonnes de modèle « au cas où ».
+// PÉRIMÈTRE : FAITS OBSERVÉS SEULEMENT. Cet export est la seule surface
+// d'analyse, donc tout ce qui y figure sera pris pour un fait. En sont bannis,
+// et le bannissement est vérifié par test (test/export-schema.test.mjs) :
+//   - les prédictions du modèle du projet (Elo, probabilités calibrées) ;
+//   - les probabilités et marges implicites — une cote est un prix, donc un
+//     fait ; une probabilité suppose une normalisation de la marge non mesurée ;
+//   - les agrégats de carrière — ils résument toute la période, donc décrire un
+//     match ancien avec eux fuite le futur.
+// Tout cela se recalcule depuis les colonnes conservées. Ne rien rajouter
+// « au cas où » : la liste vit dans lib/export-schema.mjs.
 //
 // ANTI-FUITE SUR LE CLASSEMENT : dans matches.csv, `rang1`/`rang2` sont lus dans
 // la dernière publication ANTÉRIEURE au match, jamais celle qui l'a suivi (le
@@ -47,6 +51,9 @@ import { isWalkover, makeRankLookup } from "../lib/dataset.mjs";
 import { loadPublications, buildPlayerRankHistory } from "../lib/rank-history.mjs";
 import { loadFlashscoreOdds, joinFlashscore } from "../lib/flashscore-join.mjs";
 import { BOOKS as MISABLES } from "../lib/roi.mjs";
+import {
+  MATCH_COLS, PLAYER_COLS, ODDS_COLS, TOTALS_COLS, assertPur,
+} from "../lib/export-schema.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const arg = (n) => (process.argv.find((x) => x.startsWith(`--${n}=`)) || "").split("=")[1] || null;
@@ -152,6 +159,8 @@ await computeElo(annees, {}, {
     const commun = { disc, jour, saison, tmtId };
     noteJoueurs(match.team1?.players, { ...commun, gagne: match.winner === 1, pour: pts1, contre: pts2 });
     noteJoueurs(match.team2?.players, { ...commun, gagne: match.winner === 2, pour: pts2, contre: pts1 });
+    const r1 = rangDe(jour, disc, a.key);
+    const r2 = rangDe(jour, disc, b.key);
     rows.push({
       cle: `${tmtId}|${disc}|${jour}|${a.key}|${b.key}`,
       tmtId, disc, jour,
@@ -173,8 +182,10 @@ await computeElo(annees, {}, {
       points1: pts1, points2: pts2,
       duree: Number(match.duration) || null,
       // Dernière publication ANTÉRIEURE au match (cf. en-tête : anti-fuite).
-      rang1: rangDe(jour, disc, a.key)?.rank ?? null,
-      rang2: rangDe(jour, disc, b.key)?.rank ?? null,
+      // `at` = date de la publication effectivement lue : exportée pour que
+      // l'absence de fuite se vérifie au lieu de se croire.
+      rang1: r1?.rank ?? null, rang1Date: r1?.at ?? null,
+      rang2: r2?.rank ?? null, rang2Date: r2?.at ?? null,
     });
   },
 });
@@ -183,13 +194,7 @@ console.log(`   ${rows.length} matchs joués exploitables, ${joueurs.size} joueu
 // ==============================================================================
 // 3) Écriture de matches.csv
 // ==============================================================================
-const COLS = [
-  "match_id", "date", "datetime_utc", "saison", "discipline", "tour",
-  "tournoi_id", "tournoi", "lieu", "pays_tournoi",
-  "equipe1_id", "equipe1", "pays1", "equipe2_id", "equipe2", "pays2",
-  "vainqueur", "score", "manches", "points1", "points2", "duree_min",
-  "rang1", "rang2",
-];
+const COLS = assertPur(MATCH_COLS, "matches.csv");
 
 await mkdir(OUT_DIR, { recursive: true });
 const lignes = [ligne(COLS)];
@@ -206,7 +211,7 @@ for (const r of rows) {
     r.tmtId, r.tournoi, r.lieu, r.paysTournoi,
     r.a, r.equipe1, r.pays1, r.b, r.equipe2, r.pays2,
     r.vainqueur, r.score, r.manches, r.points1, r.points2, r.duree,
-    r.rang1, r.rang2,
+    r.rang1, r.rang1Date, r.rang2, r.rang2Date,
   ]));
 }
 await writeFile(join(OUT_DIR, "matches.csv"), lignes.join("\n") + "\n", "utf8");
@@ -245,15 +250,7 @@ const dernierePub = publications.at(-1)?.date ?? null;
 /** L'avatar BWF est parfois un dessin générique : ce n'est pas une photo. */
 const vraiePhoto = (u) => (u && !/profile_(male|female)\./i.test(u) ? u : null);
 
-const P_COLS = [
-  "player_id", "nom", "prenom", "nom_famille", "slug", "pays",
-  "date_naissance", "main", "taille_cm", "source_bio", "photo_url",
-  "matchs", "victoires", "defaites", "taux_victoire",
-  "matchs_simple", "matchs_double", "disciplines", "tournois",
-  "premier_match", "dernier_match", "saisons", "points_gagnes", "points_concedes",
-  "rang_actuel", "rang_actuel_discipline", "points_actuels",
-  "meilleur_rang_depuis_2024", "meilleur_rang_discipline", "meilleur_rang_date",
-];
+const P_COLS = assertPur(PLAYER_COLS, "players.csv");
 
 // Tri par volume de matchs décroissant : les joueurs qui comptent en premier,
 // comme players.json de l'app. Un CSV ouvert dans Excel devient lisible d'emblée.
@@ -268,17 +265,6 @@ for (const f of fiches) {
   const photo = vraiePhoto(f.p.avatar?.thumbnailUrl);
   const h = rangHist[f.id] ?? [];
 
-  // Meilleur rang jamais atteint DANS L'ARCHIVE (2024+), pas de la carrière.
-  let best = null;
-  for (const e of h) if (!best || e.rank < best.rank) best = e;
-  // Rang « actuel » = celui de la dernière publication de l'archive. Un joueur
-  // sorti du classement n'y figure pas : colonne vide, ce qui est l'information.
-  let actuel = null;
-  for (const e of h) {
-    if (e.t !== dernierePub) continue;
-    if (!actuel || e.rank < actuel.rank) actuel = e;
-  }
-
   appTot += f.matchs;
   if (b.dob) { cptBio.dob++; cptApp.dob += f.matchs; }
   if (b.hand) { cptBio.main++; cptApp.main += f.matchs; }
@@ -290,13 +276,6 @@ for (const f of fiches) {
     f.id, f.p.nameDisplay, f.p.firstName, f.p.lastName, f.p.slug,
     /\/([A-Z]{3})\.png/.exec(f.p.countryFlagUrl || "")?.[1] ?? f.p.countryCode ?? null,
     b.dob ?? null, b.hand ?? null, b.height ?? null, b.source ?? null, photo,
-    f.matchs, f.v, f.matchs - f.v, r4(f.v / f.matchs),
-    f.simple, f.double,
-    [...f.disc].sort().join(";"), f.tmt.size,
-    f.premier, f.dernier, [...f.saisons].sort().join(";"),
-    f.pour, f.contre,
-    actuel?.rank ?? null, actuel?.disc ?? null, actuel?.points ?? null,
-    best?.rank ?? null, best?.disc ?? null, best?.t ?? null,
   ]));
 }
 await writeFile(join(OUT_DIR, "players.csv"), pLignes.join("\n") + "\n", "utf8");
@@ -377,25 +356,8 @@ function devigGroupe(parts, cotes) {
 const CS = ["2-0", "2-1", "1-2", "0-2"];
 const MIROIR = { "2-0": "0-2", "2-1": "1-2", "1-2": "2-1", "0-2": "2-0" };
 
-const C_COLS = [
-  "match_id", "date", "discipline", "fs_id", "book", "misable",
-  "vainqueur", "manches", "points_total",
-  "cote1_ouverture", "cote1_cloture", "cote2_ouverture", "cote2_cloture",
-  "marge_ouverture", "marge_cloture",
-  "proba1_ouverture", "proba1_cloture", "derive_proba1",
-  "cs_2_0_ouverture", "cs_2_0_cloture", "cs_2_1_ouverture", "cs_2_1_cloture",
-  "cs_1_2_ouverture", "cs_1_2_cloture", "cs_0_2_ouverture", "cs_0_2_cloture",
-  "marge_manches_cloture", "proba_3manches_cloture",
-  "proba1_manches_cloture", "ecart_proba1_manches",
-  "total_ligne", "cote_over_ouverture", "cote_over_cloture",
-  "cote_under_ouverture", "cote_under_cloture", "proba_over_cloture", "total_lignes",
-];
-const T_COLS = [
-  "match_id", "date", "book", "misable", "total",
-  "cote_over_ouverture", "cote_over_cloture",
-  "cote_under_ouverture", "cote_under_cloture",
-  "proba_over_cloture", "points_total", "resultat_over",
-];
+const C_COLS = assertPur(ODDS_COLS, "cotes.csv");
+const T_COLS = assertPur(TOTALS_COLS, "cotes-totaux.csv");
 
 const cLignes = [ligne(C_COLS)];
 const tLignes = [ligne(T_COLS)];
@@ -437,7 +399,8 @@ for (const r of rows) {
     const misable = MISABLES.includes(op);
 
     // --- marché vainqueur ---------------------------------------------------
-    const pO = devig(b.open1, [b.open1, b.open2]);
+    // Seule sert encore au diagnostic de calibration publié dans le README :
+    // aucune probabilité n'est exportée.
     const pC = devig(b.odd1, [b.odd1, b.odd2]);
 
     // --- score exact, remis dans NOTRE orientation --------------------------
@@ -447,7 +410,6 @@ for (const r of rows) {
     };
     const csC = CS.map((sc) => cs(sc, "closing"));
     const p3 = devigGroupe([csC[1], csC[2]], csC);          // 2-1 ou 1-2
-    const p1m = devigGroupe([csC[0], csC[1]], csC);          // 2-0 ou 2-1
 
     // --- total de points : l'échelle complète, puis la ligne principale -----
     // Ligne principale = celle dont les deux prix de clôture sont les plus
@@ -466,7 +428,7 @@ for (const r of rows) {
       const pOver = devig(e.oC, [e.oC, e.uC]);
       tLignes.push(ligne([
         r.cle, r.jour, op, misable, total,
-        r2(e.oO), r2(e.oC), r2(e.uO), r2(e.uC), r4(pOver),
+        r2(e.oO), r2(e.oC), r2(e.uO), r2(e.uC),
         ptsTotal, ptsTotal > total ? 1 : 0,
       ]));
       nTotaux++;
@@ -479,16 +441,12 @@ for (const r of rows) {
       r.cle, r.jour, r.disc, j.fsId, op, misable,
       r.vainqueur, r.manches, ptsTotal,
       r2(b.open1), r2(b.odd1), r2(b.open2), r2(b.odd2),
-      r4(marge([b.open1, b.open2])), r4(marge([b.odd1, b.odd2])),
-      r4(pO), r4(pC), r4(pC != null && pO != null ? pC - pO : null),
       r2(cs("2-0", "opening")), r2(csC[0]), r2(cs("2-1", "opening")), r2(csC[1]),
       r2(cs("1-2", "opening")), r2(csC[2]), r2(cs("0-2", "opening")), r2(csC[3]),
-      r4(marge(csC)), r4(p3),
-      r4(p1m), r4(p1m != null && pC != null ? p1m - pC : null),
       principale?.total ?? null,
       r2(principale?.e.oO), r2(principale?.e.oC),
       r2(principale?.e.uO), r2(principale?.e.uC),
-      r4(principale?.pOver), echelle.size,
+      echelle.size,
     ]));
     nLignesCotes++;
     parBook.set(op, (parBook.get(op) || 0) + 1);
@@ -513,11 +471,14 @@ const tableauCotes = annCotes.map((a) => {
 const tableauBooks = [...parBook.entries()].sort((a, b) => b[1] - a[1])
   .map(([o, n]) => `| \`${o}\` | ${n} | ${MISABLES.includes(o) ? "oui" : "**non — référence**"} |`)
   .join("\n");
-const calLigne = (lib, col, c) => `| ${lib} | \`${col}\` | ${c.n} | ${pct(c.p, c.n)} | ${pct(c.o, c.n)} |`;
+// Diagnostic publié dans le README : le dé-vig est recalculé ICI pour mesurer le
+// biais du marché, jamais exporté en colonne. On nomme donc le marché et les
+// cotes d'origine, pas une colonne qui n'existe plus.
+const calLigne = (lib, src, c) => `| ${lib} | \`${src}\` | ${c.n} | ${pct(c.p, c.n)} | ${pct(c.o, c.n)} |`;
 const tableauCal = [
-  calLigne("Équipe 1 gagne", "proba1_cloture", cal.v),
-  calLigne("Match en 3 manches", "proba_3manches_cloture", cal.m),
-  calLigne("Total dépassé", "proba_over_cloture", cal.t),
+  calLigne("Équipe 1 gagne", "cote1_cloture / cote2_cloture", cal.v),
+  calLigne("Match en 3 manches", "cs_*_cloture", cal.m),
+  calLigne("Total dépassé", "cote_over_cloture / cote_under_cloture", cal.t),
 ].join("\n");
 console.log(`   calibration (misables) : vainqueur ${pct(cal.v.p, cal.v.n)} prédit / ` +
   `${pct(cal.v.o, cal.v.n)} observé · 3 manches ${pct(cal.m.p, cal.m.n)} / ${pct(cal.m.o, cal.m.n)} · ` +
@@ -621,43 +582,25 @@ BWF (méthode et sources détaillées dans \`data/players/birthdates-rapport.md\
 | \`taille_cm\` | Taille en centimètres. |
 | \`source_bio\` | \`wikidata\` ou \`bwf\` — d'où viennent les trois colonnes ci-dessus, pour qui veut pondérer sa confiance. |
 
-### Bilan de carrière — mesuré sur \`matches.csv\`
+### Pourquoi aucun bilan de carrière
 
-Ces colonnes sont calculées sur **exactement les mêmes matchs** que
-\`matches.csv\` : la somme des \`matchs\` est vérifiable en comptant les lignes de
-l'autre fichier. Ce ne sont donc **pas** des totaux de carrière BWF : un joueur
-actif avant ${annees[0]} a des chiffres tronqués au début de la fenêtre.
+players.csv ne porte **ni agrégat ni classement**. Ces colonnes ont existé
+(\`taux_victoire\`, \`victoires\`, \`rang_actuel\`, \`meilleur_rang_*\`, \`tournois\`…)
+et ont été retirées : un agrégat résume toute la période couverte, donc joindre
+players.csv à un match de ${annees[0]} décrit ce match par ce qui s'est passé en
+${annees[annees.length - 1]}. C'est une **fuite du futur** qu'une jointure d'une
+ligne suffit à provoquer, et aucun avertissement écrit n'en protège.
 
-| Colonne | Description |
-|---|---|
-| \`matchs\`, \`victoires\`, \`defaites\` | En double, les deux joueurs de la paire gagnante marquent chacun une victoire. |
-| \`taux_victoire\` | \`victoires / matchs\`, 4 décimales. |
-| \`matchs_simple\`, \`matchs_double\` | Répartition par type d'épreuve — un joueur peut faire les deux. |
-| \`disciplines\` | Celles où il a joué, séparées par \`;\` (ex. \`MD;XD\`). |
-| \`tournois\` | Nombre de tournois distincts. |
-| \`premier_match\`, \`dernier_match\` | Bornes de sa fenêtre de présence dans les données. |
-| \`saisons\` | Années où il a joué, séparées par \`;\`. |
-| \`points_gagnes\`, \`points_concedes\` | Points cumulés pour et contre, tous matchs confondus. |
+Un bilan à une date donnée se recalcule sur \`matches.csv\` — ce qui oblige à
+déclarer la fenêtre, et c'est le but :
 
-### Classement mondial
+\`\`\`python
+avant = m[m.date < "2024-06-01"]
+# éclater les entités en joueurs, puis compter victoires / matchs
+\`\`\`
 
-| Colonne | Description |
-|---|---|
-| \`rang_actuel\`, \`rang_actuel_discipline\`, \`points_actuels\` | Rang à la publication la plus récente de l'archive (**${dernierePub ?? "—"}**). **Vide** si le joueur n'y figure pas : c'est l'information (retraité, blessé, sorti du classement), pas un trou. |
-| \`meilleur_rang_depuis_2024\`, \`meilleur_rang_discipline\`, \`meilleur_rang_date\` | Meilleur rang atteint **dans l'archive locale**, pas de la carrière (voir ci-dessous). |
-
-Un joueur classé dans plusieurs disciplines (typiquement double + mixte) n'a
-qu'une ligne : on retient son **meilleur** rang, et la colonne
-\`_discipline\` dit dans laquelle il l'obtient.
-
-### ⚠ players.csv regarde tout l'historique
-
-Contrairement à \`matches.csv\`, une fiche joueur est un état **agrégé** :
-\`taux_victoire\`, \`meilleur_rang_depuis_2024\` ou \`rang_actuel\` incorporent des
-matchs postérieurs à n'importe quel match donné. Joindre players.csv à un match
-de 2024 pour prédire ce match introduit donc une **fuite du futur**. Pour cet
-usage, utiliser \`rang1\`/\`rang2\` de \`matches.csv\`, qui sont datés d'avant.
-players.csv est fait pour décrire les joueurs, pas pour entraîner sur le passé.
+Pour le classement d'un camp au moment d'un match, utiliser \`rang1\`/\`rang2\` de
+\`matches.csv\`, datés par \`rang1_date\`/\`rang2_date\`.
 
 ## cotes.csv
 
@@ -685,9 +628,22 @@ ${nMatchsCotes} matchs sur ${rows.length} portent des cotes (${pct(nMatchsCotes,
 |---|---|
 | \`cote1_ouverture\`, \`cote1_cloture\` | Cote décimale de l'**équipe 1** (celle de \`matches.csv\`) à l'ouverture du marché et juste avant le match. |
 | \`cote2_ouverture\`, \`cote2_cloture\` | Idem équipe 2. |
-| \`marge_ouverture\`, \`marge_cloture\` | Marge de l'opérateur (*overround*) : \`1/c1 + 1/c2 − 1\`. 0,06 = 6 % prélevés. |
-| \`proba1_ouverture\`, \`proba1_cloture\` | Probabilité de l'équipe 1 **marge retirée** (dé-vig proportionnel). C'est la référence à battre pour un modèle. |
-| \`derive_proba1\` | \`proba1_cloture − proba1_ouverture\`. Le mouvement du marché, souvent la variable la plus informative du fichier : positif = l'argument est allé vers l'équipe 1. |
+
+### Aucune probabilité n'est exportée
+
+Une cote est un prix affiché, donc un fait. Une probabilité implicite est une
+**convention** : elle suppose une façon de retirer la marge (proportionnelle,
+*odds ratio*, Shin) que rien ici n'a mesurée. Pré-calculée, ce choix devient
+invisible ; recalculée à l'analyse, c'est un paramètre. Les colonnes
+\`proba*\`, \`marge*\`, \`derive*\` et \`ecart*\` ont donc été retirées. Toutes se
+refont depuis les prix, tous conservés :
+
+\`\`\`python
+marge  = 1/c1 + 1/c2 - 1
+proba1 = (1/c1) / (1/c1 + 1/c2)          # dé-vig proportionnel
+derive = proba1_cloture - proba1_ouverture
+p3     = (1/cs_2_1 + 1/cs_1_2) / sum(1/cs for cs in quatre_scores)
+\`\`\`
 
 ### Marché du score exact (nombre de manches)
 
@@ -697,10 +653,6 @@ Quatre issues : \`2-0\`, \`2-1\`, \`1-2\`, \`0-2\`, **du point de vue de l'équi
 | Colonne | Description |
 |---|---|
 | \`cs_2_0_*\`, \`cs_2_1_*\`, \`cs_1_2_*\`, \`cs_0_2_*\` | Cote de chaque score exact, \`_ouverture\` et \`_cloture\`. |
-| \`marge_manches_cloture\` | Marge sur les quatre issues réunies. Nettement plus grasse que sur le vainqueur : c'est le marché où l'opérateur se protège. |
-| \`proba_3manches_cloture\` | Probabilité que le match aille en 3 manches, marge retirée (\`2-1\` **ou** \`1-2\`). |
-| \`proba1_manches_cloture\` | Probabilité de victoire de l'équipe 1 **déduite du score exact** (\`2-0\` ou \`2-1\`). |
-| \`ecart_proba1_manches\` | \`proba1_manches_cloture − proba1_cloture\` : deux marchés du même opérateur sur le même événement. Un écart net signale une incohérence interne — la matière première d'une recherche d'arbitrage ou d'un signal de mauvais prix. |
 
 ### Marché du total de points (ligne principale)
 
@@ -708,7 +660,6 @@ Quatre issues : \`2-0\`, \`2-1\`, \`1-2\`, \`0-2\`, **du point de vue de l'équi
 |---|---|
 | \`total_ligne\` | Le seuil, ex. \`78.5\`. **Ligne principale** = celle dont les deux prix de clôture sont les plus proches, donc l'estimation centrale de l'opérateur. |
 | \`cote_over_*\`, \`cote_under_*\` | Prix des deux côtés, ouverture et clôture. |
-| \`proba_over_cloture\` | Probabilité de dépassement, marge retirée. |
 | \`total_lignes\` | Nombre de seuils proposés par cet opérateur sur ce match. **Dès qu'il vaut plus de 1, l'échelle complète est dans \`cotes-totaux.csv\`** — cette ligne-ci n'en montre qu'une. |
 
 ## cotes-totaux.csv
@@ -724,9 +675,8 @@ courbe est ce qui permet d'estimer une distribution du total de points.
 | \`total\` | Le seuil (toujours en \`.5\`, donc jamais de remboursement). |
 | \`cote_over_ouverture\`, \`cote_over_cloture\` | Prix du dépassement. |
 | \`cote_under_ouverture\`, \`cote_under_cloture\` | Prix inverse. |
-| \`proba_over_cloture\` | Probabilité de dépassement, marge retirée. |
 | \`points_total\` | Points réellement marqués dans le match. |
-| \`resultat_over\` | \`1\` si \`points_total > total\`, sinon \`0\`. **Le pari est déjà réglé** : la colonne se compare directement à \`proba_over_cloture\`. |
+| \`resultat_over\` | \`1\` si \`points_total > total\`, sinon \`0\`. **Le pari est déjà réglé** : c'est l'étiquette. |
 
 ### Deux pièges à ne pas reproduire
 
@@ -751,28 +701,28 @@ depuis \`cote1_cloture\`/\`cote2_cloture\`, qui sont dans le fichier — méthod
 Shin ou *odds ratio* plutôt que proportionnel. Sur les deux autres marchés
 l'écart est un biais de marge, pas une erreur d'export.
 
-**3. Les cotes de clôture savent des choses.** \`cote*_cloture\` et
-\`proba1_cloture\` intègrent toute l'information disponible juste avant le match
+**3. Les cotes de clôture savent des choses.** \`cote*_cloture\` intègre
+toute l'information disponible juste avant le match
 — y compris ce qu'un modèle censé prédire *à l'avance* ne pourrait pas savoir.
 Pour mesurer un modèle contre le marché, c'est la bonne référence. Pour
 l'**entraîner**, la clôture est une fuite : utilisez l'ouverture.
 
 ## Trous connus, à ne pas prendre pour des erreurs
 
-### Classement mondial : rien avant 2024
+### Classement mondial : couverture par saison
 
 | Saison | Matchs | Les 2 rangs connus | Un seul | Aucun |
 |---|---|---|---|---|
 ${tableauRangs}
 
-L'API BWF n'expose que **60 semaines glissantes** de classement. Les
-publications plus anciennes ne sont plus servies et ne sont pas récupérables :
-l'archive locale démarre au **2024-01-02**, donc \`rang1\`/\`rang2\` sont
-**définitivement vides sur 2022-2023**. Ce n'est pas un bug de l'export et ce ne
-sera pas comblé plus tard. Même limite pour
-\`meilleur_rang_depuis_2024\` : un joueur au sommet en 2022 puis en déclin
-apparaît avec son meilleur rang *depuis 2024*, pas son meilleur rang de
-carrière.
+Le tableau ci-dessus est recalculé à chaque export : c'est la seule source à
+consulter sur ce point. L'API BWF ne sert que **60 semaines glissantes**, donc
+les publications anciennes ne sont plus téléchargeables — mais l'archive locale
+peut être complétée par import, et l'a été. Aucun trou n'est déclaré définitif
+ici : si une saison affiche un taux faible, c'est un état, pas une fatalité.
+
+\`rang1_date\`/\`rang2_date\` donnent la publication effectivement utilisée pour
+chaque ligne, ce qui permet de vérifier soi-même l'antériorité au match.
 
 Sur 2024 et après, les quelques pour cent de matchs restants sont des joueurs
 absents de la publication (juniors, wild-cards, invités hors classement) : rang
