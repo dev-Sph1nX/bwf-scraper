@@ -57,6 +57,21 @@ test("jointure inversée : le home Flashscore est notre team2, cotes retournées
   assert.equal(odds.books.betclic.open1, 2.6);
 });
 
+test("l'orientation retenue est publiée : les marchés orientés d'ailleurs en dépendent", () => {
+  // Le score exact (2-0 / 0-2) vit dans data/flashscore/sets/, en orientation
+  // Flashscore. Sans `swap`, un consommateur alignerait « 2-0 » sur notre team1
+  // alors qu'il décrit le home Flashscore : c'est notre team2 quand swap=true.
+  const direct = joinFlashscore([fsFile([fsMatch()])], [bwfRow()]);
+  assert.equal(direct.joined.get("5001|MS|2026-01-07|111|222").swap, false);
+
+  const inverse = joinFlashscore([fsFile([fsMatch()])], [bwfRow({
+    name1: "NG Ka Long Angus", name2: "LU Guang Zu",
+    sets: [{ home: 19, away: 21 }, { home: 15, away: 21 }],
+    a: "222", b: "111",
+  })]);
+  assert.equal(inverse.joined.get("5001|MS|2026-01-07|222|111").swap, true);
+});
+
 test("deux candidats au même score le même jour -> ambigu, pas de jointure", () => {
   // Même empreinte, même jour, et les deux passent le filtre des noms (les
   // deux affiches partagent le nom « Lu ») : on doit refuser de choisir.
