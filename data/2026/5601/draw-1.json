@@ -5596,7 +5596,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "INA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
@@ -5653,9 +5653,9 @@
         },
         "team1seed": "11",
         "team2seed": "6",
-        "matchTime": "2026-08-21 19:35:00",
-        "matchTimeUtc": "2026-08-21 13:35:00",
-        "matchStatus": "P",
+        "matchTime": "2026-08-21 19:30:00",
+        "matchTimeUtc": "2026-08-21 13:30:00",
+        "matchStatus": "F",
         "oopRound": "10",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -5666,7 +5666,7 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": 22,
+        "duration": 50,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
@@ -5675,7 +5675,13 @@
           {
             "set": 1,
             "home": 15,
-            "away": 18,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 15,
+            "away": 21,
             "serve": 2
           }
         ],
@@ -5990,11 +5996,30 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "34810",
+              "nameDisplay": "CHOU Tien Chen",
+              "nameType": 1,
+              "firstName": "Tien Chen",
+              "lastName": "CHOU",
+              "initials": "CT",
+              "nameShort": "CHOU T C ",
+              "nameShort2": "CHOU",
+              "slug": "tien-chen-chou",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Tien Chen CHOU",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658715713/assets/players/thumbnail/34810.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
@@ -6024,7 +6049,7 @@
           ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "6",
         "team2seed": "10",
         "matchTime": "2026-08-22 15:30:00",
         "matchTimeUtc": "2026-08-22 10:00:00",
@@ -12189,7 +12214,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "INA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
@@ -12246,10 +12271,10 @@
       },
       "team1seed": "11",
       "team2seed": "6",
-      "matchTime": "2026-08-21 19:35:00",
-      "matchTimeUtc": "2026-08-21 13:35:00",
-      "matchStatus": "P",
-      "matchStatusValue": "In Progress",
+      "matchTime": "2026-08-21 19:30:00",
+      "matchTimeUtc": "2026-08-21 13:30:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "10",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -12261,14 +12286,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": 22,
-      "time": "00:22",
+      "duration": 50,
+      "time": "00:50",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 15,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 15,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -12603,11 +12643,30 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "34810",
+            "nameDisplay": "CHOU Tien Chen",
+            "nameType": 1,
+            "firstName": "Tien Chen",
+            "lastName": "CHOU",
+            "initials": "CT",
+            "nameShort": "CHOU T C ",
+            "nameShort2": "CHOU",
+            "slug": "tien-chen-chou",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Tien Chen CHOU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658715713/assets/players/thumbnail/34810.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
@@ -12637,7 +12696,7 @@
         ],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "6",
       "team2seed": "10",
       "matchTime": "2026-08-22 15:30:00",
       "matchTimeUtc": "2026-08-22 10:00:00",
