@@ -7298,7 +7298,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -7391,9 +7391,9 @@
         },
         "team1seed": "1",
         "team2seed": "4",
-        "matchTime": "2026-08-22 20:40:00",
-        "matchTimeUtc": "2026-08-22 14:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-22 21:40:00",
+        "matchTimeUtc": "2026-08-22 15:40:00",
+        "matchStatus": "F",
         "oopRound": "9",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -7404,12 +7404,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 43,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 17,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 18,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -7512,9 +7525,9 @@
         },
         "team1seed": "3",
         "team2seed": null,
-        "matchTime": "2026-08-22 20:30:00",
-        "matchTimeUtc": "2026-08-22 15:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-08-22 21:25:00",
+        "matchTimeUtc": "2026-08-22 16:25:00",
+        "matchStatus": "P",
         "oopRound": "10",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -7525,12 +7538,19 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": null,
+        "duration": 2,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 3,
+            "away": 5,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -7542,11 +7562,48 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "MAS",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "56203",
+              "nameDisplay": "Aaron CHIA",
+              "nameType": 0,
+              "firstName": "Aaron",
+              "lastName": "CHIA",
+              "initials": "AC",
+              "nameShort": "A CHIA",
+              "nameShort2": "CHIA",
+              "slug": "aaron-chia",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Aaron CHIA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627949889/assets/players/thumbnail/56203.jpg"
+              }
+            },
+            {
+              "id": "99389",
+              "nameDisplay": "SOH Wooi Yik",
+              "nameType": 1,
+              "firstName": "Wooi Yik",
+              "lastName": "SOH",
+              "initials": "SW",
+              "nameShort": "SOH W Y ",
+              "nameShort2": "SOH",
+              "slug": "wooi-yik-soh",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Wooi Yik SOH",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627949962/assets/players/thumbnail/99389.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
@@ -7557,7 +7614,7 @@
           "players": [],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "4",
         "team2seed": null,
         "matchTime": "2026-08-23 16:20:00",
         "matchTimeUtc": "2026-08-23 10:50:00",
@@ -13856,7 +13913,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -13949,10 +14006,10 @@
       },
       "team1seed": "1",
       "team2seed": "4",
-      "matchTime": "2026-08-22 20:40:00",
-      "matchTimeUtc": "2026-08-22 14:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-22 21:40:00",
+      "matchTimeUtc": "2026-08-22 15:40:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "9",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -13964,14 +14021,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 43,
+      "time": "00:43",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 17,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -14075,10 +14147,10 @@
       },
       "team1seed": "3",
       "team2seed": null,
-      "matchTime": "2026-08-22 20:30:00",
-      "matchTimeUtc": "2026-08-22 15:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-08-22 21:25:00",
+      "matchTimeUtc": "2026-08-22 16:25:00",
+      "matchStatus": "P",
+      "matchStatusValue": "In Progress",
       "oopRound": "10",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -14090,8 +14162,8 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": null,
-      "time": "00:00",
+      "duration": 2,
+      "time": "00:02",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
@@ -14110,11 +14182,48 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "56203",
+            "nameDisplay": "Aaron CHIA",
+            "nameType": 0,
+            "firstName": "Aaron",
+            "lastName": "CHIA",
+            "initials": "AC",
+            "nameShort": "A CHIA",
+            "nameShort2": "CHIA",
+            "slug": "aaron-chia",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Aaron CHIA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627949889/assets/players/thumbnail/56203.jpg"
+            }
+          },
+          {
+            "id": "99389",
+            "nameDisplay": "SOH Wooi Yik",
+            "nameType": 1,
+            "firstName": "Wooi Yik",
+            "lastName": "SOH",
+            "initials": "SW",
+            "nameShort": "SOH W Y ",
+            "nameShort2": "SOH",
+            "slug": "wooi-yik-soh",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Wooi Yik SOH",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627949962/assets/players/thumbnail/99389.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
@@ -14125,7 +14234,7 @@
         "players": [],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "4",
       "team2seed": null,
       "matchTime": "2026-08-23 16:20:00",
       "matchTimeUtc": "2026-08-23 10:50:00",
