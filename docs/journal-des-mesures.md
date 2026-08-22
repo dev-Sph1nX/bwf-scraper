@@ -1,6 +1,6 @@
 # Journal des mesures
 
-**Dernière mise à jour :** 2026-08-10 (§9)
+**Dernière mise à jour :** 2026-08-21 (§11)
 
 Ce document consigne **tout ce qui a été mesuré**, avec les chiffres, la méthode et
 le moyen de le refaire. Il existe pour une raison précise : ne pas retester ce qui
@@ -13,13 +13,15 @@ qu'on oublie et qu'on refait.
 
 ```bash
 npm run backtest        # baselines, calibration, prévisibilité par discipline
-npm test                # 277 tests, dont les garde-fous méthodologiques
+npm test                # 386 tests, dont les garde-fous méthodologiques
 npm run build-data      # régénère les données de l'app
 node measures/mesure-gymnase-3sets.mjs   # effet gymnase sur les 3 sets (§7)
 node measures/mesure-terrain.mjs         # avantage du terrain (§2.6)
 node measures/mesure-ecart-points.mjs    # écart de points, étape 1 (§2.7)
 node measures/mesure-roi-modele.mjs      # BANC D'ESSAI du modèle (§9) — après build-data
 node measures/mesure-calibration-tranches.mjs  # calibration tranche × discipline (§9.1)
+node measures/variante-seed-paires.mjs   # seed des paires neuves (§11.1) — ADOPTÉ
+node measures/variante-forme.mjs         # fenêtre de forme (§11.2) — écarté
 ```
 
 Le rapport complet est écrit dans `web/public/data/backtest.json` et affiché sur
@@ -1940,3 +1942,160 @@ la distribution réelle est en dessous de ce que produirait l'absence totale
 d'avantage — cohérent avec un marché correctement prixé auquel on ajoute une
 commission de 29,6 %. Publié sur la page **/gymnases** de l'app (données
 `data/analyses/gymnases-3sets.json`, versionnées, recopiées par build-data).
+
+# 11. Le point de départ des paires de double (2026-08-21)
+
+Première variante ADOPTÉE depuis la création du banc d'essai. Elle ne vient pas
+d'un facteur ajouté au modèle mais d'un défaut de construction : le point de
+départ des paires neuves.
+
+## 11.1 Seed d'une paire neuve depuis ses joueurs : ADOPTÉ (2026-08-21)
+
+**Le défaut.** En double, l'entité Elo est la PAIRE (`pair:id1-id2`,
+`lib/elo.mjs`), et le modèle n'avait aucune information au niveau joueur. Une
+paire jamais vue et non classée démarrait donc à `seedBottom` (1350), que ses
+deux joueurs soient débutants ou champions du monde.
+
+**L'écart mesuré** (réel − annoncé, camps CHN/KOR face à une autre nation,
+doubles, 22 024 matchs, seeds de production) :
+
+| matchs joués PAR LA PAIRE | écart | z |
+|---|---|---|
+| 5-15 | **+19,6 pts** | 8,2 |
+| 15-40 | **+13,9 pts** | 7,7 |
+| 40-100 | +7,2 pts | 5,4 |
+| 100+ | +2,1 pts | 1,3 (non significatif) |
+
+Ce n'est ni un défaut de netteté (l'écart persiste à bande de probabilité égale :
++13,2 pts dans la bande 50-60 %) ni un effet propre à la Chine — la Corée est
+touchée autant (+7,8 pts contre +7,7). L'écart suit la force de la nation : INA
++3,6, MAS −1,4, TPE −3,6, IND −6,8. Les autres nations sont donc calibrées, voire
+légèrement SURESTIMÉES sur leurs paires jeunes (−3,1 pts) — pour elles, 1350 est
+le bon point de départ.
+
+**Hypothèse réfutée : ce n'est pas de la recomposition de paires.** L'explication
+intuitive (« les Chinois changent tout le temps de paires ») est fausse : les
+paires chinoises sont les PLUS stables du circuit, médiane 41 matchs ensemble, à
+égalité avec la Malaisie, contre 9 pour l'Inde et 4 pour le Canada. Le problème
+n'est pas la fréquence des paires neuves, c'est l'erreur commise sur chacune :
+une paire chinoise neuve vaut ~1900 et part de 1350.
+
+**Le correctif** (`pairSeedFromPlayers`, `lib/elo.mjs`) : une paire jamais vue et
+absente des seeds démarre à `base + poids × confiance × (moyenne des notes de ses
+joueurs − base)`. La note d'un joueur est une note individuelle de double
+entretenue en parallèle (un joueur hérite du delta de la paire dans laquelle il
+joue, ce qui garde les échelles comparables) et ne sert QU'À CE SEED, jamais à
+prédire. Confiance 1 si les deux joueurs atteignent le seuil, 0,5 si un seul.
+
+**Réglage** (`measures/variante-seed-paires.mjs`) : grille sur la validation
+2025, jugement sur le test 2026 jamais regardé par le choix.
+
+| poids | min matchs | Brier validation 2025 |
+|---|---|---|
+| 0 (production d'avant) | — | 0,1809 |
+| 0,5 | 10 | 0,1769 |
+| 0,75 | 10 | 0,1759 |
+| 1 | 5 | 0,1753 |
+| **1** | **10** | **0,1753** |
+| 1 | 20 | 0,1754 |
+
+La grille est plate entre min 5, 10 et 20 : le choix de 10 ne vient pas de la
+validation mais du seuil `provisionalMatches` (5) — un joueur à 5 matchs porte
+lui-même une note provisoire, en faire une référence serait amorcer du bruit avec
+du bruit.
+
+**Test 2026** (2 772 matchs, appariement par indice vérifié ligne à ligne) :
+
+| | référence | variante |
+|---|---|---|
+| Brier production | 0,1872 | **0,1838** |
+| Brier brut (sans recalibration) | 0,1880 | **0,1844** |
+
+Gain +33,1 e-4, IC95 bootstrap apparié **[+15,6 ; +49,6]** — exclut 0, donc
+retenu. Le Brier brut donne le même verdict (+35,5 e-4, IC [+19,5 ; +51,0]), ce
+qui écarte l'objection « le gain ne vient que de la recalibration ».
+
+**Effet sur la chaîne complète** (après `build-data` + `backtest`) :
+
+| | avant | après |
+|---|---|---|
+| Elo simple, Brier | 0,1846 | **0,1817** |
+| Elo recalibré, Brier | 0,1833 | **0,1805** |
+| Elo recalibré, réussite | 72,4 % | **72,8 %** |
+| calibration de l'Elo recalibré (`calibrationError`) | 1,22 pt | **1,02 pt** |
+| ROI favori (clôture) | −9,0 % | −8,8 % |
+| ROI value (clôture) | −15,2 % (n=4 934) | **−11,9 %** (n=4 654) |
+
+**Contrôle de cohérence le plus parlant** : le ROI des SIMPLES est inchangé au
+dixième (MS −7,1 %, WS −12,3 % avant comme après), puisque le correctif ne touche
+que les paires, tandis que les trois doubles s'améliorent : MD −17,0 → **−7,3 %**,
+XD −17,5 → **−13,9 %**, WD −23,1 → **−20,3 %**. Un correctif de seed des paires
+qui aurait bougé les simples aurait signalé une fuite.
+
+**Ce que ça ne fait pas.** L'écart CHN/KOR n'est pas annulé, seulement réduit d'un
+quart (+12,9 → +9,5 pts sur les paires de 5-15 matchs). La note individuelle d'un
+joueur est elle-même amorcée par ses premières paires, elles-mêmes parties de
+1350 : le correctif hérite du défaut à la première génération. Et parier reste
+perdant — la value passe de −15,2 % à −11,9 %, elle ne devient pas rentable.
+
+## 11.2 Fenêtre de forme : le rejet de §2.1 tient, pour la bonne raison (2026-08-21)
+
+**La question rouverte.** §2.1 a écarté la forme récente (48,7 % / 50,4 % /
+51,4 % au criblage à niveau contrôlé) et §2.3 l'a confirmée non départageable.
+Mais ces mesures ont toutes été faites à `formWindow = 5`, valeur choisie à la
+main au démarrage et jamais évaluée — le levier que §2.9 désignait justement
+comme restant. La fenêtre 5 était-elle le bon réglage ?
+
+**Étape 1, la forme à différentes fenêtres** (le camp le mieux en forme gagne-t-il ?) :
+
+| fenêtre | écart < 30 | < 50 | < 80 |
+|---|---|---|---|
+| 5 | 48,6 % ~ | 49,5 % ~ | 50,7 % ~ |
+| 10 | 50,6 % ~ | 52,2 % ✅ | 53,1 % ✅ |
+| **15** | 52,2 % ~ | **53,1 % ✅** | **53,6 % ✅** |
+| 20 | 49,8 % ~ | 51,8 % ✅ | 52,7 % ✅ |
+
+À la fenêtre 15, la forme porte donc bien de l'information que la fenêtre 5 ne
+voyait pas. **Mais le contrôle de maturité tue le signal** :
+
+| forme@15, restreinte à | < 30 | < 50 | < 80 |
+|---|---|---|---|
+| tous | 52,2 % ~ | 53,1 % ✅ | 53,6 % ✅ |
+| les 2 camps ≥ 40 matchs | 50,5 % ~ | 51,1 % ~ | 50,9 % ~ |
+| les 2 camps ≥ 80 matchs | 49,0 % ~ | 50,5 % ~ | 51,2 % ~ |
+
+**La forme@15 ne mesure pas la forme, elle mesure le retard de note.** La forme
+est la somme des deltas d'Elo des N derniers matchs : pour une entité dont la
+note n'a pas rattrapé son niveau, cette somme est mécaniquement positive et
+l'entité va continuer à gagner. Élargir la fenêtre ne capte pas mieux la forme,
+ça capte mieux le défaut corrigé en §11.1 — d'où un signal deux fois plus fort en
+doubles (56,1 %) qu'en simples (54,2 %).
+
+**Étapes 2-3, sur le modèle une fois le seed corrigé** (terme b × écart de forme
+ajouté au logit, motif §9.3) :
+
+| fenêtre | b ajusté (< 2025) | Brier validation 2025 |
+|---|---|---|
+| 5 | 0,166 | 0,1756 |
+| 10 | 0,155 | 0,1757 |
+| 15 | 0,131 | 0,1754 |
+| 20 | 0,109 | 0,1753 |
+| — | — | 0,1753 (production, sans forme) |
+
+Aucune fenêtre ne fait mieux que la production en validation. Test 2026 : Brier
+0,1838 → 0,1831, gain +7,9 e-4, IC95 **[−1,8 ; +17,6]** — **non départageable**.
+
+**Verdict : on n'adopte pas.** Et l'avertissement de §2.2 gagne une illustration
+de plus : mesurée à l'étape 2 seule, la forme@15 donnait un gain apparent de
++16,8 e-4 avec un IC excluant 0 (protocole apprentissage < 2025 / validation 2025
+/ test 2026). C'est l'étape 1 avec contrôle de maturité qui a montré que ce gain
+était le défaut de seed, et §11.1 l'a confirmé en le faisant disparaître une fois
+la cause traitée. **Deux corrections qui semblent indépendantes peuvent être le
+même effet vu de deux côtés ; celle qui touche la cause doit être mesurée
+d'abord.**
+
+`formWindow` reste donc à 5 en production. Question laissée ouverte, distincte de
+la prédiction : la forme est AFFICHÉE dans l'app (badge, fiche joueur), et à la
+fenêtre 5 elle n'informe de rien (48,6 %). Soit on l'affiche sur 15 matchs, où
+elle vaut au moins 53 % en population générale, soit on cesse de l'afficher comme
+un indice. C'est une décision d'interface, pas de modèle — non tranchée ici.
