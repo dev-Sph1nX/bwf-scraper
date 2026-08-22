@@ -1,0 +1,85 @@
+{
+ "fetchedAt": "2026-08-22T12:39:54.268Z",
+ "errors": {
+  "betclic": "https://www.betclic.fr/badminton-sbadminton -> HTTP 403",
+  "winamax": "https://www.winamax.fr/paris-sportifs/sports/31 -> HTTP 403"
+ },
+ "books": {
+  "unibet": {
+   "complete": true,
+   "rows": [
+    {
+     "book": "unibet",
+     "bookMatchId": "e3373389",
+     "srId": "73928960",
+     "tournament": "Ch. du Monde",
+     "discipline": "WS",
+     "p1": "SY.An",
+     "p2": "Z.Wang",
+     "odd1": 1.1,
+     "odd2": 4.5,
+     "startUtc": "2026-08-22T13:15:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3373393",
+     "srId": "73932194",
+     "tournament": "Ch. du Monde",
+     "discipline": "MD",
+     "p1": "Kim/Seo",
+     "p2": "Chia/Soh",
+     "odd1": 1.28,
+     "odd2": 2.85,
+     "startUtc": "2026-08-22T13:35:00.000Z",
+     "isLive": false,
+     "sets": {
+      "market": "Nombre de Sets - Match",
+      "odd2": 1.4,
+      "odd3": 2.2
+     }
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3373394",
+     "srId": "73932192",
+     "tournament": "Ch. du Monde",
+     "discipline": "MD",
+     "p1": "Liang/Wang",
+     "p2": "Lee/Yang",
+     "odd1": 1.26,
+     "odd2": 3,
+     "startUtc": "2026-08-22T14:00:00.000Z",
+     "isLive": false,
+     "sets": {
+      "market": "Nombre de Sets - Match",
+      "odd2": 1.4,
+      "odd3": 2.2
+     }
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3373657",
+     "srId": "73953270",
+     "tournament": "Ch. du Monde DM",
+     "discipline": null,
+     "p1": "Feng/Huang",
+     "p2": "Gicquel/Delrue",
+     "odd1": 1.12,
+     "odd2": 4.6,
+     "startUtc": "2026-08-23T08:00:00.000Z",
+     "isLive": false,
+     "sets": {
+      "market": "Nombre de Sets - Match",
+      "odd2": 1.28,
+      "odd3": 2.6
+     }
+    }
+   ]
+  },
+  "pinnacle": {
+   "complete": true,
+   "rows": []
+  }
+ }
+}
