@@ -9,7 +9,7 @@
     "backfill-rankings": "node backfill-rankings.mjs",
     "build-data": "node build-data.mjs",
     "refresh": "node run-update.mjs && node fetch-rankings.mjs && node scrape-books.mjs && node build-data.mjs && node backtest.mjs --quiet",
-    "get-data": "(git pull --rebase --autostash || echo '⚠ pull impossible, on continue avec les données locales') && (node run-update.mjs || echo '⚠ scrape BWF impossible, résultats potentiellement en retard') && (node scrape-books.mjs || echo '⚠ relevé de cotes impossible, on garde l’existant') && node build-data.mjs && node backtest.mjs --quiet",
+    "get-data": "(git checkout HEAD -- data/ && git pull --rebase --autostash || echo '⚠ pull impossible, on continue avec les données locales') && (node run-update.mjs || echo '⚠ scrape BWF impossible, résultats potentiellement en retard') && (node scrape-books.mjs || echo '⚠ relevé de cotes impossible, on garde l’existant') && node build-data.mjs && node backtest.mjs --quiet",
     "scrape-books": "node scrape-books.mjs",
     "test": "node --test test/*.test.mjs",
     "backtest": "node backtest.mjs",
