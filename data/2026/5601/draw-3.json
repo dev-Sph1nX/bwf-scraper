@@ -7432,7 +7432,7 @@
         "tournamentCode": 5601,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "CHN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -7525,9 +7525,9 @@
         },
         "team1seed": "3",
         "team2seed": null,
-        "matchTime": "2026-08-22 21:25:00",
-        "matchTimeUtc": "2026-08-22 16:25:00",
-        "matchStatus": "P",
+        "matchTime": "2026-08-22 22:35:00",
+        "matchTimeUtc": "2026-08-22 16:35:00",
+        "matchStatus": "F",
         "oopRound": "10",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -7538,7 +7538,7 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Indra Gandhi Indoor Stadium",
-        "duration": 2,
+        "duration": 30,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
@@ -7546,9 +7546,15 @@
         "score": [
           {
             "set": 1,
-            "home": 3,
-            "away": 5,
-            "serve": 2
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 14,
+            "serve": 1
           }
         ],
         "matches": []
@@ -7607,15 +7613,52 @@
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "90531",
+              "nameDisplay": "LIANG Wei Keng",
+              "nameType": 1,
+              "firstName": "Wei Keng",
+              "lastName": "LIANG",
+              "initials": "LW",
+              "nameShort": "LIANG W K ",
+              "nameShort2": "LIANG",
+              "slug": "wei-keng-liang",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Wei Keng LIANG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896511/assets/players/thumbnail/90531.jpg"
+              }
+            },
+            {
+              "id": "55414",
+              "nameDisplay": "WANG Chang",
+              "nameType": 1,
+              "firstName": "Chang",
+              "lastName": "WANG",
+              "initials": "WC",
+              "nameShort": "WANG C",
+              "nameShort2": "WANG",
+              "slug": "chang-wang",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Chang WANG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896024/assets/players/thumbnail/55414.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": "4",
-        "team2seed": null,
+        "team2seed": "3",
         "matchTime": "2026-08-23 16:20:00",
         "matchTimeUtc": "2026-08-23 10:50:00",
         "matchStatus": "N",
@@ -14054,7 +14097,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "CHN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -14147,10 +14190,10 @@
       },
       "team1seed": "3",
       "team2seed": null,
-      "matchTime": "2026-08-22 21:25:00",
-      "matchTimeUtc": "2026-08-22 16:25:00",
-      "matchStatus": "P",
-      "matchStatusValue": "In Progress",
+      "matchTime": "2026-08-22 22:35:00",
+      "matchTimeUtc": "2026-08-22 16:35:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "10",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -14162,14 +14205,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Indra Gandhi Indoor Stadium",
-      "duration": 2,
-      "time": "00:02",
+      "duration": 30,
+      "time": "00:30",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -14227,15 +14285,52 @@
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "90531",
+            "nameDisplay": "LIANG Wei Keng",
+            "nameType": 1,
+            "firstName": "Wei Keng",
+            "lastName": "LIANG",
+            "initials": "LW",
+            "nameShort": "LIANG W K ",
+            "nameShort2": "LIANG",
+            "slug": "wei-keng-liang",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Wei Keng LIANG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896511/assets/players/thumbnail/90531.jpg"
+            }
+          },
+          {
+            "id": "55414",
+            "nameDisplay": "WANG Chang",
+            "nameType": 1,
+            "firstName": "Chang",
+            "lastName": "WANG",
+            "initials": "WC",
+            "nameShort": "WANG C",
+            "nameShort2": "WANG",
+            "slug": "chang-wang",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Chang WANG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896024/assets/players/thumbnail/55414.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": "4",
-      "team2seed": null,
+      "team2seed": "3",
       "matchTime": "2026-08-23 16:20:00",
       "matchTimeUtc": "2026-08-23 10:50:00",
       "matchStatus": "N",
