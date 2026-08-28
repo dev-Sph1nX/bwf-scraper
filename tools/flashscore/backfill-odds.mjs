@@ -12,10 +12,18 @@
 //       l'édition suivante n'a pas commencé) : on scrape la page sans suffixe
 //       sur une fenêtre de dates et on écrit <slug><suffix>.json.
 //
-// Écrit un fichier par tournoi dans data/flashscore/odds/<slug>.json : tous les
-// matchs joués dont AU MOINS un bookmaker retenu (Winamax, Betclic, Unibet —
-// choix validé le 2026-08-03) publie une cote vainqueur, avec ouverture et
-// clôture par camp. Un index data/flashscore/odds/_index.json récapitule.
+// Écrit un fichier par tournoi dans data/flashscore/odds/<slug>.json : TOUS les
+// matchs joués trouvés, avec leurs cotes vainqueur (ouverture et clôture par
+// camp) quand au moins un bookmaker en publie, `odds: null` sinon. Les matchs
+// sans cote sont gardés depuis le 2026-08-28 : leur fsId est le pont vers le
+// point par point (backfill-points) et les marchés de manches (backfill-sets) —
+// les jeter privait ces collectes de tous les matchs non cotés. Un index
+// data/flashscore/odds/_index.json récapitule.
+//
+// INCRÉMENTAL : un match déjà présent dans le fichier (fsId connu) est repris
+// tel quel sans appel de cotes — un match joué ne change plus. Relancer le
+// script chaque jour ne coûte donc que les nouveaux matchs, ce qui le rend
+// intégrable au rafraîchissement quotidien.
 //
 // MÉTHODES (validées par tools/flashscore/poc-odds.mjs, cf. son en-tête) :
 //   - découverte des tournois : page /badminton/calendrier/bwf/ rendue dans un
@@ -84,13 +92,18 @@ const BOOK_KEY = (name) => {
 // Catégories Flashscore -> nos disciplines. Surchargables par --cats=… : les
 // Mondiaux, par exemple, vivent sous `bwf-masculin/championnats-du-monde` et
 // non sous `bwf-world-tour-*` (--cats=bwf-masculin:MS,bwf-feminin:WS,…).
+// Chaque discipline est cherchée sous PLUSIEURS chemins de catégorie, essayés
+// dans l'ordre : le World Tour (`bwf-world-tour-*`) couvre la saison régulière,
+// mais les Championnats du monde vivent sous d'autres catégories (`bwf-masculin`,
+// `bwf-feminin`, `bwf-doubles-*` — constaté le 2026-08-28 : les 5 pages World
+// Tour répondent 404 pour championnats-du-monde).
 const CATS = (args.find((a) => a.startsWith("--cats=")) || "")
-  .split("=")[1]?.split(",").map((x) => x.split(":")) ?? [
-  ["bwf-world-tour-hommes", "MS"],
-  ["bwf-world-tour-femmes", "WS"],
-  ["bwf-world-tour-doubles-hommes", "MD"],
-  ["bwf-world-tour-doubles-femmes", "WD"],
-  ["bwf-world-tour-doubles-mixtes", "XD"],
+  .split("=")[1]?.split(",").map((x) => { const [c, d] = x.split(":"); return [[c], d]; }) ?? [
+  [["bwf-world-tour-hommes", "bwf-masculin"], "MS"],
+  [["bwf-world-tour-femmes", "bwf-feminin"], "WS"],
+  [["bwf-world-tour-doubles-hommes", "bwf-doubles-masculin"], "MD"],
+  [["bwf-world-tour-doubles-femmes", "bwf-doubles-feminin"], "WD"],
+  [["bwf-world-tour-doubles-mixtes", "bwf-doubles-mixtes"], "XD"],
 ];
 
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
@@ -222,17 +235,20 @@ async function oddsOf(eventId) {
   return Object.keys(out).length ? out : null;
 }
 
-async function backfillTournament(slug, { fromUtc = START_UTC, toUtc = null } = {}) {
+async function backfillTournament(slug, { fromUtc = START_UTC, toUtc = null, connus = new Map() } = {}) {
   const matches = [];
-  let scanned = 0;
-  for (const [cat, disc] of CATS) {
-    let html;
-    try {
-      html = await get(`https://www.flashscore.fr/badminton/${cat}/${slug}/resultats/`);
-    } catch (e) {
-      console.log(`   — ${disc} : ${e.message}`);
-      continue;
+  let scanned = 0, repris = 0;
+  for (const [cats, disc] of CATS) {
+    let html = null;
+    for (const cat of cats) {
+      try {
+        html = await get(`https://www.flashscore.fr/badminton/${cat}/${slug}/resultats/`);
+        break;
+      } catch (e) {
+        if (cat === cats[cats.length - 1]) console.log(`   — ${disc} : ${e.message}`);
+      }
     }
+    if (html === null) continue;
     const rows = parseSummaryFeed(html)
       .filter((kv) => kv.AS === "1" || kv.AS === "2") // matchs décidés
       .filter((kv) => {
@@ -242,6 +258,10 @@ async function backfillTournament(slug, { fromUtc = START_UTC, toUtc = null } = 
       });
     for (const kv of rows) {
       scanned++;
+      // REPRISE : un match déjà dans le fichier est repris tel quel — ses
+      // cotes sont figées (match joué), inutile de re-payer l'appel GraphQL.
+      const deja = connus.get(kv.AA);
+      if (deja) { matches.push(deja); repris++; continue; }
       await pause(500);
       let odds = null, oddsErr = null;
       try {
@@ -256,7 +276,10 @@ async function backfillTournament(slug, { fromUtc = START_UTC, toUtc = null } = 
         oddsErr = String(e.message || e).slice(0, 80);
         console.log(`   ⚠ cotes ${kv.AA} (${kv.AE} vs ${kv.AF}) : ${oddsErr}`);
       }
-      if (!odds) continue; // sans cote retenue, le match ne sert pas au backfill
+      // Erreur réseau : rien n'est écrit pour ce match, la prochaine exécution
+      // le retentera. Un match SANS cote, lui, est gardé (odds: null) : son
+      // fsId sert au point par point et aux marchés de manches.
+      if (oddsErr) continue;
       matches.push({
         fsId: kv.AA,
         disc,
@@ -271,7 +294,7 @@ async function backfillTournament(slug, { fromUtc = START_UTC, toUtc = null } = 
     }
   }
   matches.sort((a, b) => String(a.startUtc).localeCompare(String(b.startUtc)));
-  return { scanned, matches };
+  return { scanned, repris, matches };
 }
 
 // ---- Boucle principale -------------------------------------------------------
@@ -311,7 +334,15 @@ for (const { slug, page = slug, window } of targets) {
     continue;
   }
   console.log(`\n📥 ${slug}…`);
-  const { scanned, matches } = await backfillTournament(page, window);
+  // Reprise incrémentale : les matchs déjà dans le fichier sont repris tels
+  // quels, seuls les nouveaux coûtent des requêtes (cf. en-tête).
+  const connus = new Map();
+  try {
+    for (const m of JSON.parse(await readFile(file, "utf8")).matches || []) {
+      if (m.fsId) connus.set(m.fsId, m);
+    }
+  } catch { /* premier passage sur ce tournoi */ }
+  const { scanned, repris, matches } = await backfillTournament(page, { ...window, connus });
   const from = matches[0]?.startUtc?.slice(0, 10) ?? null;
   const to = matches[matches.length - 1]?.startUtc?.slice(0, 10) ?? null;
   // `books` DÉCRIT LE CONTENU RÉEL du fichier, il n'est pas une liste figée :
@@ -325,11 +356,15 @@ for (const { slug, page = slug, window } of targets) {
     tournamentSlug: slug,
     books: presents,
     booksReference: presents.filter((o) => REFERENCE.includes(o)),
-    stats: { scanned, withOdds: matches.length, from, to },
+    stats: { scanned, kept: matches.length, withOdds: matches.filter((m) => m.odds).length, from, to },
     matches,
   }, null, 1));
-  index.push({ slug, scanned, withOdds: matches.length, from, to });
-  console.log(`   ✅ ${matches.length}/${scanned} matchs avec cotes (${from ?? "?"} → ${to ?? "?"})`);
+  const withOdds = matches.filter((m) => m.odds).length;
+  index.push({ slug, scanned, kept: matches.length, withOdds, from, to });
+  console.log(
+    `   ✅ ${matches.length} matchs gardés dont ${withOdds} cotés` +
+    `${repris ? ` (${repris} repris du fichier)` : ""} (${from ?? "?"} → ${to ?? "?"})`,
+  );
 }
 // L'index est FUSIONNÉ (jamais réécrit à blanc) : les éditions archivées et la
 // saison courante cohabitent, chaque run ne met à jour que ses propres slugs.
@@ -342,4 +377,7 @@ if (index.length) {
     tournaments: [...by.values()].sort((a, b) => a.slug.localeCompare(b.slug)),
   }, null, 1));
 }
-console.log(`\n✅ terminé — ${index.reduce((s, t) => s + t.withOdds, 0)} matchs avec cotes sur ${index.length} tournoi(s) -> ${OUT_DIR}`);
+console.log(
+  `\n✅ terminé — ${index.reduce((s, t) => s + (t.kept ?? t.withOdds), 0)} matchs gardés ` +
+  `(${index.reduce((s, t) => s + t.withOdds, 0)} cotés) sur ${index.length} tournoi(s) -> ${OUT_DIR}`,
+);

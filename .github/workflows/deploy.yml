@@ -94,6 +94,18 @@ jobs:
       - run: node scrape-books.mjs
         continue-on-error: true
 
+      # 1d) Cotes + point par point Flashscore (incrémental : chaque outil
+      # reprend par fsId ce qui est déjà dans data/flashscore/, seuls les
+      # NOUVEAUX matchs coûtent des requêtes — quelques dizaines par jour de
+      # tournoi, zéro hors tournoi). C'est ce qui donne aux nouveaux résultats
+      # leurs cotes de clôture et leur graphe point par point dès le lendemain.
+      # continue-on-error : même logique que les cotes bookmakers — un raté
+      # Flashscore ne doit pas coûter le déploiement, le run suivant reprend.
+      - run: node tools/flashscore/backfill-odds.mjs
+        continue-on-error: true
+      - run: node tools/flashscore/backfill-points.mjs --skip-existing
+        continue-on-error: true
+
       # 2) Génère les JSON statiques (Elo sur TOUTES les saisons présentes dans data/)
       - run: node build-data.mjs
 

@@ -672,6 +672,10 @@ const oddsByPlayed = new Map();
 // Jointes par empreinte de score + jour ±1 + noms (cf. lib/flashscore-join.mjs),
 // elles COMPLÈTENT nos relevés bookmakers : un match déjà couvert par
 // data/books/ garde ses cotes à nous, Flashscore ne remplit que les trous.
+// La jointure est aussi le PONT fsId ↔ match joué : conservée entière dans
+// fsJoined (y compris les matchs sans cote, d'où requireOdds:false), elle
+// permet plus bas d'accrocher le point par point Flashscore aux pronos.
+let fsJoined = new Map();
 {
   const fsFiles = await loadFlashscoreOdds(join(ROOT, "data", "flashscore", "odds"));
   if (fsFiles.length) {
@@ -688,7 +692,8 @@ const oddsByPlayed = new Map();
         });
       }
     }
-    const { joined, stats } = joinFlashscore(fsFiles, bwfRows);
+    const { joined, stats } = joinFlashscore(fsFiles, bwfRows, { requireOdds: false });
+    fsJoined = joined;
     let added = 0, refSeules = 0;
     for (const [k, odds] of joined) {
       // MÊME GARDE-FOU QUE LE CHEMIN « MAISON » (plus haut) : seuls les
@@ -701,15 +706,57 @@ const oddsByPlayed = new Map();
       for (const [op, b] of Object.entries(odds.books || {})) {
         if (MISABLE_BOOKS.includes(op)) books[op] = b;
       }
-      if (!Object.keys(books).length) { refSeules++; continue; }
+      // Sans cote misable, rien à ajouter côté cotes ; refSeules ne compte que
+      // les matchs qui AVAIENT des cotes (bwin/NetBet), pas ceux joints sans
+      // cote du tout (requireOdds:false), présents pour le point par point.
+      if (!Object.keys(books).length) { if (Object.keys(odds.books || {}).length) refSeules++; continue; }
       if (!oddsByPlayed.has(k)) { oddsByPlayed.set(k, { ...odds, books }); added++; }
     }
     console.log(
-      `   Flashscore : ${stats.fsMatches} matchs cotés (${fsFiles.length} tournois), ` +
+      `   Flashscore : ${stats.fsMatches} matchs (${fsFiles.length} tournois), ` +
       `${stats.joined} joints -> ${added} ajoutés, ${stats.unmatched} non joints, ${stats.ambiguous} ambigus` +
       (refSeules ? `, ${refSeules} écartés (cotes de référence seules : bwin/NetBet)` : ""),
     );
   }
+}
+
+// ===== Point par point Flashscore : préparation =====
+// data/flashscore/points/ (collecté par tools/flashscore/backfill-points.mjs)
+// porte, par fsId, deux chaînes par manche : m = marqueur de chaque point,
+// s = serveur, en orientation Flashscore (home/away). Les matchs à anomalie
+// (écart de score non +1) sont écartés dès ici.
+const pointsByFsId = new Map();
+{
+  const dir = join(ROOT, "data", "flashscore", "points");
+  let noms = [];
+  try { noms = await readdir(dir); } catch { /* pas encore collecté */ }
+  for (const n of noms.filter((x) => x.endsWith(".json"))) {
+    const f = JSON.parse(await readFile(join(dir, n), "utf8"));
+    for (const m of f.matches || []) {
+      if (!m.sets || m.anomalies?.length) continue;
+      if (!pointsByFsId.has(m.fsId)) pointsByFsId.set(m.fsId, m.sets);
+    }
+  }
+}
+
+// Oriente les manches point par point sur NOTRE team1/team2 en recomptant
+// chaque manche contre le score connu du match — même geste que
+// tools/export-points.mjs : la validation et l'orientation ne font qu'un
+// (au plus un sens peut coller, le vainqueur diffère de l'autre sens), et un
+// match qui ne colle dans aucun sens — flux troué compris, les points
+// manquants font rater le recompte — est écarté. Rend null dans ce cas.
+function orienterPoints(sets, score) {
+  if (!Array.isArray(score) || score.length !== sets.length) return null;
+  const compte = (txt, c) => { let n = 0; for (const ch of txt) if (ch === c) n++; return n; };
+  const colle = (swap) => sets.every((s, i) => {
+    const c1 = compte(s.m, swap ? "2" : "1"), c2 = compte(s.m, swap ? "1" : "2");
+    return c1 === score[i].home && c2 === score[i].away;
+  });
+  const swap = colle(false) ? false : colle(true) ? true : null;
+  if (swap === null) return null;
+  if (!swap) return sets.map((s) => ({ m: s.m, s: s.s, fin: s.fin }));
+  const inverse = (txt) => txt.replace(/[12]/g, (c) => (c === "1" ? "2" : "1"));
+  return sets.map((s) => ({ m: inverse(s.m), s: inverse(s.s), fin: [s.fin[1], s.fin[0]] }));
 }
 
 // ===== 5b) Pronostics par tournoi : pronos/<tmtId>.json =====
@@ -717,7 +764,7 @@ const oddsByPlayed = new Map();
 // joués, chacun avec la proba d'avant match, le verdict (bon/mauvais prono) et
 // les cotes de clôture quand un bookmaker a été apparié (matchs récents
 // uniquement — l'historique de cotes n'existe que depuis fin juillet 2026).
-let pronoFiles = 0, pronoMatches = 0;
+let pronoFiles = 0, pronoMatches = 0, pointsFiles = 0, pointsMatches = 0;
 const oddsCountByTmt = new Map(); // tmtId -> nb de matchs joués avec cotes appariées
 // Lignes de l'étude de rentabilité : chaque match joué qui a un prono ET des
 // cotes appariées. Construites ici même, où e.odds vient d'être attaché.
@@ -727,10 +774,19 @@ for (const [tmtId, list] of pronosByTmt) {
   if (!writtenTmtIds.has(tmtId)) continue;
   list.sort((x, y) => (x.matchTime || "").localeCompare(y.matchTime || ""));
   let predicted = 0, correct = 0, withOdds = 0, walkovers = 0;
+  const pointsDuTournoi = {}; // clé `${disc}|${day}|${a}|${b}` -> manches point par point
   for (const e of list) {
     const day = String(e.matchTime || "").slice(0, 10);
     const odds = oddsByPlayed.get(`${tmtId}|${e.disc}|${day}|${e.a}|${e.b}`);
     if (odds) { e.odds = odds; withOdds++; }
+    // Point par point : via le pont fsId de la jointure Flashscore, orienté et
+    // validé par recomptage. `pts` sur le match dit à l'interface qu'un graphe
+    // existe ; les points eux-mêmes vont dans points/<tmtId>.json, chargé à la
+    // demande (les embarquer ici gonflerait pronos/<tmtId>.json pour tous).
+    const fsId = fsJoined.get(`${tmtId}|${e.disc}|${day}|${e.a}|${e.b}`)?.fsId;
+    const brut = fsId ? pointsByFsId.get(fsId) : null;
+    const sets = brut?.length && e.score?.length ? orienterPoints(brut, e.score) : null;
+    if (sets) { e.pts = true; pointsDuTournoi[`${e.disc}|${day}|${e.a}|${e.b}`] = sets; }
     if (e.prob != null && e.odds?.books) {
       roiRows.push({
         tmtId, name: tournamentName.get(tmtId) ?? String(tmtId),
@@ -749,10 +805,23 @@ for (const [tmtId, list] of pronosByTmt) {
     stats: { total: list.length, walkovers, predicted, correct, withOdds },
     matches: list,
   });
+  const nbPts = Object.keys(pointsDuTournoi).length;
+  if (nbPts) {
+    await write(`points/${tmtId}.json`, {
+      tmtId,
+      generatedAt: ranking.generatedAt,
+      format: "par manche : m = marqueur de chaque point (1 = team1, 2 = team2), " +
+              "s = serveur du point (0 = inconnu) ; fin = [team1, team2]. " +
+              "Orientation team1/team2 du match dans pronos/<tmtId>.json.",
+      matches: pointsDuTournoi,
+    });
+    pointsFiles++; pointsMatches += nbPts;
+  }
   oddsCountByTmt.set(tmtId, withOdds);
   pronoFiles++; pronoMatches += list.length;
 }
 console.log(`   Pronostics : ${pronoFiles} tournois, ${pronoMatches} matchs joués`);
+console.log(`   Point par point : ${pointsFiles} tournois, ${pointsMatches} matchs avec graphe`);
 
 // ===== 5c) Étude de rentabilité : roi.json =====
 // Simule des mises plates de 1 € sur les pronos selon 6 stratégies (cf.

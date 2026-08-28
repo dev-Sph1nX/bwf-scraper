@@ -50,6 +50,7 @@ rétro-adaptée après coup :
 npm install && npx playwright install chromium
 npm run update       # scrape l'année
 npm run scrape-books # cotes Betclic/Unibet/Winamax (HTTP pur) -> data/books/runs/ (append-only)
+npm run scrape-flashscore # cotes + point par point Flashscore -> data/flashscore/ (incrémental par fsId)
 npm run build-data   # génère les JSON pour l'app
 npm run refresh      # tout d'un coup (update + rankings + books + build + backtest)
 
