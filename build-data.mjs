@@ -18,6 +18,7 @@ import * as store from "./lib/store.mjs";
 import { computeElo, seedEloByRank } from "./lib/elo.mjs";
 import { loadInitialRanks } from "./lib/seeds.mjs";
 import { loadBookRuns, buildBookSeries, groupBooks } from "./lib/books-history.mjs";
+import { guideTotaux, BARRES_TOTAUX, SEUIL_REL } from "./lib/guide-totaux.mjs";
 import { matchBooks } from "./lib/books-match.mjs";
 import { loadPublications, buildWorldMap, buildPlayerRankHistory, publicationTotal } from "./lib/rank-history.mjs";
 import { recalibrate } from "./lib/calibrate.mjs";
@@ -578,6 +579,24 @@ const oddsByPlayed = new Map();
   }
   await write("upcoming-matches.json", { generatedAt: ranking.generatedAt, matches: upcomingMatches });
 
+  // ===== Guide de pari « totaux » : la règle scellée appliquée aux relevés =====
+  // Betclic seul cote ce marché ; les barres arrivent par le champ `totals`
+  // des relevés (scrape-books, depuis 2026-08-28). Le calcul vit dans
+  // lib/guide-totaux.mjs (et la règle, dans le bureau d'études). Tant que
+  // Betclic n'a pas publié de lignes (période creuse), le fichier sort avec
+  // une liste vide : la page /guide-pari affiche son état vide, pas un trou.
+  {
+    const genAt = new Date().toISOString();
+    const matches = guideTotaux(series, genAt);
+    await write("guide-totaux.json", {
+      generatedAt: genAt,
+      regle: { barres: BARRES_TOTAUX, seuil: SEUIL_REL, scelle: "2026-08-28" },
+      matches,
+    });
+    const nc = matches.reduce((t, m) => t + m.nConseils, 0);
+    console.log(`🎯 guide-totaux : ${matches.length} matchs à venir cotés en totaux, ${nc} conseils`);
+  }
+
   const names = (team) => (team?.players || []).map((p) => p.nameDisplay).join(" / ");
 
   // Alimente la table des cotes des matchs joués (jointure vers les pronostics).
@@ -832,7 +851,7 @@ await write("updates.json", { generatedAt: ranking.generatedAt, updates });
 // VERSIONNÉS (contrairement aux dérivés) : ce sont des verdicts datés, pas des
 // données vivantes. On les recopie tels quels pour l'app ; absents, la page
 // concernée affiche son état vide. Régénérer :
-//   node measures/mesure-rentabilite-gymnase.mjs
+//   node ../bwf-playground/heritage-scraper/measures/mesure-rentabilite-gymnase.mjs
 for (const [fichier, source] of [["gymnases-3sets.json", join(ROOT, "data", "analyses", "gymnases-3sets.json")]]) {
   try {
     await write(fichier, JSON.parse(await readFile(source, "utf8")));

@@ -182,7 +182,7 @@ test("winamax : auto-vérification de couverture via mainMatchCount", () => {
 // (docs/verif-cotes-sets.md).
 
 import { setsFromOutcomes } from "../lib/books.mjs";
-import { setsFromBetclicMarkets } from "../lib/book-betclic.mjs";
+import { setsFromBetclicMarkets, totalsFromBetclicMarkets } from "../lib/book-betclic.mjs";
 import { parseUnibetMarketCards, setsFromUnibetCards, slugifyUnibet, unibetMatchPaths } from "../lib/book-unibet.mjs";
 import { parseWinamaxMatchSets } from "../lib/book-winamax.mjs";
 
@@ -270,6 +270,50 @@ test("betclic : repli « Score final (sets) » -> cotes par score, jamais recomb
     scores: { "2-0": 2.7, "0-2": 3, "2-1": 3.9, "1-2": 4.2 },
   });
   assert.equal(setsFromBetclicMarkets([{ name: "Vainqueur du match", selections: [] }]), null);
+});
+
+// --- Marché « total de points » (champ optionnel `totals`) --------------------
+//
+// Betclic n'a encore jamais été observé avec ce marché dans nos relevés (il
+// n'apparaîtra qu'au prochain tournoi coté) : ces tests couvrent les FORMES
+// PLAUSIBLES du libellé, calquées sur les autres marchés Plus/Moins du site.
+// Au premier relevé réel, vérifier le libellé et resserrer si besoin.
+
+test("betclic totaux : escalier dans un seul marché, lignes groupées par barre", () => {
+  const markets = [
+    { name: "Vainqueur du match", selections: [{ label: "A", odd: 1.75 }, { label: "B", odd: 2.03 }] },
+    { name: "Nombre total de points", selections: [
+      { label: "Plus de 73,5", odd: 1.62 }, { label: "Moins de 73,5", odd: 2.1 },
+      { label: "Plus de 75,5", odd: 1.85 }, { label: "Moins de 75,5", odd: 1.85 },
+      { label: "Plus de 79,5", odd: 2.15 }, { label: "Moins de 79,5", odd: 1.6 },
+    ] },
+  ];
+  assert.deepEqual(totalsFromBetclicMarkets(markets), [
+    { n: 73.5, over: 1.62, under: 2.1 },
+    { n: 75.5, over: 1.85, under: 1.85 },
+    { n: 79.5, over: 2.15, under: 1.6 },
+  ]);
+});
+
+test("betclic totaux : un marché par barre (barre dans le nom), labels nus Plus/Moins", () => {
+  const markets = [
+    { name: "Total de points 75,5", selections: [{ label: "Plus", odd: 1.85 }, { label: "Moins", odd: 1.85 }] },
+    { name: "Total de points 80,5", selections: [{ label: "Plus", odd: 2.05 }, { label: "Moins", odd: 1.68 }] },
+  ];
+  assert.deepEqual(totalsFromBetclicMarkets(markets), [
+    { n: 75.5, over: 1.85, under: 1.85 },
+    { n: 80.5, over: 2.05, under: 1.68 },
+  ]);
+});
+
+test("betclic totaux : les totaux PAR SET sont écartés, cote ≤ 1 neutralisée, absent -> null", () => {
+  const markets = [
+    { name: "Total de points du 1er set", selections: [{ label: "Plus de 41,5", odd: 1.9 }, { label: "Moins de 41,5", odd: 1.8 }] },
+    { name: "Nombre total de points", selections: [{ label: "Plus de 75,5", odd: null }, { label: "Moins de 75,5", odd: 1.85 }] },
+  ];
+  assert.deepEqual(totalsFromBetclicMarkets(markets), [{ n: 75.5, over: null, under: 1.85 }]);
+  assert.equal(totalsFromBetclicMarkets([{ name: "Vainqueur du match", selections: [] }]), null);
+  assert.equal(totalsFromBetclicMarkets([]), null);
 });
 
 test("unibet : carte « Nombre de sets » lue dans le HTML SSR de la page match", () => {

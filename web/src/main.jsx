@@ -12,6 +12,7 @@ import Coulisses from "./pages/Coulisses.jsx";
 import Sante from "./pages/Sante.jsx";
 import Predictor from "./pages/Predictor.jsx";
 import Rentabilite from "./pages/Rentabilite.jsx";
+import GuidePari from "./pages/GuidePari.jsx";
 import Gymnases from "./pages/Gymnases.jsx";
 import "./styles.css";
 
@@ -29,6 +30,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/sante" element={<Sante />} />
           <Route path="/predictor" element={<Predictor />} />
           <Route path="/rentabilite" element={<Rentabilite />} />
+          <Route path="/guide-pari" element={<GuidePari />} />
           <Route path="/gymnases" element={<Gymnases />} />
           {OLD_ROUTES.map((p) => (
             <Route key={p} path={p} element={<Navigate to="/coulisses" replace />} />

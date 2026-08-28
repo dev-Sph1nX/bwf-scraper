@@ -14,7 +14,10 @@
 // Depuis 2026-08-10, chaque ligne prématch porte AUSSI, quand l'opérateur le
 // cote, le marché « nombre de sets » (champ optionnel `sets`, documenté dans
 // lib/books.mjs) — préalable du futur marché lié à l'effet gymnase (journal
-// §7). Ajout strictement additif : les relevés antérieurs restent lisibles
+// §7). Depuis 2026-08-28, la page match Betclic livre EN PLUS le marché
+// « total de points » (champ optionnel `totals`, même lecture de page) : il
+// alimente le guide de pari du site (règle scellée du bureau d'études).
+// Ajouts strictement additifs : les relevés antérieurs restent lisibles
 // tels quels, et un marché absent ne fait jamais échouer le relevé vainqueur.
 
 import fs from "node:fs/promises";
@@ -58,7 +61,8 @@ for (const [i, [name, fn, enrichSets]] of BOOKS.entries()) {
     if (rows.length) {
       try {
         const n = await enrichSets(rows, ctx);
-        setsNote = `, sets: ${n}/${rows.length}`;
+        const nTot = rows.filter((r) => r.totals).length;
+        setsNote = `, sets: ${n}/${rows.length}${nTot ? `, totaux: ${nTot}` : ""}`;
       } catch (err) {
         setsNote = `, sets KO (${String(err.message || err)})`;
       }

@@ -37,6 +37,22 @@ test("série : relevés consécutifs identiques fusionnés, ouverture et clôtur
   assert.equal(s.moved, true);
 });
 
+test("série : sets et totals suivent le dernier relevé PRÉMATCH, horodatés", () => {
+  const totals1 = [{ n: 75.5, over: 1.85, under: 1.85 }];
+  const totals2 = [{ n: 73.5, over: 1.8, under: 1.9 }];
+  const runs = [
+    run("2026-07-31T08:00:00Z", { betclic: [ligne("betclic", "b1", "73288292", 1.5, 2.4, { totals: totals1 })] }),
+    run("2026-07-31T10:00:00Z", { betclic: [ligne("betclic", "b1", "73288292", 1.5, 2.4, { totals: totals2, sets: { market: "Nombre de sets", odd2: 1.5, odd3: 2.4 } })] }),
+    // passé en live : la photo prématch reste la référence
+    run("2026-07-31T11:35:00Z", { betclic: [ligne("betclic", "b1", "73288292", 1.2, 3.8, { isLive: true, totals: [{ n: 40.5, over: 1.1, under: 6 }] })] }),
+  ];
+  const [s] = buildBookSeries(runs);
+  assert.deepEqual(s.totals, totals2);
+  assert.equal(s.totalsAt, "2026-07-31T10:00:00Z");
+  assert.equal(s.sets.odd2, 1.5);
+  assert.equal(s.setsAt, "2026-07-31T10:00:00Z");
+});
+
 test("groupement par srId : un match, trois opérateurs, noms pris chez Winamax", () => {
   const runs = [
     run("2026-07-31T10:00:00Z", {
