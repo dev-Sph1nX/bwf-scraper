@@ -4,9 +4,12 @@ import { getJSON } from "../data.js";
 import Bracket from "../components/Bracket.jsx";
 import MatchTeam from "../components/MatchTeam.jsx";
 import UpcomingMatch, { ROUND_LABEL } from "../components/UpcomingMatch.jsx";
+import OddsModal from "../components/OddsModal.jsx";
+import PointsChart from "../components/PointsChart.jsx";
+import PronoVerdict from "../components/PronoVerdict.jsx";
+import { matchPath } from "../data.js";
 
 const ORDER = ["MS", "WS", "MD", "WD", "XD"];
-const BOOK_LABEL = { betclic: "Betclic", unibet: "Unibet", winamax: "Winamax" };
 const DISC_LABEL = {
   MS: "Simple messieurs", WS: "Simple dames", MD: "Double messieurs",
   WD: "Double dames", XD: "Double mixte",
@@ -369,65 +372,18 @@ function fmtMatchTime(t) {
   return `${D}/${M}${h ? ` · ${h.slice(0, 5).replace(":", "h")}` : ""}`;
 }
 
-// Seuil sous lequel un Elo est « provisoire » — même valeur que
-// provisionalMatches dans lib/elo.mjs (le modèle s'abstient en dessous).
-const PROV_MIN = 5;
-
-// Explication du « Sans prono », construite depuis le nombre de matchs CONNUS
-// de chaque camp à l'instant du match (embarqué par build-data).
-function sansPronoWhy(m) {
-  const name = (t) => (t?.players || []).map((p) => p.nameDisplay).join(" / ");
-  const bout = (t, n) => {
-    const paire = (t?.players || []).length > 1;
-    if (n === 0) return `${name(t)} n'avait encore jamais joué${paire ? " ensemble" : ""}`;
-    return `${name(t)} n'avait que ${n} match${n > 1 ? "s" : ""}${paire ? " ensemble" : ""}`;
-  };
-  const faibles = [];
-  if (m.nA != null && m.nA < PROV_MIN) faibles.push(bout(m.team1, m.nA));
-  if (m.nB != null && m.nB < PROV_MIN) faibles.push(bout(m.team2, m.nB));
-  if (!faibles.length) return "Pas de pronostic : Elo encore provisoire au moment du match.";
-  return `Pas de pronostic : ${faibles.join(" et ")} à notre connaissance au moment du match — ` +
-    `en dessous de ${PROV_MIN} matchs, l'Elo est encore provisoire et le modèle s'abstient ` +
-    `plutôt que d'inventer une probabilité.`;
-}
-
-// Verdict d'un match : le prono était-il bon ? + les cotes de clôture relevées.
-function PronoVerdict({ m }) {
-  const pickTeam = m.pick === 1 ? m.team1 : m.team2;
-  const pickName = (pickTeam?.players || []).map((p) => p.nameDisplay).join(" / ");
-  const pickProb = m.pick === 1 ? m.prob : 100 - m.prob;
-  return (
-    <div className="prono-cell">
-      {m.walkover ? (
-        <span className="badge warn" title={m.status || "Forfait / abandon : pas un match à prédire"}>Forfait</span>
-      ) : m.pick == null ? (
-        <span className="badge warn" tabIndex={0} title={sansPronoWhy(m)}>Sans prono</span>
-      ) : (
-        <>
-          <span className={`badge ${m.ok ? "ok" : "ko"}`}>{m.ok ? "✓ Prono réussi" : "✗ Prono raté"}</span>
-          <span className="prono-pick">Donné : <b>{pickName}</b> à <b>{pickProb}%</b></span>
-        </>
-      )}
-      {m.odds && (
-        <span className="prono-odds">
-          {Object.entries(m.odds.books).map(([op, b]) => (
-            <span key={op}>
-              {BOOK_LABEL[op] || op}{" "}
-              <span className={m.winner === 1 ? "win" : ""}>{b.odd1.toLocaleString("fr-FR")}</span>
-              {" / "}
-              <span className={m.winner === 2 ? "win" : ""}>{b.odd2.toLocaleString("fr-FR")}</span>
-            </span>
-          ))}
-        </span>
-      )}
-    </div>
-  );
-}
-
 // Liste des matchs joués du tournoi : résultat + verdict du prono + cotes.
+// Le verdict lui-même (badge, camp donné, cotes) vit dans
+// components/PronoVerdict.jsx, partagé avec la fiche match.
 function PronoList({ pronos }) {
   const [filtre, setFiltre] = useState("all");
   const [coteF, setCoteF] = useState("all"); // all | with | without
+  const [graphe, setGraphe] = useState(null); // match dont on affiche le point par point
+  // points/<tmtId>.json, chargé à la 1re ouverture seulement (3 états : null =
+  // pas encore là, false = indisponible, objet = chargé). Réinitialisé quand on
+  // change de tournoi — le composant, lui, ne se remonte pas.
+  const [pointsData, setPointsData] = useState(null);
+  useEffect(() => { setPointsData(null); setGraphe(null); }, [pronos]);
   if (pronos === null) return <div className="card muted">Chargement…</div>;
   if (pronos === false || !pronos.matches?.length) {
     return <div className="card muted">Aucun match joué pour l'instant — les pronostics apparaîtront ici après les premiers résultats.</div>;
@@ -444,6 +400,15 @@ function PronoList({ pronos }) {
     correct: rows.filter((m) => m.ok === true).length,
     sansProno: rows.filter((m) => !m.walkover && m.pick == null).length,
     withOdds: rows.filter((m) => m.odds).length,
+  };
+  const nomDe = (t) => (t?.players || []).map((p) => p.nameDisplay).join(" / ");
+  // Même clé de match que build-data côté écriture de points/<tmtId>.json.
+  const cleDe = (m) => `${m.disc}|${String(m.matchTime || "").slice(0, 10)}|${m.a}|${m.b}`;
+  const ouvrirPoints = (m) => {
+    setGraphe(m);
+    if (pointsData == null) {
+      getJSON(`points/${pronos.tmtId}.json`).then(setPointsData).catch(() => setPointsData(false));
+    }
   };
   return (
     <>
@@ -472,7 +437,9 @@ function PronoList({ pronos }) {
         (modèle « Elo recalibré », le même que le prédicteur). <b>✓</b> = le camp donné
         favori l'a emporté. Les cotes sont les cotes de clôture (dernières avant le match)
         de Betclic / Unibet / Winamax — nos relevés pour les tournois récents, complétés
-        par l'historique Flashscore sur la saison 2026.
+        par l'historique Flashscore sur la saison 2026. <b>📈 Points</b> = revivre le
+        match point par point (courbes de score, relevés Flashscore). Clique sur le
+        tour d'un match pour ouvrir sa <b>fiche complète</b>.
       </p>
       <div className="lb-sort" style={{ marginBottom: 12 }}>
         <span className="lb-sort-label">Tableau :</span>
@@ -491,8 +458,18 @@ function PronoList({ pronos }) {
         {rows.map((m, i) => (
           <div className="match-item" key={i}>
             <div className="match-meta">
-              <span className="match-ev">{m.disc} · {ROUND_LABEL[m.roundName] || m.roundName}</span>
+              <span className="match-ev">
+                <Link to={matchPath(pronos.tmtId, m)} title="Ouvrir la fiche du match">
+                  {m.disc} · {ROUND_LABEL[m.roundName] || m.roundName} →
+                </Link>
+              </span>
               <span className="match-date">{fmtMatchTime(m.matchTime)}</span>
+              {m.pts && (
+                <button type="button" className="range-btn bc-graph" title="Revivre le match point par point"
+                        onClick={() => ouvrirPoints(m)}>
+                  📈 Points
+                </button>
+              )}
             </div>
             <div className="mcard mcard-flow">
               <MatchTeam match={m} side={1} seed={m.team1?.seed} />
@@ -503,6 +480,19 @@ function PronoList({ pronos }) {
         ))}
       </div>
     </div>
+    {graphe && (
+      <OddsModal open onClose={() => setGraphe(null)}
+                 title={`Point par point — ${nomDe(graphe.team1)} vs ${nomDe(graphe.team2)}`}>
+        {pointsData == null ? (
+          <p className="muted">Chargement…</p>
+        ) : pointsData === false || !pointsData.matches?.[cleDe(graphe)] ? (
+          <p className="muted">Point par point indisponible pour ce match.</p>
+        ) : (
+          <PointsChart sets={pointsData.matches[cleDe(graphe)]}
+                       label1={nomDe(graphe.team1)} label2={nomDe(graphe.team2)} />
+        )}
+      </OddsModal>
+    )}
     </>
   );
 }

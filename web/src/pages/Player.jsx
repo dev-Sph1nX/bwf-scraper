@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams, useOutletContext, Link } from "react-router-dom";
-import { getJSON } from "../data.js";
+import { getJSON, matchPath } from "../data.js";
 import EloChart, { parseT } from "../components/EloChart.jsx";
 import MatchTeam from "../components/MatchTeam.jsx";
 
@@ -378,7 +378,11 @@ export default function Player() {
                       return (
                         <div className={`match-item ${highlight === mkey ? "flash" : ""}`} data-mkey={mkey} key={i}>
                           <div className="match-meta">
-                            <span className="match-ev">{m.eventName} · {m.roundName}</span>
+                            <span className="match-ev">
+                              <Link to={matchPath(m.tmtId, m)} title="Ouvrir la fiche du match">
+                                {m.eventName} · {m.roundName} →
+                              </Link>
+                            </span>
                             <span className="match-date">{fmtMatchDate(m.matchTime)}</span>
                             {typeof delta === "number" ? (
                               <span className={`form ${delta > 0 ? "up" : delta < 0 ? "down" : "flat"}`}>

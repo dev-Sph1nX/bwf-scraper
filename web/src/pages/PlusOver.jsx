@@ -1,4 +1,4 @@
-// web/src/pages/GuidePari.jsx — « quels matchs parier, et quoi exactement ? »
+// web/src/pages/PlusOver.jsx — « quels matchs parier, et quoi exactement ? »
 // Lit guide-totaux.json (généré par build-data via lib/guide-totaux.mjs) : les
 // matchs à venir cotés en totaux chez Betclic, passés au crible de la règle
 // SCELLÉE « over sur rel ≤ −2 » (bwf-playground/regle-rel-moins-2, 2026-08-28).
@@ -23,10 +23,10 @@ const ageHeures = (iso, ref) => {
 };
 const cote = (v) => (v == null ? "—" : v.toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
 
-export default function GuidePari() {
+export default function PlusOver() {
   const { setTitle } = useOutletContext();
   const [data, setData] = useState(null);
-  useEffect(() => { setTitle("Guide de pari — totaux"); }, [setTitle]);
+  useEffect(() => { setTitle("Plus/Over — totaux"); }, [setTitle]);
   useEffect(() => { getJSON("guide-totaux.json").then(setData).catch(() => setData(false)); }, []);
 
   if (data === false) return <p className="hint">Guide indisponible — données non générées (relancer build-data).</p>;

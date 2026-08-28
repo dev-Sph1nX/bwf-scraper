@@ -5,6 +5,7 @@ import Layout from "./components/Layout.jsx";
 import Ranking from "./pages/Ranking.jsx";
 import Tournaments from "./pages/Tournaments.jsx";
 import Tournament from "./pages/Tournament.jsx";
+import Match from "./pages/Match.jsx";
 import Player from "./pages/Player.jsx";
 import Pair from "./pages/Pair.jsx";
 import Home from "./pages/Home.jsx";
@@ -12,7 +13,7 @@ import Coulisses from "./pages/Coulisses.jsx";
 import Sante from "./pages/Sante.jsx";
 import Predictor from "./pages/Predictor.jsx";
 import Rentabilite from "./pages/Rentabilite.jsx";
-import GuidePari from "./pages/GuidePari.jsx";
+import PlusOver from "./pages/PlusOver.jsx";
 import Gymnases from "./pages/Gymnases.jsx";
 import "./styles.css";
 
@@ -30,12 +31,14 @@ createRoot(document.getElementById("root")).render(
           <Route path="/sante" element={<Sante />} />
           <Route path="/predictor" element={<Predictor />} />
           <Route path="/rentabilite" element={<Rentabilite />} />
-          <Route path="/guide-pari" element={<GuidePari />} />
+          <Route path="/plus-over" element={<PlusOver />} />
+          <Route path="/guide-pari" element={<Navigate to="/plus-over" replace />} />
           <Route path="/gymnases" element={<Gymnases />} />
           {OLD_ROUTES.map((p) => (
             <Route key={p} path={p} element={<Navigate to="/coulisses" replace />} />
           ))}
           <Route path="/tournament/:id" element={<Tournament />} />
+          <Route path="/match/:tmtId/:key" element={<Match />} />
           <Route path="/player/:id" element={<Player />} />
           <Route path="/pair/:key" element={<Pair />} />
         </Route>
