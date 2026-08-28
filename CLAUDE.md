@@ -68,3 +68,14 @@ npm run build        # build statique -> web/dist
 - Réponses de l'API BWF typées dans `types.ts`.
 - Ne pas committer de secret/token (le repo est public). Pas de déclenchement de
   workflow côté client exposant un token.
+
+## Frontière avec bwf-playground — IMPORTANTE
+
+Ce dépôt est **l'usine à données** : il scrape, construit le site et exporte
+(`npm run export`). **Aucune analyse, étude, mesure ou décision de pari ne vit
+ici.** Tout ça est au **bureau d'études : `../bwf-playground`** (README-index
+des études et de leurs verdicts). Y ont été déplacés le 2026-08-28 :
+`measures/`, `run4-totaux/`, et les docs d'étude (journal des mesures, roadmap
+outil de pari, notes d'idées, banc d'essai, prompts d'agents). Le scellé du
+run 4 reste vérifiable ici : commit `5ba007b`. Toute nouvelle étude se crée
+dans le playground, jamais ici.

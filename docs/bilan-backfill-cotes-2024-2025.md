@@ -3,7 +3,7 @@
 **Date :** 2026-08-05 · **Demande :** récupérer les cotes Flashscore jusqu'au
 premier match de la base (Malaysia Open, 09/01/2024), relancer `build-data` et
 re-runner l'étude ROI. Les chiffres détaillés sont consignés au
-[journal §8.4](journal-des-mesures.md) ; ce document présente l'ensemble.
+[journal §8.4](../../bwf-playground/heritage-scraper/docs/journal-des-mesures.md) ; ce document présente l'ensemble.
 
 ## 1. Ce qui a été vérifié puis récolté
 
