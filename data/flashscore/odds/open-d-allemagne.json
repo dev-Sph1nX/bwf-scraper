@@ -1,19 +1,3492 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-08-03T10:46:48.178Z",
+ "fetchedAt": "2026-08-28T18:03:42.492Z",
  "tournamentSlug": "open-d-allemagne",
  "books": [
   "betclic",
   "unibet",
   "winamax"
  ],
+ "booksReference": [],
  "stats": {
-  "scanned": 131,
+  "scanned": 155,
+  "kept": 155,
   "withOdds": 35,
-  "from": "2026-02-27",
+  "from": "2026-02-24",
   "to": "2026-03-01"
  },
  "matches": [
+  {
+   "fsId": "hhios9Ik",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T13:10:00.000Z",
+   "home": {
+    "name": "Chia A./Soh W. Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "ALRgqHY2"
+   },
+   "away": {
+    "name": "Boe W. K./Sondergaard A.",
+    "country": "Danemark",
+    "fsParticipantId": "IoV1se3F"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 25,
+     "away": 23
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "UshES93d",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T13:45:00.000Z",
+   "home": {
+    "name": "Lee F. C/Lee F. J.",
+    "country": "Taïwan",
+    "fsParticipantId": "lnLjW9wH"
+   },
+   "away": {
+    "name": "Adam E./Rossi L.",
+    "country": "France",
+    "fsParticipantId": "MaJbUm8T"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 23,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "r3DI4OXA",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T13:50:00.000Z",
+   "home": {
+    "name": "Bao L. J./Luo X. M.",
+    "country": "Chine",
+    "fsParticipantId": "822GUQxg"
+   },
+   "away": {
+    "name": "Chen Y. F./Sun L. C.",
+    "country": "Taïwan",
+    "fsParticipantId": "tG0OS475"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "OvfWMpWs",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T13:55:00.000Z",
+   "home": {
+    "name": "Hsu Y. C./Sung Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "jV7x0FX1"
+   },
+   "away": {
+    "name": "Cybulska P./Marczak K.",
+    "country": "Pologne",
+    "fsParticipantId": "rPfONIP8"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 15,
+     "away": 9
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "hxD66Po1",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T14:10:00.000Z",
+   "home": {
+    "name": "Amiguet L./Racloz C.",
+    "country": "Suisse",
+    "fsParticipantId": "hYQlkbJq"
+   },
+   "away": {
+    "name": "Buhrova P./Kantemyr Y.",
+    "country": "Ukraine",
+    "fsParticipantId": "QoPdmxld"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "rRg6UVYq",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T14:30:00.000Z",
+   "home": {
+    "name": "Goh S. F./Izzuddin N.",
+    "country": "Malaysie",
+    "fsParticipantId": "8f4yzhvh"
+   },
+   "away": {
+    "name": "Cattoen M./Renoir L.",
+    "country": "France",
+    "fsParticipantId": "tMHrYV84"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "dlQIjMkn",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T14:35:00.000Z",
+   "home": {
+    "name": "Chen Z. R./Lin Y. C.",
+    "country": "Taïwan",
+    "fsParticipantId": "8Itn3B9U"
+   },
+   "away": {
+    "name": "Lundgaard D./Vestergaard M.",
+    "country": "Danemark",
+    "fsParticipantId": "bsMeNEfn"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "zum1YvzI",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T14:40:00.000Z",
+   "home": {
+    "name": "Chiu H. C./Wang Chi-Lin",
+    "country": "Taïwan",
+    "fsParticipantId": "8ArGAyBt"
+   },
+   "away": {
+    "name": "Dunn A./Pringle A.",
+    "country": "Ecosse",
+    "fsParticipantId": "tOtO8Fug"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "d67wLO0f",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T14:50:00.000Z",
+   "home": {
+    "name": "Chang C. H./Yang C. T.",
+    "country": "Taïwan",
+    "fsParticipantId": "lOMe5A9s"
+   },
+   "away": {
+    "name": "Jongsathapornparn O./Wedler S. S.",
+    "country": "Thaïlande",
+    "fsParticipantId": "fLP33lvf"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "S880S68K",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T15:05:00.000Z",
+   "home": {
+    "name": "Harris A./Tolman L.",
+    "country": "Angleterre",
+    "fsParticipantId": "YVIb7cuS"
+   },
+   "away": {
+    "name": "Pilgaard S./Schulz S.",
+    "country": "Danemark",
+    "fsParticipantId": "r54U1y3k"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "KOEb8oHl",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T15:15:00.000Z",
+   "home": {
+    "name": "Li Y. J./Wang Y. D.",
+    "country": "Chine",
+    "fsParticipantId": "UsIBdtR9"
+   },
+   "away": {
+    "name": "Yeung Nga T./Yeung P. L.",
+    "country": "Hong Kong",
+    "fsParticipantId": "x8LJfKeM"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "xp9gHt0J",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T15:20:00.000Z",
+   "home": {
+    "name": "Hubsch S./Lehmann A.",
+    "country": "Allemagne",
+    "fsParticipantId": "25J5N9VP"
+   },
+   "away": {
+    "name": "Chen S. Y./Lee Y-H.",
+    "country": "Taïwan",
+    "fsParticipantId": "by5yImgm"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "xSoGnVfS",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T15:35:00.000Z",
+   "home": {
+    "name": "Arif J./Yap R. K.",
+    "country": "Malaysie",
+    "fsParticipantId": "Usf2wRpp"
+   },
+   "away": {
+    "name": "Butler O./Jones S.",
+    "country": "Angleterre",
+    "fsParticipantId": "2ehAy5Fd"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "SEqgz155",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T16:00:00.000Z",
+   "home": {
+    "name": "Geiss B./Jansen J. R.",
+    "country": "Allemagne",
+    "fsParticipantId": "z5Od5tZ0"
+   },
+   "away": {
+    "name": "Astrup K./Rasmussen A. S.",
+    "country": "Danemark",
+    "fsParticipantId": "rVR43K3D"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "CvXYnvkB",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T16:10:00.000Z",
+   "home": {
+    "name": "Chen Z. Y./Smith P.",
+    "country": "USA",
+    "fsParticipantId": "pIQJHAON"
+   },
+   "away": {
+    "name": "Ayyappan D./Ayyappan D.",
+    "country": "Emirats Arabes Unis",
+    "fsParticipantId": "G0HkClno"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "U1r8liQF",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T16:15:00.000Z",
+   "home": {
+    "name": "Alimov R./Ogloblin M.",
+    "country": "Russie",
+    "fsParticipantId": "jZaOp9hA"
+   },
+   "away": {
+    "name": "Koh E./Kubo J.",
+    "country": "Singapour",
+    "fsParticipantId": "ba3WrmNM"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "AkFA6p3b",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T16:15:00.000Z",
+   "home": {
+    "name": "Stoeva G./Stoeva S.",
+    "country": "Bulgarie",
+    "fsParticipantId": "CtKbCqNO"
+   },
+   "away": {
+    "name": "Corbett F./Gai J.",
+    "country": "USA",
+    "fsParticipantId": "25a8Wn8t"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "txj9WI4U",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T16:45:00.000Z",
+   "home": {
+    "name": "Kjaer C. F./Kjaer R.",
+    "country": "Danemark",
+    "fsParticipantId": "SvuW6gA5"
+   },
+   "away": {
+    "name": "Popov C./Popov T. J.",
+    "country": "France",
+    "fsParticipantId": "z5rv5XvI"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "02GE43GD",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T16:55:00.000Z",
+   "home": {
+    "name": "Carulla N./Jimenez C. M.",
+    "country": "Espagne",
+    "fsParticipantId": "hhHrBut3"
+   },
+   "away": {
+    "name": "Curtin L./Kelly S.",
+    "country": "Angleterre",
+    "fsParticipantId": "0IKj9JAF"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "4WAoJ2V6",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T17:00:00.000Z",
+   "home": {
+    "name": "Pratiwi A. C./Ramadhanti S. F. S.",
+    "country": "Indonésie",
+    "fsParticipantId": "SYNB1S86"
+   },
+   "away": {
+    "name": "Vang K./Werge M.",
+    "country": "Danemark",
+    "fsParticipantId": "zaRJa6wJ"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "4ETQl0Kb",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T17:10:00.000Z",
+   "home": {
+    "name": "Choong H. J./Haikal M.",
+    "country": "Malaysie",
+    "fsParticipantId": "4vP3LhPb"
+   },
+   "away": {
+    "name": "Liang W. K./Wang C.",
+    "country": "Chine",
+    "fsParticipantId": "xhNBJWgB"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "4hC286Yo",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T17:30:00.000Z",
+   "home": {
+    "name": "Bhat K. A./Gautam S.",
+    "country": "Inde",
+    "fsParticipantId": "W2IrGRNa"
+   },
+   "away": {
+    "name": "Hsu Y. H./Lin J. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "vTLjE5hC"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 8,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "dlp0jDe3",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T17:40:00.000Z",
+   "home": {
+    "name": "Grimley C./Grimley M.",
+    "country": "Ecosse",
+    "fsParticipantId": "hrAUORVj"
+   },
+   "away": {
+    "name": "Lee J-H./Yang Po-Hsuan",
+    "country": "Taïwan",
+    "fsParticipantId": "IL1GnVNc"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "j9OSD7gR",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-24T17:50:00.000Z",
+   "home": {
+    "name": "Lui L. L./Tsang H. Y.",
+    "country": "Hong Kong",
+    "fsParticipantId": "UNRHza4j"
+   },
+   "away": {
+    "name": "Lambert M./Pognante C.",
+    "country": "France",
+    "fsParticipantId": "dUJ3b2dc"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "IqrMTe3b",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T09:05:00.000Z",
+   "home": {
+    "name": "Buhrova P.",
+    "country": "Ukraine",
+    "fsParticipantId": "8ScWqDvg"
+   },
+   "away": {
+    "name": "Nalbantova K.",
+    "country": "Bulgarie",
+    "fsParticipantId": "Gh1vri95"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "hUKDR9Rb",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T09:05:00.000Z",
+   "home": {
+    "name": "Chen C. K./Lin Bing-Wei",
+    "country": "Taïwan",
+    "fsParticipantId": "Yc9eCOan"
+   },
+   "away": {
+    "name": "Maio J./Villeger W.",
+    "country": "France",
+    "fsParticipantId": "tOC3A2Ub"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "Glsd9SBU",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T09:05:00.000Z",
+   "home": {
+    "name": "Macpherson J./Torrance C.",
+    "country": "Ecosse",
+    "fsParticipantId": "4tKOcPpg"
+   },
+   "away": {
+    "name": "De Wit K./Loos M.",
+    "country": "Pays-Bas",
+    "fsParticipantId": "xfIWe3F5"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "ryqlBlsI",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T09:05:00.000Z",
+   "home": {
+    "name": "Muller A./Van Buiten K.",
+    "country": "Suisse",
+    "fsParticipantId": "6iy7urVO"
+   },
+   "away": {
+    "name": "Hu Ling F./Jheng Y. C.",
+    "country": "Taïwan",
+    "fsParticipantId": "dGGGaoGt"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 9,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "2ixJ38DT",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T09:40:00.000Z",
+   "home": {
+    "name": "Santhosh Ramraj R. S.",
+    "country": "Inde",
+    "fsParticipantId": "4fccoIfK"
+   },
+   "away": {
+    "name": "Christophersen L.",
+    "country": "Danemark",
+    "fsParticipantId": "zwlTudIs"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 23,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "Y7MTNRQN",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T09:50:00.000Z",
+   "home": {
+    "name": "Green A./Russ Z.",
+    "country": "Angleterre",
+    "fsParticipantId": "QXuilCDd"
+   },
+   "away": {
+    "name": "Chen B. Y./Liu Y.",
+    "country": "Chine",
+    "fsParticipantId": "hvYxCF53"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "QsJLPmdB",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T09:55:00.000Z",
+   "home": {
+    "name": "Kral J./Kral O.",
+    "country": "République Tchèque",
+    "fsParticipantId": "nLFB8taB"
+   },
+   "away": {
+    "name": "Bourakkadi M./Neumann K.",
+    "country": "Allemagne",
+    "fsParticipantId": "I7xqjYrp"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "UwvB5UrH",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T10:15:00.000Z",
+   "home": {
+    "name": "Wang Z. Y.",
+    "country": "Chine",
+    "fsParticipantId": "r3iyvzmf"
+   },
+   "away": {
+    "name": "Mir T.",
+    "country": "Inde",
+    "fsParticipantId": "GGkqxEH6"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "p4H5TVdn",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T10:35:00.000Z",
+   "home": {
+    "name": "Wee D. W./Wong J. H. H.",
+    "country": "Singapour",
+    "fsParticipantId": "ALVwfspI"
+   },
+   "away": {
+    "name": "Ong Y. S./Teo Ee Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "IoZohLEU"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "OMp9o9io",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T10:40:00.000Z",
+   "home": {
+    "name": "Ongbamrungphan B.",
+    "country": "Thaïlande",
+    "fsParticipantId": "lpSVAyJ7"
+   },
+   "away": {
+    "name": "Hsu W. Ch.",
+    "country": "Taïwan",
+    "fsParticipantId": "fsFHYvBE"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "GK5Ip4jR",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T10:45:00.000Z",
+   "home": {
+    "name": "Svabikova T.",
+    "country": "République Tchèque",
+    "fsParticipantId": "nZlVXQ23"
+   },
+   "away": {
+    "name": "Schulz A.",
+    "country": "Danemark",
+    "fsParticipantId": "hWiwW4XF"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "AabjtEF5",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T10:50:00.000Z",
+   "home": {
+    "name": "Carraggi J.",
+    "country": "Belgique",
+    "fsParticipantId": "pKPwRJYO"
+   },
+   "away": {
+    "name": "Gunawan J.",
+    "country": "Hong Kong",
+    "fsParticipantId": "zq5moNJt"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "SAu1tZn4",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T11:30:00.000Z",
+   "home": {
+    "name": "Zhang B.",
+    "country": "USA",
+    "fsParticipantId": "4jFhdsUF"
+   },
+   "away": {
+    "name": "Bansod M.",
+    "country": "Inde",
+    "fsParticipantId": "x4D0fLbS"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "M1pxSNfe",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T11:35:00.000Z",
+   "home": {
+    "name": "Liao J.-F.",
+    "country": "Taïwan",
+    "fsParticipantId": "lWxjBGxA"
+   },
+   "away": {
+    "name": "Ng Ka L. A.",
+    "country": "Hong Kong",
+    "fsParticipantId": "fV4Nh8Mr"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "j1rYcJ2G",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T11:35:00.000Z",
+   "home": {
+    "name": "Panev E./Stoeva G.",
+    "country": "Bulgarie",
+    "fsParticipantId": "YPNsMFz7"
+   },
+   "away": {
+    "name": "Vestergaard M./Busch C.",
+    "country": "Danemark",
+    "fsParticipantId": "QJATqJSD"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "I5ebZ52L",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T11:50:00.000Z",
+   "home": {
+    "name": "Lee C. Y.",
+    "country": "Hong Kong",
+    "fsParticipantId": "p2rJdHNG"
+   },
+   "away": {
+    "name": "Hoh J.",
+    "country": "Malaysie",
+    "fsParticipantId": "hSoRfehT"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "IPsHv1v1",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T12:00:00.000Z",
+   "home": {
+    "name": "Popov C.",
+    "country": "France",
+    "fsParticipantId": "M1SzKpLs"
+   },
+   "away": {
+    "name": "George K.",
+    "country": "Inde",
+    "fsParticipantId": "fFQrIOkf"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 22,
+     "away": 20
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "E3V2p0o3",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T12:15:00.000Z",
+   "home": {
+    "name": "Chen Z. Y./Corbett F.",
+    "country": "USA",
+    "fsParticipantId": "prY5dkpg"
+   },
+   "away": {
+    "name": "Jones S./Tolman L.",
+    "country": "Angleterre",
+    "fsParticipantId": "IeWDfTE5"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "dpjVV0W9",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T12:15:00.000Z",
+   "home": {
+    "name": "Jomkoh S./Jongsathapornparn O.",
+    "country": "Thaïlande",
+    "fsParticipantId": "G8Xbtwfe"
+   },
+   "away": {
+    "name": "Begga N./Jacob E.",
+    "country": "France",
+    "fsParticipantId": "OYz7vHO7"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "WMQdZZx2",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T12:55:00.000Z",
+   "home": {
+    "name": "Espersen R./Kudsk A. C.",
+    "country": "Danemark",
+    "fsParticipantId": "WIIWaOjo"
+   },
+   "away": {
+    "name": "Hemming C./Van Leeuwen E.",
+    "country": "Angleterre",
+    "fsParticipantId": "bPAINRrh"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "OEttdcXS",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T12:55:00.000Z",
+   "home": {
+    "name": "Wong J./Lai P. J.",
+    "country": "Malaysie",
+    "fsParticipantId": "YqEyrccQ"
+   },
+   "away": {
+    "name": "Kolding K./Werge M.",
+    "country": "Danemark",
+    "fsParticipantId": "UTE6xyLm"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "2Zfrrzog",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T13:10:00.000Z",
+   "home": {
+    "name": "Lu G. Z.",
+    "country": "Chine",
+    "fsParticipantId": "QkTNU1Za"
+   },
+   "away": {
+    "name": "Su L. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "b3RVSu4C"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "IwcjJRq1",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T13:20:00.000Z",
+   "home": {
+    "name": "Koga M.",
+    "country": "Japon",
+    "fsParticipantId": "tEBaN2mD"
+   },
+   "away": {
+    "name": "Li S. F.",
+    "country": "Chine",
+    "fsParticipantId": "8K3oo6uK"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "hMfKdfHq",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T13:40:00.000Z",
+   "home": {
+    "name": "Miyazaki T.",
+    "country": "Japon",
+    "fsParticipantId": "4E3cj4xH"
+   },
+   "away": {
+    "name": "Letshanaa K.",
+    "country": "Malaysie",
+    "fsParticipantId": "jV15lr7T"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "t0f6FunT",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T14:00:00.000Z",
+   "home": {
+    "name": "Cheng X./Zhang C.",
+    "country": "Chine",
+    "fsParticipantId": "8rllZLnS"
+   },
+   "away": {
+    "name": "Krax S./Lehmann A.",
+    "country": "Allemagne",
+    "fsParticipantId": "vRvKTaAk"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "EThwnqnR",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T14:10:00.000Z",
+   "home": {
+    "name": "Wang T. W.",
+    "country": "Taïwan",
+    "fsParticipantId": "4rm35o6l"
+   },
+   "away": {
+    "name": "Mannepalli T.",
+    "country": "Inde",
+    "fsParticipantId": "C8jB3Pz1"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "40tURZXA",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T14:30:00.000Z",
+   "home": {
+    "name": "Gilmour K.",
+    "country": "Ecosse",
+    "fsParticipantId": "l6antVwI"
+   },
+   "away": {
+    "name": "Chen S. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "f5RJNMNj"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 7
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "pCq9tN9l",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T14:35:00.000Z",
+   "home": {
+    "name": "Dinata A.",
+    "country": "Croatie",
+    "fsParticipantId": "pMlJ135D"
+   },
+   "away": {
+    "name": "Popov T. J.",
+    "country": "France",
+    "fsParticipantId": "jJy5P6cK"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "CQqxQD2N",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T14:45:00.000Z",
+   "home": {
+    "name": "Han Q. X.",
+    "country": "Chine",
+    "fsParticipantId": "6gY4oQFc"
+   },
+   "away": {
+    "name": "Lin H. T.",
+    "country": "Taïwan",
+    "fsParticipantId": "v7WCq4pA"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "2aEWwzNb",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T15:00:00.000Z",
+   "home": {
+    "name": "Wassink B./Jille D.",
+    "country": "Pays-Bas",
+    "fsParticipantId": "SOGWzFjn"
+   },
+   "away": {
+    "name": "Goh S. H./Lai S. J.",
+    "country": "Malaysie",
+    "fsParticipantId": "0xFvZhLb"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 8,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "UoGOudhn",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T15:05:00.000Z",
+   "home": {
+    "name": "Karlborg F./Sjoo T.",
+    "country": "Suède",
+    "fsParticipantId": "UZXEIXzI"
+   },
+   "away": {
+    "name": "Butler O./Harris A.",
+    "country": "Angleterre",
+    "fsParticipantId": "x0yNGB5U"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "rc8g6qGt",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T15:35:00.000Z",
+   "home": {
+    "name": "Omer Khan M./Khan T.",
+    "country": "Emirats Arabes Unis",
+    "fsParticipantId": "MTUHdMrI"
+   },
+   "away": {
+    "name": "Mayasari L. T./Rahayu A.",
+    "country": "Indonésie",
+    "fsParticipantId": "6JikvESj"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 9,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "Mw4l2GgM",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T15:45:00.000Z",
+   "home": {
+    "name": "Yeo J. M.",
+    "country": "Singapour",
+    "fsParticipantId": "Oz2sfnwh"
+   },
+   "away": {
+    "name": "Jakobsen J. D.",
+    "country": "Danemark",
+    "fsParticipantId": "W05khQ74"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "8jEpntVO",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T15:50:00.000Z",
+   "home": {
+    "name": "Nalbantova K./Popovska H.",
+    "country": "Bulgarie",
+    "fsParticipantId": "tjT104qg"
+   },
+   "away": {
+    "name": "Osawa K./Tanabe M.",
+    "country": "Japon",
+    "fsParticipantId": "lGW9brE5"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 9,
+     "away": 21
+    },
+    {
+     "home": 7,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "4AgwUv1M",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T16:05:00.000Z",
+   "home": {
+    "name": "Yang Po-Hsuan/Hu Ling F.",
+    "country": "Taïwan",
+    "fsParticipantId": "lCSh2KGE"
+   },
+   "away": {
+    "name": "Kral O./Svabikova T.",
+    "country": "République Tchèque",
+    "fsParticipantId": "KbkQqC0m"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "M3PcEvmc",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T16:05:00.000Z",
+   "home": {
+    "name": "Tang Chun M./Tse Y. S.",
+    "country": "Hong Kong",
+    "fsParticipantId": "xE88ddCJ"
+   },
+   "away": {
+    "name": "Smith P./Gai J.",
+    "country": "USA",
+    "fsParticipantId": "Yqfvizzs"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "46aDYvoJ",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T16:35:00.000Z",
+   "home": {
+    "name": "Buijk A./Loos M.",
+    "country": "Pays-Bas",
+    "fsParticipantId": "4EHaMFyg"
+   },
+   "away": {
+    "name": "Christiansen M./Boje A.",
+    "country": "Danemark",
+    "fsParticipantId": "dMZ6Kg65"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "zgp9OIOq",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T16:35:00.000Z",
+   "home": {
+    "name": "Bourakkadi M./Michalski L.",
+    "country": "Allemagne",
+    "fsParticipantId": "zkdttUaC"
+   },
+   "away": {
+    "name": "Chen C. K./Hsu Y. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "xIUcbBFt"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "CroxAJ9j",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T16:40:00.000Z",
+   "home": {
+    "name": "Garcia R./Rodriguez L.",
+    "country": "Espagne",
+    "fsParticipantId": "nirSRwu2"
+   },
+   "away": {
+    "name": "Guo X. W./Chen F. H.",
+    "country": "Chine",
+    "fsParticipantId": "voVDksX8"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "zRRwxEiB",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T16:50:00.000Z",
+   "home": {
+    "name": "Orteu Y./Racloz C.",
+    "country": "Suisse",
+    "fsParticipantId": "ngDnXWkB"
+   },
+   "away": {
+    "name": "Hee Y. K. T./Widjaja G. E.",
+    "country": "Singapour",
+    "fsParticipantId": "fJGfVAKN"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 8,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "E92qQ1P7",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T17:10:00.000Z",
+   "home": {
+    "name": "Weng H. Y.",
+    "country": "Chine",
+    "fsParticipantId": "Sr3Vjnie"
+   },
+   "away": {
+    "name": "Oldorff J.",
+    "country": "Finlande",
+    "fsParticipantId": "z96wkQL7"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 23,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "htoEIyv3",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T17:20:00.000Z",
+   "home": {
+    "name": "Sung S. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "MXrV43iA"
+   },
+   "away": {
+    "name": "Chiu P.",
+    "country": "Taïwan",
+    "fsParticipantId": "Eu1x3sMM"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 9,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "zN5t4xP9",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T17:20:00.000Z",
+   "home": {
+    "name": "Wong L. C.",
+    "country": "Malaysie",
+    "fsParticipantId": "0bOPy5NN"
+   },
+   "away": {
+    "name": "Sharma T.",
+    "country": "Inde",
+    "fsParticipantId": "dU9eWroo"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "297Y5bfc",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T17:25:00.000Z",
+   "home": {
+    "name": "Baruah I.",
+    "country": "Inde",
+    "fsParticipantId": "nyI9umOb"
+   },
+   "away": {
+    "name": "Chochuwong Po.",
+    "country": "Thaïlande",
+    "fsParticipantId": "f1LHwRhB"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "4ttPxu9D",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T18:00:00.000Z",
+   "home": {
+    "name": "Lin Chun-Yi",
+    "country": "Taïwan",
+    "fsParticipantId": "2uUjG2K6"
+   },
+   "away": {
+    "name": "Huang H.",
+    "country": "Angleterre",
+    "fsParticipantId": "fmnbEtkJ"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "fcXBjyej",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T18:00:00.000Z",
+   "home": {
+    "name": "Ye H. W./Chan N. G.",
+    "country": "Taïwan",
+    "fsParticipantId": "2sDEzFk0"
+   },
+   "away": {
+    "name": "Wu G. X./Lee Chia H.",
+    "country": "Taïwan",
+    "fsParticipantId": "A7GMYhKC"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 10
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "W0DH0upI",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T18:15:00.000Z",
+   "home": {
+    "name": "Wangcharoen K.",
+    "country": "Thaïlande",
+    "fsParticipantId": "GWZUjiCd"
+   },
+   "away": {
+    "name": "Houe J.",
+    "country": "Danemark",
+    "fsParticipantId": "rwSGEf43"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "fsXItIpS",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T18:25:00.000Z",
+   "home": {
+    "name": "Titov O./Kantemyr Y.",
+    "country": "Ukraine",
+    "fsParticipantId": "YuSxBlan"
+   },
+   "away": {
+    "name": "Dunn A./Macpherson J.",
+    "country": "Ecosse",
+    "fsParticipantId": "t6Vp9STb"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 8,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "GA614Npg",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T18:45:00.000Z",
+   "home": {
+    "name": "Szymanowski M.",
+    "country": "Pologne",
+    "fsParticipantId": "YPqy2HKc"
+   },
+   "away": {
+    "name": "Srikanth K.",
+    "country": "Inde",
+    "fsParticipantId": "6wrq0ekA"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "63kVm5HE",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T18:55:00.000Z",
+   "home": {
+    "name": "Kicklitz M.",
+    "country": "Allemagne",
+    "fsParticipantId": "0nbPCTDE"
+   },
+   "away": {
+    "name": "Koljonen K.",
+    "country": "Finlande",
+    "fsParticipantId": "YadXA7rR"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 23,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 4
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "OzA921F5",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T19:10:00.000Z",
+   "home": {
+    "name": "Lee C. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "E3oibZJM"
+   },
+   "away": {
+    "name": "Holm J.",
+    "country": "Danemark",
+    "fsParticipantId": "rJyNhDsp"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "EysUTqQr",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T19:10:00.000Z",
+   "home": {
+    "name": "Leong J. H.",
+    "country": "Malaysie",
+    "fsParticipantId": "OAxckZFj"
+   },
+   "away": {
+    "name": "Chi Y. J.",
+    "country": "Taïwan",
+    "fsParticipantId": "G4PrDx8c"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 5,
+     "away": 21
+    },
+    {
+     "home": 20,
+     "away": 22
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "ULdzpdGt",
+   "disc": "MS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T19:25:00.000Z",
+   "home": {
+    "name": "Nguyen N.",
+    "country": "Irlande",
+    "fsParticipantId": "nsZqxpsQ"
+   },
+   "away": {
+    "name": "Chou T. Ch.",
+    "country": "Taïwan",
+    "fsParticipantId": "IPPFWN4m"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "h4Jbb2W1",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T19:50:00.000Z",
+   "home": {
+    "name": "Wilson M.",
+    "country": "Allemagne",
+    "fsParticipantId": "4SvmojeA"
+   },
+   "away": {
+    "name": "Han Y.",
+    "country": "Chine",
+    "fsParticipantId": "ChreqUPM"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "YLJyE5Fk",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T19:55:00.000Z",
+   "home": {
+    "name": "Azurmendi C.",
+    "country": "Espagne",
+    "fsParticipantId": "AFEJlGrJ"
+   },
+   "away": {
+    "name": "Pai Yu P.",
+    "country": "Taïwan",
+    "fsParticipantId": "xM65CJzQ"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "IXRug7fM",
+   "disc": "WS",
+   "round": "1/16 de finale",
+   "startUtc": "2026-02-25T20:25:00.000Z",
+   "home": {
+    "name": "Huang Y-H.",
+    "country": "Taïwan",
+    "fsParticipantId": "6HrgKMjf"
+   },
+   "away": {
+    "name": "Kashyap A.",
+    "country": "Inde",
+    "fsParticipantId": "Esn1I0L6"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "Wvbv8JVg",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T12:00:00.000Z",
+   "home": {
+    "name": "Zhang B.",
+    "country": "USA",
+    "fsParticipantId": "xx5lvBw1"
+   },
+   "away": {
+    "name": "Christophersen L.",
+    "country": "Danemark",
+    "fsParticipantId": "Ak3dxk8D"
+   },
+   "winner": "away",
+   "sets": [],
+   "odds": null
+  },
+  {
+   "fsId": "SlAa5o3K",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T12:05:00.000Z",
+   "home": {
+    "name": "Miyazaki T.",
+    "country": "Japon",
+    "fsParticipantId": "Gd9yyral"
+   },
+   "away": {
+    "name": "Gilmour K.",
+    "country": "Ecosse",
+    "fsParticipantId": "84RrZLT0"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 13,
+     "away": 9
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "KSfLgf3F",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T12:10:00.000Z",
+   "home": {
+    "name": "Lu G. Z.",
+    "country": "Chine",
+    "fsParticipantId": "dziOWeTj"
+   },
+   "away": {
+    "name": "Ng Ka L. A.",
+    "country": "Hong Kong",
+    "fsParticipantId": "OtqAfaLc"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "xMpNFmvf",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T12:10:00.000Z",
+   "home": {
+    "name": "Karlborg F./Sjoo T.",
+    "country": "Suède",
+    "fsParticipantId": "WMAFekaL"
+   },
+   "away": {
+    "name": "Goh S. H./Lai S. J.",
+    "country": "Malaysie",
+    "fsParticipantId": "nmGpjTMr"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "fLqSpXll",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T12:20:00.000Z",
+   "home": {
+    "name": "Ye H. W./Chan N. G.",
+    "country": "Taïwan",
+    "fsParticipantId": "nF8uigCL"
+   },
+   "away": {
+    "name": "Yang Po-Hsuan/Hu Ling F.",
+    "country": "Taïwan",
+    "fsParticipantId": "rofBoXZr"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 8,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "2etEOvT1",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T12:45:00.000Z",
+   "home": {
+    "name": "Chen Z. Y./Corbett F.",
+    "country": "USA",
+    "fsParticipantId": "x248SWj2"
+   },
+   "away": {
+    "name": "Vestergaard M./Busch C.",
+    "country": "Danemark",
+    "fsParticipantId": "ljBgjzq9"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 7,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "hUrZB1qd",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T12:55:00.000Z",
+   "home": {
+    "name": "Popov C.",
+    "country": "France",
+    "fsParticipantId": "4WENJ28U"
+   },
+   "away": {
+    "name": "Gunawan J.",
+    "country": "Hong Kong",
+    "fsParticipantId": "fefXw6gn"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "QkwjkXNq",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T12:55:00.000Z",
+   "home": {
+    "name": "Tang Chun M./Tse Y. S.",
+    "country": "Hong Kong",
+    "fsParticipantId": "ANnPq2oC"
+   },
+   "away": {
+    "name": "Chen C. K./Hsu Y. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "tA9dRgVp"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "ABjrsklD",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T13:10:00.000Z",
+   "home": {
+    "name": "Dunn A./Macpherson J.",
+    "country": "Ecosse",
+    "fsParticipantId": "jVmD5hRE"
+   },
+   "away": {
+    "name": "Guo X. W./Chen F. H.",
+    "country": "Chine",
+    "fsParticipantId": "xnnL3WeR"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "GjnD3U4K",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T13:25:00.000Z",
+   "home": {
+    "name": "Ongbamrungphan B.",
+    "country": "Thaïlande",
+    "fsParticipantId": "xU2maSAs"
+   },
+   "away": {
+    "name": "Nalbantova K.",
+    "country": "Bulgarie",
+    "fsParticipantId": "pf6ec6uf"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "bgYqBEp3",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T13:40:00.000Z",
+   "home": {
+    "name": "Hee Y. K. T./Widjaja G. E.",
+    "country": "Singapour",
+    "fsParticipantId": "SpbboFMG"
+   },
+   "away": {
+    "name": "Christiansen M./Boje A.",
+    "country": "Danemark",
+    "fsParticipantId": "zB16qgiT"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "ve2cCpcL",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T13:45:00.000Z",
+   "home": {
+    "name": "Wong J./Lai P. J.",
+    "country": "Malaysie",
+    "fsParticipantId": "0xsGoz2n"
+   },
+   "away": {
+    "name": "Jomkoh S./Jongsathapornparn O.",
+    "country": "Thaïlande",
+    "fsParticipantId": "82pOqEWb"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 20,
+     "away": 22
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "hCXeCEX1",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T13:55:00.000Z",
+   "home": {
+    "name": "Wang T. W.",
+    "country": "Taïwan",
+    "fsParticipantId": "YPTRpYp3"
+   },
+   "away": {
+    "name": "Popov T. J.",
+    "country": "France",
+    "fsParticipantId": "tjXZrCFF"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 23
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "UuwoF1Vh",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T14:05:00.000Z",
+   "home": {
+    "name": "Cheng X./Zhang C.",
+    "country": "Chine",
+    "fsParticipantId": "IRvnE5Zp"
+   },
+   "away": {
+    "name": "Hemming C./Van Leeuwen E.",
+    "country": "Angleterre",
+    "fsParticipantId": "pYWXy9Ri"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "t0OkenNM",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T14:30:00.000Z",
+   "home": {
+    "name": "Lee C. Y.",
+    "country": "Hong Kong",
+    "fsParticipantId": "zqVet90m"
+   },
+   "away": {
+    "name": "Koga M.",
+    "country": "Japon",
+    "fsParticipantId": "8dT3vmVa"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "EsGBeTo9",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T14:40:00.000Z",
+   "home": {
+    "name": "Wong L. C.",
+    "country": "Malaysie",
+    "fsParticipantId": "z1CoQP75"
+   },
+   "away": {
+    "name": "Chochuwong Po.",
+    "country": "Thaïlande",
+    "fsParticipantId": "MHAgO3xI"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "dKWspjk2",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T14:45:00.000Z",
+   "home": {
+    "name": "Yeo J. M.",
+    "country": "Singapour",
+    "fsParticipantId": "0hcf0S2t"
+   },
+   "away": {
+    "name": "Han Q. X.",
+    "country": "Chine",
+    "fsParticipantId": "8I02b6Xh"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 9,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "xhs5o18e",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T14:55:00.000Z",
+   "home": {
+    "name": "Wang Z. Y.",
+    "country": "Chine",
+    "fsParticipantId": "dnky2sON"
+   },
+   "away": {
+    "name": "Schulz A.",
+    "country": "Danemark",
+    "fsParticipantId": "SUu7dLoo"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "rVNtObJ7",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T15:15:00.000Z",
+   "home": {
+    "name": "Pai Yu P.",
+    "country": "Taïwan",
+    "fsParticipantId": "lvoqzoPh"
+   },
+   "away": {
+    "name": "Chiu P.",
+    "country": "Taïwan",
+    "fsParticipantId": "d4liYOg5"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "hjxiWohg",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T15:25:00.000Z",
+   "home": {
+    "name": "Chiu H. C./Wang Chi-Lin",
+    "country": "Taïwan",
+    "fsParticipantId": "xr6T5OWh"
+   },
+   "away": {
+    "name": "Chen Z. R./Lin Y. C.",
+    "country": "Taïwan",
+    "fsParticipantId": "p89y4215"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 25,
+     "away": 27
+    },
+    {
+     "home": 23,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "d27MZlig",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T15:40:00.000Z",
+   "home": {
+    "name": "Chia A./Soh W. Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "ruapdZpB"
+   },
+   "away": {
+    "name": "Maio J./Villeger W.",
+    "country": "France",
+    "fsParticipantId": "j52hfDFN"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 22,
+     "away": 24
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "I1JzpttR",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T15:45:00.000Z",
+   "home": {
+    "name": "Huang Y-H.",
+    "country": "Taïwan",
+    "fsParticipantId": "h8uGlpvn"
+   },
+   "away": {
+    "name": "Han Y.",
+    "country": "Chine",
+    "fsParticipantId": "QLwOnO8b"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "OCTXf8to",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T16:10:00.000Z",
+   "home": {
+    "name": "Goh S. F./Izzuddin N.",
+    "country": "Malaysie",
+    "fsParticipantId": "QVUkCFBk"
+   },
+   "away": {
+    "name": "Ong Y. S./Teo Ee Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "bqTcAgt2"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "KzPYsPZa",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T16:20:00.000Z",
+   "home": {
+    "name": "Weng H. Y.",
+    "country": "Chine",
+    "fsParticipantId": "jXUH3U6l"
+   },
+   "away": {
+    "name": "Kicklitz M.",
+    "country": "Allemagne",
+    "fsParticipantId": "OpTP18y1"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "dvNy6XBL",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T16:25:00.000Z",
+   "home": {
+    "name": "Mayasari L. T./Rahayu A.",
+    "country": "Indonésie",
+    "fsParticipantId": "fg5Qh21U"
+   },
+   "away": {
+    "name": "Osawa K./Tanabe M.",
+    "country": "Japon",
+    "fsParticipantId": "pIpzD5nn"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "2NKlZfiS",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T16:30:00.000Z",
+   "home": {
+    "name": "Lin Chun-Yi",
+    "country": "Taïwan",
+    "fsParticipantId": "Wb6XzBd4"
+   },
+   "away": {
+    "name": "Srikanth K.",
+    "country": "Inde",
+    "fsParticipantId": "xd9uZlRG"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "zmLC2arf",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T16:35:00.000Z",
+   "home": {
+    "name": "Kral J./Kral O.",
+    "country": "République Tchèque",
+    "fsParticipantId": "OUYS7o2D"
+   },
+   "away": {
+    "name": "Lee J-H./Yang Po-Hsuan",
+    "country": "Taïwan",
+    "fsParticipantId": "jyREVlfK"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 18,
+     "away": 18
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "GMS94DMH",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T17:10:00.000Z",
+   "home": {
+    "name": "Wangcharoen K.",
+    "country": "Thaïlande",
+    "fsParticipantId": "UimPjBgl"
+   },
+   "away": {
+    "name": "Nguyen N.",
+    "country": "Irlande",
+    "fsParticipantId": "25oXlkO0"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "GfvouBB4",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T17:10:00.000Z",
+   "home": {
+    "name": "Arif J./Yap R. K.",
+    "country": "Malaysie",
+    "fsParticipantId": "lpzSSUq4"
+   },
+   "away": {
+    "name": "Lee F. C/Lee F. J.",
+    "country": "Taïwan",
+    "fsParticipantId": "McYZQ8EG"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "4OMHisZq",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T17:15:00.000Z",
+   "home": {
+    "name": "Curtin L./Kelly S.",
+    "country": "Angleterre",
+    "fsParticipantId": "WQOzqIy9"
+   },
+   "away": {
+    "name": "Li Y. J./Wang Y. D.",
+    "country": "Chine",
+    "fsParticipantId": "IsNrsd6L"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 8,
+     "away": 21
+    },
+    {
+     "home": 4,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "8ItAecMk",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T17:20:00.000Z",
+   "home": {
+    "name": "Holm J.",
+    "country": "Danemark",
+    "fsParticipantId": "IoceG6DT"
+   },
+   "away": {
+    "name": "Chi Y. J.",
+    "country": "Taïwan",
+    "fsParticipantId": "SKrRApyi"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "YVSXCCRk",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T17:50:00.000Z",
+   "home": {
+    "name": "Hsu Y. C./Sung Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "vgHz4vjI"
+   },
+   "away": {
+    "name": "Hu Ling F./Jheng Y. C.",
+    "country": "Taïwan",
+    "fsParticipantId": "C6Fr2IKU"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 10
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "SKOtG2aB",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T18:10:00.000Z",
+   "home": {
+    "name": "Chen Z. Y./Smith P.",
+    "country": "USA",
+    "fsParticipantId": "QJK9ZeoT"
+   },
+   "away": {
+    "name": "Astrup K./Rasmussen A. S.",
+    "country": "Danemark",
+    "fsParticipantId": "M3LvUZ8j"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 24,
+     "away": 26
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "YmCWEV4S",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T18:10:00.000Z",
+   "home": {
+    "name": "Bao L. J./Luo X. M.",
+    "country": "Chine",
+    "fsParticipantId": "KvDgGSd5"
+   },
+   "away": {
+    "name": "Buhrova P./Kantemyr Y.",
+    "country": "Ukraine",
+    "fsParticipantId": "S4G1E6RH"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "n9VdJT6C",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T18:15:00.000Z",
+   "home": {
+    "name": "Stoeva G./Stoeva S.",
+    "country": "Bulgarie",
+    "fsParticipantId": "bX2coIWh"
+   },
+   "away": {
+    "name": "De Wit K./Loos M.",
+    "country": "Pays-Bas",
+    "fsParticipantId": "6c65qd15"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 7
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "zVwhYdXo",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T18:45:00.000Z",
+   "home": {
+    "name": "Koh E./Kubo J.",
+    "country": "Singapour",
+    "fsParticipantId": "xbOkPXEc"
+   },
+   "away": {
+    "name": "Chen B. Y./Liu Y.",
+    "country": "Chine",
+    "fsParticipantId": "ABMcNBqA"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "S2LMPyBO",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T18:45:00.000Z",
+   "home": {
+    "name": "Chang C. H./Yang C. T.",
+    "country": "Taïwan",
+    "fsParticipantId": "rB5YcbAl"
+   },
+   "away": {
+    "name": "Chen S. Y./Lee Y-H.",
+    "country": "Taïwan",
+    "fsParticipantId": "jy9tdxu1"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "0nKd4KIk",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T18:50:00.000Z",
+   "home": {
+    "name": "Popov C./Popov T. J.",
+    "country": "France",
+    "fsParticipantId": "UcOKinKt"
+   },
+   "away": {
+    "name": "Liang W. K./Wang C.",
+    "country": "Chine",
+    "fsParticipantId": "xORSkQlg"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "I5aUIJXr",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T19:30:00.000Z",
+   "home": {
+    "name": "Pratiwi A. C./Ramadhanti S. F. S.",
+    "country": "Indonésie",
+    "fsParticipantId": "SEBObLXN"
+   },
+   "away": {
+    "name": "Hsu Y. H./Lin J. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "xlcfgaeo"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "pEEbTRiI",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-02-26T19:50:00.000Z",
+   "home": {
+    "name": "Pilgaard S./Schulz S.",
+    "country": "Danemark",
+    "fsParticipantId": "ltUKxdXP"
+   },
+   "away": {
+    "name": "Lui L. L./Tsang H. Y.",
+    "country": "Hong Kong",
+    "fsParticipantId": "IeKjXZfm"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
   {
    "fsId": "vqjfM5E8",
    "disc": "WS",
