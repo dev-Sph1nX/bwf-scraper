@@ -111,3 +111,37 @@ def selection(lignes, s_over, s_under=None):
     ov = [r for r in lignes if r["ecart"] >= s_over]
     un = [r for r in lignes if s_under is not None and r["ecart"] <= -s_under]
     return ov, un
+
+
+def tirage_a_blanc_strict(sel, univers, seed=SEED):
+    """Tirage a blanc a profil de barreaux STRICT (correction de H14).
+
+    Pour chaque match parie : on tire un match de l'univers ayant exactement le
+    meme nombre de lignes dans l'univers, puis on y prend au hasard le meme
+    nombre de lignes. Le profil de lignes-par-match est donc exact ; le profil
+    de cellules est corrige, comme pour la selection reelle, par la
+    soustraction du placebo.
+    """
+    rng = random.Random(seed)
+    par_match = {}
+    for r in univers:
+        par_match.setdefault(r["match_id"], []).append(r)
+    par_taille = {}
+    for mid, rs in par_match.items():
+        par_taille.setdefault(len(rs), []).append(mid)
+    for t in par_taille:
+        par_taille[t].sort()
+
+    mises = {}
+    for r in sel:
+        mises[r["match_id"]] = mises.get(r["match_id"], 0) + 1
+
+    faux = []
+    for mid, k in sorted(mises.items()):
+        taille = len(par_match[mid])
+        pool = par_taille.get(taille)
+        if not pool:                      # jamais atteint sur nos donnees
+            pool = sorted(par_match.keys())
+        src = par_match[pool[rng.randrange(len(pool))]]
+        faux.extend(rng.sample(src, min(k, len(src))))
+    return faux

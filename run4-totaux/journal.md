@@ -333,10 +333,47 @@ Prédictions chiffrées :
 - calibration : le modèle restera **sur-étalé** sur 2026 comme sur 2025 — écart
   du décile 1 supérieur à +5 points, écart du décile 10 inférieur à −2 points.
 
+**Verdict : ÉCHEC sur le critère de succès. Le volume est atteint, la
+rentabilité ne l'est pas.**
+
+| prédiction | annoncé | réalisé | |
+|---|---|---|---|
+| paris | 450 à 620 | **470** | touché |
+| matchs distincts | 300 à 400 | **309** | touché |
+| ROI over | +2 % à +14 % | **+2,80 %** | touché, en bas de fourchette |
+| IC 95 % du ROI over | — | **[−7,53 % ; +13,42 %]** | **contient zéro** |
+| ROI net du placebo | +3 % à +13 % | **+1,68 %** | **raté** |
+| IC 95 % du net | exclut zéro | **[−8,36 % ; +12,18 %]** | **contient zéro** |
+| écart du décile 1 | > +5 pts | **+16,38 pts** | touché |
+| écart du décile 10 | < −2 pts | **−2,97 pts** | touché |
+
+Le placebo attendu de la sélection vaut **+1,11 %** sur 2026 : les cellules où
+la stratégie parie sont, cette année-là, des cellules qui gagnent toutes seules.
+Sur 2025 ce même placebo valait −3,64 %. **Le placebo n'est pas stationnaire**,
+exactement comme l'annonçait la commande — et c'est lui qui mange le résultat.
+
+La discrimination du modèle s'est effondrée : sur tout l'univers 2026, du décile
+1 au décile 10 de `P_modèle`, l'over réalisé ne passe que de 52,8 % à 59,5 %
+(**6,7 points**), contre 13,5 points sur 2025. Sur la sélection elle-même, les
+cinq quintiles de `P_modèle` donnent +2,2 %, +2,7 %, −7,5 %, +13,0 %, +3,5 % :
+aucune monotonie.
+
 ## H12 — Le tirage à blanc ne gagne rien sur 2026 non plus
 
 Prédiction chiffrée : ROI net du placebo du tirage à blanc 2026 **entre −4 et
 +4 %**, IC 95 % contenant zéro ; sur 200 tirages, moyenne **entre −2 et +2 %**.
+
+**Verdict : le contrôle passe au sens du critère, et il enterre la stratégie.**
+
+Le tirage graine 42 rend **+8,07 %** net (prédit entre −4 et +4 % : raté),
+IC 95 % **[−3,87 % ; +19,19 %]** — contient zéro, donc le contrôle est
+formellement passant. Sur 200 tirages, net moyen **+3,17 %** (prédit −2 à +2 :
+raté), écart-type 4,77 pts, percentiles [−7,36 % ; +11,51 %].
+
+Et le chiffre qui compte : **123 tirages à blanc sur 200 font aussi bien ou
+mieux que la sélection réelle** (p empirique **0,617**). Sur 2025 c'était
+**0 sur 200** (p = 0,005). Le talent de sélection mesuré sur 2026 est
+indiscernable de zéro.
 
 ## H13 — Le miroir rend la marge, pas autre chose
 
@@ -346,3 +383,130 @@ Sur les lignes sélectionnées, `ROI over + ROI under` doit valoir
 Prédiction chiffrée : marge d'ouverture de la sélection 2026 ≈ **12,0 %**, donc
 somme des deux jambes **entre −22,5 % et −20,5 %**. Le ROI under des mêmes
 lignes doit donc être **négatif**, autour de **−28 %** si l'over sort à +7 %.
+
+**Verdict : CONFIRMÉE.** Marge d'ouverture de la sélection **12,016 %** (annoncé
+12,0). ROI over +2,80 %, ROI under des mêmes lignes −24,38 %, **somme −21,58 %**
+contre **−21,45 %** attendus par `−2m/(1+m)` : 0,13 point d'écart. Le −28 %
+annoncé pour l'under supposait un over à +7 % ; l'over ayant fait +2,80 %,
+l'under fait −24,38 %, ce qui est la même identité.
+
+La jambe under symétrique (désactivée dans la stratégie gelée) confirme qu'elle
+devait l'être : 431 paris, 277 matchs, **−20,29 %**, IC [−31,61 % ; −8,32 %].
+Sa désactivation, décidée sur 2025, était le bon choix.
+
+---
+
+## H14 — Mon propre contrôle à blanc est-il biaisé par les lignes multiples ?
+
+*Écrite le 2026-08-28, **après l'ouverture de 2026**. Diagnostic, aucun pouvoir
+de décision sur le verdict de H11 : le protocole est déjà tranché.*
+
+Le tirage à blanc concentre plus de lignes par match que la sélection réelle
+(265 matchs pour 470 paris, contre 309). Si les matchs à barreaux nombreux ont
+un ROI over différent, mon contrôle est faussé — et son +8,07 % ne serait qu'un
+artefact.
+
+Prédiction chiffrée, sur l'univers misable 2026 : l'écart de ROI over entre les
+lignes appartenant à un match à **3 barreaux ou plus** et celles d'un match à
+**un seul barreau** est **inférieur à 5 points** en valeur absolue. Si l'écart
+dépasse 5 points, mon contrôle est à refaire à profil de lignes-par-match
+strictement égal.
+
+**Verdict : ÉCHEC — mon contrôle est bien biaisé, et il faut le refaire.**
+
+| barreaux du match | 2025 : lignes / ROI over | 2026 : lignes / ROI over |
+|---|---|---|
+| 1 | 1 056 / −6,09 % | 552 / −7,62 % |
+| 2 | 2 106 / −8,98 % | 1 046 / +0,10 % |
+| 3 ou plus | 1 321 / −0,22 % | 570 / **+3,90 %** |
+| **écart (3+) − (1)** | **+5,87 pts** | **+11,51 pts** |
+
+Sur 2026 l'écart vaut **+11,51 points**, plus du double du seuil que je m'étais
+fixé. Le tirage à blanc, qui concentre ses paris sur des matchs à barreaux
+nombreux (265 matchs pour 470 paris, contre 309 pour la sélection réelle), tire
+donc dans un vivier structurellement plus rentable. Son +8,07 % est en partie un
+artefact de **mon** code, pas un fait sur la stratégie. Refait en H16.
+
+---
+
+## H15 — Le modèle discrimine-t-il encore quelque chose sur 2026 ?
+
+*Écrite le 2026-08-28, **après l'ouverture de 2026**. Diagnostic.*
+
+Indépendamment de tout seuil et de tout placebo : sur l'univers misable 2026,
+l'écart de ROI over entre le quintile haut et le quintile bas de `P_modèle`
+mesure le talent brut du modèle. Sur 2025, ce même écart valait
++12,55 − (−14,80) = **27,4 points** (déciles).
+
+Prédiction chiffrée : sur 2026, écart quintile haut − quintile bas
+**inférieur à 10 points**, IC 95 % bootstrap groupé par match de la différence
+**contenant zéro**.
+
+**Verdict : CONFIRMÉE sur les deux prédictions.**
+
+| année | ROI over quintile bas | ROI over quintile haut | écart | IC 95 % |
+|---|---|---|---|---|
+| 2025 | −12,83 % | +6,43 % | **+19,26 pts** | [+8,76 ; +30,17] — exclut zéro |
+| 2026 | −2,45 % | +3,12 % | **+5,57 pts** | [−10,24 ; +20,89] — **contient zéro** |
+
+En taux d'over réalisé, l'écart entre quintile haut et quintile bas tombe de
+**11,0 points** (48,0 % → 59,0 %) sur 2025 à **3,6 points** (54,5 % → 58,1 %)
+sur 2026. Le pouvoir de rangement du modèle a été divisé par trois d'une année
+sur l'autre, et ce qu'il en reste est indiscernable de zéro.
+
+---
+
+## H16 — Le tirage à blanc corrigé, à profil de barreaux strict
+
+*Écrite le 2026-08-28, après H14. Correction d'un défaut de mon propre harnais.*
+
+Nouveau tirage : pour chaque match parié, on tire un match de la même période
+ayant **exactement le même nombre de barreaux dans l'univers**, puis on y prend
+au hasard le même nombre de lignes. Le profil de lignes-par-match est ainsi
+strictement respecté ; le profil de cellules est traité par la soustraction du
+placebo, comme avant.
+
+Prédictions chiffrées :
+- sur **2026**, le net du tirage à blanc tombe de +8,07 % à **entre −2 % et
+  +5 %**, et la part des 200 tirages atteignant la sélection réelle
+  (+1,68 % net) reste **au-dessus de 30 %** ;
+- sur **2025**, le net du tirage à blanc reste **entre −3 % et +3 %**, et la
+  part des 200 tirages atteignant la sélection réelle (+7,81 % net) reste
+  **sous 10 %**.
+
+**Verdict : CONFIRMÉE sur les quatre prédictions.**
+
+| année | tirage | paris | matchs | ROI over | placebo | ROI net |
+|---|---|---|---|---|---|---|
+| 2025 | réel | 1 094 | 718 | +4,17 % | −3,64 % | **+7,81 %** |
+| 2025 | à blanc, ancien | 1 094 | 607 | −0,62 % | −3,64 % | +3,02 % |
+| 2025 | à blanc, **strict** | 1 094 | 623 | −3,51 % | −5,57 % | **+2,05 %** |
+| 2026 | réel | 470 | 309 | +2,80 % | +1,11 % | **+1,68 %** |
+| 2026 | à blanc, ancien | 470 | 265 | +9,18 % | +1,11 % | +8,07 % |
+| 2026 | à blanc, **strict** | 470 | 277 | −2,34 % | −0,41 % | **−1,93 %** |
+
+Sur 200 tirages stricts : 2025 net moyen +0,53 % (écart-type 3,50 pts),
+**5/200** atteignent la sélection (p = 0,030) ; 2026 net moyen −0,63 %
+(écart-type 5,32 pts), **63/200** l'atteignent (p = 0,318).
+
+**Le biais de H14 est corrigé et la conclusion ne bouge pas.** Le +8,07 % du
+tirage à blanc 2026 était bien un artefact : proprement tiré, le hasard rend
+−1,93 %. Mais la sélection réelle ne rend que +1,68 % net, et un tirage au
+hasard sur trois fait aussi bien. Le contraste entre les deux années est net et
+c'est lui le résultat : **p = 0,030 en 2025, p = 0,318 en 2026.** Ce qui a été
+calibré sur 2025 ne s'est pas reproduit.
+
+---
+
+# Partie C — descriptif pré-enregistré, sans décision attachée
+
+La commande la voulait « courte, purement factuelle ». Elle n'a donc pas
+d'hypothèse chiffrée : rien n'y est testé, rien n'y décide.
+
+Un fait mérite quand même d'être noté ici parce qu'il était imprévu :
+**`data/books/runs/` ne contient aucun marché de totaux**. Le recensement
+exhaustif des champs sur les 5 170 lignes-instantané ne trouve que le marché
+vainqueur et, depuis le 2026-08-16, le marché « nombre de sets ». Les trois
+questions de la partie C sur les lignes de totaux restent sans réponse, et
+l'atout que ce dépôt était censé avoir sur le jumeau n'existe pas pour ce
+marché-là. Détail dans `out/partie-c.md` et section 3.5 du rapport.
