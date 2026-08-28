@@ -1,0 +1,37 @@
+{
+ "source": "flashscore df_mh_1 (point par point)",
+ "fetchedAt": "2026-08-28T16:48:10.723Z",
+ "tournamentSlug": "syed-modi-international-championships-2022",
+ "format": "par manche : m = marqueur de chaque point (1 = home, 2 = away), s = serveur du point (0 = non servi par le flux) ; fin = [home, away] à la fin de la manche. Orientation FLASHSCORE (home/away), PAS team1/team2.",
+ "stats": {
+  "matchs": 1,
+  "avecPoints": 1,
+  "sansDonnees": 0,
+  "avecAnomalie": 0
+ },
+ "matches": [
+  {
+   "fsId": "QcvlNg3m",
+   "sets": [
+    {
+     "no": 1,
+     "m": "12211222222222111222222122212",
+     "s": "21221122222222211122222212221",
+     "fin": [
+      8,
+      21
+     ]
+    },
+    {
+     "no": 2,
+     "m": "1221112212212121221212221122222122",
+     "s": "2122111221221212122121222112222212",
+     "fin": [
+      13,
+      21
+     ]
+    }
+   ]
+  }
+ ]
+}

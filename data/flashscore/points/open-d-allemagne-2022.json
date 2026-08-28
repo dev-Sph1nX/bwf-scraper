@@ -1,0 +1,37 @@
+{
+ "source": "flashscore df_mh_1 (point par point)",
+ "fetchedAt": "2026-08-28T13:25:37.339Z",
+ "tournamentSlug": "open-d-allemagne-2022",
+ "format": "par manche : m = marqueur de chaque point (1 = home, 2 = away), s = serveur du point (0 = non servi par le flux) ; fin = [home, away] à la fin de la manche. Orientation FLASHSCORE (home/away), PAS team1/team2.",
+ "stats": {
+  "matchs": 1,
+  "avecPoints": 1,
+  "sansDonnees": 0,
+  "avecAnomalie": 0
+ },
+ "matches": [
+  {
+   "fsId": "fRHUnWr3",
+   "sets": [
+    {
+     "no": 1,
+     "m": "1212221211212112112211111212111211",
+     "s": "1121222121121211211221111121211121",
+     "fin": [
+      21,
+      13
+     ]
+    },
+    {
+     "no": 2,
+     "m": "212212121212111112112111111111",
+     "s": "121221212121211111211211111111",
+     "fin": [
+      21,
+      9
+     ]
+    }
+   ]
+  }
+ ]
+}
