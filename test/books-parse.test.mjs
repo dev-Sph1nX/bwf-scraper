@@ -274,10 +274,27 @@ test("betclic : repli « Score final (sets) » -> cotes par score, jamais recomb
 
 // --- Marché « total de points » (champ optionnel `totals`) --------------------
 //
-// Betclic n'a encore jamais été observé avec ce marché dans nos relevés (il
-// n'apparaîtra qu'au prochain tournoi coté) : ces tests couvrent les FORMES
-// PLAUSIBLES du libellé, calquées sur les autres marchés Plus/Moins du site.
-// Au premier relevé réel, vérifier le libellé et resserrer si besoin.
+// Forme RÉELLE observée le 2026-08-31 (China Masters, page match SSR) :
+// marché « Nombre total de points », labels « + de 77,5 » / « - de 77,5 » ;
+// les totaux par set arrivent sous « 1er set - Nombre total de points ».
+// Les formes « Plus/Moins de … » et « un marché par barre » restent couvertes
+// (autres marchés du site les utilisent, le libellé peut varier).
+
+test("betclic totaux : forme réelle observée, labels « + de N » / « - de N »", () => {
+  const markets = [
+    { name: "Vainqueur du match", selections: [{ label: "Jonatan Christie", odd: 1.33 }, { label: "Jun Hao Leong", odd: 2.7 }] },
+    { name: "Nombre total de points", selections: [
+      { label: "+ de 77,5", odd: 1.8 }, { label: "- de 77,5", odd: 1.78 },
+    ] },
+    { name: "1er set - Nombre total de points ", selections: [
+      { label: "+ de 35,5", odd: 1.4 }, { label: "- de 35,5", odd: 2.15 },
+      { label: "+ de 36,5", odd: 1.6 }, { label: "- de 36,5", odd: 1.8 },
+    ] },
+  ];
+  assert.deepEqual(totalsFromBetclicMarkets(markets), [
+    { n: 77.5, over: 1.8, under: 1.78 },
+  ]);
+});
 
 test("betclic totaux : escalier dans un seul marché, lignes groupées par barre", () => {
   const markets = [
