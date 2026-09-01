@@ -6,7 +6,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -63,9 +63,9 @@
         },
         "team1seed": "1",
         "team2seed": null,
-        "matchTime": "2026-09-01 15:30:00",
-        "matchTimeUtc": "2026-09-01 07:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-09-01 16:00:00",
+        "matchTimeUtc": "2026-09-01 08:00:00",
+        "matchStatus": "F",
         "oopRound": "10",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -76,12 +76,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 33,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 3,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -91,7 +104,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "CHN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -148,9 +161,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-09-01 13:50:00",
-        "matchTimeUtc": "2026-09-01 05:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-09-01 14:45:00",
+        "matchTimeUtc": "2026-09-01 06:45:00",
+        "matchStatus": "F",
         "oopRound": "8",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -161,12 +174,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 29,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 10,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 9,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -176,7 +202,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -233,12 +259,12 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-09-01 17:10:00",
-        "matchTimeUtc": "2026-09-01 09:10:00",
-        "matchStatus": "N",
+        "matchTime": "2026-09-01 17:35:00",
+        "matchTimeUtc": "2026-09-01 09:35:00",
+        "matchStatus": "F",
         "oopRound": "12",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R32",
         "drawName": "WS",
@@ -246,12 +272,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 37,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 10,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -261,7 +300,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "DEN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
@@ -318,9 +357,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-09-01 16:20:00",
-        "matchTimeUtc": "2026-09-01 08:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-09-01 17:25:00",
+        "matchTimeUtc": "2026-09-01 09:25:00",
+        "matchStatus": "F",
         "oopRound": "11",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -331,12 +370,31 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 60,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 15,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 11,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -346,7 +404,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -403,9 +461,9 @@
         },
         "team1seed": "3",
         "team2seed": null,
-        "matchTime": "2026-09-01 12:20:00",
-        "matchTimeUtc": "2026-09-01 04:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-09-01 12:50:00",
+        "matchTimeUtc": "2026-09-01 04:50:00",
+        "matchStatus": "F",
         "oopRound": "5",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -416,12 +474,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 28,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -431,7 +502,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -488,9 +559,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-09-01 13:10:00",
-        "matchTimeUtc": "2026-09-01 05:10:00",
-        "matchStatus": "N",
+        "matchTime": "2026-09-01 12:50:00",
+        "matchTimeUtc": "2026-09-01 04:50:00",
+        "matchStatus": "F",
         "oopRound": "6",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -501,12 +572,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 32,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 9,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -516,7 +600,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "THA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -573,9 +657,9 @@
         },
         "team1seed": "8",
         "team2seed": null,
-        "matchTime": "2026-09-01 09:50:00",
-        "matchTimeUtc": "2026-09-01 01:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-09-01 09:45:00",
+        "matchTimeUtc": "2026-09-01 01:45:00",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -586,12 +670,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 40,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 14,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 15,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -601,7 +698,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "THA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -658,9 +755,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-09-01 11:30:00",
-        "matchTimeUtc": "2026-09-01 03:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-09-01 11:25:00",
+        "matchTimeUtc": "2026-09-01 03:25:00",
+        "matchStatus": "F",
         "oopRound": "4",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -671,12 +768,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 34,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -743,24 +853,24 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-09-02 13:10:00",
+        "matchTimeUtc": "2026-09-02 05:10:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "6",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R32",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Shenzhen Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -828,24 +938,24 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-09-02 12:20:00",
+        "matchTimeUtc": "2026-09-02 04:20:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "5",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R32",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 3",
+        "courtCode": "3",
+        "courtIndex": 2,
+        "locationName": "Shenzhen Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -913,24 +1023,24 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-09-02 11:30:00",
+        "matchTimeUtc": "2026-09-02 03:30:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "4",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R32",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 3",
+        "courtCode": "3",
+        "courtIndex": 2,
+        "locationName": "Shenzhen Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -998,24 +1108,24 @@
         },
         "team1seed": null,
         "team2seed": "6",
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-09-02 09:50:00",
+        "matchTimeUtc": "2026-09-02 01:50:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "2",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R32",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Shenzhen Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -1083,24 +1193,24 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-09-02 15:30:00",
+        "matchTimeUtc": "2026-09-02 07:30:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "10",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R32",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Shenzhen Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -1168,24 +1278,24 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-09-02 17:10:00",
+        "matchTimeUtc": "2026-09-02 09:10:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "12",
+        "oopText": "Court and time TBA",
+        "oopTypeId": 5,
         "eventName": "WS",
         "roundName": "R32",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 3",
+        "courtCode": "3",
+        "courtIndex": 2,
+        "locationName": "Shenzhen Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -1253,24 +1363,24 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-09-02 16:20:00",
+        "matchTimeUtc": "2026-09-02 08:20:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "11",
+        "oopText": "Court and time TBA",
+        "oopTypeId": 5,
         "eventName": "WS",
         "roundName": "R32",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 3",
+        "courtCode": "3",
+        "courtIndex": 2,
+        "locationName": "Shenzhen Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -1338,24 +1448,24 @@
         },
         "team1seed": null,
         "team2seed": "2",
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-09-02 17:20:00",
+        "matchTimeUtc": "2026-09-02 09:20:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "11",
+        "oopText": "Court and time TBA",
+        "oopTypeId": 5,
         "eventName": "WS",
         "roundName": "R32",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Shenzhen Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -1368,22 +1478,60 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "87442",
+              "nameDisplay": "AN Se Young",
+              "nameType": 1,
+              "firstName": "Se Young",
+              "lastName": "AN",
+              "initials": "AS",
+              "nameShort": "AN S Y ",
+              "nameShort2": "AN",
+              "slug": "se-young-an",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Se Young AN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697765036/assets/players/thumbnail/87442.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "92928",
+              "nameDisplay": "HAN Qian Xi",
+              "nameType": 1,
+              "firstName": "Qian Xi",
+              "lastName": "HAN",
+              "initials": "HQ",
+              "nameShort": "HAN Q X ",
+              "nameShort2": "HAN",
+              "slug": "han-qian-xi",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "HAN Qian Xi",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "1",
         "team2seed": null,
         "matchTime": null,
         "matchTimeUtc": null,
@@ -1415,19 +1563,57 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "70930",
+              "nameDisplay": "KIM Ga Eun",
+              "nameType": 1,
+              "firstName": "Ga Eun",
+              "lastName": "KIM",
+              "initials": "KG",
+              "nameShort": "KIM G E ",
+              "nameShort2": "KIM",
+              "slug": "ga-eun-kim",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Ga Eun KIM",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895484/assets/players/thumbnail/70930.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "DEN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "85302",
+              "nameDisplay": "Line CHRISTOPHERSEN",
+              "nameType": 0,
+              "firstName": "Line",
+              "lastName": "CHRISTOPHERSEN",
+              "initials": "LC",
+              "nameShort": "L CHRISTOPHERSEN",
+              "nameShort2": "CHRISTOPHERSEN",
+              "slug": "line-christophersen",
+              "countryCode": "DEN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+              "avatar": {
+                "title": "Line CHRISTOPHERSEN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896471/assets/players/thumbnail/85302.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
@@ -1462,22 +1648,60 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "96312",
+              "nameDisplay": "Akane YAMAGUCHI",
+              "nameType": 0,
+              "firstName": "Akane",
+              "lastName": "YAMAGUCHI",
+              "initials": "AY",
+              "nameShort": "A YAMAGUCHI",
+              "nameShort2": "YAMAGUCHI",
+              "slug": "akane-yamaguchi",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Akane YAMAGUCHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689647088/assets/players/thumbnail/96312.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "99069",
+              "nameDisplay": "SIM Yu Jin",
+              "nameType": 1,
+              "firstName": "Yu Jin",
+              "lastName": "SIM",
+              "initials": "SY",
+              "nameShort": "SIM Y J ",
+              "nameShort2": "SIM",
+              "slug": "yu-jin-sim",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Yu Jin SIM",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636594223/assets/players/thumbnail/99069.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "3",
         "team2seed": null,
         "matchTime": null,
         "matchTimeUtc": null,
@@ -1509,19 +1733,57 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "80862",
+              "nameDisplay": "CHIU Pin-Chian",
+              "nameType": 1,
+              "firstName": "Pin-Chian",
+              "lastName": "CHIU",
+              "initials": "CP",
+              "nameShort": "CHIU P C ",
+              "nameShort2": "CHIU",
+              "slug": "chiu-pin-chian",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "CHIU Pin-Chian",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "THA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "91422",
+              "nameDisplay": "Supanida KATETHONG",
+              "nameType": 0,
+              "firstName": "Supanida",
+              "lastName": "KATETHONG",
+              "initials": "SK",
+              "nameShort": "S KATETHONG",
+              "nameShort2": "KATETHONG",
+              "slug": "supanida-katethong",
+              "countryCode": "THA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+              "avatar": {
+                "title": "Supanida KATETHONG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1620708318/assets/players/thumbnail/91422.tif"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
@@ -2075,7 +2337,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -2132,10 +2394,10 @@
       },
       "team1seed": "1",
       "team2seed": null,
-      "matchTime": "2026-09-01 15:30:00",
-      "matchTimeUtc": "2026-09-01 07:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-09-01 16:00:00",
+      "matchTimeUtc": "2026-09-01 08:00:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "10",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -2147,14 +2409,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 33,
+      "time": "00:33",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 3,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -2165,7 +2442,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -2222,13 +2499,13 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-09-01 17:10:00",
-      "matchTimeUtc": "2026-09-01 09:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-09-01 17:35:00",
+      "matchTimeUtc": "2026-09-01 09:35:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "12",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "WS",
       "roundName": "R32",
       "drawName": "WS",
@@ -2237,14 +2514,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 37,
+      "time": "00:37",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 10,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -2255,7 +2547,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "DEN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
@@ -2312,10 +2604,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-09-01 16:20:00",
-      "matchTimeUtc": "2026-09-01 08:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-09-01 17:25:00",
+      "matchTimeUtc": "2026-09-01 09:25:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "11",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -2327,14 +2619,36 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 60,
+      "time": "01:00",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 11,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -2345,7 +2659,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2402,10 +2716,10 @@
       },
       "team1seed": "3",
       "team2seed": null,
-      "matchTime": "2026-09-01 12:20:00",
-      "matchTimeUtc": "2026-09-01 04:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-09-01 12:50:00",
+      "matchTimeUtc": "2026-09-01 04:50:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "5",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -2417,14 +2731,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 28,
+      "time": "00:28",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -2435,7 +2764,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -2492,10 +2821,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-09-01 13:10:00",
-      "matchTimeUtc": "2026-09-01 05:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-09-01 12:50:00",
+      "matchTimeUtc": "2026-09-01 04:50:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "6",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -2507,14 +2836,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 32,
+      "time": "00:32",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 9,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -2525,7 +2869,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "THA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -2582,10 +2926,10 @@
       },
       "team1seed": "8",
       "team2seed": null,
-      "matchTime": "2026-09-01 09:50:00",
-      "matchTimeUtc": "2026-09-01 01:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-09-01 09:45:00",
+      "matchTimeUtc": "2026-09-01 01:45:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -2597,14 +2941,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 40,
+      "time": "00:40",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 14,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 15,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -2615,7 +2974,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "THA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -2672,10 +3031,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-09-01 11:30:00",
-      "matchTimeUtc": "2026-09-01 03:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-09-01 11:25:00",
+      "matchTimeUtc": "2026-09-01 03:25:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "4",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -2687,14 +3046,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 34,
+      "time": "00:34",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -2705,7 +3079,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "CHN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -2762,10 +3136,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-09-01 13:50:00",
-      "matchTimeUtc": "2026-09-01 05:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-09-01 14:45:00",
+      "matchTimeUtc": "2026-09-01 06:45:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "8",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -2776,6 +3150,741 @@
       "courtName": "Court 1",
       "courtCode": "1",
       "courtIndex": 0,
+      "locationName": "Shenzhen Arena",
+      "duration": 29,
+      "time": "00:29",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 10,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 9,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1539462,
+      "code": "91",
+      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
+      "tournamentName": "LI-NING China Masters 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "CAN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "84523",
+            "nameDisplay": "Michelle LI",
+            "nameType": 0,
+            "firstName": "Michelle",
+            "lastName": "LI",
+            "initials": "ML",
+            "nameShort": "M LI",
+            "nameShort2": "LI",
+            "slug": "michelle-li",
+            "countryCode": "CAN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
+            "avatar": {
+              "title": "Michelle LI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1721630779/assets/players/thumbnail/84523.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "GER",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "91106",
+            "nameDisplay": "Yvonne LI",
+            "nameType": 0,
+            "firstName": "Yvonne",
+            "lastName": "LI",
+            "initials": "YL",
+            "nameShort": "Y LI",
+            "nameShort2": "LI",
+            "slug": "yvonne-li",
+            "countryCode": "GER",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
+            "avatar": {
+              "title": "Yvonne LI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1719991926/assets/players/thumbnail/91106.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-09-02 15:30:00",
+      "matchTimeUtc": "2026-09-02 07:30:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "10",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "R32",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Shenzhen Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1539453,
+      "code": "93",
+      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
+      "tournamentName": "LI-NING China Masters 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "59367",
+            "nameDisplay": "Karupathevan LETSHANAA",
+            "nameType": 0,
+            "firstName": "Karupathevan",
+            "lastName": "LETSHANAA",
+            "initials": "KL",
+            "nameShort": "K LETSHANAA",
+            "nameShort2": "LETSHANAA",
+            "slug": "karupathevan-letshanaa",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Karupathevan LETSHANAA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1634280949/assets/players/thumbnail/59367.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "ENG",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "44698",
+            "nameDisplay": "Karen Yun Qiao FENG",
+            "nameType": 0,
+            "firstName": "Karen Yun Qiao",
+            "lastName": "FENG",
+            "initials": "KF",
+            "nameShort": "K FENG",
+            "nameShort2": "FENG",
+            "slug": "karen-yun-qiao-feng",
+            "countryCode": "ENG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
+            "avatar": {
+              "title": "Karen Yun Qiao FENG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-09-02 16:20:00",
+      "matchTimeUtc": "2026-09-02 08:20:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "11",
+      "oopText": "Court and time TBA",
+      "oopTypeId": 5,
+      "eventName": "WS",
+      "roundName": "R32",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 3",
+      "courtCode": "3",
+      "courtIndex": 2,
+      "locationName": "Shenzhen Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1539539,
+      "code": "92",
+      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
+      "tournamentName": "LI-NING China Masters 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "91896",
+            "nameDisplay": "Natsuki NIDAIRA",
+            "nameType": 0,
+            "firstName": "Natsuki",
+            "lastName": "NIDAIRA",
+            "initials": "NN",
+            "nameShort": "N NIDAIRA",
+            "nameShort2": "NIDAIRA",
+            "slug": "natsuki-nidaira",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Natsuki NIDAIRA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895698/assets/players/thumbnail/91896.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "96713",
+            "nameDisplay": "Nozomi OKUHARA",
+            "nameType": 0,
+            "firstName": "Nozomi",
+            "lastName": "OKUHARA",
+            "initials": "NO",
+            "nameShort": "N OKUHARA",
+            "nameShort2": "OKUHARA",
+            "slug": "nozomi-okuhara",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Nozomi OKUHARA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895749/assets/players/thumbnail/96713.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-09-02 17:10:00",
+      "matchTimeUtc": "2026-09-02 09:10:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "12",
+      "oopText": "Court and time TBA",
+      "oopTypeId": 5,
+      "eventName": "WS",
+      "roundName": "R32",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 3",
+      "courtCode": "3",
+      "courtIndex": 2,
+      "locationName": "Shenzhen Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1539491,
+      "code": "94",
+      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
+      "tournamentName": "LI-NING China Masters 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "THA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "50959",
+            "nameDisplay": "Tonrug SAEHENG",
+            "nameType": 0,
+            "firstName": "Tonrug",
+            "lastName": "SAEHENG",
+            "initials": "TS",
+            "nameShort": "T SAEHENG",
+            "nameShort2": "SAEHENG",
+            "slug": "tonrug-saeheng",
+            "countryCode": "THA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+            "avatar": {
+              "title": "Tonrug SAEHENG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1780961739/assets/players/thumbnail/50959.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "61854",
+            "nameDisplay": "WANG Zhi Yi",
+            "nameType": 1,
+            "firstName": "Zhi Yi",
+            "lastName": "WANG",
+            "initials": "WZ",
+            "nameShort": "WANG Z Y ",
+            "nameShort2": "WANG",
+            "slug": "wang-zhi-yi",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "WANG Zhi Yi",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697435902/assets/players/thumbnail/61854.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "2",
+      "matchTime": "2026-09-02 17:20:00",
+      "matchTimeUtc": "2026-09-02 09:20:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "11",
+      "oopText": "Court and time TBA",
+      "oopTypeId": 5,
+      "eventName": "WS",
+      "roundName": "R32",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Shenzhen Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1539520,
+      "code": "90",
+      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
+      "tournamentName": "LI-NING China Masters 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "61614",
+            "nameDisplay": "TUNG Ciou-Tong",
+            "nameType": 1,
+            "firstName": "Ciou-Tong",
+            "lastName": "TUNG",
+            "initials": "TC",
+            "nameShort": "TUNG C T ",
+            "nameShort2": "TUNG",
+            "slug": "ciou-tong-tung",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Ciou-Tong TUNG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896734/assets/players/thumbnail/61614.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "THA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "35642",
+            "nameDisplay": "Ratchanok INTANON",
+            "nameType": 0,
+            "firstName": "Ratchanok",
+            "lastName": "INTANON",
+            "initials": "RI",
+            "nameShort": "R INTANON",
+            "nameShort2": "INTANON",
+            "slug": "ratchanok-intanon",
+            "countryCode": "THA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+            "avatar": {
+              "title": "Ratchanok INTANON",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897731/assets/players/thumbnail/35642.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "6",
+      "matchTime": "2026-09-02 09:50:00",
+      "matchTimeUtc": "2026-09-02 01:50:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "2",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "R32",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Shenzhen Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1539590,
+      "code": "88",
+      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
+      "tournamentName": "LI-NING China Masters 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "68479",
+            "nameDisplay": "Hina AKECHI",
+            "nameType": 0,
+            "firstName": "Hina",
+            "lastName": "AKECHI",
+            "initials": "HA",
+            "nameShort": "H AKECHI",
+            "nameShort2": "AKECHI",
+            "slug": "hina-akechi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Hina AKECHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "82070",
+            "nameDisplay": "Tomoka MIYAZAKI",
+            "nameType": 0,
+            "firstName": "Tomoka",
+            "lastName": "MIYAZAKI",
+            "initials": "TM",
+            "nameShort": "T MIYAZAKI",
+            "nameShort2": "MIYAZAKI",
+            "slug": "tomoka-miyazaki",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Tomoka MIYAZAKI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1667175143/assets/players/thumbnail/82070.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-09-02 12:20:00",
+      "matchTimeUtc": "2026-09-02 04:20:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "5",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "R32",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 3",
+      "courtCode": "3",
+      "courtIndex": 2,
+      "locationName": "Shenzhen Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1539579,
+      "code": "87",
+      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
+      "tournamentName": "LI-NING China Masters 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "99042",
+            "nameDisplay": "Tanvi SHARMA",
+            "nameType": 0,
+            "firstName": "Tanvi",
+            "lastName": "SHARMA",
+            "initials": "TS",
+            "nameShort": "T SHARMA",
+            "nameShort2": "SHARMA",
+            "slug": "tanvi-sharma",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "Tanvi SHARMA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1728625354/assets/players/thumbnail/99042.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "DEN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "70651",
+            "nameDisplay": "Amalie SCHULZ",
+            "nameType": 0,
+            "firstName": "Amalie",
+            "lastName": "SCHULZ",
+            "initials": "AS",
+            "nameShort": "A SCHULZ",
+            "nameShort2": "SCHULZ",
+            "slug": "amalie-schulz",
+            "countryCode": "DEN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+            "avatar": {
+              "title": "Amalie SCHULZ",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896473/assets/players/thumbnail/70651.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-09-02 13:10:00",
+      "matchTimeUtc": "2026-09-02 05:10:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "6",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "R32",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Shenzhen Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1539588,
+      "code": "89",
+      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
+      "tournamentName": "LI-NING China Masters 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "90287",
+            "nameDisplay": "Devika SIHAG",
+            "nameType": 0,
+            "firstName": "Devika",
+            "lastName": "SIHAG",
+            "initials": "DS",
+            "nameShort": "D SIHAG",
+            "nameShort2": "SIHAG",
+            "slug": "devika-sihag",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "Devika SIHAG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "BUL",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "87112",
+            "nameDisplay": "Kaloyana NALBANTOVA",
+            "nameType": 0,
+            "firstName": "Kaloyana",
+            "lastName": "NALBANTOVA",
+            "initials": "KN",
+            "nameShort": "K NALBANTOVA",
+            "nameShort2": "NALBANTOVA",
+            "slug": "kaloyana-nalbantova",
+            "countryCode": "BUL",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
+            "avatar": {
+              "title": "Kaloyana NALBANTOVA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1719889947/assets/players/thumbnail/87112.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-09-02 11:30:00",
+      "matchTimeUtc": "2026-09-02 03:30:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "4",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "R32",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 3",
+      "courtCode": "3",
+      "courtIndex": 2,
       "locationName": "Shenzhen Arena",
       "duration": null,
       "time": "00:00",
@@ -2840,8 +3949,8 @@
       "matches": []
     },
     {
-      "id": 1539488,
-      "code": "77",
+      "id": 1539507,
+      "code": "66",
       "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
       "tournamentName": "LI-NING China Masters 2026",
       "isTeamMatch": false,
@@ -2874,59 +3983,7 @@
       "oopText": null,
       "oopTypeId": null,
       "eventName": "WS",
-      "roundName": "R16",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1539489,
-      "code": "78",
-      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
-      "tournamentName": "LI-NING China Masters 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R16",
+      "roundName": "SF",
       "drawName": "WS",
       "drawCode": "2",
       "courtName": "",
@@ -2996,8 +4053,8 @@
       "matches": []
     },
     {
-      "id": 1539494,
-      "code": "68",
+      "id": 1539493,
+      "code": "70",
       "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
       "tournamentName": "LI-NING China Masters 2026",
       "isTeamMatch": false,
@@ -3100,8 +4157,8 @@
       "matches": []
     },
     {
-      "id": 1539493,
-      "code": "70",
+      "id": 1539494,
+      "code": "68",
       "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
       "tournamentName": "LI-NING China Masters 2026",
       "isTeamMatch": false,
@@ -3135,110 +4192,6 @@
       "oopTypeId": null,
       "eventName": "WS",
       "roundName": "QF",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1539496,
-      "code": "75",
-      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
-      "tournamentName": "LI-NING China Masters 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R16",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1539507,
-      "code": "66",
-      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
-      "tournamentName": "LI-NING China Masters 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "SF",
       "drawName": "WS",
       "drawCode": "2",
       "courtName": "",
@@ -3308,8 +4261,8 @@
       "matches": []
     },
     {
-      "id": 1539491,
-      "code": "94",
+      "id": 1539489,
+      "code": "78",
       "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
       "tournamentName": "LI-NING China Masters 2026",
       "isTeamMatch": false,
@@ -3317,61 +4270,23 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": "THA",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+        "countryCode": null,
+        "countryFlagUrl": null,
         "teamId": null,
         "teamName": null,
-        "players": [
-          {
-            "id": "50959",
-            "nameDisplay": "Tonrug SAEHENG",
-            "nameType": 0,
-            "firstName": "Tonrug",
-            "lastName": "SAEHENG",
-            "initials": "TS",
-            "nameShort": "T SAEHENG",
-            "nameShort2": "SAEHENG",
-            "slug": "tonrug-saeheng",
-            "countryCode": "THA",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
-            "avatar": {
-              "title": "Tonrug SAEHENG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1780961739/assets/players/thumbnail/50959.jpg"
-            }
-          }
-        ],
+        "players": [],
         "linkName": null
       },
       "team2": {
-        "countryCode": "CHN",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+        "countryCode": null,
+        "countryFlagUrl": null,
         "teamId": null,
         "teamName": null,
-        "players": [
-          {
-            "id": "61854",
-            "nameDisplay": "WANG Zhi Yi",
-            "nameType": 1,
-            "firstName": "Zhi Yi",
-            "lastName": "WANG",
-            "initials": "WZ",
-            "nameShort": "WANG Z Y ",
-            "nameShort2": "WANG",
-            "slug": "wang-zhi-yi",
-            "countryCode": "CHN",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
-            "avatar": {
-              "title": "WANG Zhi Yi",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697435902/assets/players/thumbnail/61854.jpg"
-            }
-          }
-        ],
+        "players": [],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": "2",
+      "team2seed": null,
       "matchTime": null,
       "matchTimeUtc": null,
       "matchStatus": "N",
@@ -3380,7 +4295,111 @@
       "oopText": null,
       "oopTypeId": null,
       "eventName": "WS",
-      "roundName": "R32",
+      "roundName": "R16",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "",
+      "courtCode": null,
+      "courtIndex": null,
+      "locationName": null,
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": null,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1539488,
+      "code": "77",
+      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
+      "tournamentName": "LI-NING China Masters 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": null,
+        "countryFlagUrl": null,
+        "teamId": null,
+        "teamName": null,
+        "players": [],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": null,
+        "countryFlagUrl": null,
+        "teamId": null,
+        "teamName": null,
+        "players": [],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": null,
+      "matchTimeUtc": null,
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": null,
+      "oopText": null,
+      "oopTypeId": null,
+      "eventName": "WS",
+      "roundName": "R16",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "",
+      "courtCode": null,
+      "courtIndex": null,
+      "locationName": null,
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": null,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1539496,
+      "code": "75",
+      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
+      "tournamentName": "LI-NING China Masters 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": null,
+        "countryFlagUrl": null,
+        "teamId": null,
+        "teamName": null,
+        "players": [],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": null,
+        "countryFlagUrl": null,
+        "teamId": null,
+        "teamName": null,
+        "players": [],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": null,
+      "matchTimeUtc": null,
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": null,
+      "oopText": null,
+      "oopTypeId": null,
+      "eventName": "WS",
+      "roundName": "R16",
       "drawName": "WS",
       "drawCode": "2",
       "courtName": "",
@@ -3407,19 +4426,57 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "80862",
+            "nameDisplay": "CHIU Pin-Chian",
+            "nameType": 1,
+            "firstName": "Pin-Chian",
+            "lastName": "CHIU",
+            "initials": "CP",
+            "nameShort": "CHIU P C ",
+            "nameShort2": "CHIU",
+            "slug": "chiu-pin-chian",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "CHIU Pin-Chian",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "THA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "91422",
+            "nameDisplay": "Supanida KATETHONG",
+            "nameType": 0,
+            "firstName": "Supanida",
+            "lastName": "KATETHONG",
+            "initials": "SK",
+            "nameShort": "S KATETHONG",
+            "nameShort2": "KATETHONG",
+            "slug": "supanida-katethong",
+            "countryCode": "THA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+            "avatar": {
+              "title": "Supanida KATETHONG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1620708318/assets/players/thumbnail/91422.tif"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
@@ -3459,22 +4516,60 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "96312",
+            "nameDisplay": "Akane YAMAGUCHI",
+            "nameType": 0,
+            "firstName": "Akane",
+            "lastName": "YAMAGUCHI",
+            "initials": "AY",
+            "nameShort": "A YAMAGUCHI",
+            "nameShort2": "YAMAGUCHI",
+            "slug": "akane-yamaguchi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Akane YAMAGUCHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689647088/assets/players/thumbnail/96312.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "99069",
+            "nameDisplay": "SIM Yu Jin",
+            "nameType": 1,
+            "firstName": "Yu Jin",
+            "lastName": "SIM",
+            "initials": "SY",
+            "nameShort": "SIM Y J ",
+            "nameShort2": "SIM",
+            "slug": "yu-jin-sim",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Yu Jin SIM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636594223/assets/players/thumbnail/99069.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "3",
       "team2seed": null,
       "matchTime": null,
       "matchTimeUtc": null,
@@ -3511,19 +4606,57 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "70930",
+            "nameDisplay": "KIM Ga Eun",
+            "nameType": 1,
+            "firstName": "Ga Eun",
+            "lastName": "KIM",
+            "initials": "KG",
+            "nameShort": "KIM G E ",
+            "nameShort2": "KIM",
+            "slug": "ga-eun-kim",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Ga Eun KIM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895484/assets/players/thumbnail/70930.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "DEN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "85302",
+            "nameDisplay": "Line CHRISTOPHERSEN",
+            "nameType": 0,
+            "firstName": "Line",
+            "lastName": "CHRISTOPHERSEN",
+            "initials": "LC",
+            "nameShort": "L CHRISTOPHERSEN",
+            "nameShort2": "CHRISTOPHERSEN",
+            "slug": "line-christophersen",
+            "countryCode": "DEN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+            "avatar": {
+              "title": "Line CHRISTOPHERSEN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896471/assets/players/thumbnail/85302.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
@@ -3563,22 +4696,60 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "87442",
+            "nameDisplay": "AN Se Young",
+            "nameType": 1,
+            "firstName": "Se Young",
+            "lastName": "AN",
+            "initials": "AS",
+            "nameShort": "AN S Y ",
+            "nameShort2": "AN",
+            "slug": "se-young-an",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Se Young AN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697765036/assets/players/thumbnail/87442.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "92928",
+            "nameDisplay": "HAN Qian Xi",
+            "nameType": 1,
+            "firstName": "Qian Xi",
+            "lastName": "HAN",
+            "initials": "HQ",
+            "nameShort": "HAN Q X ",
+            "nameShort2": "HAN",
+            "slug": "han-qian-xi",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "HAN Qian Xi",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "1",
       "team2seed": null,
       "matchTime": null,
       "matchTimeUtc": null,
@@ -3589,636 +4760,6 @@
       "oopTypeId": null,
       "eventName": "WS",
       "roundName": "R16",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1539453,
-      "code": "93",
-      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
-      "tournamentName": "LI-NING China Masters 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "MAS",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "59367",
-            "nameDisplay": "Karupathevan LETSHANAA",
-            "nameType": 0,
-            "firstName": "Karupathevan",
-            "lastName": "LETSHANAA",
-            "initials": "KL",
-            "nameShort": "K LETSHANAA",
-            "nameShort2": "LETSHANAA",
-            "slug": "karupathevan-letshanaa",
-            "countryCode": "MAS",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-            "avatar": {
-              "title": "Karupathevan LETSHANAA",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1634280949/assets/players/thumbnail/59367.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "ENG",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "44698",
-            "nameDisplay": "Karen Yun Qiao FENG",
-            "nameType": 0,
-            "firstName": "Karen Yun Qiao",
-            "lastName": "FENG",
-            "initials": "KF",
-            "nameShort": "K FENG",
-            "nameShort2": "FENG",
-            "slug": "karen-yun-qiao-feng",
-            "countryCode": "ENG",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
-            "avatar": {
-              "title": "Karen Yun Qiao FENG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R32",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1539539,
-      "code": "92",
-      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
-      "tournamentName": "LI-NING China Masters 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "JPN",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "91896",
-            "nameDisplay": "Natsuki NIDAIRA",
-            "nameType": 0,
-            "firstName": "Natsuki",
-            "lastName": "NIDAIRA",
-            "initials": "NN",
-            "nameShort": "N NIDAIRA",
-            "nameShort2": "NIDAIRA",
-            "slug": "natsuki-nidaira",
-            "countryCode": "JPN",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
-            "avatar": {
-              "title": "Natsuki NIDAIRA",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895698/assets/players/thumbnail/91896.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "JPN",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "96713",
-            "nameDisplay": "Nozomi OKUHARA",
-            "nameType": 0,
-            "firstName": "Nozomi",
-            "lastName": "OKUHARA",
-            "initials": "NO",
-            "nameShort": "N OKUHARA",
-            "nameShort2": "OKUHARA",
-            "slug": "nozomi-okuhara",
-            "countryCode": "JPN",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
-            "avatar": {
-              "title": "Nozomi OKUHARA",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895749/assets/players/thumbnail/96713.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R32",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1539462,
-      "code": "91",
-      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
-      "tournamentName": "LI-NING China Masters 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "CAN",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "84523",
-            "nameDisplay": "Michelle LI",
-            "nameType": 0,
-            "firstName": "Michelle",
-            "lastName": "LI",
-            "initials": "ML",
-            "nameShort": "M LI",
-            "nameShort2": "LI",
-            "slug": "michelle-li",
-            "countryCode": "CAN",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
-            "avatar": {
-              "title": "Michelle LI",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1721630779/assets/players/thumbnail/84523.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "GER",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "91106",
-            "nameDisplay": "Yvonne LI",
-            "nameType": 0,
-            "firstName": "Yvonne",
-            "lastName": "LI",
-            "initials": "YL",
-            "nameShort": "Y LI",
-            "nameShort2": "LI",
-            "slug": "yvonne-li",
-            "countryCode": "GER",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
-            "avatar": {
-              "title": "Yvonne LI",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1719991926/assets/players/thumbnail/91106.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R32",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1539520,
-      "code": "90",
-      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
-      "tournamentName": "LI-NING China Masters 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "TPE",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "61614",
-            "nameDisplay": "TUNG Ciou-Tong",
-            "nameType": 1,
-            "firstName": "Ciou-Tong",
-            "lastName": "TUNG",
-            "initials": "TC",
-            "nameShort": "TUNG C T ",
-            "nameShort2": "TUNG",
-            "slug": "ciou-tong-tung",
-            "countryCode": "TPE",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-            "avatar": {
-              "title": "Ciou-Tong TUNG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896734/assets/players/thumbnail/61614.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "THA",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "35642",
-            "nameDisplay": "Ratchanok INTANON",
-            "nameType": 0,
-            "firstName": "Ratchanok",
-            "lastName": "INTANON",
-            "initials": "RI",
-            "nameShort": "R INTANON",
-            "nameShort2": "INTANON",
-            "slug": "ratchanok-intanon",
-            "countryCode": "THA",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
-            "avatar": {
-              "title": "Ratchanok INTANON",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897731/assets/players/thumbnail/35642.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": "6",
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R32",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1539588,
-      "code": "89",
-      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
-      "tournamentName": "LI-NING China Masters 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "IND",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "90287",
-            "nameDisplay": "Devika SIHAG",
-            "nameType": 0,
-            "firstName": "Devika",
-            "lastName": "SIHAG",
-            "initials": "DS",
-            "nameShort": "D SIHAG",
-            "nameShort2": "SIHAG",
-            "slug": "devika-sihag",
-            "countryCode": "IND",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-            "avatar": {
-              "title": "Devika SIHAG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "BUL",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "87112",
-            "nameDisplay": "Kaloyana NALBANTOVA",
-            "nameType": 0,
-            "firstName": "Kaloyana",
-            "lastName": "NALBANTOVA",
-            "initials": "KN",
-            "nameShort": "K NALBANTOVA",
-            "nameShort2": "NALBANTOVA",
-            "slug": "kaloyana-nalbantova",
-            "countryCode": "BUL",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
-            "avatar": {
-              "title": "Kaloyana NALBANTOVA",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1719889947/assets/players/thumbnail/87112.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R32",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1539590,
-      "code": "88",
-      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
-      "tournamentName": "LI-NING China Masters 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "JPN",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "68479",
-            "nameDisplay": "Hina AKECHI",
-            "nameType": 0,
-            "firstName": "Hina",
-            "lastName": "AKECHI",
-            "initials": "HA",
-            "nameShort": "H AKECHI",
-            "nameShort2": "AKECHI",
-            "slug": "hina-akechi",
-            "countryCode": "JPN",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
-            "avatar": {
-              "title": "Hina AKECHI",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "JPN",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "82070",
-            "nameDisplay": "Tomoka MIYAZAKI",
-            "nameType": 0,
-            "firstName": "Tomoka",
-            "lastName": "MIYAZAKI",
-            "initials": "TM",
-            "nameShort": "T MIYAZAKI",
-            "nameShort2": "MIYAZAKI",
-            "slug": "tomoka-miyazaki",
-            "countryCode": "JPN",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
-            "avatar": {
-              "title": "Tomoka MIYAZAKI",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1667175143/assets/players/thumbnail/82070.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R32",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1539579,
-      "code": "87",
-      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
-      "tournamentName": "LI-NING China Masters 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "IND",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "99042",
-            "nameDisplay": "Tanvi SHARMA",
-            "nameType": 0,
-            "firstName": "Tanvi",
-            "lastName": "SHARMA",
-            "initials": "TS",
-            "nameShort": "T SHARMA",
-            "nameShort2": "SHARMA",
-            "slug": "tanvi-sharma",
-            "countryCode": "IND",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-            "avatar": {
-              "title": "Tanvi SHARMA",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1728625354/assets/players/thumbnail/99042.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "DEN",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "70651",
-            "nameDisplay": "Amalie SCHULZ",
-            "nameType": 0,
-            "firstName": "Amalie",
-            "lastName": "SCHULZ",
-            "initials": "AS",
-            "nameShort": "A SCHULZ",
-            "nameShort2": "SCHULZ",
-            "slug": "amalie-schulz",
-            "countryCode": "DEN",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
-            "avatar": {
-              "title": "Amalie SCHULZ",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896473/assets/players/thumbnail/70651.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R32",
       "drawName": "WS",
       "drawCode": "2",
       "courtName": "",
