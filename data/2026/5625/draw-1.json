@@ -2400,7 +2400,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "HKG",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
@@ -2457,9 +2457,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-09-04 17:50:00",
-        "matchTimeUtc": "2026-09-04 09:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-09-04 18:10:00",
+        "matchTimeUtc": "2026-09-04 10:10:00",
+        "matchStatus": "F",
         "oopRound": "7",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2470,12 +2470,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 50,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2485,7 +2498,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "THA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -2544,7 +2557,7 @@
         "team2seed": "5",
         "matchTime": "2026-09-04 17:50:00",
         "matchTimeUtc": "2026-09-04 09:50:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "6",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2555,12 +2568,31 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 101,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 18,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 17,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 18,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2570,7 +2602,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "IND",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -2629,7 +2661,7 @@
         "team2seed": null,
         "matchTime": "2026-09-04 10:50:00",
         "matchTimeUtc": "2026-09-04 02:50:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2640,12 +2672,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 39,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2655,7 +2700,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2714,12 +2759,110 @@
         "team2seed": "2",
         "matchTime": "2026-09-04 10:50:00",
         "matchTimeUtc": "2026-09-04 02:50:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
         "eventName": "MS",
         "roundName": "QF",
+        "drawName": "MS",
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Shenzhen Arena",
+        "duration": 39,
+        "matchOrder": null,
+        "matchTypeId": 1,
+        "matchTypeValue": "Men's Singles",
+        "reliability": 1,
+        "score": [
+          {
+            "set": 1,
+            "home": 10,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 14,
+            "away": 21,
+            "serve": 2
+          }
+        ],
+        "matches": []
+      }
+    },
+    "3-0": {
+      "match": {
+        "code": "2",
+        "tournamentCode": 5625,
+        "scoreStatus": 0,
+        "scoreStatusValue": "Normal",
+        "winner": 0,
+        "team1": {
+          "countryCode": "HKG",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+          "teamId": null,
+          "teamName": null,
+          "players": [
+            {
+              "id": "65634",
+              "nameDisplay": "Jason GUNAWAN",
+              "nameType": 0,
+              "firstName": "Jason",
+              "lastName": "GUNAWAN",
+              "initials": "JG",
+              "nameShort": "J GUNAWAN",
+              "nameShort2": "GUNAWAN",
+              "slug": "jason-gunawan",
+              "countryCode": "HKG",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+              "avatar": {
+                "title": "Jason GUNAWAN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+              }
+            }
+          ],
+          "linkName": null
+        },
+        "team2": {
+          "countryCode": "DEN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+          "teamId": null,
+          "teamName": null,
+          "players": [
+            {
+              "id": "91554",
+              "nameDisplay": "Anders ANTONSEN",
+              "nameType": 0,
+              "firstName": "Anders",
+              "lastName": "ANTONSEN",
+              "initials": "AA",
+              "nameShort": "A ANTONSEN",
+              "nameShort2": "ANTONSEN",
+              "slug": "anders-antonsen",
+              "countryCode": "DEN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+              "avatar": {
+                "title": "Anders ANTONSEN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697434685/assets/players/thumbnail/91554.jpg"
+              }
+            }
+          ],
+          "linkName": null
+        },
+        "team1seed": null,
+        "team2seed": "5",
+        "matchTime": "2026-09-05 18:40:00",
+        "matchTimeUtc": "2026-09-05 10:40:00",
+        "matchStatus": "N",
+        "oopRound": "8",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
+        "eventName": "MS",
+        "roundName": "SF",
         "drawName": "MS",
         "courtName": "Court 1",
         "courtCode": "1",
@@ -2734,53 +2877,6 @@
         "matches": []
       }
     },
-    "3-0": {
-      "match": {
-        "code": "2",
-        "tournamentCode": 5625,
-        "scoreStatus": 0,
-        "scoreStatusValue": "Normal",
-        "winner": 0,
-        "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
-          "teamId": null,
-          "teamName": null,
-          "players": [],
-          "linkName": null
-        },
-        "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
-          "teamId": null,
-          "teamName": null,
-          "players": [],
-          "linkName": null
-        },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
-        "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
-        "eventName": "MS",
-        "roundName": "SF",
-        "drawName": "MS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
-        "duration": null,
-        "matchOrder": null,
-        "matchTypeId": 1,
-        "matchTypeValue": "Men's Singles",
-        "reliability": null,
-        "score": [],
-        "matches": []
-      }
-    },
     "3-1": {
       "match": {
         "code": "3",
@@ -2789,41 +2885,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "HKG",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "94780",
+              "nameDisplay": "LEE Cheuk Yiu",
+              "nameType": 1,
+              "firstName": "Cheuk Yiu",
+              "lastName": "LEE",
+              "initials": "LC",
+              "nameShort": "LEE C Y ",
+              "nameShort2": "LEE",
+              "slug": "cheuk-yiu-lee",
+              "countryCode": "HKG",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+              "avatar": {
+                "title": "Cheuk Yiu LEE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636512114/assets/players/thumbnail/94780.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "FRA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "72885",
+              "nameDisplay": "Christo POPOV",
+              "nameType": 0,
+              "firstName": "Christo",
+              "lastName": "POPOV",
+              "initials": "CP",
+              "nameShort": "C POPOV",
+              "nameShort2": "POPOV",
+              "slug": "christo-popov",
+              "countryCode": "FRA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
+              "avatar": {
+                "title": "Christo POPOV",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1719991249/assets/players/thumbnail/72885.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team2seed": "2",
+        "matchTime": "2026-09-05 17:50:00",
+        "matchTimeUtc": "2026-09-05 09:50:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "7",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MS",
         "roundName": "SF",
         "drawName": "MS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Shenzhen Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -5454,7 +5588,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "HKG",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
@@ -5511,10 +5645,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-09-04 17:50:00",
-      "matchTimeUtc": "2026-09-04 09:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-09-04 18:10:00",
+      "matchTimeUtc": "2026-09-04 10:10:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "7",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -5526,14 +5660,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 50,
+      "time": "00:50",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -5544,7 +5693,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "THA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -5603,8 +5752,8 @@
       "team2seed": "5",
       "matchTime": "2026-09-04 17:50:00",
       "matchTimeUtc": "2026-09-04 09:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "6",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -5616,14 +5765,36 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 101,
+      "time": "01:41",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 17,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -5634,7 +5805,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "IND",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -5693,8 +5864,8 @@
       "team2seed": null,
       "matchTime": "2026-09-04 10:50:00",
       "matchTimeUtc": "2026-09-04 02:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -5706,14 +5877,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 39,
+      "time": "00:39",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -5724,7 +5910,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -5783,13 +5969,118 @@
       "team2seed": "2",
       "matchTime": "2026-09-04 10:50:00",
       "matchTimeUtc": "2026-09-04 02:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "MS",
       "roundName": "QF",
+      "drawName": "MS",
+      "drawCode": "1",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Shenzhen Arena",
+      "duration": 39,
+      "time": "00:39",
+      "matchOrder": null,
+      "matchTypeId": 1,
+      "matchTypeValue": "Men's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 10,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 14,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1539552,
+      "code": "2",
+      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
+      "tournamentName": "LI-NING China Masters 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "HKG",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "65634",
+            "nameDisplay": "Jason GUNAWAN",
+            "nameType": 0,
+            "firstName": "Jason",
+            "lastName": "GUNAWAN",
+            "initials": "JG",
+            "nameShort": "J GUNAWAN",
+            "nameShort2": "GUNAWAN",
+            "slug": "jason-gunawan",
+            "countryCode": "HKG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+            "avatar": {
+              "title": "Jason GUNAWAN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "DEN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "91554",
+            "nameDisplay": "Anders ANTONSEN",
+            "nameType": 0,
+            "firstName": "Anders",
+            "lastName": "ANTONSEN",
+            "initials": "AA",
+            "nameShort": "A ANTONSEN",
+            "nameShort2": "ANTONSEN",
+            "slug": "anders-antonsen",
+            "countryCode": "DEN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+            "avatar": {
+              "title": "Anders ANTONSEN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697434685/assets/players/thumbnail/91554.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "5",
+      "matchTime": "2026-09-05 18:40:00",
+      "matchTimeUtc": "2026-09-05 10:40:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "8",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "MS",
+      "roundName": "SF",
       "drawName": "MS",
       "drawCode": "1",
       "courtName": "Court 1",
@@ -5807,58 +6098,6 @@
       "matches": []
     },
     {
-      "id": 1539552,
-      "code": "2",
-      "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
-      "tournamentName": "LI-NING China Masters 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "MS",
-      "roundName": "SF",
-      "drawName": "MS",
-      "drawCode": "1",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 1,
-      "matchTypeValue": "Men's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
       "id": 1539554,
       "code": "3",
       "tournamentCode": "593CF690-836C-47A7-A710-4FF599A473F3",
@@ -5868,45 +6107,83 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "HKG",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "94780",
+            "nameDisplay": "LEE Cheuk Yiu",
+            "nameType": 1,
+            "firstName": "Cheuk Yiu",
+            "lastName": "LEE",
+            "initials": "LC",
+            "nameShort": "LEE C Y ",
+            "nameShort2": "LEE",
+            "slug": "cheuk-yiu-lee",
+            "countryCode": "HKG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+            "avatar": {
+              "title": "Cheuk Yiu LEE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636512114/assets/players/thumbnail/94780.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "FRA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "72885",
+            "nameDisplay": "Christo POPOV",
+            "nameType": 0,
+            "firstName": "Christo",
+            "lastName": "POPOV",
+            "initials": "CP",
+            "nameShort": "C POPOV",
+            "nameShort2": "POPOV",
+            "slug": "christo-popov",
+            "countryCode": "FRA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
+            "avatar": {
+              "title": "Christo POPOV",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1719991249/assets/players/thumbnail/72885.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "team2seed": "2",
+      "matchTime": "2026-09-05 17:50:00",
+      "matchTimeUtc": "2026-09-05 09:50:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "7",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "MS",
       "roundName": "SF",
       "drawName": "MS",
       "drawCode": "1",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Shenzhen Arena",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 1,
       "score": [],
       "matches": []
     },
