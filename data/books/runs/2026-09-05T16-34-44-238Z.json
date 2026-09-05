@@ -1,0 +1,106 @@
+{
+ "fetchedAt": "2026-09-05T16:34:44.238Z",
+ "errors": {
+  "betclic": "https://www.betclic.fr/badminton-sbadminton -> HTTP 403"
+ },
+ "books": {
+  "unibet": {
+   "complete": true,
+   "rows": [
+    {
+     "book": "unibet",
+     "bookMatchId": "e3378297",
+     "srId": "74358518",
+     "tournament": "Masters Chine",
+     "discipline": "WS",
+     "p1": "SY.An",
+     "p2": "T.Miyazaki",
+     "odd1": 1.04,
+     "odd2": 5.5,
+     "startUtc": "2026-09-06T05:00:00.000Z",
+     "isLive": false
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3378307",
+     "srId": "74362438",
+     "tournament": "Masters Chine DM",
+     "discipline": null,
+     "p1": "Feng/Huang",
+     "p2": "Hoo/Lai",
+     "odd1": 1.09,
+     "odd2": 4.45,
+     "startUtc": "2026-09-06T05:30:00.000Z",
+     "isLive": false,
+     "sets": {
+      "market": "Nombre de Sets - Match",
+      "odd2": 1.25,
+      "odd3": 2.6
+     }
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3378308",
+     "srId": "74366398",
+     "tournament": "Masters Chine",
+     "discipline": "WD",
+     "p1": "Bao/Cao",
+     "p2": "Nakade/Takaha",
+     "odd1": 2.75,
+     "odd2": 1.28,
+     "startUtc": "2026-09-06T06:00:00.000Z",
+     "isLive": false,
+     "sets": {
+      "market": "Nombre de Sets - Match",
+      "odd2": 1.4,
+      "odd3": 2.15
+     }
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3378314",
+     "srId": "74372438",
+     "tournament": "Masters Chine",
+     "discipline": "MS",
+     "p1": "J.Gunawan",
+     "p2": "CY.Lee",
+     "odd1": 2.15,
+     "odd2": 1.48,
+     "startUtc": "2026-09-06T06:30:00.000Z",
+     "isLive": false,
+     "sets": {
+      "market": "Nombre de Sets - Match",
+      "odd2": 1.45,
+      "odd3": 2.05
+     }
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3378319",
+     "srId": "74372900",
+     "tournament": "Masters Chine",
+     "discipline": "MD",
+     "p1": "He/Ren",
+     "p2": "Rankire/Shetty",
+     "odd1": 1.95,
+     "odd2": 1.6,
+     "startUtc": "2026-09-06T07:00:00.000Z",
+     "isLive": false,
+     "sets": {
+      "market": "Nombre de Sets - Match",
+      "odd2": 1.47,
+      "odd3": 2
+     }
+    }
+   ]
+  },
+  "winamax": {
+   "complete": true,
+   "rows": []
+  },
+  "pinnacle": {
+   "complete": true,
+   "rows": []
+  }
+ }
+}
