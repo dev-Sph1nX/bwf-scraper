@@ -1,0 +1,70 @@
+{
+ "fetchedAt": "2026-09-05T08:08:20.985Z",
+ "errors": {
+  "betclic": "https://www.betclic.fr/badminton-sbadminton -> HTTP 403"
+ },
+ "books": {
+  "unibet": {
+   "complete": true,
+   "rows": [
+    {
+     "book": "unibet",
+     "bookMatchId": "e3378085",
+     "srId": "74345776",
+     "tournament": "Masters Chine",
+     "discipline": "MS",
+     "p1": "J.Gunawan",
+     "p2": "A.Antonsen",
+     "odd1": 4,
+     "odd2": 1.12,
+     "startUtc": "2026-09-05T08:10:00.000Z",
+     "isLive": false,
+     "sets": {
+      "market": "Nombre de Sets - Match",
+      "odd2": 1.33,
+      "odd3": 2.35
+     }
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3378139",
+     "srId": "74347534",
+     "tournament": "Masters Chine",
+     "discipline": "MD",
+     "p1": "Azriyn/Tan",
+     "p2": "Rankire/Shetty",
+     "odd1": 3.7,
+     "odd2": 1.15,
+     "startUtc": "2026-09-05T08:35:00.000Z",
+     "isLive": false,
+     "sets": {
+      "market": "Nombre de Sets - Match",
+      "odd2": 1.32,
+      "odd3": 2.35
+     }
+    },
+    {
+     "book": "unibet",
+     "bookMatchId": "e3378138",
+     "srId": "74347390",
+     "tournament": "Masters Chine",
+     "discipline": "MD",
+     "p1": "Tee/Yap",
+     "p2": "He/Ren",
+     "odd1": 2.4,
+     "odd2": 1.38,
+     "startUtc": "2026-09-05T09:00:00.000Z",
+     "isLive": false
+    }
+   ]
+  },
+  "winamax": {
+   "complete": true,
+   "rows": []
+  },
+  "pinnacle": {
+   "complete": true,
+   "rows": []
+  }
+ }
+}
