@@ -2768,7 +2768,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -2827,7 +2827,7 @@
         "team2seed": "3",
         "matchTime": "2026-09-05 10:00:00",
         "matchTimeUtc": "2026-09-05 02:00:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "1",
         "oopText": "Starting at 10:00 AM",
         "oopTypeId": 1,
@@ -2838,12 +2838,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 43,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 0,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 15,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2853,7 +2866,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2910,9 +2923,9 @@
         },
         "team1seed": null,
         "team2seed": "2",
-        "matchTime": "2026-09-05 11:40:00",
-        "matchTimeUtc": "2026-09-05 03:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-09-05 11:45:00",
+        "matchTimeUtc": "2026-09-05 03:45:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2923,12 +2936,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 60,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 19,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 23,
+            "away": 21,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2940,41 +2966,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "87442",
+              "nameDisplay": "AN Se Young",
+              "nameType": 1,
+              "firstName": "Se Young",
+              "lastName": "AN",
+              "initials": "AS",
+              "nameShort": "AN S Y ",
+              "nameShort2": "AN",
+              "slug": "se-young-an",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Se Young AN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697765036/assets/players/thumbnail/87442.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "82070",
+              "nameDisplay": "Tomoka MIYAZAKI",
+              "nameType": 0,
+              "firstName": "Tomoka",
+              "lastName": "MIYAZAKI",
+              "initials": "TM",
+              "nameShort": "T MIYAZAKI",
+              "nameShort2": "MIYAZAKI",
+              "slug": "tomoka-miyazaki",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Tomoka MIYAZAKI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1667175143/assets/players/thumbnail/82070.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "1",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-09-06 13:00:00",
+        "matchTimeUtc": "2026-09-06 05:00:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "1",
+        "oopText": "Starting at 1:00 PM",
+        "oopTypeId": 1,
         "eventName": "WS",
         "roundName": "Final",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Shenzhen Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 0,
         "score": [],
         "matches": []
       }
@@ -5950,7 +6014,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -6009,8 +6073,8 @@
       "team2seed": "3",
       "matchTime": "2026-09-05 10:00:00",
       "matchTimeUtc": "2026-09-05 02:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "1",
       "oopText": "Starting at 10:00 AM",
       "oopTypeId": 1,
@@ -6022,14 +6086,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 43,
+      "time": "00:43",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 0,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6040,7 +6119,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -6097,10 +6176,10 @@
       },
       "team1seed": null,
       "team2seed": "2",
-      "matchTime": "2026-09-05 11:40:00",
-      "matchTimeUtc": "2026-09-05 03:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-09-05 11:45:00",
+      "matchTimeUtc": "2026-09-05 03:45:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6112,14 +6191,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 60,
+      "time": "01:00",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 19,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 23,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6132,45 +6226,83 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "87442",
+            "nameDisplay": "AN Se Young",
+            "nameType": 1,
+            "firstName": "Se Young",
+            "lastName": "AN",
+            "initials": "AS",
+            "nameShort": "AN S Y ",
+            "nameShort2": "AN",
+            "slug": "se-young-an",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Se Young AN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697765036/assets/players/thumbnail/87442.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "82070",
+            "nameDisplay": "Tomoka MIYAZAKI",
+            "nameType": 0,
+            "firstName": "Tomoka",
+            "lastName": "MIYAZAKI",
+            "initials": "TM",
+            "nameShort": "T MIYAZAKI",
+            "nameShort2": "MIYAZAKI",
+            "slug": "tomoka-miyazaki",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Tomoka MIYAZAKI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1667175143/assets/players/thumbnail/82070.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "1",
       "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "matchTime": "2026-09-06 13:00:00",
+      "matchTimeUtc": "2026-09-06 05:00:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "1",
+      "oopText": "Starting at 1:00 PM",
+      "oopTypeId": 1,
       "eventName": "WS",
       "roundName": "Final",
       "drawName": "WS",
       "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Shenzhen Arena",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 0,
       "score": [],
       "matches": []
     }
