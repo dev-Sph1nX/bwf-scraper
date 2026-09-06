@@ -1,15 +1,15 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-09-05T16:05:51.175Z",
+ "fetchedAt": "2026-09-06T10:56:29.663Z",
  "tournamentSlug": "masters-d-indonesie-2",
  "books": [],
  "booksReference": [],
  "stats": {
-  "scanned": 166,
-  "kept": 166,
+  "scanned": 170,
+  "kept": 170,
   "withOdds": 0,
   "from": "2026-09-01",
-  "to": "2026-09-05"
+  "to": "2026-09-06"
  },
  "matches": [
   {
@@ -4863,6 +4863,122 @@
     {
      "home": 21,
      "away": 15
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "0CDqLNnf",
+   "disc": "XD",
+   "round": "Finale",
+   "startUtc": "2026-09-06T06:05:00.000Z",
+   "home": {
+    "name": "Ma X. X./Qin H. Z.",
+    "country": "Chine",
+    "fsParticipantId": "fuzAO6Ab"
+   },
+   "away": {
+    "name": "Liao P. Y./Zhang J. H.",
+    "country": "Chine",
+    "fsParticipantId": "ShYHMpuB"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 9
+    },
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 22,
+     "away": 20
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "CEaV6XRq",
+   "disc": "WD",
+   "round": "Finale",
+   "startUtc": "2026-09-06T07:25:00.000Z",
+   "home": {
+    "name": "Chou Y. A./Ko R. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "jXdoaVPk"
+   },
+   "away": {
+    "name": "Liao L. X./Shen S. Y.",
+    "country": "Chine",
+    "fsParticipantId": "Opegc9f2"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "jqiuPWmS",
+   "disc": "WS",
+   "round": "Finale",
+   "startUtc": "2026-09-06T08:30:00.000Z",
+   "home": {
+    "name": "Xu W. J.",
+    "country": "Chine",
+    "fsParticipantId": "zaVPFxSQ"
+   },
+   "away": {
+    "name": "Singh M.",
+    "country": "Inde",
+    "fsParticipantId": "6sMeAGkl"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "pK7Jp1XR",
+   "disc": "MS",
+   "round": "Finale",
+   "startUtc": "2026-09-06T09:30:00.000Z",
+   "home": {
+    "name": "Sun C.",
+    "country": "Chine",
+    "fsParticipantId": "nwazGp4j"
+   },
+   "away": {
+    "name": "Wang P.",
+    "country": "Taïwan",
+    "fsParticipantId": "vXoMwldc"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
     }
    ],
    "odds": null

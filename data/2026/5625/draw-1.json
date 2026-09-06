@@ -3000,7 +3000,7 @@
         "tournamentCode": 5625,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "HKG",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
@@ -3057,9 +3057,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-09-06 15:30:00",
-        "matchTimeUtc": "2026-09-06 07:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-09-06 16:35:00",
+        "matchTimeUtc": "2026-09-06 08:35:00",
+        "matchStatus": "F",
         "oopRound": "4",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3070,12 +3070,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Shenzhen Arena",
-        "duration": null,
+        "duration": 43,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 9,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 16,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     }
@@ -6302,7 +6315,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "HKG",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
@@ -6359,10 +6372,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-09-06 15:30:00",
-      "matchTimeUtc": "2026-09-06 07:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-09-06 16:35:00",
+      "matchTimeUtc": "2026-09-06 08:35:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "4",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6374,14 +6387,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Shenzhen Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 43,
+      "time": "00:43",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 9,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     }
   ],
