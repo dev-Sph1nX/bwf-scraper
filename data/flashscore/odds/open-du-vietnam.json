@@ -1,15 +1,15 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-09-12T22:21:10.288Z",
+ "fetchedAt": "2026-09-13T23:12:10.736Z",
  "tournamentSlug": "open-du-vietnam",
  "books": [],
  "booksReference": [],
  "stats": {
-  "scanned": 166,
-  "kept": 166,
+  "scanned": 171,
+  "kept": 171,
   "withOdds": 0,
   "from": "2026-09-08",
-  "to": "2026-09-12"
+  "to": "2026-09-13"
  },
  "matches": [
   {
@@ -4846,6 +4846,154 @@
     {
      "home": 24,
      "away": 22
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "hSmIizRH",
+   "disc": "XD",
+   "round": "Finale",
+   "startUtc": "2026-09-13T06:00:00.000Z",
+   "home": {
+    "name": "Horbanluekit P./Korpthammakit F.",
+    "country": "Thaïlande",
+    "fsParticipantId": "lfmUFHsH"
+   },
+   "away": {
+    "name": "Ma X. X./Qin H. Z.",
+    "country": "Chine",
+    "fsParticipantId": "dKjxEeCT"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "hMK14crQ",
+   "disc": "WS",
+   "round": "Finale",
+   "startUtc": "2026-09-13T07:15:00.000Z",
+   "home": {
+    "name": "Vitidsarn S.",
+    "country": "Thaïlande",
+    "fsParticipantId": "bimgGV8m"
+   },
+   "away": {
+    "name": "Baruah I.",
+    "country": "Inde",
+    "fsParticipantId": "6Hj1E9w0"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "Mw2dbuqQ",
+   "disc": "WD",
+   "round": "Finale",
+   "startUtc": "2026-09-13T07:55:00.000Z",
+   "home": {
+    "name": "Kim Y. J./Lee Y. L.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "lUPgEYtg"
+   },
+   "away": {
+    "name": "Liu J. Y./Wang Z. M.",
+    "country": "Chine",
+    "fsParticipantId": "dfT1CCB5"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "I9mShJ6m",
+   "disc": "MS",
+   "round": "Finale",
+   "startUtc": "2026-09-13T09:30:00.000Z",
+   "home": {
+    "name": "Teh J. H. J.",
+    "country": "Singapour",
+    "fsParticipantId": "U7R9AjtI"
+   },
+   "away": {
+    "name": "Aidil S.",
+    "country": "Malaysie",
+    "fsParticipantId": "xYUH8UAU"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "vmWOeVFb",
+   "disc": "MD",
+   "round": "Finale",
+   "startUtc": "2026-09-13T10:25:00.000Z",
+   "home": {
+    "name": "Chen Z. R./Lin Y. C.",
+    "country": "Taïwan",
+    "fsParticipantId": "WQAgA8Np"
+   },
+   "away": {
+    "name": "Hee Y. K. T./Wong J. H. H.",
+    "country": "Singapour",
+    "fsParticipantId": "xOcuYBFi"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 12
     }
    ],
    "odds": null
