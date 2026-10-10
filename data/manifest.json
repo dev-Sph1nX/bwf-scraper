@@ -17,7 +17,7 @@
       "tournamentCount": 32
     },
     "2026": {
-      "fetchedAt": "2026-10-04T23:09:21.118Z",
+      "fetchedAt": "2026-10-10T22:31:14.051Z",
       "tournamentCount": 31
     }
   },
@@ -5413,53 +5413,78 @@
       "tournamentStatus": "live"
     },
     "2026/5594/1": {
-      "fetchedAt": "2026-10-04T23:09:21.775Z",
+      "fetchedAt": "2026-10-10T22:31:14.553Z",
       "matchCount": 4,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5594/2": {
-      "fetchedAt": "2026-10-04T23:09:22.121Z",
+      "fetchedAt": "2026-10-10T22:31:14.865Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5594/3": {
-      "fetchedAt": "2026-10-04T23:09:22.412Z",
+      "fetchedAt": "2026-10-10T22:31:15.216Z",
       "matchCount": 4,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5594/4": {
-      "fetchedAt": "2026-10-04T23:09:23.182Z",
+      "fetchedAt": "2026-10-10T22:31:15.601Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5594/6": {
-      "fetchedAt": "2026-10-04T23:09:23.466Z",
+      "fetchedAt": "2026-10-10T22:31:15.863Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5594/7": {
-      "fetchedAt": "2026-10-04T23:09:23.734Z",
+      "fetchedAt": "2026-10-10T22:31:16.113Z",
       "matchCount": 4,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5594/8": {
-      "fetchedAt": "2026-10-04T23:09:24.090Z",
+      "fetchedAt": "2026-10-10T22:31:16.375Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5594/9": {
-      "fetchedAt": "2026-10-04T23:09:24.402Z",
+      "fetchedAt": "2026-10-10T22:31:16.701Z",
       "matchCount": 4,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5594/10": {
-      "fetchedAt": "2026-10-04T23:09:24.743Z",
+      "fetchedAt": "2026-10-10T22:31:17.034Z",
+      "matchCount": 31,
+      "tournamentStatus": "live"
+    },
+    "2026/5594/11": {
+      "fetchedAt": "2026-10-10T22:31:17.303Z",
+      "matchCount": 4,
+      "tournamentStatus": "live"
+    },
+    "2026/5210/1": {
+      "fetchedAt": "2026-10-10T22:31:17.753Z",
       "matchCount": 31,
       "tournamentStatus": "future"
     },
-    "2026/5594/11": {
-      "fetchedAt": "2026-10-04T23:09:25.053Z",
-      "matchCount": 4,
+    "2026/5210/2": {
+      "fetchedAt": "2026-10-10T22:31:18.055Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5210/3": {
+      "fetchedAt": "2026-10-10T22:31:18.378Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5210/4": {
+      "fetchedAt": "2026-10-10T22:31:18.698Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5210/5": {
+      "fetchedAt": "2026-10-10T22:31:18.928Z",
+      "matchCount": 31,
       "tournamentStatus": "future"
     }
   },
@@ -8561,12 +8586,12 @@
       ]
     },
     "2026": {
-      "finishedAt": "2026-10-04T23:09:25.346Z",
+      "finishedAt": "2026-10-10T22:31:19.166Z",
       "stats": {
         "tournaments": 31,
-        "drawsFetched": 10,
+        "drawsFetched": 15,
         "drawsSkipped": 174,
-        "matches": 175
+        "matches": 330
       },
       "items": [
         {
@@ -8612,6 +8637,32 @@
             {
               "label": "MD - Qualification",
               "matchCount": 4
+            }
+          ]
+        },
+        {
+          "id": 5210,
+          "name": "VICTOR Denmark Open 2026",
+          "draws": [
+            {
+              "label": "MS",
+              "matchCount": 31
+            },
+            {
+              "label": "WS",
+              "matchCount": 31
+            },
+            {
+              "label": "MD",
+              "matchCount": 31
+            },
+            {
+              "label": "WD",
+              "matchCount": 31
+            },
+            {
+              "label": "XD",
+              "matchCount": 31
             }
           ]
         }

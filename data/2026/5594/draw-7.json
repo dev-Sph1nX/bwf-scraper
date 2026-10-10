@@ -174,7 +174,7 @@
         "tournamentCode": 5594,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "FIN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FIN.png",
@@ -267,25 +267,38 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
-        "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "matchTime": "2026-10-06 12:25:00",
+        "matchTimeUtc": "2026-10-06 09:25:00",
+        "matchStatus": "F",
+        "oopRound": "6",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "Qual. QF",
         "drawName": "WD - Qualification",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
-        "duration": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Vantaan Energia Areena",
+        "duration": 30,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
-        "reliability": null,
-        "score": [],
+        "reliability": 1,
+        "score": [
+          {
+            "set": 1,
+            "home": 12,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 11,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -375,6 +388,147 @@
     }
   },
   "matches": [
+    {
+      "id": 1552441,
+      "code": "228",
+      "tournamentCode": "A0E6DE07-D611-4333-BAF3-2D53D2C3A0E1",
+      "tournamentName": "CLASH OF CLANS Arctic Open 2026 powered by YONEX",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 2,
+      "team1": {
+        "countryCode": "FIN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FIN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "59790",
+            "nameDisplay": "Sarah ASFAR",
+            "nameType": 0,
+            "firstName": "Sarah",
+            "lastName": "ASFAR",
+            "initials": "SA",
+            "nameShort": "S ASFAR",
+            "nameShort2": "ASFAR",
+            "slug": "sarah-asfar",
+            "countryCode": "FIN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FIN.png",
+            "avatar": {
+              "title": "Sarah ASFAR",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          },
+          {
+            "id": "83784",
+            "nameDisplay": "Oona TAPOLA",
+            "nameType": 0,
+            "firstName": "Oona",
+            "lastName": "TAPOLA",
+            "initials": "OT",
+            "nameShort": "O TAPOLA",
+            "nameShort2": "TAPOLA",
+            "slug": "oona-tapola",
+            "countryCode": "FIN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FIN.png",
+            "avatar": {
+              "title": "Oona TAPOLA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "LTU",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/LTU.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "61805",
+            "nameDisplay": "Jore KAVALIAUSKAITE",
+            "nameType": 0,
+            "firstName": "Jore",
+            "lastName": "KAVALIAUSKAITE",
+            "initials": "JK",
+            "nameShort": "J KAVALIAUSKAITE",
+            "nameShort2": "KAVALIAUSKAITE",
+            "slug": "jore-kavaliauskaite",
+            "countryCode": "LTU",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/LTU.png",
+            "avatar": {
+              "title": "Jore KAVALIAUSKAITE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          },
+          {
+            "id": "60560",
+            "nameDisplay": "Jorune SALNAITE",
+            "nameType": 0,
+            "firstName": "Jorune",
+            "lastName": "SALNAITE",
+            "initials": "JS",
+            "nameShort": "J SALNAITE",
+            "nameShort2": "SALNAITE",
+            "slug": "jorune-salnaite",
+            "countryCode": "LTU",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/LTU.png",
+            "avatar": {
+              "title": "Jorune SALNAITE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1790046113/assets/players/thumbnail/60560.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-10-06 12:25:00",
+      "matchTimeUtc": "2026-10-06 09:25:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "6",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WD",
+      "roundName": "Qual. QF",
+      "drawName": "WD - Qualification",
+      "drawCode": "7",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Vantaan Energia Areena",
+      "duration": 30,
+      "time": "00:30",
+      "matchOrder": null,
+      "matchTypeId": 4,
+      "matchTypeValue": "Women's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 12,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 11,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
     {
       "id": 1552469,
       "code": "226",
@@ -532,132 +686,6 @@
       "matchTimeUtc": null,
       "matchStatus": "F",
       "matchStatusValue": "Finished",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WD",
-      "roundName": "Qual. QF",
-      "drawName": "WD - Qualification",
-      "drawCode": "7",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 4,
-      "matchTypeValue": "Women's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1552441,
-      "code": "228",
-      "tournamentCode": "A0E6DE07-D611-4333-BAF3-2D53D2C3A0E1",
-      "tournamentName": "CLASH OF CLANS Arctic Open 2026 powered by YONEX",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "FIN",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FIN.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "59790",
-            "nameDisplay": "Sarah ASFAR",
-            "nameType": 0,
-            "firstName": "Sarah",
-            "lastName": "ASFAR",
-            "initials": "SA",
-            "nameShort": "S ASFAR",
-            "nameShort2": "ASFAR",
-            "slug": "sarah-asfar",
-            "countryCode": "FIN",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FIN.png",
-            "avatar": {
-              "title": "Sarah ASFAR",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
-            }
-          },
-          {
-            "id": "83784",
-            "nameDisplay": "Oona TAPOLA",
-            "nameType": 0,
-            "firstName": "Oona",
-            "lastName": "TAPOLA",
-            "initials": "OT",
-            "nameShort": "O TAPOLA",
-            "nameShort2": "TAPOLA",
-            "slug": "oona-tapola",
-            "countryCode": "FIN",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FIN.png",
-            "avatar": {
-              "title": "Oona TAPOLA",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "LTU",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/LTU.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "61805",
-            "nameDisplay": "Jore KAVALIAUSKAITE",
-            "nameType": 0,
-            "firstName": "Jore",
-            "lastName": "KAVALIAUSKAITE",
-            "initials": "JK",
-            "nameShort": "J KAVALIAUSKAITE",
-            "nameShort2": "KAVALIAUSKAITE",
-            "slug": "jore-kavaliauskaite",
-            "countryCode": "LTU",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/LTU.png",
-            "avatar": {
-              "title": "Jore KAVALIAUSKAITE",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
-            }
-          },
-          {
-            "id": "60560",
-            "nameDisplay": "Jorune SALNAITE",
-            "nameType": 0,
-            "firstName": "Jorune",
-            "lastName": "SALNAITE",
-            "initials": "JS",
-            "nameShort": "J SALNAITE",
-            "nameShort2": "SALNAITE",
-            "slug": "jorune-salnaite",
-            "countryCode": "LTU",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/LTU.png",
-            "avatar": {
-              "title": "Jorune SALNAITE",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1790046113/assets/players/thumbnail/60560.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
       "oopRound": null,
       "oopText": null,
       "oopTypeId": null,
