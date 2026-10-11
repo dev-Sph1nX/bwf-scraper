@@ -3009,7 +3009,7 @@
         "tournamentCode": 5594,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -3066,9 +3066,9 @@
         },
         "team1seed": null,
         "team2seed": "4",
-        "matchTime": "2026-10-11 12:40:00",
-        "matchTimeUtc": "2026-10-11 09:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-11 12:55:00",
+        "matchTimeUtc": "2026-10-11 09:55:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3079,12 +3079,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Vantaan Energia Areena",
-        "duration": null,
+        "duration": 87,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 16,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 25,
+            "away": 27,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     }
@@ -6318,7 +6337,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -6375,10 +6394,10 @@
       },
       "team1seed": null,
       "team2seed": "4",
-      "matchTime": "2026-10-11 12:40:00",
-      "matchTimeUtc": "2026-10-11 09:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-11 12:55:00",
+      "matchTimeUtc": "2026-10-11 09:55:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6390,14 +6409,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Vantaan Energia Areena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 87,
+      "time": "01:27",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 25,
+          "away": 27,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     }
   ],
