@@ -1,11 +1,11 @@
 {
  "source": "flashscore df_mh_1 (point par point)",
- "fetchedAt": "2026-10-11T15:43:42.992Z",
+ "fetchedAt": "2026-10-14T19:30:20.900Z",
  "tournamentSlug": "arctic-open",
  "format": "par manche : m = marqueur de chaque point (1 = home, 2 = away), s = serveur du point (0 = non servi par le flux) ; fin = [home, away] à la fin de la manche. Orientation FLASHSCORE (home/away), PAS team1/team2.",
  "stats": {
-  "matchs": 153,
-  "avecPoints": 151,
+  "matchs": 155,
+  "avecPoints": 153,
   "sansDonnees": 2,
   "avecAnomalie": 19
  },
@@ -3912,6 +3912,29 @@
    ]
   },
   {
+   "fsId": "WOXNgGwq",
+   "sets": [
+    {
+     "no": 1,
+     "m": "212222111112212111111212122212121221121",
+     "s": "121222211111221211111121212221212122112",
+     "fin": [
+      21,
+      18
+     ]
+    },
+    {
+     "no": 2,
+     "m": "1212111212111221211221122121212211121",
+     "s": "1121211121211122121122112212121221112",
+     "fin": [
+      21,
+      16
+     ]
+    }
+   ]
+  },
+  {
    "fsId": "xYvgHaTp",
    "sets": [
     {
@@ -3982,6 +4005,29 @@
      "no": 2,
      "m": "1112221222222122122111221121211211111211",
      "s": "1111222122222212212211122112121121111121",
+     "fin": [
+      21,
+      19
+     ]
+    }
+   ]
+  },
+  {
+   "fsId": "08ybRP1E",
+   "sets": [
+    {
+     "no": 1,
+     "m": "1111212212222112121211112122222211212111",
+     "s": "1111121221222211212121111212222221121211",
+     "fin": [
+      21,
+      19
+     ]
+    },
+    {
+     "no": 2,
+     "m": "2112111121121221121221222211222211121121",
+     "s": "1211211112112122112122122221122221112112",
      "fin": [
       21,
       19

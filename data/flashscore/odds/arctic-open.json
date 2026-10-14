@@ -1,6 +1,6 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-10-13T23:18:36.520Z",
+ "fetchedAt": "2026-10-14T19:23:11.742Z",
  "tournamentSlug": "arctic-open",
  "books": [
   "betclic",
@@ -12,8 +12,8 @@
  ],
  "stats": {
   "scanned": 155,
-  "kept": 153,
-  "withOdds": 152,
+  "kept": 155,
+  "withOdds": 154,
   "from": "2026-10-06",
   "to": "2026-10-11"
  },
@@ -8600,6 +8600,65 @@
    }
   },
   {
+   "fsId": "WOXNgGwq",
+   "disc": "XD",
+   "round": "Finale",
+   "startUtc": "2026-10-11T08:10:00.000Z",
+   "home": {
+    "name": "Jiang Z. B./Wei Y. X.",
+    "country": "Chine",
+    "fsParticipantId": "dprlW9kR"
+   },
+   "away": {
+    "name": "Gao J. X./Wu M. Y.",
+    "country": "Chine",
+    "fsParticipantId": "SSYJQmDl"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.14,
+      "closing": 1.13
+     },
+     "away": {
+      "opening": 3.55,
+      "closing": 3.6
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.18,
+      "closing": 1.25
+     },
+     "away": {
+      "opening": 3.35,
+      "closing": 3.05
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.2,
+      "closing": 1.15
+     },
+     "away": {
+      "opening": 3.5,
+      "closing": 3.25
+     }
+    }
+   }
+  },
+  {
    "fsId": "xYvgHaTp",
    "disc": "WS",
    "round": "Finale",
@@ -8756,6 +8815,55 @@
      "away": {
       "opening": 3.15,
       "closing": 3.2
+     }
+    }
+   }
+  },
+  {
+   "fsId": "08ybRP1E",
+   "disc": "MD",
+   "round": "Finale",
+   "startUtc": "2026-10-11T12:50:00.000Z",
+   "home": {
+    "name": "Tai A./Yap R. K.",
+    "country": "Malaysie",
+    "fsParticipantId": "Q78Uwuth"
+   },
+   "away": {
+    "name": "Lai P. Y./Tsai F. C.",
+    "country": "Taïwan",
+    "fsParticipantId": "bL6xxJA4"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.22,
+      "closing": 1.16
+     },
+     "away": {
+      "opening": 3.3,
+      "closing": 3.1
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.22,
+      "closing": 1.12
+     },
+     "away": {
+      "opening": 3.3,
+      "closing": 3.75
      }
     }
    }
