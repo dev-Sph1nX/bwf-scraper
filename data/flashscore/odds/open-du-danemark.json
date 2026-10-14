@@ -1,6 +1,6 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-10-14T19:29:53.997Z",
+ "fetchedAt": "2026-10-14T23:15:45.434Z",
  "tournamentSlug": "open-du-danemark",
  "books": [
   "betclic",
@@ -11,9 +11,9 @@
   "netbet"
  ],
  "stats": {
-  "scanned": 76,
-  "kept": 74,
-  "withOdds": 74,
+  "scanned": 78,
+  "kept": 78,
+  "withOdds": 78,
   "from": "2026-10-13",
   "to": "2026-10-14"
  },
@@ -73,6 +73,55 @@
      "away": {
       "opening": 2,
       "closing": 1.86
+     }
+    }
+   }
+  },
+  {
+   "fsId": "QuriVNfo",
+   "disc": "XD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-10-13T07:10:00.000Z",
+   "home": {
+    "name": "Feng Y. Z./Huang D. P.",
+    "country": "Chine",
+    "fsParticipantId": "Ct2gIVDk"
+   },
+   "away": {
+    "name": "Wu H./Yang C. Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "K651G9r2"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 21,
+     "away": 9
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 8.5,
+      "closing": 8.5
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 6.75,
+      "closing": 5
      }
     }
    }
@@ -3401,6 +3450,69 @@
    }
   },
   {
+   "fsId": "fyvaJTa4",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-10-14T13:50:00.000Z",
+   "home": {
+    "name": "Chen Z. Y./Smith P.",
+    "country": "USA",
+    "fsParticipantId": "rBFEDhAU"
+   },
+   "away": {
+    "name": "Lee F. C/Lee F. J.",
+    "country": "Taïwan",
+    "fsParticipantId": "IH9NXeen"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 4.3,
+      "closing": 4.2
+     },
+     "away": {
+      "opening": 1.08,
+      "closing": 1.08
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 3.7,
+      "closing": 3.25
+     },
+     "away": {
+      "opening": 1.1,
+      "closing": 1.15
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 4.1,
+      "closing": 3.65
+     },
+     "away": {
+      "opening": 1.11,
+      "closing": 1.17
+     }
+    }
+   }
+  },
+  {
    "fsId": "pAtK6jGb",
    "disc": "MD",
    "round": "1/16 de finale",
@@ -4385,6 +4497,124 @@
      "away": {
       "opening": 1.01,
       "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "tE7ncwq2",
+   "disc": "MD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-10-14T19:10:00.000Z",
+   "home": {
+    "name": "Chen Z. R./Lin Y. C.",
+    "country": "Taïwan",
+    "fsParticipantId": "4fwBB5vp"
+   },
+   "away": {
+    "name": "Weijie C./Teo Ee Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "x8yJ9q9d"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 2.15,
+      "closing": 2.2
+     },
+     "away": {
+      "opening": 1.46,
+      "closing": 1.5
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 2.15,
+      "closing": 2.15
+     },
+     "away": {
+      "opening": 1.43,
+      "closing": 1.43
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 2.25,
+      "closing": 2.05
+     },
+     "away": {
+      "opening": 1.48,
+      "closing": 1.45
+     }
+    }
+   }
+  },
+  {
+   "fsId": "fepaOFs1",
+   "disc": "WD",
+   "round": "1/16 de finale",
+   "startUtc": "2026-10-14T19:25:00.000Z",
+   "home": {
+    "name": "Chen Y. F./Hsieh P. S.",
+    "country": "Taïwan",
+    "fsParticipantId": "nyQYmT2s"
+   },
+   "away": {
+    "name": "Jolly T./Pullela G. G.",
+    "country": "Inde",
+    "fsParticipantId": "KlOtn7Xg"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 2.9,
+      "closing": 4
+     },
+     "away": {
+      "opening": 1.23,
+      "closing": 1.11
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 2.8,
+      "closing": 3
+     },
+     "away": {
+      "opening": 1.22,
+      "closing": 1.18
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 2.97,
+      "closing": 3.2
+     },
+     "away": {
+      "opening": 1.21,
+      "closing": 1.18
      }
     }
    }
