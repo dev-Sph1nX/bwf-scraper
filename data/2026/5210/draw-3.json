@@ -2173,7 +2173,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -2266,9 +2266,9 @@
         },
         "team1seed": "1",
         "team2seed": null,
-        "matchTime": "2026-10-15 09:50:00",
-        "matchTimeUtc": "2026-10-15 07:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 09:55:00",
+        "matchTimeUtc": "2026-10-15 07:55:00",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2279,12 +2279,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 60,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 15,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 16,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2294,7 +2313,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "ENG",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
@@ -2389,7 +2408,7 @@
         "team2seed": null,
         "matchTime": "2026-10-15 09:00:00",
         "matchTimeUtc": "2026-10-15 07:00:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "1",
         "oopText": "Starting at 9:00 AM",
         "oopTypeId": 1,
@@ -2400,12 +2419,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 48,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 0,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 23,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2415,7 +2447,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "MAS",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -2508,9 +2540,9 @@
         },
         "team1seed": "4",
         "team2seed": null,
-        "matchTime": "2026-10-15 10:50:00",
-        "matchTimeUtc": "2026-10-15 08:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 10:30:00",
+        "matchTimeUtc": "2026-10-15 08:30:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2521,12 +2553,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 33,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2536,7 +2581,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2629,9 +2674,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-15 12:30:00",
-        "matchTimeUtc": "2026-10-15 10:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 12:00:00",
+        "matchTimeUtc": "2026-10-15 10:00:00",
+        "matchStatus": "F",
         "oopRound": "5",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2642,12 +2687,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 37,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 23,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 12,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2657,7 +2715,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "THA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -2750,9 +2808,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-15 12:20:00",
-        "matchTimeUtc": "2026-10-15 10:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 13:45:00",
+        "matchTimeUtc": "2026-10-15 11:45:00",
+        "matchStatus": "F",
         "oopRound": "5",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2763,12 +2821,31 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 61,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 17,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 13,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 22,
+            "away": 20,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2778,7 +2855,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "DEN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
@@ -2871,9 +2948,9 @@
         },
         "team1seed": null,
         "team2seed": "3",
-        "matchTime": "2026-10-15 14:50:00",
-        "matchTimeUtc": "2026-10-15 12:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 15:55:00",
+        "matchTimeUtc": "2026-10-15 13:55:00",
+        "matchStatus": "F",
         "oopRound": "8",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2884,12 +2961,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 35,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 10,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2899,7 +2989,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "MAS",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -2992,9 +3082,9 @@
         },
         "team1seed": null,
         "team2seed": "6",
-        "matchTime": "2026-10-15 16:30:00",
-        "matchTimeUtc": "2026-10-15 14:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 18:55:00",
+        "matchTimeUtc": "2026-10-15 16:55:00",
+        "matchStatus": "F",
         "oopRound": "10",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3005,12 +3095,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 28,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 18,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 11,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -3020,7 +3123,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -3113,9 +3216,9 @@
         },
         "team1seed": null,
         "team2seed": "2",
-        "matchTime": "2026-10-15 15:25:00",
-        "matchTimeUtc": "2026-10-15 13:25:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 15:40:00",
+        "matchTimeUtc": "2026-10-15 13:40:00",
+        "matchStatus": "F",
         "oopRound": "9",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3126,12 +3229,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 35,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 15,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -3143,41 +3259,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "61444",
+              "nameDisplay": "KIM Won Ho",
+              "nameType": 1,
+              "firstName": "Won Ho",
+              "lastName": "KIM",
+              "initials": "KW",
+              "nameShort": "KIM W H ",
+              "nameShort2": "KIM",
+              "slug": "won-ho-kim",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Won Ho KIM",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895351/assets/players/thumbnail/61444.jpg"
+              }
+            },
+            {
+              "id": "66513",
+              "nameDisplay": "SEO Seung Jae",
+              "nameType": 1,
+              "firstName": "Seung Jae",
+              "lastName": "SEO",
+              "initials": "SS",
+              "nameShort": "SEO S J ",
+              "nameShort2": "SEO",
+              "slug": "seung-jae-seo",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Seung Jae SEO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895418/assets/players/thumbnail/66513.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "79906",
+              "nameDisplay": "Kakeru KUMAGAI",
+              "nameType": 0,
+              "firstName": "Kakeru",
+              "lastName": "KUMAGAI",
+              "initials": "KK",
+              "nameShort": "K KUMAGAI",
+              "nameShort2": "KUMAGAI",
+              "slug": "kakeru-kumagai",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Kakeru KUMAGAI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784012833/assets/players/thumbnail/79906.jpg"
+              }
+            },
+            {
+              "id": "63530",
+              "nameDisplay": "Hiroki NISHI",
+              "nameType": 0,
+              "firstName": "Hiroki",
+              "lastName": "NISHI",
+              "initials": "HN",
+              "nameShort": "H NISHI",
+              "nameShort2": "NISHI",
+              "slug": "hiroki-nishi",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Hiroki NISHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784012718/assets/players/thumbnail/63530.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "1",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-10-16 11:00:00",
+        "matchTimeUtc": "2026-10-16 09:00:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "1",
+        "oopText": "Starting at 11:00 AM",
+        "oopTypeId": 1,
         "eventName": "MD",
         "roundName": "QF",
         "drawName": "MD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "SJF Bank Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
-        "reliability": null,
+        "reliability": 0,
         "score": [],
         "matches": []
       }
@@ -3190,41 +3380,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "MAS",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "56203",
+              "nameDisplay": "Aaron CHIA",
+              "nameType": 0,
+              "firstName": "Aaron",
+              "lastName": "CHIA",
+              "initials": "AC",
+              "nameShort": "A CHIA",
+              "nameShort2": "CHIA",
+              "slug": "aaron-chia",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Aaron CHIA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627949889/assets/players/thumbnail/56203.jpg"
+              }
+            },
+            {
+              "id": "99389",
+              "nameDisplay": "SOH Wooi Yik",
+              "nameType": 1,
+              "firstName": "Wooi Yik",
+              "lastName": "SOH",
+              "initials": "SW",
+              "nameShort": "SOH W Y ",
+              "nameShort2": "SOH",
+              "slug": "wooi-yik-soh",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Wooi Yik SOH",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627949962/assets/players/thumbnail/99389.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "86479",
+              "nameDisplay": "Hiroki OKAMURA",
+              "nameType": 0,
+              "firstName": "Hiroki",
+              "lastName": "OKAMURA",
+              "initials": "HO",
+              "nameShort": "H OKAMURA",
+              "nameShort2": "OKAMURA",
+              "slug": "hiroki-okamura",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Hiroki OKAMURA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895639/assets/players/thumbnail/86479.jpg"
+              }
+            },
+            {
+              "id": "82009",
+              "nameDisplay": "Kyohei YAMASHITA",
+              "nameType": 0,
+              "firstName": "Kyohei",
+              "lastName": "YAMASHITA",
+              "initials": "KY",
+              "nameShort": "K YAMASHITA",
+              "nameShort2": "YAMASHITA",
+              "slug": "kyohei-yamashita",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Kyohei YAMASHITA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658732760/assets/players/thumbnail/82009.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "4",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-10-16 11:50:00",
+        "matchTimeUtc": "2026-10-16 09:50:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "2",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MD",
         "roundName": "QF",
         "drawName": "MD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "SJF Bank Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -3237,41 +3501,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "THA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "84102",
+              "nameDisplay": "Peeratchai SUKPHUN",
+              "nameType": 0,
+              "firstName": "Peeratchai",
+              "lastName": "SUKPHUN",
+              "initials": "PS",
+              "nameShort": "P SUKPHUN",
+              "nameShort2": "SUKPHUN",
+              "slug": "peeratchai-sukphun",
+              "countryCode": "THA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+              "avatar": {
+                "title": "Peeratchai SUKPHUN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+              }
+            },
+            {
+              "id": "65674",
+              "nameDisplay": "Pakkapon TEERARATSAKUL",
+              "nameType": 0,
+              "firstName": "Pakkapon",
+              "lastName": "TEERARATSAKUL",
+              "initials": "PT",
+              "nameShort": "P TEERARATSAKUL",
+              "nameShort2": "TEERARATSAKUL",
+              "slug": "pakkapon-teeraratsakul",
+              "countryCode": "THA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+              "avatar": {
+                "title": "Pakkapon TEERARATSAKUL",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "INA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "88876",
+              "nameDisplay": "Fajar ALFIAN",
+              "nameType": 0,
+              "firstName": "Fajar",
+              "lastName": "ALFIAN",
+              "initials": "FA",
+              "nameShort": "F ALFIAN",
+              "nameShort2": "ALFIAN",
+              "slug": "fajar-alfian",
+              "countryCode": "INA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+              "avatar": {
+                "title": "Fajar ALFIAN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689648880/assets/players/thumbnail/88876.jpg"
+              }
+            },
+            {
+              "id": "91440",
+              "nameDisplay": "Muhammad Shohibul FIKRI",
+              "nameType": 0,
+              "firstName": "Muhammad Shohibul",
+              "lastName": "FIKRI",
+              "initials": "MF",
+              "nameShort": "M FIKRI",
+              "nameShort2": "FIKRI",
+              "slug": "muhammad-shohibul-fikri",
+              "countryCode": "INA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+              "avatar": {
+                "title": "Muhammad Shohibul FIKRI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895889/assets/players/thumbnail/91440.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team2seed": "3",
+        "matchTime": "2026-10-16 12:40:00",
+        "matchTimeUtc": "2026-10-16 10:40:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "3",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MD",
         "roundName": "QF",
         "drawName": "MD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "SJF Bank Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -3284,41 +3622,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "MAS",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "90768",
+              "nameDisplay": "GOH Sze Fei",
+              "nameType": 1,
+              "firstName": "Sze Fei",
+              "lastName": "GOH",
+              "initials": "GS",
+              "nameShort": "GOH S F ",
+              "nameShort2": "GOH",
+              "slug": "sze-fei-goh",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Sze Fei GOH",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636512672/assets/players/thumbnail/90768.jpg"
+              }
+            },
+            {
+              "id": "94814",
+              "nameDisplay": "Nur IZZUDDIN",
+              "nameType": 0,
+              "firstName": "Nur",
+              "lastName": "IZZUDDIN",
+              "initials": "NI",
+              "nameShort": "N IZZUDDIN",
+              "nameShort2": "IZZUDDIN",
+              "slug": "nur-izzuddin",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Nur IZZUDDIN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636512792/assets/players/thumbnail/94814.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "90531",
+              "nameDisplay": "LIANG Wei Keng",
+              "nameType": 1,
+              "firstName": "Wei Keng",
+              "lastName": "LIANG",
+              "initials": "LW",
+              "nameShort": "LIANG W K ",
+              "nameShort2": "LIANG",
+              "slug": "wei-keng-liang",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Wei Keng LIANG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896511/assets/players/thumbnail/90531.jpg"
+              }
+            },
+            {
+              "id": "55414",
+              "nameDisplay": "WANG Chang",
+              "nameType": 1,
+              "firstName": "Chang",
+              "lastName": "WANG",
+              "initials": "WC",
+              "nameShort": "WANG C",
+              "nameShort2": "WANG",
+              "slug": "chang-wang",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Chang WANG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896024/assets/players/thumbnail/55414.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team1seed": "6",
+        "team2seed": "2",
+        "matchTime": "2026-10-16 14:20:00",
+        "matchTimeUtc": "2026-10-16 12:20:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "5",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MD",
         "roundName": "QF",
         "drawName": "MD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "SJF Bank Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -5757,7 +6169,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "THA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -5850,10 +6262,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-15 12:20:00",
-      "matchTimeUtc": "2026-10-15 10:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-15 13:45:00",
+      "matchTimeUtc": "2026-10-15 11:45:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "5",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -5865,14 +6277,36 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 61,
+      "time": "01:01",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 17,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 22,
+          "away": 20,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -5883,7 +6317,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -5976,10 +6410,10 @@
       },
       "team1seed": null,
       "team2seed": "2",
-      "matchTime": "2026-10-15 15:25:00",
-      "matchTimeUtc": "2026-10-15 13:25:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-15 15:40:00",
+      "matchTimeUtc": "2026-10-15 13:40:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "9",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -5991,14 +6425,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 35,
+      "time": "00:35",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 19,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 15,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6009,7 +6458,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "MAS",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -6102,10 +6551,10 @@
       },
       "team1seed": null,
       "team2seed": "6",
-      "matchTime": "2026-10-15 16:30:00",
-      "matchTimeUtc": "2026-10-15 14:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-15 18:55:00",
+      "matchTimeUtc": "2026-10-15 16:55:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "10",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6117,14 +6566,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 28,
+      "time": "00:28",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 11,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6135,7 +6599,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "DEN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
@@ -6228,10 +6692,10 @@
       },
       "team1seed": null,
       "team2seed": "3",
-      "matchTime": "2026-10-15 14:50:00",
-      "matchTimeUtc": "2026-10-15 12:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-15 15:55:00",
+      "matchTimeUtc": "2026-10-15 13:55:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "8",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6243,14 +6707,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 35,
+      "time": "00:35",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 19,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 10,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6261,7 +6740,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -6354,10 +6833,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-15 12:30:00",
-      "matchTimeUtc": "2026-10-15 10:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-15 12:00:00",
+      "matchTimeUtc": "2026-10-15 10:00:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "5",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6369,14 +6848,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 37,
+      "time": "00:37",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 23,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 12,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6387,7 +6881,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "MAS",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -6480,10 +6974,10 @@
       },
       "team1seed": "4",
       "team2seed": null,
-      "matchTime": "2026-10-15 10:50:00",
-      "matchTimeUtc": "2026-10-15 08:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-15 10:30:00",
+      "matchTimeUtc": "2026-10-15 08:30:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6495,14 +6989,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 33,
+      "time": "00:33",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6513,7 +7022,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "ENG",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
@@ -6608,8 +7117,8 @@
       "team2seed": null,
       "matchTime": "2026-10-15 09:00:00",
       "matchTimeUtc": "2026-10-15 07:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "1",
       "oopText": "Starting at 9:00 AM",
       "oopTypeId": 1,
@@ -6621,14 +7130,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 48,
+      "time": "00:48",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 0,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 19,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 23,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6639,7 +7163,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -6732,15 +7256,415 @@
       },
       "team1seed": "1",
       "team2seed": null,
-      "matchTime": "2026-10-15 09:50:00",
-      "matchTimeUtc": "2026-10-15 07:50:00",
+      "matchTime": "2026-10-15 09:55:00",
+      "matchTimeUtc": "2026-10-15 07:55:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "2",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "MD",
+      "roundName": "R16",
+      "drawName": "MD",
+      "drawCode": "3",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "SJF Bank Arena",
+      "duration": 60,
+      "time": "01:00",
+      "matchOrder": null,
+      "matchTypeId": 3,
+      "matchTypeValue": "Men's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 15,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1556196,
+      "code": "130",
+      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
+      "tournamentName": "VICTOR Denmark Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "61444",
+            "nameDisplay": "KIM Won Ho",
+            "nameType": 1,
+            "firstName": "Won Ho",
+            "lastName": "KIM",
+            "initials": "KW",
+            "nameShort": "KIM W H ",
+            "nameShort2": "KIM",
+            "slug": "won-ho-kim",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Won Ho KIM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895351/assets/players/thumbnail/61444.jpg"
+            }
+          },
+          {
+            "id": "66513",
+            "nameDisplay": "SEO Seung Jae",
+            "nameType": 1,
+            "firstName": "Seung Jae",
+            "lastName": "SEO",
+            "initials": "SS",
+            "nameShort": "SEO S J ",
+            "nameShort2": "SEO",
+            "slug": "seung-jae-seo",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Seung Jae SEO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895418/assets/players/thumbnail/66513.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "79906",
+            "nameDisplay": "Kakeru KUMAGAI",
+            "nameType": 0,
+            "firstName": "Kakeru",
+            "lastName": "KUMAGAI",
+            "initials": "KK",
+            "nameShort": "K KUMAGAI",
+            "nameShort2": "KUMAGAI",
+            "slug": "kakeru-kumagai",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Kakeru KUMAGAI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784012833/assets/players/thumbnail/79906.jpg"
+            }
+          },
+          {
+            "id": "63530",
+            "nameDisplay": "Hiroki NISHI",
+            "nameType": 0,
+            "firstName": "Hiroki",
+            "lastName": "NISHI",
+            "initials": "HN",
+            "nameShort": "H NISHI",
+            "nameShort2": "NISHI",
+            "slug": "hiroki-nishi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Hiroki NISHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784012718/assets/players/thumbnail/63530.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "1",
+      "team2seed": null,
+      "matchTime": "2026-10-16 11:00:00",
+      "matchTimeUtc": "2026-10-16 09:00:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "1",
+      "oopText": "Starting at 11:00 AM",
+      "oopTypeId": 1,
+      "eventName": "MD",
+      "roundName": "QF",
+      "drawName": "MD",
+      "drawCode": "3",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "SJF Bank Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 3,
+      "matchTypeValue": "Men's Doubles",
+      "matchTypeNo": null,
+      "reliability": 0,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1556195,
+      "code": "131",
+      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
+      "tournamentName": "VICTOR Denmark Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "56203",
+            "nameDisplay": "Aaron CHIA",
+            "nameType": 0,
+            "firstName": "Aaron",
+            "lastName": "CHIA",
+            "initials": "AC",
+            "nameShort": "A CHIA",
+            "nameShort2": "CHIA",
+            "slug": "aaron-chia",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Aaron CHIA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627949889/assets/players/thumbnail/56203.jpg"
+            }
+          },
+          {
+            "id": "99389",
+            "nameDisplay": "SOH Wooi Yik",
+            "nameType": 1,
+            "firstName": "Wooi Yik",
+            "lastName": "SOH",
+            "initials": "SW",
+            "nameShort": "SOH W Y ",
+            "nameShort2": "SOH",
+            "slug": "wooi-yik-soh",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Wooi Yik SOH",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627949962/assets/players/thumbnail/99389.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "86479",
+            "nameDisplay": "Hiroki OKAMURA",
+            "nameType": 0,
+            "firstName": "Hiroki",
+            "lastName": "OKAMURA",
+            "initials": "HO",
+            "nameShort": "H OKAMURA",
+            "nameShort2": "OKAMURA",
+            "slug": "hiroki-okamura",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Hiroki OKAMURA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895639/assets/players/thumbnail/86479.jpg"
+            }
+          },
+          {
+            "id": "82009",
+            "nameDisplay": "Kyohei YAMASHITA",
+            "nameType": 0,
+            "firstName": "Kyohei",
+            "lastName": "YAMASHITA",
+            "initials": "KY",
+            "nameShort": "K YAMASHITA",
+            "nameShort2": "YAMASHITA",
+            "slug": "kyohei-yamashita",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Kyohei YAMASHITA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658732760/assets/players/thumbnail/82009.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "4",
+      "team2seed": null,
+      "matchTime": "2026-10-16 11:50:00",
+      "matchTimeUtc": "2026-10-16 09:50:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "MD",
-      "roundName": "R16",
+      "roundName": "QF",
+      "drawName": "MD",
+      "drawCode": "3",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "SJF Bank Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 3,
+      "matchTypeValue": "Men's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1556165,
+      "code": "132",
+      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
+      "tournamentName": "VICTOR Denmark Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "THA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "84102",
+            "nameDisplay": "Peeratchai SUKPHUN",
+            "nameType": 0,
+            "firstName": "Peeratchai",
+            "lastName": "SUKPHUN",
+            "initials": "PS",
+            "nameShort": "P SUKPHUN",
+            "nameShort2": "SUKPHUN",
+            "slug": "peeratchai-sukphun",
+            "countryCode": "THA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+            "avatar": {
+              "title": "Peeratchai SUKPHUN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          },
+          {
+            "id": "65674",
+            "nameDisplay": "Pakkapon TEERARATSAKUL",
+            "nameType": 0,
+            "firstName": "Pakkapon",
+            "lastName": "TEERARATSAKUL",
+            "initials": "PT",
+            "nameShort": "P TEERARATSAKUL",
+            "nameShort2": "TEERARATSAKUL",
+            "slug": "pakkapon-teeraratsakul",
+            "countryCode": "THA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+            "avatar": {
+              "title": "Pakkapon TEERARATSAKUL",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "INA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "88876",
+            "nameDisplay": "Fajar ALFIAN",
+            "nameType": 0,
+            "firstName": "Fajar",
+            "lastName": "ALFIAN",
+            "initials": "FA",
+            "nameShort": "F ALFIAN",
+            "nameShort2": "ALFIAN",
+            "slug": "fajar-alfian",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Fajar ALFIAN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689648880/assets/players/thumbnail/88876.jpg"
+            }
+          },
+          {
+            "id": "91440",
+            "nameDisplay": "Muhammad Shohibul FIKRI",
+            "nameType": 0,
+            "firstName": "Muhammad Shohibul",
+            "lastName": "FIKRI",
+            "initials": "MF",
+            "nameShort": "M FIKRI",
+            "nameShort2": "FIKRI",
+            "slug": "muhammad-shohibul-fikri",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Muhammad Shohibul FIKRI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895889/assets/players/thumbnail/91440.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "3",
+      "matchTime": "2026-10-16 12:40:00",
+      "matchTimeUtc": "2026-10-16 10:40:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "3",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "MD",
+      "roundName": "QF",
       "drawName": "MD",
       "drawCode": "3",
       "courtName": "Court 1",
@@ -6758,162 +7682,6 @@
       "matches": []
     },
     {
-      "id": 1556196,
-      "code": "130",
-      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
-      "tournamentName": "VICTOR Denmark Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "MD",
-      "roundName": "QF",
-      "drawName": "MD",
-      "drawCode": "3",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 3,
-      "matchTypeValue": "Men's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1556195,
-      "code": "131",
-      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
-      "tournamentName": "VICTOR Denmark Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "MD",
-      "roundName": "QF",
-      "drawName": "MD",
-      "drawCode": "3",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 3,
-      "matchTypeValue": "Men's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1556165,
-      "code": "132",
-      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
-      "tournamentName": "VICTOR Denmark Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "MD",
-      "roundName": "QF",
-      "drawName": "MD",
-      "drawCode": "3",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 3,
-      "matchTypeValue": "Men's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
       "id": 1556190,
       "code": "133",
       "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
@@ -6923,45 +7691,119 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "90768",
+            "nameDisplay": "GOH Sze Fei",
+            "nameType": 1,
+            "firstName": "Sze Fei",
+            "lastName": "GOH",
+            "initials": "GS",
+            "nameShort": "GOH S F ",
+            "nameShort2": "GOH",
+            "slug": "sze-fei-goh",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Sze Fei GOH",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636512672/assets/players/thumbnail/90768.jpg"
+            }
+          },
+          {
+            "id": "94814",
+            "nameDisplay": "Nur IZZUDDIN",
+            "nameType": 0,
+            "firstName": "Nur",
+            "lastName": "IZZUDDIN",
+            "initials": "NI",
+            "nameShort": "N IZZUDDIN",
+            "nameShort2": "IZZUDDIN",
+            "slug": "nur-izzuddin",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Nur IZZUDDIN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636512792/assets/players/thumbnail/94814.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "90531",
+            "nameDisplay": "LIANG Wei Keng",
+            "nameType": 1,
+            "firstName": "Wei Keng",
+            "lastName": "LIANG",
+            "initials": "LW",
+            "nameShort": "LIANG W K ",
+            "nameShort2": "LIANG",
+            "slug": "wei-keng-liang",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Wei Keng LIANG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896511/assets/players/thumbnail/90531.jpg"
+            }
+          },
+          {
+            "id": "55414",
+            "nameDisplay": "WANG Chang",
+            "nameType": 1,
+            "firstName": "Chang",
+            "lastName": "WANG",
+            "initials": "WC",
+            "nameShort": "WANG C",
+            "nameShort2": "WANG",
+            "slug": "chang-wang",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Chang WANG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896024/assets/players/thumbnail/55414.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "team1seed": "6",
+      "team2seed": "2",
+      "matchTime": "2026-10-16 14:20:00",
+      "matchTimeUtc": "2026-10-16 12:20:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "5",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "MD",
       "roundName": "QF",
       "drawName": "MD",
       "drawCode": "3",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "SJF Bank Arena",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 1,
       "score": [],
       "matches": []
     },

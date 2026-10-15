@@ -2072,9 +2072,9 @@
       "match": {
         "code": "197",
         "tournamentCode": 5210,
-        "scoreStatus": 0,
-        "scoreStatusValue": "Normal",
-        "winner": 0,
+        "scoreStatus": 2,
+        "scoreStatusValue": "Retired",
+        "winner": 2,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2167,9 +2167,9 @@
         },
         "team1seed": "1",
         "team2seed": null,
-        "matchTime": "2026-10-15 17:05:00",
-        "matchTimeUtc": "2026-10-15 15:05:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 17:00:00",
+        "matchTimeUtc": "2026-10-15 15:00:00",
+        "matchStatus": "F",
         "oopRound": "11",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2180,12 +2180,19 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 9,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 6,
+            "away": 11,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2195,7 +2202,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "USA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
@@ -2288,9 +2295,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-15 17:20:00",
-        "matchTimeUtc": "2026-10-15 15:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 19:30:00",
+        "matchTimeUtc": "2026-10-15 17:30:00",
+        "matchStatus": "F",
         "oopRound": "11",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2301,12 +2308,31 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 61,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 17,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 13,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 17,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2316,7 +2342,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2409,12 +2435,12 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-15 18:45:00",
-        "matchTimeUtc": "2026-10-15 16:45:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 18:15:00",
+        "matchTimeUtc": "2026-10-15 16:15:00",
+        "matchStatus": "F",
         "oopRound": "13",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "R16",
         "drawName": "WD",
@@ -2422,12 +2448,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 46,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 15,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2437,7 +2476,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2530,12 +2569,12 @@
         },
         "team1seed": "7",
         "team2seed": null,
-        "matchTime": "2026-10-15 19:00:00",
-        "matchTimeUtc": "2026-10-15 17:00:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 20:05:00",
+        "matchTimeUtc": "2026-10-15 18:05:00",
+        "matchStatus": "F",
         "oopRound": "13",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "R16",
         "drawName": "WD",
@@ -2543,12 +2582,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 38,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 9,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 19,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2558,7 +2610,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2651,9 +2703,9 @@
         },
         "team1seed": null,
         "team2seed": "6",
-        "matchTime": "2026-10-15 13:20:00",
-        "matchTimeUtc": "2026-10-15 11:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 12:45:00",
+        "matchTimeUtc": "2026-10-15 10:45:00",
+        "matchStatus": "F",
         "oopRound": "6",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2664,12 +2716,31 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 57,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 17,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 9,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2679,7 +2750,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -2772,9 +2843,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-15 10:40:00",
-        "matchTimeUtc": "2026-10-15 08:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 11:05:00",
+        "matchTimeUtc": "2026-10-15 09:05:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2785,12 +2856,31 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 79,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 12,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 15,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 18,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -2800,7 +2890,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "IND",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -2893,9 +2983,9 @@
         },
         "team1seed": null,
         "team2seed": "5",
-        "matchTime": "2026-10-15 13:10:00",
-        "matchTimeUtc": "2026-10-15 11:10:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 14:55:00",
+        "matchTimeUtc": "2026-10-15 12:55:00",
+        "matchStatus": "F",
         "oopRound": "6",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2906,12 +2996,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "SJF Bank Arena",
-        "duration": null,
+        "duration": 45,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 16,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 17,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -2921,7 +3024,7 @@
         "tournamentCode": 5210,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "HKG",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
@@ -3014,14 +3117,148 @@
         },
         "team1seed": null,
         "team2seed": "2",
-        "matchTime": "2026-10-15 14:50:00",
-        "matchTimeUtc": "2026-10-15 12:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-15 17:05:00",
+        "matchTimeUtc": "2026-10-15 15:05:00",
+        "matchStatus": "F",
         "oopRound": "8",
         "oopText": "Followed by",
         "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "R16",
+        "drawName": "WD",
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "SJF Bank Arena",
+        "duration": 44,
+        "matchOrder": null,
+        "matchTypeId": 4,
+        "matchTypeValue": "Women's Doubles",
+        "reliability": 1,
+        "score": [
+          {
+            "set": 1,
+            "home": 12,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          }
+        ],
+        "matches": []
+      }
+    },
+    "2-0": {
+      "match": {
+        "code": "193",
+        "tournamentCode": 5210,
+        "scoreStatus": 0,
+        "scoreStatusValue": "Normal",
+        "winner": 0,
+        "team1": {
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+          "teamId": null,
+          "teamName": null,
+          "players": [
+            {
+              "id": "76295",
+              "nameDisplay": "Hinata SUZUKI",
+              "nameType": 0,
+              "firstName": "Hinata",
+              "lastName": "SUZUKI",
+              "initials": "HS",
+              "nameShort": "H SUZUKI",
+              "nameShort2": "SUZUKI",
+              "slug": "hinata-suzuki",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Hinata SUZUKI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658731499/assets/players/thumbnail/76295.jpg"
+              }
+            },
+            {
+              "id": "66794",
+              "nameDisplay": "Nao YAMAKITA",
+              "nameType": 0,
+              "firstName": "Nao",
+              "lastName": "YAMAKITA",
+              "initials": "NY",
+              "nameShort": "N YAMAKITA",
+              "nameShort2": "YAMAKITA",
+              "slug": "nao-yamakita",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Nao YAMAKITA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1780352601/assets/players/thumbnail/66794.jpg"
+              }
+            }
+          ],
+          "linkName": null
+        },
+        "team2": {
+          "countryCode": "USA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+          "teamId": null,
+          "teamName": null,
+          "players": [
+            {
+              "id": "69091",
+              "nameDisplay": "Lauren LAM",
+              "nameType": 0,
+              "firstName": "Lauren",
+              "lastName": "LAM",
+              "initials": "LL",
+              "nameShort": "L LAM",
+              "nameShort2": "LAM",
+              "slug": "lauren-lam",
+              "countryCode": "USA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+              "avatar": {
+                "title": "Lauren LAM",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1675735492/assets/players/thumbnail/69091.jpg"
+              }
+            },
+            {
+              "id": "65708",
+              "nameDisplay": "Allison Quynh LEE",
+              "nameType": 0,
+              "firstName": "Allison Quynh",
+              "lastName": "LEE",
+              "initials": "AL",
+              "nameShort": "A LEE",
+              "nameShort2": "LEE",
+              "slug": "allison-quynh-lee",
+              "countryCode": "USA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+              "avatar": {
+                "title": "Allison Quynh LEE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1675734827/assets/players/thumbnail/65708.jpg"
+              }
+            }
+          ],
+          "linkName": null
+        },
+        "team1seed": null,
+        "team2seed": null,
+        "matchTime": "2026-10-16 15:10:00",
+        "matchTimeUtc": "2026-10-16 13:10:00",
+        "matchStatus": "N",
+        "oopRound": "6",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
+        "eventName": "WD",
+        "roundName": "QF",
         "drawName": "WD",
         "courtName": "Court 2",
         "courtCode": "2",
@@ -3036,53 +3273,6 @@
         "matches": []
       }
     },
-    "2-0": {
-      "match": {
-        "code": "193",
-        "tournamentCode": 5210,
-        "scoreStatus": 0,
-        "scoreStatusValue": "Normal",
-        "winner": 0,
-        "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
-          "teamId": null,
-          "teamName": null,
-          "players": [],
-          "linkName": null
-        },
-        "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
-          "teamId": null,
-          "teamName": null,
-          "players": [],
-          "linkName": null
-        },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
-        "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
-        "eventName": "WD",
-        "roundName": "QF",
-        "drawName": "WD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
-        "duration": null,
-        "matchOrder": null,
-        "matchTypeId": 4,
-        "matchTypeValue": "Women's Doubles",
-        "reliability": null,
-        "score": [],
-        "matches": []
-      }
-    },
     "2-1": {
       "match": {
         "code": "194",
@@ -3091,41 +3281,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "94519",
+              "nameDisplay": "Sayaka HIROTA",
+              "nameType": 0,
+              "firstName": "Sayaka",
+              "lastName": "HIROTA",
+              "initials": "SH",
+              "nameShort": "S HIROTA",
+              "nameShort2": "HIROTA",
+              "slug": "sayaka-hirota",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Sayaka HIROTA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1633938972/assets/players/thumbnail/94519.jpg"
+              }
+            },
+            {
+              "id": "83211",
+              "nameDisplay": "Ayako SAKURAMOTO",
+              "nameType": 0,
+              "firstName": "Ayako",
+              "lastName": "SAKURAMOTO",
+              "initials": "AS",
+              "nameShort": "A SAKURAMOTO",
+              "nameShort2": "SAKURAMOTO",
+              "slug": "ayako-sakuramoto",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Ayako SAKURAMOTO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896000/assets/players/thumbnail/83211.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "19726",
+              "nameDisplay": "Sumire NAKADE",
+              "nameType": 0,
+              "firstName": "Sumire",
+              "lastName": "NAKADE",
+              "initials": "SN",
+              "nameShort": "S NAKADE",
+              "nameShort2": "NAKADE",
+              "slug": "sumire-nakade",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Sumire NAKADE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784077390/assets/players/thumbnail/19726.jpg"
+              }
+            },
+            {
+              "id": "70692",
+              "nameDisplay": "Miyu TAKAHASHI",
+              "nameType": 0,
+              "firstName": "Miyu",
+              "lastName": "TAKAHASHI",
+              "initials": "MT",
+              "nameShort": "M TAKAHASHI",
+              "nameShort2": "TAKAHASHI",
+              "slug": "miyu-takahashi",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Miyu TAKAHASHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784077281/assets/players/thumbnail/70692.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team2seed": "7",
+        "matchTime": "2026-10-16 17:40:00",
+        "matchTimeUtc": "2026-10-16 15:40:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "9",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "QF",
         "drawName": "WD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "SJF Bank Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -3138,41 +3402,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "62277",
+              "nameDisplay": "BAO Li Jing",
+              "nameType": 1,
+              "firstName": "Li Jing",
+              "lastName": "BAO",
+              "initials": "BL",
+              "nameShort": "BAO L J ",
+              "nameShort2": "BAO",
+              "slug": "bao-li-jing",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Li Jing BAO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784016344/assets/players/thumbnail/62277.jpg"
+              }
+            },
+            {
+              "id": "18889",
+              "nameDisplay": "CAO Zi Han",
+              "nameType": 1,
+              "firstName": "Zi Han",
+              "lastName": "CAO",
+              "initials": "CZ",
+              "nameShort": "CAO Z H ",
+              "nameShort2": "CAO",
+              "slug": "Zi Han-CAO",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "Zi Han CAO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1728626153/assets/players/thumbnail/18889.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "BUL",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "43840",
+              "nameDisplay": "Gabriela STOEVA",
+              "nameType": 0,
+              "firstName": "Gabriela",
+              "lastName": "STOEVA",
+              "initials": "GS",
+              "nameShort": "G STOEVA",
+              "nameShort2": "STOEVA",
+              "slug": "gabriela-stoeva",
+              "countryCode": "BUL",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
+              "avatar": {
+                "title": "Gabriela STOEVA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896208/assets/players/thumbnail/43840.jpg"
+              }
+            },
+            {
+              "id": "46169",
+              "nameDisplay": "Stefani STOEVA",
+              "nameType": 0,
+              "firstName": "Stefani",
+              "lastName": "STOEVA",
+              "initials": "SS",
+              "nameShort": "S STOEVA",
+              "nameShort2": "STOEVA",
+              "slug": "stefani-stoeva",
+              "countryCode": "BUL",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
+              "avatar": {
+                "title": "Stefani STOEVA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896206/assets/players/thumbnail/46169.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "6",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-10-16 11:00:00",
+        "matchTimeUtc": "2026-10-16 09:00:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "1",
+        "oopText": "Starting at 11:00 AM",
+        "oopTypeId": 1,
         "eventName": "WD",
         "roundName": "QF",
         "drawName": "WD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "SJF Bank Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
-        "reliability": null,
+        "reliability": 0,
         "score": [],
         "matches": []
       }
@@ -3185,41 +3523,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "IND",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "71612",
+              "nameDisplay": "Treesa JOLLY",
+              "nameType": 0,
+              "firstName": "Treesa",
+              "lastName": "JOLLY",
+              "initials": "TJ",
+              "nameShort": "T JOLLY",
+              "nameShort2": "JOLLY",
+              "slug": "treesa-jolly",
+              "countryCode": "IND",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+              "avatar": {
+                "title": "Treesa JOLLY",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1648717096/assets/players/thumbnail/71612.jpg"
+              }
+            },
+            {
+              "id": "59966",
+              "nameDisplay": "GAYATRI GOPICHAND PULLELA",
+              "nameType": 0,
+              "firstName": "GAYATRI GOPICHAND",
+              "lastName": "PULLELA",
+              "initials": "GP",
+              "nameShort": "G PULLELA",
+              "nameShort2": "PULLELA",
+              "slug": "gayatri-gopichand-pullela",
+              "countryCode": "IND",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+              "avatar": {
+                "title": "GAYATRI GOPICHAND PULLELA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896462/assets/players/thumbnail/59966.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "MAS",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "85551",
+              "nameDisplay": "Pearly TAN",
+              "nameType": 0,
+              "firstName": "Pearly",
+              "lastName": "TAN",
+              "initials": "PT",
+              "nameShort": "P TAN",
+              "nameShort2": "TAN",
+              "slug": "pearly-tan",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Pearly TAN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1657779588/assets/players/thumbnail/85551.jpg"
+              }
+            },
+            {
+              "id": "68628",
+              "nameDisplay": "THINAAH Muralitharan",
+              "nameType": 1,
+              "firstName": "Muralitharan",
+              "lastName": "THINAAH",
+              "initials": "TM",
+              "nameShort": "THINAAH M",
+              "nameShort2": "THINAAH",
+              "slug": "muralitharan-thinaah",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Muralitharan THINAAH",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1634281515/assets/players/thumbnail/68628.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team2seed": "2",
+        "matchTime": "2026-10-16 13:30:00",
+        "matchTimeUtc": "2026-10-16 11:30:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "4",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "QF",
         "drawName": "WD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "SJF Bank Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -4383,288 +4795,6 @@
       "matches": []
     },
     {
-      "id": 1556192,
-      "code": "218",
-      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
-      "tournamentName": "VICTOR Denmark Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 2,
-      "team1": {
-        "countryCode": "TPE",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "75270",
-            "nameDisplay": "CHANG Ching  Hui",
-            "nameType": 1,
-            "firstName": "Ching  Hui",
-            "lastName": "CHANG",
-            "initials": "CC",
-            "nameShort": "CHANG C  H ",
-            "nameShort2": "CHANG",
-            "slug": "ching-hui-chang",
-            "countryCode": "TPE",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-            "avatar": {
-              "title": "Ching  Hui CHANG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895520/assets/players/thumbnail/75270.jpg"
-            }
-          },
-          {
-            "id": "78687",
-            "nameDisplay": "YANG Ching Tun",
-            "nameType": 1,
-            "firstName": "Ching Tun",
-            "lastName": "YANG",
-            "initials": "YC",
-            "nameShort": "YANG C T ",
-            "nameShort2": "YANG",
-            "slug": "ching-tun-yang",
-            "countryCode": "TPE",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-            "avatar": {
-              "title": "Ching Tun YANG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896002/assets/players/thumbnail/78687.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "INA",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "94567",
-            "nameDisplay": "Rachel Allessya ROSE",
-            "nameType": 0,
-            "firstName": "Rachel Allessya",
-            "lastName": "ROSE",
-            "initials": "RR",
-            "nameShort": "R ROSE",
-            "nameShort2": "ROSE",
-            "slug": "rachel-allessya-rose",
-            "countryCode": "INA",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
-            "avatar": {
-              "title": "Rachel Allessya ROSE",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1667177307/assets/players/thumbnail/94567.png"
-            }
-          },
-          {
-            "id": "55481",
-            "nameDisplay": "Febi SETIANINGRUM",
-            "nameType": 0,
-            "firstName": "Febi",
-            "lastName": "SETIANINGRUM",
-            "initials": "FS",
-            "nameShort": "F SETIANINGRUM",
-            "nameShort2": "SETIANINGRUM",
-            "slug": "febi-setianingrum",
-            "countryCode": "INA",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
-            "avatar": {
-              "title": "Febi SETIANINGRUM",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784087861/assets/players/thumbnail/55481.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": "5",
-      "matchTime": "2026-10-14 20:20:00",
-      "matchTimeUtc": "2026-10-14 18:20:00",
-      "matchStatus": "F",
-      "matchStatusValue": "Finished",
-      "oopRound": "14",
-      "oopText": "Followed by",
-      "oopTypeId": 0,
-      "eventName": "WD",
-      "roundName": "R32",
-      "drawName": "WD",
-      "drawCode": "4",
-      "courtName": "Court 3",
-      "courtCode": "3",
-      "courtIndex": 2,
-      "locationName": "SJF Bank Arena",
-      "duration": 36,
-      "time": "00:36",
-      "matchOrder": null,
-      "matchTypeId": 4,
-      "matchTypeValue": "Women's Doubles",
-      "matchTypeNo": null,
-      "reliability": 1,
-      "score": [
-        {
-          "set": 1,
-          "home": 18,
-          "away": 21,
-          "lastPointWinner": null,
-          "serve": null
-        },
-        {
-          "set": 2,
-          "home": 18,
-          "away": 21,
-          "lastPointWinner": null,
-          "serve": null
-        }
-      ],
-      "matches": []
-    },
-    {
-      "id": 1556091,
-      "code": "217",
-      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
-      "tournamentName": "VICTOR Denmark Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 2,
-      "team1": {
-        "countryCode": "TPE",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "71848",
-            "nameDisplay": "Yan Fei CHEN",
-            "nameType": 0,
-            "firstName": "Yan Fei",
-            "lastName": "CHEN",
-            "initials": "YC",
-            "nameShort": "Y CHEN",
-            "nameShort2": "CHEN",
-            "slug": "yan-fei-chen",
-            "countryCode": "TPE",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-            "avatar": {
-              "title": "Yan Fei CHEN",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1786337923/assets/players/thumbnail/71848.jpg"
-            }
-          },
-          {
-            "id": "95062",
-            "nameDisplay": "HSIEH Pei Shan",
-            "nameType": 1,
-            "firstName": "Pei Shan",
-            "lastName": "HSIEH",
-            "initials": "HP",
-            "nameShort": "HSIEH P S ",
-            "nameShort2": "HSIEH",
-            "slug": "pei-shan-hsieh",
-            "countryCode": "TPE",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
-            "avatar": {
-              "title": "Pei Shan HSIEH",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696987227/assets/players/thumbnail/95062.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "IND",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "71612",
-            "nameDisplay": "Treesa JOLLY",
-            "nameType": 0,
-            "firstName": "Treesa",
-            "lastName": "JOLLY",
-            "initials": "TJ",
-            "nameShort": "T JOLLY",
-            "nameShort2": "JOLLY",
-            "slug": "treesa-jolly",
-            "countryCode": "IND",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-            "avatar": {
-              "title": "Treesa JOLLY",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1648717096/assets/players/thumbnail/71612.jpg"
-            }
-          },
-          {
-            "id": "59966",
-            "nameDisplay": "GAYATRI GOPICHAND PULLELA",
-            "nameType": 0,
-            "firstName": "GAYATRI GOPICHAND",
-            "lastName": "PULLELA",
-            "initials": "GP",
-            "nameShort": "G PULLELA",
-            "nameShort2": "PULLELA",
-            "slug": "gayatri-gopichand-pullela",
-            "countryCode": "IND",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-            "avatar": {
-              "title": "GAYATRI GOPICHAND PULLELA",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896462/assets/players/thumbnail/59966.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": "2026-10-14 21:20:00",
-      "matchTimeUtc": "2026-10-14 19:20:00",
-      "matchStatus": "F",
-      "matchStatusValue": "Finished",
-      "oopRound": "15",
-      "oopText": "Followed by",
-      "oopTypeId": 0,
-      "eventName": "WD",
-      "roundName": "R32",
-      "drawName": "WD",
-      "drawCode": "4",
-      "courtName": "Court 2",
-      "courtCode": "2",
-      "courtIndex": 1,
-      "locationName": "SJF Bank Arena",
-      "duration": 38,
-      "time": "00:38",
-      "matchOrder": null,
-      "matchTypeId": 4,
-      "matchTypeValue": "Women's Doubles",
-      "matchTypeNo": null,
-      "reliability": 1,
-      "score": [
-        {
-          "set": 1,
-          "home": 20,
-          "away": 22,
-          "lastPointWinner": null,
-          "serve": null
-        },
-        {
-          "set": 2,
-          "home": 14,
-          "away": 21,
-          "lastPointWinner": null,
-          "serve": null
-        }
-      ],
-      "matches": []
-    },
-    {
       "id": 1556162,
       "code": "219",
       "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
@@ -4940,6 +5070,288 @@
           "set": 2,
           "home": 21,
           "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1556192,
+      "code": "218",
+      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
+      "tournamentName": "VICTOR Denmark Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 2,
+      "team1": {
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "75270",
+            "nameDisplay": "CHANG Ching  Hui",
+            "nameType": 1,
+            "firstName": "Ching  Hui",
+            "lastName": "CHANG",
+            "initials": "CC",
+            "nameShort": "CHANG C  H ",
+            "nameShort2": "CHANG",
+            "slug": "ching-hui-chang",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Ching  Hui CHANG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895520/assets/players/thumbnail/75270.jpg"
+            }
+          },
+          {
+            "id": "78687",
+            "nameDisplay": "YANG Ching Tun",
+            "nameType": 1,
+            "firstName": "Ching Tun",
+            "lastName": "YANG",
+            "initials": "YC",
+            "nameShort": "YANG C T ",
+            "nameShort2": "YANG",
+            "slug": "ching-tun-yang",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Ching Tun YANG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896002/assets/players/thumbnail/78687.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "INA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "94567",
+            "nameDisplay": "Rachel Allessya ROSE",
+            "nameType": 0,
+            "firstName": "Rachel Allessya",
+            "lastName": "ROSE",
+            "initials": "RR",
+            "nameShort": "R ROSE",
+            "nameShort2": "ROSE",
+            "slug": "rachel-allessya-rose",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Rachel Allessya ROSE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1667177307/assets/players/thumbnail/94567.png"
+            }
+          },
+          {
+            "id": "55481",
+            "nameDisplay": "Febi SETIANINGRUM",
+            "nameType": 0,
+            "firstName": "Febi",
+            "lastName": "SETIANINGRUM",
+            "initials": "FS",
+            "nameShort": "F SETIANINGRUM",
+            "nameShort2": "SETIANINGRUM",
+            "slug": "febi-setianingrum",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Febi SETIANINGRUM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784087861/assets/players/thumbnail/55481.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "5",
+      "matchTime": "2026-10-14 20:20:00",
+      "matchTimeUtc": "2026-10-14 18:20:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "14",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WD",
+      "roundName": "R32",
+      "drawName": "WD",
+      "drawCode": "4",
+      "courtName": "Court 3",
+      "courtCode": "3",
+      "courtIndex": 2,
+      "locationName": "SJF Bank Arena",
+      "duration": 36,
+      "time": "00:36",
+      "matchOrder": null,
+      "matchTypeId": 4,
+      "matchTypeValue": "Women's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1556091,
+      "code": "217",
+      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
+      "tournamentName": "VICTOR Denmark Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 2,
+      "team1": {
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "71848",
+            "nameDisplay": "Yan Fei CHEN",
+            "nameType": 0,
+            "firstName": "Yan Fei",
+            "lastName": "CHEN",
+            "initials": "YC",
+            "nameShort": "Y CHEN",
+            "nameShort2": "CHEN",
+            "slug": "yan-fei-chen",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Yan Fei CHEN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1786337923/assets/players/thumbnail/71848.jpg"
+            }
+          },
+          {
+            "id": "95062",
+            "nameDisplay": "HSIEH Pei Shan",
+            "nameType": 1,
+            "firstName": "Pei Shan",
+            "lastName": "HSIEH",
+            "initials": "HP",
+            "nameShort": "HSIEH P S ",
+            "nameShort2": "HSIEH",
+            "slug": "pei-shan-hsieh",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Pei Shan HSIEH",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696987227/assets/players/thumbnail/95062.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "71612",
+            "nameDisplay": "Treesa JOLLY",
+            "nameType": 0,
+            "firstName": "Treesa",
+            "lastName": "JOLLY",
+            "initials": "TJ",
+            "nameShort": "T JOLLY",
+            "nameShort2": "JOLLY",
+            "slug": "treesa-jolly",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "Treesa JOLLY",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1648717096/assets/players/thumbnail/71612.jpg"
+            }
+          },
+          {
+            "id": "59966",
+            "nameDisplay": "GAYATRI GOPICHAND PULLELA",
+            "nameType": 0,
+            "firstName": "GAYATRI GOPICHAND",
+            "lastName": "PULLELA",
+            "initials": "GP",
+            "nameShort": "G PULLELA",
+            "nameShort2": "PULLELA",
+            "slug": "gayatri-gopichand-pullela",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "GAYATRI GOPICHAND PULLELA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896462/assets/players/thumbnail/59966.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-10-14 21:20:00",
+      "matchTimeUtc": "2026-10-14 19:20:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "15",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WD",
+      "roundName": "R32",
+      "drawName": "WD",
+      "drawCode": "4",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "SJF Bank Arena",
+      "duration": 38,
+      "time": "00:38",
+      "matchOrder": null,
+      "matchTypeId": 4,
+      "matchTypeValue": "Women's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 20,
+          "away": 22,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 14,
+          "away": 21,
           "lastPointWinner": null,
           "serve": null
         }
@@ -5370,140 +5782,14 @@
       "matches": []
     },
     {
-      "id": 1556078,
-      "code": "204",
-      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
-      "tournamentName": "VICTOR Denmark Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "HKG",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "68015",
-            "nameDisplay": "YEUNG Nga Ting",
-            "nameType": 1,
-            "firstName": "Nga Ting",
-            "lastName": "YEUNG",
-            "initials": "YN",
-            "nameShort": "YEUNG N T ",
-            "nameShort2": "YEUNG",
-            "slug": "nga-ting-yeung",
-            "countryCode": "HKG",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
-            "avatar": {
-              "title": "Nga Ting YEUNG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895439/assets/players/thumbnail/68015.jpg"
-            }
-          },
-          {
-            "id": "75864",
-            "nameDisplay": "YEUNG Pui Lam",
-            "nameType": 1,
-            "firstName": "Pui Lam",
-            "lastName": "YEUNG",
-            "initials": "YP",
-            "nameShort": "YEUNG P L ",
-            "nameShort2": "YEUNG",
-            "slug": "pui-lam-yeung",
-            "countryCode": "HKG",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
-            "avatar": {
-              "title": "Pui Lam YEUNG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356623/assets/players/thumbnail/75864.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "MAS",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "85551",
-            "nameDisplay": "Pearly TAN",
-            "nameType": 0,
-            "firstName": "Pearly",
-            "lastName": "TAN",
-            "initials": "PT",
-            "nameShort": "P TAN",
-            "nameShort2": "TAN",
-            "slug": "pearly-tan",
-            "countryCode": "MAS",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-            "avatar": {
-              "title": "Pearly TAN",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1657779588/assets/players/thumbnail/85551.jpg"
-            }
-          },
-          {
-            "id": "68628",
-            "nameDisplay": "THINAAH Muralitharan",
-            "nameType": 1,
-            "firstName": "Muralitharan",
-            "lastName": "THINAAH",
-            "initials": "TM",
-            "nameShort": "THINAAH M",
-            "nameShort2": "THINAAH",
-            "slug": "muralitharan-thinaah",
-            "countryCode": "MAS",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-            "avatar": {
-              "title": "Muralitharan THINAAH",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1634281515/assets/players/thumbnail/68628.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": "2",
-      "matchTime": "2026-10-15 14:50:00",
-      "matchTimeUtc": "2026-10-15 12:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": "8",
-      "oopText": "Followed by",
-      "oopTypeId": 0,
-      "eventName": "WD",
-      "roundName": "R16",
-      "drawName": "WD",
-      "drawCode": "4",
-      "courtName": "Court 2",
-      "courtCode": "2",
-      "courtIndex": 1,
-      "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 4,
-      "matchTypeValue": "Women's Doubles",
-      "matchTypeNo": null,
-      "reliability": 1,
-      "score": [],
-      "matches": []
-    },
-    {
       "id": 1556206,
       "code": "197",
       "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
       "tournamentName": "VICTOR Denmark Open 2026",
       "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
+      "scoreStatus": 2,
+      "scoreStatusValue": "Retired",
+      "winner": 2,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -5596,10 +5882,10 @@
       },
       "team1seed": "1",
       "team2seed": null,
-      "matchTime": "2026-10-15 17:05:00",
-      "matchTimeUtc": "2026-10-15 15:05:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-15 17:00:00",
+      "matchTimeUtc": "2026-10-15 15:00:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "11",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -5611,14 +5897,22 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 9,
+      "time": "00:09",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 6,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -5629,7 +5923,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "USA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
@@ -5722,10 +6016,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-15 17:20:00",
-      "matchTimeUtc": "2026-10-15 15:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-15 19:30:00",
+      "matchTimeUtc": "2026-10-15 17:30:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "11",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -5737,14 +6031,36 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 61,
+      "time": "01:01",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 17,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 17,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -5755,7 +6071,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -5848,13 +6164,13 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-15 18:45:00",
-      "matchTimeUtc": "2026-10-15 16:45:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-15 18:15:00",
+      "matchTimeUtc": "2026-10-15 16:15:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "13",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "WD",
       "roundName": "R16",
       "drawName": "WD",
@@ -5863,14 +6179,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 46,
+      "time": "00:46",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -5881,7 +6212,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -5974,13 +6305,13 @@
       },
       "team1seed": "7",
       "team2seed": null,
-      "matchTime": "2026-10-15 19:00:00",
-      "matchTimeUtc": "2026-10-15 17:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-15 20:05:00",
+      "matchTimeUtc": "2026-10-15 18:05:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "13",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "WD",
       "roundName": "R16",
       "drawName": "WD",
@@ -5989,14 +6320,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 38,
+      "time": "00:38",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 9,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 19,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6007,7 +6353,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -6100,10 +6446,10 @@
       },
       "team1seed": null,
       "team2seed": "6",
-      "matchTime": "2026-10-15 13:20:00",
-      "matchTimeUtc": "2026-10-15 11:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-15 12:45:00",
+      "matchTimeUtc": "2026-10-15 10:45:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "6",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6115,14 +6461,36 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 57,
+      "time": "00:57",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 17,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 9,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6133,7 +6501,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -6226,10 +6594,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-15 10:40:00",
-      "matchTimeUtc": "2026-10-15 08:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-15 11:05:00",
+      "matchTimeUtc": "2026-10-15 09:05:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6241,14 +6609,36 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "SJF Bank Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 79,
+      "time": "01:19",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 12,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6259,7 +6649,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "IND",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -6352,15 +6742,675 @@
       },
       "team1seed": null,
       "team2seed": "5",
-      "matchTime": "2026-10-15 13:10:00",
-      "matchTimeUtc": "2026-10-15 11:10:00",
+      "matchTime": "2026-10-15 14:55:00",
+      "matchTimeUtc": "2026-10-15 12:55:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "6",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WD",
+      "roundName": "R16",
+      "drawName": "WD",
+      "drawCode": "4",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "SJF Bank Arena",
+      "duration": 45,
+      "time": "00:45",
+      "matchOrder": null,
+      "matchTypeId": 4,
+      "matchTypeValue": "Women's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 17,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1556078,
+      "code": "204",
+      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
+      "tournamentName": "VICTOR Denmark Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 2,
+      "team1": {
+        "countryCode": "HKG",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "68015",
+            "nameDisplay": "YEUNG Nga Ting",
+            "nameType": 1,
+            "firstName": "Nga Ting",
+            "lastName": "YEUNG",
+            "initials": "YN",
+            "nameShort": "YEUNG N T ",
+            "nameShort2": "YEUNG",
+            "slug": "nga-ting-yeung",
+            "countryCode": "HKG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+            "avatar": {
+              "title": "Nga Ting YEUNG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895439/assets/players/thumbnail/68015.jpg"
+            }
+          },
+          {
+            "id": "75864",
+            "nameDisplay": "YEUNG Pui Lam",
+            "nameType": 1,
+            "firstName": "Pui Lam",
+            "lastName": "YEUNG",
+            "initials": "YP",
+            "nameShort": "YEUNG P L ",
+            "nameShort2": "YEUNG",
+            "slug": "pui-lam-yeung",
+            "countryCode": "HKG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+            "avatar": {
+              "title": "Pui Lam YEUNG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356623/assets/players/thumbnail/75864.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "85551",
+            "nameDisplay": "Pearly TAN",
+            "nameType": 0,
+            "firstName": "Pearly",
+            "lastName": "TAN",
+            "initials": "PT",
+            "nameShort": "P TAN",
+            "nameShort2": "TAN",
+            "slug": "pearly-tan",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Pearly TAN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1657779588/assets/players/thumbnail/85551.jpg"
+            }
+          },
+          {
+            "id": "68628",
+            "nameDisplay": "THINAAH Muralitharan",
+            "nameType": 1,
+            "firstName": "Muralitharan",
+            "lastName": "THINAAH",
+            "initials": "TM",
+            "nameShort": "THINAAH M",
+            "nameShort2": "THINAAH",
+            "slug": "muralitharan-thinaah",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Muralitharan THINAAH",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1634281515/assets/players/thumbnail/68628.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "2",
+      "matchTime": "2026-10-15 17:05:00",
+      "matchTimeUtc": "2026-10-15 15:05:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "8",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WD",
+      "roundName": "R16",
+      "drawName": "WD",
+      "drawCode": "4",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "SJF Bank Arena",
+      "duration": 44,
+      "time": "00:44",
+      "matchOrder": null,
+      "matchTypeId": 4,
+      "matchTypeValue": "Women's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 12,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 19,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1556068,
+      "code": "194",
+      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
+      "tournamentName": "VICTOR Denmark Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "94519",
+            "nameDisplay": "Sayaka HIROTA",
+            "nameType": 0,
+            "firstName": "Sayaka",
+            "lastName": "HIROTA",
+            "initials": "SH",
+            "nameShort": "S HIROTA",
+            "nameShort2": "HIROTA",
+            "slug": "sayaka-hirota",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Sayaka HIROTA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1633938972/assets/players/thumbnail/94519.jpg"
+            }
+          },
+          {
+            "id": "83211",
+            "nameDisplay": "Ayako SAKURAMOTO",
+            "nameType": 0,
+            "firstName": "Ayako",
+            "lastName": "SAKURAMOTO",
+            "initials": "AS",
+            "nameShort": "A SAKURAMOTO",
+            "nameShort2": "SAKURAMOTO",
+            "slug": "ayako-sakuramoto",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Ayako SAKURAMOTO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896000/assets/players/thumbnail/83211.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "19726",
+            "nameDisplay": "Sumire NAKADE",
+            "nameType": 0,
+            "firstName": "Sumire",
+            "lastName": "NAKADE",
+            "initials": "SN",
+            "nameShort": "S NAKADE",
+            "nameShort2": "NAKADE",
+            "slug": "sumire-nakade",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Sumire NAKADE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784077390/assets/players/thumbnail/19726.jpg"
+            }
+          },
+          {
+            "id": "70692",
+            "nameDisplay": "Miyu TAKAHASHI",
+            "nameType": 0,
+            "firstName": "Miyu",
+            "lastName": "TAKAHASHI",
+            "initials": "MT",
+            "nameShort": "M TAKAHASHI",
+            "nameShort2": "TAKAHASHI",
+            "slug": "miyu-takahashi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Miyu TAKAHASHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784077281/assets/players/thumbnail/70692.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "7",
+      "matchTime": "2026-10-16 17:40:00",
+      "matchTimeUtc": "2026-10-16 15:40:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "9",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WD",
+      "roundName": "QF",
+      "drawName": "WD",
+      "drawCode": "4",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "SJF Bank Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 4,
+      "matchTypeValue": "Women's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1556067,
+      "code": "195",
+      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
+      "tournamentName": "VICTOR Denmark Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "62277",
+            "nameDisplay": "BAO Li Jing",
+            "nameType": 1,
+            "firstName": "Li Jing",
+            "lastName": "BAO",
+            "initials": "BL",
+            "nameShort": "BAO L J ",
+            "nameShort2": "BAO",
+            "slug": "bao-li-jing",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Li Jing BAO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784016344/assets/players/thumbnail/62277.jpg"
+            }
+          },
+          {
+            "id": "18889",
+            "nameDisplay": "CAO Zi Han",
+            "nameType": 1,
+            "firstName": "Zi Han",
+            "lastName": "CAO",
+            "initials": "CZ",
+            "nameShort": "CAO Z H ",
+            "nameShort2": "CAO",
+            "slug": "Zi Han-CAO",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Zi Han CAO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1728626153/assets/players/thumbnail/18889.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "BUL",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "43840",
+            "nameDisplay": "Gabriela STOEVA",
+            "nameType": 0,
+            "firstName": "Gabriela",
+            "lastName": "STOEVA",
+            "initials": "GS",
+            "nameShort": "G STOEVA",
+            "nameShort2": "STOEVA",
+            "slug": "gabriela-stoeva",
+            "countryCode": "BUL",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
+            "avatar": {
+              "title": "Gabriela STOEVA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896208/assets/players/thumbnail/43840.jpg"
+            }
+          },
+          {
+            "id": "46169",
+            "nameDisplay": "Stefani STOEVA",
+            "nameType": 0,
+            "firstName": "Stefani",
+            "lastName": "STOEVA",
+            "initials": "SS",
+            "nameShort": "S STOEVA",
+            "nameShort2": "STOEVA",
+            "slug": "stefani-stoeva",
+            "countryCode": "BUL",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
+            "avatar": {
+              "title": "Stefani STOEVA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896206/assets/players/thumbnail/46169.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "6",
+      "team2seed": null,
+      "matchTime": "2026-10-16 11:00:00",
+      "matchTimeUtc": "2026-10-16 09:00:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "1",
+      "oopText": "Starting at 11:00 AM",
+      "oopTypeId": 1,
+      "eventName": "WD",
+      "roundName": "QF",
+      "drawName": "WD",
+      "drawCode": "4",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "SJF Bank Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 4,
+      "matchTypeValue": "Women's Doubles",
+      "matchTypeNo": null,
+      "reliability": 0,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1556066,
+      "code": "196",
+      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
+      "tournamentName": "VICTOR Denmark Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "71612",
+            "nameDisplay": "Treesa JOLLY",
+            "nameType": 0,
+            "firstName": "Treesa",
+            "lastName": "JOLLY",
+            "initials": "TJ",
+            "nameShort": "T JOLLY",
+            "nameShort2": "JOLLY",
+            "slug": "treesa-jolly",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "Treesa JOLLY",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1648717096/assets/players/thumbnail/71612.jpg"
+            }
+          },
+          {
+            "id": "59966",
+            "nameDisplay": "GAYATRI GOPICHAND PULLELA",
+            "nameType": 0,
+            "firstName": "GAYATRI GOPICHAND",
+            "lastName": "PULLELA",
+            "initials": "GP",
+            "nameShort": "G PULLELA",
+            "nameShort2": "PULLELA",
+            "slug": "gayatri-gopichand-pullela",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "GAYATRI GOPICHAND PULLELA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896462/assets/players/thumbnail/59966.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "85551",
+            "nameDisplay": "Pearly TAN",
+            "nameType": 0,
+            "firstName": "Pearly",
+            "lastName": "TAN",
+            "initials": "PT",
+            "nameShort": "P TAN",
+            "nameShort2": "TAN",
+            "slug": "pearly-tan",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Pearly TAN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1657779588/assets/players/thumbnail/85551.jpg"
+            }
+          },
+          {
+            "id": "68628",
+            "nameDisplay": "THINAAH Muralitharan",
+            "nameType": 1,
+            "firstName": "Muralitharan",
+            "lastName": "THINAAH",
+            "initials": "TM",
+            "nameShort": "THINAAH M",
+            "nameShort2": "THINAAH",
+            "slug": "muralitharan-thinaah",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Muralitharan THINAAH",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1634281515/assets/players/thumbnail/68628.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "2",
+      "matchTime": "2026-10-16 13:30:00",
+      "matchTimeUtc": "2026-10-16 11:30:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "4",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WD",
+      "roundName": "QF",
+      "drawName": "WD",
+      "drawCode": "4",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "SJF Bank Arena",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 4,
+      "matchTypeValue": "Women's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1556071,
+      "code": "193",
+      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
+      "tournamentName": "VICTOR Denmark Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "76295",
+            "nameDisplay": "Hinata SUZUKI",
+            "nameType": 0,
+            "firstName": "Hinata",
+            "lastName": "SUZUKI",
+            "initials": "HS",
+            "nameShort": "H SUZUKI",
+            "nameShort2": "SUZUKI",
+            "slug": "hinata-suzuki",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Hinata SUZUKI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658731499/assets/players/thumbnail/76295.jpg"
+            }
+          },
+          {
+            "id": "66794",
+            "nameDisplay": "Nao YAMAKITA",
+            "nameType": 0,
+            "firstName": "Nao",
+            "lastName": "YAMAKITA",
+            "initials": "NY",
+            "nameShort": "N YAMAKITA",
+            "nameShort2": "YAMAKITA",
+            "slug": "nao-yamakita",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Nao YAMAKITA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1780352601/assets/players/thumbnail/66794.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "USA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "69091",
+            "nameDisplay": "Lauren LAM",
+            "nameType": 0,
+            "firstName": "Lauren",
+            "lastName": "LAM",
+            "initials": "LL",
+            "nameShort": "L LAM",
+            "nameShort2": "LAM",
+            "slug": "lauren-lam",
+            "countryCode": "USA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+            "avatar": {
+              "title": "Lauren LAM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1675735492/assets/players/thumbnail/69091.jpg"
+            }
+          },
+          {
+            "id": "65708",
+            "nameDisplay": "Allison Quynh LEE",
+            "nameType": 0,
+            "firstName": "Allison Quynh",
+            "lastName": "LEE",
+            "initials": "AL",
+            "nameShort": "A LEE",
+            "nameShort2": "LEE",
+            "slug": "allison-quynh-lee",
+            "countryCode": "USA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+            "avatar": {
+              "title": "Allison Quynh LEE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1675734827/assets/players/thumbnail/65708.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-10-16 15:10:00",
+      "matchTimeUtc": "2026-10-16 13:10:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "6",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "WD",
-      "roundName": "R16",
+      "roundName": "QF",
       "drawName": "WD",
       "drawCode": "4",
       "courtName": "Court 2",
@@ -6519,110 +7569,6 @@
       "matches": []
     },
     {
-      "id": 1556066,
-      "code": "196",
-      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
-      "tournamentName": "VICTOR Denmark Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WD",
-      "roundName": "QF",
-      "drawName": "WD",
-      "drawCode": "4",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 4,
-      "matchTypeValue": "Women's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1556073,
-      "code": "191",
-      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
-      "tournamentName": "VICTOR Denmark Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WD",
-      "roundName": "SF",
-      "drawName": "WD",
-      "drawCode": "4",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 4,
-      "matchTypeValue": "Women's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
       "id": 1556057,
       "code": "220",
       "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
@@ -6712,8 +7658,8 @@
       "matches": []
     },
     {
-      "id": 1556067,
-      "code": "195",
+      "id": 1556073,
+      "code": "191",
       "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
       "tournamentName": "VICTOR Denmark Open 2026",
       "isTeamMatch": false,
@@ -6746,111 +7692,7 @@
       "oopText": null,
       "oopTypeId": null,
       "eventName": "WD",
-      "roundName": "QF",
-      "drawName": "WD",
-      "drawCode": "4",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 4,
-      "matchTypeValue": "Women's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1556068,
-      "code": "194",
-      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
-      "tournamentName": "VICTOR Denmark Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WD",
-      "roundName": "QF",
-      "drawName": "WD",
-      "drawCode": "4",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 4,
-      "matchTypeValue": "Women's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1556071,
-      "code": "193",
-      "tournamentCode": "280293F8-8DB0-437B-8290-4A65B4A3A494",
-      "tournamentName": "VICTOR Denmark Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WD",
-      "roundName": "QF",
+      "roundName": "SF",
       "drawName": "WD",
       "drawCode": "4",
       "courtName": "",
