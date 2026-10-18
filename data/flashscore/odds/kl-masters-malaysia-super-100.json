@@ -1,15 +1,15 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-10-17T18:31:03.127Z",
+ "fetchedAt": "2026-10-18T17:23:38.655Z",
  "tournamentSlug": "kl-masters-malaysia-super-100",
  "books": [],
  "booksReference": [],
  "stats": {
-  "scanned": 166,
-  "kept": 156,
+  "scanned": 171,
+  "kept": 157,
   "withOdds": 0,
   "from": "2026-10-13",
-  "to": "2026-10-16"
+  "to": "2026-10-17"
  },
  "matches": [
   {
@@ -4566,6 +4566,38 @@
     {
      "home": 21,
      "away": 16
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "QwimUHJ6",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "startUtc": "2026-10-17T04:50:00.000Z",
+   "home": {
+    "name": "Zhu X. C.",
+    "country": "Chine",
+    "fsParticipantId": "2HJuG5U6"
+   },
+   "away": {
+    "name": "Richardo R. D.",
+    "country": "Indonésie",
+    "fsParticipantId": "AsNmEqaJ"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 7,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 18
     }
    ],
    "odds": null
