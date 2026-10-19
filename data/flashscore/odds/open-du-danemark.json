@@ -1,6 +1,6 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-10-18T17:26:06.229Z",
+ "fetchedAt": "2026-10-19T23:42:13.980Z",
  "tournamentSlug": "open-du-danemark",
  "books": [
   "betclic",
@@ -12,10 +12,10 @@
  ],
  "stats": {
   "scanned": 153,
-  "kept": 148,
-  "withOdds": 148,
+  "kept": 150,
+  "withOdds": 150,
   "from": "2026-10-13",
-  "to": "2026-10-17"
+  "to": "2026-10-18"
  },
  "matches": [
   {
@@ -8733,6 +8733,132 @@
      "away": {
       "opening": 1.88,
       "closing": 1.97
+     }
+    }
+   }
+  },
+  {
+   "fsId": "K8CKU3X7",
+   "disc": "WS",
+   "round": "Finale",
+   "startUtc": "2026-10-18T12:10:00.000Z",
+   "home": {
+    "name": "An S. Y.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "n3OnBEL8"
+   },
+   "away": {
+    "name": "Yamaguchi A.",
+    "country": "Japon",
+    "fsParticipantId": "fTRf9hjL"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 23
+    },
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.06,
+      "closing": 1.14
+     },
+     "away": {
+      "opening": 5.75,
+      "closing": 3.3
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.1,
+      "closing": 1.16
+     },
+     "away": {
+      "opening": 4.2,
+      "closing": 3.8
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 5.2,
+      "closing": 4.3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "rLQ2q3aS",
+   "disc": "MS",
+   "round": "Finale",
+   "startUtc": "2026-10-18T14:45:00.000Z",
+   "home": {
+    "name": "Lanier A.",
+    "country": "France",
+    "fsParticipantId": "OAvzw73k"
+   },
+   "away": {
+    "name": "Antonsen A.",
+    "country": "Danemark",
+    "fsParticipantId": "WzrryoY1"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.68,
+      "closing": 1.6
+     },
+     "away": {
+      "opening": 1.9,
+      "closing": 1.82
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.6,
+      "closing": 1.6
+     },
+     "away": {
+      "opening": 1.85,
+      "closing": 1.85
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.64,
+      "closing": 1.47
+     },
+     "away": {
+      "opening": 1.88,
+      "closing": 2
      }
     }
    }
