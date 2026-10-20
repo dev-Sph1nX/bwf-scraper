@@ -1,6 +1,6 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-10-19T23:42:13.980Z",
+ "fetchedAt": "2026-10-20T19:19:33.627Z",
  "tournamentSlug": "open-du-danemark",
  "books": [
   "betclic",
@@ -12,8 +12,8 @@
  ],
  "stats": {
   "scanned": 153,
-  "kept": 150,
-  "withOdds": 150,
+  "kept": 153,
+  "withOdds": 153,
   "from": "2026-10-13",
   "to": "2026-10-18"
  },
@@ -8738,6 +8738,128 @@
    }
   },
   {
+   "fsId": "fN8Sp3Aa",
+   "disc": "XD",
+   "round": "Finale",
+   "startUtc": "2026-10-18T10:00:00.000Z",
+   "home": {
+    "name": "Feng Y. Z./Huang D. P.",
+    "country": "Chine",
+    "fsParticipantId": "CMFu3sNi"
+   },
+   "away": {
+    "name": "Jiang Z. B./Wei Y. X.",
+    "country": "Chine",
+    "fsParticipantId": "pzEm1Li4"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.75,
+      "closing": 1.68
+     },
+     "away": {
+      "opening": 1.68,
+      "closing": 1.75
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.85,
+      "closing": 1.68
+     },
+     "away": {
+      "opening": 1.75,
+      "closing": 1.7
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.8,
+      "closing": 1.76
+     },
+     "away": {
+      "opening": 1.7,
+      "closing": 1.78
+     }
+    }
+   }
+  },
+  {
+   "fsId": "KAy05m4d",
+   "disc": "WD",
+   "round": "Finale",
+   "startUtc": "2026-10-18T11:20:00.000Z",
+   "home": {
+    "name": "Suzuki H./Yamakita N.",
+    "country": "Japon",
+    "fsParticipantId": "A7E2HzQi"
+   },
+   "away": {
+    "name": "Tan P./Muralitharan T.",
+    "country": "Malaysie",
+    "fsParticipantId": "IXHAFEf4"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 4.2,
+      "closing": 3.95
+     },
+     "away": {
+      "opening": 1.08,
+      "closing": 1.1
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 4.1,
+      "closing": 3.1
+     },
+     "away": {
+      "opening": 1.15,
+      "closing": 1.16
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 3.85,
+      "closing": 4.4
+     },
+     "away": {
+      "opening": 1.13,
+      "closing": 1.09
+     }
+    }
+   }
+  },
+  {
    "fsId": "K8CKU3X7",
    "disc": "WS",
    "round": "Finale",
@@ -8796,6 +8918,65 @@
      "away": {
       "opening": 5.2,
       "closing": 4.3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "bV7EIvSa",
+   "disc": "MD",
+   "round": "Finale",
+   "startUtc": "2026-10-18T13:55:00.000Z",
+   "home": {
+    "name": "Chia A./Soh W. Y.",
+    "country": "Malaysie",
+    "fsParticipantId": "jTvxPdEE"
+   },
+   "away": {
+    "name": "Alfian F./Fikri M. S.",
+    "country": "Indonésie",
+    "fsParticipantId": "bgrpNzqR"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 8,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 1.74,
+      "closing": 1.82
+     },
+     "away": {
+      "opening": 1.74,
+      "closing": 1.6
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.72,
+      "closing": 1.87
+     },
+     "away": {
+      "opening": 1.72,
+      "closing": 1.6
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.78,
+      "closing": 1.85
+     },
+     "away": {
+      "opening": 1.78,
+      "closing": 1.58
      }
     }
    }
