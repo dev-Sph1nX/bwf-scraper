@@ -1236,7 +1236,7 @@
         "tournamentCode": 5272,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "ENG",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
@@ -1329,9 +1329,9 @@
         },
         "team1seed": null,
         "team2seed": "8",
-        "matchTime": "2026-10-21 19:35:00",
-        "matchTimeUtc": "2026-10-21 17:35:00",
-        "matchStatus": "P",
+        "matchTime": "2026-10-21 20:10:00",
+        "matchTimeUtc": "2026-10-21 18:10:00",
+        "matchStatus": "F",
         "oopRound": "12",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1342,7 +1342,7 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Arena Grand Paris",
-        "duration": 23,
+        "duration": 46,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
@@ -1352,7 +1352,13 @@
             "set": 1,
             "home": 21,
             "away": 23,
-            "serve": 1
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 22,
+            "away": 24,
+            "serve": 2
           }
         ],
         "matches": []
@@ -2046,7 +2052,7 @@
         "tournamentCode": 5272,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -2139,9 +2145,9 @@
         },
         "team1seed": null,
         "team2seed": "2",
-        "matchTime": "2026-10-21 20:05:00",
-        "matchTimeUtc": "2026-10-21 18:05:00",
-        "matchStatus": "P",
+        "matchTime": "2026-10-21 20:10:00",
+        "matchTimeUtc": "2026-10-21 18:10:00",
+        "matchStatus": "F",
         "oopRound": "11",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2152,7 +2158,7 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Arena Grand Paris",
-        "duration": 26,
+        "duration": 31,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
@@ -2162,13 +2168,13 @@
             "set": 1,
             "home": 21,
             "away": 16,
-            "serve": 2
+            "serve": 1
           },
           {
             "set": 2,
-            "home": 12,
-            "away": 12,
-            "serve": 2
+            "home": 21,
+            "away": 15,
+            "serve": 1
           }
         ],
         "matches": []
@@ -2711,15 +2717,52 @@
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "81657",
+              "nameDisplay": "Takuro HOKI",
+              "nameType": 0,
+              "firstName": "Takuro",
+              "lastName": "HOKI",
+              "initials": "TH",
+              "nameShort": "T HOKI",
+              "nameShort2": "HOKI",
+              "slug": "takuro-hoki",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Takuro HOKI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895591/assets/players/thumbnail/81657.jpg"
+              }
+            },
+            {
+              "id": "67903",
+              "nameDisplay": "Yugo KOBAYASHI",
+              "nameType": 0,
+              "firstName": "Yugo",
+              "lastName": "KOBAYASHI",
+              "initials": "YK",
+              "nameShort": "Y KOBAYASHI",
+              "nameShort2": "KOBAYASHI",
+              "slug": "yugo-kobayashi",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Yugo KOBAYASHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895430/assets/players/thumbnail/67903.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
+        "team2seed": "8",
         "matchTime": "2026-10-22 19:30:00",
         "matchTimeUtc": "2026-10-22 17:30:00",
         "matchStatus": "N",
@@ -3037,11 +3080,48 @@
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "75829",
+              "nameDisplay": "CHEN Zhi  Ray",
+              "nameType": 1,
+              "firstName": "Zhi  Ray",
+              "lastName": "CHEN",
+              "initials": "CZ",
+              "nameShort": "CHEN Z  R ",
+              "nameShort2": "CHEN",
+              "slug": "chen-zhi-ray",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "CHEN Zhi  Ray",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+              }
+            },
+            {
+              "id": "92504",
+              "nameDisplay": "LIN Yu Chieh",
+              "nameType": 1,
+              "firstName": "Yu Chieh",
+              "lastName": "LIN",
+              "initials": "LY",
+              "nameShort": "LIN Y C ",
+              "nameShort2": "LIN",
+              "slug": "yu-chieh-lin",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Yu Chieh LIN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696985956/assets/players/thumbnail/92504.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
@@ -4845,7 +4925,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -4938,10 +5018,10 @@
       },
       "team1seed": null,
       "team2seed": "2",
-      "matchTime": "2026-10-21 20:05:00",
-      "matchTimeUtc": "2026-10-21 18:05:00",
-      "matchStatus": "P",
-      "matchStatusValue": "In Progress",
+      "matchTime": "2026-10-21 20:10:00",
+      "matchTimeUtc": "2026-10-21 18:10:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "11",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -4953,14 +5033,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Arena Grand Paris",
-      "duration": 26,
-      "time": "00:26",
+      "duration": 31,
+      "time": "00:31",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -5112,7 +5207,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "ENG",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
@@ -5205,10 +5300,10 @@
       },
       "team1seed": null,
       "team2seed": "8",
-      "matchTime": "2026-10-21 19:35:00",
-      "matchTimeUtc": "2026-10-21 17:35:00",
-      "matchStatus": "P",
-      "matchStatusValue": "In Progress",
+      "matchTime": "2026-10-21 20:10:00",
+      "matchTimeUtc": "2026-10-21 18:10:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "12",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -5220,14 +5315,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Arena Grand Paris",
-      "duration": 23,
-      "time": "00:23",
+      "duration": 46,
+      "time": "00:46",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 23,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 22,
+          "away": 24,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -5722,15 +5832,52 @@
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "81657",
+            "nameDisplay": "Takuro HOKI",
+            "nameType": 0,
+            "firstName": "Takuro",
+            "lastName": "HOKI",
+            "initials": "TH",
+            "nameShort": "T HOKI",
+            "nameShort2": "HOKI",
+            "slug": "takuro-hoki",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Takuro HOKI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895591/assets/players/thumbnail/81657.jpg"
+            }
+          },
+          {
+            "id": "67903",
+            "nameDisplay": "Yugo KOBAYASHI",
+            "nameType": 0,
+            "firstName": "Yugo",
+            "lastName": "KOBAYASHI",
+            "initials": "YK",
+            "nameShort": "Y KOBAYASHI",
+            "nameShort2": "KOBAYASHI",
+            "slug": "yugo-kobayashi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Yugo KOBAYASHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895430/assets/players/thumbnail/67903.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
+      "team2seed": "8",
       "matchTime": "2026-10-22 19:30:00",
       "matchTimeUtc": "2026-10-22 17:30:00",
       "matchStatus": "N",
@@ -5811,11 +5958,48 @@
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "75829",
+            "nameDisplay": "CHEN Zhi  Ray",
+            "nameType": 1,
+            "firstName": "Zhi  Ray",
+            "lastName": "CHEN",
+            "initials": "CZ",
+            "nameShort": "CHEN Z  R ",
+            "nameShort2": "CHEN",
+            "slug": "chen-zhi-ray",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "CHEN Zhi  Ray",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          },
+          {
+            "id": "92504",
+            "nameDisplay": "LIN Yu Chieh",
+            "nameType": 1,
+            "firstName": "Yu Chieh",
+            "lastName": "LIN",
+            "initials": "LY",
+            "nameShort": "LIN Y C ",
+            "nameShort2": "LIN",
+            "slug": "yu-chieh-lin",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Yu Chieh LIN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696985956/assets/players/thumbnail/92504.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
