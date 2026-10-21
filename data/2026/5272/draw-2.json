@@ -6,7 +6,7 @@
         "tournamentCode": 5272,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -65,7 +65,7 @@
         "team2seed": null,
         "matchTime": "2026-10-21 10:10:00",
         "matchTimeUtc": "2026-10-21 08:10:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "1",
         "oopText": "Starting at 10:10 AM",
         "oopTypeId": 1,
@@ -76,12 +76,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Arena Grand Paris",
-        "duration": null,
+        "duration": 25,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 0,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 6,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 4,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -385,7 +398,7 @@
         "tournamentCode": 5272,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -442,9 +455,9 @@
         },
         "team1seed": "3",
         "team2seed": null,
-        "matchTime": "2026-10-21 11:00:00",
-        "matchTimeUtc": "2026-10-21 09:00:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-21 11:15:00",
+        "matchTimeUtc": "2026-10-21 09:15:00",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -455,12 +468,25 @@
         "courtCode": "4",
         "courtIndex": 3,
         "locationName": "Arena Grand Paris",
-        "duration": null,
+        "duration": 36,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -764,7 +790,7 @@
         "tournamentCode": 5272,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "IND",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -821,9 +847,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-21 10:50:00",
-        "matchTimeUtc": "2026-10-21 08:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-21 10:40:00",
+        "matchTimeUtc": "2026-10-21 08:40:00",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -834,12 +860,31 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Arena Grand Paris",
-        "duration": null,
+        "duration": 68,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 18,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 12,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 17,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -849,7 +894,7 @@
         "tournamentCode": 5272,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "THA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -906,9 +951,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-21 11:40:00",
-        "matchTimeUtc": "2026-10-21 09:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-21 12:15:00",
+        "matchTimeUtc": "2026-10-21 10:15:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -919,12 +964,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Arena Grand Paris",
-        "duration": null,
+        "duration": 64,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 14,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 8,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 23,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -934,7 +998,7 @@
         "tournamentCode": 5272,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -991,9 +1055,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-21 15:10:00",
-        "matchTimeUtc": "2026-10-21 13:10:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-21 15:45:00",
+        "matchTimeUtc": "2026-10-21 13:45:00",
+        "matchStatus": "F",
         "oopRound": "7",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1004,12 +1068,25 @@
         "courtCode": "4",
         "courtIndex": 3,
         "locationName": "Arena Grand Paris",
-        "duration": null,
+        "duration": 45,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 13,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -1019,7 +1096,7 @@
         "tournamentCode": 5272,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -1076,9 +1153,9 @@
         },
         "team1seed": null,
         "team2seed": "4",
-        "matchTime": "2026-10-21 15:00:00",
-        "matchTimeUtc": "2026-10-21 13:00:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-21 16:25:00",
+        "matchTimeUtc": "2026-10-21 14:25:00",
+        "matchStatus": "F",
         "oopRound": "7",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1089,12 +1166,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Arena Grand Paris",
-        "duration": null,
+        "duration": 32,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 15,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          }
+        ],
         "matches": []
       }
     },
@@ -1104,7 +1194,7 @@
         "tournamentCode": 5272,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "DEN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
@@ -1161,9 +1251,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-21 13:20:00",
-        "matchTimeUtc": "2026-10-21 11:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-21 13:40:00",
+        "matchTimeUtc": "2026-10-21 11:40:00",
+        "matchStatus": "F",
         "oopRound": "5",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1174,12 +1264,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Arena Grand Paris",
-        "duration": null,
+        "duration": 39,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 11,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 14,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -1189,7 +1292,7 @@
         "tournamentCode": 5272,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "IND",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -1246,9 +1349,9 @@
         },
         "team1seed": null,
         "team2seed": "5",
-        "matchTime": "2026-10-21 14:20:00",
-        "matchTimeUtc": "2026-10-21 12:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-21 14:35:00",
+        "matchTimeUtc": "2026-10-21 12:35:00",
+        "matchStatus": "F",
         "oopRound": "6",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1259,12 +1362,31 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Arena Grand Paris",
-        "duration": null,
+        "duration": 57,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 9,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 16,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 20,
+            "away": 22,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -1274,7 +1396,7 @@
         "tournamentCode": 5272,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "CAN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
@@ -1331,9 +1453,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-21 16:50:00",
-        "matchTimeUtc": "2026-10-21 14:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-21 17:15:00",
+        "matchTimeUtc": "2026-10-21 15:15:00",
+        "matchStatus": "F",
         "oopRound": "9",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1344,12 +1466,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Arena Grand Paris",
-        "duration": null,
+        "duration": 32,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 14,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 10,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -1359,7 +1494,7 @@
         "tournamentCode": 5272,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -1416,9 +1551,9 @@
         },
         "team1seed": null,
         "team2seed": "2",
-        "matchTime": "2026-10-21 16:00:00",
-        "matchTimeUtc": "2026-10-21 14:00:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-21 16:35:00",
+        "matchTimeUtc": "2026-10-21 14:35:00",
+        "matchStatus": "F",
         "oopRound": "8",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -1429,12 +1564,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Arena Grand Paris",
-        "duration": null,
+        "duration": 30,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 13,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 8,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": []
       }
     },
@@ -1446,11 +1594,30 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "87442",
+              "nameDisplay": "AN Se Young",
+              "nameType": 1,
+              "firstName": "Se Young",
+              "lastName": "AN",
+              "initials": "AS",
+              "nameShort": "AN S Y ",
+              "nameShort2": "AN",
+              "slug": "se-young-an",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Se Young AN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697765036/assets/players/thumbnail/87442.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
@@ -1480,26 +1647,26 @@
           ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "1",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-10-22 12:00:00",
+        "matchTimeUtc": "2026-10-22 10:00:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "1",
+        "oopText": "Starting at 12:00 PM",
+        "oopTypeId": 1,
         "eventName": "WS",
         "roundName": "R16",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Arena Grand Paris",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 0,
         "score": [],
         "matches": []
       }
@@ -1567,24 +1734,24 @@
         },
         "team1seed": "7",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-10-22 13:40:00",
+        "matchTimeUtc": "2026-10-22 11:40:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "3",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R16",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Arena Grand Paris",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -1597,11 +1764,30 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "96312",
+              "nameDisplay": "Akane YAMAGUCHI",
+              "nameType": 0,
+              "firstName": "Akane",
+              "lastName": "YAMAGUCHI",
+              "initials": "AY",
+              "nameShort": "A YAMAGUCHI",
+              "nameShort2": "YAMAGUCHI",
+              "slug": "akane-yamaguchi",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Akane YAMAGUCHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689647088/assets/players/thumbnail/96312.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
@@ -1631,26 +1817,26 @@
           ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "3",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-10-22 13:50:00",
+        "matchTimeUtc": "2026-10-22 11:50:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "3",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R16",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 4",
+        "courtCode": "4",
+        "courtIndex": 3,
+        "locationName": "Arena Grand Paris",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -1718,24 +1904,24 @@
         },
         "team1seed": "8",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-10-22 15:30:00",
+        "matchTimeUtc": "2026-10-22 13:30:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "5",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R16",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 3",
+        "courtCode": "3",
+        "courtIndex": 2,
+        "locationName": "Arena Grand Paris",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -1748,41 +1934,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "76079",
+              "nameDisplay": "Riko GUNJI",
+              "nameType": 0,
+              "firstName": "Riko",
+              "lastName": "GUNJI",
+              "initials": "RG",
+              "nameShort": "R GUNJI",
+              "nameShort2": "GUNJI",
+              "slug": "riko-gunji",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Riko GUNJI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897768/assets/players/thumbnail/76079.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "IND",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "73173",
+              "nameDisplay": "PUSARLA V. Sindhu",
+              "nameType": 1,
+              "firstName": "V. Sindhu",
+              "lastName": "PUSARLA",
+              "initials": "PV",
+              "nameShort": "PUSARLA V S ",
+              "nameShort2": "PUSARLA",
+              "slug": "v-sindhu-pusarla",
+              "countryCode": "IND",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+              "avatar": {
+                "title": "V. Sindhu PUSARLA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627948657/assets/players/thumbnail/73173.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-10-22 14:30:00",
+        "matchTimeUtc": "2026-10-22 12:30:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "4",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R16",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Arena Grand Paris",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -1795,41 +2019,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "80862",
+              "nameDisplay": "CHIU Pin-Chian",
+              "nameType": 1,
+              "firstName": "Pin-Chian",
+              "lastName": "CHIU",
+              "initials": "CP",
+              "nameShort": "CHIU P C ",
+              "nameShort2": "CHIU",
+              "slug": "chiu-pin-chian",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "CHIU Pin-Chian",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "99069",
+              "nameDisplay": "SIM Yu Jin",
+              "nameType": 1,
+              "firstName": "Yu Jin",
+              "lastName": "SIM",
+              "initials": "SY",
+              "nameShort": "SIM Y J ",
+              "nameShort2": "SIM",
+              "slug": "yu-jin-sim",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Yu Jin SIM",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636594223/assets/players/thumbnail/99069.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-10-22 16:10:00",
+        "matchTimeUtc": "2026-10-22 14:10:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "6",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R16",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Arena Grand Paris",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -1842,41 +2104,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TUR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TUR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "87885",
+              "nameDisplay": "Neslihan ARIN",
+              "nameType": 0,
+              "firstName": "Neslihan",
+              "lastName": "ARIN",
+              "initials": "NA",
+              "nameShort": "N ARIN",
+              "nameShort2": "ARIN",
+              "slug": "neslihan-arin",
+              "countryCode": "TUR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TUR.png",
+              "avatar": {
+                "title": "Neslihan ARIN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897368/assets/players/thumbnail/87885.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "INA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "76890",
+              "nameDisplay": "Putri Kusuma WARDANI",
+              "nameType": 0,
+              "firstName": "Putri Kusuma",
+              "lastName": "WARDANI",
+              "initials": "PW",
+              "nameShort": "P WARDANI",
+              "nameShort2": "WARDANI",
+              "slug": "putri-kusuma-wardani",
+              "countryCode": "INA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+              "avatar": {
+                "title": "Putri Kusuma WARDANI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1766038573/assets/players/thumbnail/76890.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team2seed": "5",
+        "matchTime": "2026-10-22 16:20:00",
+        "matchTimeUtc": "2026-10-22 14:20:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "6",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R16",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 3",
+        "courtCode": "3",
+        "courtIndex": 2,
+        "locationName": "Arena Grand Paris",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -1889,41 +2189,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "68479",
+              "nameDisplay": "Hina AKECHI",
+              "nameType": 0,
+              "firstName": "Hina",
+              "lastName": "AKECHI",
+              "initials": "HA",
+              "nameShort": "H AKECHI",
+              "nameShort2": "AKECHI",
+              "slug": "hina-akechi",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Hina AKECHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "61854",
+              "nameDisplay": "WANG Zhi Yi",
+              "nameType": 1,
+              "firstName": "Zhi Yi",
+              "lastName": "WANG",
+              "initials": "WZ",
+              "nameShort": "WANG Z Y ",
+              "nameShort2": "WANG",
+              "slug": "wang-zhi-yi",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "WANG Zhi Yi",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697435902/assets/players/thumbnail/61854.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team2seed": "2",
+        "matchTime": "2026-10-22 18:00:00",
+        "matchTimeUtc": "2026-10-22 16:00:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "8",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "R16",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 3",
+        "courtCode": "3",
+        "courtIndex": 2,
+        "locationName": "Arena Grand Paris",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": []
       }
@@ -2897,7 +3235,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -2956,8 +3294,8 @@
       "team2seed": null,
       "matchTime": "2026-10-21 10:10:00",
       "matchTimeUtc": "2026-10-21 08:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "1",
       "oopText": "Starting at 10:10 AM",
       "oopTypeId": 1,
@@ -2969,14 +3307,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Arena Grand Paris",
-      "duration": null,
-      "time": "00:00",
+      "duration": 25,
+      "time": "00:25",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 0,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 6,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 4,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -2987,7 +3340,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "DEN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
@@ -3044,10 +3397,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-21 13:20:00",
-      "matchTimeUtc": "2026-10-21 11:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-21 13:40:00",
+      "matchTimeUtc": "2026-10-21 11:40:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "5",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -3059,14 +3412,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Arena Grand Paris",
-      "duration": null,
-      "time": "00:00",
+      "duration": 39,
+      "time": "00:39",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 11,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 14,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3077,7 +3445,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "CAN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CAN.png",
@@ -3134,10 +3502,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-21 16:50:00",
-      "matchTimeUtc": "2026-10-21 14:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-21 17:15:00",
+      "matchTimeUtc": "2026-10-21 15:15:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "9",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -3149,14 +3517,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Arena Grand Paris",
-      "duration": null,
-      "time": "00:00",
+      "duration": 32,
+      "time": "00:32",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 14,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 10,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3167,7 +3550,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "IND",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -3224,10 +3607,10 @@
       },
       "team1seed": null,
       "team2seed": "5",
-      "matchTime": "2026-10-21 14:20:00",
-      "matchTimeUtc": "2026-10-21 12:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-21 14:35:00",
+      "matchTimeUtc": "2026-10-21 12:35:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "6",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -3239,14 +3622,36 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Arena Grand Paris",
-      "duration": null,
-      "time": "00:00",
+      "duration": 57,
+      "time": "00:57",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 9,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 20,
+          "away": 22,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3257,7 +3662,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -3314,10 +3719,10 @@
       },
       "team1seed": null,
       "team2seed": "2",
-      "matchTime": "2026-10-21 16:00:00",
-      "matchTimeUtc": "2026-10-21 14:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-21 16:35:00",
+      "matchTimeUtc": "2026-10-21 14:35:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "8",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -3329,14 +3734,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Arena Grand Paris",
-      "duration": null,
-      "time": "00:00",
+      "duration": 30,
+      "time": "00:30",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 8,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3347,7 +3767,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -3404,10 +3824,10 @@
       },
       "team1seed": null,
       "team2seed": "4",
-      "matchTime": "2026-10-21 15:00:00",
-      "matchTimeUtc": "2026-10-21 13:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-21 16:25:00",
+      "matchTimeUtc": "2026-10-21 14:25:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "7",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -3419,14 +3839,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Arena Grand Paris",
-      "duration": null,
-      "time": "00:00",
+      "duration": 32,
+      "time": "00:32",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3437,7 +3872,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "THA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -3494,10 +3929,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-21 11:40:00",
-      "matchTimeUtc": "2026-10-21 09:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-21 12:15:00",
+      "matchTimeUtc": "2026-10-21 10:15:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -3509,14 +3944,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Arena Grand Paris",
-      "duration": null,
-      "time": "00:00",
+      "duration": 64,
+      "time": "01:04",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 14,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 8,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 23,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3527,7 +3984,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "IND",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -3584,10 +4041,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-21 10:50:00",
-      "matchTimeUtc": "2026-10-21 08:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-21 10:40:00",
+      "matchTimeUtc": "2026-10-21 08:40:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -3599,14 +4056,36 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Arena Grand Paris",
-      "duration": null,
-      "time": "00:00",
+      "duration": 68,
+      "time": "01:08",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 12,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 17,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3617,7 +4096,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -3674,10 +4153,10 @@
       },
       "team1seed": "3",
       "team2seed": null,
-      "matchTime": "2026-10-21 11:00:00",
-      "matchTimeUtc": "2026-10-21 09:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-21 11:15:00",
+      "matchTimeUtc": "2026-10-21 09:15:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -3689,14 +4168,29 @@
       "courtCode": "4",
       "courtIndex": 3,
       "locationName": "Arena Grand Paris",
-      "duration": null,
-      "time": "00:00",
+      "duration": 36,
+      "time": "00:36",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -3707,7 +4201,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -3764,15 +4258,570 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-21 15:10:00",
-      "matchTimeUtc": "2026-10-21 13:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-21 15:45:00",
+      "matchTimeUtc": "2026-10-21 13:45:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "7",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "WS",
       "roundName": "R32",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 4",
+      "courtCode": "4",
+      "courtIndex": 3,
+      "locationName": "Arena Grand Paris",
+      "duration": 45,
+      "time": "00:45",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 13,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1558562,
+      "code": "75",
+      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
+      "tournamentName": "YONEX French Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "76079",
+            "nameDisplay": "Riko GUNJI",
+            "nameType": 0,
+            "firstName": "Riko",
+            "lastName": "GUNJI",
+            "initials": "RG",
+            "nameShort": "R GUNJI",
+            "nameShort2": "GUNJI",
+            "slug": "riko-gunji",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Riko GUNJI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897768/assets/players/thumbnail/76079.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "73173",
+            "nameDisplay": "PUSARLA V. Sindhu",
+            "nameType": 1,
+            "firstName": "V. Sindhu",
+            "lastName": "PUSARLA",
+            "initials": "PV",
+            "nameShort": "PUSARLA V S ",
+            "nameShort2": "PUSARLA",
+            "slug": "v-sindhu-pusarla",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "V. Sindhu PUSARLA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627948657/assets/players/thumbnail/73173.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-10-22 14:30:00",
+      "matchTimeUtc": "2026-10-22 12:30:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "4",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "R16",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Arena Grand Paris",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1558563,
+      "code": "78",
+      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
+      "tournamentName": "YONEX French Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "68479",
+            "nameDisplay": "Hina AKECHI",
+            "nameType": 0,
+            "firstName": "Hina",
+            "lastName": "AKECHI",
+            "initials": "HA",
+            "nameShort": "H AKECHI",
+            "nameShort2": "AKECHI",
+            "slug": "hina-akechi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Hina AKECHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "61854",
+            "nameDisplay": "WANG Zhi Yi",
+            "nameType": 1,
+            "firstName": "Zhi Yi",
+            "lastName": "WANG",
+            "initials": "WZ",
+            "nameShort": "WANG Z Y ",
+            "nameShort2": "WANG",
+            "slug": "wang-zhi-yi",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "WANG Zhi Yi",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697435902/assets/players/thumbnail/61854.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "2",
+      "matchTime": "2026-10-22 18:00:00",
+      "matchTimeUtc": "2026-10-22 16:00:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "8",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "R16",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 3",
+      "courtCode": "3",
+      "courtIndex": 2,
+      "locationName": "Arena Grand Paris",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1558566,
+      "code": "77",
+      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
+      "tournamentName": "YONEX French Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "TUR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TUR.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "87885",
+            "nameDisplay": "Neslihan ARIN",
+            "nameType": 0,
+            "firstName": "Neslihan",
+            "lastName": "ARIN",
+            "initials": "NA",
+            "nameShort": "N ARIN",
+            "nameShort2": "ARIN",
+            "slug": "neslihan-arin",
+            "countryCode": "TUR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TUR.png",
+            "avatar": {
+              "title": "Neslihan ARIN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897368/assets/players/thumbnail/87885.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "INA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "76890",
+            "nameDisplay": "Putri Kusuma WARDANI",
+            "nameType": 0,
+            "firstName": "Putri Kusuma",
+            "lastName": "WARDANI",
+            "initials": "PW",
+            "nameShort": "P WARDANI",
+            "nameShort2": "WARDANI",
+            "slug": "putri-kusuma-wardani",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Putri Kusuma WARDANI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1766038573/assets/players/thumbnail/76890.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "5",
+      "matchTime": "2026-10-22 16:20:00",
+      "matchTimeUtc": "2026-10-22 14:20:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "6",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "R16",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 3",
+      "courtCode": "3",
+      "courtIndex": 2,
+      "locationName": "Arena Grand Paris",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1558559,
+      "code": "76",
+      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
+      "tournamentName": "YONEX French Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "80862",
+            "nameDisplay": "CHIU Pin-Chian",
+            "nameType": 1,
+            "firstName": "Pin-Chian",
+            "lastName": "CHIU",
+            "initials": "CP",
+            "nameShort": "CHIU P C ",
+            "nameShort2": "CHIU",
+            "slug": "chiu-pin-chian",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "CHIU Pin-Chian",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "99069",
+            "nameDisplay": "SIM Yu Jin",
+            "nameType": 1,
+            "firstName": "Yu Jin",
+            "lastName": "SIM",
+            "initials": "SY",
+            "nameShort": "SIM Y J ",
+            "nameShort2": "SIM",
+            "slug": "yu-jin-sim",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Yu Jin SIM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636594223/assets/players/thumbnail/99069.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-10-22 16:10:00",
+      "matchTimeUtc": "2026-10-22 14:10:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "6",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "R16",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Arena Grand Paris",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1558557,
+      "code": "74",
+      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
+      "tournamentName": "YONEX French Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "THA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "84062",
+            "nameDisplay": "Pornpawee CHOCHUWONG",
+            "nameType": 0,
+            "firstName": "Pornpawee",
+            "lastName": "CHOCHUWONG",
+            "initials": "PC",
+            "nameShort": "P CHOCHUWONG",
+            "nameShort2": "CHOCHUWONG",
+            "slug": "pornpawee-chochuwong",
+            "countryCode": "THA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
+            "avatar": {
+              "title": "Pornpawee CHOCHUWONG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697765882/assets/players/thumbnail/84062.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "96713",
+            "nameDisplay": "Nozomi OKUHARA",
+            "nameType": 0,
+            "firstName": "Nozomi",
+            "lastName": "OKUHARA",
+            "initials": "NO",
+            "nameShort": "N OKUHARA",
+            "nameShort2": "OKUHARA",
+            "slug": "nozomi-okuhara",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Nozomi OKUHARA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895749/assets/players/thumbnail/96713.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "8",
+      "team2seed": null,
+      "matchTime": "2026-10-22 15:30:00",
+      "matchTimeUtc": "2026-10-22 13:30:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "5",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "R16",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 3",
+      "courtCode": "3",
+      "courtIndex": 2,
+      "locationName": "Arena Grand Paris",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1558558,
+      "code": "73",
+      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
+      "tournamentName": "YONEX French Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "96312",
+            "nameDisplay": "Akane YAMAGUCHI",
+            "nameType": 0,
+            "firstName": "Akane",
+            "lastName": "YAMAGUCHI",
+            "initials": "AY",
+            "nameShort": "A YAMAGUCHI",
+            "nameShort2": "YAMAGUCHI",
+            "slug": "akane-yamaguchi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Akane YAMAGUCHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689647088/assets/players/thumbnail/96312.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "75628",
+            "nameDisplay": "Ashmita CHALIHA",
+            "nameType": 0,
+            "firstName": "Ashmita",
+            "lastName": "CHALIHA",
+            "initials": "AC",
+            "nameShort": "A CHALIHA",
+            "nameShort2": "CHALIHA",
+            "slug": "ashmita-chaliha",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "Ashmita CHALIHA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1786418232/assets/players/thumbnail/75628.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "3",
+      "team2seed": null,
+      "matchTime": "2026-10-22 13:50:00",
+      "matchTimeUtc": "2026-10-22 11:50:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "3",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "R16",
       "drawName": "WS",
       "drawCode": "2",
       "courtName": "Court 4",
@@ -3790,216 +4839,188 @@
       "matches": []
     },
     {
+      "id": 1558554,
+      "code": "72",
+      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
+      "tournamentName": "YONEX French Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "92967",
+            "nameDisplay": "HAN Yue",
+            "nameType": 1,
+            "firstName": "Yue",
+            "lastName": "HAN",
+            "initials": "HY",
+            "nameShort": "HAN Y",
+            "nameShort2": "HAN",
+            "slug": "yue-han",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "Yue HAN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895840/assets/players/thumbnail/92967.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "DEN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "91224",
+            "nameDisplay": "Mia BLICHFELDT",
+            "nameType": 0,
+            "firstName": "Mia",
+            "lastName": "BLICHFELDT",
+            "initials": "MB",
+            "nameShort": "M BLICHFELDT",
+            "nameShort2": "BLICHFELDT",
+            "slug": "mia-blichfeldt",
+            "countryCode": "DEN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+            "avatar": {
+              "title": "Mia BLICHFELDT",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1721630981/assets/players/thumbnail/91224.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "7",
+      "team2seed": null,
+      "matchTime": "2026-10-22 13:40:00",
+      "matchTimeUtc": "2026-10-22 11:40:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "3",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "R16",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Arena Grand Paris",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1558556,
+      "code": "71",
+      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
+      "tournamentName": "YONEX French Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "87442",
+            "nameDisplay": "AN Se Young",
+            "nameType": 1,
+            "firstName": "Se Young",
+            "lastName": "AN",
+            "initials": "AS",
+            "nameShort": "AN S Y ",
+            "nameShort2": "AN",
+            "slug": "se-young-an",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Se Young AN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697765036/assets/players/thumbnail/87442.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "99042",
+            "nameDisplay": "Tanvi SHARMA",
+            "nameType": 0,
+            "firstName": "Tanvi",
+            "lastName": "SHARMA",
+            "initials": "TS",
+            "nameShort": "T SHARMA",
+            "nameShort2": "SHARMA",
+            "slug": "tanvi-sharma",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "Tanvi SHARMA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1728625354/assets/players/thumbnail/99042.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "1",
+      "team2seed": null,
+      "matchTime": "2026-10-22 12:00:00",
+      "matchTimeUtc": "2026-10-22 10:00:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "1",
+      "oopText": "Starting at 12:00 PM",
+      "oopTypeId": 1,
+      "eventName": "WS",
+      "roundName": "R16",
+      "drawName": "WS",
+      "drawCode": "2",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Arena Grand Paris",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 0,
+      "score": [],
+      "matches": []
+    },
+    {
       "id": 1558425,
       "code": "67",
-      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
-      "tournamentName": "YONEX French Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "QF",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1558427,
-      "code": "66",
-      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
-      "tournamentName": "YONEX French Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "SF",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1558525,
-      "code": "65",
-      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
-      "tournamentName": "YONEX French Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "SF",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1558552,
-      "code": "70",
-      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
-      "tournamentName": "YONEX French Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "QF",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1558428,
-      "code": "69",
       "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
       "tournamentName": "YONEX French Open 2026",
       "isTeamMatch": false,
@@ -4102,8 +5123,8 @@
       "matches": []
     },
     {
-      "id": 1558559,
-      "code": "76",
+      "id": 1558428,
+      "code": "69",
       "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
       "tournamentName": "YONEX French Open 2026",
       "isTeamMatch": false,
@@ -4136,7 +5157,7 @@
       "oopText": null,
       "oopTypeId": null,
       "eventName": "WS",
-      "roundName": "R16",
+      "roundName": "QF",
       "drawName": "WS",
       "drawCode": "2",
       "courtName": "",
@@ -4154,8 +5175,8 @@
       "matches": []
     },
     {
-      "id": 1558563,
-      "code": "78",
+      "id": 1558552,
+      "code": "70",
       "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
       "tournamentName": "YONEX French Open 2026",
       "isTeamMatch": false,
@@ -4188,7 +5209,7 @@
       "oopText": null,
       "oopTypeId": null,
       "eventName": "WS",
-      "roundName": "R16",
+      "roundName": "QF",
       "drawName": "WS",
       "drawCode": "2",
       "courtName": "",
@@ -4206,8 +5227,8 @@
       "matches": []
     },
     {
-      "id": 1558566,
-      "code": "77",
+      "id": 1558525,
+      "code": "65",
       "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
       "tournamentName": "YONEX French Open 2026",
       "isTeamMatch": false,
@@ -4240,7 +5261,7 @@
       "oopText": null,
       "oopTypeId": null,
       "eventName": "WS",
-      "roundName": "R16",
+      "roundName": "SF",
       "drawName": "WS",
       "drawCode": "2",
       "courtName": "",
@@ -4258,8 +5279,8 @@
       "matches": []
     },
     {
-      "id": 1558562,
-      "code": "75",
+      "id": 1558427,
+      "code": "66",
       "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
       "tournamentName": "YONEX French Open 2026",
       "isTeamMatch": false,
@@ -4292,329 +5313,7 @@
       "oopText": null,
       "oopTypeId": null,
       "eventName": "WS",
-      "roundName": "R16",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1558557,
-      "code": "74",
-      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
-      "tournamentName": "YONEX French Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "THA",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "84062",
-            "nameDisplay": "Pornpawee CHOCHUWONG",
-            "nameType": 0,
-            "firstName": "Pornpawee",
-            "lastName": "CHOCHUWONG",
-            "initials": "PC",
-            "nameShort": "P CHOCHUWONG",
-            "nameShort2": "CHOCHUWONG",
-            "slug": "pornpawee-chochuwong",
-            "countryCode": "THA",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
-            "avatar": {
-              "title": "Pornpawee CHOCHUWONG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697765882/assets/players/thumbnail/84062.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "JPN",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "96713",
-            "nameDisplay": "Nozomi OKUHARA",
-            "nameType": 0,
-            "firstName": "Nozomi",
-            "lastName": "OKUHARA",
-            "initials": "NO",
-            "nameShort": "N OKUHARA",
-            "nameShort2": "OKUHARA",
-            "slug": "nozomi-okuhara",
-            "countryCode": "JPN",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
-            "avatar": {
-              "title": "Nozomi OKUHARA",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895749/assets/players/thumbnail/96713.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": "8",
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R16",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1558558,
-      "code": "73",
-      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
-      "tournamentName": "YONEX French Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "IND",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "75628",
-            "nameDisplay": "Ashmita CHALIHA",
-            "nameType": 0,
-            "firstName": "Ashmita",
-            "lastName": "CHALIHA",
-            "initials": "AC",
-            "nameShort": "A CHALIHA",
-            "nameShort2": "CHALIHA",
-            "slug": "ashmita-chaliha",
-            "countryCode": "IND",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-            "avatar": {
-              "title": "Ashmita CHALIHA",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1786418232/assets/players/thumbnail/75628.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R16",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1558554,
-      "code": "72",
-      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
-      "tournamentName": "YONEX French Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "CHN",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "92967",
-            "nameDisplay": "HAN Yue",
-            "nameType": 1,
-            "firstName": "Yue",
-            "lastName": "HAN",
-            "initials": "HY",
-            "nameShort": "HAN Y",
-            "nameShort2": "HAN",
-            "slug": "yue-han",
-            "countryCode": "CHN",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
-            "avatar": {
-              "title": "Yue HAN",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895840/assets/players/thumbnail/92967.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "DEN",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "91224",
-            "nameDisplay": "Mia BLICHFELDT",
-            "nameType": 0,
-            "firstName": "Mia",
-            "lastName": "BLICHFELDT",
-            "initials": "MB",
-            "nameShort": "M BLICHFELDT",
-            "nameShort2": "BLICHFELDT",
-            "slug": "mia-blichfeldt",
-            "countryCode": "DEN",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
-            "avatar": {
-              "title": "Mia BLICHFELDT",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1721630981/assets/players/thumbnail/91224.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": "7",
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R16",
-      "drawName": "WS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1558556,
-      "code": "71",
-      "tournamentCode": "02C81098-27CE-498C-AABD-8C520607CEAD",
-      "tournamentName": "YONEX French Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "IND",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "99042",
-            "nameDisplay": "Tanvi SHARMA",
-            "nameType": 0,
-            "firstName": "Tanvi",
-            "lastName": "SHARMA",
-            "initials": "TS",
-            "nameShort": "T SHARMA",
-            "nameShort2": "SHARMA",
-            "slug": "tanvi-sharma",
-            "countryCode": "IND",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-            "avatar": {
-              "title": "Tanvi SHARMA",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1728625354/assets/players/thumbnail/99042.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "R16",
+      "roundName": "SF",
       "drawName": "WS",
       "drawCode": "2",
       "courtName": "",
