@@ -81,7 +81,8 @@
         "matchTypeValue": "Women's Doubles",
         "reliability": null,
         "score": [],
-        "matches": []
+        "matches": [],
+        "isTeamMatch": false
       }
     },
     "0-1": {
@@ -183,35 +184,36 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-10-27 08:30:00",
+        "matchTimeUtc": "2026-10-27 07:30:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "1",
+        "oopText": "Starting at 8:30 AM",
+        "oopTypeId": 1,
         "eventName": "WD",
         "roundName": "Qual. QF",
         "drawName": "WD - Qualification",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Saarlandhalle",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
-        "reliability": null,
+        "reliability": 0,
         "score": [],
-        "matches": []
+        "matches": [],
+        "isTeamMatch": false
       }
     },
     "0-2": {
       "match": {
         "code": "228",
         "tournamentCode": 5273,
-        "scoreStatus": 0,
-        "scoreStatusValue": "Normal",
-        "winner": 0,
+        "scoreStatus": 1,
+        "scoreStatusValue": "Walkover",
+        "winner": 1,
         "team1": {
           "countryCode": "AUT",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/AUT.png",
@@ -306,7 +308,7 @@
         "team2seed": null,
         "matchTime": null,
         "matchTimeUtc": null,
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": null,
         "oopText": null,
         "oopTypeId": null,
@@ -323,7 +325,8 @@
         "matchTypeValue": "Women's Doubles",
         "reliability": null,
         "score": [],
-        "matches": []
+        "matches": [],
+        "isTeamMatch": false
       }
     },
     "0-3": {
@@ -407,100 +410,12 @@
         "matchTypeValue": "Women's Doubles",
         "reliability": null,
         "score": [],
-        "matches": []
+        "matches": [],
+        "isTeamMatch": false
       }
     }
   },
   "matches": [
-    {
-      "id": 1560320,
-      "code": "226",
-      "tournamentCode": "A2064CBE-3609-4248-82A6-A51558F34FB9",
-      "tournamentName": "HYLO Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 1,
-      "team1": {
-        "countryCode": "GER",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "78795",
-            "nameDisplay": "Stine KUESPERT",
-            "nameType": 0,
-            "firstName": "Stine",
-            "lastName": "KUESPERT",
-            "initials": "SK",
-            "nameShort": "S KUESPERT",
-            "nameShort2": "KUESPERT",
-            "slug": "stine-kuespert",
-            "countryCode": "GER",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
-            "avatar": {
-              "title": "Stine KUESPERT",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604899260/assets/players/thumbnail/78795.jpg"
-            }
-          },
-          {
-            "id": "98052",
-            "nameDisplay": "Isabel LOHAU",
-            "nameType": 0,
-            "firstName": "Isabel",
-            "lastName": "LOHAU",
-            "initials": "IL",
-            "nameShort": "I LOHAU",
-            "nameShort2": "LOHAU",
-            "slug": "isabel-lohau",
-            "countryCode": "GER",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
-            "avatar": {
-              "title": "Isabel LOHAU",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1637132670/assets/players/thumbnail/98052.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": "1",
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "F",
-      "matchStatusValue": "Finished",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WD",
-      "roundName": "Qual. QF",
-      "drawName": "WD - Qualification",
-      "drawCode": "7",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 4,
-      "matchTypeValue": "Women's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
     {
       "id": 1560354,
       "code": "227",
@@ -602,10 +517,99 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "matchTime": "2026-10-27 08:30:00",
+      "matchTimeUtc": "2026-10-27 07:30:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
+      "oopRound": "1",
+      "oopText": "Starting at 8:30 AM",
+      "oopTypeId": 1,
+      "eventName": "WD",
+      "roundName": "Qual. QF",
+      "drawName": "WD - Qualification",
+      "drawCode": "7",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Saarlandhalle",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 4,
+      "matchTypeValue": "Women's Doubles",
+      "matchTypeNo": null,
+      "reliability": 0,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1560320,
+      "code": "226",
+      "tournamentCode": "A2064CBE-3609-4248-82A6-A51558F34FB9",
+      "tournamentName": "HYLO Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 1,
+      "team1": {
+        "countryCode": "GER",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "78795",
+            "nameDisplay": "Stine KUESPERT",
+            "nameType": 0,
+            "firstName": "Stine",
+            "lastName": "KUESPERT",
+            "initials": "SK",
+            "nameShort": "S KUESPERT",
+            "nameShort2": "KUESPERT",
+            "slug": "stine-kuespert",
+            "countryCode": "GER",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
+            "avatar": {
+              "title": "Stine KUESPERT",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604899260/assets/players/thumbnail/78795.jpg"
+            }
+          },
+          {
+            "id": "98052",
+            "nameDisplay": "Isabel LOHAU",
+            "nameType": 0,
+            "firstName": "Isabel",
+            "lastName": "LOHAU",
+            "initials": "IL",
+            "nameShort": "I LOHAU",
+            "nameShort2": "LOHAU",
+            "slug": "isabel-lohau",
+            "countryCode": "GER",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
+            "avatar": {
+              "title": "Isabel LOHAU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1637132670/assets/players/thumbnail/98052.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": null,
+        "countryFlagUrl": null,
+        "teamId": null,
+        "teamName": null,
+        "players": [],
+        "linkName": null
+      },
+      "team1seed": "1",
+      "team2seed": null,
+      "matchTime": null,
+      "matchTimeUtc": null,
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": null,
       "oopText": null,
       "oopTypeId": null,
@@ -633,9 +637,9 @@
       "tournamentCode": "A2064CBE-3609-4248-82A6-A51558F34FB9",
       "tournamentName": "HYLO Open 2026",
       "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
+      "scoreStatus": 1,
+      "scoreStatusValue": "Walkover",
+      "winner": 1,
       "team1": {
         "countryCode": "AUT",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/AUT.png",
@@ -730,8 +734,8 @@
       "team2seed": null,
       "matchTime": null,
       "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": null,
       "oopText": null,
       "oopTypeId": null,
