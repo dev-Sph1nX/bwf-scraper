@@ -6,7 +6,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "NED",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/NED.png",
@@ -101,7 +101,7 @@
         "team2seed": null,
         "matchTime": "2026-10-27 08:30:00",
         "matchTimeUtc": "2026-10-27 07:30:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "1",
         "oopText": "Starting at 8:30 AM",
         "oopTypeId": 1,
@@ -112,12 +112,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 26,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 0,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 11,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 13,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -128,7 +141,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "CZE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CZE.png",
@@ -221,9 +234,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-27 09:20:00",
-        "matchTimeUtc": "2026-10-27 08:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-27 09:25:00",
+        "matchTimeUtc": "2026-10-27 08:25:00",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -234,12 +247,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 47,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 15,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 11,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 21,
+            "away": 19,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -250,7 +282,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "IND",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -343,9 +375,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-27 09:20:00",
-        "matchTimeUtc": "2026-10-27 08:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-27 09:10:00",
+        "matchTimeUtc": "2026-10-27 08:10:00",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -356,12 +388,31 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 50,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 9,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 22,
+            "away": 20,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 11,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -372,7 +423,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "FRA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
@@ -465,9 +516,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-27 10:10:00",
-        "matchTimeUtc": "2026-10-27 09:10:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-27 10:20:00",
+        "matchTimeUtc": "2026-10-27 09:20:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -478,12 +529,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 31,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 17,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -498,7 +562,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "NED",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/NED.png",
@@ -593,8 +657,8 @@
       "team2seed": null,
       "matchTime": "2026-10-27 08:30:00",
       "matchTimeUtc": "2026-10-27 07:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "1",
       "oopText": "Starting at 8:30 AM",
       "oopTypeId": 1,
@@ -606,14 +670,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 26,
+      "time": "00:26",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 0,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 11,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -624,7 +703,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "CZE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CZE.png",
@@ -717,10 +796,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-27 09:20:00",
-      "matchTimeUtc": "2026-10-27 08:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-27 09:25:00",
+      "matchTimeUtc": "2026-10-27 08:25:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -732,14 +811,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 47,
+      "time": "00:47",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 11,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 21,
+          "away": 19,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -750,7 +851,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "IND",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -843,10 +944,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-27 09:20:00",
-      "matchTimeUtc": "2026-10-27 08:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-27 09:10:00",
+      "matchTimeUtc": "2026-10-27 08:10:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -858,14 +959,36 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 50,
+      "time": "00:50",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 9,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 22,
+          "away": 20,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 11,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -876,7 +999,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "FRA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
@@ -969,10 +1092,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-27 10:10:00",
-      "matchTimeUtc": "2026-10-27 09:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-27 10:20:00",
+      "matchTimeUtc": "2026-10-27 09:20:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -984,14 +1107,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 31,
+      "time": "00:31",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 17,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     }
   ],
