@@ -2178,7 +2178,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -2271,9 +2271,9 @@
         },
         "team1seed": "1",
         "team2seed": null,
-        "matchTime": "2026-10-29 16:40:00",
-        "matchTimeUtc": "2026-10-29 15:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-29 16:15:00",
+        "matchTimeUtc": "2026-10-29 15:15:00",
+        "matchStatus": "F",
         "oopRound": "9",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2284,12 +2284,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 32,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 12,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -2300,7 +2313,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -2393,9 +2406,9 @@
         },
         "team1seed": "6",
         "team2seed": null,
-        "matchTime": "2026-10-29 15:50:00",
-        "matchTimeUtc": "2026-10-29 14:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-29 15:55:00",
+        "matchTimeUtc": "2026-10-29 14:55:00",
+        "matchStatus": "F",
         "oopRound": "8",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2406,12 +2419,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 33,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 16,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -2422,7 +2448,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "INA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
@@ -2515,12 +2541,12 @@
         },
         "team1seed": "3",
         "team2seed": null,
-        "matchTime": "2026-10-29 19:10:00",
-        "matchTimeUtc": "2026-10-29 18:10:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-29 20:30:00",
+        "matchTimeUtc": "2026-10-29 19:30:00",
+        "matchStatus": "F",
         "oopRound": "12",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "R16",
         "drawName": "WD",
@@ -2528,12 +2554,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 35,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -2544,7 +2583,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "USA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
@@ -2637,12 +2676,12 @@
         },
         "team1seed": "7",
         "team2seed": null,
-        "matchTime": "2026-10-29 20:00:00",
-        "matchTimeUtc": "2026-10-29 19:00:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-29 19:05:00",
+        "matchTimeUtc": "2026-10-29 18:05:00",
+        "matchStatus": "F",
         "oopRound": "13",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "R16",
         "drawName": "WD",
@@ -2650,12 +2689,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 40,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 8,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 23,
+            "away": 21,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -2666,7 +2718,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "MAS",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -2759,9 +2811,9 @@
         },
         "team1seed": null,
         "team2seed": "8",
-        "matchTime": "2026-10-29 11:40:00",
-        "matchTimeUtc": "2026-10-29 10:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-29 12:25:00",
+        "matchTimeUtc": "2026-10-29 11:25:00",
+        "matchStatus": "F",
         "oopRound": "3",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2772,12 +2824,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 64,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 11,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 20,
+            "away": 22,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -2788,7 +2859,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "UKR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/UKR.png",
@@ -2881,9 +2952,9 @@
         },
         "team1seed": null,
         "team2seed": "4",
-        "matchTime": "2026-10-29 15:50:00",
-        "matchTimeUtc": "2026-10-29 14:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-29 15:40:00",
+        "matchTimeUtc": "2026-10-29 14:40:00",
+        "matchStatus": "F",
         "oopRound": "8",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2894,12 +2965,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 29,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 9,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 15,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -2910,7 +2994,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "ENG",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
@@ -3003,12 +3087,12 @@
         },
         "team1seed": null,
         "team2seed": "5",
-        "matchTime": "2026-10-29 20:00:00",
-        "matchTimeUtc": "2026-10-29 19:00:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-29 20:15:00",
+        "matchTimeUtc": "2026-10-29 19:15:00",
+        "matchStatus": "F",
         "oopRound": "13",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "R16",
         "drawName": "WD",
@@ -3016,12 +3100,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 35,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 11,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 15,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3032,7 +3129,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "DEN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
@@ -3125,12 +3222,12 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-29 19:10:00",
-        "matchTimeUtc": "2026-10-29 18:10:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-29 19:30:00",
+        "matchTimeUtc": "2026-10-29 18:30:00",
+        "matchStatus": "F",
         "oopRound": "12",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "R16",
         "drawName": "WD",
@@ -3138,12 +3235,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 34,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 13,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 9,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3156,41 +3266,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "96973",
+              "nameDisplay": "HSU Yin-Hui",
+              "nameType": 1,
+              "firstName": "Yin-Hui",
+              "lastName": "HSU",
+              "initials": "HY",
+              "nameShort": "HSU Y H ",
+              "nameShort2": "HSU",
+              "slug": "yin-hui-hsu",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Yin-Hui HSU",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356124/assets/players/thumbnail/96973.jpg"
+              }
+            },
+            {
+              "id": "69009",
+              "nameDisplay": "LIN Jhih Yun",
+              "nameType": 1,
+              "firstName": "Jhih Yun",
+              "lastName": "LIN",
+              "initials": "LJ",
+              "nameShort": "LIN J Y ",
+              "nameShort2": "LIN",
+              "slug": "jhih-yun-lin",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Jhih Yun LIN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "74561",
+              "nameDisplay": "HSU Ya Ching",
+              "nameType": 1,
+              "firstName": "Ya Ching",
+              "lastName": "HSU",
+              "initials": "HY",
+              "nameShort": "HSU Y C ",
+              "nameShort2": "HSU",
+              "slug": "ya-ching-hsu",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Ya Ching HSU",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897535/assets/players/thumbnail/74561.jpg"
+              }
+            },
+            {
+              "id": "65349",
+              "nameDisplay": "SUNG Yu-Hsuan",
+              "nameType": 1,
+              "firstName": "Yu-Hsuan",
+              "lastName": "SUNG",
+              "initials": "SY",
+              "nameShort": "SUNG Y H ",
+              "nameShort2": "SUNG",
+              "slug": "sung-yu-hsuan",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Yu-Hsuan SUNG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784087635/assets/players/thumbnail/65349.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team1seed": "1",
+        "team2seed": "6",
+        "matchTime": "2026-10-30 16:30:00",
+        "matchTimeUtc": "2026-10-30 15:30:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "5",
+        "oopText": "Court and time TBA",
+        "oopTypeId": 5,
         "eventName": "WD",
         "roundName": "QF",
         "drawName": "WD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Saarlandhalle",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": [],
         "isTeamMatch": false
@@ -3204,41 +3388,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "INA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "79664",
+              "nameDisplay": "Febriana Dwipuji KUSUMA",
+              "nameType": 0,
+              "firstName": "Febriana Dwipuji",
+              "lastName": "KUSUMA",
+              "initials": "FK",
+              "nameShort": "F KUSUMA",
+              "nameShort2": "KUSUMA",
+              "slug": "febriana-dwipuji-kusuma",
+              "countryCode": "INA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+              "avatar": {
+                "title": "Febriana Dwipuji KUSUMA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897782/assets/players/thumbnail/79664.jpg"
+              }
+            },
+            {
+              "id": "82364",
+              "nameDisplay": "Meilysa Trias PUSPITASARI",
+              "nameType": 0,
+              "firstName": "Meilysa Trias",
+              "lastName": "PUSPITASARI",
+              "initials": "MP",
+              "nameShort": "M PUSPITASARI",
+              "nameShort2": "PUSPITASARI",
+              "slug": "meilysa-trias-puspitasari",
+              "countryCode": "INA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+              "avatar": {
+                "title": "Meilysa Trias PUSPITASARI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1667177276/assets/players/thumbnail/82364.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "USA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "69091",
+              "nameDisplay": "Lauren LAM",
+              "nameType": 0,
+              "firstName": "Lauren",
+              "lastName": "LAM",
+              "initials": "LL",
+              "nameShort": "L LAM",
+              "nameShort2": "LAM",
+              "slug": "lauren-lam",
+              "countryCode": "USA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+              "avatar": {
+                "title": "Lauren LAM",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1675735492/assets/players/thumbnail/69091.jpg"
+              }
+            },
+            {
+              "id": "65708",
+              "nameDisplay": "Allison Quynh LEE",
+              "nameType": 0,
+              "firstName": "Allison Quynh",
+              "lastName": "LEE",
+              "initials": "AL",
+              "nameShort": "A LEE",
+              "nameShort2": "LEE",
+              "slug": "allison-quynh-lee",
+              "countryCode": "USA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+              "avatar": {
+                "title": "Allison Quynh LEE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1675734827/assets/players/thumbnail/65708.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team1seed": "3",
+        "team2seed": "7",
+        "matchTime": "2026-10-30 15:40:00",
+        "matchTimeUtc": "2026-10-30 14:40:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "4",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "QF",
         "drawName": "WD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Saarlandhalle",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": [],
         "isTeamMatch": false
@@ -3252,41 +3510,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "HKG",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "68015",
+              "nameDisplay": "YEUNG Nga Ting",
+              "nameType": 1,
+              "firstName": "Nga Ting",
+              "lastName": "YEUNG",
+              "initials": "YN",
+              "nameShort": "YEUNG N T ",
+              "nameShort2": "YEUNG",
+              "slug": "nga-ting-yeung",
+              "countryCode": "HKG",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+              "avatar": {
+                "title": "Nga Ting YEUNG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895439/assets/players/thumbnail/68015.jpg"
+              }
+            },
+            {
+              "id": "75864",
+              "nameDisplay": "YEUNG Pui Lam",
+              "nameType": 1,
+              "firstName": "Pui Lam",
+              "lastName": "YEUNG",
+              "initials": "YP",
+              "nameShort": "YEUNG P L ",
+              "nameShort2": "YEUNG",
+              "slug": "pui-lam-yeung",
+              "countryCode": "HKG",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+              "avatar": {
+                "title": "Pui Lam YEUNG",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356623/assets/players/thumbnail/75864.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "BUL",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "43840",
+              "nameDisplay": "Gabriela STOEVA",
+              "nameType": 0,
+              "firstName": "Gabriela",
+              "lastName": "STOEVA",
+              "initials": "GS",
+              "nameShort": "G STOEVA",
+              "nameShort2": "STOEVA",
+              "slug": "gabriela-stoeva",
+              "countryCode": "BUL",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
+              "avatar": {
+                "title": "Gabriela STOEVA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896208/assets/players/thumbnail/43840.jpg"
+              }
+            },
+            {
+              "id": "46169",
+              "nameDisplay": "Stefani STOEVA",
+              "nameType": 0,
+              "firstName": "Stefani",
+              "lastName": "STOEVA",
+              "initials": "SS",
+              "nameShort": "S STOEVA",
+              "nameShort2": "STOEVA",
+              "slug": "stefani-stoeva",
+              "countryCode": "BUL",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
+              "avatar": {
+                "title": "Stefani STOEVA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896206/assets/players/thumbnail/46169.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team1seed": "8",
+        "team2seed": "4",
+        "matchTime": "2026-10-30 18:00:00",
+        "matchTimeUtc": "2026-10-30 17:00:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "7",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "QF",
         "drawName": "WD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Saarlandhalle",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": [],
         "isTeamMatch": false
@@ -3300,41 +3632,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "INA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "67761",
+              "nameDisplay": "Amallia Cahaya PRATIWI",
+              "nameType": 0,
+              "firstName": "Amallia Cahaya",
+              "lastName": "PRATIWI",
+              "initials": "AP",
+              "nameShort": "A PRATIWI",
+              "nameShort2": "PRATIWI",
+              "slug": "amallia-cahaya-pratiwi",
+              "countryCode": "INA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+              "avatar": {
+                "title": "Amallia Cahaya PRATIWI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897780/assets/players/thumbnail/67761.jpg"
+              }
+            },
+            {
+              "id": "88097",
+              "nameDisplay": "Siti Fadia Silva RAMADHANTI",
+              "nameType": 0,
+              "firstName": "Siti Fadia Silva",
+              "lastName": "RAMADHANTI",
+              "initials": "SR",
+              "nameShort": "S RAMADHANTI",
+              "nameShort2": "RAMADHANTI",
+              "slug": "siti-fadia-silva-ramadhanti",
+              "countryCode": "INA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+              "avatar": {
+                "title": "Siti Fadia Silva RAMADHANTI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636509375/assets/players/thumbnail/88097.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "GER",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "78795",
+              "nameDisplay": "Stine KUESPERT",
+              "nameType": 0,
+              "firstName": "Stine",
+              "lastName": "KUESPERT",
+              "initials": "SK",
+              "nameShort": "S KUESPERT",
+              "nameShort2": "KUESPERT",
+              "slug": "stine-kuespert",
+              "countryCode": "GER",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
+              "avatar": {
+                "title": "Stine KUESPERT",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604899260/assets/players/thumbnail/78795.jpg"
+              }
+            },
+            {
+              "id": "98052",
+              "nameDisplay": "Isabel LOHAU",
+              "nameType": 0,
+              "firstName": "Isabel",
+              "lastName": "LOHAU",
+              "initials": "IL",
+              "nameShort": "I LOHAU",
+              "nameShort2": "LOHAU",
+              "slug": "isabel-lohau",
+              "countryCode": "GER",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
+              "avatar": {
+                "title": "Isabel LOHAU",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1637132670/assets/players/thumbnail/98052.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "5",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-10-30 17:20:00",
+        "matchTimeUtc": "2026-10-30 16:20:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "6",
+        "oopText": "Court and time TBA",
+        "oopTypeId": 5,
         "eventName": "WD",
         "roundName": "QF",
         "drawName": "WD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Saarlandhalle",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": [],
         "isTeamMatch": false
@@ -5764,7 +6170,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "DEN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
@@ -5857,13 +6263,13 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-29 19:10:00",
-      "matchTimeUtc": "2026-10-29 18:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-29 19:30:00",
+      "matchTimeUtc": "2026-10-29 18:30:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "12",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "WD",
       "roundName": "R16",
       "drawName": "WD",
@@ -5872,14 +6278,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 34,
+      "time": "00:34",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 9,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -5890,7 +6311,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "ENG",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
@@ -5983,13 +6404,13 @@
       },
       "team1seed": null,
       "team2seed": "5",
-      "matchTime": "2026-10-29 20:00:00",
-      "matchTimeUtc": "2026-10-29 19:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-29 20:15:00",
+      "matchTimeUtc": "2026-10-29 19:15:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "13",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "WD",
       "roundName": "R16",
       "drawName": "WD",
@@ -5998,14 +6419,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 35,
+      "time": "00:35",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 11,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 15,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6016,7 +6452,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "UKR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/UKR.png",
@@ -6109,10 +6545,10 @@
       },
       "team1seed": null,
       "team2seed": "4",
-      "matchTime": "2026-10-29 15:50:00",
-      "matchTimeUtc": "2026-10-29 14:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-29 15:40:00",
+      "matchTimeUtc": "2026-10-29 14:40:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "8",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6124,14 +6560,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 29,
+      "time": "00:29",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 9,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 15,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6142,7 +6593,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "MAS",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -6235,10 +6686,10 @@
       },
       "team1seed": null,
       "team2seed": "8",
-      "matchTime": "2026-10-29 11:40:00",
-      "matchTimeUtc": "2026-10-29 10:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-29 12:25:00",
+      "matchTimeUtc": "2026-10-29 11:25:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "3",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6250,14 +6701,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 64,
+      "time": "01:04",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 20,
+          "away": 22,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6268,7 +6741,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "USA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
@@ -6361,13 +6834,13 @@
       },
       "team1seed": "7",
       "team2seed": null,
-      "matchTime": "2026-10-29 20:00:00",
-      "matchTimeUtc": "2026-10-29 19:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-29 19:05:00",
+      "matchTimeUtc": "2026-10-29 18:05:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "13",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "WD",
       "roundName": "R16",
       "drawName": "WD",
@@ -6376,14 +6849,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 40,
+      "time": "00:40",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 8,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 23,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6394,7 +6882,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "INA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
@@ -6487,13 +6975,13 @@
       },
       "team1seed": "3",
       "team2seed": null,
-      "matchTime": "2026-10-29 19:10:00",
-      "matchTimeUtc": "2026-10-29 18:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-29 20:30:00",
+      "matchTimeUtc": "2026-10-29 19:30:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "12",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "WD",
       "roundName": "R16",
       "drawName": "WD",
@@ -6502,14 +6990,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 35,
+      "time": "00:35",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6520,7 +7023,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -6613,10 +7116,10 @@
       },
       "team1seed": "6",
       "team2seed": null,
-      "matchTime": "2026-10-29 15:50:00",
-      "matchTimeUtc": "2026-10-29 14:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-29 15:55:00",
+      "matchTimeUtc": "2026-10-29 14:55:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "8",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6628,14 +7131,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 33,
+      "time": "00:33",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6646,7 +7164,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -6739,15 +7257,156 @@
       },
       "team1seed": "1",
       "team2seed": null,
-      "matchTime": "2026-10-29 16:40:00",
-      "matchTimeUtc": "2026-10-29 15:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-29 16:15:00",
+      "matchTimeUtc": "2026-10-29 15:15:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "9",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "WD",
       "roundName": "R16",
+      "drawName": "WD",
+      "drawCode": "8",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Saarlandhalle",
+      "duration": 32,
+      "time": "00:32",
+      "matchOrder": null,
+      "matchTypeId": 4,
+      "matchTypeValue": "Women's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 12,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1560348,
+      "code": "241",
+      "tournamentCode": "A2064CBE-3609-4248-82A6-A51558F34FB9",
+      "tournamentName": "HYLO Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "96973",
+            "nameDisplay": "HSU Yin-Hui",
+            "nameType": 1,
+            "firstName": "Yin-Hui",
+            "lastName": "HSU",
+            "initials": "HY",
+            "nameShort": "HSU Y H ",
+            "nameShort2": "HSU",
+            "slug": "yin-hui-hsu",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Yin-Hui HSU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356124/assets/players/thumbnail/96973.jpg"
+            }
+          },
+          {
+            "id": "69009",
+            "nameDisplay": "LIN Jhih Yun",
+            "nameType": 1,
+            "firstName": "Jhih Yun",
+            "lastName": "LIN",
+            "initials": "LJ",
+            "nameShort": "LIN J Y ",
+            "nameShort2": "LIN",
+            "slug": "jhih-yun-lin",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Jhih Yun LIN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "74561",
+            "nameDisplay": "HSU Ya Ching",
+            "nameType": 1,
+            "firstName": "Ya Ching",
+            "lastName": "HSU",
+            "initials": "HY",
+            "nameShort": "HSU Y C ",
+            "nameShort2": "HSU",
+            "slug": "ya-ching-hsu",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Ya Ching HSU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897535/assets/players/thumbnail/74561.jpg"
+            }
+          },
+          {
+            "id": "65349",
+            "nameDisplay": "SUNG Yu-Hsuan",
+            "nameType": 1,
+            "firstName": "Yu-Hsuan",
+            "lastName": "SUNG",
+            "initials": "SY",
+            "nameShort": "SUNG Y H ",
+            "nameShort2": "SUNG",
+            "slug": "sung-yu-hsuan",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Yu-Hsuan SUNG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1784087635/assets/players/thumbnail/65349.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "1",
+      "team2seed": "6",
+      "matchTime": "2026-10-30 16:30:00",
+      "matchTimeUtc": "2026-10-30 15:30:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "5",
+      "oopText": "Court and time TBA",
+      "oopTypeId": 5,
+      "eventName": "WD",
+      "roundName": "QF",
       "drawName": "WD",
       "drawCode": "8",
       "courtName": "Court 2",
@@ -6765,58 +7424,6 @@
       "matches": []
     },
     {
-      "id": 1560348,
-      "code": "241",
-      "tournamentCode": "A2064CBE-3609-4248-82A6-A51558F34FB9",
-      "tournamentName": "HYLO Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WD",
-      "roundName": "QF",
-      "drawName": "WD",
-      "drawCode": "8",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 4,
-      "matchTypeValue": "Women's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
       "id": 1560353,
       "code": "242",
       "tournamentCode": "A2064CBE-3609-4248-82A6-A51558F34FB9",
@@ -6826,45 +7433,119 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "INA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "79664",
+            "nameDisplay": "Febriana Dwipuji KUSUMA",
+            "nameType": 0,
+            "firstName": "Febriana Dwipuji",
+            "lastName": "KUSUMA",
+            "initials": "FK",
+            "nameShort": "F KUSUMA",
+            "nameShort2": "KUSUMA",
+            "slug": "febriana-dwipuji-kusuma",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Febriana Dwipuji KUSUMA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897782/assets/players/thumbnail/79664.jpg"
+            }
+          },
+          {
+            "id": "82364",
+            "nameDisplay": "Meilysa Trias PUSPITASARI",
+            "nameType": 0,
+            "firstName": "Meilysa Trias",
+            "lastName": "PUSPITASARI",
+            "initials": "MP",
+            "nameShort": "M PUSPITASARI",
+            "nameShort2": "PUSPITASARI",
+            "slug": "meilysa-trias-puspitasari",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Meilysa Trias PUSPITASARI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1667177276/assets/players/thumbnail/82364.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "USA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "69091",
+            "nameDisplay": "Lauren LAM",
+            "nameType": 0,
+            "firstName": "Lauren",
+            "lastName": "LAM",
+            "initials": "LL",
+            "nameShort": "L LAM",
+            "nameShort2": "LAM",
+            "slug": "lauren-lam",
+            "countryCode": "USA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+            "avatar": {
+              "title": "Lauren LAM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1675735492/assets/players/thumbnail/69091.jpg"
+            }
+          },
+          {
+            "id": "65708",
+            "nameDisplay": "Allison Quynh LEE",
+            "nameType": 0,
+            "firstName": "Allison Quynh",
+            "lastName": "LEE",
+            "initials": "AL",
+            "nameShort": "A LEE",
+            "nameShort2": "LEE",
+            "slug": "allison-quynh-lee",
+            "countryCode": "USA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/USA.png",
+            "avatar": {
+              "title": "Allison Quynh LEE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1675734827/assets/players/thumbnail/65708.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "team1seed": "3",
+      "team2seed": "7",
+      "matchTime": "2026-10-30 15:40:00",
+      "matchTimeUtc": "2026-10-30 14:40:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "4",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "WD",
       "roundName": "QF",
       "drawName": "WD",
       "drawCode": "8",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Saarlandhalle",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 1,
       "score": [],
       "matches": []
     },
@@ -6878,45 +7559,119 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "HKG",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "68015",
+            "nameDisplay": "YEUNG Nga Ting",
+            "nameType": 1,
+            "firstName": "Nga Ting",
+            "lastName": "YEUNG",
+            "initials": "YN",
+            "nameShort": "YEUNG N T ",
+            "nameShort2": "YEUNG",
+            "slug": "nga-ting-yeung",
+            "countryCode": "HKG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+            "avatar": {
+              "title": "Nga Ting YEUNG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895439/assets/players/thumbnail/68015.jpg"
+            }
+          },
+          {
+            "id": "75864",
+            "nameDisplay": "YEUNG Pui Lam",
+            "nameType": 1,
+            "firstName": "Pui Lam",
+            "lastName": "YEUNG",
+            "initials": "YP",
+            "nameShort": "YEUNG P L ",
+            "nameShort2": "YEUNG",
+            "slug": "pui-lam-yeung",
+            "countryCode": "HKG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/HKG.png",
+            "avatar": {
+              "title": "Pui Lam YEUNG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356623/assets/players/thumbnail/75864.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "BUL",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "43840",
+            "nameDisplay": "Gabriela STOEVA",
+            "nameType": 0,
+            "firstName": "Gabriela",
+            "lastName": "STOEVA",
+            "initials": "GS",
+            "nameShort": "G STOEVA",
+            "nameShort2": "STOEVA",
+            "slug": "gabriela-stoeva",
+            "countryCode": "BUL",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
+            "avatar": {
+              "title": "Gabriela STOEVA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896208/assets/players/thumbnail/43840.jpg"
+            }
+          },
+          {
+            "id": "46169",
+            "nameDisplay": "Stefani STOEVA",
+            "nameType": 0,
+            "firstName": "Stefani",
+            "lastName": "STOEVA",
+            "initials": "SS",
+            "nameShort": "S STOEVA",
+            "nameShort2": "STOEVA",
+            "slug": "stefani-stoeva",
+            "countryCode": "BUL",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/BUL.png",
+            "avatar": {
+              "title": "Stefani STOEVA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896206/assets/players/thumbnail/46169.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "team1seed": "8",
+      "team2seed": "4",
+      "matchTime": "2026-10-30 18:00:00",
+      "matchTimeUtc": "2026-10-30 17:00:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "7",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "WD",
       "roundName": "QF",
       "drawName": "WD",
       "drawCode": "8",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Saarlandhalle",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 1,
       "score": [],
       "matches": []
     },
@@ -6930,45 +7685,119 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "INA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "67761",
+            "nameDisplay": "Amallia Cahaya PRATIWI",
+            "nameType": 0,
+            "firstName": "Amallia Cahaya",
+            "lastName": "PRATIWI",
+            "initials": "AP",
+            "nameShort": "A PRATIWI",
+            "nameShort2": "PRATIWI",
+            "slug": "amallia-cahaya-pratiwi",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Amallia Cahaya PRATIWI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897780/assets/players/thumbnail/67761.jpg"
+            }
+          },
+          {
+            "id": "88097",
+            "nameDisplay": "Siti Fadia Silva RAMADHANTI",
+            "nameType": 0,
+            "firstName": "Siti Fadia Silva",
+            "lastName": "RAMADHANTI",
+            "initials": "SR",
+            "nameShort": "S RAMADHANTI",
+            "nameShort2": "RAMADHANTI",
+            "slug": "siti-fadia-silva-ramadhanti",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Siti Fadia Silva RAMADHANTI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636509375/assets/players/thumbnail/88097.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "GER",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "78795",
+            "nameDisplay": "Stine KUESPERT",
+            "nameType": 0,
+            "firstName": "Stine",
+            "lastName": "KUESPERT",
+            "initials": "SK",
+            "nameShort": "S KUESPERT",
+            "nameShort2": "KUESPERT",
+            "slug": "stine-kuespert",
+            "countryCode": "GER",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
+            "avatar": {
+              "title": "Stine KUESPERT",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604899260/assets/players/thumbnail/78795.jpg"
+            }
+          },
+          {
+            "id": "98052",
+            "nameDisplay": "Isabel LOHAU",
+            "nameType": 0,
+            "firstName": "Isabel",
+            "lastName": "LOHAU",
+            "initials": "IL",
+            "nameShort": "I LOHAU",
+            "nameShort2": "LOHAU",
+            "slug": "isabel-lohau",
+            "countryCode": "GER",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/GER.png",
+            "avatar": {
+              "title": "Isabel LOHAU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1637132670/assets/players/thumbnail/98052.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "5",
       "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "matchTime": "2026-10-30 17:20:00",
+      "matchTimeUtc": "2026-10-30 16:20:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "6",
+      "oopText": "Court and time TBA",
+      "oopTypeId": 5,
       "eventName": "WD",
       "roundName": "QF",
       "drawName": "WD",
       "drawCode": "8",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Saarlandhalle",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 1,
       "score": [],
       "matches": []
     },
