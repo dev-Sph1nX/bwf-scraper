@@ -3269,7 +3269,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "MAS",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -3362,9 +3362,9 @@
         },
         "team1seed": null,
         "team2seed": "5",
-        "matchTime": "2026-10-30 18:50:00",
-        "matchTimeUtc": "2026-10-30 17:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-30 19:50:00",
+        "matchTimeUtc": "2026-10-30 18:50:00",
+        "matchStatus": "F",
         "oopRound": "8",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3375,12 +3375,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 30,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 16,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 17,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3391,7 +3404,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "DEN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
@@ -3484,12 +3497,12 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-10-30 17:20:00",
-        "matchTimeUtc": "2026-10-30 16:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-30 17:40:00",
+        "matchTimeUtc": "2026-10-30 16:40:00",
+        "matchStatus": "F",
         "oopRound": "6",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MD",
         "roundName": "QF",
         "drawName": "MD",
@@ -3497,12 +3510,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 28,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 13,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 11,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3513,7 +3539,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "FRA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
@@ -3606,12 +3632,12 @@
         },
         "team1seed": null,
         "team2seed": "3",
-        "matchTime": "2026-10-30 16:30:00",
-        "matchTimeUtc": "2026-10-30 15:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-30 16:55:00",
+        "matchTimeUtc": "2026-10-30 15:55:00",
+        "matchStatus": "F",
         "oopRound": "5",
-        "oopText": "Court and time TBA",
-        "oopTypeId": 5,
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MD",
         "roundName": "QF",
         "drawName": "MD",
@@ -3619,12 +3645,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 36,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 25,
+            "away": 23,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3635,7 +3674,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -3728,14 +3767,149 @@
         },
         "team1seed": null,
         "team2seed": "2",
-        "matchTime": "2026-10-30 17:10:00",
-        "matchTimeUtc": "2026-10-30 16:10:00",
-        "matchStatus": "N",
+        "matchTime": "2026-10-30 18:15:00",
+        "matchTimeUtc": "2026-10-30 17:15:00",
+        "matchStatus": "F",
         "oopRound": "6",
         "oopText": "Followed by",
         "oopTypeId": 0,
         "eventName": "MD",
         "roundName": "QF",
+        "drawName": "MD",
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Saarlandhalle",
+        "duration": 38,
+        "matchOrder": null,
+        "matchTypeId": 3,
+        "matchTypeValue": "Men's Doubles",
+        "reliability": 1,
+        "score": [
+          {
+            "set": 1,
+            "home": 18,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 14,
+            "away": 21,
+            "serve": 2
+          }
+        ],
+        "matches": [],
+        "isTeamMatch": false
+      }
+    },
+    "3-0": {
+      "match": {
+        "code": "164",
+        "tournamentCode": 5273,
+        "scoreStatus": 0,
+        "scoreStatusValue": "Normal",
+        "winner": 0,
+        "team1": {
+          "countryCode": "MAS",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+          "teamId": null,
+          "teamName": null,
+          "players": [
+            {
+              "id": "57397",
+              "nameDisplay": "Aaron TAI",
+              "nameType": 0,
+              "firstName": "Aaron",
+              "lastName": "TAI",
+              "initials": "AT",
+              "nameShort": "A TAI",
+              "nameShort2": "TAI",
+              "slug": "aaron-tai",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Aaron TAI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696905765/assets/players/thumbnail/57397.jpg"
+              }
+            },
+            {
+              "id": "88322",
+              "nameDisplay": "YAP Roy King",
+              "nameType": 1,
+              "firstName": "Roy King",
+              "lastName": "YAP",
+              "initials": "YR",
+              "nameShort": "YAP R K ",
+              "nameShort2": "YAP",
+              "slug": "Roy King-YAP",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Roy King YAP",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1654675882/assets/players/thumbnail/88322.jpg"
+              }
+            }
+          ],
+          "linkName": null
+        },
+        "team2": {
+          "countryCode": "DEN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+          "teamId": null,
+          "teamName": null,
+          "players": [
+            {
+              "id": "75049",
+              "nameDisplay": "Christian Faust KJÆR",
+              "nameType": 0,
+              "firstName": "Christian Faust",
+              "lastName": "KJÆR",
+              "initials": "CK",
+              "nameShort": "C KJÆR",
+              "nameShort2": "KJÆR",
+              "slug": "Christian Faust-KJÆR",
+              "countryCode": "DEN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+              "avatar": {
+                "title": "Christian Faust KJÆR",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+              }
+            },
+            {
+              "id": "64729",
+              "nameDisplay": "Rasmus KJÆR",
+              "nameType": 0,
+              "firstName": "Rasmus",
+              "lastName": "KJÆR",
+              "initials": "RK",
+              "nameShort": "R KJÆR",
+              "nameShort2": "KJÆR",
+              "slug": "rasmus-kjaer",
+              "countryCode": "DEN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+              "avatar": {
+                "title": "Rasmus KJÆR",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604899224/assets/players/thumbnail/64729.jpg"
+              }
+            }
+          ],
+          "linkName": null
+        },
+        "team1seed": null,
+        "team2seed": null,
+        "matchTime": "2026-10-31 19:50:00",
+        "matchTimeUtc": "2026-10-31 18:50:00",
+        "matchStatus": "N",
+        "oopRound": "8",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
+        "eventName": "MD",
+        "roundName": "SF",
         "drawName": "MD",
         "courtName": "Court 1",
         "courtCode": "1",
@@ -3751,54 +3925,6 @@
         "isTeamMatch": false
       }
     },
-    "3-0": {
-      "match": {
-        "code": "164",
-        "tournamentCode": 5273,
-        "scoreStatus": 0,
-        "scoreStatusValue": "Normal",
-        "winner": 0,
-        "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
-          "teamId": null,
-          "teamName": null,
-          "players": [],
-          "linkName": null
-        },
-        "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
-          "teamId": null,
-          "teamName": null,
-          "players": [],
-          "linkName": null
-        },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
-        "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
-        "eventName": "MD",
-        "roundName": "SF",
-        "drawName": "MD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
-        "duration": null,
-        "matchOrder": null,
-        "matchTypeId": 3,
-        "matchTypeValue": "Men's Doubles",
-        "reliability": null,
-        "score": [],
-        "matches": [],
-        "isTeamMatch": false
-      }
-    },
     "3-1": {
       "match": {
         "code": "165",
@@ -3807,41 +3933,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "FRA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "73323",
+              "nameDisplay": "Julien MAIO",
+              "nameType": 0,
+              "firstName": "Julien",
+              "lastName": "MAIO",
+              "initials": "JM",
+              "nameShort": "J MAIO",
+              "nameShort2": "MAIO",
+              "slug": "julien-maio",
+              "countryCode": "FRA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
+              "avatar": {
+                "title": "Julien MAIO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895508/assets/players/thumbnail/73323.jpg"
+              }
+            },
+            {
+              "id": "88264",
+              "nameDisplay": "William VILLEGER",
+              "nameType": 0,
+              "firstName": "William",
+              "lastName": "VILLEGER",
+              "initials": "WV",
+              "nameShort": "W VILLEGER",
+              "nameShort2": "VILLEGER",
+              "slug": "william-villeger",
+              "countryCode": "FRA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
+              "avatar": {
+                "title": "William VILLEGER",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897639/assets/players/thumbnail/88264.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "ENG",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "76278",
+              "nameDisplay": "Ben LANE",
+              "nameType": 0,
+              "firstName": "Ben",
+              "lastName": "LANE",
+              "initials": "BL",
+              "nameShort": "B LANE",
+              "nameShort2": "LANE",
+              "slug": "ben-lane",
+              "countryCode": "ENG",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
+              "avatar": {
+                "title": "Ben LANE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895527/assets/players/thumbnail/76278.jpg"
+              }
+            },
+            {
+              "id": "72478",
+              "nameDisplay": "Sean VENDY",
+              "nameType": 0,
+              "firstName": "Sean",
+              "lastName": "VENDY",
+              "initials": "SV",
+              "nameShort": "S VENDY",
+              "nameShort2": "VENDY",
+              "slug": "sean-vendy",
+              "countryCode": "ENG",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
+              "avatar": {
+                "title": "Sean VENDY",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896409/assets/players/thumbnail/72478.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team2seed": "2",
+        "matchTime": "2026-10-31 18:10:00",
+        "matchTimeUtc": "2026-10-31 17:10:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "6",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MD",
         "roundName": "SF",
         "drawName": "MD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Saarlandhalle",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": [],
         "isTeamMatch": false
@@ -7316,7 +7516,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "MAS",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -7409,10 +7609,10 @@
       },
       "team1seed": null,
       "team2seed": "5",
-      "matchTime": "2026-10-30 18:50:00",
-      "matchTimeUtc": "2026-10-30 17:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-30 19:50:00",
+      "matchTimeUtc": "2026-10-30 18:50:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "8",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7424,14 +7624,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 30,
+      "time": "00:30",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 17,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7442,7 +7657,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "DEN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
@@ -7535,13 +7750,13 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-10-30 17:20:00",
-      "matchTimeUtc": "2026-10-30 16:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-30 17:40:00",
+      "matchTimeUtc": "2026-10-30 16:40:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "6",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "MD",
       "roundName": "QF",
       "drawName": "MD",
@@ -7550,14 +7765,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 28,
+      "time": "00:28",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 11,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7568,7 +7798,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "FRA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
@@ -7661,13 +7891,13 @@
       },
       "team1seed": null,
       "team2seed": "3",
-      "matchTime": "2026-10-30 16:30:00",
-      "matchTimeUtc": "2026-10-30 15:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-30 16:55:00",
+      "matchTimeUtc": "2026-10-30 15:55:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "5",
-      "oopText": "Court and time TBA",
-      "oopTypeId": 5,
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "MD",
       "roundName": "QF",
       "drawName": "MD",
@@ -7676,14 +7906,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 36,
+      "time": "00:36",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 25,
+          "away": 23,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7694,7 +7939,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -7787,15 +8032,156 @@
       },
       "team1seed": null,
       "team2seed": "2",
-      "matchTime": "2026-10-30 17:10:00",
-      "matchTimeUtc": "2026-10-30 16:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-10-30 18:15:00",
+      "matchTimeUtc": "2026-10-30 17:15:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "6",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "MD",
       "roundName": "QF",
+      "drawName": "MD",
+      "drawCode": "6",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Saarlandhalle",
+      "duration": 38,
+      "time": "00:38",
+      "matchOrder": null,
+      "matchTypeId": 3,
+      "matchTypeValue": "Men's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 14,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1560242,
+      "code": "164",
+      "tournamentCode": "A2064CBE-3609-4248-82A6-A51558F34FB9",
+      "tournamentName": "HYLO Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "57397",
+            "nameDisplay": "Aaron TAI",
+            "nameType": 0,
+            "firstName": "Aaron",
+            "lastName": "TAI",
+            "initials": "AT",
+            "nameShort": "A TAI",
+            "nameShort2": "TAI",
+            "slug": "aaron-tai",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Aaron TAI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696905765/assets/players/thumbnail/57397.jpg"
+            }
+          },
+          {
+            "id": "88322",
+            "nameDisplay": "YAP Roy King",
+            "nameType": 1,
+            "firstName": "Roy King",
+            "lastName": "YAP",
+            "initials": "YR",
+            "nameShort": "YAP R K ",
+            "nameShort2": "YAP",
+            "slug": "Roy King-YAP",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Roy King YAP",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1654675882/assets/players/thumbnail/88322.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "DEN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "75049",
+            "nameDisplay": "Christian Faust KJÆR",
+            "nameType": 0,
+            "firstName": "Christian Faust",
+            "lastName": "KJÆR",
+            "initials": "CK",
+            "nameShort": "C KJÆR",
+            "nameShort2": "KJÆR",
+            "slug": "Christian Faust-KJÆR",
+            "countryCode": "DEN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+            "avatar": {
+              "title": "Christian Faust KJÆR",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          },
+          {
+            "id": "64729",
+            "nameDisplay": "Rasmus KJÆR",
+            "nameType": 0,
+            "firstName": "Rasmus",
+            "lastName": "KJÆR",
+            "initials": "RK",
+            "nameShort": "R KJÆR",
+            "nameShort2": "KJÆR",
+            "slug": "rasmus-kjaer",
+            "countryCode": "DEN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+            "avatar": {
+              "title": "Rasmus KJÆR",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604899224/assets/players/thumbnail/64729.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-10-31 19:50:00",
+      "matchTimeUtc": "2026-10-31 18:50:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "8",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "MD",
+      "roundName": "SF",
       "drawName": "MD",
       "drawCode": "6",
       "courtName": "Court 1",
@@ -7813,58 +8199,6 @@
       "matches": []
     },
     {
-      "id": 1560242,
-      "code": "164",
-      "tournamentCode": "A2064CBE-3609-4248-82A6-A51558F34FB9",
-      "tournamentName": "HYLO Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "MD",
-      "roundName": "SF",
-      "drawName": "MD",
-      "drawCode": "6",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 3,
-      "matchTypeValue": "Men's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
       "id": 1560249,
       "code": "165",
       "tournamentCode": "A2064CBE-3609-4248-82A6-A51558F34FB9",
@@ -7874,45 +8208,119 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "FRA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "73323",
+            "nameDisplay": "Julien MAIO",
+            "nameType": 0,
+            "firstName": "Julien",
+            "lastName": "MAIO",
+            "initials": "JM",
+            "nameShort": "J MAIO",
+            "nameShort2": "MAIO",
+            "slug": "julien-maio",
+            "countryCode": "FRA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
+            "avatar": {
+              "title": "Julien MAIO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895508/assets/players/thumbnail/73323.jpg"
+            }
+          },
+          {
+            "id": "88264",
+            "nameDisplay": "William VILLEGER",
+            "nameType": 0,
+            "firstName": "William",
+            "lastName": "VILLEGER",
+            "initials": "WV",
+            "nameShort": "W VILLEGER",
+            "nameShort2": "VILLEGER",
+            "slug": "william-villeger",
+            "countryCode": "FRA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/FRA.png",
+            "avatar": {
+              "title": "William VILLEGER",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604897639/assets/players/thumbnail/88264.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "ENG",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "76278",
+            "nameDisplay": "Ben LANE",
+            "nameType": 0,
+            "firstName": "Ben",
+            "lastName": "LANE",
+            "initials": "BL",
+            "nameShort": "B LANE",
+            "nameShort2": "LANE",
+            "slug": "ben-lane",
+            "countryCode": "ENG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
+            "avatar": {
+              "title": "Ben LANE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895527/assets/players/thumbnail/76278.jpg"
+            }
+          },
+          {
+            "id": "72478",
+            "nameDisplay": "Sean VENDY",
+            "nameType": 0,
+            "firstName": "Sean",
+            "lastName": "VENDY",
+            "initials": "SV",
+            "nameShort": "S VENDY",
+            "nameShort2": "VENDY",
+            "slug": "sean-vendy",
+            "countryCode": "ENG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
+            "avatar": {
+              "title": "Sean VENDY",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896409/assets/players/thumbnail/72478.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "team2seed": "2",
+      "matchTime": "2026-10-31 18:10:00",
+      "matchTimeUtc": "2026-10-31 17:10:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "6",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "MD",
       "roundName": "SF",
       "drawName": "MD",
       "drawCode": "6",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Saarlandhalle",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 1,
       "score": [],
       "matches": []
     },
