@@ -1,6 +1,6 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-10-31T19:59:27.521Z",
+ "fetchedAt": "2026-10-31T23:24:30.338Z",
  "tournamentSlug": "hylo-open",
  "books": [
   "betclic",
@@ -11,9 +11,9 @@
   "netbet"
  ],
  "stats": {
-  "scanned": 147,
-  "kept": 147,
-  "withOdds": 142,
+  "scanned": 150,
+  "kept": 150,
+  "withOdds": 145,
   "from": "2026-10-27",
   "to": "2026-10-31"
  },
@@ -8281,6 +8281,181 @@
      "away": {
       "opening": 1.72,
       "closing": 2.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "jZmN5g74",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "startUtc": "2026-10-31T19:10:00.000Z",
+   "home": {
+    "name": "Maio J./Villeger W.",
+    "country": "France",
+    "fsParticipantId": "4YVSHEvH"
+   },
+   "away": {
+    "name": "Lane B./Vendy S.",
+    "country": "Angleterre",
+    "fsParticipantId": "xnUzGh9T"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 3.6,
+      "closing": 3.4
+     },
+     "away": {
+      "opening": 1.13,
+      "closing": 1.15
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 3.6,
+      "closing": 3.1
+     },
+     "away": {
+      "opening": 1.2,
+      "closing": 1.16
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 3.4,
+      "closing": 3.45
+     },
+     "away": {
+      "opening": 1.18,
+      "closing": 1.2
+     }
+    }
+   }
+  },
+  {
+   "fsId": "OMbLReoL",
+   "disc": "WD",
+   "round": "Demi-finales",
+   "startUtc": "2026-10-31T20:15:00.000Z",
+   "home": {
+    "name": "Stoeva G./Stoeva S.",
+    "country": "Bulgarie",
+    "fsParticipantId": "tULFKVCl"
+   },
+   "away": {
+    "name": "Pratiwi A. C./Ramadhanti S. F. S.",
+    "country": "Indonésie",
+    "fsParticipantId": "EsKNI9s1"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 22,
+     "away": 24
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.15,
+      "closing": 2.2
+     },
+     "away": {
+      "opening": 1.52,
+      "closing": 1.52
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 2.1,
+      "closing": 2.15
+     },
+     "away": {
+      "opening": 1.5,
+      "closing": 1.5
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 2.07,
+      "closing": 2
+     },
+     "away": {
+      "opening": 1.47,
+      "closing": 1.51
+     }
+    }
+   }
+  },
+  {
+   "fsId": "zw0cxnat",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "startUtc": "2026-10-31T21:20:00.000Z",
+   "home": {
+    "name": "Tai A./Yap R. K.",
+    "country": "Malaisie",
+    "fsParticipantId": "bRqup7cc"
+   },
+   "away": {
+    "name": "Kjaer C. F./Kjaer R.",
+    "country": "Danemark",
+    "fsParticipantId": "WvrmroS9"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 1.5,
+      "closing": 1.43
+     },
+     "away": {
+      "opening": 2.1,
+      "closing": 2.1
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.52,
+      "closing": 1.42
+     },
+     "away": {
+      "opening": 2.15,
+      "closing": 2.05
      }
     }
    }
