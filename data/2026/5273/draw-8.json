@@ -3804,7 +3804,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -3899,7 +3899,7 @@
         "team2seed": "7",
         "matchTime": "2026-10-31 18:30:00",
         "matchTimeUtc": "2026-10-31 17:30:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Starting at 6:30 PM",
         "oopTypeId": 1,
@@ -3910,12 +3910,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 39,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 0,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 16,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 15,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -4019,8 +4032,8 @@
         },
         "team1seed": "4",
         "team2seed": "5",
-        "matchTime": "2026-10-31 19:00:00",
-        "matchTimeUtc": "2026-10-31 18:00:00",
+        "matchTime": "2026-10-31 20:45:00",
+        "matchTimeUtc": "2026-10-31 19:45:00",
         "matchStatus": "N",
         "oopRound": "7",
         "oopText": "Followed by",
@@ -4050,11 +4063,48 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "96973",
+              "nameDisplay": "HSU Yin-Hui",
+              "nameType": 1,
+              "firstName": "Yin-Hui",
+              "lastName": "HSU",
+              "initials": "HY",
+              "nameShort": "HSU Y H ",
+              "nameShort2": "HSU",
+              "slug": "yin-hui-hsu",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Yin-Hui HSU",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356124/assets/players/thumbnail/96973.jpg"
+              }
+            },
+            {
+              "id": "69009",
+              "nameDisplay": "LIN Jhih Yun",
+              "nameType": 1,
+              "firstName": "Jhih Yun",
+              "lastName": "LIN",
+              "initials": "LJ",
+              "nameShort": "LIN J Y ",
+              "nameShort2": "LIN",
+              "slug": "jhih-yun-lin",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Jhih Yun LIN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
@@ -4065,26 +4115,26 @@
           "players": [],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "1",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-11-01 16:30:00",
+        "matchTimeUtc": "2026-11-01 15:30:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "4",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "Final",
         "drawName": "WD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Saarlandhalle",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": [],
         "isTeamMatch": false
@@ -8069,7 +8119,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -8164,8 +8214,8 @@
       "team2seed": "7",
       "matchTime": "2026-10-31 18:30:00",
       "matchTimeUtc": "2026-10-31 17:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Starting at 6:30 PM",
       "oopTypeId": 1,
@@ -8177,14 +8227,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 39,
+      "time": "00:39",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 0,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 16,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -8288,8 +8353,8 @@
       },
       "team1seed": "4",
       "team2seed": "5",
-      "matchTime": "2026-10-31 19:00:00",
-      "matchTimeUtc": "2026-10-31 18:00:00",
+      "matchTime": "2026-10-31 20:45:00",
+      "matchTimeUtc": "2026-10-31 19:45:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "7",
@@ -8323,11 +8388,48 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "96973",
+            "nameDisplay": "HSU Yin-Hui",
+            "nameType": 1,
+            "firstName": "Yin-Hui",
+            "lastName": "HSU",
+            "initials": "HY",
+            "nameShort": "HSU Y H ",
+            "nameShort2": "HSU",
+            "slug": "yin-hui-hsu",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Yin-Hui HSU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356124/assets/players/thumbnail/96973.jpg"
+            }
+          },
+          {
+            "id": "69009",
+            "nameDisplay": "LIN Jhih Yun",
+            "nameType": 1,
+            "firstName": "Jhih Yun",
+            "lastName": "LIN",
+            "initials": "LJ",
+            "nameShort": "LIN J Y ",
+            "nameShort2": "LIN",
+            "slug": "jhih-yun-lin",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Jhih Yun LIN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
@@ -8338,30 +8440,30 @@
         "players": [],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "1",
       "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "matchTime": "2026-11-01 16:30:00",
+      "matchTimeUtc": "2026-11-01 15:30:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "4",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
       "eventName": "WD",
       "roundName": "Final",
       "drawName": "WD",
       "drawCode": "8",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Saarlandhalle",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 1,
       "score": [],
       "matches": []
     }

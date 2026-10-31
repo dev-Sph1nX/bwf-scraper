@@ -2832,7 +2832,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "THA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -2891,7 +2891,7 @@
         "team2seed": "8",
         "matchTime": "2026-10-31 14:00:00",
         "matchTimeUtc": "2026-10-31 13:00:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "1",
         "oopText": "Starting at 2:00 PM",
         "oopTypeId": 1,
@@ -2902,12 +2902,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 82,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 0,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 8,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 26,
+            "away": 28,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -2918,7 +2937,7 @@
         "tournamentCode": 5273,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "IND",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -2977,7 +2996,7 @@
         "team2seed": "2",
         "matchTime": "2026-10-31 14:10:00",
         "matchTimeUtc": "2026-10-31 13:10:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "1",
         "oopText": "Starting at 2:10 PM",
         "oopTypeId": 1,
@@ -2988,12 +3007,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Saarlandhalle",
-        "duration": null,
+        "duration": 38,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 0,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 13,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 16,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3006,41 +3038,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "DEN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "63437",
+              "nameDisplay": "Line Højmark KJAERSFELDT",
+              "nameType": 0,
+              "firstName": "Line Højmark",
+              "lastName": "KJAERSFELDT",
+              "initials": "LK",
+              "nameShort": "L KJAERSFELDT",
+              "nameShort2": "KJAERSFELDT",
+              "slug": "line-hojmark-kjaersfeldt",
+              "countryCode": "DEN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+              "avatar": {
+                "title": "Line Højmark KJAERSFELDT",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1634092546/assets/players/thumbnail/63437.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "IND",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "73173",
+              "nameDisplay": "PUSARLA V. Sindhu",
+              "nameType": 1,
+              "firstName": "V. Sindhu",
+              "lastName": "PUSARLA",
+              "initials": "PV",
+              "nameShort": "PUSARLA V S ",
+              "nameShort2": "PUSARLA",
+              "slug": "v-sindhu-pusarla",
+              "countryCode": "IND",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+              "avatar": {
+                "title": "V. Sindhu PUSARLA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627948657/assets/players/thumbnail/73173.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team1seed": "8",
+        "team2seed": "2",
+        "matchTime": "2026-11-01 14:00:00",
+        "matchTimeUtc": "2026-11-01 13:00:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "1",
+        "oopText": "Starting at 2:00 PM",
+        "oopTypeId": 1,
         "eventName": "WS",
         "roundName": "Final",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Saarlandhalle",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 0,
         "score": [],
         "matches": [],
         "isTeamMatch": false
@@ -6059,7 +6129,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "THA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/THA.png",
@@ -6118,8 +6188,8 @@
       "team2seed": "8",
       "matchTime": "2026-10-31 14:00:00",
       "matchTimeUtc": "2026-10-31 13:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "1",
       "oopText": "Starting at 2:00 PM",
       "oopTypeId": 1,
@@ -6131,14 +6201,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 82,
+      "time": "01:22",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 0,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 8,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 19,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 26,
+          "away": 28,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6149,7 +6241,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "IND",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -6208,8 +6300,8 @@
       "team2seed": "2",
       "matchTime": "2026-10-31 14:10:00",
       "matchTimeUtc": "2026-10-31 13:10:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "1",
       "oopText": "Starting at 2:10 PM",
       "oopTypeId": 1,
@@ -6221,14 +6313,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Saarlandhalle",
-      "duration": null,
-      "time": "00:00",
+      "duration": 38,
+      "time": "00:38",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 0,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 16,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6241,45 +6348,83 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "DEN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "63437",
+            "nameDisplay": "Line Højmark KJAERSFELDT",
+            "nameType": 0,
+            "firstName": "Line Højmark",
+            "lastName": "KJAERSFELDT",
+            "initials": "LK",
+            "nameShort": "L KJAERSFELDT",
+            "nameShort2": "KJAERSFELDT",
+            "slug": "line-hojmark-kjaersfeldt",
+            "countryCode": "DEN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/DEN.png",
+            "avatar": {
+              "title": "Line Højmark KJAERSFELDT",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1634092546/assets/players/thumbnail/63437.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "73173",
+            "nameDisplay": "PUSARLA V. Sindhu",
+            "nameType": 1,
+            "firstName": "V. Sindhu",
+            "lastName": "PUSARLA",
+            "initials": "PV",
+            "nameShort": "PUSARLA V S ",
+            "nameShort2": "PUSARLA",
+            "slug": "v-sindhu-pusarla",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "V. Sindhu PUSARLA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1627948657/assets/players/thumbnail/73173.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
+      "team1seed": "8",
+      "team2seed": "2",
+      "matchTime": "2026-11-01 14:00:00",
+      "matchTimeUtc": "2026-11-01 13:00:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
+      "oopRound": "1",
+      "oopText": "Starting at 2:00 PM",
+      "oopTypeId": 1,
       "eventName": "WS",
       "roundName": "Final",
       "drawName": "WS",
       "drawCode": "4",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Saarlandhalle",
       "duration": null,
       "time": "00:00",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
-      "reliability": null,
+      "reliability": 0,
       "score": [],
       "matches": []
     }
