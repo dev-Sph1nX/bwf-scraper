@@ -17,7 +17,7 @@
       "tournamentCount": 32
     },
     "2026": {
-      "fetchedAt": "2026-11-01T18:55:42.680Z",
+      "fetchedAt": "2026-11-03T23:58:44.934Z",
       "tournamentCount": 31
     }
   },
@@ -5653,42 +5653,92 @@
       "tournamentStatus": "future"
     },
     "2026/5597/1": {
-      "fetchedAt": "2026-11-01T18:55:47.671Z",
+      "fetchedAt": "2026-11-03T23:58:45.531Z",
       "matchCount": 12,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5597/2": {
-      "fetchedAt": "2026-11-01T18:55:48.119Z",
+      "fetchedAt": "2026-11-03T23:58:45.796Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5597/3": {
-      "fetchedAt": "2026-11-01T18:55:48.469Z",
+      "fetchedAt": "2026-11-03T23:58:46.135Z",
       "matchCount": 4,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5597/4": {
-      "fetchedAt": "2026-11-01T18:55:48.761Z",
+      "fetchedAt": "2026-11-03T23:58:46.427Z",
       "matchCount": 31,
-      "tournamentStatus": "future"
+      "tournamentStatus": "live"
     },
     "2026/5597/5": {
-      "fetchedAt": "2026-11-01T18:55:49.056Z",
+      "fetchedAt": "2026-11-03T23:58:46.751Z",
+      "matchCount": 4,
+      "tournamentStatus": "live"
+    },
+    "2026/5597/6": {
+      "fetchedAt": "2026-11-03T23:58:47.030Z",
+      "matchCount": 31,
+      "tournamentStatus": "live"
+    },
+    "2026/5597/7": {
+      "fetchedAt": "2026-11-03T23:58:47.380Z",
+      "matchCount": 31,
+      "tournamentStatus": "live"
+    },
+    "2026/5597/8": {
+      "fetchedAt": "2026-11-03T23:58:47.745Z",
+      "matchCount": 31,
+      "tournamentStatus": "live"
+    },
+    "2026/5216/1": {
+      "fetchedAt": "2026-11-03T23:58:48.463Z",
       "matchCount": 4,
       "tournamentStatus": "future"
     },
-    "2026/5597/6": {
-      "fetchedAt": "2026-11-01T18:55:49.341Z",
+    "2026/5216/2": {
+      "fetchedAt": "2026-11-03T23:58:48.741Z",
       "matchCount": 31,
       "tournamentStatus": "future"
     },
-    "2026/5597/7": {
-      "fetchedAt": "2026-11-01T18:55:49.632Z",
+    "2026/5216/3": {
+      "fetchedAt": "2026-11-03T23:58:49.046Z",
+      "matchCount": 4,
+      "tournamentStatus": "future"
+    },
+    "2026/5216/4": {
+      "fetchedAt": "2026-11-03T23:58:49.331Z",
       "matchCount": 31,
       "tournamentStatus": "future"
     },
-    "2026/5597/8": {
-      "fetchedAt": "2026-11-01T18:55:50.004Z",
+    "2026/5216/5": {
+      "fetchedAt": "2026-11-03T23:58:49.673Z",
+      "matchCount": 4,
+      "tournamentStatus": "future"
+    },
+    "2026/5216/6": {
+      "fetchedAt": "2026-11-03T23:58:49.963Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5216/7": {
+      "fetchedAt": "2026-11-03T23:58:50.325Z",
+      "matchCount": 4,
+      "tournamentStatus": "future"
+    },
+    "2026/5216/8": {
+      "fetchedAt": "2026-11-03T23:58:50.762Z",
+      "matchCount": 31,
+      "tournamentStatus": "future"
+    },
+    "2026/5216/9": {
+      "fetchedAt": "2026-11-03T23:58:51.137Z",
+      "matchCount": 4,
+      "tournamentStatus": "future"
+    },
+    "2026/5216/10": {
+      "fetchedAt": "2026-11-03T23:58:51.512Z",
       "matchCount": 31,
       "tournamentStatus": "future"
     }
@@ -8791,17 +8841,55 @@
       ]
     },
     "2026": {
-      "finishedAt": "2026-11-01T18:55:50.307Z",
+      "finishedAt": "2026-11-03T23:58:51.905Z",
       "stats": {
         "tournaments": 31,
         "drawsFetched": 18,
-        "drawsSkipped": 194,
+        "drawsSkipped": 204,
         "matches": 350
       },
       "items": [
         {
-          "id": 5273,
-          "name": "HYLO Open 2026",
+          "id": 5597,
+          "name": "YEOSU VICTOR Korea Open 2026",
+          "draws": [
+            {
+              "label": "MS - Qualification",
+              "matchCount": 12
+            },
+            {
+              "label": "MS",
+              "matchCount": 31
+            },
+            {
+              "label": "WS - Qualification",
+              "matchCount": 4
+            },
+            {
+              "label": "WS",
+              "matchCount": 31
+            },
+            {
+              "label": "MD - Qualification",
+              "matchCount": 4
+            },
+            {
+              "label": "MD",
+              "matchCount": 31
+            },
+            {
+              "label": "WD",
+              "matchCount": 31
+            },
+            {
+              "label": "XD",
+              "matchCount": 31
+            }
+          ]
+        },
+        {
+          "id": 5216,
+          "name": "Kumamoto Masters Japan 2026",
           "draws": [
             {
               "label": "MS - Qualification",
@@ -8838,44 +8926,6 @@
             {
               "label": "XD - Qualification",
               "matchCount": 4
-            },
-            {
-              "label": "XD",
-              "matchCount": 31
-            }
-          ]
-        },
-        {
-          "id": 5597,
-          "name": "YEOSU VICTOR Korea Open 2026",
-          "draws": [
-            {
-              "label": "MS - Qualification",
-              "matchCount": 12
-            },
-            {
-              "label": "MS",
-              "matchCount": 31
-            },
-            {
-              "label": "WS - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "WS",
-              "matchCount": 31
-            },
-            {
-              "label": "MD - Qualification",
-              "matchCount": 4
-            },
-            {
-              "label": "MD",
-              "matchCount": 31
-            },
-            {
-              "label": "WD",
-              "matchCount": 31
             },
             {
               "label": "XD",

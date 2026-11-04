@@ -4,9 +4,9 @@
       "match": {
         "code": "167",
         "tournamentCode": 5597,
-        "scoreStatus": 0,
-        "scoreStatusValue": "Normal",
-        "winner": 0,
+        "scoreStatus": 1,
+        "scoreStatusValue": "Walkover",
+        "winner": 2,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -101,7 +101,7 @@
         "team2seed": null,
         "matchTime": null,
         "matchTimeUtc": null,
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": null,
         "oopText": null,
         "oopTypeId": null,
@@ -128,7 +128,7 @@
         "tournamentCode": 5597,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "IND",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
@@ -221,25 +221,38 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
-        "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "matchTime": "2026-11-03 11:25:00",
+        "matchTimeUtc": "2026-11-03 02:25:00",
+        "matchStatus": "F",
+        "oopRound": "3",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MD",
         "roundName": "Qual. QF",
         "drawName": "MD - Qualification",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
-        "duration": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Jinnam Stadium",
+        "duration": 26,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
-        "reliability": null,
-        "score": [],
+        "reliability": 1,
+        "score": [
+          {
+            "set": 1,
+            "home": 14,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 5,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -250,7 +263,7 @@
         "tournamentCode": 5597,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -297,45 +310,45 @@
           "linkName": null
         },
         "team2": {
-          "countryCode": "MAS",
-          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
           "players": [
             {
-              "id": "61222",
-              "nameDisplay": "Bryan Jeremy GOONTING",
-              "nameType": 0,
-              "firstName": "Bryan Jeremy",
-              "lastName": "GOONTING",
-              "initials": "BG",
-              "nameShort": "B GOONTING",
-              "nameShort2": "GOONTING",
-              "slug": "bryan-jeremy-goonting",
-              "countryCode": "MAS",
+              "id": "91276",
+              "nameDisplay": "HYUN Su Min",
+              "nameType": 1,
+              "firstName": "Su Min",
+              "lastName": "HYUN",
+              "initials": "HS",
+              "nameShort": "HYUN S M ",
+              "nameShort2": "HYUN",
+              "slug": "su-min-hyun",
+              "countryCode": "KOR",
               "countryName": null,
-              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
               "avatar": {
-                "title": "Bryan Jeremy GOONTING",
-                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696905703/assets/players/thumbnail/61222.jpg"
+                "title": "Su Min HYUN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
               }
             },
             {
-              "id": "88642",
-              "nameDisplay": "Muhammad HAIKAL",
-              "nameType": 0,
-              "firstName": "Muhammad",
-              "lastName": "HAIKAL",
-              "initials": "MH",
-              "nameShort": "M HAIKAL",
-              "nameShort2": "HAIKAL",
-              "slug": "muhammad-haikal",
-              "countryCode": "MAS",
+              "id": "97335",
+              "nameDisplay": "LEE Sang Min",
+              "nameType": 1,
+              "firstName": "Sang Min",
+              "lastName": "LEE",
+              "initials": "LS",
+              "nameShort": "LEE S M ",
+              "nameShort2": "LEE",
+              "slug": "sang-min-lee",
+              "countryCode": "KOR",
               "countryName": null,
-              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
               "avatar": {
-                "title": "Muhammad HAIKAL",
-                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1654675847/assets/players/thumbnail/88642.jpg"
+                "title": "Sang Min LEE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
               }
             }
           ],
@@ -343,25 +356,44 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
-        "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "matchTime": "2026-11-03 11:45:00",
+        "matchTimeUtc": "2026-11-03 02:45:00",
+        "matchStatus": "F",
+        "oopRound": "4",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MD",
         "roundName": "Qual. QF",
         "drawName": "MD - Qualification",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
-        "duration": null,
+        "courtName": "Court 2",
+        "courtCode": "2",
+        "courtIndex": 1,
+        "locationName": "Jinnam Stadium",
+        "duration": 53,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
-        "reliability": null,
-        "score": [],
+        "reliability": 1,
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 18,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 18,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 17,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -372,7 +404,7 @@
         "tournamentCode": 5597,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "MAS",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -465,24 +497,24 @@
         },
         "team1seed": null,
         "team2seed": "2",
-        "matchTime": null,
-        "matchTimeUtc": null,
-        "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "matchTime": "2026-11-03 13:20:00",
+        "matchTimeUtc": "2026-11-03 04:20:00",
+        "matchStatus": "F",
+        "oopRound": "5",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MD",
         "roundName": "Qual. QF",
         "drawName": "MD - Qualification",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 3",
+        "courtCode": "3",
+        "courtIndex": 2,
+        "locationName": "Jinnam Stadium",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": [],
         "isTeamMatch": false
@@ -491,14 +523,429 @@
   },
   "matches": [
     {
-      "id": 1562251,
-      "code": "167",
+      "id": 1562271,
+      "code": "169",
       "tournamentCode": "3637F0DA-82DE-4E51-9E12-FE7BB9C79E36",
       "tournamentName": "YEOSU VICTOR Korea Open 2026",
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
+      "team1": {
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "59338",
+            "nameDisplay": "JIN Sung Ik",
+            "nameType": 1,
+            "firstName": "Sung Ik",
+            "lastName": "JIN",
+            "initials": "JS",
+            "nameShort": "JIN S I ",
+            "nameShort2": "JIN",
+            "slug": "sung-ik-jin",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Sung Ik JIN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          },
+          {
+            "id": "66034",
+            "nameDisplay": "LEE Hyeong Woo",
+            "nameType": 1,
+            "firstName": "Hyeong Woo",
+            "lastName": "LEE",
+            "initials": "LH",
+            "nameShort": "LEE H W ",
+            "nameShort2": "LEE",
+            "slug": "hyeong-woo-lee",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Hyeong Woo LEE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "91276",
+            "nameDisplay": "HYUN Su Min",
+            "nameType": 1,
+            "firstName": "Su Min",
+            "lastName": "HYUN",
+            "initials": "HS",
+            "nameShort": "HYUN S M ",
+            "nameShort2": "HYUN",
+            "slug": "su-min-hyun",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Su Min HYUN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          },
+          {
+            "id": "97335",
+            "nameDisplay": "LEE Sang Min",
+            "nameType": 1,
+            "firstName": "Sang Min",
+            "lastName": "LEE",
+            "initials": "LS",
+            "nameShort": "LEE S M ",
+            "nameShort2": "LEE",
+            "slug": "sang-min-lee",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Sang Min LEE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-11-03 11:45:00",
+      "matchTimeUtc": "2026-11-03 02:45:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "4",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "MD",
+      "roundName": "Qual. QF",
+      "drawName": "MD - Qualification",
+      "drawCode": "5",
+      "courtName": "Court 2",
+      "courtCode": "2",
+      "courtIndex": 1,
+      "locationName": "Jinnam Stadium",
+      "duration": 53,
+      "time": "00:53",
+      "matchOrder": null,
+      "matchTypeId": 3,
+      "matchTypeValue": "Men's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 17,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1562346,
+      "code": "168",
+      "tournamentCode": "3637F0DA-82DE-4E51-9E12-FE7BB9C79E36",
+      "tournamentName": "YEOSU VICTOR Korea Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 2,
+      "team1": {
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "58201",
+            "nameDisplay": "Achutaditya Rao DODDAVARAPU",
+            "nameType": 0,
+            "firstName": "Achutaditya Rao",
+            "lastName": "DODDAVARAPU",
+            "initials": "AD",
+            "nameShort": "A DODDAVARAPU",
+            "nameShort2": "DODDAVARAPU",
+            "slug": "achutaditya-rao-doddavarapu",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "Achutaditya Rao DODDAVARAPU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1791620470/assets/players/thumbnail/58201.jpg"
+            }
+          },
+          {
+            "id": "54044",
+            "nameDisplay": "POCHANA Arjun Reddy",
+            "nameType": 1,
+            "firstName": "Arjun Reddy",
+            "lastName": "POCHANA",
+            "initials": "PA",
+            "nameShort": "POCHANA A R ",
+            "nameShort2": "POCHANA",
+            "slug": "pochana-arjun-reddy",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "Arjun Reddy POCHANA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1791620376/assets/players/thumbnail/54044.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": null,
+        "countryFlagUrl": null,
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "56990",
+            "nameDisplay": "WANG Yue Hang",
+            "nameType": 1,
+            "firstName": "Yue Hang",
+            "lastName": "WANG",
+            "initials": "WY",
+            "nameShort": "WANG Y H ",
+            "nameShort2": "WANG",
+            "slug": "yue-hang-wang",
+            "countryCode": "ENG",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
+            "avatar": {
+              "title": "Yue Hang WANG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
+            }
+          },
+          {
+            "id": "42435",
+            "nameDisplay": "Zewei XIE",
+            "nameType": 0,
+            "firstName": "Zewei",
+            "lastName": "XIE",
+            "initials": "ZX",
+            "nameShort": "Z XIE",
+            "nameShort2": "XIE",
+            "slug": "zewei-xie",
+            "countryCode": "AUS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/AUS.png",
+            "avatar": {
+              "title": "Zewei XIE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1787888979/assets/players/thumbnail/42435.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": null,
+      "matchTime": "2026-11-03 11:25:00",
+      "matchTimeUtc": "2026-11-03 02:25:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "3",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "MD",
+      "roundName": "Qual. QF",
+      "drawName": "MD - Qualification",
+      "drawCode": "5",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Jinnam Stadium",
+      "duration": 26,
+      "time": "00:26",
+      "matchOrder": null,
+      "matchTypeId": 3,
+      "matchTypeValue": "Men's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 14,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 5,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1562378,
+      "code": "170",
+      "tournamentCode": "3637F0DA-82DE-4E51-9E12-FE7BB9C79E36",
+      "tournamentName": "YEOSU VICTOR Korea Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 1,
+      "team1": {
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "77752",
+            "nameDisplay": "LIM Tze Jian",
+            "nameType": 1,
+            "firstName": "Tze Jian",
+            "lastName": "LIM",
+            "initials": "LT",
+            "nameShort": "LIM T J ",
+            "nameShort2": "LIM",
+            "slug": "lim-tze-jian",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Tze Jian LIM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1783994517/assets/players/thumbnail/77752.jpg"
+            }
+          },
+          {
+            "id": "71294",
+            "nameDisplay": "WONG Tien Ci",
+            "nameType": 1,
+            "firstName": "Tien Ci",
+            "lastName": "WONG",
+            "initials": "WT",
+            "nameShort": "WONG T C ",
+            "nameShort2": "WONG",
+            "slug": "tien-ci-wong",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Tien Ci WONG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658498863/assets/players/thumbnail/71294.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "56350",
+            "nameDisplay": "CHOONG Hon Jian",
+            "nameType": 1,
+            "firstName": "Hon Jian",
+            "lastName": "CHOONG",
+            "initials": "CH",
+            "nameShort": "CHOONG H J ",
+            "nameShort2": "CHOONG",
+            "slug": "hon-jian-choong",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Hon Jian CHOONG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896521/assets/players/thumbnail/56350.jpg"
+            }
+          },
+          {
+            "id": "98812",
+            "nameDisplay": "WONG Vin Sean",
+            "nameType": 1,
+            "firstName": "Vin Sean",
+            "lastName": "WONG",
+            "initials": "WV",
+            "nameShort": "WONG V S ",
+            "nameShort2": "WONG",
+            "slug": "wong-vin-sean",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Vin Sean WONG",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1790749348/assets/players/thumbnail/98812.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": null,
+      "team2seed": "2",
+      "matchTime": "2026-11-03 13:20:00",
+      "matchTimeUtc": "2026-11-03 04:20:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "5",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "MD",
+      "roundName": "Qual. QF",
+      "drawName": "MD - Qualification",
+      "drawCode": "5",
+      "courtName": "Court 3",
+      "courtCode": "3",
+      "courtIndex": 2,
+      "locationName": "Jinnam Stadium",
+      "duration": null,
+      "time": "00:00",
+      "matchOrder": null,
+      "matchTypeId": 3,
+      "matchTypeValue": "Men's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [],
+      "matches": []
+    },
+    {
+      "id": 1562251,
+      "code": "167",
+      "tournamentCode": "3637F0DA-82DE-4E51-9E12-FE7BB9C79E36",
+      "tournamentName": "YEOSU VICTOR Korea Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 1,
+      "scoreStatusValue": "Walkover",
+      "winner": 2,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -593,386 +1040,8 @@
       "team2seed": null,
       "matchTime": null,
       "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "MD",
-      "roundName": "Qual. QF",
-      "drawName": "MD - Qualification",
-      "drawCode": "5",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 3,
-      "matchTypeValue": "Men's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1562346,
-      "code": "168",
-      "tournamentCode": "3637F0DA-82DE-4E51-9E12-FE7BB9C79E36",
-      "tournamentName": "YEOSU VICTOR Korea Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "IND",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "58201",
-            "nameDisplay": "Achutaditya Rao DODDAVARAPU",
-            "nameType": 0,
-            "firstName": "Achutaditya Rao",
-            "lastName": "DODDAVARAPU",
-            "initials": "AD",
-            "nameShort": "A DODDAVARAPU",
-            "nameShort2": "DODDAVARAPU",
-            "slug": "achutaditya-rao-doddavarapu",
-            "countryCode": "IND",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-            "avatar": {
-              "title": "Achutaditya Rao DODDAVARAPU",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1791620470/assets/players/thumbnail/58201.jpg"
-            }
-          },
-          {
-            "id": "54044",
-            "nameDisplay": "POCHANA Arjun Reddy",
-            "nameType": 1,
-            "firstName": "Arjun Reddy",
-            "lastName": "POCHANA",
-            "initials": "PA",
-            "nameShort": "POCHANA A R ",
-            "nameShort2": "POCHANA",
-            "slug": "pochana-arjun-reddy",
-            "countryCode": "IND",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
-            "avatar": {
-              "title": "Arjun Reddy POCHANA",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1791620376/assets/players/thumbnail/54044.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "56990",
-            "nameDisplay": "WANG Yue Hang",
-            "nameType": 1,
-            "firstName": "Yue Hang",
-            "lastName": "WANG",
-            "initials": "WY",
-            "nameShort": "WANG Y H ",
-            "nameShort2": "WANG",
-            "slug": "yue-hang-wang",
-            "countryCode": "ENG",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/ENG.png",
-            "avatar": {
-              "title": "Yue Hang WANG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
-            }
-          },
-          {
-            "id": "42435",
-            "nameDisplay": "Zewei XIE",
-            "nameType": 0,
-            "firstName": "Zewei",
-            "lastName": "XIE",
-            "initials": "ZX",
-            "nameShort": "Z XIE",
-            "nameShort2": "XIE",
-            "slug": "zewei-xie",
-            "countryCode": "AUS",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/AUS.png",
-            "avatar": {
-              "title": "Zewei XIE",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1787888979/assets/players/thumbnail/42435.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "MD",
-      "roundName": "Qual. QF",
-      "drawName": "MD - Qualification",
-      "drawCode": "5",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 3,
-      "matchTypeValue": "Men's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1562271,
-      "code": "169",
-      "tournamentCode": "3637F0DA-82DE-4E51-9E12-FE7BB9C79E36",
-      "tournamentName": "YEOSU VICTOR Korea Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "KOR",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "59338",
-            "nameDisplay": "JIN Sung Ik",
-            "nameType": 1,
-            "firstName": "Sung Ik",
-            "lastName": "JIN",
-            "initials": "JS",
-            "nameShort": "JIN S I ",
-            "nameShort2": "JIN",
-            "slug": "sung-ik-jin",
-            "countryCode": "KOR",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
-            "avatar": {
-              "title": "Sung Ik JIN",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
-            }
-          },
-          {
-            "id": "66034",
-            "nameDisplay": "LEE Hyeong Woo",
-            "nameType": 1,
-            "firstName": "Hyeong Woo",
-            "lastName": "LEE",
-            "initials": "LH",
-            "nameShort": "LEE H W ",
-            "nameShort2": "LEE",
-            "slug": "hyeong-woo-lee",
-            "countryCode": "KOR",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
-            "avatar": {
-              "title": "Hyeong Woo LEE",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_male.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "MAS",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "61222",
-            "nameDisplay": "Bryan Jeremy GOONTING",
-            "nameType": 0,
-            "firstName": "Bryan Jeremy",
-            "lastName": "GOONTING",
-            "initials": "BG",
-            "nameShort": "B GOONTING",
-            "nameShort2": "GOONTING",
-            "slug": "bryan-jeremy-goonting",
-            "countryCode": "MAS",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-            "avatar": {
-              "title": "Bryan Jeremy GOONTING",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696905703/assets/players/thumbnail/61222.jpg"
-            }
-          },
-          {
-            "id": "88642",
-            "nameDisplay": "Muhammad HAIKAL",
-            "nameType": 0,
-            "firstName": "Muhammad",
-            "lastName": "HAIKAL",
-            "initials": "MH",
-            "nameShort": "M HAIKAL",
-            "nameShort2": "HAIKAL",
-            "slug": "muhammad-haikal",
-            "countryCode": "MAS",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-            "avatar": {
-              "title": "Muhammad HAIKAL",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1654675847/assets/players/thumbnail/88642.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "MD",
-      "roundName": "Qual. QF",
-      "drawName": "MD - Qualification",
-      "drawCode": "5",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 3,
-      "matchTypeValue": "Men's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1562378,
-      "code": "170",
-      "tournamentCode": "3637F0DA-82DE-4E51-9E12-FE7BB9C79E36",
-      "tournamentName": "YEOSU VICTOR Korea Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": "MAS",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "77752",
-            "nameDisplay": "LIM Tze Jian",
-            "nameType": 1,
-            "firstName": "Tze Jian",
-            "lastName": "LIM",
-            "initials": "LT",
-            "nameShort": "LIM T J ",
-            "nameShort2": "LIM",
-            "slug": "lim-tze-jian",
-            "countryCode": "MAS",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-            "avatar": {
-              "title": "Tze Jian LIM",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1783994517/assets/players/thumbnail/77752.jpg"
-            }
-          },
-          {
-            "id": "71294",
-            "nameDisplay": "WONG Tien Ci",
-            "nameType": 1,
-            "firstName": "Tien Ci",
-            "lastName": "WONG",
-            "initials": "WT",
-            "nameShort": "WONG T C ",
-            "nameShort2": "WONG",
-            "slug": "tien-ci-wong",
-            "countryCode": "MAS",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-            "avatar": {
-              "title": "Tien Ci WONG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1658498863/assets/players/thumbnail/71294.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": "MAS",
-        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-        "teamId": null,
-        "teamName": null,
-        "players": [
-          {
-            "id": "56350",
-            "nameDisplay": "CHOONG Hon Jian",
-            "nameType": 1,
-            "firstName": "Hon Jian",
-            "lastName": "CHOONG",
-            "initials": "CH",
-            "nameShort": "CHOONG H J ",
-            "nameShort2": "CHOONG",
-            "slug": "hon-jian-choong",
-            "countryCode": "MAS",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-            "avatar": {
-              "title": "Hon Jian CHOONG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896521/assets/players/thumbnail/56350.jpg"
-            }
-          },
-          {
-            "id": "98812",
-            "nameDisplay": "WONG Vin Sean",
-            "nameType": 1,
-            "firstName": "Vin Sean",
-            "lastName": "WONG",
-            "initials": "WV",
-            "nameShort": "WONG V S ",
-            "nameShort2": "WONG",
-            "slug": "wong-vin-sean",
-            "countryCode": "MAS",
-            "countryName": null,
-            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
-            "avatar": {
-              "title": "Vin Sean WONG",
-              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1790749348/assets/players/thumbnail/98812.jpg"
-            }
-          }
-        ],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": "2",
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": null,
       "oopText": null,
       "oopTypeId": null,
