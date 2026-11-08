@@ -1,6 +1,6 @@
 {
  "source": "flashscore.fr (feed embarqué + GraphQL oce)",
- "fetchedAt": "2026-11-07T14:03:19.568Z",
+ "fetchedAt": "2026-11-08T10:22:55.300Z",
  "tournamentSlug": "open-de-coree",
  "books": [
   "betclic",
@@ -11,11 +11,11 @@
   "netbet"
  ],
  "stats": {
-  "scanned": 138,
-  "kept": 68,
-  "withOdds": 55,
+  "scanned": 143,
+  "kept": 143,
+  "withOdds": 127,
   "from": "2026-11-03",
-  "to": "2026-11-04"
+  "to": "2026-11-08"
  },
  "matches": [
   {
@@ -3445,6 +3445,4170 @@
      "away": {
       "opening": 1.51,
       "closing": 1.73
+     }
+    }
+   }
+  },
+  {
+   "fsId": "8Y2txHGt",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T01:05:00.000Z",
+   "home": {
+    "name": "Cheng X./Zhang C.",
+    "country": "Chine",
+    "fsParticipantId": "xYAUJbdK"
+   },
+   "away": {
+    "name": "Chen T. J./Chan W. T.",
+    "country": "Malaisie",
+    "fsParticipantId": "n7d0ExKs"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 7
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.18,
+      "closing": 1.1
+     },
+     "away": {
+      "opening": 3.6,
+      "closing": 3.75
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.17,
+      "closing": 1.11
+     },
+     "away": {
+      "opening": 3.4,
+      "closing": 4.4
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.13,
+      "closing": 1.08
+     },
+     "away": {
+      "opening": 3.6,
+      "closing": 4.2
+     }
+    }
+   }
+  },
+  {
+   "fsId": "IVUvciS1",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T01:10:00.000Z",
+   "home": {
+    "name": "Panev E./Stoeva G.",
+    "country": "Bulgarie",
+    "fsParticipantId": "ERZg9PIt"
+   },
+   "away": {
+    "name": "Guo X. W./Chen F. H.",
+    "country": "Chine",
+    "fsParticipantId": "Miw273mg"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 8,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 8.5,
+      "closing": 5.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 23,
+      "closing": 23
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 8,
+      "closing": 8
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Qu0VbN0J",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T01:10:00.000Z",
+   "home": {
+    "name": "Jiang Z. B./Wei Y. X.",
+    "country": "Chine",
+    "fsParticipantId": "xGw7MVoT"
+   },
+   "away": {
+    "name": "Kawabe H./Ishikawa K.",
+    "country": "Japon",
+    "fsParticipantId": "8bUxH99j"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 10,
+      "closing": 9.25
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.02,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 7,
+      "closing": 5
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 6.25,
+      "closing": 7
+     }
+    }
+   }
+  },
+  {
+   "fsId": "d8439eUp",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T01:40:00.000Z",
+   "home": {
+    "name": "Hoo P. R./Lai P. J.",
+    "country": "Malaisie",
+    "fsParticipantId": "GKqXJWQN"
+   },
+   "away": {
+    "name": "Jin S. I./Lee S. H.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "n3z3EAlo"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.2,
+      "closing": 1.15
+     },
+     "away": {
+      "opening": 3.4,
+      "closing": 3.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "fmjtjJb5",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T01:50:00.000Z",
+   "home": {
+    "name": "Wang P.",
+    "country": "Taïwan",
+    "fsParticipantId": "dzBhBtS7"
+   },
+   "away": {
+    "name": "Farhan A.",
+    "country": "Indonésie",
+    "fsParticipantId": "2XcvZqKE"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 25,
+     "away": 23
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 6.25,
+      "closing": 4.75
+     },
+     "away": {
+      "opening": 1.04,
+      "closing": 1.03
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 5.7,
+      "closing": 8
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.02
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 7.25,
+      "closing": 7.25
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "YBKxB85k",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T01:50:00.000Z",
+   "home": {
+    "name": "Koga A./Saito N.",
+    "country": "Japon",
+    "fsParticipantId": "xzErRmYj"
+   },
+   "away": {
+    "name": "He Z./Sun L. C.",
+    "country": "Taïwan",
+    "fsParticipantId": "4t6UliQc"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 6
+    },
+    {
+     "home": 21,
+     "away": 10
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.03
+     },
+     "away": {
+      "opening": 6,
+      "closing": 4.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "QPDXEH6N",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T02:35:00.000Z",
+   "home": {
+    "name": "Hyun S. M./Moon I. S.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "xArHNERb"
+   },
+   "away": {
+    "name": "Watanabe Y./Taguchi M.",
+    "country": "Japon",
+    "fsParticipantId": "r7oPLhdB"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 7,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "GfdjsbZG",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T02:35:00.000Z",
+   "home": {
+    "name": "Lee S. M./Park J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "jsKAw94U"
+   },
+   "away": {
+    "name": "Zhu Y. J./Li Q.",
+    "country": "Chine",
+    "fsParticipantId": "6gfKcCkn"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 10,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "v3zzz787",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T03:05:00.000Z",
+   "home": {
+    "name": "Hu Z. A.",
+    "country": "Chine",
+    "fsParticipantId": "fTPKieVH"
+   },
+   "away": {
+    "name": "Lee C. Y.",
+    "country": "Hong Kong",
+    "fsParticipantId": "StOSkZaU"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 7,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.55,
+      "closing": 1.48
+     },
+     "away": {
+      "opening": 2.1,
+      "closing": 1.95
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.52,
+      "closing": 1.54
+     },
+     "away": {
+      "opening": 2.05,
+      "closing": 2.1
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.48,
+      "closing": 1.48
+     },
+     "away": {
+      "opening": 2.05,
+      "closing": 2.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "G0DAnPzG",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T03:15:00.000Z",
+   "home": {
+    "name": "Puspitasari M. A.",
+    "country": "Indonésie",
+    "fsParticipantId": "h8PmY9YR"
+   },
+   "away": {
+    "name": "Lin H. T.",
+    "country": "Taïwan",
+    "fsParticipantId": "8YUISmdk"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 3.2,
+      "closing": 2.5
+     },
+     "away": {
+      "opening": 1.2,
+      "closing": 1.38
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 3.45,
+      "closing": 2.45
+     },
+     "away": {
+      "opening": 1.15,
+      "closing": 1.32
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 3.4,
+      "closing": 2.3
+     },
+     "away": {
+      "opening": 1.22,
+      "closing": 1.33
+     }
+    }
+   }
+  },
+  {
+   "fsId": "z1j6rYe3",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T03:20:00.000Z",
+   "home": {
+    "name": "Yoo T. B.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "foZsTW9E"
+   },
+   "away": {
+    "name": "Okimoto Y.",
+    "country": "Japon",
+    "fsParticipantId": "SCnkRAvR"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 25,
+     "away": 27
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.92,
+      "closing": 2.1
+     },
+     "away": {
+      "opening": 1.55,
+      "closing": 1.45
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 2.1,
+      "closing": 2.05
+     },
+     "away": {
+      "opening": 1.55,
+      "closing": 1.45
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 2.1,
+      "closing": 2.15
+     },
+     "away": {
+      "opening": 1.49,
+      "closing": 1.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "02ljsXoo",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T04:10:00.000Z",
+   "home": {
+    "name": "Zhu X. C.",
+    "country": "Chine",
+    "fsParticipantId": "EkEMt9jR"
+   },
+   "away": {
+    "name": "Lai V.",
+    "country": "Canada",
+    "fsParticipantId": "AZEiymEl"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3,
+      "closing": 2.65
+     },
+     "away": {
+      "opening": 1.28,
+      "closing": 1.25
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 2.97,
+      "closing": 2.97
+     },
+     "away": {
+      "opening": 1.21,
+      "closing": 1.21
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 2.85,
+      "closing": 2.9
+     },
+     "away": {
+      "opening": 1.25,
+      "closing": 1.28
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ngZJ0uxp",
+   "disc": "XD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T04:30:00.000Z",
+   "home": {
+    "name": "Gao J. X./Wu M. Y.",
+    "country": "Chine",
+    "fsParticipantId": "zayOqcvA"
+   },
+   "away": {
+    "name": "Kim J. H./Jang H. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "tdvWsy9M"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.42,
+      "closing": 1.39
+     },
+     "away": {
+      "opening": 2.2,
+      "closing": 2.25
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.45,
+      "closing": 1.4
+     },
+     "away": {
+      "opening": 2.3,
+      "closing": 2.1
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.46,
+      "closing": 1.46
+     },
+     "away": {
+      "opening": 2.25,
+      "closing": 2.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "694heq5C",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T04:50:00.000Z",
+   "home": {
+    "name": "Man W. C./Tee K. W.",
+    "country": "Malaisie",
+    "fsParticipantId": "WKmWPwCU"
+   },
+   "away": {
+    "name": "Chen Z. R./Lin Y. C.",
+    "country": "Taïwan",
+    "fsParticipantId": "MqTupscn"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 24,
+     "away": 22
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.1,
+      "closing": 1.08
+     },
+     "away": {
+      "opening": 3.75,
+      "closing": 3.9
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.1,
+      "closing": 1.08
+     },
+     "away": {
+      "opening": 4,
+      "closing": 4.7
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.06,
+      "closing": 1.04
+     },
+     "away": {
+      "opening": 4.5,
+      "closing": 5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "6kxSyTwe",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T05:10:00.000Z",
+   "home": {
+    "name": "Park G. E.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "Ey95ewWh"
+   },
+   "away": {
+    "name": "Kim M. S.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "n3MCgH05"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 26,
+     "away": 24
+    },
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.67,
+      "closing": 1.68
+     },
+     "away": {
+      "opening": 1.77,
+      "closing": 1.75
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.75,
+      "closing": 1.65
+     },
+     "away": {
+      "opening": 1.85,
+      "closing": 1.75
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.7,
+      "closing": 1.72
+     },
+     "away": {
+      "opening": 1.8,
+      "closing": 1.82
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ObzszKln",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T05:15:00.000Z",
+   "home": {
+    "name": "Miyazaki T.",
+    "country": "Japon",
+    "fsParticipantId": "jsKP1iqC"
+   },
+   "away": {
+    "name": "Han Q. X.",
+    "country": "Chine",
+    "fsParticipantId": "b7NXaVDO"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.25,
+      "closing": 1.18
+     },
+     "away": {
+      "opening": 3.2,
+      "closing": 3
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.23,
+      "closing": 1.17
+     },
+     "away": {
+      "opening": 3,
+      "closing": 3.2
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.18,
+      "closing": 1.17
+     },
+     "away": {
+      "opening": 3.2,
+      "closing": 3.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "pdPwrIuf",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T05:30:00.000Z",
+   "home": {
+    "name": "Akechi H.",
+    "country": "Japon",
+    "fsParticipantId": "OdHPiwEd"
+   },
+   "away": {
+    "name": "Sharma T.",
+    "country": "Inde",
+    "fsParticipantId": "Gj4BFt63"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.35,
+      "closing": 1.38
+     },
+     "away": {
+      "opening": 2.6,
+      "closing": 2.2
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.34,
+      "closing": 1.47
+     },
+     "away": {
+      "opening": 2.5,
+      "closing": 2
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.3,
+      "closing": 1.38
+     },
+     "away": {
+      "opening": 2.55,
+      "closing": 2.27
+     }
+    }
+   }
+  },
+  {
+   "fsId": "rDK9uA15",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T06:00:00.000Z",
+   "home": {
+    "name": "Lee C. H.",
+    "country": "Taïwan",
+    "fsParticipantId": "S2qysKff"
+   },
+   "away": {
+    "name": "Gunawan J.",
+    "country": "Hong Kong",
+    "fsParticipantId": "zTnqubP6"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 11,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 3.25,
+      "closing": 2.95
+     },
+     "away": {
+      "opening": 1.19,
+      "closing": 1.27
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 3.4,
+      "closing": 2.7
+     },
+     "away": {
+      "opening": 1.2,
+      "closing": 1.22
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 3.45,
+      "closing": 3.65
+     },
+     "away": {
+      "opening": 1.15,
+      "closing": 1.12
+     }
+    }
+   }
+  },
+  {
+   "fsId": "8n0XFG3U",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T06:15:00.000Z",
+   "home": {
+    "name": "An S. Y.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "A3I95Zqm"
+   },
+   "away": {
+    "name": "Letshanaa K.",
+    "country": "Malaisie",
+    "fsParticipantId": "ITLH3DEa"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 1,
+      "closing": 1
+     },
+     "away": {
+      "opening": 6.75,
+      "closing": 8
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 8,
+      "closing": 5.5
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1,
+      "closing": 1
+     },
+     "away": {
+      "opening": 17,
+      "closing": 12
+     }
+    }
+   }
+  },
+  {
+   "fsId": "IXZeigLi",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T06:15:00.000Z",
+   "home": {
+    "name": "Goto T./Yoshida T.",
+    "country": "Japon",
+    "fsParticipantId": "EsQP04Xi"
+   },
+   "away": {
+    "name": "Kawabe H./Matsukawa K.",
+    "country": "Japon",
+    "fsParticipantId": "KvTXbr24"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3.1,
+      "closing": 2.8
+     },
+     "away": {
+      "opening": 1.25,
+      "closing": 1.22
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 3.1,
+      "closing": 3.05
+     },
+     "away": {
+      "opening": 1.24,
+      "closing": 1.25
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 3.1,
+      "closing": 2.97
+     },
+     "away": {
+      "opening": 1.19,
+      "closing": 1.21
+     }
+    }
+   }
+  },
+  {
+   "fsId": "EwSZC4fJ",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T07:00:00.000Z",
+   "home": {
+    "name": "Gunji R.",
+    "country": "Japon",
+    "fsParticipantId": "WfrjGcC4"
+   },
+   "away": {
+    "name": "Tung C. T.",
+    "country": "Taïwan",
+    "fsParticipantId": "48tbEysH"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.05
+     },
+     "away": {
+      "opening": 5,
+      "closing": 4.3
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.08,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.6,
+      "closing": 5.3
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.02,
+      "closing": 1.02
+     },
+     "away": {
+      "opening": 5.6,
+      "closing": 5.4
+     }
+    }
+   }
+  },
+  {
+   "fsId": "EsrH70sT",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T07:05:00.000Z",
+   "home": {
+    "name": "Lam L./Lee A. Q.",
+    "country": "USA",
+    "fsParticipantId": "bgf33sqf"
+   },
+   "away": {
+    "name": "Chen Y. F./Sun L. C.",
+    "country": "Taïwan",
+    "fsParticipantId": "W6hB1LD6"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 23,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.28,
+      "closing": 1.28
+     },
+     "away": {
+      "opening": 2.5,
+      "closing": 2.5
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.29,
+      "closing": 1.31
+     },
+     "away": {
+      "opening": 2.6,
+      "closing": 2.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "SOYJgWT7",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T07:10:00.000Z",
+   "home": {
+    "name": "Stoeva G./Stoeva S.",
+    "country": "Bulgarie",
+    "fsParticipantId": "fD5SI4bm"
+   },
+   "away": {
+    "name": "Hiramoto R./Shida C.",
+    "country": "Japon",
+    "fsParticipantId": "0A8zHrTa"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.85,
+      "closing": 1.85
+     },
+     "away": {
+      "opening": 1.58,
+      "closing": 1.58
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.88,
+      "closing": 1.86
+     },
+     "away": {
+      "opening": 1.6,
+      "closing": 1.58
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.85,
+      "closing": 1.87
+     },
+     "away": {
+      "opening": 1.6,
+      "closing": 1.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "EymR8qNb",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T07:55:00.000Z",
+   "home": {
+    "name": "He Z./Huang Jui-Hsuan",
+    "country": "Taïwan",
+    "fsParticipantId": "EZeV7oCC"
+   },
+   "away": {
+    "name": "Weijie C./Teo Ee Y.",
+    "country": "Malaisie",
+    "fsParticipantId": "nmfw6PtP"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 9,
+     "away": 21
+    },
+    {
+     "home": 19,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3.3,
+      "closing": 4
+     },
+     "away": {
+      "opening": 1.14,
+      "closing": 1.08
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 3.5,
+      "closing": 4.7
+     },
+     "away": {
+      "opening": 1.15,
+      "closing": 1.09
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 3.9,
+      "closing": 4.7
+     },
+     "away": {
+      "opening": 1.1,
+      "closing": 1.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "p6fH1fJ0",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T08:15:00.000Z",
+   "home": {
+    "name": "Ng Ka L. A.",
+    "country": "Hong Kong",
+    "fsParticipantId": "S8vRuyFO"
+   },
+   "away": {
+    "name": "Ginting A. S.",
+    "country": "Indonésie",
+    "fsParticipantId": "IXJz0v0t"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.45,
+      "closing": 1.48
+     },
+     "away": {
+      "opening": 2.1,
+      "closing": 2.05
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.52,
+      "closing": 1.5
+     },
+     "away": {
+      "opening": 2.15,
+      "closing": 1.95
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.5,
+      "closing": 1.56
+     },
+     "away": {
+      "opening": 2.1,
+      "closing": 2.05
+     }
+    }
+   }
+  },
+  {
+   "fsId": "007imsKs",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T08:20:00.000Z",
+   "home": {
+    "name": "Hirokami R./Hobara S.",
+    "country": "Japon",
+    "fsParticipantId": "GnSlw2xI"
+   },
+   "away": {
+    "name": "Meida I. S./Nastine R. K.",
+    "country": "Indonésie",
+    "fsParticipantId": "l0Qdyt7U"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.42,
+      "closing": 1.22
+     },
+     "away": {
+      "opening": 2.1,
+      "closing": 2.75
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.24,
+      "closing": 1.21
+     },
+     "away": {
+      "opening": 2.8,
+      "closing": 2.97
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.44,
+      "closing": 1.26
+     },
+     "away": {
+      "opening": 2.15,
+      "closing": 3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "rsbrqK44",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T08:30:00.000Z",
+   "home": {
+    "name": "Wiryawan T. R.",
+    "country": "Indonésie",
+    "fsParticipantId": "xKDfsi55"
+   },
+   "away": {
+    "name": "Pratiwi N. K. D. A.",
+    "country": "Indonésie",
+    "fsParticipantId": "ppH2uVZH"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 13,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.72,
+      "closing": 1.95
+     },
+     "away": {
+      "opening": 1.72,
+      "closing": 1.53
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.78,
+      "closing": 1.88
+     },
+     "away": {
+      "opening": 1.78,
+      "closing": 1.55
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.74,
+      "closing": 1.98
+     },
+     "away": {
+      "opening": 1.74,
+      "closing": 1.62
+     }
+    }
+   }
+  },
+  {
+   "fsId": "8C97BVPc",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T09:10:00.000Z",
+   "home": {
+    "name": "Buhrova P./Kantemyr Y.",
+    "country": "Ukraine",
+    "fsParticipantId": "Egnhc47e"
+   },
+   "away": {
+    "name": "Kim H. J./Lee Y. W.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "MJk0erx8"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 8,
+     "away": 21
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 6.25,
+      "closing": 6.75
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1.02
+     }
+    }
+   }
+  },
+  {
+   "fsId": "IqlVdFhU",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T09:35:00.000Z",
+   "home": {
+    "name": "Griselda L. C./Shimizu N.",
+    "country": "Australie",
+    "fsParticipantId": "z7NqoSbM"
+   },
+   "away": {
+    "name": "Iwanaga R./Nakanishi K.",
+    "country": "Japon",
+    "fsParticipantId": "WjOEu6Mq"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 9,
+     "away": 21
+    },
+    {
+     "home": 16,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 13.5,
+      "closing": 12.5
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 5.5,
+      "closing": 5.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 6.5,
+      "closing": 7.75
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "b7BaTG3k",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T09:35:00.000Z",
+   "home": {
+    "name": "Li Y. J./Wang Y. D.",
+    "country": "Chine",
+    "fsParticipantId": "YiSpuS1S"
+   },
+   "away": {
+    "name": "Suzuki H./Yamakita N.",
+    "country": "Japon",
+    "fsParticipantId": "4zJGZ5Pk"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 22,
+     "away": 20
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.35,
+      "closing": 1.4
+     },
+     "away": {
+      "opening": 2.3,
+      "closing": 2.15
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.37,
+      "closing": 1.44
+     },
+     "away": {
+      "opening": 2.35,
+      "closing": 2.3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "UyZ28zYF",
+   "disc": "WS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T09:55:00.000Z",
+   "home": {
+    "name": "Kharb A.",
+    "country": "Inde",
+    "fsParticipantId": "GvbaFyHl"
+   },
+   "away": {
+    "name": "Yamaguchi A.",
+    "country": "Japon",
+    "fsParticipantId": "lhd7DFo1"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 18,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 7.5,
+      "closing": 5.25
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.01
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 6.25,
+      "closing": 7.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 12,
+      "closing": 10
+     },
+     "away": {
+      "opening": 1,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "j1Q0XwDL",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T10:35:00.000Z",
+   "home": {
+    "name": "Kang M. H./Lee J. M.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "j9Me3ry0"
+   },
+   "away": {
+    "name": "Okamura H./Yamashita K.",
+    "country": "Japon",
+    "fsParticipantId": "OMK31M5C"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.45,
+      "closing": 1.42
+     },
+     "away": {
+      "opening": 2.35,
+      "closing": 2.1
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.47,
+      "closing": 1.47
+     },
+     "away": {
+      "opening": 2.25,
+      "closing": 2.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "jcOcWbxK",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T10:35:00.000Z",
+   "home": {
+    "name": "Kim W. H./Seo S. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "WSwUBlsC"
+   },
+   "away": {
+    "name": "Jin Y./Jo S. H.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "4txxASBO"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": null
+  },
+  {
+   "fsId": "QTZUZoiA",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T10:40:00.000Z",
+   "home": {
+    "name": "Choi S. G./Goh V S.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "GrCUOpvH"
+   },
+   "away": {
+    "name": "Hoki T./Kobayashi Y.",
+    "country": "Japon",
+    "fsParticipantId": "O8FxNO8T"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 15,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 4.5,
+      "closing": 5.1
+     },
+     "away": {
+      "opening": 1.08,
+      "closing": 1.07
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 5.25,
+      "closing": 4.2
+     },
+     "away": {
+      "opening": 1.07,
+      "closing": 1.06
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 6,
+      "closing": 5.7
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "WOwkYcJb",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T11:15:00.000Z",
+   "home": {
+    "name": "Wang Y.",
+    "country": "Taïwan",
+    "fsParticipantId": "n32sKYbt"
+   },
+   "away": {
+    "name": "Wang T. W.",
+    "country": "Taïwan",
+    "fsParticipantId": "KG0kICTh"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.5,
+      "closing": 2.2
+     },
+     "away": {
+      "opening": 1.38,
+      "closing": 1.38
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 2.4,
+      "closing": 2.35
+     },
+     "away": {
+      "opening": 1.37,
+      "closing": 1.43
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 2.45,
+      "closing": 2.32
+     },
+     "away": {
+      "opening": 1.32,
+      "closing": 1.37
+     }
+    }
+   }
+  },
+  {
+   "fsId": "GxDF99fA",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T11:35:00.000Z",
+   "home": {
+    "name": "Chen F. S. T./Luo X. M.",
+    "country": "Chine",
+    "fsParticipantId": "GtPq3feE"
+   },
+   "away": {
+    "name": "Bao L. J./Cao Z. H.",
+    "country": "Chine",
+    "fsParticipantId": "O6Si1YPQ"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 5,
+     "away": 2
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.51,
+      "closing": 1.36
+     },
+     "away": {
+      "opening": 2,
+      "closing": 2.32
+     }
+    }
+   }
+  },
+  {
+   "fsId": "pQYn2v5j",
+   "disc": "WD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T11:45:00.000Z",
+   "home": {
+    "name": "Kim Y. J./Lee Y. L.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "INjJaarJ"
+   },
+   "away": {
+    "name": "Luo Y./Wang T. G.",
+    "country": "Chine",
+    "fsParticipantId": "pUr5N2zQ"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.1,
+      "closing": 2.05
+     },
+     "away": {
+      "opening": 1.42,
+      "closing": 1.45
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 2.15,
+      "closing": 2
+     },
+     "away": {
+      "opening": 1.44,
+      "closing": 1.45
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ptiZB9Z7",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T12:00:00.000Z",
+   "home": {
+    "name": "Wang C./Xie H. N.",
+    "country": "Chine",
+    "fsParticipantId": "CAFXSRaD"
+   },
+   "away": {
+    "name": "Matsui K./Mitsuhashi K.",
+    "country": "Japon",
+    "fsParticipantId": "vH7JjViK"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 10
+    },
+    {
+     "home": 21,
+     "away": 14
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.12,
+      "closing": 1.12
+     },
+     "away": {
+      "opening": 3.7,
+      "closing": 3.7
+     }
+    }
+   }
+  },
+  {
+   "fsId": "6gQDKaYN",
+   "disc": "MD",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T12:00:00.000Z",
+   "home": {
+    "name": "Lin X. Y./Zeng W. H.",
+    "country": "Chine",
+    "fsParticipantId": "C8KYsXlD"
+   },
+   "away": {
+    "name": "Kumagai K./Nishi H.",
+    "country": "Japon",
+    "fsParticipantId": "427K5zsK"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.72,
+      "closing": 1.85
+     },
+     "away": {
+      "opening": 1.72,
+      "closing": 1.6
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.95,
+      "closing": 1.82
+     },
+     "away": {
+      "opening": 1.65,
+      "closing": 1.58
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.92,
+      "closing": 2.2
+     },
+     "away": {
+      "opening": 1.64,
+      "closing": 1.38
+     }
+    }
+   }
+  },
+  {
+   "fsId": "pt9aTPv0",
+   "disc": "MS",
+   "round": "1/8 de finale",
+   "startUtc": "2026-11-05T12:40:00.000Z",
+   "home": {
+    "name": "Tanaka Y.",
+    "country": "Japon",
+    "fsParticipantId": "lzu1fy7r"
+   },
+   "away": {
+    "name": "Kim H. D.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "Mmw9hFye"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.06,
+      "closing": 1.04
+     },
+     "away": {
+      "opening": 5.75,
+      "closing": 4.6
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 7.75,
+      "closing": 7.25
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.04
+     },
+     "away": {
+      "opening": 5.2,
+      "closing": 6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "EsrHiUpC",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T03:10:00.000Z",
+   "home": {
+    "name": "Jiang Z. B./Wei Y. X.",
+    "country": "Chine",
+    "fsParticipantId": "v7Q6E7fe"
+   },
+   "away": {
+    "name": "Hoo P. R./Lai P. J.",
+    "country": "Malaisie",
+    "fsParticipantId": "nXTECoP7"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.05,
+      "closing": 1.09
+     },
+     "away": {
+      "opening": 5.8,
+      "closing": 3.8
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.04,
+      "closing": 1.12
+     },
+     "away": {
+      "opening": 5.3,
+      "closing": 4
+     }
+    }
+   }
+  },
+  {
+   "fsId": "KtAlZLUp",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T03:15:00.000Z",
+   "home": {
+    "name": "Cheng X./Zhang C.",
+    "country": "Chine",
+    "fsParticipantId": "CAL0zkHE"
+   },
+   "away": {
+    "name": "Koga A./Saito N.",
+    "country": "Japon",
+    "fsParticipantId": "pOJ8YSoR"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 22,
+     "away": 20
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 1.3,
+      "closing": 1.27
+     },
+     "away": {
+      "opening": 2.65,
+      "closing": 2.6
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.33,
+      "closing": 1.3
+     },
+     "away": {
+      "opening": 2.75,
+      "closing": 2.45
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.25,
+      "closing": 1.26
+     },
+     "away": {
+      "opening": 2.72,
+      "closing": 2.72
+     }
+    }
+   }
+  },
+  {
+   "fsId": "GY80xMGs",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T03:20:00.000Z",
+   "home": {
+    "name": "Stoeva G./Stoeva S.",
+    "country": "Bulgarie",
+    "fsParticipantId": "zBs0XMSg"
+   },
+   "away": {
+    "name": "Lam L./Lee A. Q.",
+    "country": "USA",
+    "fsParticipantId": "8Ou8V0c6"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 10,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.48,
+      "closing": 1.34
+     },
+     "away": {
+      "opening": 2.05,
+      "closing": 2.42
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.55,
+      "closing": 1.35
+     },
+     "away": {
+      "opening": 2.1,
+      "closing": 2.3
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.54,
+      "closing": 1.32
+     },
+     "away": {
+      "opening": 2.05,
+      "closing": 2.35
+     }
+    }
+   }
+  },
+  {
+   "fsId": "61ChUwsB",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T03:55:00.000Z",
+   "home": {
+    "name": "Hirokami R./Hobara S.",
+    "country": "Japon",
+    "fsParticipantId": "dxfATmo2"
+   },
+   "away": {
+    "name": "Kim H. J./Lee Y. W.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "Orndiiw9"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 12,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 15
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 2.3,
+      "closing": 2.2
+     },
+     "away": {
+      "opening": 1.44,
+      "closing": 1.39
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Qc3jgsMG",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T04:05:00.000Z",
+   "home": {
+    "name": "Zhu Y. J./Li Q.",
+    "country": "Chine",
+    "fsParticipantId": "Kz5Bs6Os"
+   },
+   "away": {
+    "name": "Guo X. W./Chen F. H.",
+    "country": "Chine",
+    "fsParticipantId": "hl3Jupgf"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 26,
+     "away": 24
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 3,
+      "closing": 3.05
+     },
+     "away": {
+      "opening": 1.23,
+      "closing": 1.25
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 3.2,
+      "closing": 2.8
+     },
+     "away": {
+      "opening": 1.25,
+      "closing": 1.22
+     }
+    }
+   }
+  },
+  {
+   "fsId": "QFQTNhR7",
+   "disc": "XD",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T04:25:00.000Z",
+   "home": {
+    "name": "Gao J. X./Wu M. Y.",
+    "country": "Chine",
+    "fsParticipantId": "vuE8QS5t"
+   },
+   "away": {
+    "name": "Watanabe Y./Taguchi M.",
+    "country": "Japon",
+    "fsParticipantId": "QeCGO6zg"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 9,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 2.15,
+      "closing": 2.25
+     },
+     "away": {
+      "opening": 1.46,
+      "closing": 1.37
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 2.25,
+      "closing": 2.2
+     },
+     "away": {
+      "opening": 1.48,
+      "closing": 1.38
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 2.2,
+      "closing": 2.37
+     },
+     "away": {
+      "opening": 1.41,
+      "closing": 1.35
+     }
+    }
+   }
+  },
+  {
+   "fsId": "phDimsPM",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T05:15:00.000Z",
+   "home": {
+    "name": "Pratiwi N. K. D. A.",
+    "country": "Indonésie",
+    "fsParticipantId": "AeO6k3xP"
+   },
+   "away": {
+    "name": "Yamaguchi A.",
+    "country": "Japon",
+    "fsParticipantId": "Q7bG96Nt"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 13,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 7,
+      "closing": 6.25
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.03
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 6.75,
+      "closing": 4.75
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.03
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 8.75,
+      "closing": 9
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    }
+   }
+  },
+  {
+   "fsId": "UBJrXd4L",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T05:25:00.000Z",
+   "home": {
+    "name": "Lee C. Y.",
+    "country": "Hong Kong",
+    "fsParticipantId": "4nFH6YE7"
+   },
+   "away": {
+    "name": "Wang P.",
+    "country": "Taïwan",
+    "fsParticipantId": "Wh73Uy7E"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 23,
+     "away": 21
+    },
+    {
+     "home": 23,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.16,
+      "closing": 1.24
+     },
+     "away": {
+      "opening": 3.35,
+      "closing": 2.8
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.2,
+      "closing": 1.24
+     },
+     "away": {
+      "opening": 3.2,
+      "closing": 2.75
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.22,
+      "closing": 1.28
+     },
+     "away": {
+      "opening": 3.4,
+      "closing": 2.45
+     }
+    }
+   }
+  },
+  {
+   "fsId": "bc4a3t2E",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T05:25:00.000Z",
+   "home": {
+    "name": "Lin H. T.",
+    "country": "Taïwan",
+    "fsParticipantId": "KUmixuNr"
+   },
+   "away": {
+    "name": "Kim M. S.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "SfiazJie"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 6
+    },
+    {
+     "home": 21,
+     "away": 8
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.25,
+      "closing": 1.22
+     },
+     "away": {
+      "opening": 3.1,
+      "closing": 2.85
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.24,
+      "closing": 1.24
+     },
+     "away": {
+      "opening": 2.95,
+      "closing": 3.1
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.21,
+      "closing": 1.18
+     },
+     "away": {
+      "opening": 3,
+      "closing": 3.15
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Yed4BiZ0",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T05:50:00.000Z",
+   "home": {
+    "name": "Kim Y. J./Lee Y. L.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "84sxtKDs"
+   },
+   "away": {
+    "name": "Li Y. J./Wang Y. D.",
+    "country": "Chine",
+    "fsParticipantId": "tIupvbrf"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 17,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 8
+    },
+    {
+     "home": 22,
+     "away": 20
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.95,
+      "closing": 1.85
+     },
+     "away": {
+      "opening": 1.62,
+      "closing": 1.55
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.96,
+      "closing": 1.96
+     },
+     "away": {
+      "opening": 1.62,
+      "closing": 1.62
+     }
+    }
+   }
+  },
+  {
+   "fsId": "h2SLPEde",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T06:05:00.000Z",
+   "home": {
+    "name": "Okimoto Y.",
+    "country": "Japon",
+    "fsParticipantId": "G2zi8ojC"
+   },
+   "away": {
+    "name": "Lai V.",
+    "country": "Canada",
+    "fsParticipantId": "OSwa6PKO"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 19,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.75,
+      "closing": 2.4
+     },
+     "away": {
+      "opening": 1.33,
+      "closing": 1.3
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 2.65,
+      "closing": 2.6
+     },
+     "away": {
+      "opening": 1.3,
+      "closing": 1.35
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 2.7,
+      "closing": 2.55
+     },
+     "away": {
+      "opening": 1.26,
+      "closing": 1.3
+     }
+    }
+   }
+  },
+  {
+   "fsId": "QZb8Y2Ja",
+   "disc": "WD",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T06:15:00.000Z",
+   "home": {
+    "name": "Chen F. S. T./Luo X. M.",
+    "country": "Chine",
+    "fsParticipantId": "4KKxx0L7"
+   },
+   "away": {
+    "name": "Iwanaga R./Nakanishi K.",
+    "country": "Japon",
+    "fsParticipantId": "AH7Oa3DE"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.42,
+      "closing": 1.43
+     },
+     "away": {
+      "opening": 2.2,
+      "closing": 2.15
+     }
+    }
+   }
+  },
+  {
+   "fsId": "Cr9XbLBL",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T07:10:00.000Z",
+   "home": {
+    "name": "Man W. C./Tee K. W.",
+    "country": "Malaisie",
+    "fsParticipantId": "MVZe0LT7"
+   },
+   "away": {
+    "name": "Kawabe H./Matsukawa K.",
+    "country": "Japon",
+    "fsParticipantId": "lxSsOOLE"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 26,
+     "away": 24
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.38,
+      "closing": 1.27
+     },
+     "away": {
+      "opening": 2.3,
+      "closing": 2.67
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.44,
+      "closing": 1.33
+     },
+     "away": {
+      "opening": 2.3,
+      "closing": 2.65
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.45,
+      "closing": 1.3
+     },
+     "away": {
+      "opening": 2.35,
+      "closing": 2.45
+     }
+    }
+   }
+  },
+  {
+   "fsId": "vqf6saue",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T07:15:00.000Z",
+   "home": {
+    "name": "Miyazaki T.",
+    "country": "Japon",
+    "fsParticipantId": "rV3JNu8k"
+   },
+   "away": {
+    "name": "Akechi H.",
+    "country": "Japon",
+    "fsParticipantId": "je7RLJx2"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 13
+    },
+    {
+     "home": 21,
+     "away": 23
+    },
+    {
+     "home": 8,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.11,
+      "closing": 1.24
+     },
+     "away": {
+      "opening": 3.75,
+      "closing": 2.82
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.16,
+      "closing": 1.28
+     },
+     "away": {
+      "opening": 3.8,
+      "closing": 2.5
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.15,
+      "closing": 1.31
+     },
+     "away": {
+      "opening": 3.6,
+      "closing": 2.75
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ln78z0of",
+   "disc": "WS",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T07:40:00.000Z",
+   "home": {
+    "name": "An S. Y.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "GlqGTvSI"
+   },
+   "away": {
+    "name": "Gunji R.",
+    "country": "Japon",
+    "fsParticipantId": "tSz2irKP"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 7
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1,
+      "closing": 1
+     },
+     "away": {
+      "opening": 11.5,
+      "closing": 11
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 7.5,
+      "closing": 5.25
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1
+     },
+     "away": {
+      "opening": 6.5,
+      "closing": 7.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "YiMGjWFO",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T07:55:00.000Z",
+   "home": {
+    "name": "Wang T. W.",
+    "country": "Taïwan",
+    "fsParticipantId": "dn9hV6gn"
+   },
+   "away": {
+    "name": "Kim H. D.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "Ua70TpOb"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 24,
+     "away": 22
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 1.25,
+      "closing": 1.36
+     },
+     "away": {
+      "opening": 3.05,
+      "closing": 2.55
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.19,
+      "closing": 1.25
+     },
+     "away": {
+      "opening": 3.1,
+      "closing": 2.72
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.25,
+      "closing": 1.33
+     },
+     "away": {
+      "opening": 3.1,
+      "closing": 2.35
+     }
+    }
+   }
+  },
+  {
+   "fsId": "WlBNGnBt",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T08:25:00.000Z",
+   "home": {
+    "name": "Kang M. H./Lee J. M.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "dSQHcqup"
+   },
+   "away": {
+    "name": "Kumagai K./Nishi H.",
+    "country": "Japon",
+    "fsParticipantId": "4hUPeN9d"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 8,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 10
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.4,
+      "closing": 1.35
+     },
+     "away": {
+      "opening": 2.45,
+      "closing": 2.3
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.4,
+      "closing": 1.4
+     },
+     "away": {
+      "opening": 2.45,
+      "closing": 2.45
+     }
+    }
+   }
+  },
+  {
+   "fsId": "rTUNhtOc",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T08:25:00.000Z",
+   "home": {
+    "name": "Kim W. H./Seo S. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "URJbHPCD"
+   },
+   "away": {
+    "name": "Wang C./Xie H. N.",
+    "country": "Chine",
+    "fsParticipantId": "dYBpuT4K"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 14
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 5,
+      "closing": 4.1
+     }
+    }
+   }
+  },
+  {
+   "fsId": "vi63qeUO",
+   "disc": "MS",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T09:35:00.000Z",
+   "home": {
+    "name": "Gunawan J.",
+    "country": "Hong Kong",
+    "fsParticipantId": "xISXj8Pq"
+   },
+   "away": {
+    "name": "Ginting A. S.",
+    "country": "Indonésie",
+    "fsParticipantId": "OYQuknfd"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 23,
+     "away": 25
+    },
+    {
+     "home": 21,
+     "away": 11
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.4,
+      "closing": 1.38
+     },
+     "away": {
+      "opening": 2.45,
+      "closing": 2.2
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.38,
+      "closing": 1.43
+     },
+     "away": {
+      "opening": 2.35,
+      "closing": 2.35
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.35,
+      "closing": 1.35
+     },
+     "away": {
+      "opening": 2.37,
+      "closing": 2.37
+     }
+    }
+   }
+  },
+  {
+   "fsId": "hhZspomf",
+   "disc": "MD",
+   "round": "Quarts de finale",
+   "startUtc": "2026-11-06T11:00:00.000Z",
+   "home": {
+    "name": "Hoki T./Kobayashi Y.",
+    "country": "Japon",
+    "fsParticipantId": "4AgdMXLa"
+   },
+   "away": {
+    "name": "Weijie C./Teo Ee Y.",
+    "country": "Malaisie",
+    "fsParticipantId": "Czc4KBjC"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.22,
+      "closing": 1.19
+     },
+     "away": {
+      "opening": 2.92,
+      "closing": 3.15
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.27,
+      "closing": 1.23
+     },
+     "away": {
+      "opening": 2.95,
+      "closing": 3.2
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.28,
+      "closing": 1.2
+     },
+     "away": {
+      "opening": 3,
+      "closing": 2.9
+     }
+    }
+   }
+  },
+  {
+   "fsId": "0hs72eD5",
+   "disc": "XD",
+   "round": "Demi-finales",
+   "startUtc": "2026-11-07T02:10:00.000Z",
+   "home": {
+    "name": "Jiang Z. B./Wei Y. X.",
+    "country": "Chine",
+    "fsParticipantId": "jiDsU0P7"
+   },
+   "away": {
+    "name": "Koga A./Saito N.",
+    "country": "Japon",
+    "fsParticipantId": "Ic5Ti4HE"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 15
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 1.11,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.1,
+      "closing": 5
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.12,
+      "closing": 1.1
+     },
+     "away": {
+      "opening": 4.4,
+      "closing": 3.7
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.06,
+      "closing": 1.06
+     },
+     "away": {
+      "opening": 4.6,
+      "closing": 4.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "ANhkxEHj",
+   "disc": "WD",
+   "round": "Demi-finales",
+   "startUtc": "2026-11-07T02:15:00.000Z",
+   "home": {
+    "name": "Kim Y. J./Lee Y. L.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "G4kfYne5"
+   },
+   "away": {
+    "name": "Chen F. S. T./Luo X. M.",
+    "country": "Chine",
+    "fsParticipantId": "2Lm2WQPH"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 11
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 2.55,
+      "closing": 3.45
+     },
+     "away": {
+      "opening": 1.3,
+      "closing": 1.14
+     }
+    }
+   }
+  },
+  {
+   "fsId": "vwDu48lA",
+   "disc": "WD",
+   "round": "Demi-finales",
+   "startUtc": "2026-11-07T02:55:00.000Z",
+   "home": {
+    "name": "Lam L./Lee A. Q.",
+    "country": "USA",
+    "fsParticipantId": "Y7WJBb8m"
+   },
+   "away": {
+    "name": "Hirokami R./Hobara S.",
+    "country": "Japon",
+    "fsParticipantId": "tYZR9xw0"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.25,
+      "closing": 2.05
+     },
+     "away": {
+      "opening": 1.48,
+      "closing": 1.45
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.77,
+      "closing": 2.12
+     },
+     "away": {
+      "opening": 1.67,
+      "closing": 1.45
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 2.15,
+      "closing": 2.2
+     },
+     "away": {
+      "opening": 1.45,
+      "closing": 1.5
+     }
+    }
+   }
+  },
+  {
+   "fsId": "pzGm2nJM",
+   "disc": "XD",
+   "round": "Demi-finales",
+   "startUtc": "2026-11-07T03:05:00.000Z",
+   "home": {
+    "name": "Gao J. X./Wu M. Y.",
+    "country": "Chine",
+    "fsParticipantId": "lbwz8G7C"
+   },
+   "away": {
+    "name": "Zhu Y. J./Li Q.",
+    "country": "Chine",
+    "fsParticipantId": "MByr6fxP"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 6
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.42,
+      "closing": 1.65
+     },
+     "away": {
+      "opening": 2.4,
+      "closing": 1.72
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.39,
+      "closing": 1.74
+     },
+     "away": {
+      "opening": 2.35,
+      "closing": 1.82
+     }
+    }
+   }
+  },
+  {
+   "fsId": "GxcDI733",
+   "disc": "WS",
+   "round": "Demi-finales",
+   "startUtc": "2026-11-07T03:55:00.000Z",
+   "home": {
+    "name": "Lin H. T.",
+    "country": "Taïwan",
+    "fsParticipantId": "UBcn2oyi"
+   },
+   "away": {
+    "name": "Yamaguchi A.",
+    "country": "Japon",
+    "fsParticipantId": "OYWV9cfc"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 16,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 8.25,
+      "closing": 7.5
+     },
+     "away": {
+      "opening": 1.01,
+      "closing": 1.01
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 6.75,
+      "closing": 4.6
+     },
+     "away": {
+      "opening": 1.03,
+      "closing": 1.04
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 6,
+      "closing": 8.5
+     },
+     "away": {
+      "opening": 1.02,
+      "closing": 1.02
+     }
+    }
+   }
+  },
+  {
+   "fsId": "C2qGHty0",
+   "disc": "WS",
+   "round": "Demi-finales",
+   "startUtc": "2026-11-07T04:40:00.000Z",
+   "home": {
+    "name": "An S. Y.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "O6EvOdYj"
+   },
+   "away": {
+    "name": "Akechi H.",
+    "country": "Japon",
+    "fsParticipantId": "jD6Qo0Qc"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 12
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 11,
+      "closing": 10
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1,
+      "closing": 1
+     },
+     "away": {
+      "opening": 6.75,
+      "closing": 16
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.01,
+      "closing": 1.01
+     },
+     "away": {
+      "opening": 8,
+      "closing": 5.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "AcNNYvBb",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "startUtc": "2026-11-07T05:35:00.000Z",
+   "home": {
+    "name": "Lee C. Y.",
+    "country": "Hong Kong",
+    "fsParticipantId": "CUHOUhXF"
+   },
+   "away": {
+    "name": "Lai V.",
+    "country": "Canada",
+    "fsParticipantId": "rHvdCpHl"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 21,
+     "away": 19
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 12,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3.3,
+      "closing": 2.9
+     },
+     "away": {
+      "opening": 1.22,
+      "closing": 1.2
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 3.15,
+      "closing": 3.1
+     },
+     "away": {
+      "opening": 1.21,
+      "closing": 1.18
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 3.35,
+      "closing": 3.35
+     },
+     "away": {
+      "opening": 1.16,
+      "closing": 1.15
+     }
+    }
+   }
+  },
+  {
+   "fsId": "hxX04kDd",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "startUtc": "2026-11-07T07:00:00.000Z",
+   "home": {
+    "name": "Kim W. H./Seo S. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "QFjua9we"
+   },
+   "away": {
+    "name": "Man W. C./Tee K. W.",
+    "country": "Malaisie",
+    "fsParticipantId": "bTlmcm87"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 17
+    },
+    {
+     "home": 21,
+     "away": 17
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.18,
+      "closing": 1.15
+     },
+     "away": {
+      "opening": 3.2,
+      "closing": 3.4
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.23,
+      "closing": 1.15
+     },
+     "away": {
+      "opening": 3,
+      "closing": 3.4
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.25,
+      "closing": 1.2
+     },
+     "away": {
+      "opening": 3.1,
+      "closing": 2.9
+     }
+    }
+   }
+  },
+  {
+   "fsId": "vkN7cBzg",
+   "disc": "MS",
+   "round": "Demi-finales",
+   "startUtc": "2026-11-07T07:45:00.000Z",
+   "home": {
+    "name": "Wang T. W.",
+    "country": "Taïwan",
+    "fsParticipantId": "lK4QtyAr"
+   },
+   "away": {
+    "name": "Gunawan J.",
+    "country": "Hong Kong",
+    "fsParticipantId": "dp8YvFve"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 5,
+     "away": 21
+    },
+    {
+     "home": 17,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.5,
+      "closing": 2.5
+     },
+     "away": {
+      "opening": 1.38,
+      "closing": 1.28
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 2.4,
+      "closing": 2.6
+     },
+     "away": {
+      "opening": 1.37,
+      "closing": 1.35
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 2.4,
+      "closing": 2.77
+     },
+     "away": {
+      "opening": 1.34,
+      "closing": 1.25
+     }
+    }
+   }
+  },
+  {
+   "fsId": "YaWd1TfA",
+   "disc": "MD",
+   "round": "Demi-finales",
+   "startUtc": "2026-11-07T08:35:00.000Z",
+   "home": {
+    "name": "Kang M. H./Lee J. M.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "pWcKsXMa"
+   },
+   "away": {
+    "name": "Hoki T./Kobayashi Y.",
+    "country": "Japon",
+    "fsParticipantId": "xvGRuBiC"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 14,
+     "away": 21
+    },
+    {
+     "home": 18,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "winamax": {
+     "home": {
+      "opening": 2.15,
+      "closing": 2
+     },
+     "away": {
+      "opening": 1.5,
+      "closing": 1.49
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 2.2,
+      "closing": 2.05
+     },
+     "away": {
+      "opening": 1.52,
+      "closing": 1.45
+     }
+    }
+   }
+  },
+  {
+   "fsId": "dALXhFmg",
+   "disc": "XD",
+   "round": "Finale",
+   "startUtc": "2026-11-08T02:10:00.000Z",
+   "home": {
+    "name": "Jiang Z. B./Wei Y. X.",
+    "country": "Chine",
+    "fsParticipantId": "IeOlsmyA"
+   },
+   "away": {
+    "name": "Gao J. X./Wu M. Y.",
+    "country": "Chine",
+    "fsParticipantId": "lroMOvLr"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 16
+    },
+    {
+     "home": 21,
+     "away": 13
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.2,
+      "closing": 1.16
+     },
+     "away": {
+      "opening": 3.5,
+      "closing": 3.2
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.13,
+      "closing": 1.12
+     },
+     "away": {
+      "opening": 3.55,
+      "closing": 3.7
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.18,
+      "closing": 1.18
+     },
+     "away": {
+      "opening": 3.35,
+      "closing": 3.6
+     }
+    }
+   }
+  },
+  {
+   "fsId": "UNJuigI5",
+   "disc": "WD",
+   "round": "Finale",
+   "startUtc": "2026-11-08T03:00:00.000Z",
+   "home": {
+    "name": "Hirokami R./Hobara S.",
+    "country": "Japon",
+    "fsParticipantId": "d8lUMIke"
+   },
+   "away": {
+    "name": "Kim Y. J./Lee Y. L.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "4YixLdK7"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 18
+    },
+    {
+     "home": 21,
+     "away": 18
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 2.1,
+      "closing": 1.95
+     },
+     "away": {
+      "opening": 1.55,
+      "closing": 1.5
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 2.05,
+      "closing": 2
+     },
+     "away": {
+      "opening": 1.52,
+      "closing": 1.49
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 2.05,
+      "closing": 2
+     },
+     "away": {
+      "opening": 1.48,
+      "closing": 1.51
+     }
+    }
+   }
+  },
+  {
+   "fsId": "roQemBHU",
+   "disc": "WS",
+   "round": "Finale",
+   "startUtc": "2026-11-08T04:20:00.000Z",
+   "home": {
+    "name": "An S. Y.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "AkRtlelf"
+   },
+   "away": {
+    "name": "Yamaguchi A.",
+    "country": "Japon",
+    "fsParticipantId": "IFUlnZI6"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 15,
+     "away": 21
+    },
+    {
+     "home": 21,
+     "away": 16
+    }
+   ],
+   "odds": {
+    "netbet": {
+     "home": {
+      "opening": 1.03,
+      "closing": 1.05
+     },
+     "away": {
+      "opening": 5.2,
+      "closing": 4.8
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.07,
+      "closing": 1.07
+     },
+     "away": {
+      "opening": 4.7,
+      "closing": 5
+     }
+    },
+    "betclic": {
+     "home": {
+      "opening": 1.09,
+      "closing": 1.09
+     },
+     "away": {
+      "opening": 5,
+      "closing": 3.8
+     }
+    }
+   }
+  },
+  {
+   "fsId": "SUNmXS1D",
+   "disc": "MS",
+   "round": "Finale",
+   "startUtc": "2026-11-08T05:35:00.000Z",
+   "home": {
+    "name": "Gunawan J.",
+    "country": "Hong Kong",
+    "fsParticipantId": "AXF3l8x0"
+   },
+   "away": {
+    "name": "Lai V.",
+    "country": "Canada",
+    "fsParticipantId": "roEBnn7C"
+   },
+   "winner": "away",
+   "sets": [
+    {
+     "home": 11,
+     "away": 21
+    },
+    {
+     "home": 14,
+     "away": 21
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 3.1,
+      "closing": 2.65
+     },
+     "away": {
+      "opening": 1.25,
+      "closing": 1.25
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 2.95,
+      "closing": 2.85
+     },
+     "away": {
+      "opening": 1.24,
+      "closing": 1.22
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 3.2,
+      "closing": 3.1
+     },
+     "away": {
+      "opening": 1.18,
+      "closing": 1.19
+     }
+    }
+   }
+  },
+  {
+   "fsId": "0AKnSAfc",
+   "disc": "MD",
+   "round": "Finale",
+   "startUtc": "2026-11-08T06:40:00.000Z",
+   "home": {
+    "name": "Kim W. H./Seo S. J.",
+    "country": "Corée du Sud",
+    "fsParticipantId": "0pXcHMNN"
+   },
+   "away": {
+    "name": "Hoki T./Kobayashi Y.",
+    "country": "Japon",
+    "fsParticipantId": "WSNTB0oo"
+   },
+   "winner": "home",
+   "sets": [
+    {
+     "home": 21,
+     "away": 12
+    },
+    {
+     "home": 20,
+     "away": 22
+    },
+    {
+     "home": 21,
+     "away": 19
+    }
+   ],
+   "odds": {
+    "betclic": {
+     "home": {
+      "opening": 1.13,
+      "closing": 1.11
+     },
+     "away": {
+      "opening": 4.3,
+      "closing": 3.6
+     }
+    },
+    "winamax": {
+     "home": {
+      "opening": 1.11,
+      "closing": 1.12
+     },
+     "away": {
+      "opening": 4.1,
+      "closing": 3.75
+     }
+    },
+    "netbet": {
+     "home": {
+      "opening": 1.06,
+      "closing": 1.09
+     },
+     "away": {
+      "opening": 4.6,
+      "closing": 4.1
      }
     }
    }
