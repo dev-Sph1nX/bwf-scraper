@@ -3282,7 +3282,7 @@
         "tournamentCode": 5216,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -3375,9 +3375,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-11-13 14:20:00",
-        "matchTimeUtc": "2026-11-13 05:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-11-13 14:40:00",
+        "matchTimeUtc": "2026-11-13 05:40:00",
+        "matchStatus": "F",
         "oopRound": "6",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3388,12 +3388,25 @@
         "courtCode": "3",
         "courtIndex": 2,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 38,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 14,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3404,7 +3417,7 @@
         "tournamentCode": 5216,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -3497,9 +3510,9 @@
         },
         "team1seed": "3",
         "team2seed": "8",
-        "matchTime": "2026-11-13 12:40:00",
-        "matchTimeUtc": "2026-11-13 03:40:00",
-        "matchStatus": "N",
+        "matchTime": "2026-11-13 12:45:00",
+        "matchTimeUtc": "2026-11-13 03:45:00",
+        "matchStatus": "F",
         "oopRound": "4",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3510,12 +3523,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 48,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3526,7 +3552,7 @@
         "tournamentCode": 5216,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "CHN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -3621,7 +3647,7 @@
         "team2seed": "5",
         "matchTime": "2026-11-13 14:20:00",
         "matchTimeUtc": "2026-11-13 05:20:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "6",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3632,12 +3658,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 33,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 12,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3741,9 +3780,9 @@
         },
         "team1seed": "6",
         "team2seed": null,
-        "matchTime": "2026-11-13 15:50:00",
-        "matchTimeUtc": "2026-11-13 06:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-11-13 16:15:00",
+        "matchTimeUtc": "2026-11-13 07:15:00",
+        "matchStatus": "P",
         "oopRound": "8",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3754,12 +3793,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 36,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 10,
+            "away": 11,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3772,23 +3824,97 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "KOR",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "83419",
+              "nameDisplay": "KIM Hye Jeong",
+              "nameType": 1,
+              "firstName": "Hye Jeong",
+              "lastName": "KIM",
+              "initials": "KH",
+              "nameShort": "KIM H J ",
+              "nameShort2": "KIM",
+              "slug": "hye-jeong-kim",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Hye Jeong KIM",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1657778970/assets/players/thumbnail/83419.jpg"
+              }
+            },
+            {
+              "id": "80005",
+              "nameDisplay": "LEE Yeon Woo",
+              "nameType": 1,
+              "firstName": "Yeon Woo",
+              "lastName": "LEE",
+              "initials": "LY",
+              "nameShort": "LEE Y W ",
+              "nameShort2": "LEE",
+              "slug": "lee-yeon-woo",
+              "countryCode": "KOR",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+              "avatar": {
+                "title": "Yeon Woo LEE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1790056778/assets/players/thumbnail/80005.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "88135",
+              "nameDisplay": "Rin IWANAGA",
+              "nameType": 0,
+              "firstName": "Rin",
+              "lastName": "IWANAGA",
+              "initials": "RI",
+              "nameShort": "R IWANAGA",
+              "nameShort2": "IWANAGA",
+              "slug": "rin-iwanaga",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Rin IWANAGA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636436056/assets/players/thumbnail/88135.jpg"
+              }
+            },
+            {
+              "id": "87428",
+              "nameDisplay": "Kie NAKANISHI",
+              "nameType": 0,
+              "firstName": "Kie",
+              "lastName": "NAKANISHI",
+              "initials": "KN",
+              "nameShort": "K NAKANISHI",
+              "nameShort2": "NAKANISHI",
+              "slug": "kie-nakanishi",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Kie NAKANISHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636436026/assets/players/thumbnail/87428.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team1seed": null,
-        "team2seed": null,
+        "team2seed": "3",
         "matchTime": null,
         "matchTimeUtc": null,
         "matchStatus": "N",
@@ -3820,11 +3946,48 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "TPE",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "96973",
+              "nameDisplay": "HSU Yin-Hui",
+              "nameType": 1,
+              "firstName": "Yin-Hui",
+              "lastName": "HSU",
+              "initials": "HY",
+              "nameShort": "HSU Y H ",
+              "nameShort2": "HSU",
+              "slug": "yin-hui-hsu",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Yin-Hui HSU",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356124/assets/players/thumbnail/96973.jpg"
+              }
+            },
+            {
+              "id": "69009",
+              "nameDisplay": "LIN Jhih Yun",
+              "nameType": 1,
+              "firstName": "Jhih Yun",
+              "lastName": "LIN",
+              "initials": "LJ",
+              "nameShort": "LIN J Y ",
+              "nameShort2": "LIN",
+              "slug": "jhih-yun-lin",
+              "countryCode": "TPE",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+              "avatar": {
+                "title": "Jhih Yun LIN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
@@ -3835,7 +3998,7 @@
           "players": [],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "5",
         "team2seed": null,
         "matchTime": null,
         "matchTimeUtc": null,
@@ -7344,7 +7507,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -7437,10 +7600,10 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-11-13 14:20:00",
-      "matchTimeUtc": "2026-11-13 05:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-11-13 14:40:00",
+      "matchTimeUtc": "2026-11-13 05:40:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "6",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7452,14 +7615,29 @@
       "courtCode": "3",
       "courtIndex": 2,
       "locationName": "Main Location",
-      "duration": null,
-      "time": "00:00",
+      "duration": 38,
+      "time": "00:38",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 14,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7470,7 +7648,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -7563,10 +7741,10 @@
       },
       "team1seed": "3",
       "team2seed": "8",
-      "matchTime": "2026-11-13 12:40:00",
-      "matchTimeUtc": "2026-11-13 03:40:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-11-13 12:45:00",
+      "matchTimeUtc": "2026-11-13 03:45:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "4",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7578,14 +7756,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Main Location",
-      "duration": null,
-      "time": "00:00",
+      "duration": 48,
+      "time": "00:48",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7596,7 +7789,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "CHN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
@@ -7691,8 +7884,8 @@
       "team2seed": "5",
       "matchTime": "2026-11-13 14:20:00",
       "matchTimeUtc": "2026-11-13 05:20:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "6",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7704,14 +7897,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Main Location",
-      "duration": null,
-      "time": "00:00",
+      "duration": 33,
+      "time": "00:33",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 19,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 12,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -7815,10 +8023,10 @@
       },
       "team1seed": "6",
       "team2seed": null,
-      "matchTime": "2026-11-13 15:50:00",
-      "matchTimeUtc": "2026-11-13 06:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-11-13 16:15:00",
+      "matchTimeUtc": "2026-11-13 07:15:00",
+      "matchStatus": "P",
+      "matchStatusValue": "In Progress",
       "oopRound": "8",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -7830,8 +8038,8 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Main Location",
-      "duration": null,
-      "time": "00:00",
+      "duration": 36,
+      "time": "00:36",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
@@ -7850,23 +8058,97 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "KOR",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "83419",
+            "nameDisplay": "KIM Hye Jeong",
+            "nameType": 1,
+            "firstName": "Hye Jeong",
+            "lastName": "KIM",
+            "initials": "KH",
+            "nameShort": "KIM H J ",
+            "nameShort2": "KIM",
+            "slug": "hye-jeong-kim",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Hye Jeong KIM",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1657778970/assets/players/thumbnail/83419.jpg"
+            }
+          },
+          {
+            "id": "80005",
+            "nameDisplay": "LEE Yeon Woo",
+            "nameType": 1,
+            "firstName": "Yeon Woo",
+            "lastName": "LEE",
+            "initials": "LY",
+            "nameShort": "LEE Y W ",
+            "nameShort2": "LEE",
+            "slug": "lee-yeon-woo",
+            "countryCode": "KOR",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
+            "avatar": {
+              "title": "Yeon Woo LEE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1790056778/assets/players/thumbnail/80005.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "88135",
+            "nameDisplay": "Rin IWANAGA",
+            "nameType": 0,
+            "firstName": "Rin",
+            "lastName": "IWANAGA",
+            "initials": "RI",
+            "nameShort": "R IWANAGA",
+            "nameShort2": "IWANAGA",
+            "slug": "rin-iwanaga",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Rin IWANAGA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636436056/assets/players/thumbnail/88135.jpg"
+            }
+          },
+          {
+            "id": "87428",
+            "nameDisplay": "Kie NAKANISHI",
+            "nameType": 0,
+            "firstName": "Kie",
+            "lastName": "NAKANISHI",
+            "initials": "KN",
+            "nameShort": "K NAKANISHI",
+            "nameShort2": "NAKANISHI",
+            "slug": "kie-nakanishi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Kie NAKANISHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636436026/assets/players/thumbnail/87428.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team1seed": null,
-      "team2seed": null,
+      "team2seed": "3",
       "matchTime": null,
       "matchTimeUtc": null,
       "matchStatus": "N",
@@ -7902,11 +8184,48 @@
       "scoreStatusValue": "Normal",
       "winner": 0,
       "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
+        "countryCode": "TPE",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
         "teamId": null,
         "teamName": null,
-        "players": [],
+        "players": [
+          {
+            "id": "96973",
+            "nameDisplay": "HSU Yin-Hui",
+            "nameType": 1,
+            "firstName": "Yin-Hui",
+            "lastName": "HSU",
+            "initials": "HY",
+            "nameShort": "HSU Y H ",
+            "nameShort2": "HSU",
+            "slug": "yin-hui-hsu",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Yin-Hui HSU",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1690356124/assets/players/thumbnail/96973.jpg"
+            }
+          },
+          {
+            "id": "69009",
+            "nameDisplay": "LIN Jhih Yun",
+            "nameType": 1,
+            "firstName": "Jhih Yun",
+            "lastName": "LIN",
+            "initials": "LJ",
+            "nameShort": "LIN J Y ",
+            "nameShort2": "LIN",
+            "slug": "jhih-yun-lin",
+            "countryCode": "TPE",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
+            "avatar": {
+              "title": "Jhih Yun LIN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/assets/players/thumbnail/profile_female.jpg"
+            }
+          }
+        ],
         "linkName": null
       },
       "team2": {
@@ -7917,7 +8236,7 @@
         "players": [],
         "linkName": null
       },
-      "team1seed": null,
+      "team1seed": "5",
       "team2seed": null,
       "matchTime": null,
       "matchTimeUtc": null,
