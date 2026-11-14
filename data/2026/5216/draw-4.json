@@ -2848,9 +2848,9 @@
       "match": {
         "code": "89",
         "tournamentCode": 5216,
-        "scoreStatus": 0,
-        "scoreStatusValue": "Normal",
-        "winner": 0,
+        "scoreStatus": 2,
+        "scoreStatusValue": "Retired",
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2907,9 +2907,9 @@
         },
         "team1seed": "1",
         "team2seed": "3",
-        "matchTime": "2026-11-14 15:00:00",
-        "matchTimeUtc": "2026-11-14 06:00:00",
-        "matchStatus": "N",
+        "matchTime": "2026-11-14 16:30:00",
+        "matchTimeUtc": "2026-11-14 07:30:00",
+        "matchStatus": "F",
         "oopRound": "7",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2920,12 +2920,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 48,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 18,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 8,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 11,
+            "away": 4,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -2936,7 +2955,7 @@
         "tournamentCode": 5216,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2993,9 +3012,9 @@
         },
         "team1seed": "5",
         "team2seed": "2",
-        "matchTime": "2026-11-14 13:20:00",
-        "matchTimeUtc": "2026-11-14 04:20:00",
-        "matchStatus": "N",
+        "matchTime": "2026-11-14 14:50:00",
+        "matchTimeUtc": "2026-11-14 05:50:00",
+        "matchStatus": "F",
         "oopRound": "5",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3006,12 +3025,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 43,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 10,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 15,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3024,41 +3056,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "96312",
+              "nameDisplay": "Akane YAMAGUCHI",
+              "nameType": 0,
+              "firstName": "Akane",
+              "lastName": "YAMAGUCHI",
+              "initials": "AY",
+              "nameShort": "A YAMAGUCHI",
+              "nameShort2": "YAMAGUCHI",
+              "slug": "akane-yamaguchi",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Akane YAMAGUCHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689647088/assets/players/thumbnail/96312.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "CHN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "61854",
+              "nameDisplay": "WANG Zhi Yi",
+              "nameType": 1,
+              "firstName": "Zhi Yi",
+              "lastName": "WANG",
+              "initials": "WZ",
+              "nameShort": "WANG Z Y ",
+              "nameShort2": "WANG",
+              "slug": "wang-zhi-yi",
+              "countryCode": "CHN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+              "avatar": {
+                "title": "WANG Zhi Yi",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697435902/assets/players/thumbnail/61854.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
-        "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "team1seed": "1",
+        "team2seed": "2",
+        "matchTime": "2026-11-15 14:20:00",
+        "matchTimeUtc": "2026-11-15 05:20:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "5",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WS",
         "roundName": "Final",
         "drawName": "WS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Main Location",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 2,
         "matchTypeValue": "Women's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": [],
         "isTeamMatch": false
@@ -6096,9 +6166,9 @@
       "tournamentCode": "5CC4D285-D8E0-4747-A6BF-A2D271B94BC7",
       "tournamentName": "Kumamoto Masters Japan 2026",
       "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
+      "scoreStatus": 2,
+      "scoreStatusValue": "Retired",
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -6155,10 +6225,10 @@
       },
       "team1seed": "1",
       "team2seed": "3",
-      "matchTime": "2026-11-14 15:00:00",
-      "matchTimeUtc": "2026-11-14 06:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-11-14 16:30:00",
+      "matchTimeUtc": "2026-11-14 07:30:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "7",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6170,14 +6240,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Main Location",
-      "duration": null,
-      "time": "00:00",
+      "duration": 48,
+      "time": "00:48",
       "matchOrder": null,
       "matchTypeId": 2,
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 18,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 8,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 11,
+          "away": 4,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6188,7 +6280,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -6245,15 +6337,120 @@
       },
       "team1seed": "5",
       "team2seed": "2",
-      "matchTime": "2026-11-14 13:20:00",
-      "matchTimeUtc": "2026-11-14 04:20:00",
+      "matchTime": "2026-11-14 14:50:00",
+      "matchTimeUtc": "2026-11-14 05:50:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
+      "oopRound": "5",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WS",
+      "roundName": "SF",
+      "drawName": "WS",
+      "drawCode": "4",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Main Location",
+      "duration": 43,
+      "time": "00:43",
+      "matchOrder": null,
+      "matchTypeId": 2,
+      "matchTypeValue": "Women's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 10,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 15,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1565851,
+      "code": "88",
+      "tournamentCode": "5CC4D285-D8E0-4747-A6BF-A2D271B94BC7",
+      "tournamentName": "Kumamoto Masters Japan 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "96312",
+            "nameDisplay": "Akane YAMAGUCHI",
+            "nameType": 0,
+            "firstName": "Akane",
+            "lastName": "YAMAGUCHI",
+            "initials": "AY",
+            "nameShort": "A YAMAGUCHI",
+            "nameShort2": "YAMAGUCHI",
+            "slug": "akane-yamaguchi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Akane YAMAGUCHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1689647088/assets/players/thumbnail/96312.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "CHN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "61854",
+            "nameDisplay": "WANG Zhi Yi",
+            "nameType": 1,
+            "firstName": "Zhi Yi",
+            "lastName": "WANG",
+            "initials": "WZ",
+            "nameShort": "WANG Z Y ",
+            "nameShort2": "WANG",
+            "slug": "wang-zhi-yi",
+            "countryCode": "CHN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/CHN.png",
+            "avatar": {
+              "title": "WANG Zhi Yi",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697435902/assets/players/thumbnail/61854.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "1",
+      "team2seed": "2",
+      "matchTime": "2026-11-15 14:20:00",
+      "matchTimeUtc": "2026-11-15 05:20:00",
       "matchStatus": "N",
       "matchStatusValue": "none",
       "oopRound": "5",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "WS",
-      "roundName": "SF",
+      "roundName": "Final",
       "drawName": "WS",
       "drawCode": "4",
       "courtName": "Court 1",
@@ -6267,58 +6464,6 @@
       "matchTypeValue": "Women's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1565851,
-      "code": "88",
-      "tournamentCode": "5CC4D285-D8E0-4747-A6BF-A2D271B94BC7",
-      "tournamentName": "Kumamoto Masters Japan 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WS",
-      "roundName": "Final",
-      "drawName": "WS",
-      "drawCode": "4",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 2,
-      "matchTypeValue": "Women's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
       "score": [],
       "matches": []
     }

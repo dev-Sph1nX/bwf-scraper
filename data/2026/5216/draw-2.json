@@ -2826,7 +2826,7 @@
         "tournamentCode": 5216,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "INA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
@@ -2885,7 +2885,7 @@
         "team2seed": "8",
         "matchTime": "2026-11-14 10:50:00",
         "matchTimeUtc": "2026-11-14 01:50:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2896,12 +2896,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 70,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 12,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 15,
+            "serve": 2
+          },
+          {
+            "set": 3,
+            "home": 11,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -2912,7 +2931,7 @@
         "tournamentCode": 5216,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "JPN",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -2969,9 +2988,9 @@
         },
         "team1seed": null,
         "team2seed": "2",
-        "matchTime": "2026-11-14 12:30:00",
-        "matchTimeUtc": "2026-11-14 03:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-11-14 13:20:00",
+        "matchTimeUtc": "2026-11-14 04:20:00",
+        "matchStatus": "F",
         "oopRound": "4",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -2982,12 +3001,31 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 77,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 14,
+            "away": 21,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          },
+          {
+            "set": 3,
+            "home": 23,
+            "away": 21,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3000,41 +3038,79 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "IND",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "68870",
+              "nameDisplay": "Lakshya SEN",
+              "nameType": 0,
+              "firstName": "Lakshya",
+              "lastName": "SEN",
+              "initials": "LS",
+              "nameShort": "L SEN",
+              "nameShort2": "SEN",
+              "slug": "lakshya-sen",
+              "countryCode": "IND",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+              "avatar": {
+                "title": "Lakshya SEN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636508099/assets/players/thumbnail/68870.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "97174",
+              "nameDisplay": "Koki WATANABE",
+              "nameType": 0,
+              "firstName": "Koki",
+              "lastName": "WATANABE",
+              "initials": "KW",
+              "nameShort": "K WATANABE",
+              "nameShort2": "WATANABE",
+              "slug": "koki-watanabe",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Koki WATANABE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895755/assets/players/thumbnail/97174.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "8",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-11-15 11:50:00",
+        "matchTimeUtc": "2026-11-15 02:50:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "2",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MS",
         "roundName": "Final",
         "drawName": "MS",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Main Location",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 1,
         "matchTypeValue": "Men's Singles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": [],
         "isTeamMatch": false
@@ -6046,7 +6122,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "INA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
@@ -6105,8 +6181,8 @@
       "team2seed": "8",
       "matchTime": "2026-11-14 10:50:00",
       "matchTimeUtc": "2026-11-14 01:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -6118,14 +6194,36 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Main Location",
-      "duration": null,
-      "time": "00:00",
+      "duration": 70,
+      "time": "01:10",
       "matchOrder": null,
       "matchTypeId": 1,
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 12,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 15,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 11,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -6136,7 +6234,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "JPN",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
@@ -6193,15 +6291,127 @@
       },
       "team1seed": null,
       "team2seed": "2",
-      "matchTime": "2026-11-14 12:30:00",
-      "matchTimeUtc": "2026-11-14 03:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-11-14 13:20:00",
+      "matchTimeUtc": "2026-11-14 04:20:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "4",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "MS",
       "roundName": "SF",
+      "drawName": "MS",
+      "drawCode": "2",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Main Location",
+      "duration": 77,
+      "time": "01:17",
+      "matchOrder": null,
+      "matchTypeId": 1,
+      "matchTypeValue": "Men's Singles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 14,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 3,
+          "home": 23,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1565805,
+      "code": "13",
+      "tournamentCode": "5CC4D285-D8E0-4747-A6BF-A2D271B94BC7",
+      "tournamentName": "Kumamoto Masters Japan 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "IND",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "68870",
+            "nameDisplay": "Lakshya SEN",
+            "nameType": 0,
+            "firstName": "Lakshya",
+            "lastName": "SEN",
+            "initials": "LS",
+            "nameShort": "L SEN",
+            "nameShort2": "SEN",
+            "slug": "lakshya-sen",
+            "countryCode": "IND",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/IND.png",
+            "avatar": {
+              "title": "Lakshya SEN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636508099/assets/players/thumbnail/68870.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "97174",
+            "nameDisplay": "Koki WATANABE",
+            "nameType": 0,
+            "firstName": "Koki",
+            "lastName": "WATANABE",
+            "initials": "KW",
+            "nameShort": "K WATANABE",
+            "nameShort2": "WATANABE",
+            "slug": "koki-watanabe",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Koki WATANABE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604895755/assets/players/thumbnail/97174.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "8",
+      "team2seed": null,
+      "matchTime": "2026-11-15 11:50:00",
+      "matchTimeUtc": "2026-11-15 02:50:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "2",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "MS",
+      "roundName": "Final",
       "drawName": "MS",
       "drawCode": "2",
       "courtName": "Court 1",
@@ -6215,58 +6425,6 @@
       "matchTypeValue": "Men's Singles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1565805,
-      "code": "13",
-      "tournamentCode": "5CC4D285-D8E0-4747-A6BF-A2D271B94BC7",
-      "tournamentName": "Kumamoto Masters Japan 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "MS",
-      "roundName": "Final",
-      "drawName": "MS",
-      "drawCode": "2",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 1,
-      "matchTypeValue": "Men's Singles",
-      "matchTypeNo": null,
-      "reliability": null,
       "score": [],
       "matches": []
     }

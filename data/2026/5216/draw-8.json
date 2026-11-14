@@ -3822,7 +3822,7 @@
         "tournamentCode": 5216,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "KOR",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -3917,7 +3917,7 @@
         "team2seed": "3",
         "matchTime": "2026-11-14 15:00:00",
         "matchTimeUtc": "2026-11-14 06:00:00",
-        "matchStatus": "N",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Not before 3:00 PM",
         "oopTypeId": 2,
@@ -3928,12 +3928,25 @@
         "courtCode": "2",
         "courtIndex": 1,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 48,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 13,
+            "away": 21,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 19,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3944,7 +3957,7 @@
         "tournamentCode": 5216,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 2,
         "team1": {
           "countryCode": "TPE",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -4037,9 +4050,9 @@
         },
         "team1seed": "5",
         "team2seed": null,
-        "matchTime": "2026-11-14 15:50:00",
-        "matchTimeUtc": "2026-11-14 06:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-11-14 17:30:00",
+        "matchTimeUtc": "2026-11-14 08:30:00",
+        "matchStatus": "F",
         "oopRound": "8",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -4050,12 +4063,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Main Location",
-        "duration": null,
+        "duration": 45,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 23,
+            "serve": 2
+          },
+          {
+            "set": 2,
+            "home": 15,
+            "away": 21,
+            "serve": 2
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -4068,41 +4094,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "88135",
+              "nameDisplay": "Rin IWANAGA",
+              "nameType": 0,
+              "firstName": "Rin",
+              "lastName": "IWANAGA",
+              "initials": "RI",
+              "nameShort": "R IWANAGA",
+              "nameShort2": "IWANAGA",
+              "slug": "rin-iwanaga",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Rin IWANAGA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636436056/assets/players/thumbnail/88135.jpg"
+              }
+            },
+            {
+              "id": "87428",
+              "nameDisplay": "Kie NAKANISHI",
+              "nameType": 0,
+              "firstName": "Kie",
+              "lastName": "NAKANISHI",
+              "initials": "KN",
+              "nameShort": "K NAKANISHI",
+              "nameShort2": "NAKANISHI",
+              "slug": "kie-nakanishi",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Kie NAKANISHI",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636436026/assets/players/thumbnail/87428.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "JPN",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "86778",
+              "nameDisplay": "Ririna HIRAMOTO",
+              "nameType": 0,
+              "firstName": "Ririna",
+              "lastName": "HIRAMOTO",
+              "initials": "RH",
+              "nameShort": "R HIRAMOTO",
+              "nameShort2": "HIRAMOTO",
+              "slug": "ririna-hiramoto",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Ririna HIRAMOTO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696906548/assets/players/thumbnail/86778.jpg"
+              }
+            },
+            {
+              "id": "68282",
+              "nameDisplay": "Chiharu SHIDA",
+              "nameType": 0,
+              "firstName": "Chiharu",
+              "lastName": "SHIDA",
+              "initials": "CS",
+              "nameShort": "C SHIDA",
+              "nameShort2": "SHIDA",
+              "slug": "chiharu-shida",
+              "countryCode": "JPN",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+              "avatar": {
+                "title": "Chiharu SHIDA",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1635908674/assets/players/thumbnail/68282.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "3",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-11-15 13:30:00",
+        "matchTimeUtc": "2026-11-15 04:30:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "4",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "WD",
         "roundName": "Final",
         "drawName": "WD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Main Location",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 4,
         "matchTypeValue": "Women's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": [],
         "isTeamMatch": false
@@ -8108,7 +8208,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "KOR",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/KOR.png",
@@ -8203,8 +8303,8 @@
       "team2seed": "3",
       "matchTime": "2026-11-14 15:00:00",
       "matchTimeUtc": "2026-11-14 06:00:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Not before 3:00 PM",
       "oopTypeId": 2,
@@ -8216,14 +8316,29 @@
       "courtCode": "2",
       "courtIndex": 1,
       "locationName": "Main Location",
-      "duration": null,
-      "time": "00:00",
+      "duration": 48,
+      "time": "00:48",
       "matchOrder": null,
       "matchTypeId": 4,
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 13,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 19,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -8234,7 +8349,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 2,
       "team1": {
         "countryCode": "TPE",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/TPE.png",
@@ -8327,15 +8442,156 @@
       },
       "team1seed": "5",
       "team2seed": null,
-      "matchTime": "2026-11-14 15:50:00",
-      "matchTimeUtc": "2026-11-14 06:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-11-14 17:30:00",
+      "matchTimeUtc": "2026-11-14 08:30:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "8",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "WD",
       "roundName": "SF",
+      "drawName": "WD",
+      "drawCode": "8",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Main Location",
+      "duration": 45,
+      "time": "00:45",
+      "matchOrder": null,
+      "matchTypeId": 4,
+      "matchTypeValue": "Women's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 23,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 15,
+          "away": 21,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1565813,
+      "code": "238",
+      "tournamentCode": "5CC4D285-D8E0-4747-A6BF-A2D271B94BC7",
+      "tournamentName": "Kumamoto Masters Japan 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "88135",
+            "nameDisplay": "Rin IWANAGA",
+            "nameType": 0,
+            "firstName": "Rin",
+            "lastName": "IWANAGA",
+            "initials": "RI",
+            "nameShort": "R IWANAGA",
+            "nameShort2": "IWANAGA",
+            "slug": "rin-iwanaga",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Rin IWANAGA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636436056/assets/players/thumbnail/88135.jpg"
+            }
+          },
+          {
+            "id": "87428",
+            "nameDisplay": "Kie NAKANISHI",
+            "nameType": 0,
+            "firstName": "Kie",
+            "lastName": "NAKANISHI",
+            "initials": "KN",
+            "nameShort": "K NAKANISHI",
+            "nameShort2": "NAKANISHI",
+            "slug": "kie-nakanishi",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Kie NAKANISHI",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1636436026/assets/players/thumbnail/87428.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "JPN",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "86778",
+            "nameDisplay": "Ririna HIRAMOTO",
+            "nameType": 0,
+            "firstName": "Ririna",
+            "lastName": "HIRAMOTO",
+            "initials": "RH",
+            "nameShort": "R HIRAMOTO",
+            "nameShort2": "HIRAMOTO",
+            "slug": "ririna-hiramoto",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Ririna HIRAMOTO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1696906548/assets/players/thumbnail/86778.jpg"
+            }
+          },
+          {
+            "id": "68282",
+            "nameDisplay": "Chiharu SHIDA",
+            "nameType": 0,
+            "firstName": "Chiharu",
+            "lastName": "SHIDA",
+            "initials": "CS",
+            "nameShort": "C SHIDA",
+            "nameShort2": "SHIDA",
+            "slug": "chiharu-shida",
+            "countryCode": "JPN",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/JPN.png",
+            "avatar": {
+              "title": "Chiharu SHIDA",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1635908674/assets/players/thumbnail/68282.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "3",
+      "team2seed": null,
+      "matchTime": "2026-11-15 13:30:00",
+      "matchTimeUtc": "2026-11-15 04:30:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "4",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "WD",
+      "roundName": "Final",
       "drawName": "WD",
       "drawCode": "8",
       "courtName": "Court 1",
@@ -8349,58 +8605,6 @@
       "matchTypeValue": "Women's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1565813,
-      "code": "238",
-      "tournamentCode": "5CC4D285-D8E0-4747-A6BF-A2D271B94BC7",
-      "tournamentName": "Kumamoto Masters Japan 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "WD",
-      "roundName": "Final",
-      "drawName": "WD",
-      "drawCode": "8",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 4,
-      "matchTypeValue": "Women's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
       "score": [],
       "matches": []
     }
