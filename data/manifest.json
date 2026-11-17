@@ -17,7 +17,7 @@
       "tournamentCount": 32
     },
     "2026": {
-      "fetchedAt": "2026-11-15T09:23:37.441Z",
+      "fetchedAt": "2026-11-17T22:21:51.282Z",
       "tournamentCount": 31
     }
   },
@@ -5743,52 +5743,102 @@
       "tournamentStatus": "live"
     },
     "2026/5218/1": {
-      "fetchedAt": "2026-11-15T09:23:42.134Z",
+      "fetchedAt": "2026-11-17T22:21:52.519Z",
+      "matchCount": 12,
+      "tournamentStatus": "live"
+    },
+    "2026/5218/2": {
+      "fetchedAt": "2026-11-17T22:21:53.118Z",
+      "matchCount": 31,
+      "tournamentStatus": "live"
+    },
+    "2026/5218/3": {
+      "fetchedAt": "2026-11-17T22:21:53.571Z",
+      "matchCount": 4,
+      "tournamentStatus": "live"
+    },
+    "2026/5218/4": {
+      "fetchedAt": "2026-11-17T22:21:54.109Z",
+      "matchCount": 31,
+      "tournamentStatus": "live"
+    },
+    "2026/5218/5": {
+      "fetchedAt": "2026-11-17T22:21:54.608Z",
+      "matchCount": 4,
+      "tournamentStatus": "live"
+    },
+    "2026/5218/6": {
+      "fetchedAt": "2026-11-17T22:21:55.056Z",
+      "matchCount": 31,
+      "tournamentStatus": "live"
+    },
+    "2026/5218/7": {
+      "fetchedAt": "2026-11-17T22:21:55.486Z",
+      "matchCount": 4,
+      "tournamentStatus": "live"
+    },
+    "2026/5218/8": {
+      "fetchedAt": "2026-11-17T22:21:56.031Z",
+      "matchCount": 31,
+      "tournamentStatus": "live"
+    },
+    "2026/5218/9": {
+      "fetchedAt": "2026-11-17T22:21:56.740Z",
+      "matchCount": 4,
+      "tournamentStatus": "live"
+    },
+    "2026/5218/10": {
+      "fetchedAt": "2026-11-17T22:21:57.242Z",
+      "matchCount": 31,
+      "tournamentStatus": "live"
+    },
+    "2026/5274/1": {
+      "fetchedAt": "2026-11-17T22:21:58.677Z",
       "matchCount": 12,
       "tournamentStatus": "future"
     },
-    "2026/5218/2": {
-      "fetchedAt": "2026-11-15T09:23:42.520Z",
+    "2026/5274/2": {
+      "fetchedAt": "2026-11-17T22:21:59.164Z",
       "matchCount": 31,
       "tournamentStatus": "future"
     },
-    "2026/5218/3": {
-      "fetchedAt": "2026-11-15T09:23:43.022Z",
+    "2026/5274/3": {
+      "fetchedAt": "2026-11-17T22:22:00.073Z",
       "matchCount": 4,
       "tournamentStatus": "future"
     },
-    "2026/5218/4": {
-      "fetchedAt": "2026-11-15T09:23:43.502Z",
+    "2026/5274/4": {
+      "fetchedAt": "2026-11-17T22:22:00.713Z",
       "matchCount": 31,
       "tournamentStatus": "future"
     },
-    "2026/5218/5": {
-      "fetchedAt": "2026-11-15T09:23:43.864Z",
+    "2026/5274/5": {
+      "fetchedAt": "2026-11-17T22:22:01.193Z",
       "matchCount": 4,
       "tournamentStatus": "future"
     },
-    "2026/5218/6": {
-      "fetchedAt": "2026-11-15T09:23:44.175Z",
+    "2026/5274/6": {
+      "fetchedAt": "2026-11-17T22:22:01.716Z",
       "matchCount": 31,
       "tournamentStatus": "future"
     },
-    "2026/5218/7": {
-      "fetchedAt": "2026-11-15T09:23:44.495Z",
+    "2026/5274/7": {
+      "fetchedAt": "2026-11-17T22:22:02.167Z",
       "matchCount": 4,
       "tournamentStatus": "future"
     },
-    "2026/5218/8": {
-      "fetchedAt": "2026-11-15T09:23:44.845Z",
+    "2026/5274/8": {
+      "fetchedAt": "2026-11-17T22:22:02.672Z",
       "matchCount": 31,
       "tournamentStatus": "future"
     },
-    "2026/5218/9": {
-      "fetchedAt": "2026-11-15T09:23:45.176Z",
+    "2026/5274/9": {
+      "fetchedAt": "2026-11-17T22:22:03.128Z",
       "matchCount": 4,
       "tournamentStatus": "future"
     },
-    "2026/5218/10": {
-      "fetchedAt": "2026-11-15T09:23:45.500Z",
+    "2026/5274/10": {
+      "fetchedAt": "2026-11-17T22:22:03.612Z",
       "matchCount": 31,
       "tournamentStatus": "future"
     }
@@ -8891,21 +8941,21 @@
       ]
     },
     "2026": {
-      "finishedAt": "2026-11-15T09:23:45.799Z",
+      "finishedAt": "2026-11-17T22:22:03.615Z",
       "stats": {
         "tournaments": 31,
         "drawsFetched": 20,
-        "drawsSkipped": 212,
-        "matches": 358
+        "drawsSkipped": 222,
+        "matches": 366
       },
       "items": [
         {
-          "id": 5216,
-          "name": "Kumamoto Masters Japan 2026",
+          "id": 5218,
+          "name": "LI-NING Hong Kong Open 2026",
           "draws": [
             {
               "label": "MS - Qualification",
-              "matchCount": 4
+              "matchCount": 12
             },
             {
               "label": "MS",
@@ -8946,8 +8996,8 @@
           ]
         },
         {
-          "id": 5218,
-          "name": "LI-NING Hong Kong Open 2026",
+          "id": 5274,
+          "name": "Syed Modi India International 2026",
           "draws": [
             {
               "label": "MS - Qualification",
