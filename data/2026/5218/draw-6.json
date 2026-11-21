@@ -3857,7 +3857,7 @@
         "tournamentCode": 5218,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "MAS",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -3950,9 +3950,9 @@
         },
         "team1seed": "8",
         "team2seed": "5",
-        "matchTime": "2026-11-21 10:50:00",
-        "matchTimeUtc": "2026-11-21 02:50:00",
-        "matchStatus": "N",
+        "matchTime": "2026-11-21 11:20:00",
+        "matchTimeUtc": "2026-11-21 03:20:00",
+        "matchStatus": "F",
         "oopRound": "2",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -3963,12 +3963,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Kai Tak Arena",
-        "duration": null,
+        "duration": 41,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 19,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -3979,7 +3992,7 @@
         "tournamentCode": 5218,
         "scoreStatus": 0,
         "scoreStatusValue": "Normal",
-        "winner": 0,
+        "winner": 1,
         "team1": {
           "countryCode": "INA",
           "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
@@ -4072,9 +4085,9 @@
         },
         "team1seed": null,
         "team2seed": null,
-        "matchTime": "2026-11-21 12:30:00",
-        "matchTimeUtc": "2026-11-21 04:30:00",
-        "matchStatus": "N",
+        "matchTime": "2026-11-21 13:10:00",
+        "matchTimeUtc": "2026-11-21 05:10:00",
+        "matchStatus": "F",
         "oopRound": "4",
         "oopText": "Followed by",
         "oopTypeId": 0,
@@ -4085,12 +4098,25 @@
         "courtCode": "1",
         "courtIndex": 0,
         "locationName": "Kai Tak Arena",
-        "duration": null,
+        "duration": 37,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
         "reliability": 1,
-        "score": [],
+        "score": [
+          {
+            "set": 1,
+            "home": 21,
+            "away": 18,
+            "serve": 1
+          },
+          {
+            "set": 2,
+            "home": 21,
+            "away": 11,
+            "serve": 1
+          }
+        ],
         "matches": [],
         "isTeamMatch": false
       }
@@ -4103,41 +4129,115 @@
         "scoreStatusValue": "Normal",
         "winner": 0,
         "team1": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "MAS",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "78409",
+              "nameDisplay": "MAN Wei Chong",
+              "nameType": 1,
+              "firstName": "Wei Chong",
+              "lastName": "MAN",
+              "initials": "MW",
+              "nameShort": "MAN W C ",
+              "nameShort2": "MAN",
+              "slug": "wei-chong-man",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Wei Chong MAN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697420743/assets/players/thumbnail/78409.jpg"
+              }
+            },
+            {
+              "id": "85129",
+              "nameDisplay": "TEE Kai Wun",
+              "nameType": 1,
+              "firstName": "Kai Wun",
+              "lastName": "TEE",
+              "initials": "TK",
+              "nameShort": "TEE K W ",
+              "nameShort2": "TEE",
+              "slug": "Kai Wun-TEE",
+              "countryCode": "MAS",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+              "avatar": {
+                "title": "Kai Wun TEE",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697443452/assets/players/thumbnail/85129.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
         "team2": {
-          "countryCode": null,
-          "countryFlagUrl": null,
+          "countryCode": "INA",
+          "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
           "teamId": null,
           "teamName": null,
-          "players": [],
+          "players": [
+            {
+              "id": "68633",
+              "nameDisplay": "Leo Rolly CARNANDO",
+              "nameType": 0,
+              "firstName": "Leo Rolly",
+              "lastName": "CARNANDO",
+              "initials": "LC",
+              "nameShort": "L CARNANDO",
+              "nameShort2": "CARNANDO",
+              "slug": "leo-rolly-carnando",
+              "countryCode": "INA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+              "avatar": {
+                "title": "Leo Rolly CARNANDO",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896458/assets/players/thumbnail/68633.jpg"
+              }
+            },
+            {
+              "id": "84786",
+              "nameDisplay": "Daniel MARTHIN",
+              "nameType": 0,
+              "firstName": "Daniel",
+              "lastName": "MARTHIN",
+              "initials": "DM",
+              "nameShort": "D MARTHIN",
+              "nameShort2": "MARTHIN",
+              "slug": "daniel-marthin",
+              "countryCode": "INA",
+              "countryName": null,
+              "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+              "avatar": {
+                "title": "Daniel MARTHIN",
+                "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896456/assets/players/thumbnail/84786.jpg"
+              }
+            }
+          ],
           "linkName": null
         },
-        "team1seed": null,
+        "team1seed": "8",
         "team2seed": null,
-        "matchTime": null,
-        "matchTimeUtc": null,
+        "matchTime": "2026-11-22 14:50:00",
+        "matchTimeUtc": "2026-11-22 06:50:00",
         "matchStatus": "N",
-        "oopRound": null,
-        "oopText": null,
-        "oopTypeId": null,
+        "oopRound": "2",
+        "oopText": "Followed by",
+        "oopTypeId": 0,
         "eventName": "MD",
         "roundName": "Final",
         "drawName": "MD",
-        "courtName": "",
-        "courtCode": null,
-        "courtIndex": null,
-        "locationName": null,
+        "courtName": "Court 1",
+        "courtCode": "1",
+        "courtIndex": 0,
+        "locationName": "Kai Tak Arena",
         "duration": null,
         "matchOrder": null,
         "matchTypeId": 3,
         "matchTypeValue": "Men's Doubles",
-        "reliability": null,
+        "reliability": 1,
         "score": [],
         "matches": [],
         "isTeamMatch": false
@@ -8058,7 +8158,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "MAS",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
@@ -8151,10 +8251,10 @@
       },
       "team1seed": "8",
       "team2seed": "5",
-      "matchTime": "2026-11-21 10:50:00",
-      "matchTimeUtc": "2026-11-21 02:50:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-11-21 11:20:00",
+      "matchTimeUtc": "2026-11-21 03:20:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "2",
       "oopText": "Followed by",
       "oopTypeId": 0,
@@ -8166,14 +8266,29 @@
       "courtCode": "1",
       "courtIndex": 0,
       "locationName": "Kai Tak Arena",
-      "duration": null,
-      "time": "00:00",
+      "duration": 41,
+      "time": "00:41",
       "matchOrder": null,
       "matchTypeId": 3,
       "matchTypeValue": "Men's Doubles",
       "matchTypeNo": null,
       "reliability": 1,
-      "score": [],
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 19,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
       "matches": []
     },
     {
@@ -8184,7 +8299,7 @@
       "isTeamMatch": false,
       "scoreStatus": 0,
       "scoreStatusValue": "Normal",
-      "winner": 0,
+      "winner": 1,
       "team1": {
         "countryCode": "INA",
         "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
@@ -8277,15 +8392,156 @@
       },
       "team1seed": null,
       "team2seed": null,
-      "matchTime": "2026-11-21 12:30:00",
-      "matchTimeUtc": "2026-11-21 04:30:00",
-      "matchStatus": "N",
-      "matchStatusValue": "none",
+      "matchTime": "2026-11-21 13:10:00",
+      "matchTimeUtc": "2026-11-21 05:10:00",
+      "matchStatus": "F",
+      "matchStatusValue": "Finished",
       "oopRound": "4",
       "oopText": "Followed by",
       "oopTypeId": 0,
       "eventName": "MD",
       "roundName": "SF",
+      "drawName": "MD",
+      "drawCode": "6",
+      "courtName": "Court 1",
+      "courtCode": "1",
+      "courtIndex": 0,
+      "locationName": "Kai Tak Arena",
+      "duration": 37,
+      "time": "00:37",
+      "matchOrder": null,
+      "matchTypeId": 3,
+      "matchTypeValue": "Men's Doubles",
+      "matchTypeNo": null,
+      "reliability": 1,
+      "score": [
+        {
+          "set": 1,
+          "home": 21,
+          "away": 18,
+          "lastPointWinner": null,
+          "serve": null
+        },
+        {
+          "set": 2,
+          "home": 21,
+          "away": 11,
+          "lastPointWinner": null,
+          "serve": null
+        }
+      ],
+      "matches": []
+    },
+    {
+      "id": 1570023,
+      "code": "179",
+      "tournamentCode": "3D2C5586-BB65-4575-8C38-47E290442887",
+      "tournamentName": "LI-NING Hong Kong Open 2026",
+      "isTeamMatch": false,
+      "scoreStatus": 0,
+      "scoreStatusValue": "Normal",
+      "winner": 0,
+      "team1": {
+        "countryCode": "MAS",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "78409",
+            "nameDisplay": "MAN Wei Chong",
+            "nameType": 1,
+            "firstName": "Wei Chong",
+            "lastName": "MAN",
+            "initials": "MW",
+            "nameShort": "MAN W C ",
+            "nameShort2": "MAN",
+            "slug": "wei-chong-man",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Wei Chong MAN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697420743/assets/players/thumbnail/78409.jpg"
+            }
+          },
+          {
+            "id": "85129",
+            "nameDisplay": "TEE Kai Wun",
+            "nameType": 1,
+            "firstName": "Kai Wun",
+            "lastName": "TEE",
+            "initials": "TK",
+            "nameShort": "TEE K W ",
+            "nameShort2": "TEE",
+            "slug": "Kai Wun-TEE",
+            "countryCode": "MAS",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/MAS.png",
+            "avatar": {
+              "title": "Kai Wun TEE",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1697443452/assets/players/thumbnail/85129.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team2": {
+        "countryCode": "INA",
+        "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+        "teamId": null,
+        "teamName": null,
+        "players": [
+          {
+            "id": "68633",
+            "nameDisplay": "Leo Rolly CARNANDO",
+            "nameType": 0,
+            "firstName": "Leo Rolly",
+            "lastName": "CARNANDO",
+            "initials": "LC",
+            "nameShort": "L CARNANDO",
+            "nameShort2": "CARNANDO",
+            "slug": "leo-rolly-carnando",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Leo Rolly CARNANDO",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896458/assets/players/thumbnail/68633.jpg"
+            }
+          },
+          {
+            "id": "84786",
+            "nameDisplay": "Daniel MARTHIN",
+            "nameType": 0,
+            "firstName": "Daniel",
+            "lastName": "MARTHIN",
+            "initials": "DM",
+            "nameShort": "D MARTHIN",
+            "nameShort2": "MARTHIN",
+            "slug": "daniel-marthin",
+            "countryCode": "INA",
+            "countryName": null,
+            "countryFlagUrl": "https://img.bwfbadminton.com/image/upload/v2/assets/flag-circle-svg-custom/INA.png",
+            "avatar": {
+              "title": "Daniel MARTHIN",
+              "thumbnailUrl": "https://img.bwfbadminton.com/image/upload/v1604896456/assets/players/thumbnail/84786.jpg"
+            }
+          }
+        ],
+        "linkName": null
+      },
+      "team1seed": "8",
+      "team2seed": null,
+      "matchTime": "2026-11-22 14:50:00",
+      "matchTimeUtc": "2026-11-22 06:50:00",
+      "matchStatus": "N",
+      "matchStatusValue": "none",
+      "oopRound": "2",
+      "oopText": "Followed by",
+      "oopTypeId": 0,
+      "eventName": "MD",
+      "roundName": "Final",
       "drawName": "MD",
       "drawCode": "6",
       "courtName": "Court 1",
@@ -8412,58 +8668,6 @@
       "oopTypeId": null,
       "eventName": "MD",
       "roundName": "R16",
-      "drawName": "MD",
-      "drawCode": "6",
-      "courtName": "",
-      "courtCode": null,
-      "courtIndex": null,
-      "locationName": null,
-      "duration": null,
-      "time": "00:00",
-      "matchOrder": null,
-      "matchTypeId": 3,
-      "matchTypeValue": "Men's Doubles",
-      "matchTypeNo": null,
-      "reliability": null,
-      "score": [],
-      "matches": []
-    },
-    {
-      "id": 1570023,
-      "code": "179",
-      "tournamentCode": "3D2C5586-BB65-4575-8C38-47E290442887",
-      "tournamentName": "LI-NING Hong Kong Open 2026",
-      "isTeamMatch": false,
-      "scoreStatus": 0,
-      "scoreStatusValue": "Normal",
-      "winner": 0,
-      "team1": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team2": {
-        "countryCode": null,
-        "countryFlagUrl": null,
-        "teamId": null,
-        "teamName": null,
-        "players": [],
-        "linkName": null
-      },
-      "team1seed": null,
-      "team2seed": null,
-      "matchTime": null,
-      "matchTimeUtc": null,
-      "matchStatus": "N",
-      "matchStatusValue": "none",
-      "oopRound": null,
-      "oopText": null,
-      "oopTypeId": null,
-      "eventName": "MD",
-      "roundName": "Final",
       "drawName": "MD",
       "drawCode": "6",
       "courtName": "",
